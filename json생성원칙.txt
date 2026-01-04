@@ -1,0 +1,83 @@
+# MoneyTree JSON 추출·동결(FREEZE) 원칙 v1 (LOCK)
+
+## 1. 문서 목적
+Neo4j에서 Theme 그래프 데이터를 추출하여 Web(Next.js/Graph Explorer)에서 사용하기 위한 JSON 파일을 생성할 때,
+(1) JSON 문법을 100% 준수하고,
+(2) 노드/테마 이름은 한국어 컬럼(예: theme_name_kr, asset_name_ko 등)을 기준으로 추출하며,
+(3) Day 26에서 확정한 FREEZE 구조를 고정(변경 금지)하기 위한 운영 원칙을 정의한다.
+
+본 문서는 MoneyTree 프로젝트의 고정 원칙(LOCK) 문서로 사용한다.
+
+
+## 2. 핵심 원칙 (ONE PRINCIPLE)
+### ✅ [LOCK] JSON은 “정확한 JSON 문법” + “한글 이름 기반” + “FREEZE 구조 고정”으로만 생성한다.
+
+- JSON 문법은 반드시 RFC 표준(JSON)만 허용한다.
+  - 키(key)는 반드시 큰따옴표로 감싼다.  예: "themeId"
+  - 문자열(value)도 반드시 큰따옴표로 감싼다. 예: "T_006"
+  - JS 객체 문법(예: { from: "A_001" })은 금지한다.
+  - trailing comma(마지막 콤마) 금지
+- Web 표시용 name은 반드시 한국어 컬럼을 우선 사용한다.
+  - Theme 이름: theme_name_kr → JSON themeName에 그대로 사용 (번역/영문 금지)
+  - Asset 이름: asset_name_ko → JSON nodes[].name에 사용 (가능할 때)
+  - Business_Field: business_field_ko / bf_name_kr 등 “KR/KO 컬럼”이 있으면 그 값을 사용
+- JSON 구조는 Day 26 FREEZE 구조로 고정한다.
+  - 필드 추가/삭제/구조 변경 금지
+  - 확장/고급화(조인/메타/스타일)는 Day 36 이후(그래프 UX 단계)에서만 진행
+
+
+## 3. FREEZE JSON 표준 구조 (고정)
+JSON 파일은 반드시 아래 최상위 구조를 가진다.
+
+{
+  "themeId": "T_XXX",
+  "themeName": "테마한글명(theme_name_kr)",
+  "nodes": [
+    { "id": "...", "type": "...", "name": "..." }
+  ],
+  "edges": [
+    { "from": "...", "to": "...", "type": "RELTYPE" }
+  ]
+}
+
+### 3.1 themeId / themeName
+- themeId: Theme의 theme_id
+- themeName: Theme의 theme_name_kr 값을 “그대로” 사용 (띄어쓰기/번역/영문 변형 금지)
+
+### 3.2 nodes
+- nodes[].id: 노드의 ID (asset_id / theme_id / bf_id 등)
+- nodes[].type: 노드 타입 문자열 (예: "ASSET", "THEME", "BUSINESS_FIELD")
+- nodes[].name: 표시용 이름
+  - Theme 노드: theme_name_kr
+  - Asset 노드: asset_name_ko (가능하면), 불가능하면 임시로 id 사용 후 추후 보강
+  - Business_Field: *_name_kr 또는 *_name_ko (가능하면), 불가능하면 임시로 id 사용 후 추후 보강
+
+### 3.3 edges
+- edges[].from: 출발 노드 id
+- edges[].to: 도착 노드 id
+- edges[].type: 관계 타입 (예: "THEMED_AS", "OPERATES" 등)
+- confidence/description 등 추가 속성은 FREEZE 단계에서 제외한다. (필요 시 Day 36 이후 확장)
+
+
+## 4. 금지 사항 (Hard Rules)
+- JSON 파일에 JS 객체 문법 사용 금지
+  - ❌ [{ from: "A_001", to: "T_001" }]
+  - ⭕ [{ "from": "A_001", "to": "T_001" }]
+- themeName에 영문/번역 이름 사용 금지
+  - ❌ "Global Robot Semiconductor"
+  - ⭕ "글로벌 로봇 반도체" (theme_name_kr 그대로)
+- FREEZE 구조 변경 금지
+  - 필드 추가/삭제/이름 변경 금지
+
+
+## 5. 운영 체크리스트 (저장/업로드 직전 10초 점검)
+- [ ] JSON이 { 로 시작하고 } 로 끝나는가? (또는 배열이면 [ ] 로 정상 닫힘)
+- [ ] 모든 key가 큰따옴표로 감싸져 있는가?
+- [ ] themeName이 theme_name_kr 한글 원문 그대로인가?
+- [ ] nodes / edges가 존재하는가?
+- [ ] edges.from/to가 nodes.id 및 themeId와 논리적으로 일치하는가?
+
+
+## 6. 상태 선언 (LOCK)
+본 문서는 MoneyTree 프로젝트의 고정 원칙 문서로 사용한다.
+변경이 필요할 경우, 반드시 버전 업(v2) 문서로만 갱신하며 기존 원칙(v1)은 유지한다.
