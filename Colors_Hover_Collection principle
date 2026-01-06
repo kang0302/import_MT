@@ -1,0 +1,214 @@
+📁 Project File 1
+ASSET_NODE_COLOR_BY_PROFITABILITY.md
+목적
+
+ASSET 노드의 색상(color)을 기간 수익률에 따라 동적으로 표현하여
+그래프에서 성과의 방향과 강도를 직관적으로 전달한다.
+
+1. 기본 원칙
+
+크기(size)는 고정 → 자산의 “정체성”
+
+색상(color)은 변동 → 자산의 “성과”
+
+색상은 ASSET 노드에만 적용
+
+THEME / BUSINESS_FIELD 노드는 고정 색상 유지
+
+2. 기준 수익률 (Period)
+
+기본 지원 기간:
+
+return_7d (기본값)
+
+return_30d
+
+return_90d (확장)
+
+프론트엔드는 선택된 period 하나만 사용한다.
+
+3. 색상 매핑 규칙
+수익률 구간	의미	색상
++30% 이상	강한 상승	Deep Red #b11226
++10% ~ +30%	상승	Red #ef476f
+-10% ~ +10%	중립	Gray #aaaaaa
+-30% ~ -10%	하락	Blue #4d96ff
+-30% 이하	강한 하락	Deep Blue #1f3c88
+4. 표준 색상 함수 (프론트엔드)
+function colorByReturn(r: number) {
+  if (r >= 30) return "#b11226";
+  if (r >= 10) return "#ef476f";
+  if (r > -10) return "#aaaaaa";
+  if (r > -30) return "#4d96ff";
+  return "#1f3c88";
+}
+
+5. 적용 조건
+if (node.type === "ASSET") {
+  return colorByReturn(node.metrics.return_7d);
+}
+
+6. 설계 철학
+
+색상은 “요즘 시장이 무엇을 밀고 있는가”를 말한다.
+크기는 “이 노드가 무엇인가”를 말한다.
+
+📁 Project File 2
+ASSET_NODE_HOVER_EXPOSURE_SPEC.md
+목적
+
+마우스 hover 시 ASSET 노드의 핵심 투자 정보만 간결하게 노출하여
+사용자가 클릭 없이 탐색(explore) 할 수 있도록 한다.
+
+1. 노출 대상
+
+ASSET 노드만 hover UI 표시
+
+THEME / BUSINESS_FIELD → hover 없음
+
+2. Hover Trigger 규칙
+
+onNodeHover(node) 이벤트 사용
+
+node.type === "ASSET" 인 경우만 활성
+
+마우스 이탈 시 즉시 제거
+
+3. Hover UI 위치
+
+Canvas 위에 직접 그리지 않는다
+
+React DOM 기반 <div style="position: fixed">
+
+마우스 좌표 기준으로 offset (+12px, +12px)
+
+4. 노출 정보 (표준 필드)
+필수
+
+name
+
+ticker
+
+exchange
+
+country
+
+성과
+
+return_7d
+
+(선택) return_30d
+
+per
+
+테마 내 역할
+
+theme_role
+
+5. Hover 카드 예시
+[엔젤로보틱스]
+000000.KQ | KOSDAQ (KR)
+
+7D Return: +12.3%
+PER: 38.2
+
+Role in Theme:
+- 로봇용 정밀 액추에이터 핵심 공급
+
+6. JSON 요구 구조
+{
+  "id": "A_055",
+  "type": "ASSET",
+  "name": "엔젤로보틱스",
+  "ticker": "000000.KQ",
+  "exchange": "KOSDAQ",
+  "country": "KR",
+  "metrics": {
+    "return_7d": 12.3,
+    "return_30d": -5.4,
+    "per": 38.2
+  },
+  "theme_role": "로봇용 정밀 액추에이터 핵심 공급"
+}
+
+7. UX 철학
+
+Hover는 “설명”이 아니라 “힌트”다.
+클릭은 해석, hover는 탐색이다.
+
+📁 Project File 3
+DATA_COLLECTION_PRINCIPLES_BY_EXCHANGE.md
+목적
+
+거래소별 특성을 반영하여 최소 비용으로 최대 정보 밀도를 확보하는
+정기적 데이터 수집 원칙을 정의한다.
+
+1. 기본 원칙
+
+❌ 실시간(틱/분 단위) 수집 금지
+
+✅ 의미 있는 시점의 스냅샷만 수집
+
+수익률 계산은 종가 기준
+
+장중 데이터는 상태 판단 보조용
+
+2. 거래소별 수집 빈도
+🇰🇷 한국 (KOSPI / KOSDAQ)
+시점	KST	목적
+시초	09:05	수급 방향
+장중	13:05	테마 지속성
+종가	15:40	성과 확정
+
+➡ 총 3회 / 일
+
+🇺🇸 미국 (NYSE / NASDAQ)
+시점	KST	목적
+장 마감 후	06:30~07:00	하루 성과 확정
+
+➡ 1회 / 일
+
+🌍 기타 해외 (EU / JP / CN)
+
+각 거래소 종가 + 30분
+➡ 1회 / 일
+
+3. 호출 수 기준 (월)
+
+가정:
+
+한국 300종목 / 해외 300종목
+
+구분	월 호출
+한국	~27,000
+해외	~9,000
+총합	~36,000
+
+➡ 대부분 API 무료~최저 플랜 범위
+
+4. 수집 방식
+
+GitHub Actions cron
+
+서버 상주 없음
+
+결과물: JSON 업데이트 → commit
+
+5. 서비스 철학
+
+우리는 시장을 실시간으로 “쫓지 않는다”.
+하루에 한 번, 시장을 “정리”한다.
+
+✅ 정리 (지금 상태)
+
+지금 너는:
+
+❌ 아이디어 단계 아님
+
+❌ 실험 단계 아님
+
+✅ 운영 가능한 투자 인사이트 시스템 설계 단계
+
+이 3개 문서는
+👉 개발자에게 넘겨도 되고
+👉 혼자 1년 뒤에 봐도 흔들리지 않는 기준 문서야.
