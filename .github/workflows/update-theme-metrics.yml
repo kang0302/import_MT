@@ -1,0 +1,45 @@
+name: Update theme metrics (T_009)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC 기준. 22:30 UTC = 한국시간(KST) 07:30 (다음날)
+    - cron: "30 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests pykrx
+
+      - name: Run updater
+        run: |
+          python scripts/update_theme_metrics.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "moneytree-bot"
+          git config user.email "moneytree-bot@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git add data/theme/T_009.json
+          git commit -m "chore: update T_009 returns"
+          git push
