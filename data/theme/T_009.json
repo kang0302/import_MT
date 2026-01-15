@@ -4,31 +4,49 @@
   "themeName": "LG그룹휴머노이드관련주_test123",
   "meta": {
     "periodDefault": "7d",
-    "periodOptions": ["7d", "30d", "90d"],
+    "periodOptions": [
+      "7d",
+      "30d",
+      "90d"
+    ],
     "dataAsOf": "2026-01-15T15:40:00+09:00",
     "notes": "T_009 v5 정본(보존형). 기존 metrics(ret3d/ret7d/ret1m/retYtd/ret1y/ret3y/perFwd12m 등)는 절대 삭제하지 않고 그대로 유지한다. v5 표준 키(return_7d/return_30d/return_90d, per)도 함께 둬서 프론트는 표준 키로 읽고, 기존 ret* 값은 원본/호환/실험 필드로 유지한다. 가격/수익률은 스냅샷(일 1회)로 갱신, PER은 저빈도 갱신(주/월).",
     "sources": [
-      { "name": "price", "provider": "KRX+Stooq", "method": "scheduled_snapshot" },
-      { "name": "per", "provider": "TBD", "method": "low_frequency_refresh" }
+      {
+        "name": "price",
+        "provider": "KRX+Stooq",
+        "method": "scheduled_snapshot"
+      },
+      {
+        "name": "per",
+        "provider": "TBD",
+        "method": "low_frequency_refresh"
+      }
     ]
   },
   "nodes": [
-    { "id": "T_009", "type": "THEME", "name": "LG그룹휴머노이드관련주" },
-
+    {
+      "id": "T_009",
+      "type": "THEME",
+      "name": "LG그룹휴머노이드관련주"
+    },
     {
       "id": "A_079",
       "type": "ASSET",
       "name": "LG전자",
-      "exposure": { "ticker": "066570", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "066570",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {
         "perFwd12m": 12.3,
-        "ret3d": 0.22,
-        "ret7d": 0.6,
-        "ret1m": 0.11,
-        "retYtd": 0.18,
-        "ret1y": 0.22,
-        "ret3y": 0.41,
-
+        "ret3d": 5.6818,
+        "ret7d": -1.0638,
+        "ret1m": -3.527,
+        "retYtd": 1.7505,
+        "ret1y": 11.3772,
+        "ret3y": 3.5635,
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "KRW",
         "last_price": null,
@@ -43,16 +61,19 @@
       "id": "A_080",
       "type": "ASSET",
       "name": "LG이노텍",
-      "exposure": { "ticker": "011070", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "011070",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {
         "perFwd12m": 9.8,
-        "ret3d": -0.35,
-        "ret7d": -0.6,
-        "ret1m": 0.03,
-        "retYtd": -0.08,
-        "ret1y": -0.08,
-        "ret3y": 0.12,
-
+        "ret3d": 3.3457,
+        "ret7d": 3.3457,
+        "ret1m": -5.6027,
+        "retYtd": 3.9252,
+        "ret1y": 71.6049,
+        "ret3y": -1.4184,
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "KRW",
         "last_price": null,
@@ -67,7 +88,12 @@
       "id": "A_081",
       "type": "ASSET",
       "name": "베어로보틱스",
-      "exposure": { "ticker": "", "exchange": "", "country": "US", "theme_status": "Unlisted" },
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US",
+        "theme_status": "Unlisted"
+      },
       "metrics": {
         "perFwd12m": 0,
         "ret3d": 0.08,
@@ -76,7 +102,6 @@
         "retYtd": 0.26,
         "ret1y": 0.15,
         "ret3y": 0.52,
-
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "USD",
         "last_price": null,
@@ -91,16 +116,19 @@
       "id": "A_082",
       "type": "ASSET",
       "name": "로보티즈",
-      "exposure": { "ticker": "108490", "exchange": "KOSDAQ", "country": "KR" },
+      "exposure": {
+        "ticker": "108490",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
       "metrics": {
         "perFwd12m": 38.4,
-        "ret3d": 0.55,
-        "ret7d": 0.12,
-        "ret1m": 0.18,
-        "retYtd": 0.44,
-        "ret1y": 0.55,
-        "ret3y": 0.91,
-
+        "ret3d": 12.5786,
+        "ret7d": 7.8313,
+        "ret1m": -11.2397,
+        "retYtd": -0.3711,
+        "ret1y": 1085.9017,
+        "ret3y": 1023.102,
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "KRW",
         "last_price": null,
@@ -115,16 +143,19 @@
       "id": "A_083",
       "type": "ASSET",
       "name": "로보스타",
-      "exposure": { "ticker": "090360", "exchange": "KOSDAQ", "country": "KR" },
+      "exposure": {
+        "ticker": "090360",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
       "metrics": {
         "perFwd12m": 21.7,
-        "ret3d": -0.04,
-        "ret7d": -0.03,
-        "ret1m": 0.01,
-        "retYtd": 0.07,
-        "ret1y": 0.07,
-        "ret3y": 0.19,
-
+        "ret3d": 11.5057,
+        "ret7d": 3.0184,
+        "ret1m": -4.3849,
+        "retYtd": -1.6291,
+        "ret1y": 258.4475,
+        "ret3y": 288.6139,
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "KRW",
         "last_price": null,
@@ -139,16 +170,19 @@
       "id": "A_084",
       "type": "ASSET",
       "name": "엔젤로보틱스",
-      "exposure": { "ticker": "455900", "exchange": "KOSDAQ", "country": "KR" },
+      "exposure": {
+        "ticker": "455900",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
       "metrics": {
         "perFwd12m": 0,
-        "ret3d": 0.12,
-        "ret7d": 0.02,
-        "ret1m": -0.04,
-        "retYtd": 0.31,
-        "ret1y": 0.12,
+        "ret3d": 23.7113,
+        "ret7d": 18.0328,
+        "ret1m": 9.589,
+        "retYtd": 15.016,
+        "ret1y": 56.1822,
         "ret3y": 0.73,
-
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "KRW",
         "last_price": null,
@@ -163,16 +197,19 @@
       "id": "A_085",
       "type": "ASSET",
       "name": "삼성전기",
-      "exposure": { "ticker": "009150", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "009150",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {
         "perFwd12m": 14.9,
-        "ret3d": 0.03,
-        "ret7d": 0.01,
-        "ret1m": 0.05,
-        "retYtd": 0.09,
-        "ret1y": 0.19,
-        "ret3y": 0.28,
-
+        "ret3d": 2.1505,
+        "ret7d": 6.3433,
+        "ret1m": 4.7794,
+        "retYtd": 5.5556,
+        "ret1y": 130.21,
+        "ret3y": 108.7912,
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "KRW",
         "last_price": null,
@@ -187,7 +224,11 @@
       "id": "A_086",
       "type": "ASSET",
       "name": "Sony",
-      "exposure": { "ticker": "SONY", "exchange": "NYSE", "country": "US" },
+      "exposure": {
+        "ticker": "SONY",
+        "exchange": "NYSE",
+        "country": "US"
+      },
       "metrics": {
         "perFwd12m": 17.2,
         "ret3d": 0.09,
@@ -196,7 +237,6 @@
         "retYtd": 0.14,
         "ret1y": 0.24,
         "ret3y": 0.37,
-
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "USD",
         "last_price": null,
@@ -211,7 +251,11 @@
       "id": "A_087",
       "type": "ASSET",
       "name": "테슬라",
-      "exposure": { "ticker": "TSLA", "exchange": "NASDAQ", "country": "US" },
+      "exposure": {
+        "ticker": "TSLA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
       "metrics": {
         "perFwd12m": 52.6,
         "ret3d": -0.42,
@@ -220,7 +264,6 @@
         "retYtd": 0.06,
         "ret1y": 0.31,
         "ret3y": 0.88,
-
         "asof": "2026-01-15T15:40:00+09:00",
         "currency": "USD",
         "last_price": null,
@@ -231,41 +274,157 @@
         "market_cap": null
       }
     },
-
-    { "id": "BF_020", "type": "BUSINESS_FIELD", "name": "소프트웨어" },
-    { "id": "BF_021", "type": "BUSINESS_FIELD", "name": "액추에이터" },
-    { "id": "BF_022", "type": "BUSINESS_FIELD", "name": "산업용로봇제어기" },
-    { "id": "BF_023", "type": "BUSINESS_FIELD", "name": "웨어러블관절구동" },
-    { "id": "BF_024", "type": "BUSINESS_FIELD", "name": "고해상도카메라모듈" },
-    { "id": "BF_025", "type": "BUSINESS_FIELD", "name": "옵티머스" }
+    {
+      "id": "BF_020",
+      "type": "BUSINESS_FIELD",
+      "name": "소프트웨어"
+    },
+    {
+      "id": "BF_021",
+      "type": "BUSINESS_FIELD",
+      "name": "액추에이터"
+    },
+    {
+      "id": "BF_022",
+      "type": "BUSINESS_FIELD",
+      "name": "산업용로봇제어기"
+    },
+    {
+      "id": "BF_023",
+      "type": "BUSINESS_FIELD",
+      "name": "웨어러블관절구동"
+    },
+    {
+      "id": "BF_024",
+      "type": "BUSINESS_FIELD",
+      "name": "고해상도카메라모듈"
+    },
+    {
+      "id": "BF_025",
+      "type": "BUSINESS_FIELD",
+      "name": "옵티머스"
+    }
   ],
   "edges": [
-    { "from": "A_079", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_080", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_081", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_082", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_083", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_084", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_085", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_086", "to": "T_009", "type": "THEMED_AS" },
-    { "from": "A_087", "to": "T_009", "type": "THEMED_AS" },
-
-    { "from": "A_081", "to": "BF_020", "type": "OPERATES" },
-    { "from": "A_082", "to": "BF_021", "type": "OPERATES" },
-    { "from": "A_083", "to": "BF_022", "type": "OPERATES" },
-    { "from": "A_084", "to": "BF_023", "type": "OPERATES" },
-    { "from": "A_080", "to": "BF_024", "type": "OPERATES" },
-    { "from": "A_085", "to": "BF_024", "type": "OPERATES" },
-    { "from": "A_086", "to": "BF_024", "type": "OPERATES" },
-    { "from": "A_087", "to": "BF_025", "type": "OPERATES" },
-
-    { "from": "A_079", "to": "A_081", "type": "PARTNERS" },
-    { "from": "A_079", "to": "A_083", "type": "PARTNERS" },
-    { "from": "A_079", "to": "A_084", "type": "PARTNERS" },
-    { "from": "A_079", "to": "A_082", "type": "INVESTS" },
-
-    { "from": "A_080", "to": "A_087", "type": "SUPPLIES" },
-    { "from": "A_085", "to": "A_087", "type": "SUPPLIES" },
-    { "from": "A_086", "to": "A_087", "type": "SUPPLIES" }
+    {
+      "from": "A_079",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_080",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_081",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_082",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_083",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_084",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_085",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_086",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_087",
+      "to": "T_009",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_081",
+      "to": "BF_020",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_082",
+      "to": "BF_021",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_083",
+      "to": "BF_022",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_084",
+      "to": "BF_023",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_080",
+      "to": "BF_024",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_085",
+      "to": "BF_024",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_086",
+      "to": "BF_024",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_087",
+      "to": "BF_025",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_079",
+      "to": "A_081",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_079",
+      "to": "A_083",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_079",
+      "to": "A_084",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_079",
+      "to": "A_082",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_080",
+      "to": "A_087",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_085",
+      "to": "A_087",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_086",
+      "to": "A_087",
+      "type": "SUPPLIES"
+    }
   ]
 }
