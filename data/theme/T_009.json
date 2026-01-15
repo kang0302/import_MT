@@ -1,6 +1,17 @@
 {
+  "schemaVersion": "v5",
   "themeId": "T_009",
   "themeName": "LG그룹휴머노이드관련주_test123",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": ["7d", "30d", "90d"],
+    "dataAsOf": "2026-01-15T15:40:00+09:00",
+    "notes": "T_009 v5 정본(보존형). 기존 metrics(ret3d/ret7d/ret1m/retYtd/ret1y/ret3y/perFwd12m 등)는 절대 삭제하지 않고 그대로 유지한다. v5 표준 키(return_7d/return_30d/return_90d, per)도 함께 둬서 프론트는 표준 키로 읽고, 기존 ret* 값은 원본/호환/실험 필드로 유지한다. 가격/수익률은 스냅샷(일 1회)로 갱신, PER은 저빈도 갱신(주/월).",
+    "sources": [
+      { "name": "price", "provider": "KRX+Stooq", "method": "scheduled_snapshot" },
+      { "name": "per", "provider": "TBD", "method": "low_frequency_refresh" }
+    ]
+  },
   "nodes": [
     { "id": "T_009", "type": "THEME", "name": "LG그룹휴머노이드관련주" },
 
@@ -8,6 +19,7 @@
       "id": "A_079",
       "type": "ASSET",
       "name": "LG전자",
+      "exposure": { "ticker": "066570", "exchange": "KOSPI", "country": "KR" },
       "metrics": {
         "perFwd12m": 12.3,
         "ret3d": 0.22,
@@ -15,13 +27,23 @@
         "ret1m": 0.11,
         "retYtd": 0.18,
         "ret1y": 0.22,
-        "ret3y": 0.41
+        "ret3y": 0.41,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": 0.6,
+        "return_30d": 0.11,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_080",
       "type": "ASSET",
       "name": "LG이노텍",
+      "exposure": { "ticker": "011070", "exchange": "KOSPI", "country": "KR" },
       "metrics": {
         "perFwd12m": 9.8,
         "ret3d": -0.35,
@@ -29,13 +51,23 @@
         "ret1m": 0.03,
         "retYtd": -0.08,
         "ret1y": -0.08,
-        "ret3y": 0.12
+        "ret3y": 0.12,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": -0.6,
+        "return_30d": 0.03,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_081",
       "type": "ASSET",
       "name": "베어로보틱스",
+      "exposure": { "ticker": "", "exchange": "", "country": "US", "theme_status": "Unlisted" },
       "metrics": {
         "perFwd12m": 0,
         "ret3d": 0.08,
@@ -43,13 +75,23 @@
         "ret1m": 0.09,
         "retYtd": 0.26,
         "ret1y": 0.15,
-        "ret3y": 0.52
+        "ret3y": 0.52,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 0.06,
+        "return_30d": 0.09,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_082",
       "type": "ASSET",
       "name": "로보티즈",
+      "exposure": { "ticker": "108490", "exchange": "KOSDAQ", "country": "KR" },
       "metrics": {
         "perFwd12m": 38.4,
         "ret3d": 0.55,
@@ -57,13 +99,23 @@
         "ret1m": 0.18,
         "retYtd": 0.44,
         "ret1y": 0.55,
-        "ret3y": 0.91
+        "ret3y": 0.91,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": 0.12,
+        "return_30d": 0.18,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_083",
       "type": "ASSET",
       "name": "로보스타",
+      "exposure": { "ticker": "090360", "exchange": "KOSDAQ", "country": "KR" },
       "metrics": {
         "perFwd12m": 21.7,
         "ret3d": -0.04,
@@ -71,13 +123,23 @@
         "ret1m": 0.01,
         "retYtd": 0.07,
         "ret1y": 0.07,
-        "ret3y": 0.19
+        "ret3y": 0.19,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": -0.03,
+        "return_30d": 0.01,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_084",
       "type": "ASSET",
       "name": "엔젤로보틱스",
+      "exposure": { "ticker": "455900", "exchange": "KOSDAQ", "country": "KR" },
       "metrics": {
         "perFwd12m": 0,
         "ret3d": 0.12,
@@ -85,13 +147,23 @@
         "ret1m": -0.04,
         "retYtd": 0.31,
         "ret1y": 0.12,
-        "ret3y": 0.73
+        "ret3y": 0.73,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": 0.02,
+        "return_30d": -0.04,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_085",
       "type": "ASSET",
       "name": "삼성전기",
+      "exposure": { "ticker": "009150", "exchange": "KOSPI", "country": "KR" },
       "metrics": {
         "perFwd12m": 14.9,
         "ret3d": 0.03,
@@ -99,13 +171,23 @@
         "ret1m": 0.05,
         "retYtd": 0.09,
         "ret1y": 0.19,
-        "ret3y": 0.28
+        "ret3y": 0.28,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": 0.01,
+        "return_30d": 0.05,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_086",
       "type": "ASSET",
       "name": "Sony",
+      "exposure": { "ticker": "SONY", "exchange": "NYSE", "country": "US" },
       "metrics": {
         "perFwd12m": 17.2,
         "ret3d": 0.09,
@@ -113,13 +195,23 @@
         "ret1m": 0.06,
         "retYtd": 0.14,
         "ret1y": 0.24,
-        "ret3y": 0.37
+        "ret3y": 0.37,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 0.03,
+        "return_30d": 0.06,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
     {
       "id": "A_087",
       "type": "ASSET",
       "name": "테슬라",
+      "exposure": { "ticker": "TSLA", "exchange": "NASDAQ", "country": "US" },
       "metrics": {
         "perFwd12m": 52.6,
         "ret3d": -0.42,
@@ -127,7 +219,16 @@
         "ret1m": -0.12,
         "retYtd": 0.06,
         "ret1y": 0.31,
-        "ret3y": 0.88
+        "ret3y": 0.88,
+
+        "asof": "2026-01-15T15:40:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -0.07,
+        "return_30d": -0.12,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null
       }
     },
 
@@ -168,4 +269,3 @@
     { "from": "A_086", "to": "A_087", "type": "SUPPLIES" }
   ]
 }
-
