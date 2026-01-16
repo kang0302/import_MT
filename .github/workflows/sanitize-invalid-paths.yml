@@ -1,0 +1,36 @@
+name: Sanitize invalid Windows paths
+on:
+  workflow_dispatch:
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rename trailing-space folders if present
+        run: |
+          set -e
+          # list directories in repo root (from git tree, not filesystem)
+          git ls-tree -d --name-only HEAD
+
+          # rename: "g6 " -> "g6"
+          if git ls-tree -d --name-only HEAD | grep -qx "g6 "; then
+            git mv "g6 " "g6"
+          fi
+
+          # rename: "g9 " -> "g9"
+          if git ls-tree -d --name-only HEAD | grep -qx "g9 "; then
+            git mv "g9 " "g9"
+          fi
+
+      - name: Commit & push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "moneytree-bot"
+          git config user.email "moneytree-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: sanitize invalid Windows paths"
+          git push
