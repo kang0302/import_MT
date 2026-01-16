@@ -1,11 +1,14 @@
 # scripts/update_theme_metrics.py
-# DAY56-1 HOTFIX FINAL — MoneyTree Auto Update (T_009)
-# FIX: Remove Stooq (404 issue). US price history from FMP instead.
+# DAY56-1 HOTFIX FINAL v2 — MoneyTree Auto Update (T_009)
+# FIX:
+# - Remove Stooq (404 issue). US price history from FMP instead.
+# - Add US trailing PER (best-effort) from FMP profile/ratios.
 #
 # - KR prices: KRX via pykrx (free)
 # - US prices: FMP historical-price-full (needs FMP_API_KEY)
 # - KR PER/12M FWD PER: FnGuide (best-effort scrape; if fail -> keep existing)
 # - US 12M FWD PER: FMP analyst estimates (eps) + latest price => forward P/E
+# - US trailing PER: FMP profile/ratios best-effort
 #
 # Policy:
 # - NEVER delete existing manual/test values.
@@ -22,7 +25,6 @@ from typing import Dict, Optional, Any, Tuple, List
 import pandas as pd
 import requests
 from pykrx import stock
-
 
 THEME_PATH = "data/theme/T_009.json"
 
@@ -42,7 +44,7 @@ ASSET_SOURCES: Dict[str, AssetSource] = {
     "A_083": AssetSource(country="KR", krx_ticker="090360"),  # 로보스타
     "A_084": AssetSource(country="KR", krx_ticker="455900"),  # 엔젤로보틱스
     "A_085": AssetSource(country="KR", krx_ticker="009150"),  # 삼성전기
-    "A_086": AssetSource(country="US", us_symbol="SONY"),     # Sony ADR
+    "A_086": AssetSource(country="US", us_symbol="SONY"),     # Sony (NYSE: SONY)
     "A_087": AssetSource(country="US", us_symbol="TSLA"),     # Tesla
     # A_081(베어로보틱스): 비상장/티커 없음 → 소스 미지정(기존값 유지)
 }
@@ -141,7 +143,7 @@ def krx_download_daily(ticker: str, start: datetime, end: datetime) -> pd.DataFr
 
 
 # -------------------------
-# US price (FMP) — HOTFIX
+# US price (FMP)
 # -------------------------
 
 def fmp_historical_price_full(symbol: str, api_key: str) -> pd.DataFrame:
@@ -161,7 +163,6 @@ def fmp_historical_price_full(symbol: str, api_key: str) -> pd.DataFrame:
     if not isinstance(hist, list) or not hist:
         return pd.DataFrame(columns=["Date", "Close"])
 
-    # historical item: {"date":"2025-01-02","close":123.45,...}
     rows = []
     for it in hist:
         if not isinstance(it, dict):
@@ -326,6 +327,41 @@ def fetch_forward_eps_from_fmp(symbol: str, api_key: str) -> Optional[float]:
     return None
 
 
+def fetch_trailing_pe_from_fmp(symbol: str, api_key: str) -> Optional[float]:
+    """
+    Best-effort trailing P/E for US.
+    Try 1) /api/v3/profile/{symbol}  -> 'pe'
+    Try 2) /api/v3/ratios/{symbol}   -> 'priceEarningsRatio' (latest)
+    """
+    # 1) profile pe
+    try:
+        url = f"https://financialmodelingprep.com/api/v3/profile/{symbol}"
+        r = requests.get(url, params={"apikey": api_key}, timeout=30)
+        r.raise_for_status()
+        data = r.json()
+        if isinstance(data, list) and data:
+            pe = pick_num(data[0].get("pe"))
+            if pe is not None and pe > 0:
+                return float(round(pe, 2))
+    except Exception:
+        pass
+
+    # 2) ratios pe
+    try:
+        url = f"https://financialmodelingprep.com/api/v3/ratios/{symbol}"
+        r = requests.get(url, params={"limit": 1, "apikey": api_key}, timeout=30)
+        r.raise_for_status()
+        data = r.json()
+        if isinstance(data, list) and data:
+            pe = pick_num(data[0].get("priceEarningsRatio"))
+            if pe is not None and pe > 0:
+                return float(round(pe, 2))
+    except Exception:
+        pass
+
+    return None
+
+
 # -------------------------
 # JSON I/O
 # -------------------------
@@ -407,20 +443,29 @@ def main():
 
         # US: Forward PER from FMP (needs latest_price + eps_fwd)
         if src.country == "US" and src.us_symbol:
-            if fmp_api_key and latest_price is not None:
+            if fmp_api_key:
+                # 2-1) trailing PER best-effort
                 try:
-                    eps_fwd = fetch_forward_eps_from_fmp(src.us_symbol, fmp_api_key)
-                    if eps_fwd is not None and eps_fwd != 0:
-                        fwd_per = float(round(latest_price / eps_fwd, 2))
-                        if fwd_per > 0:
-                            metrics["perFwd12m"] = fwd_per
+                    pe = fetch_trailing_pe_from_fmp(src.us_symbol, fmp_api_key)
+                    if pe is not None:
+                        metrics["per"] = pe
                 except Exception as e:
-                    print(f"[WARN] FMP forward EPS fetch failed for {asset_id}: {e}")
-            else:
-                if not fmp_api_key:
-                    print("[INFO] FMP_API_KEY missing. US forward PER will not update.")
-                if latest_price is None:
+                    print(f"[WARN] FMP trailing PER fetch failed for {asset_id}: {e}")
+
+                # 2-2) forward PER best-effort
+                if latest_price is not None:
+                    try:
+                        eps_fwd = fetch_forward_eps_from_fmp(src.us_symbol, fmp_api_key)
+                        if eps_fwd is not None and eps_fwd != 0:
+                            fwd_per = float(round(latest_price / eps_fwd, 2))
+                            if fwd_per > 0:
+                                metrics["perFwd12m"] = fwd_per
+                    except Exception as e:
+                        print(f"[WARN] FMP forward EPS fetch failed for {asset_id}: {e}")
+                else:
                     print(f"[INFO] US latest price missing for {asset_id}. US forward PER will not update.")
+            else:
+                print("[INFO] FMP_API_KEY missing. US PER will not update.")
 
         n["metrics"] = metrics
 
@@ -430,3 +475,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
