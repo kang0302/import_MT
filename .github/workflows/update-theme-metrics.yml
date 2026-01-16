@@ -36,24 +36,27 @@ jobs:
           python scripts/update_theme_metrics.py
 
       # 5) Commit & push ONLY if changed (🔥 FIXED ORDER 🔥)
-      - name: Commit & push if changed
-        run: |
-          git config user.name "moneytree-bot"
-          git config user.email "moneytree-bot@users.noreply.github.com"
+- name: Commit & push if changed
+  run: |
+    set -e
 
-          # 변경 없으면 종료
-          if git diff --quiet; then
-            echo "No changes."
-            exit 0
-          fi
+    git config user.name "moneytree-bot"
+    git config user.email "moneytree-bot@users.noreply.github.com"
 
-          # 최신 main을 먼저 받아서 rebase
-          git fetch origin main
-          git rebase origin/main
+    # 변경 없으면 종료
+    if git diff --quiet; then
+      echo "No changes."
+      exit 0
+    fi
 
-          # 커밋
-          git add data/theme/T_009.json
-          git commit -m "chore: update T_009 returns & PER"
+    # 1) 먼저 커밋(로컬에서만)
+    git add data/theme/T_009.json
+    git commit -m "chore: update T_009 returns & PER"
 
-          # 푸시
-          git push origin HEAD:main
+    # 2) 그 다음 최신 main과 합치기(rebase)
+    git fetch origin main
+    git rebase origin/main
+
+    # 3) 푸시
+    git push origin HEAD:main
+
