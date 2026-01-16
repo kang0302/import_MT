@@ -3,71 +3,95 @@ name: Sanitize invalid Windows paths (robust)
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fix:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Detect suspicious root dirs & rename safely
         shell: bash
         run: |
           set -euo pipefail
 
-          echo "== Root dirs (raw) =="
-          # -z: NUL separated to preserve weird chars
+          echo "== Root items (raw) =="
           git ls-tree -z -d --name-only HEAD | python - <<'PY'
 import sys
 data = sys.stdin.buffer.read().split(b"\x00")
 names = [x.decode("utf-8", "replace") for x in data if x]
 for n in names:
-    # show repr so invisible chars are visible
     print(repr(n))
 PY
 
+          echo "== Sanitizing root dirs with trailing spaces/dots =="
           python - <<'PY'
-import subprocess, re
+import subprocess, sys
 
-# get root dir names safely
+# get root directories/files
 out = subprocess.check_output(["git","ls-tree","-z","-d","--name-only","HEAD"])
-names = [x.decode("utf-8","replace") for x in out.split(b"\x00") if x]
+roots = [x.decode("utf-8","replace") for x in out.split(b"\x00") if x]
 
-def is_suspicious(name: str) -> bool:
-    # trailing whitespace of any kind (space, tab, NBSP etc)
-    if len(name) != len(name.rstrip()):
-        return True
-    # Windows forbidden chars (just in case)
-    if re.search(r'[<>:"/\\\\|?*]', name):
-        return True
-    return False
+root_set = set(roots)
+renames = []
 
-# only rename suspicious ones among g6/g9 family (to avoid touching others)
-targets = [n for n in names if is_suspicious(n) and (n.startswith("g6") or n.startswith("g9"))]
+def is_bad(name: str) -> bool:
+    # Windows-problematic: trailing space or trailing dot
+    return name.endswith(" ") or name.endswith(".")
 
-if not targets:
-    print("No suspicious g6/g9 dirs found.")
-    raise SystemExit(0)
+for old in roots:
+    if not is_bad(old):
+        continue
 
-for bad in targets:
-    safe = bad.rstrip()
-    # if trimming makes collision, add suffix
-    if safe in names:
-        safe = safe + "__BAD_TRSPACE"
-    # final fallback
-    if safe == bad:
-        safe = bad + "__BAD"
-    print(f"Renaming {bad!r} -> {safe!r}")
-    subprocess.check_call(["git","mv", bad, safe])
+    base = old.rstrip(" .")
+    if base == "":
+        base = "__EMPTY__"
+
+    new = base
+    # avoid collision (e.g., "g6" already exists while "g6 " exists)
+    if new in root_set:
+        new = f"{base}__SANITIZED"
+
+    # ensure uniqueness if still collides
+    i = 2
+    while new in root_set:
+        new = f"{base}__SANITIZED_{i}"
+        i += 1
+
+    renames.append((old, new))
+    root_set.add(new)
+
+if not renames:
+    print("No bad root dir names found. Done.")
+    sys.exit(0)
+
+for old, new in renames:
+    print(f"RENAME: {repr(old)} -> {repr(new)}")
+    subprocess.check_call(["git","mv","-f", old, new])
+
 PY
 
+          echo "== Git status after rename =="
+          git status --porcelain
+
       - name: Commit & push if changed
+        shell: bash
         run: |
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
+          set -euo pipefail
           git config user.name "moneytree-bot"
           git config user.email "moneytree-bot@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
           git add -A
-          git commit -m "chore: sanitize invalid Windows paths (robust)"
+          git commit -m "chore: sanitize invalid windows paths"
           git push
+
