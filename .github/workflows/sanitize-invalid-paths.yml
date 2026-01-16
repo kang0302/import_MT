@@ -1,36 +1,51 @@
-name: Sanitize invalid Windows paths
+name: Sanitize invalid Windows paths (trailing-space folders)
+
 on:
   workflow_dispatch:
+
 jobs:
   fix:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Rename trailing-space folders if present
+      - name: Detect & rename trailing-space root folders safely
         run: |
           set -e
-          # list directories in repo root (from git tree, not filesystem)
+
+          echo "== Root dirs =="
           git ls-tree -d --name-only HEAD
 
-          # rename: "g6 " -> "g6"
-          if git ls-tree -d --name-only HEAD | grep -qx "g6 "; then
-            git mv "g6 " "g6"
-          fi
+          rename_if_exists () {
+            BAD="$1"   # e.g. "g6 "
+            GOOD="$2"  # e.g. "g6__BAD_TRSPACE"
 
-          # rename: "g9 " -> "g9"
-          if git ls-tree -d --name-only HEAD | grep -qx "g9 "; then
-            git mv "g9 " "g9"
-          fi
+            if git ls-tree -d --name-only HEAD | grep -qx "$BAD"; then
+              echo "Found trailing-space dir: [$BAD]"
+              echo "Renaming to: [$GOOD]"
+              git mv "$BAD" "$GOOD"
+            else
+              echo "Not found: [$BAD]"
+            fi
+          }
+
+          # ✅ 핵심: 끝 공백 폴더를 안전한 이름으로 변경 (충돌 방지)
+          rename_if_exists "g6 " "g6__BAD_TRSPACE"
+          rename_if_exists "g9 " "g9__BAD_TRSPACE"
+
+          # (추가로 발견되면 여기에 더 붙이면 됨)
+          # rename_if_exists "g7 " "g7__BAD_TRSPACE"
 
       - name: Commit & push if changed
         run: |
           if git diff --quiet; then
-            echo "No changes."
+            echo "No changes to commit."
             exit 0
           fi
           git config user.name "moneytree-bot"
           git config user.email "moneytree-bot@users.noreply.github.com"
           git add -A
-          git commit -m "chore: sanitize invalid Windows paths"
+          git commit -m "chore: sanitize trailing-space folders for Windows compatibility"
           git push
+
