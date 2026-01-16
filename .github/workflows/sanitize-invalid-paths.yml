@@ -1,4 +1,4 @@
-name: Sanitize invalid Windows paths (trailing-space folders)
+name: Sanitize invalid Windows paths (robust)
 
 on:
   workflow_dispatch:
@@ -7,35 +7,58 @@ jobs:
   fix:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Detect & rename trailing-space root folders safely
+      - name: Detect suspicious root dirs & rename safely
+        shell: bash
         run: |
-          set -e
+          set -euo pipefail
 
-          echo "== Root dirs =="
-          git ls-tree -d --name-only HEAD
+          echo "== Root dirs (raw) =="
+          # -z: NUL separated to preserve weird chars
+          git ls-tree -z -d --name-only HEAD | python - <<'PY'
+import sys
+data = sys.stdin.buffer.read().split(b"\x00")
+names = [x.decode("utf-8", "replace") for x in data if x]
+for n in names:
+    # show repr so invisible chars are visible
+    print(repr(n))
+PY
 
-          rename_if_exists () {
-            BAD="$1"   # e.g. "g6 "
-            GOOD="$2"  # e.g. "g6__BAD_TRSPACE"
+          python - <<'PY'
+import subprocess, re
 
-            if git ls-tree -d --name-only HEAD | grep -qx "$BAD"; then
-              echo "Found trailing-space dir: [$BAD]"
-              echo "Renaming to: [$GOOD]"
-              git mv "$BAD" "$GOOD"
-            else
-              echo "Not found: [$BAD]"
-            fi
-          }
+# get root dir names safely
+out = subprocess.check_output(["git","ls-tree","-z","-d","--name-only","HEAD"])
+names = [x.decode("utf-8","replace") for x in out.split(b"\x00") if x]
 
-          # ✅ 핵심: 끝 공백 폴더를 안전한 이름으로 변경 (충돌 방지)
-          rename_if_exists "g6 " "g6__BAD_TRSPACE"
-          rename_if_exists "g9 " "g9__BAD_TRSPACE"
+def is_suspicious(name: str) -> bool:
+    # trailing whitespace of any kind (space, tab, NBSP etc)
+    if len(name) != len(name.rstrip()):
+        return True
+    # Windows forbidden chars (just in case)
+    if re.search(r'[<>:"/\\\\|?*]', name):
+        return True
+    return False
 
-          # (추가로 발견되면 여기에 더 붙이면 됨)
-          # rename_if_exists "g7 " "g7__BAD_TRSPACE"
+# only rename suspicious ones among g6/g9 family (to avoid touching others)
+targets = [n for n in names if is_suspicious(n) and (n.startswith("g6") or n.startswith("g9"))]
+
+if not targets:
+    print("No suspicious g6/g9 dirs found.")
+    raise SystemExit(0)
+
+for bad in targets:
+    safe = bad.rstrip()
+    # if trimming makes collision, add suffix
+    if safe in names:
+        safe = safe + "__BAD_TRSPACE"
+    # final fallback
+    if safe == bad:
+        safe = bad + "__BAD"
+    print(f"Renaming {bad!r} -> {safe!r}")
+    subprocess.check_call(["git","mv", bad, safe])
+PY
 
       - name: Commit & push if changed
         run: |
@@ -46,6 +69,6 @@ jobs:
           git config user.name "moneytree-bot"
           git config user.email "moneytree-bot@users.noreply.github.com"
           git add -A
-          git commit -m "chore: sanitize trailing-space folders for Windows compatibility"
+          git commit -m "chore: sanitize invalid Windows paths (robust)"
           git push
 
