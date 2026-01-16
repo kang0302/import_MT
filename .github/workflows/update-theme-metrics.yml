@@ -3,49 +3,57 @@ name: Update theme metrics (T_009)
 on:
   workflow_dispatch:
   schedule:
-    # UTC 기준. 22:30 UTC = 한국시간(KST) 07:30
-    - cron: "30 22 * * *"
-
-permissions:
-  contents: write
+    - cron: "0 3 * * *" # daily 12:00 KST
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
+      # 1) Checkout
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # 2) Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
+      # 3) Install dependencies
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install pandas requests pykrx lxml
 
+      # 4) Run updater (this modifies T_009.json)
       - name: Run updater
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: |
           python scripts/update_theme_metrics.py
 
-      - name: Pull latest main (rebase)
-        run: |
-          git pull origin main --rebase
-
+      # 5) Commit & push ONLY if changed (🔥 FIXED ORDER 🔥)
       - name: Commit & push if changed
         run: |
           git config user.name "moneytree-bot"
           git config user.email "moneytree-bot@users.noreply.github.com"
 
+          # 변경 없으면 종료
           if git diff --quiet; then
             echo "No changes."
             exit 0
           fi
 
+          # 최신 main을 먼저 받아서 rebase
+          git fetch origin main
+          git rebase origin/main
+
+          # 커밋
           git add data/theme/T_009.json
           git commit -m "chore: update T_009 returns & PER"
-          git push
+
+          # 푸시
+          git push origin HEAD:main
