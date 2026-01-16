@@ -1,4 +1,4 @@
-name: Sanitize invalid Windows paths (robust)
+name: Sanitize invalid Windows paths
 
 on:
   workflow_dispatch:
@@ -7,90 +7,13 @@ permissions:
   contents: write
 
 jobs:
-  fix:
+  sanitize:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Detect suspicious root dirs & rename safely
-        shell: bash
-        run: |
-          set -euo pipefail
+      - name: Run sanitizer
+        run: python scripts/sanitize_invalid_paths.py
 
-          echo "== Root items (raw) =="
-          git ls-tree -z -d --name-only HEAD | python - <<'PY'
-import sys
-data = sys.stdin.buffer.read().split(b"\x00")
-names = [x.decode("utf-8", "replace") for x in data if x]
-for n in names:
-    print(repr(n))
-PY
-
-          echo "== Sanitizing root dirs with trailing spaces/dots =="
-          python - <<'PY'
-import subprocess, sys
-
-# get root directories/files
-out = subprocess.check_output(["git","ls-tree","-z","-d","--name-only","HEAD"])
-roots = [x.decode("utf-8","replace") for x in out.split(b"\x00") if x]
-
-root_set = set(roots)
-renames = []
-
-def is_bad(name: str) -> bool:
-    # Windows-problematic: trailing space or trailing dot
-    return name.endswith(" ") or name.endswith(".")
-
-for old in roots:
-    if not is_bad(old):
-        continue
-
-    base = old.rstrip(" .")
-    if base == "":
-        base = "__EMPTY__"
-
-    new = base
-    # avoid collision (e.g., "g6" already exists while "g6 " exists)
-    if new in root_set:
-        new = f"{base}__SANITIZED"
-
-    # ensure uniqueness if still collides
-    i = 2
-    while new in root_set:
-        new = f"{base}__SANITIZED_{i}"
-        i += 1
-
-    renames.append((old, new))
-    root_set.add(new)
-
-if not renames:
-    print("No bad root dir names found. Done.")
-    sys.exit(0)
-
-for old, new in renames:
-    print(f"RENAME: {repr(old)} -> {repr(new)}")
-    subprocess.check_call(["git","mv","-f", old, new])
-
-PY
-
-          echo "== Git status after rename =="
-          git status --porcelain
-
-      - name: Commit & push if changed
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "moneytree-bot"
-          git config user.email "moneytree-bot@users.noreply.github.com"
-
-          if git diff --quiet; then
-            echo "No changes."
-            exit 0
-          fi
-
-          git add -A
-          git commit -m "chore: sanitize invalid windows paths"
-          git push
