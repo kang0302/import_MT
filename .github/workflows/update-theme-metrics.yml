@@ -1,23 +1,20 @@
-name: Update theme metrics (T_009)
+name: Update theme metrics (T_009 + T_006)
 
 on:
   workflow_dispatch:
   schedule:
-    # daily 12:00 KST = 03:00 UTC
-    - cron: "0 3 * * *"
+    - cron: "0 3 * * *" # daily 12:00 KST (UTC+9)
 
-permissions:
-  contents: write
+concurrency:
+  group: update-theme-metrics
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,7 +33,6 @@ jobs:
           python scripts/update_theme_metrics.py
 
       - name: Commit & push if changed
-        shell: bash
         run: |
           set -e
 
@@ -48,12 +44,9 @@ jobs:
             exit 0
           fi
 
-          git add data/theme/T_009.json
-          git commit -m "chore: update T_009 returns & PER"
+          git add data/theme/T_*.json
+          git add scripts/update_theme_metrics.py || true
 
-          # Always rebase onto latest origin/main to avoid push rejection
-          git fetch origin main
-          git rebase origin/main
-
-          git push origin HEAD:main
+          git commit -m "chore: update theme metrics (multi-theme)"
+          git push
 
