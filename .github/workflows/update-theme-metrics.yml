@@ -35,6 +35,10 @@ jobs:
         run: |
           python scripts/update_theme_metrics.py
 
+      - name: Build master.json (assets + business fields)
+        run: |
+          python scripts/build_master_json.py
+
       - name: Commit & push if changed
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,7 +54,9 @@ jobs:
           fi
 
           git add data/theme/T_009.json data/theme/T_006.json || true
+          git add data/theme/*.json data/theme/index.json data/master/master.json
           git commit -m "chore: update theme metrics (multi-theme)"
+    
 
           # make sure remote uses token (robust)
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
