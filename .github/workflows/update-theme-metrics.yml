@@ -1,20 +1,23 @@
-name: Update theme metrics (T_009 + T_006)
+name: Update theme metrics (multi-theme)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *" # daily 12:00 KST (UTC+9)
+    - cron: "0 3 * * *"  # daily 12:00 KST (UTC+9)
 
-concurrency:
-  group: update-theme-metrics
-  cancel-in-progress: true
+permissions:
+  contents: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,6 +36,8 @@ jobs:
           python scripts/update_theme_metrics.py
 
       - name: Commit & push if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
 
@@ -44,9 +49,10 @@ jobs:
             exit 0
           fi
 
-          git add data/theme/T_*.json
-          git add scripts/update_theme_metrics.py || true
-
+          git add data/theme/T_009.json data/theme/T_006.json || true
           git commit -m "chore: update theme metrics (multi-theme)"
-          git push
+
+          # make sure remote uses token (robust)
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin HEAD:main
 
