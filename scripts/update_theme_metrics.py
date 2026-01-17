@@ -1,18 +1,15 @@
 # scripts/update_theme_metrics.py
-# DAY56-1 HOTFIX FINAL v2 — MoneyTree Auto Update (T_009)
-# FIX:
-# - Remove Stooq (404 issue). US price history from FMP instead.
-# - Add US trailing PER (best-effort) from FMP profile/ratios.
-#
-# - KR prices: KRX via pykrx (free)
-# - US prices: FMP historical-price-full (needs FMP_API_KEY)
-# - KR PER/12M FWD PER: FnGuide (best-effort scrape; if fail -> keep existing)
-# - US 12M FWD PER: FMP analyst estimates (eps) + latest price => forward P/E
-# - US trailing PER: FMP profile/ratios best-effort
+# DAY57 MULTI-THEME FINAL — MoneyTree Auto Update (T_009 + T_006)
 #
 # Policy:
 # - NEVER delete existing manual/test values.
 # - Only overwrite metrics when a new value is successfully computed.
+#
+# Data sources:
+# - KR prices: KRX via pykrx (free)
+# - US prices: FMP historical-price-full (needs FMP_API_KEY)
+# - KR PER & 12M FWD PER: FnGuide (best-effort scrape; if fail -> keep existing)
+# - US 12M FWD PER: FMP analyst estimates (eps) + latest price => forward P/E
 
 import json
 import math
@@ -26,34 +23,50 @@ import pandas as pd
 import requests
 from pykrx import stock
 
-THEME_PATH = "data/theme/T_009.json"
+
+# =========================
+# ✅ MULTI THEME TARGETS
+# =========================
+THEME_IDS = ["T_009", "T_006"]  # 필요 시 여기만 추가
+THEME_DIR = "data/theme"
 
 
 @dataclass
 class AssetSource:
     country: str  # "US" or "KR"
-    krx_ticker: Optional[str] = None   # KR: "066570"
-    us_symbol: Optional[str] = None    # US: "TSLA", "SONY"
+    krx_ticker: Optional[str] = None  # KR: "066570"
+    us_symbol: Optional[str] = None   # US: "TSLA", "SONY"
 
 
-# ✅ T_009 자산 소스 매핑 (필요하면 여기만 추가/수정)
-ASSET_SOURCES: Dict[str, AssetSource] = {
-    "A_079": AssetSource(country="KR", krx_ticker="066570"),  # LG전자
-    "A_080": AssetSource(country="KR", krx_ticker="011070"),  # LG이노텍
-    "A_082": AssetSource(country="KR", krx_ticker="108490"),  # 로보티즈
-    "A_083": AssetSource(country="KR", krx_ticker="090360"),  # 로보스타
-    "A_084": AssetSource(country="KR", krx_ticker="455900"),  # 엔젤로보틱스
-    "A_085": AssetSource(country="KR", krx_ticker="009150"),  # 삼성전기
-    "A_086": AssetSource(country="US", us_symbol="SONY"),     # Sony (NYSE: SONY)
-    "A_087": AssetSource(country="US", us_symbol="TSLA"),     # Tesla
-    # A_081(베어로보틱스): 비상장/티커 없음 → 소스 미지정(기존값 유지)
+# =========================
+# ✅ THEME별 자산 소스 매핑
+# - 소스가 없는 자산은 "기존값 유지"
+# =========================
+ASSET_SOURCES_BY_THEME: Dict[str, Dict[str, AssetSource]] = {
+    "T_009": {
+        "A_079": AssetSource(country="KR", krx_ticker="066570"),  # LG전자
+        "A_080": AssetSource(country="KR", krx_ticker="011070"),  # LG이노텍
+        "A_082": AssetSource(country="KR", krx_ticker="108490"),  # 로보티즈
+        "A_083": AssetSource(country="KR", krx_ticker="090360"),  # 로보스타
+        "A_084": AssetSource(country="KR", krx_ticker="455900"),  # 엔젤로보틱스
+        "A_085": AssetSource(country="KR", krx_ticker="009150"),  # 삼성전기
+        "A_086": AssetSource(country="US", us_symbol="SONY"),     # Sony ADR
+        "A_087": AssetSource(country="US", us_symbol="TSLA"),     # Tesla
+        # A_081(베어로보틱스): 비상장/티커 없음 → 소스 미지정(기존값 유지)
+    },
+
+    # ✅ T_006은 지금 “임의값” 유지가 목적이므로 일단 빈 매핑으로 둔다.
+    # (네가 다음 단계에서 A_055~A_062 실제 티커/국가를 주면 여기만 채우면 됨)
+    "T_006": {
+        # 예: "A_055": AssetSource(country="US", us_symbol="NVDA"),
+        # 예: "A_056": AssetSource(country="KR", krx_ticker="000660"),
+    },
 }
 
 
 # -------------------------
 # Helpers
 # -------------------------
-
 def pick_num(v: Any) -> Optional[float]:
     try:
         x = float(v)
@@ -65,7 +78,6 @@ def pick_num(v: Any) -> Optional[float]:
 
 
 def normalize_pct(v: float) -> float:
-    # 0.12(=12%) 같은 값이 들어오면 100배
     return v * 100.0 if abs(v) <= 1.5 else v
 
 
@@ -109,7 +121,6 @@ def compute_returns_from_close(df: pd.DataFrame) -> Dict[str, Optional[float]]:
         first_close = ytd_df["Close"].iloc[0]
         out["retYtd"] = pct_return(latest, first_close)
 
-    # normalize + round
     for k, v in list(out.items()):
         if v is not None:
             out[k] = float(round(normalize_pct(v), 4))
@@ -119,7 +130,6 @@ def compute_returns_from_close(df: pd.DataFrame) -> Dict[str, Optional[float]]:
 # -------------------------
 # KR price (pykrx)
 # -------------------------
-
 def krx_download_daily(ticker: str, start: datetime, end: datetime) -> pd.DataFrame:
     s = start.strftime("%Y%m%d")
     e = end.strftime("%Y%m%d")
@@ -145,16 +155,15 @@ def krx_download_daily(ticker: str, start: datetime, end: datetime) -> pd.DataFr
 # -------------------------
 # US price (FMP)
 # -------------------------
-
 def fmp_historical_price_full(symbol: str, api_key: str) -> pd.DataFrame:
     """
-    Fetch daily historical prices from FMP.
     Endpoint:
       https://financialmodelingprep.com/api/v3/historical-price-full/{symbol}?serietype=line&apikey=...
     Returns DataFrame with Date, Close sorted ascending.
     """
     url = f"https://financialmodelingprep.com/api/v3/historical-price-full/{symbol}"
     params = {"serietype": "line", "apikey": api_key}
+
     r = requests.get(url, params=params, timeout=30)
     r.raise_for_status()
     data = r.json()
@@ -181,7 +190,6 @@ def fmp_historical_price_full(symbol: str, api_key: str) -> pd.DataFrame:
 # -------------------------
 # PER sources
 # -------------------------
-
 def fn_guide_url(krx_ticker: str) -> str:
     gicode = f"A{krx_ticker}"
     return (
@@ -212,7 +220,7 @@ def _best_effort_find_per_values_from_tables(tables: List[pd.DataFrame]) -> Tupl
         except Exception:
             continue
 
-        # find 12M PER
+        # 12M PER
         if fwd12m is None:
             for r, row in enumerate(grid):
                 for c, cell in enumerate(row):
@@ -225,18 +233,13 @@ def _best_effort_find_per_values_from_tables(tables: List[pd.DataFrame]) -> Tupl
                         if cand is None and r + 1 < len(grid):
                             ns = _extract_numbers_from_text(grid[r + 1][c])
                             cand = ns[0] if ns else None
-                        if cand is None:
-                            ns = []
-                            for x in row:
-                                ns += _extract_numbers_from_text(str(x))
-                            cand = ns[0] if ns else None
                         if cand is not None and cand > 0:
                             fwd12m = float(cand)
                             break
                 if fwd12m is not None:
                     break
 
-        # find trailing PER
+        # trailing PER
         if trailing is None:
             for r, row in enumerate(grid):
                 row_join = " | ".join([str(x) for x in row])
@@ -263,10 +266,6 @@ def _best_effort_find_per_values_from_tables(tables: List[pd.DataFrame]) -> Tupl
 
 
 def fetch_per_from_fnguide(krx_ticker: str) -> Tuple[Optional[float], Optional[float]]:
-    """
-    FnGuide best-effort scrape using pandas.read_html.
-    Requires lxml installed in workflow.
-    """
     url = fn_guide_url(krx_ticker)
     headers = {
         "User-Agent": "Mozilla/5.0 (MoneyTreeBot; +https://github.com/)",
@@ -284,28 +283,16 @@ def fetch_per_from_fnguide(krx_ticker: str) -> Tuple[Optional[float], Optional[f
 
 
 def fetch_forward_eps_from_fmp(symbol: str, api_key: str) -> Optional[float]:
-    """
-    FMP stable endpoint:
-      https://financialmodelingprep.com/stable/analyst-estimates?symbol=TSLA&period=annual&page=0&limit=10&apikey=...
-    We pick the first available eps estimate key (best-effort).
-    """
     url = "https://financialmodelingprep.com/stable/analyst-estimates"
     params = {"symbol": symbol, "period": "annual", "page": 0, "limit": 10, "apikey": api_key}
+
     r = requests.get(url, params=params, timeout=30)
     r.raise_for_status()
     data = r.json()
     if not isinstance(data, list) or not data:
         return None
 
-    key_candidates = [
-        "epsEstimated",
-        "epsEstimatedAvg",
-        "estimatedEpsAvg",
-        "epsAvg",
-        "eps",
-        "estimatedEPS",
-    ]
-
+    key_candidates = ["epsEstimated", "epsEstimatedAvg", "estimatedEpsAvg", "epsAvg", "eps", "estimatedEPS"]
     for item in data:
         if not isinstance(item, dict):
             continue
@@ -323,49 +310,12 @@ def fetch_forward_eps_from_fmp(symbol: str, api_key: str) -> Optional[float]:
                 v = pick_num(val)
                 if v is not None and v != 0:
                     return float(v)
-
-    return None
-
-
-def fetch_trailing_pe_from_fmp(symbol: str, api_key: str) -> Optional[float]:
-    """
-    Best-effort trailing P/E for US.
-    Try 1) /api/v3/profile/{symbol}  -> 'pe'
-    Try 2) /api/v3/ratios/{symbol}   -> 'priceEarningsRatio' (latest)
-    """
-    # 1) profile pe
-    try:
-        url = f"https://financialmodelingprep.com/api/v3/profile/{symbol}"
-        r = requests.get(url, params={"apikey": api_key}, timeout=30)
-        r.raise_for_status()
-        data = r.json()
-        if isinstance(data, list) and data:
-            pe = pick_num(data[0].get("pe"))
-            if pe is not None and pe > 0:
-                return float(round(pe, 2))
-    except Exception:
-        pass
-
-    # 2) ratios pe
-    try:
-        url = f"https://financialmodelingprep.com/api/v3/ratios/{symbol}"
-        r = requests.get(url, params={"limit": 1, "apikey": api_key}, timeout=30)
-        r.raise_for_status()
-        data = r.json()
-        if isinstance(data, list) and data:
-            pe = pick_num(data[0].get("priceEarningsRatio"))
-            if pe is not None and pe > 0:
-                return float(round(pe, 2))
-    except Exception:
-        pass
-
     return None
 
 
 # -------------------------
 # JSON I/O
 # -------------------------
-
 def load_theme_json(path: str) -> dict:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -376,10 +326,15 @@ def save_theme_json(path: str, data: dict) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def main():
+def update_one_theme(theme_id: str, sources: Dict[str, AssetSource]) -> None:
+    theme_path = f"{THEME_DIR}/{theme_id}.json"
+    if not os.path.exists(theme_path):
+        print(f"[SKIP] theme file missing: {theme_path}")
+        return
+
     fmp_api_key = os.getenv("FMP_API_KEY", "").strip()
 
-    theme = load_theme_json(THEME_PATH)
+    theme = load_theme_json(theme_path)
     nodes = theme.get("nodes", [])
 
     now = datetime.utcnow()
@@ -391,46 +346,38 @@ def main():
             continue
 
         asset_id = n.get("id")
-        src = ASSET_SOURCES.get(asset_id)
+        src = sources.get(asset_id)
         if not src:
-            continue  # 소스 미정이면 기존값 유지
+            continue  # ✅ 소스 미지정이면 기존값 유지(임의값 포함)
 
         metrics = n.get("metrics") or {}
-
-        # -------------------------
-        # 1) Price → Returns
-        # -------------------------
         df = None
         latest_price = None
 
+        # 1) Price -> Returns
         try:
             if src.country == "KR" and src.krx_ticker:
                 df = krx_download_daily(src.krx_ticker, start, end)
-
             elif src.country == "US" and src.us_symbol:
                 if not fmp_api_key:
-                    print("[INFO] FMP_API_KEY missing. US prices will not update.")
+                    print(f"[INFO] FMP_API_KEY missing. US prices not updated: {asset_id}")
                     df = None
                 else:
                     df = fmp_historical_price_full(src.us_symbol, fmp_api_key)
-
         except Exception as e:
             print(f"[WARN] price fetch failed for {asset_id}: {e}")
             df = None
 
         if df is not None and not df.empty:
             latest_price = pick_num(df["Close"].iloc[-1])
-
             returns = compute_returns_from_close(df)
-            # ✅ 덮어쓰기: 계산된 값만 갱신 / None이면 기존 유지
+
+            # ✅ 계산된 값만 덮어쓰기 / None이면 기존 유지
             for k, v in returns.items():
                 if v is not None:
                     metrics[k] = v
 
-        # -------------------------
         # 2) PER update
-        # -------------------------
-        # KR: FnGuide (best-effort)
         if src.country == "KR" and src.krx_ticker:
             try:
                 trailing_per, fwd12m_per = fetch_per_from_fnguide(src.krx_ticker)
@@ -441,36 +388,32 @@ def main():
             except Exception as e:
                 print(f"[WARN] FnGuide PER fetch failed for {asset_id}: {e}")
 
-        # US: Forward PER from FMP (needs latest_price + eps_fwd)
         if src.country == "US" and src.us_symbol:
-            if fmp_api_key:
-                # 2-1) trailing PER best-effort
+            if fmp_api_key and latest_price is not None:
                 try:
-                    pe = fetch_trailing_pe_from_fmp(src.us_symbol, fmp_api_key)
-                    if pe is not None:
-                        metrics["per"] = pe
+                    eps_fwd = fetch_forward_eps_from_fmp(src.us_symbol, fmp_api_key)
+                    if eps_fwd is not None and eps_fwd != 0:
+                        fwd_per = float(round(latest_price / eps_fwd, 2))
+                        if fwd_per > 0:
+                            metrics["perFwd12m"] = fwd_per
                 except Exception as e:
-                    print(f"[WARN] FMP trailing PER fetch failed for {asset_id}: {e}")
-
-                # 2-2) forward PER best-effort
-                if latest_price is not None:
-                    try:
-                        eps_fwd = fetch_forward_eps_from_fmp(src.us_symbol, fmp_api_key)
-                        if eps_fwd is not None and eps_fwd != 0:
-                            fwd_per = float(round(latest_price / eps_fwd, 2))
-                            if fwd_per > 0:
-                                metrics["perFwd12m"] = fwd_per
-                    except Exception as e:
-                        print(f"[WARN] FMP forward EPS fetch failed for {asset_id}: {e}")
-                else:
-                    print(f"[INFO] US latest price missing for {asset_id}. US forward PER will not update.")
+                    print(f"[WARN] FMP forward EPS fetch failed for {asset_id}: {e}")
             else:
-                print("[INFO] FMP_API_KEY missing. US PER will not update.")
+                if not fmp_api_key:
+                    print(f"[INFO] FMP_API_KEY missing. US forward PER not updated: {asset_id}")
+                if latest_price is None:
+                    print(f"[INFO] US latest price missing. US forward PER not updated: {asset_id}")
 
         n["metrics"] = metrics
 
-    save_theme_json(THEME_PATH, theme)
-    print("[OK] Updated:", THEME_PATH)
+    save_theme_json(theme_path, theme)
+    print("[OK] Updated:", theme_path)
+
+
+def main():
+    for theme_id in THEME_IDS:
+        sources = ASSET_SOURCES_BY_THEME.get(theme_id, {})
+        update_one_theme(theme_id, sources)
 
 
 if __name__ == "__main__":
