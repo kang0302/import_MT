@@ -1,15 +1,16 @@
 # scripts/update_theme_metrics.py
-# DAY57 MULTI-THEME FINAL — MoneyTree Auto Update (T_009 + T_006)
+# DAY57 MULTI-THEME FINAL — MoneyTree Auto Update
+#
+# Features:
+# - Multi-theme automation
+# - KR prices: pykrx (free)
+# - US prices: FMP stable endpoint (historical-price-eod/light)
+# - KR PER / 12M FWD PER: FnGuide (best-effort, keep existing on fail)
+# - US 12M FWD PER: FMP analyst estimates (eps) + latest price
 #
 # Policy:
-# - NEVER delete existing manual/test values.
-# - Only overwrite metrics when a new value is successfully computed.
-#
-# Data sources:
-# - KR prices: KRX via pykrx (free)
-# - US prices: FMP historical-price-full (needs FMP_API_KEY)
-# - KR PER & 12M FWD PER: FnGuide (best-effort scrape; if fail -> keep existing)
-# - US 12M FWD PER: FMP analyst estimates (eps) + latest price => forward P/E
+# - NEVER delete existing values
+# - Only overwrite when a new value is successfully computed
 
 import json
 import math
@@ -18,6 +19,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import Dict, Optional, Any, Tuple, List
+from io import StringIO
 
 import pandas as pd
 import requests
@@ -25,48 +27,46 @@ from pykrx import stock
 
 
 # =========================
-# ✅ MULTI THEME TARGETS
+# CONFIG
 # =========================
-THEME_IDS = ["T_009", "T_006"]  # 필요 시 여기만 추가
+
+TARGET_THEMES = [
+    "T_006",
+    "T_009",
+]
+
 THEME_DIR = "data/theme"
 
+# =========================
+# ASSET SOURCE MAP
+# =========================
 
 @dataclass
 class AssetSource:
-    country: str  # "US" or "KR"
-    krx_ticker: Optional[str] = None  # KR: "066570"
-    us_symbol: Optional[str] = None   # US: "TSLA", "SONY"
+    country: str            # "KR" or "US"
+    krx_ticker: Optional[str] = None
+    us_symbol: Optional[str] = None
 
 
-# =========================
-# ✅ THEME별 자산 소스 매핑
-# - 소스가 없는 자산은 "기존값 유지"
-# =========================
-ASSET_SOURCES_BY_THEME: Dict[str, Dict[str, AssetSource]] = {
-    "T_009": {
-        "A_079": AssetSource(country="KR", krx_ticker="066570"),  # LG전자
-        "A_080": AssetSource(country="KR", krx_ticker="011070"),  # LG이노텍
-        "A_082": AssetSource(country="KR", krx_ticker="108490"),  # 로보티즈
-        "A_083": AssetSource(country="KR", krx_ticker="090360"),  # 로보스타
-        "A_084": AssetSource(country="KR", krx_ticker="455900"),  # 엔젤로보틱스
-        "A_085": AssetSource(country="KR", krx_ticker="009150"),  # 삼성전기
-        "A_086": AssetSource(country="US", us_symbol="SONY"),     # Sony ADR
-        "A_087": AssetSource(country="US", us_symbol="TSLA"),     # Tesla
-        # A_081(베어로보틱스): 비상장/티커 없음 → 소스 미지정(기존값 유지)
-    },
+ASSET_SOURCES: Dict[str, AssetSource] = {
+    # ---- KR ----
+    "A_079": AssetSource(country="KR", krx_ticker="066570"),  # LG전자
+    "A_080": AssetSource(country="KR", krx_ticker="011070"),  # LG이노텍
+    "A_082": AssetSource(country="KR", krx_ticker="108490"),  # 로보티즈
+    "A_083": AssetSource(country="KR", krx_ticker="090360"),  # 로보스타
+    "A_084": AssetSource(country="KR", krx_ticker="455900"),  # 엔젤로보틱스
+    "A_085": AssetSource(country="KR", krx_ticker="009150"),  # 삼성전기
 
-    # ✅ T_006은 지금 “임의값” 유지가 목적이므로 일단 빈 매핑으로 둔다.
-    # (네가 다음 단계에서 A_055~A_062 실제 티커/국가를 주면 여기만 채우면 됨)
-    "T_006": {
-        # 예: "A_055": AssetSource(country="US", us_symbol="NVDA"),
-        # 예: "A_056": AssetSource(country="KR", krx_ticker="000660"),
-    },
+    # ---- US ----
+    "A_086": AssetSource(country="US", us_symbol="SONY"),     # Sony ADR
+    "A_087": AssetSource(country="US", us_symbol="TSLA"),     # Tesla
 }
 
 
-# -------------------------
-# Helpers
-# -------------------------
+# =========================
+# UTIL
+# =========================
+
 def pick_num(v: Any) -> Optional[float]:
     try:
         x = float(v)
@@ -82,19 +82,20 @@ def normalize_pct(v: float) -> float:
 
 
 def pct_return(latest: float, past: float) -> Optional[float]:
-    if latest is None or past is None:
-        return None
-    if past == 0:
+    if latest is None or past is None or past == 0:
         return None
     return (latest / past - 1.0) * 100.0
 
 
 def compute_returns_from_close(df: pd.DataFrame) -> Dict[str, Optional[float]]:
-    """
-    Compute returns:
-      ret3d, ret7d, ret1m(~21td), retYtd, ret1y(~252td), ret3y(~756td)
-    """
-    out = {"ret3d": None, "ret7d": None, "ret1m": None, "retYtd": None, "ret1y": None, "ret3y": None}
+    out = {
+        "ret3d": None,
+        "ret7d": None,
+        "ret1m": None,
+        "retYtd": None,
+        "ret1y": None,
+        "ret3y": None,
+    }
     if df is None or df.empty:
         return out
 
@@ -103,319 +104,201 @@ def compute_returns_from_close(df: pd.DataFrame) -> Dict[str, Optional[float]]:
     latest = closes[-1]
     latest_date = dates[-1]
 
-    def n_trading_days_ago(n: int) -> Optional[float]:
+    def n_days_ago(n: int) -> Optional[float]:
         if len(closes) <= n:
             return None
         return closes[-1 - n]
 
-    out["ret3d"] = pct_return(latest, n_trading_days_ago(3))
-    out["ret7d"] = pct_return(latest, n_trading_days_ago(7))
-    out["ret1m"] = pct_return(latest, n_trading_days_ago(21))
-    out["ret1y"] = pct_return(latest, n_trading_days_ago(252))
-    out["ret3y"] = pct_return(latest, n_trading_days_ago(756))
+    out["ret3d"] = pct_return(latest, n_days_ago(3))
+    out["ret7d"] = pct_return(latest, n_days_ago(7))
+    out["ret1m"] = pct_return(latest, n_days_ago(21))
+    out["ret1y"] = pct_return(latest, n_days_ago(252))
+    out["ret3y"] = pct_return(latest, n_days_ago(756))
 
-    # YTD: first trading day in same calendar year
     y = latest_date.year
     ytd_df = df[df["Date"].dt.year == y]
     if not ytd_df.empty:
-        first_close = ytd_df["Close"].iloc[0]
-        out["retYtd"] = pct_return(latest, first_close)
+        out["retYtd"] = pct_return(latest, ytd_df["Close"].iloc[0])
 
-    for k, v in list(out.items()):
+    for k, v in out.items():
         if v is not None:
-            out[k] = float(round(normalize_pct(v), 4))
+            out[k] = round(normalize_pct(v), 4)
+
     return out
 
 
-# -------------------------
-# KR price (pykrx)
-# -------------------------
+# =========================
+# PRICE FETCH
+# =========================
+
 def krx_download_daily(ticker: str, start: datetime, end: datetime) -> pd.DataFrame:
-    s = start.strftime("%Y%m%d")
-    e = end.strftime("%Y%m%d")
-    df = stock.get_market_ohlcv_by_date(s, e, ticker)
+    df = stock.get_market_ohlcv_by_date(
+        start.strftime("%Y%m%d"),
+        end.strftime("%Y%m%d"),
+        ticker,
+    )
     if df is None or df.empty:
         return pd.DataFrame(columns=["Date", "Close"])
 
     df = df.reset_index()
-    if "날짜" in df.columns:
-        df["Date"] = pd.to_datetime(df["날짜"], errors="coerce")
-    else:
-        df["Date"] = pd.to_datetime(df.iloc[:, 0], errors="coerce")
-
-    close_col = "종가" if "종가" in df.columns else ("Close" if "Close" in df.columns else None)
-    if close_col is None:
-        return pd.DataFrame(columns=["Date", "Close"])
-
-    df["Close"] = pd.to_numeric(df[close_col], errors="coerce")
+    df["Date"] = pd.to_datetime(df.iloc[:, 0], errors="coerce")
+    df["Close"] = pd.to_numeric(df["종가"], errors="coerce")
     df = df.dropna(subset=["Date", "Close"]).sort_values("Date")
     return df[["Date", "Close"]]
 
 
-# -------------------------
-# US price (FMP)
-# -------------------------
-def fmp_historical_price_full(symbol: str, api_key: str) -> pd.DataFrame:
-    """
-    Endpoint:
-      https://financialmodelingprep.com/api/v3/historical-price-full/{symbol}?serietype=line&apikey=...
-    Returns DataFrame with Date, Close sorted ascending.
-    """
-    url = f"https://financialmodelingprep.com/api/v3/historical-price-full/{symbol}"
-    params = {"serietype": "line", "apikey": api_key}
+def fmp_historical_price_eod_light(symbol: str, api_key: str) -> pd.DataFrame:
+    url = "https://financialmodelingprep.com/stable/historical-price-eod/light"
+    params = {"symbol": symbol, "apikey": api_key}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (MoneyTreeBot; GitHub Actions)",
+        "Accept": "application/json",
+    }
 
-    r = requests.get(url, params=params, timeout=30)
+    r = requests.get(url, params=params, headers=headers, timeout=30)
     r.raise_for_status()
     data = r.json()
 
-    hist = data.get("historical")
-    if not isinstance(hist, list) or not hist:
+    if not isinstance(data, list) or not data:
         return pd.DataFrame(columns=["Date", "Close"])
 
     rows = []
-    for it in hist:
-        if not isinstance(it, dict):
-            continue
-        d = it.get("date")
-        c = it.get("close")
-        dv = pd.to_datetime(d, errors="coerce")
-        cv = pick_num(c)
-        if pd.notna(dv) and cv is not None:
-            rows.append((dv, cv))
+    for it in data:
+        d = pd.to_datetime(it.get("date"), errors="coerce")
+        c = pick_num(it.get("close"))
+        if pd.notna(d) and c is not None:
+            rows.append((d, c))
 
-    df = pd.DataFrame(rows, columns=["Date", "Close"]).sort_values("Date")
-    return df
+    return pd.DataFrame(rows, columns=["Date", "Close"]).sort_values("Date")
 
 
-# -------------------------
-# PER sources
-# -------------------------
+# =========================
+# PER FETCH
+# =========================
+
 def fn_guide_url(krx_ticker: str) -> str:
-    gicode = f"A{krx_ticker}"
     return (
         "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp"
-        f"?pGB=1&gicode={gicode}&cID=&MenuYn=Y&ReportGB=&NewMenuID=101&stkGb=701"
+        f"?pGB=1&gicode=A{krx_ticker}&MenuYn=Y&stkGb=701"
     )
-
-
-def _extract_numbers_from_text(s: str) -> List[float]:
-    nums = re.findall(r"-?\d[\d,]*\.?\d*", s)
-    out: List[float] = []
-    for x in nums:
-        x = x.replace(",", "")
-        v = pick_num(x)
-        if v is not None:
-            out.append(v)
-    return out
-
-
-def _best_effort_find_per_values_from_tables(tables: List[pd.DataFrame]) -> Tuple[Optional[float], Optional[float]]:
-    trailing = None
-    fwd12m = None
-
-    for df in tables:
-        try:
-            df2 = df.copy().fillna("")
-            grid = df2.astype(str).values.tolist()
-        except Exception:
-            continue
-
-        # 12M PER
-        if fwd12m is None:
-            for r, row in enumerate(grid):
-                for c, cell in enumerate(row):
-                    txt = (cell or "").strip()
-                    if re.search(r"12\s*M\s*PER|12M\s*PER|12개월\s*PER", txt, re.IGNORECASE):
-                        cand = None
-                        if c + 1 < len(row):
-                            ns = _extract_numbers_from_text(row[c + 1])
-                            cand = ns[0] if ns else None
-                        if cand is None and r + 1 < len(grid):
-                            ns = _extract_numbers_from_text(grid[r + 1][c])
-                            cand = ns[0] if ns else None
-                        if cand is not None and cand > 0:
-                            fwd12m = float(cand)
-                            break
-                if fwd12m is not None:
-                    break
-
-        # trailing PER
-        if trailing is None:
-            for r, row in enumerate(grid):
-                row_join = " | ".join([str(x) for x in row])
-                if re.search(r"\bPER\b|PER\(", row_join, re.IGNORECASE):
-                    if re.search(r"12\s*M|12M|12개월", row_join, re.IGNORECASE):
-                        continue
-                    nums = []
-                    for x in row:
-                        nums += _extract_numbers_from_text(str(x))
-                    nums = [n for n in nums if 0 < n < 5000]
-                    if nums:
-                        trailing = float(nums[0])
-                        break
-
-        if trailing is not None and fwd12m is not None:
-            break
-
-    if trailing is not None and trailing <= 0:
-        trailing = None
-    if fwd12m is not None and fwd12m <= 0:
-        fwd12m = None
-
-    return trailing, fwd12m
 
 
 def fetch_per_from_fnguide(krx_ticker: str) -> Tuple[Optional[float], Optional[float]]:
     url = fn_guide_url(krx_ticker)
-    headers = {
-        "User-Agent": "Mozilla/5.0 (MoneyTreeBot; +https://github.com/)",
-        "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
-    }
-    r = requests.get(url, headers=headers, timeout=30)
+    r = requests.get(url, timeout=20)
     r.raise_for_status()
 
-    tables = pd.read_html(r.text)
-    trailing, fwd12m = _best_effort_find_per_values_from_tables(tables)
+    tables = pd.read_html(StringIO(r.text))
+    nums: List[float] = []
 
-    trailing = float(round(trailing, 2)) if trailing is not None else None
-    fwd12m = float(round(fwd12m, 2)) if fwd12m is not None else None
+    for df in tables:
+        for v in df.astype(str).values.flatten():
+            nums += [pick_num(x.replace(",", "")) for x in re.findall(r"\d+\.?\d*", v)]
+
+    nums = [n for n in nums if n and n > 0]
+    if not nums:
+        return None, None
+
+    trailing = round(nums[0], 2)
+    fwd12m = round(nums[1], 2) if len(nums) > 1 else None
     return trailing, fwd12m
 
 
 def fetch_forward_eps_from_fmp(symbol: str, api_key: str) -> Optional[float]:
     url = "https://financialmodelingprep.com/stable/analyst-estimates"
-    params = {"symbol": symbol, "period": "annual", "page": 0, "limit": 10, "apikey": api_key}
-
+    params = {
+        "symbol": symbol,
+        "period": "annual",
+        "limit": 5,
+        "apikey": api_key,
+    }
     r = requests.get(url, params=params, timeout=30)
     r.raise_for_status()
     data = r.json()
-    if not isinstance(data, list) or not data:
+
+    if not isinstance(data, list):
         return None
 
-    key_candidates = ["epsEstimated", "epsEstimatedAvg", "estimatedEpsAvg", "epsAvg", "eps", "estimatedEPS"]
-    for item in data:
-        if not isinstance(item, dict):
-            continue
-        for k in key_candidates:
-            v = pick_num(item.get(k))
-            if v is not None and v != 0:
-                return float(v)
-
-    for item in data:
-        if not isinstance(item, dict):
-            continue
-        for k, val in item.items():
-            kk = str(k).lower()
-            if "eps" in kk and ("estim" in kk or "estimate" in kk or "forecast" in kk):
-                v = pick_num(val)
-                if v is not None and v != 0:
-                    return float(v)
+    for row in data:
+        for k in row:
+            if "eps" in k.lower():
+                v = pick_num(row.get(k))
+                if v and v != 0:
+                    return v
     return None
 
 
-# -------------------------
-# JSON I/O
-# -------------------------
-def load_theme_json(path: str) -> dict:
+# =========================
+# MAIN
+# =========================
+
+def process_theme(theme_id: str, fmp_api_key: str):
+    path = f"{THEME_DIR}/{theme_id}.json"
     with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        theme = json.load(f)
 
-
-def save_theme_json(path: str, data: dict) -> None:
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-
-def update_one_theme(theme_id: str, sources: Dict[str, AssetSource]) -> None:
-    theme_path = f"{THEME_DIR}/{theme_id}.json"
-    if not os.path.exists(theme_path):
-        print(f"[SKIP] theme file missing: {theme_path}")
-        return
-
-    fmp_api_key = os.getenv("FMP_API_KEY", "").strip()
-
-    theme = load_theme_json(theme_path)
     nodes = theme.get("nodes", [])
-
     now = datetime.utcnow()
     start = now - timedelta(days=365 * 5)
-    end = now + timedelta(days=2)
 
     for n in nodes:
         if n.get("type") != "ASSET":
             continue
 
         asset_id = n.get("id")
-        src = sources.get(asset_id)
+        src = ASSET_SOURCES.get(asset_id)
         if not src:
-            continue  # ✅ 소스 미지정이면 기존값 유지(임의값 포함)
+            continue
 
-        metrics = n.get("metrics") or {}
+        metrics = n.get("metrics", {})
         df = None
         latest_price = None
 
-        # 1) Price -> Returns
         try:
-            if src.country == "KR" and src.krx_ticker:
-                df = krx_download_daily(src.krx_ticker, start, end)
-            elif src.country == "US" and src.us_symbol:
-                if not fmp_api_key:
-                    print(f"[INFO] FMP_API_KEY missing. US prices not updated: {asset_id}")
-                    df = None
-                else:
-                    df = fmp_historical_price_full(src.us_symbol, fmp_api_key)
+            if src.country == "KR":
+                df = krx_download_daily(src.krx_ticker, start, now)
+            elif src.country == "US" and fmp_api_key:
+                df = fmp_historical_price_eod_light(src.us_symbol, fmp_api_key)
         except Exception as e:
             print(f"[WARN] price fetch failed for {asset_id}: {e}")
-            df = None
 
         if df is not None and not df.empty:
             latest_price = pick_num(df["Close"].iloc[-1])
-            returns = compute_returns_from_close(df)
-
-            # ✅ 계산된 값만 덮어쓰기 / None이면 기존 유지
-            for k, v in returns.items():
+            for k, v in compute_returns_from_close(df).items():
                 if v is not None:
                     metrics[k] = v
 
-        # 2) PER update
-        if src.country == "KR" and src.krx_ticker:
-            try:
-                trailing_per, fwd12m_per = fetch_per_from_fnguide(src.krx_ticker)
-                if trailing_per is not None:
-                    metrics["per"] = trailing_per
-                if fwd12m_per is not None:
-                    metrics["perFwd12m"] = fwd12m_per
-            except Exception as e:
-                print(f"[WARN] FnGuide PER fetch failed for {asset_id}: {e}")
+        try:
+            if src.country == "KR":
+                per, fwd = fetch_per_from_fnguide(src.krx_ticker)
+                if per:
+                    metrics["per"] = per
+                if fwd:
+                    metrics["perFwd12m"] = fwd
+        except Exception as e:
+            print(f"[WARN] FnGuide PER failed for {asset_id}: {e}")
 
-        if src.country == "US" and src.us_symbol:
-            if fmp_api_key and latest_price is not None:
-                try:
-                    eps_fwd = fetch_forward_eps_from_fmp(src.us_symbol, fmp_api_key)
-                    if eps_fwd is not None and eps_fwd != 0:
-                        fwd_per = float(round(latest_price / eps_fwd, 2))
-                        if fwd_per > 0:
-                            metrics["perFwd12m"] = fwd_per
-                except Exception as e:
-                    print(f"[WARN] FMP forward EPS fetch failed for {asset_id}: {e}")
-            else:
-                if not fmp_api_key:
-                    print(f"[INFO] FMP_API_KEY missing. US forward PER not updated: {asset_id}")
-                if latest_price is None:
-                    print(f"[INFO] US latest price missing. US forward PER not updated: {asset_id}")
+        if src.country == "US" and fmp_api_key and latest_price:
+            try:
+                eps = fetch_forward_eps_from_fmp(src.us_symbol, fmp_api_key)
+                if eps:
+                    metrics["perFwd12m"] = round(latest_price / eps, 2)
+            except Exception as e:
+                print(f"[WARN] US forward PER failed for {asset_id}: {e}")
 
         n["metrics"] = metrics
 
-    save_theme_json(theme_path, theme)
-    print("[OK] Updated:", theme_path)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(theme, f, ensure_ascii=False, indent=2)
+
+    print(f"[OK] Updated: {path}")
 
 
 def main():
-    for theme_id in THEME_IDS:
-        sources = ASSET_SOURCES_BY_THEME.get(theme_id, {})
-        update_one_theme(theme_id, sources)
+    fmp_api_key = os.getenv("FMP_API_KEY", "").strip()
+    for theme_id in TARGET_THEMES:
+        process_theme(theme_id, fmp_api_key)
 
 
 if __name__ == "__main__":
     main()
-
