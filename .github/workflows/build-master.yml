@@ -11,6 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,7 +23,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Build masters + theme index
+      - name: Build master CSVs + theme index
         run: |
           set -e
           python scripts/build_master_from_fragments.py
@@ -36,7 +37,7 @@ jobs:
           ls -la data/master || true
           echo "=== ls -la data/theme ==="
           ls -la data/theme || true
-          echo "=== cat data/theme/index.json (head) ==="
+          echo "=== head data/theme/index.json ==="
           head -n 40 data/theme/index.json || true
           echo "=== git status ==="
           git status --porcelain
@@ -47,13 +48,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # ✅ master 생성 결과 stage
           git add data/master
-
-          # ✅ theme index stage (Full Theme Map / Compare dropdown SSOT)
           git add data/theme/index.json
 
-          # 변경 없으면 종료
           if git diff --cached --quiet; then
             echo "No changes."
             exit 0
@@ -61,4 +58,3 @@ jobs:
 
           git commit -m "chore: build master CSVs + theme index (auto merge)"
           git push
-
