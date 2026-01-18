@@ -27,6 +27,15 @@ jobs:
           set -e
           python scripts/build_master_from_fragments.py
 
+      - name: Debug - list outputs
+        run: |
+         echo "=== ls -la data ==="
+         ls -la data || true
+         echo "=== ls -la data/master ==="
+         ls -la data/master || true
+         echo "=== git status ==="
+         git status --porcelain
+
       - name: Commit & push if changed
         run: |
           set -e
