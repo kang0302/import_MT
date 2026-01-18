@@ -1,30 +1,39 @@
-# scripts/build_theme_index.py
 import json
+import glob
 import os
-from glob import glob
+from datetime import datetime
 
 THEME_DIR = "data/theme"
-OUT_PATH = "data/theme/index.json"
+OUTPUT = os.path.join(THEME_DIR, "index.json")
 
-def main():
-    os.makedirs(THEME_DIR, exist_ok=True)
+items = []
 
-    items = []
-    for path in sorted(glob(os.path.join(THEME_DIR, "T_*.json"))):
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                j = json.load(f)
-            tid = (j.get("themeId") or os.path.splitext(os.path.basename(path))[0]).strip()
-            tname = (j.get("themeName") or tid).strip()
-            if tid and tname:
-                items.append({"themeId": tid, "themeName": tname})
-        except Exception as e:
-            print(f"[WARN] failed to read {path}: {e}")
+for path in sorted(glob.glob(os.path.join(THEME_DIR, "T_*.json"))):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
 
-    with open(OUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
+        theme_id = data.get("themeId") or os.path.splitext(os.path.basename(path))[0]
+        theme_name = data.get("themeName", theme_id)
 
-    print(f"[OK] index.json written: {OUT_PATH} (count={len(items)})")
+        nodes = data.get("nodes", []) or []
+        edges = data.get("edges", []) or []
 
-if __name__ == "__main__":
-    main()
+        items.append({
+            "themeId": theme_id,
+            "themeName": theme_name,
+            "nodeCount": len(nodes),
+            "edgeCount": len(edges),
+            "source": "auto",
+            "updatedAt": datetime.utcnow().strftime("%Y-%m-%d"),
+        })
+
+    except Exception as e:
+        print(f"[WARN] Failed to read {path}: {e}")
+
+os.makedirs(THEME_DIR, exist_ok=True)
+
+with open(OUTPUT, "w", encoding="utf-8") as f:
+    json.dump(items, f, ensure_ascii=False, indent=2)
+
+print(f"[OK] theme index generated: {OUTPUT} ({len(items)} themes)")
