@@ -1,0 +1,67 @@
+name: Build master CSVs (auto merge)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *" # daily 12:00 KST (UTC 03:00)
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install minimal deps (optional)
+        run: |
+          set -e
+          python -m pip install --upgrade pip
+
+      - name: Build masters
+        run: |
+          set -e
+          python scripts/build_master_from_fragments.py
+
+      - name: Validate all theme JSONs
+        run: |
+          set -e
+          python scripts/validate_theme_json.py --theme-dir data/theme --master-dir data/master --glob "T_*.json"
+
+      - name: Debug - list outputs
+        run: |
+          echo "=== ls -la data ==="
+          ls -la data || true
+          echo "=== ls -la data/master ==="
+          ls -la data/master || true
+          echo "=== ls -la data/theme ==="
+          ls -la data/theme || true
+          echo "=== git status ==="
+          git status --porcelain
+
+      - name: Commit & push if changed
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Stage master outputs (and optionally theme index if your builder generates it)
+          git add data/master
+
+          # If nothing staged, exit cleanly
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git commit -m "chore: build master CSVs (auto merge)"
+          git push
