@@ -3,7 +3,7 @@ name: Build master CSVs (auto merge)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # daily 12:00 KST (UTC 03:00)
+    - cron: "0 3 * * *" # daily 12:00 KST (UTC 03:00)
 
 permissions:
   contents: write
@@ -29,30 +29,30 @@ jobs:
 
       - name: Debug - list outputs
         run: |
-         echo "=== ls -la data ==="
-         ls -la data || true
-         echo "=== ls -la data/master ==="
-         ls -la data/master || true
-         echo "=== git status ==="
-         git status --porcelain
+          echo "=== ls -la data ==="
+          ls -la data || true
+          echo "=== ls -la data/master ==="
+          ls -la data/master || true
+          echo "=== git status ==="
+          git status --porcelain
 
-     - name: Commit & push if changed
-       run: |
-        set -e
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit & push if changed
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-    # ✅ 반드시 master 생성 결과를 stage에 올림
-    git add data/master
+          # ✅ 반드시 master 생성 결과를 stage에 올림
+          git add data/master
 
-    # ✅ theme index도 같이 다루는 구조라면 필요시 포함
-    # git add data/theme/index.json
+          # ✅ theme index도 같이 다루는 구조라면 필요시 포함
+          # git add data/theme/index.json
 
-    # 변경 없으면 종료
-    if git diff --cached --quiet; then
-      echo "No changes."
-      exit 0
-    fi
+          # 변경 없으면 종료
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
 
-    git commit -m "chore: build master CSVs (auto merge)"
-    git push
+          git commit -m "chore: build master CSVs (auto merge)"
+          git push
