@@ -1,0 +1,48 @@
+name: Build master CSVs (auto merge)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "g*/**/*.csv"
+      - "g*_SANITIZED/**"
+      - "scripts/build_master_from_fragments.py"
+      - ".github/workflows/build-master.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build masters
+        run: |
+          python scripts/build_master_from_fragments.py
+
+      - name: Commit & push if changed
+        run: |
+          set -e
+
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git config user.name "moneytree-bot"
+          git config user.email "moneytree-bot@users.noreply.github.com"
+
+          git add data/master/*.csv data/master/_build_report.json
+          git commit -m "chore: rebuild data/master (auto merge)"
+          git push
