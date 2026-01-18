@@ -2,12 +2,8 @@ name: Build master CSVs (auto merge)
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "g*/**/*.csv"
-      - "g*_SANITIZED/**"
-      - "scripts/build_master_from_fragments.py"
-      - ".github/workflows/build-master.yml"
+  schedule:
+    - cron: "0 3 * * *"  # daily 12:00 KST (UTC 03:00)
 
 permissions:
   contents: write
@@ -15,7 +11,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,20 +24,20 @@ jobs:
 
       - name: Build masters
         run: |
+          set -e
           python scripts/build_master_from_fragments.py
 
       - name: Commit & push if changed
         run: |
           set -e
+          git config user.name "moneytree-bot"
+          git config user.email "moneytree-bot@users.noreply.github.com"
 
           if git diff --quiet; then
             echo "No changes."
             exit 0
           fi
 
-          git config user.name "moneytree-bot"
-          git config user.email "moneytree-bot@users.noreply.github.com"
-
-          git add data/master/*.csv data/master/_build_report.json
-          git commit -m "chore: rebuild data/master (auto merge)"
+          git add data/master/*.csv
+          git commit -m "chore: build master csvs (auto merge)"
           git push
