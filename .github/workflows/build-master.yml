@@ -22,10 +22,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Build masters
+      - name: Build masters + theme index
         run: |
           set -e
           python scripts/build_master_from_fragments.py
+          python scripts/build_theme_index.py
 
       - name: Debug - list outputs
         run: |
@@ -33,6 +34,10 @@ jobs:
           ls -la data || true
           echo "=== ls -la data/master ==="
           ls -la data/master || true
+          echo "=== ls -la data/theme ==="
+          ls -la data/theme || true
+          echo "=== cat data/theme/index.json (head) ==="
+          head -n 40 data/theme/index.json || true
           echo "=== git status ==="
           git status --porcelain
 
@@ -42,11 +47,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # ✅ 반드시 master 생성 결과를 stage에 올림
+          # ✅ master 생성 결과 stage
           git add data/master
 
-          # ✅ theme index도 같이 다루는 구조라면 필요시 포함
-          # git add data/theme/index.json
+          # ✅ theme index stage (Full Theme Map / Compare dropdown SSOT)
+          git add data/theme/index.json
 
           # 변경 없으면 종료
           if git diff --cached --quiet; then
@@ -54,5 +59,6 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: build master CSVs (auto merge)"
+          git commit -m "chore: build master CSVs + theme index (auto merge)"
           git push
+
