@@ -36,17 +36,23 @@ jobs:
          echo "=== git status ==="
          git status --porcelain
 
-      - name: Commit & push if changed
-        run: |
-          set -e
-          git config user.name "moneytree-bot"
-          git config user.email "moneytree-bot@users.noreply.github.com"
+     - name: Commit & push if changed
+       run: |
+        set -e
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet; then
-            echo "No changes."
-            exit 0
-          fi
+    # ✅ 반드시 master 생성 결과를 stage에 올림
+    git add data/master
 
-          git add data/master/*.csv
-          git commit -m "chore: build master csvs (auto merge)"
-          git push
+    # ✅ theme index도 같이 다루는 구조라면 필요시 포함
+    # git add data/theme/index.json
+
+    # 변경 없으면 종료
+    if git diff --cached --quiet; then
+      echo "No changes."
+      exit 0
+    fi
+
+    git commit -m "chore: build master CSVs (auto merge)"
+    git push
