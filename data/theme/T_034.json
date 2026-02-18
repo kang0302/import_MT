@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_034",
+  "themeName": "생성형AI보완적인프라SW",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": ["7d", "30d", "90d"],
+    "dataAsOf": "2026-02-18T15:40:00+09:00",
+    "notes": "g34 신규 생성 · 인프라 SW 보완 레이어",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_034", "type": "THEME", "name": "생성형AI보완적인프라SW" },
+
+    { "id": "A_039", "type": "ASSET", "name": "엘라스틱" },
+    { "id": "A_274", "type": "ASSET", "name": "스노우플레이크" },
+    { "id": "A_040", "type": "ASSET", "name": "몽고DB" },
+    { "id": "A_275", "type": "ASSET", "name": "데이터브릭스" },
+    { "id": "A_276", "type": "ASSET", "name": "데이터독" },
+    { "id": "A_277", "type": "ASSET", "name": "다이나트레이스" },
+    { "id": "A_278", "type": "ASSET", "name": "클라우드플레어" },
+    { "id": "A_279", "type": "ASSET", "name": "지스케일러" },
+    { "id": "A_280", "type": "ASSET", "name": "크라우드스트라이크" },
+    { "id": "A_222", "type": "ASSET", "name": "퓨어스토리지" },
+    { "id": "A_281", "type": "ASSET", "name": "앱러빈" },
+
+    { "id": "BF_070", "type": "BUSINESS_FIELD", "name": "DB/검색/DW" },
+    { "id": "BF_071", "type": "BUSINESS_FIELD", "name": "저장최적화" },
+    { "id": "BF_072", "type": "BUSINESS_FIELD", "name": "마케팅최적화" },
+    { "id": "BF_073", "type": "BUSINESS_FIELD", "name": "네트워크/엣지" },
+    { "id": "BF_074", "type": "BUSINESS_FIELD", "name": "보안" },
+    { "id": "BF_075", "type": "BUSINESS_FIELD", "name": "옵저버빌리티/분석" },
+
+    { "id": "M_034", "type": "MACRO", "name": "LLM확산" }
+  ],
+  "edges": [
+    { "from": "A_039", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_274", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_040", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_275", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_276", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_277", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_278", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_279", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_280", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_222", "to": "T_034", "type": "THEMED_AS" },
+    { "from": "A_281", "to": "T_034", "type": "THEMED_AS" },
+
+    { "from": "A_039", "to": "BF_070", "type": "OPERATES" },
+    { "from": "A_274", "to": "BF_070", "type": "OPERATES" },
+    { "from": "A_040", "to": "BF_070", "type": "OPERATES" },
+    { "from": "A_275", "to": "BF_070", "type": "OPERATES" },
+    { "from": "A_276", "to": "BF_075", "type": "OPERATES" },
+    { "from": "A_277", "to": "BF_075", "type": "OPERATES" },
+    { "from": "A_278", "to": "BF_073", "type": "OPERATES" },
+    { "from": "A_279", "to": "BF_074", "type": "OPERATES" },
+    { "from": "A_280", "to": "BF_074", "type": "OPERATES" },
+    { "from": "A_222", "to": "BF_071", "type": "OPERATES" },
+    { "from": "A_281", "to": "BF_072", "type": "OPERATES" },
+
+    { "from": "M_034", "to": "T_034", "type": "IMPACTS" }
+  ]
+}
