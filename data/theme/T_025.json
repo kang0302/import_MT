@@ -1,319 +1,423 @@
-{
-  "schemaVersion": "v5",
-  "themeId": "T_025",
-  "themeName": "글로벌 메모리 스토리지 HW",
-  "meta": {
-    "periodDefault": "7d",
-    "periodOptions": ["7d", "30d", "90d"],
-    "dataAsOf": "2026-02-13T09:00:00+09:00",
-    "notes": "g25 누적 import 기반 T_025 freeze (BF 포함, metrics 포함)",
-    "sources": []
-  },
-  "nodes": [
-    {
-      "id": "T_025",
-      "type": "THEME",
-      "name": "글로벌 메모리 스토리지 HW"
-    },
+﻿{
+    "schemaVersion":  "v5",
+    "themeId":  "T_025",
+    "themeName":  "글로벌 메모리 스토리지 HW",
+    "meta":  {
+                 "periodDefault":  "3d",
+                 "periodOptions":  [
+                                       "3d",
+                                       "7d",
+                                       "1m",
+                                       "ytd",
+                                       "1y",
+                                       "3y"
+                                   ],
+                 "dataAsOf":  "2026-02-13T09:00:00+09:00",
+                 "notes":  "g25 누적 import 기반 T_025 freeze (BF 포함, metrics 포함)",
+                 "sources":  [
 
-    {
-      "id": "BF_050",
-      "type": "BUSINESS_FIELD",
-      "name": "NAND"
-    },
-    {
-      "id": "BF_051",
-      "type": "BUSINESS_FIELD",
-      "name": "SSD"
-    },
-    {
-      "id": "BF_052",
-      "type": "BUSINESS_FIELD",
-      "name": "HDD"
-    },
-
-    {
-      "id": "A_217",
-      "type": "ASSET",
-      "name": "SK하이닉스",
-      "exposure": {
-        "ticker": "000660",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "KRW",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_088",
-      "type": "ASSET",
-      "name": "삼성전자",
-      "exposure": {
-        "ticker": "005930",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "KRW",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_218",
-      "type": "ASSET",
-      "name": "마이크론",
-      "exposure": {
-        "ticker": "MU",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_219",
-      "type": "ASSET",
-      "name": "파두",
-      "exposure": {
-        "ticker": "440110",
-        "exchange": "KOSDAQ",
-        "country": "KR",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "KRW",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_220",
-      "type": "ASSET",
-      "name": "샌디스크",
-      "exposure": {
-        "ticker": "SNDK",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_221",
-      "type": "ASSET",
-      "name": "웨스턴디지털",
-      "exposure": {
-        "ticker": "WDC",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_222",
-      "type": "ASSET",
-      "name": "퓨어스토리지",
-      "exposure": {
-        "ticker": "PSTG",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_223",
-      "type": "ASSET",
-      "name": "씨게이트테크놀로지",
-      "exposure": {
-        "ticker": "STX",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_224",
-      "type": "ASSET",
-      "name": "레노보",
-      "exposure": {
-        "ticker": "0992",
-        "exchange": "HKEX",
-        "country": "HK",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "HKD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_225",
-      "type": "ASSET",
-      "name": "도시바",
-      "exposure": {
-        "ticker": "",
-        "exchange": "",
-        "country": "JP",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "JPY",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_192",
-      "type": "ASSET",
-      "name": "마벨테크놀로지",
-      "exposure": {
-        "ticker": "MRVL",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-13T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    }
-  ],
-  "edges": [
-    { "from": "A_217", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_088", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_218", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_219", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_220", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_221", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_222", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_223", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_224", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_225", "to": "T_025", "type": "THEMED_AS" },
-    { "from": "A_192", "to": "T_025", "type": "THEMED_AS" },
-
-    { "from": "A_217", "to": "BF_053", "type": "OPERATES" },
-    { "from": "A_088", "to": "BF_053", "type": "OPERATES" },
-    { "from": "A_218", "to": "BF_053", "type": "OPERATES" },
-
-    { "from": "A_088", "to": "BF_054", "type": "OPERATES" },
-    { "from": "A_218", "to": "BF_054", "type": "OPERATES" },
-    { "from": "A_219", "to": "BF_054", "type": "OPERATES" },
-    { "from": "A_220", "to": "BF_054", "type": "OPERATES" },
-    { "from": "A_221", "to": "BF_054", "type": "OPERATES" },
-    { "from": "A_222", "to": "BF_054", "type": "OPERATES" },
-    { "from": "A_192", "to": "BF_054", "type": "OPERATES" },
-
-    { "from": "A_221", "to": "BF_055", "type": "OPERATES" },
-    { "from": "A_223", "to": "BF_055", "type": "OPERATES" },
-    { "from": "A_224", "to": "BF_055", "type": "OPERATES" },
-    { "from": "A_225", "to": "BF_055", "type": "OPERATES" }
-  ]
+                             ]
+             },
+    "nodes":  [
+                  {
+                      "id":  "T_025",
+                      "type":  "THEME",
+                      "name":  "글로벌 메모리 스토리지 HW"
+                  },
+                  {
+                      "id":  "BF_050",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "NAND"
+                  },
+                  {
+                      "id":  "BF_051",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "SSD"
+                  },
+                  {
+                      "id":  "BF_052",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "HDD"
+                  },
+                  {
+                      "id":  "A_217",
+                      "type":  "ASSET",
+                      "name":  "SK하이닉스",
+                      "exposure":  {
+                                       "ticker":  "000660",
+                                       "exchange":  "KOSPI",
+                                       "country":  "KR",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "KRW",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_088",
+                      "type":  "ASSET",
+                      "name":  "삼성전자",
+                      "exposure":  {
+                                       "ticker":  "005930",
+                                       "exchange":  "KOSPI",
+                                       "country":  "KR",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "KRW",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_218",
+                      "type":  "ASSET",
+                      "name":  "마이크론",
+                      "exposure":  {
+                                       "ticker":  "MU",
+                                       "exchange":  "NASDAQ",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_219",
+                      "type":  "ASSET",
+                      "name":  "파두",
+                      "exposure":  {
+                                       "ticker":  "440110",
+                                       "exchange":  "KOSDAQ",
+                                       "country":  "KR",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "KRW",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_220",
+                      "type":  "ASSET",
+                      "name":  "샌디스크",
+                      "exposure":  {
+                                       "ticker":  "SNDK",
+                                       "exchange":  "NASDAQ",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_221",
+                      "type":  "ASSET",
+                      "name":  "웨스턴디지털",
+                      "exposure":  {
+                                       "ticker":  "WDC",
+                                       "exchange":  "NASDAQ",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_222",
+                      "type":  "ASSET",
+                      "name":  "퓨어스토리지",
+                      "exposure":  {
+                                       "ticker":  "PSTG",
+                                       "exchange":  "NYSE",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_223",
+                      "type":  "ASSET",
+                      "name":  "씨게이트테크놀로지",
+                      "exposure":  {
+                                       "ticker":  "STX",
+                                       "exchange":  "NASDAQ",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_224",
+                      "type":  "ASSET",
+                      "name":  "레노보",
+                      "exposure":  {
+                                       "ticker":  "0992",
+                                       "exchange":  "HKEX",
+                                       "country":  "HK",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "HKD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_225",
+                      "type":  "ASSET",
+                      "name":  "도시바",
+                      "exposure":  {
+                                       "ticker":  "",
+                                       "exchange":  "",
+                                       "country":  "JP",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "JPY",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_192",
+                      "type":  "ASSET",
+                      "name":  "마벨테크놀로지",
+                      "exposure":  {
+                                       "ticker":  "MRVL",
+                                       "exchange":  "NASDAQ",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-13T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  }
+              ],
+    "edges":  [
+                  {
+                      "from":  "A_217",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_088",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_218",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_219",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_220",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_221",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_222",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_223",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_224",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_225",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_192",
+                      "to":  "T_025",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_217",
+                      "to":  "BF_053",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_088",
+                      "to":  "BF_053",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_218",
+                      "to":  "BF_053",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_088",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_218",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_219",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_220",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_221",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_222",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_192",
+                      "to":  "BF_054",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_221",
+                      "to":  "BF_055",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_223",
+                      "to":  "BF_055",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_224",
+                      "to":  "BF_055",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "from":  "A_225",
+                      "to":  "BF_055",
+                      "type":  "OPERATES"
+                  }
+              ]
 }

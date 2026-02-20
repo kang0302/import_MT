@@ -1,49 +1,160 @@
-{
-  "schemaVersion": "v5",
-  "themeId": "T_030",
-  "themeName": "K바이오마이크로바이옴관련주",
-  "meta": {
-    "periodDefault": "7d",
-    "periodOptions": ["7d", "30d", "90d"],
-    "dataAsOf": "2026-02-17T09:00:00+09:00",
-    "notes": "g30 누적 import 기반 T_030 freeze",
-    "sources": []
-  },
-  "nodes": [
-    { "id": "T_030", "type": "THEME", "name": "K바이오마이크로바이옴관련주" },
+﻿{
+    "schemaVersion":  "v5",
+    "themeId":  "T_030",
+    "themeName":  "K바이오마이크로바이옴관련주",
+    "meta":  {
+                 "periodDefault":  "3d",
+                 "periodOptions":  [
+                                       "3d",
+                                       "7d",
+                                       "1m",
+                                       "ytd",
+                                       "1y",
+                                       "3y"
+                                   ],
+                 "dataAsOf":  "2026-02-17T09:00:00+09:00",
+                 "notes":  "g30 누적 import 기반 T_030 freeze",
+                 "sources":  [
 
-    { "id": "A_011", "type": "ASSET", "name": "CJ제일제당" },
-    { "id": "A_017", "type": "ASSET", "name": "CJ바이오사이언스" },
-    { "id": "A_252", "type": "ASSET", "name": "HEM파마" },
-    { "id": "A_253", "type": "ASSET", "name": "지놈앤컴퍼니" },
-    { "id": "A_254", "type": "ASSET", "name": "테라젠이텍스" },
-
-    { "id": "BF_060", "type": "BUSINESS_FIELD", "name": "프로바이오틱스" },
-    { "id": "BF_061", "type": "BUSINESS_FIELD", "name": "기술이전" },
-    { "id": "BF_062", "type": "BUSINESS_FIELD", "name": "항암제" },
-    { "id": "BF_063", "type": "BUSINESS_FIELD", "name": "신약개발플랫폼" },
-    { "id": "BF_064", "type": "BUSINESS_FIELD", "name": "CDMO" },
-
-    { "id": "C_051", "type": "CHARACTER", "name": "FDA임상1상진행" },
-    { "id": "C_052", "type": "CHARACTER", "name": "상업화소요기간짧음" },
-    { "id": "C_053", "type": "CHARACTER", "name": "자체파이프라인상업화" }
-  ],
-  "edges": [
-    { "source": "A_252", "target": "T_030", "type": "THEMED_AS" },
-    { "source": "A_253", "target": "T_030", "type": "THEMED_AS" },
-    { "source": "A_017", "target": "T_030", "type": "THEMED_AS" },
-    { "source": "A_254", "target": "T_030", "type": "THEMED_AS" },
-
-    { "source": "A_252", "target": "BF_060", "type": "OPERATES" },
-    { "source": "A_253", "target": "BF_061", "type": "OPERATES" },
-    { "source": "A_253", "target": "BF_062", "type": "OPERATES" },
-    { "source": "A_253", "target": "BF_063", "type": "OPERATES" },
-    { "source": "A_253", "target": "BF_064", "type": "OPERATES" },
-
-    { "source": "A_011", "target": "A_017", "type": "INVESTS" },
-
-    { "source": "A_252", "target": "C_051", "type": "HAS_TRAIT" },
-    { "source": "A_253", "target": "C_053", "type": "HAS_TRAIT" },
-    { "source": "T_030", "target": "C_052", "type": "HAS_TRAIT" }
-  ]
+                             ]
+             },
+    "nodes":  [
+                  {
+                      "id":  "T_030",
+                      "type":  "THEME",
+                      "name":  "K바이오마이크로바이옴관련주"
+                  },
+                  {
+                      "id":  "A_011",
+                      "type":  "ASSET",
+                      "name":  "CJ제일제당"
+                  },
+                  {
+                      "id":  "A_017",
+                      "type":  "ASSET",
+                      "name":  "CJ바이오사이언스"
+                  },
+                  {
+                      "id":  "A_252",
+                      "type":  "ASSET",
+                      "name":  "HEM파마"
+                  },
+                  {
+                      "id":  "A_253",
+                      "type":  "ASSET",
+                      "name":  "지놈앤컴퍼니"
+                  },
+                  {
+                      "id":  "A_254",
+                      "type":  "ASSET",
+                      "name":  "테라젠이텍스"
+                  },
+                  {
+                      "id":  "BF_060",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "프로바이오틱스"
+                  },
+                  {
+                      "id":  "BF_061",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "기술이전"
+                  },
+                  {
+                      "id":  "BF_062",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "항암제"
+                  },
+                  {
+                      "id":  "BF_063",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "신약개발플랫폼"
+                  },
+                  {
+                      "id":  "BF_064",
+                      "type":  "BUSINESS_FIELD",
+                      "name":  "CDMO"
+                  },
+                  {
+                      "id":  "C_051",
+                      "type":  "CHARACTER",
+                      "name":  "FDA임상1상진행"
+                  },
+                  {
+                      "id":  "C_052",
+                      "type":  "CHARACTER",
+                      "name":  "상업화소요기간짧음"
+                  },
+                  {
+                      "id":  "C_053",
+                      "type":  "CHARACTER",
+                      "name":  "자체파이프라인상업화"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "source":  "A_252",
+                      "target":  "T_030",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "source":  "A_253",
+                      "target":  "T_030",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "source":  "A_017",
+                      "target":  "T_030",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "source":  "A_254",
+                      "target":  "T_030",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "source":  "A_252",
+                      "target":  "BF_060",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "source":  "A_253",
+                      "target":  "BF_061",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "source":  "A_253",
+                      "target":  "BF_062",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "source":  "A_253",
+                      "target":  "BF_063",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "source":  "A_253",
+                      "target":  "BF_064",
+                      "type":  "OPERATES"
+                  },
+                  {
+                      "source":  "A_011",
+                      "target":  "A_017",
+                      "type":  "INVESTS"
+                  },
+                  {
+                      "source":  "A_252",
+                      "target":  "C_051",
+                      "type":  "HAS_TRAIT"
+                  },
+                  {
+                      "source":  "A_253",
+                      "target":  "C_053",
+                      "type":  "HAS_TRAIT"
+                  },
+                  {
+                      "source":  "T_030",
+                      "target":  "C_052",
+                      "type":  "HAS_TRAIT"
+                  }
+              ]
 }

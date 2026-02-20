@@ -1,160 +1,205 @@
-{
-  "schemaVersion": "v5",
-  "themeId": "T_022",
-  "themeName": "글로벌전고체배터리",
-  "meta": {
-    "periodDefault": "7d",
-    "periodOptions": ["7d", "30d", "90d"],
-    "dataAsOf": "2026-02-03T09:00:00+09:00",
-    "notes": "g22 누적 import 기반 T_022 freeze",
-    "sources": []
-  },
-  "nodes": [
-    {
-      "id": "T_022",
-      "type": "THEME",
-      "name": "글로벌전고체배터리"
-    },
-    {
-      "id": "A_006",
-      "type": "ASSET",
-      "name": "도요타",
-      "exposure": {
-        "ticker": "7203",
-        "exchange": "TSE",
-        "country": "JP",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-03T09:00:00+09:00",
-        "currency": "JPY",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_202",
-      "type": "ASSET",
-      "name": "파나소닉",
-      "exposure": {
-        "ticker": "6752",
-        "exchange": "TSE",
-        "country": "JP",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-03T09:00:00+09:00",
-        "currency": "JPY",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_203",
-      "type": "ASSET",
-      "name": "퀀텀스케이프",
-      "exposure": {
-        "ticker": "QS",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-03T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_204",
-      "type": "ASSET",
-      "name": "솔리드파워",
-      "exposure": {
-        "ticker": "SLDP",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-03T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "A_205",
-      "type": "ASSET",
-      "name": "TDK",
-      "exposure": {
-        "ticker": "6762",
-        "exchange": "TSE",
-        "country": "JP",
-        "business_desc": "",
-        "theme_role": "",
-        "theme_status": ""
-      },
-      "metrics": {
-        "asof": "2026-02-03T09:00:00+09:00",
-        "currency": "JPY",
-        "last_price": null,
-        "return_7d": null,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null
-      }
-    },
-    {
-      "id": "M_020",
-      "type": "MACRO",
-      "name": "EV보급확대"
-    },
-    {
-      "id": "M_021",
-      "type": "MACRO",
-      "name": "자율주행보급확대"
-    },
-    {
-      "id": "M_022",
-      "type": "MACRO",
-      "name": "이동형로봇확산"
-    }
-  ],
-  "edges": [
-    { "from": "A_202", "to": "T_022", "type": "THEMED_AS" },
-    { "from": "A_006", "to": "T_022", "type": "THEMED_AS" },
-    { "from": "A_203", "to": "T_022", "type": "THEMED_AS" },
-    { "from": "A_204", "to": "T_022", "type": "THEMED_AS" },
-    { "from": "A_205", "to": "T_022", "type": "THEMED_AS" },
-    { "from": "M_020", "to": "T_022", "type": "IMPACTS" },
-    { "from": "M_021", "to": "T_022", "type": "IMPACTS" },
-    { "from": "M_022", "to": "T_022", "type": "IMPACTS" },
-    { "from": "A_006", "to": "A_202", "type": "PARTNERS" }
-  ]
+﻿{
+    "schemaVersion":  "v5",
+    "themeId":  "T_022",
+    "themeName":  "글로벌전고체배터리",
+    "meta":  {
+                 "periodDefault":  "3d",
+                 "periodOptions":  [
+                                       "3d",
+                                       "7d",
+                                       "1m",
+                                       "ytd",
+                                       "1y",
+                                       "3y"
+                                   ],
+                 "dataAsOf":  "2026-02-03T09:00:00+09:00",
+                 "notes":  "g22 누적 import 기반 T_022 freeze",
+                 "sources":  [
+
+                             ]
+             },
+    "nodes":  [
+                  {
+                      "id":  "T_022",
+                      "type":  "THEME",
+                      "name":  "글로벌전고체배터리"
+                  },
+                  {
+                      "id":  "A_006",
+                      "type":  "ASSET",
+                      "name":  "도요타",
+                      "exposure":  {
+                                       "ticker":  "7203",
+                                       "exchange":  "TSE",
+                                       "country":  "JP",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-03T09:00:00+09:00",
+                                      "currency":  "JPY",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_202",
+                      "type":  "ASSET",
+                      "name":  "파나소닉",
+                      "exposure":  {
+                                       "ticker":  "6752",
+                                       "exchange":  "TSE",
+                                       "country":  "JP",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-03T09:00:00+09:00",
+                                      "currency":  "JPY",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_203",
+                      "type":  "ASSET",
+                      "name":  "퀀텀스케이프",
+                      "exposure":  {
+                                       "ticker":  "QS",
+                                       "exchange":  "NYSE",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-03T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_204",
+                      "type":  "ASSET",
+                      "name":  "솔리드파워",
+                      "exposure":  {
+                                       "ticker":  "SLDP",
+                                       "exchange":  "NASDAQ",
+                                       "country":  "US",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-03T09:00:00+09:00",
+                                      "currency":  "USD",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "A_205",
+                      "type":  "ASSET",
+                      "name":  "TDK",
+                      "exposure":  {
+                                       "ticker":  "6762",
+                                       "exchange":  "TSE",
+                                       "country":  "JP",
+                                       "business_desc":  "",
+                                       "theme_role":  "",
+                                       "theme_status":  ""
+                                   },
+                      "metrics":  {
+                                      "asof":  "2026-02-03T09:00:00+09:00",
+                                      "currency":  "JPY",
+                                      "last_price":  null,
+                                      "return_7d":  null,
+                                      "return_30d":  null,
+                                      "return_90d":  null,
+                                      "per":  null,
+                                      "market_cap":  null
+                                  }
+                  },
+                  {
+                      "id":  "M_020",
+                      "type":  "MACRO",
+                      "name":  "EV보급확대"
+                  },
+                  {
+                      "id":  "M_021",
+                      "type":  "MACRO",
+                      "name":  "자율주행보급확대"
+                  },
+                  {
+                      "id":  "M_022",
+                      "type":  "MACRO",
+                      "name":  "이동형로봇확산"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "from":  "A_202",
+                      "to":  "T_022",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_006",
+                      "to":  "T_022",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_203",
+                      "to":  "T_022",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_204",
+                      "to":  "T_022",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "A_205",
+                      "to":  "T_022",
+                      "type":  "THEMED_AS"
+                  },
+                  {
+                      "from":  "M_020",
+                      "to":  "T_022",
+                      "type":  "IMPACTS"
+                  },
+                  {
+                      "from":  "M_021",
+                      "to":  "T_022",
+                      "type":  "IMPACTS"
+                  },
+                  {
+                      "from":  "M_022",
+                      "to":  "T_022",
+                      "type":  "IMPACTS"
+                  },
+                  {
+                      "from":  "A_006",
+                      "to":  "A_202",
+                      "type":  "PARTNERS"
+                  }
+              ]
 }
