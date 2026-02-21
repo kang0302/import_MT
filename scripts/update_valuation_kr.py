@@ -1,178 +1,171 @@
 # import_MT/scripts/update_valuation_kr.py
 import json
-from pathlib import Path
 from datetime import datetime, timedelta
+from pathlib import Path
 
 from pykrx import stock
+
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
 SSOT_PATH = DATA_DIR / "ssot" / "asset_ssot.csv"
 
-OUT_DIR = DATA_DIR / "valuation"
-OUT_PATH = OUT_DIR / "kr_valuation.json"
-
-SOURCE_NAME = "PYKRX"
+CACHE_DIR = DATA_DIR / "cache"
+OUT_PATH = CACHE_DIR / "valuation_kr.json"
 
 
-def _today_kst_yyyymmdd():
-    # GitHub Actions runner는 UTC일 수 있으니, "오늘"은 일단 로컬 날짜 기준으로 잡고
-    # 아래에서 거래일 back-off로 보정한다.
-    return datetime.now().strftime("%Y%m%d")
+def write_json(path: Path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _find_latest_trading_day(max_back_days: int = 14) -> str:
+def yyyymmdd(dt: datetime) -> str:
+    return dt.strftime("%Y%m%d")
+
+
+def find_latest_trading_day(max_back_days: int = 14) -> str:
     """
-    pykrx는 거래일이 아니면 데이터가 비거나(EMPTY DF) NaN이 많다.
-    그래서 '가장 최근 거래일'을 찾는다.
+    오늘부터 거꾸로 내려가며,
+    'get_market_cap_by_ticker'가 비어있지 않은 첫 날짜를 거래일로 간주.
     """
-    d = datetime.now().date()
-    for _ in range(max_back_days):
-        ds = d.strftime("%Y%m%d")
+    today = datetime.now()
+    for i in range(max_back_days + 1):
+        d = today - timedelta(days=i)
+        ds = yyyymmdd(d)
         try:
-            df = stock.get_market_cap_by_ticker(ds)
-            if df is not None and len(df) > 0:
+            cap_df = stock.get_market_cap_by_ticker(ds)
+            if cap_df is not None and len(cap_df) > 0:
                 return ds
         except Exception:
             pass
-        d = d - timedelta(days=1)
 
-    raise SystemExit("최근 거래일을 찾지 못했습니다. (pykrx 응답/네트워크/휴장기간 확인)")
+    raise SystemExit("❌ 최근 거래일을 찾지 못했습니다. (휴장/네트워크/pykrx 이슈 가능)")
 
 
-def _read_asset_ssot_kr():
+def load_kr_assets_from_ssot():
     """
-    asset_ssot.csv에서 country=KR 종목만 읽는다.
-    CSV 파서(표준 라이브러리)로 간단 처리. (쉼표 포함 이름 등은 SSOT 규칙상 없음이 전제)
+    SSOT에서 country=KR & ticker가 있는 항목만 읽어서
+    {asset_id: ticker6} 반환
     """
-    import csv
-
     if not SSOT_PATH.exists():
-        raise SystemExit(f"asset_ssot.csv not found: {SSOT_PATH}")
+        raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
 
-    rows = []
-    with SSOT_PATH.open("r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for r in reader:
-            if (r.get("country") or "").strip().upper() != "KR":
-                continue
-            asset_id = (r.get("asset_id") or "").strip()
-            ticker = (r.get("ticker") or "").strip()
+    txt = SSOT_PATH.read_text(encoding="utf-8-sig").splitlines()
+    if not txt:
+        raise SystemExit("❌ asset_ssot.csv is empty")
 
-            if not asset_id or not ticker:
-                continue
+    header = [h.strip() for h in txt[0].split(",")]
+    idx_asset = header.index("asset_id")
+    idx_ticker = header.index("ticker")
+    idx_country = header.index("country")
 
-            # pykrx는 6자리 문자열이 안전
-            # (005930 같은 0 포함 케이스)
-            ticker = ticker.zfill(6)
+    out = {}
+    for line in txt[1:]:
+        if not line.strip():
+            continue
+        cols = [c.strip() for c in line.split(",")]
+        if len(cols) <= max(idx_asset, idx_ticker, idx_country):
+            continue
+        if (cols[idx_country] or "").upper() != "KR":
+            continue
+        aid = cols[idx_asset]
+        t = (cols[idx_ticker] or "").strip()
+        if not t:
+            continue
+        out[aid] = t.zfill(6)
 
-            rows.append({"asset_id": asset_id, "ticker": ticker})
-
-    return rows
+    return out
 
 
-def _safe_float(x):
+def to_float_or_none(x):
+    if x is None:
+        return None
     try:
-        if x is None:
+        # pykrx는 '-' 같은 값이 올 수 있음
+        if isinstance(x, str) and x.strip() in ("", "-", "N/A"):
             return None
-        # pandas 값은 numpy 타입일 수 있음
-        v = float(x)
-        # NaN 처리
-        if v != v:
-            return None
-        return v
+        return float(x)
     except Exception:
         return None
 
 
-def _safe_int(x):
-    try:
-        if x is None:
-            return None
-        v = int(x)
-        return v
-    except Exception:
-        # NaN/문자열 등
-        try:
-            v = float(x)
-            if v != v:
-                return None
-            return int(v)
-        except Exception:
-            return None
-
-
 def main():
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    assets = load_kr_assets_from_ssot()
+    if not assets:
+        raise SystemExit("❌ KR assets not found in SSOT (country=KR & ticker required)")
 
-    # 1) 최근 거래일 찾기
-    trade_day = _find_latest_trading_day()
-    asof_iso = f"{trade_day[:4]}-{trade_day[4:6]}-{trade_day[6:8]}"
+    trade_day = find_latest_trading_day(max_back_days=14)
+    as_of = datetime.strptime(trade_day, "%Y%m%d").strftime("%Y-%m-%d")
 
-    print(f"[OK] valuation date (latest trading day): {trade_day} ({asof_iso})")
+    print(f"✅ Using trading day: {trade_day} (asOf={as_of})")
 
-    # 2) pykrx에서 전체 테이블 한번에 뽑기(가장 빠르고 안정적)
-    cap_df = stock.get_market_cap_by_ticker(trade_day)  # 시가총액
-    fund_df = stock.get_market_fundamental_by_ticker(trade_day)  # PER 등
-    ohlcv_df = stock.get_market_ohlcv_by_ticker(trade_day)  # 종가 포함
+    # 1) 시총/종가
+    cap_df = stock.get_market_cap_by_ticker(trade_day)
+    # 2) PER 등 펀더멘털
+    fun_df = stock.get_market_fundamental_by_ticker(trade_day)
 
-    # 3) SSOT의 KR 종목만 필터링
-    kr_assets = _read_asset_ssot_kr()
+    if cap_df is None or len(cap_df) == 0:
+        raise SystemExit(f"❌ market cap df empty for {trade_day}")
+    if fun_df is None or len(fun_df) == 0:
+        raise SystemExit(f"❌ fundamental df empty for {trade_day}")
 
+    # pykrx DF index는 보통 ticker(종목코드)
+    # cap_df columns: 종가, 시가총액, ...
+    # fun_df columns: PER, ...
     items = {}
-    for r in kr_assets:
-        aid = r["asset_id"]
-        tic = r["ticker"]
+    nonzero_count = 0
 
-        # DataFrame 인덱스가 ticker 문자열(예: '005930')일 때가 일반적
-        # 혹시 숫자 인덱스로 들어오는 경우를 대비해 두 번 시도
-        def _get_row(df):
-            if df is None:
-                return None
-            if tic in df.index:
-                return df.loc[tic]
-            try:
-                t2 = int(tic)
-                if t2 in df.index:
-                    return df.loc[t2]
-            except Exception:
-                pass
-            return None
+    for asset_id, tkr in assets.items():
+        close = None
+        mcap = None
+        pe = None
 
-        cap_row = _get_row(cap_df)
-        fund_row = _get_row(fund_df)
-        ohlcv_row = _get_row(ohlcv_df)
+        if tkr in cap_df.index:
+            row = cap_df.loc[tkr]
+            close = row.get("종가", None)
+            mcap = row.get("시가총액", None)
 
-        # pykrx 컬럼명(한글) 기준: 종가 / 시가총액 / PER
-        close = _safe_int(ohlcv_row["종가"]) if ohlcv_row is not None and "종가" in ohlcv_row else None
-        market_cap = _safe_int(cap_row["시가총액"]) if cap_row is not None and "시가총액" in cap_row else None
+        if tkr in fun_df.index:
+            row2 = fun_df.loc[tkr]
+            pe = row2.get("PER", None)
 
-        pe_ttm = None
-        if fund_row is not None:
-            # fund_df는 보통 컬럼에 PER이 있음
-            # 값이 '-' 또는 NaN일 수 있음
-            if "PER" in fund_row:
-                pe_ttm = _safe_float(fund_row["PER"])
+        close = int(close) if close not in (None, "") else None
+        mcap = int(mcap) if mcap not in (None, "") else None
+        pe = to_float_or_none(pe)
 
-        items[aid] = {
-            "ticker": tic,
-            "close": close,
-            "marketCap": market_cap,
-            "pe_ttm": pe_ttm,
-            # 개별 항목에도 넣어두면 build_freeze에서 주입하기 편함
-            "valuationAsOf": asof_iso,
-            "valuationSource": SOURCE_NAME,
+        # ✅ 의미있는 값 카운트 (둘 중 하나라도 있으면 성공으로 봄)
+        if (close not in (None, 0)) or (mcap not in (None, 0)) or (pe not in (None, 0, 0.0)):
+            nonzero_count += 1
+
+        items[asset_id] = {
+            "ticker": tkr,
+            "close": close if close is not None else None,
+            "marketCap": mcap if mcap is not None else None,
+            "pe_ttm": pe,
         }
 
+    # ✅ 안전장치: 전부 0/None이면 “수집 실패”로 간주하고 Action 실패 처리
+    if nonzero_count == 0:
+        # 디버그용으로 대표 종목 몇개 찍기
+        sample = ["005930", "000660", "035420", "051910"]
+        print("❌ All values are zero/None. Sample check:")
+        for s in sample:
+            try:
+                if s in cap_df.index:
+                    r = cap_df.loc[s]
+                    print(s, "종가=", r.get("종가"), "시총=", r.get("시가총액"))
+            except Exception:
+                pass
+        raise SystemExit("❌ KR valuation fetch returned no meaningful values. Failing workflow.")
+
     out = {
-        "asOf": asof_iso,
-        "source": SOURCE_NAME,
+        "asOf": as_of,
+        "source": "PYKRX",
         "items": items,
     }
 
-    OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[OK] wrote: {OUT_PATH}")
-    print(f"[OK] KR items: {len(items)}")
+    write_json(OUT_PATH, out)
+    print(f"✅ wrote: {OUT_PATH} (items={len(items)}, nonzero={nonzero_count})")
 
 
 if __name__ == "__main__":
