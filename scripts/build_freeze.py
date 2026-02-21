@@ -12,7 +12,8 @@ INDEX_PATH = THEME_DIR / "index.json"
 
 
 def read_json(path: Path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    # Windows/편집기에서 UTF-8 BOM이 붙어도 안전하게 처리
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def write_json(path: Path, obj):
