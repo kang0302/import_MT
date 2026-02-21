@@ -1,14 +1,11 @@
+# import_MT/scripts/build_freeze.py
 import json
-import os
 from pathlib import Path
-from datetime import datetime
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
 THEME_DIR = DATA_DIR / "theme"
-ASSET_VAL_PATH = DATA_DIR / "valuation" / "kr_valuation.json"
-
-SCHEMA_VERSION = "v5"
+VAL_PATH = DATA_DIR / "valuation" / "kr_valuation.json"
 
 
 def read_json(path: Path):
@@ -18,19 +15,14 @@ def read_json(path: Path):
 
 
 def write_json(path: Path, obj):
-    path.write_text(
-        json.dumps(obj, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def load_themes():
     index_path = THEME_DIR / "index.json"
     idx = read_json(index_path)
 
-    # ✅ index.json 포맷 호환
-    # 1) {"themes":[...]}  (dict)
-    # 2) [ {...}, {...} ]  (list)
+    # index.json 포맷 호환: {"themes":[...]} 또는 [...]
     if isinstance(idx, dict):
         themes = idx.get("themes", []) or []
     elif isinstance(idx, list):
@@ -44,17 +36,41 @@ def load_themes():
     return themes
 
 
-def load_kr_valuation():
-    if not ASSET_VAL_PATH.exists():
+def load_kr_valuation_by_ticker():
+    """
+    kr_valuation.json 구조:
+    {
+      "asOf": "yyyy-mm-dd",
+      "source": "PYKRX",
+      "items": {
+        "A_004": {"ticker":"005380","close":...,"marketCap":...,"pe_ttm":...}
+      }
+    }
+
+    -> ticker 기준으로 빠르게 찾도록 ticker_map으로 변환
+    """
+    if not VAL_PATH.exists():
         print("⚠ kr_valuation.json not found. Skipping KR metrics injection.")
         return {}
 
-    return read_json(ASSET_VAL_PATH)
+    v = read_json(VAL_PATH)
+    items = v.get("items", {}) if isinstance(v, dict) else {}
+    ticker_map = {}
+
+    for _, it in items.items():
+        if not isinstance(it, dict):
+            continue
+        t = (it.get("ticker") or "").strip()
+        if not t:
+            continue
+        t = t.zfill(6)
+        ticker_map[t] = it
+
+    return ticker_map
 
 
-def inject_metrics_into_theme(theme_path: Path, kr_val_map: dict):
+def inject_metrics_into_theme(theme_path: Path, kr_ticker_map: dict):
     theme_obj = read_json(theme_path)
-
     nodes = theme_obj.get("nodes", [])
     updated = 0
 
@@ -62,24 +78,25 @@ def inject_metrics_into_theme(theme_path: Path, kr_val_map: dict):
         if node.get("type") != "ASSET":
             continue
 
-        exposure = node.get("exposure", {})
-        if exposure.get("country") != "KR":
+        exposure = node.get("exposure", {}) or {}
+        if (exposure.get("country") or "").upper() != "KR":
             continue
 
-        ticker = exposure.get("ticker")
+        ticker = (exposure.get("ticker") or "").strip()
         if not ticker:
             continue
+        ticker = ticker.zfill(6)
 
-        val = kr_val_map.get(ticker)
+        val = kr_ticker_map.get(ticker)
         if not val:
             continue
 
         metrics = node.setdefault("metrics", {})
-
         metrics["marketCap"] = val.get("marketCap")
         metrics["pe_ttm"] = val.get("pe_ttm")
         metrics["close"] = val.get("close")
         metrics["valuationAsOf"] = val.get("valuationAsOf")
+        metrics["valuationSource"] = val.get("valuationSource", "PYKRX")
 
         updated += 1
 
@@ -89,25 +106,22 @@ def inject_metrics_into_theme(theme_path: Path, kr_val_map: dict):
 
 def rebuild_index(themes):
     index_path = THEME_DIR / "index.json"
-
-    # index.json이 list 구조인 경우 그대로 유지
-    if isinstance(themes, list):
-        write_json(index_path, themes)
-    else:
+    # 원래 구조 유지
+    idx = read_json(index_path)
+    if isinstance(idx, dict):
         write_json(index_path, {"themes": themes})
+    else:
+        write_json(index_path, themes)
 
 
 def main():
     print("=== Build Freeze Start ===")
-
     themes = load_themes()
-    kr_val_map = load_kr_valuation()
+    kr_ticker_map = load_kr_valuation_by_ticker()
 
     total_updated = 0
-
     for t in themes:
         theme_id = None
-
         if isinstance(t, dict):
             theme_id = t.get("themeId") or t.get("id")
         elif isinstance(t, str):
@@ -117,13 +131,11 @@ def main():
             continue
 
         theme_path = THEME_DIR / f"{theme_id}.json"
-
         if not theme_path.exists():
             print(f"⚠ Theme file not found: {theme_path}")
             continue
 
-        updated = inject_metrics_into_theme(theme_path, kr_val_map)
-        total_updated += updated
+        total_updated += inject_metrics_into_theme(theme_path, kr_ticker_map)
 
     rebuild_index(themes)
 
