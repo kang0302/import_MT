@@ -1,0 +1,46 @@
+name: Update KR Valuation (PYKRX)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 16:00 KST = 07:00 UTC (매일)
+    - cron: "0 7 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run valuation updater
+        run: |
+          python scripts/update_valuation_kr.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git add data/cache/valuation_kr.json
+          git commit -m "chore: update KR valuation cache (PYKRX 16:00 KST)"
+          git push
