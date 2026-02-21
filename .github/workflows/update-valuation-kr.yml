@@ -1,4 +1,4 @@
-name: Update KR Valuation (PYKRX)
+name: Update KR Valuation + Freeze (PYKRX)
 
 on:
   workflow_dispatch: {}
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -27,9 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run valuation updater
+      - name: Run KR valuation updater (PYKRX)
         run: |
           python scripts/update_valuation_kr.py
+
+      - name: Inject metrics into Freeze + update theme index
+        run: |
+          python scripts/build_freeze.py
 
       - name: Commit & push if changed
         run: |
@@ -42,5 +46,8 @@ jobs:
           fi
 
           git add data/cache/valuation_kr.json
-          git commit -m "chore: update KR valuation cache (PYKRX 16:00 KST)"
+          git add data/theme/T_*.json
+          git add data/theme/index.json
+
+          git commit -m "chore: KR valuation + freeze update (16:00 KST, PYKRX)"
           git push
