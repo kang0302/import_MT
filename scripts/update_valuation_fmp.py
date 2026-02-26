@@ -1,10 +1,12 @@
 # scripts/update_valuation_fmp.py
+import csv
 import json
 import os
-from datetime import datetime, timedelta
-from pathlib import Path
-import csv
 import time
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, Optional
+
 import requests
 
 BASE_DIR = Path(__file__).resolve().parents[1]
@@ -14,25 +16,29 @@ SSOT_PATH = DATA_DIR / "ssot" / "asset_ssot.csv"
 CACHE_DIR = DATA_DIR / "cache"
 OUT_PATH = CACHE_DIR / "valuation_fmp.json"
 
-FMP_BASE = "https://financialmodelingprep.com/api/v3"
+# ✅ Stable only
+FMP_STABLE_BASE = "https://financialmodelingprep.com/stable"
 
-# ✅ 거래일(=asOf) 판별용 sentinel
+# ✅ asOf 판별용 sentinel (stable quote에서 timestamp가 있으면 사용)
 SENTINEL_SYMBOLS = ["AAPL", "MSFT", "SPY"]
+
+# FMP batch-quote는 symbols 파라미터를 사용
+# Endpoint: https://financialmodelingprep.com/stable/batch-quote?symbols=AAPL  :contentReference[oaicite:1]{index=1}
 
 
 # -------------------------
 # helpers
 # -------------------------
-def write_json(path: Path, obj):
+def write_json(path: Path, obj: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def to_float_or_none(x):
+def to_float_or_none(x: Any) -> Optional[float]:
     if x is None:
         return None
     try:
-        if isinstance(x, str) and x.strip() in ("", "-", "N/A"):
+        if isinstance(x, str) and x.strip() in ("", "-", "N/A", "null", "None"):
             return None
         v = float(x)
         if v != v:  # NaN
@@ -42,22 +48,22 @@ def to_float_or_none(x):
         return None
 
 
-def to_int_or_none(x):
+def to_int_or_none(x: Any) -> Optional[int]:
     if x is None:
         return None
     try:
-        if isinstance(x, str) and x.strip() in ("", "-", "N/A"):
+        if isinstance(x, str) and x.strip() in ("", "-", "N/A", "null", "None"):
             return None
         return int(float(x))
     except Exception:
         return None
 
 
-def http_get_json(url: str, params: dict, retry: int = 5, sleep_base: float = 1.0):
+def http_get_json(url: str, params: dict, retry: int = 5, sleep_base: float = 1.0) -> Any:
     last_err = None
     for i in range(retry):
         try:
-            resp = requests.get(url, params=params, timeout=25)
+            resp = requests.get(url, params=params, timeout=30)
             if resp.status_code == 429:
                 time.sleep(sleep_base * (2 ** i))
                 continue
@@ -72,7 +78,7 @@ def http_get_json(url: str, params: dict, retry: int = 5, sleep_base: float = 1.
 # -------------------------
 # SSOT
 # -------------------------
-def load_overseas_assets_from_ssot():
+def load_overseas_assets_from_ssot() -> Dict[str, str]:
     """
     return: {asset_id: ticker(symbol)}
     - country != KR
@@ -81,92 +87,70 @@ def load_overseas_assets_from_ssot():
     if not SSOT_PATH.exists():
         raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
 
-    out = {}
+    out: Dict[str, str] = {}
     with SSOT_PATH.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         for r in reader:
             aid = (r.get("asset_id") or "").strip()
-            tkr = (r.get("ticker") or "").strip()
+            sym = (r.get("ticker") or "").strip()
             country = (r.get("country") or "").strip().upper()
 
             if not aid:
                 continue
             if country == "KR":
                 continue
-            if not tkr:
+            if not sym:
                 continue
 
-            out[aid] = tkr
+            out[aid] = sym.upper()
 
     return out
 
 
 # -------------------------
-# FMP fetch
+# FMP Stable: batch quote
 # -------------------------
-def fetch_quote_batch(symbols, api_key: str):
+def fetch_batch_quote(symbols, api_key: str) -> Dict[str, dict]:
     """
-    /quote/{symbols} -> price, marketCap, pe(TTM)
+    Stable Batch Quote
+    Endpoint: /stable/batch-quote?symbols=AAPL,MSFT,...  :contentReference[oaicite:2]{index=2}
     """
-    out = {}
-    for i in range(0, len(symbols), 100):
-        group = symbols[i:i + 100]
-        sym_str = ",".join(group)
-        url = f"{FMP_BASE}/quote/{sym_str}"
-        data = http_get_json(url, {"apikey": api_key})
+    url = f"{FMP_STABLE_BASE}/batch-quote"
+    data = http_get_json(url, params={"symbols": ",".join(symbols), "apikey": api_key})
 
-        if isinstance(data, list):
-            for item in data:
-                s = (item.get("symbol") or "").strip()
+    out: Dict[str, dict] = {}
+    if isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict):
+                s = (item.get("symbol") or "").strip().upper()
                 if s:
                     out[s] = item
-
-        time.sleep(0.25)
+    elif isinstance(data, dict):
+        # 혹시 dict 형태로 오는 변형 방어
+        s = (data.get("symbol") or "").strip().upper()
+        if s:
+            out[s] = data
     return out
 
 
-def fetch_latest_close_date(symbol: str, api_key: str):
+def derive_asof_from_quotes(quote_map: Dict[str, dict]) -> str:
     """
-    /historical-price-full/{symbol}?timeseries=10
-    -> 가장 최신 date/close (sentinel 용도)
+    quote의 timestamp(유닉스 초)가 있으면 그 날짜(UTC)를 asOf로 사용.
+    없으면 UTC 오늘.
     """
-    url = f"{FMP_BASE}/historical-price-full/{symbol}"
-    data = http_get_json(url, {"apikey": api_key, "timeseries": 10})
-    hist = data.get("historical") if isinstance(data, dict) else None
-    if not isinstance(hist, list) or len(hist) == 0:
-        return None, None
-
-    hist = [h for h in hist if isinstance(h, dict) and h.get("date") and h.get("close") is not None]
-    if not hist:
-        return None, None
-
-    hist.sort(key=lambda x: x["date"], reverse=True)
-    latest = hist[0]
-    return latest.get("date"), to_float_or_none(latest.get("close"))
-
-
-def find_latest_market_day(api_key: str) -> str:
-    """
-    ✅ KR처럼 '거래일'을 강하게 찾고 싶지만,
-    해외는 시장/휴장이 다르고, 우리가 daily snapshot만 필요하므로
-    sentinel(미국 대표)의 최신 date를 asOf로 사용한다.
-
-    - sentinel별 latest를 1번씩만 호출 (중복 호출 제거)
-    """
-    latest_dates = []
     for sym in SENTINEL_SYMBOLS:
-        ds, close = fetch_latest_close_date(sym, api_key=api_key)
-        if ds and close not in (None, 0, 0.0):
-            latest_dates.append(ds)
+        q = quote_map.get(sym, {})
+        ts = q.get("timestamp")
+        try:
+            if ts is not None:
+                ts_int = int(ts)
+                return datetime.utcfromtimestamp(ts_int).strftime("%Y-%m-%d")
+        except Exception:
+            pass
+    return datetime.utcnow().strftime("%Y-%m-%d")
 
-    if not latest_dates:
-        raise SystemExit("❌ FMP sentinel history returned no valid dates/closes")
 
-    # 가장 최신(문자열 YYYY-MM-DD는 max가 최신)
-    return max(latest_dates)
-
-
-def main():
+def main() -> None:
     api_key = (os.environ.get("FMP_API_KEY") or "").strip()
     if not api_key:
         raise SystemExit("❌ Missing env FMP_API_KEY")
@@ -175,22 +159,31 @@ def main():
     if not assets:
         raise SystemExit("❌ Overseas assets not found in SSOT (country!=KR & ticker required)")
 
-    as_of = find_latest_market_day(api_key=api_key)
-    print(f"✅ Using market day(asOf): {as_of}")
+    # ✅ asset + sentinel 합쳐서 quotes를 받는다
+    symbols_all = sorted(list(set(list(assets.values()) + SENTINEL_SYMBOLS)))
 
-    symbols = sorted(list(set(assets.values())))
-    quote_map = fetch_quote_batch(symbols, api_key=api_key)
+    quote_map: Dict[str, dict] = {}
+    # batch-quote는 여러 심볼을 콤마로 받을 수 있음 :contentReference[oaicite:3]{index=3}
+    # 안전하게 100개 단위로 쪼갬
+    for i in range(0, len(symbols_all), 100):
+        chunk = symbols_all[i:i + 100]
+        part = fetch_batch_quote(chunk, api_key=api_key)
+        quote_map.update(part)
+        time.sleep(0.25)
 
-    items = {}
+    as_of = derive_asof_from_quotes(quote_map)
+    print(f"✅ Using asOf: {as_of}")
+
+    items: Dict[str, dict] = {}
     nonzero_count = 0
 
     for asset_id, sym in assets.items():
         q = quote_map.get(sym, {}) if isinstance(quote_map, dict) else {}
 
-        # KR과 같은 필드명으로 통일
+        # 필드명 방어(Stable 응답에서 price/marketCap/pe/timestamp가 일반적)
         close = to_float_or_none(q.get("price"))
         market_cap = to_int_or_none(q.get("marketCap"))
-        pe_ttm = to_float_or_none(q.get("pe"))  # FMP quote의 pe는 보통 TTM
+        pe_ttm = to_float_or_none(q.get("pe"))
 
         if (close not in (None, 0, 0.0)) or (market_cap not in (None, 0)) or (pe_ttm not in (None, 0, 0.0)):
             nonzero_count += 1
@@ -202,22 +195,18 @@ def main():
             "pe_ttm": pe_ttm,
         }
 
-    # ✅ KR과 동일: 의미 있는 값이 하나도 없으면 workflow fail
     if nonzero_count == 0:
         print("❌ All values are zero/None. Sample check (sentinels):")
         for s in SENTINEL_SYMBOLS:
-            try:
-                qq = quote_map.get(s, {})
-                print(s, "price=", qq.get("price"), "mcap=", qq.get("marketCap"), "pe=", qq.get("pe"))
-            except Exception:
-                pass
-        raise SystemExit("❌ FMP valuation fetch returned no meaningful values. Failing workflow.")
+            qq = quote_map.get(s, {})
+            print(s, "price=", qq.get("price"), "mcap=", qq.get("marketCap"), "pe=", qq.get("pe"), "timestamp=", qq.get("timestamp"))
+        raise SystemExit("❌ FMP stable batch-quote returned no meaningful values. Failing workflow.")
 
     out = {
         "asOf": as_of,
-        "source": "FMP",
+        "source": "FMP_STABLE",
         "items": items,
-        "updatedAt": datetime.now().strftime("%Y-%m-%d"),
+        "updatedAt": datetime.utcnow().strftime("%Y-%m-%d"),
     }
 
     write_json(OUT_PATH, out)
