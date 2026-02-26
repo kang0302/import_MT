@@ -1,11 +1,32 @@
 # scripts/update_valuation_fmp.py
+# MoneyTree - Overseas Valuation Cache Builder (FMP STABLE - quote)
+#
+# Output:
+#   data/cache/valuation_fmp.json
+#
+# Schema (valuation_kr.json과 동일한 "assetId 키" 통일):
+# {
+#   "asOf": "YYYY-MM-DD",
+#   "source": "FMP_STABLE",
+#   "items": {
+#     "A_001": {
+#       "ticker": "AAPL",
+#       "close": 123.45,
+#       "marketCap": 1234567890,
+#       "pe_ttm": 25.4
+#     },
+#     ...
+#   },
+#   "updatedAt": "YYYY-MM-DD"
+# }
+
 import csv
 import json
 import os
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, List
 
 import requests
 
@@ -19,11 +40,8 @@ OUT_PATH = CACHE_DIR / "valuation_fmp.json"
 # ✅ Stable only
 FMP_STABLE_BASE = "https://financialmodelingprep.com/stable"
 
-# ✅ asOf 판별용 sentinel (stable quote에서 timestamp가 있으면 사용)
+# ✅ asOf 판별용 sentinel (quote의 timestamp가 있으면 사용)
 SENTINEL_SYMBOLS = ["AAPL", "MSFT", "SPY"]
-
-# FMP batch-quote는 symbols 파라미터를 사용
-# Endpoint: https://financialmodelingprep.com/stable/batch-quote?symbols=AAPL  :contentReference[oaicite:1]{index=1}
 
 
 # -------------------------
@@ -108,28 +126,35 @@ def load_overseas_assets_from_ssot() -> Dict[str, str]:
 
 
 # -------------------------
-# FMP Stable: batch quote
+# FMP Stable: quote (Starter-friendly)
 # -------------------------
-def fetch_batch_quote(symbols, api_key: str) -> Dict[str, dict]:
+def fetch_quote_multi(symbols: List[str], api_key: str) -> Dict[str, dict]:
     """
-    Stable Batch Quote
-    Endpoint: /stable/batch-quote?symbols=AAPL,MSFT,...  :contentReference[oaicite:2]{index=2}
+    ✅ Starter에서 막힐 수 있는 batch-quote를 쓰지 않고,
+       stable/quote 에 콤마로 여러 심볼을 넣어 호출한다.
+
+    예: /stable/quote?symbol=AAPL,MSFT,SPY&apikey=...
     """
-    url = f"{FMP_STABLE_BASE}/batch-quote"
-    data = http_get_json(url, params={"symbols": ",".join(symbols), "apikey": api_key})
+    url = f"{FMP_STABLE_BASE}/quote"
+    sym_str = ",".join(symbols)
+    data = http_get_json(url, params={"symbol": sym_str, "apikey": api_key})
 
     out: Dict[str, dict] = {}
+
+    # 보통 list 반환
     if isinstance(data, list):
         for item in data:
             if isinstance(item, dict):
                 s = (item.get("symbol") or "").strip().upper()
                 if s:
                     out[s] = item
+
+    # 혹시 dict 단일 반환 방어
     elif isinstance(data, dict):
-        # 혹시 dict 형태로 오는 변형 방어
         s = (data.get("symbol") or "").strip().upper()
         if s:
             out[s] = data
+
     return out
 
 
@@ -159,17 +184,22 @@ def main() -> None:
     if not assets:
         raise SystemExit("❌ Overseas assets not found in SSOT (country!=KR & ticker required)")
 
-    # ✅ asset + sentinel 합쳐서 quotes를 받는다
+    # ✅ asset 심볼 + sentinel 합쳐서 quote 요청
     symbols_all = sorted(list(set(list(assets.values()) + SENTINEL_SYMBOLS)))
 
     quote_map: Dict[str, dict] = {}
-    # batch-quote는 여러 심볼을 콤마로 받을 수 있음 :contentReference[oaicite:3]{index=3}
-    # 안전하게 100개 단위로 쪼갬
-    for i in range(0, len(symbols_all), 100):
-        chunk = symbols_all[i:i + 100]
-        part = fetch_batch_quote(chunk, api_key=api_key)
+
+    # ✅ 다중심볼 호출도 너무 길면 문제가 날 수 있어 chunk 처리
+    # (Starter 제한/URL 길이 방어용)
+    chunk_size = 80  # 안전값 (상황에 따라 50~100 조정 가능)
+    for i in range(0, len(symbols_all), chunk_size):
+        chunk = symbols_all[i:i + chunk_size]
+        part = fetch_quote_multi(chunk, api_key=api_key)
         quote_map.update(part)
         time.sleep(0.25)
+
+    if not quote_map:
+        raise SystemExit("❌ FMP stable quote returned empty response map")
 
     as_of = derive_asof_from_quotes(quote_map)
     print(f"✅ Using asOf: {as_of}")
@@ -180,7 +210,6 @@ def main() -> None:
     for asset_id, sym in assets.items():
         q = quote_map.get(sym, {}) if isinstance(quote_map, dict) else {}
 
-        # 필드명 방어(Stable 응답에서 price/marketCap/pe/timestamp가 일반적)
         close = to_float_or_none(q.get("price"))
         market_cap = to_int_or_none(q.get("marketCap"))
         pe_ttm = to_float_or_none(q.get("pe"))
@@ -199,8 +228,14 @@ def main() -> None:
         print("❌ All values are zero/None. Sample check (sentinels):")
         for s in SENTINEL_SYMBOLS:
             qq = quote_map.get(s, {})
-            print(s, "price=", qq.get("price"), "mcap=", qq.get("marketCap"), "pe=", qq.get("pe"), "timestamp=", qq.get("timestamp"))
-        raise SystemExit("❌ FMP stable batch-quote returned no meaningful values. Failing workflow.")
+            print(
+                s,
+                "price=", qq.get("price"),
+                "mcap=", qq.get("marketCap"),
+                "pe=", qq.get("pe"),
+                "timestamp=", qq.get("timestamp"),
+            )
+        raise SystemExit("❌ FMP stable quote returned no meaningful values. Failing workflow.")
 
     out = {
         "asOf": as_of,
