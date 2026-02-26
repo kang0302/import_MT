@@ -1,0 +1,55 @@
+name: Update Overseas Valuation + Freeze (FMP)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # KST 06:40 = UTC 21:40 (미국장 마감 후)
+    - cron: "40 21 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Overseas valuation updater (FMP)
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: |
+          python scripts/update_valuation_fmp.py
+
+      - name: Inject metrics into Freeze + update theme index
+        run: |
+          python scripts/build_freeze.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git add data/cache/valuation_fmp.json
+          git add data/theme/T_*.json
+          git add data/theme/index.json
+
+          git commit -m "chore: overseas valuation + freeze update (FMP)"
+          git push
