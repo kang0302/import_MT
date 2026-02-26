@@ -1,0 +1,233 @@
+# import_MT/scripts/update_valuation_fmp.py
+# 목적: KR valuation_kr.json과 "동일 포맷"으로 해외(US/JP/HK/EU/CN...) valuation_fmp.json 생성
+# 출력: import_MT/data/cache/valuation_fmp.json
+#
+# 포맷(=KR과 동일):
+# {
+#   "asOf": "YYYY-MM-DD",
+#   "source": "FMP",
+#   "items": {
+#     "A_002": { "ticker": "TSLA", "close": 200.12, "marketCap": 650000000000, "pe_ttm": 45.3 },
+#     ...
+#   }
+# }
+
+import csv
+import json
+import os
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Tuple, Optional
+
+import requests
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = BASE_DIR / "data"
+SSOT_PATH = DATA_DIR / "ssot" / "asset_ssot.csv"
+
+CACHE_DIR = DATA_DIR / "cache"
+OUT_PATH = CACHE_DIR / "valuation_fmp.json"
+
+FMP_API_KEY = os.environ.get("FMP_API_KEY", "").strip()
+
+
+# =========================
+# Exchange -> suffix rules
+# =========================
+# ✅ 최소 운영 세트 (필요하면 너의 SSOT exchange 값에 맞춰 계속 확장)
+EX_SUFFIX = {
+    # US
+    "NYSE": "",
+    "NASDAQ": "",
+    "AMEX": "",
+    # Hong Kong
+    "HKEX": ".HK",
+    # Japan
+    "TSE": ".T",
+    # China
+    "SSE": ".SS",   # Shanghai
+    "SZSE": ".SZ",  # Shenzhen
+    # UK / EU (케이스별로 심볼 표기 다를 수 있어, 우선 기본만)
+    "LSE": ".L",
+    "EPA": ".PA",   # Euronext Paris
+    "FWB": ".F",    # Frankfurt (일부 심볼만)
+}
+
+# 일부 SSOT에서 exchange를 "JP", "HK", "US" 같은 나라코드로 넣는 경우 대응(옵션)
+ALT_EX_TO_SUFFIX = {
+    "JP": ".T",
+    "HK": ".HK",
+    "CN": "",   # CN은 SSE/SZSE로 구분 필요. SSOT가 CN만 주면 별도 규칙이 필요함.
+    "UK": ".L",
+    "FR": ".PA",
+    "DE": ".F",
+}
+
+
+def read_ssot_non_kr_assets() -> List[Tuple[str, str, str, str]]:
+    """
+    returns list of (asset_id, ticker, exchange, country)
+    - KR 제외
+    - ticker 빈 값 제외
+    """
+    if not SSOT_PATH.exists():
+        raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
+
+    rows: List[Tuple[str, str, str, str]] = []
+    with SSOT_PATH.open("r", encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        required = {"asset_id", "ticker", "exchange", "country"}
+        if not required.issubset(set(reader.fieldnames or [])):
+            raise SystemExit(f"❌ asset_ssot.csv header must include {sorted(required)}")
+
+        for r in reader:
+            aid = (r.get("asset_id") or "").strip()
+            ticker = (r.get("ticker") or "").strip()
+            exchange = (r.get("exchange") or "").strip()
+            country = (r.get("country") or "").strip().upper()
+
+            if not aid or not ticker:
+                continue
+            if country == "KR":
+                continue
+
+            rows.append((aid, ticker, exchange, country))
+
+    return rows
+
+
+def build_fmp_symbol(ticker: str, exchange: str, country: str) -> str:
+    """
+    KR과 달리 해외는 FMP에서 심볼 표기가 중요.
+    - ticker에 이미 '.'가 있으면 (예: 7203.T, 1211.HK) 그대로 사용
+    - 아니면 exchange 매핑으로 접미어 붙임
+    - 그래도 없으면 ticker 원형 사용(US 대부분)
+    """
+    t = (ticker or "").strip()
+    ex = (exchange or "").strip().upper()
+    c = (country or "").strip().upper()
+
+    if not t:
+        return ""
+
+    # 이미 접미어 포함(가장 안전)
+    if "." in t:
+        return t
+
+    suffix = EX_SUFFIX.get(ex)
+    if suffix is None:
+        suffix = ALT_EX_TO_SUFFIX.get(ex, "")
+
+    # 중국처럼 CN만 있고 SSE/SZSE 구분이 없으면 여기서 그냥 원형 사용(추후 SSOT 개선 권장)
+    return f"{t}{suffix}"
+
+
+def chunks(lst: List[str], n: int) -> List[List[str]]:
+    return [lst[i:i + n] for i in range(0, len(lst), n)]
+
+
+def to_float_or_none(x) -> Optional[float]:
+    try:
+        if x is None or x == "":
+            return None
+        return float(x)
+    except Exception:
+        return None
+
+
+def to_int_or_none(x) -> Optional[int]:
+    try:
+        if x is None or x == "":
+            return None
+        # marketCap이 float로 오는 경우도 있어 안전하게 처리
+        return int(float(x))
+    except Exception:
+        return None
+
+
+def fetch_fmp_quotes(symbols: List[str]) -> List[Dict]:
+    """
+    FMP quote endpoint
+    GET /api/v3/quote/{symbols}?apikey=...
+    """
+    if not FMP_API_KEY:
+        raise SystemExit("❌ Missing env var: FMP_API_KEY")
+
+    joined = ",".join(symbols)
+    url = f"https://financialmodelingprep.com/api/v3/quote/{joined}?apikey={FMP_API_KEY}"
+    resp = requests.get(url, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+    if not isinstance(data, list):
+        return []
+    return data
+
+
+def main() -> None:
+    assets = read_ssot_non_kr_assets()
+    if not assets:
+        raise SystemExit("❌ No non-KR assets found in asset_ssot.csv (ticker/exchange/country required)")
+
+    # asset_id -> fmp_symbol
+    aid_to_sym: Dict[str, str] = {}
+    sym_to_aid: Dict[str, str] = {}
+
+    for aid, ticker, exchange, country in assets:
+        sym = build_fmp_symbol(ticker, exchange, country)
+        if not sym:
+            continue
+        aid_to_sym[aid] = sym
+        sym_to_aid[sym] = aid
+
+    symbols = list(sym_to_aid.keys())
+    if not symbols:
+        raise SystemExit("❌ No usable symbols for FMP. Check SSOT ticker/exchange/country.")
+
+    as_of = datetime.now().strftime("%Y-%m-%d")
+
+    # 결과는 KR과 동일 포맷으로
+    out_items: Dict[str, Dict] = {}
+
+    # FMP 안정성을 위해 배치 호출
+    BATCH = 100
+    for sym_chunk in chunks(symbols, BATCH):
+        quotes = fetch_fmp_quotes(sym_chunk)
+
+        # quote response fields (일반적으로):
+        # symbol, price, marketCap, pe ...
+        for q in quotes:
+            if not isinstance(q, dict):
+                continue
+
+            sym = (q.get("symbol") or "").strip()
+            aid = sym_to_aid.get(sym)
+            if not aid:
+                continue
+
+            price = to_float_or_none(q.get("price"))
+            market_cap = to_int_or_none(q.get("marketCap"))
+            pe = to_float_or_none(q.get("pe"))
+
+            out_items[aid] = {
+                # ✅ KR과 동일하게 ticker 필드는 "우리가 사용한 심볼"을 그대로 저장 (디버깅/추적에 최고)
+                "ticker": sym,
+                "close": price,
+                "marketCap": market_cap,
+                "pe_ttm": pe,
+            }
+
+    out = {
+        "asOf": as_of,
+        "source": "FMP",
+        "items": out_items,
+    }
+
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(f"✅ wrote: {OUT_PATH} (items={len(out_items)})")
+    print(f"✅ asOf={as_of}, source=FMP")
+
+
+if __name__ == "__main__":
+    main()

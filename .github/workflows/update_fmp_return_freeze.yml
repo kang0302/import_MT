@@ -1,9 +1,9 @@
-name: Update Overseas Returns (FMP)
+name: Update Overseas Returns + Freeze (FMP)
 
 on:
   workflow_dispatch: {}
   schedule:
-    # ✅ valuation보다 20분 뒤 (충돌 방지)
+    # valuation job과 충돌 방지: 20분 뒤 실행
     - cron: "0 22 * * *"
 
 permissions:
