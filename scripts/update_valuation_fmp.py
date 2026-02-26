@@ -1,4 +1,4 @@
-# import_MT/scripts/update_valuation_fmp.py
+# scripts/update_valuation_fmp.py
 import json
 import os
 from datetime import datetime, timedelta
@@ -16,12 +16,13 @@ OUT_PATH = CACHE_DIR / "valuation_fmp.json"
 
 FMP_BASE = "https://financialmodelingprep.com/api/v3"
 
-# ✅ 거래일 판별용 (미국 대표 2~3개로 충분)
-# - 해외 전체를 "완벽히 같은 거래일"로 맞추는 건 불가능(시간대/휴장 다름)
-# - 따라서 "FMP가 정상 동작하는 최신 날짜"를 대표로 잡는 용도
+# ✅ 거래일(=asOf) 판별용 sentinel
 SENTINEL_SYMBOLS = ["AAPL", "MSFT", "SPY"]
 
 
+# -------------------------
+# helpers
+# -------------------------
 def write_json(path: Path, obj):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -52,7 +53,31 @@ def to_int_or_none(x):
         return None
 
 
+def http_get_json(url: str, params: dict, retry: int = 5, sleep_base: float = 1.0):
+    last_err = None
+    for i in range(retry):
+        try:
+            resp = requests.get(url, params=params, timeout=25)
+            if resp.status_code == 429:
+                time.sleep(sleep_base * (2 ** i))
+                continue
+            resp.raise_for_status()
+            return resp.json()
+        except Exception as e:
+            last_err = e
+            time.sleep(sleep_base * (2 ** i))
+    raise SystemExit(f"❌ HTTP failed: {url} err={last_err}")
+
+
+# -------------------------
+# SSOT
+# -------------------------
 def load_overseas_assets_from_ssot():
+    """
+    return: {asset_id: ticker(symbol)}
+    - country != KR
+    - ticker 존재
+    """
     if not SSOT_PATH.exists():
         raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
 
@@ -76,28 +101,16 @@ def load_overseas_assets_from_ssot():
     return out
 
 
-def http_get_json(url: str, params: dict, retry: int = 5, sleep_base: float = 1.0):
-    last_err = None
-    for i in range(retry):
-        try:
-            resp = requests.get(url, params=params, timeout=25)
-            if resp.status_code == 429:
-                time.sleep(sleep_base * (2 ** i))
-                continue
-            resp.raise_for_status()
-            return resp.json()
-        except Exception as e:
-            last_err = e
-            time.sleep(sleep_base * (2 ** i))
-    raise SystemExit(f"❌ HTTP failed: {url} err={last_err}")
-
-
+# -------------------------
+# FMP fetch
+# -------------------------
 def fetch_quote_batch(symbols, api_key: str):
-    # /quote/{symbols} -> price, marketCap, pe(TTM)
+    """
+    /quote/{symbols} -> price, marketCap, pe(TTM)
+    """
     out = {}
-    # FMP batch는 100개 단위가 안전
     for i in range(0, len(symbols), 100):
-        group = symbols[i:i+100]
+        group = symbols[i:i + 100]
         sym_str = ",".join(group)
         url = f"{FMP_BASE}/quote/{sym_str}"
         data = http_get_json(url, {"apikey": api_key})
@@ -107,73 +120,50 @@ def fetch_quote_batch(symbols, api_key: str):
                 s = (item.get("symbol") or "").strip()
                 if s:
                     out[s] = item
+
         time.sleep(0.25)
     return out
 
 
 def fetch_latest_close_date(symbol: str, api_key: str):
-    # /historical-price-full/{symbol}?timeseries=5
+    """
+    /historical-price-full/{symbol}?timeseries=10
+    -> 가장 최신 date/close (sentinel 용도)
+    """
     url = f"{FMP_BASE}/historical-price-full/{symbol}"
     data = http_get_json(url, {"apikey": api_key, "timeseries": 10})
     hist = data.get("historical") if isinstance(data, dict) else None
     if not isinstance(hist, list) or len(hist) == 0:
         return None, None
 
-    # 최신 날짜 찾기 (정렬 방어)
     hist = [h for h in hist if isinstance(h, dict) and h.get("date") and h.get("close") is not None]
     if not hist:
         return None, None
-    hist.sort(key=lambda x: x["date"], reverse=True)
 
+    hist.sort(key=lambda x: x["date"], reverse=True)
     latest = hist[0]
     return latest.get("date"), to_float_or_none(latest.get("close"))
 
 
-def is_valid_market_day(date_str: str, api_key: str) -> bool:
-    # sentinel들의 close가 0/None이 아니면 "정상 거래일(데이터 존재)"로 판정
-    ok = 0
-    for sym in SENTINEL_SYMBOLS:
-        d, close = fetch_latest_close_date(sym, api_key=api_key)
-        if d == date_str and close not in (None, 0, 0.0):
-            ok += 1
-    return ok >= 1  # 1개만 잡혀도 데이터는 살아있다고 판단
+def find_latest_market_day(api_key: str) -> str:
+    """
+    ✅ KR처럼 '거래일'을 강하게 찾고 싶지만,
+    해외는 시장/휴장이 다르고, 우리가 daily snapshot만 필요하므로
+    sentinel(미국 대표)의 최신 date를 asOf로 사용한다.
 
-
-def find_latest_market_day(max_back_days: int, api_key: str) -> str:
-    # FMP는 "오늘"이 휴장이어도 직전 거래일 데이터를 준다.
-    # 다만 안전하게 최근 N일 범위에서 유효한 날짜를 찾는다.
-    d = datetime.utcnow()
-
-    # 주말 보정(UTC 기준이긴 하지만, 대략적 안전장치)
-    if d.weekday() == 5:   # 토
-        d = d - timedelta(days=1)
-    elif d.weekday() == 6: # 일
-        d = d - timedelta(days=2)
-
-    # 우선 sentinel 중 하나의 최신 날짜를 먼저 확보
+    - sentinel별 latest를 1번씩만 호출 (중복 호출 제거)
+    """
     latest_dates = []
     for sym in SENTINEL_SYMBOLS:
-        ds, _ = fetch_latest_close_date(sym, api_key=api_key)
-        if ds:
+        ds, close = fetch_latest_close_date(sym, api_key=api_key)
+        if ds and close not in (None, 0, 0.0):
             latest_dates.append(ds)
+
     if not latest_dates:
-        raise SystemExit("❌ FMP sentinel history returned no dates")
+        raise SystemExit("❌ FMP sentinel history returned no valid dates/closes")
 
-    # 후보 시작점 = sentinel 최신일(가장 최근)
-    cand0 = max(latest_dates)
-
-    # cand0가 유효하면 끝. 아니면 뒤로 탐색.
-    if is_valid_market_day(cand0, api_key=api_key):
-        return cand0
-
-    # cand0 기준 뒤로 max_back_days 탐색
-    cand_dt = datetime.strptime(cand0, "%Y-%m-%d")
-    for i in range(1, max_back_days + 1):
-        ds = (cand_dt - timedelta(days=i)).strftime("%Y-%m-%d")
-        if is_valid_market_day(ds, api_key=api_key):
-            return ds
-
-    raise SystemExit("❌ 최근 유효 market day를 찾지 못했습니다. (FMP/네트워크/휴장 가능)")
+    # 가장 최신(문자열 YYYY-MM-DD는 max가 최신)
+    return max(latest_dates)
 
 
 def main():
@@ -185,8 +175,8 @@ def main():
     if not assets:
         raise SystemExit("❌ Overseas assets not found in SSOT (country!=KR & ticker required)")
 
-    as_of = find_latest_market_day(max_back_days=30, api_key=api_key)
-    print(f"✅ Using market day: {as_of}")
+    as_of = find_latest_market_day(api_key=api_key)
+    print(f"✅ Using market day(asOf): {as_of}")
 
     symbols = sorted(list(set(assets.values())))
     quote_map = fetch_quote_batch(symbols, api_key=api_key)
@@ -202,26 +192,19 @@ def main():
         market_cap = to_int_or_none(q.get("marketCap"))
         pe_ttm = to_float_or_none(q.get("pe"))  # FMP quote의 pe는 보통 TTM
 
-        # close가 quote에서 없으면 history 최신 close로 보강(안전)
-        if close in (None, 0, 0.0):
-            ds, c = fetch_latest_close_date(sym, api_key=api_key)
-            if ds == as_of and c not in (None, 0, 0.0):
-                close = c
-
         if (close not in (None, 0, 0.0)) or (market_cap not in (None, 0)) or (pe_ttm not in (None, 0, 0.0)):
             nonzero_count += 1
 
         items[asset_id] = {
             "ticker": sym,
-            "close": close if close is None else float(close),
+            "close": None if close is None else float(close),
             "marketCap": market_cap,
             "pe_ttm": pe_ttm,
         }
 
-        time.sleep(0.05)
-
+    # ✅ KR과 동일: 의미 있는 값이 하나도 없으면 workflow fail
     if nonzero_count == 0:
-        print("❌ All values are zero/None. Sample check:")
+        print("❌ All values are zero/None. Sample check (sentinels):")
         for s in SENTINEL_SYMBOLS:
             try:
                 qq = quote_map.get(s, {})
@@ -234,6 +217,7 @@ def main():
         "asOf": as_of,
         "source": "FMP",
         "items": items,
+        "updatedAt": datetime.now().strftime("%Y-%m-%d"),
     }
 
     write_json(OUT_PATH, out)
