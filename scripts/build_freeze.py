@@ -1,5 +1,4 @@
 # import_MT/scripts/build_freeze.py
-
 import json
 import re
 from pathlib import Path
@@ -21,14 +20,15 @@ VAL_KR_PATH = DATA_DIR / "cache" / "valuation_kr.json"
 RET_KR_PATH = DATA_DIR / "cache" / "returns_kr.json"
 
 VAL_FMP_PATH = DATA_DIR / "cache" / "valuation_fmp.json"
-RET_FMP_PATH = DATA_DIR / "cache" / "returns_fmp.json"   # ✅ 추가: US returns (FMP stable)
+RET_FMP_PATH = DATA_DIR / "cache" / "returns_fmp.json"   # ✅ US returns (asset_id 기반)
 
-# optional (later / 통합용)
+# (미래 확장용) 전세계 returns 통합 파일을 만들면 여기로
 RET_ALL_PATH = DATA_DIR / "cache" / "returns_all.json"
 
 RETURN_KEYS = ["return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
 VAL_KEYS = ["close", "marketCap", "pe_ttm", "valuationAsOf", "valuationSource"]
 RET_META_KEYS = ["returnsAsOf", "returnsSource"]
+
 
 # ------------------------
 # IO (SAFE)
@@ -79,6 +79,7 @@ def write_json(path: Path, obj: Any) -> None:
     tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
     tmp.replace(path)
 
+
 # ------------------------
 # index loader
 # ------------------------
@@ -97,6 +98,7 @@ def load_themes() -> List[Union[Dict[str, Any], str]]:
         raise SystemExit("index.json에 themes가 비어있습니다.")
 
     return themes
+
 
 # ------------------------
 # normalization (theme.json 구조 차이 흡수)
@@ -136,7 +138,7 @@ def _normalize_theme_obj(theme_obj: Dict[str, Any]) -> Dict[str, Any]:
                 links = []
     theme_obj["links"] = links
 
-    # normalize nodes (노드 단위 보정은 inject에서 "구조변경 감지"까지 함께 처리)
+    # normalize nodes
     for node in theme_obj["nodes"]:
         if not isinstance(node, dict):
             continue
@@ -190,6 +192,7 @@ def _extract_items_any_shape(v: Any) -> Tuple[str, str, Dict[str, Any]]:
     # legacy: root dict 자체가 items
     return (as_of, source, v)
 
+
 # ------------------------
 # loaders
 # ------------------------
@@ -211,9 +214,11 @@ def load_kr_valuation_by_ticker() -> Dict[str, Dict[str, Any]]:
         if not isinstance(it, dict):
             continue
 
+        # items key는 asset_id일 가능성이 높고, ticker는 item에 존재
         t = (it.get("ticker") or "").strip()
         if not t and isinstance(k, str) and k.strip().isdigit():
             t = k.strip()
+
         if not t:
             continue
 
@@ -248,6 +253,7 @@ def load_returns_by_ticker(path: Path, default_source: str) -> Dict[str, Dict[st
         if not isinstance(it, dict):
             continue
 
+        # ✅ key가 ticker일 수도 있고(asset_id일 수도), item["ticker"] 보조
         t = ""
         if isinstance(k, str) and k.strip().isdigit():
             t = k.strip().zfill(6)
@@ -292,12 +298,11 @@ def load_items_by_asset_id(path: Path, default_source: str) -> Dict[str, Dict[st
 
         it2 = dict(it)
 
-        # valuation meta
+        # asOf/source 메타 주입 (추적용)
         if ("close" in it2 or "marketCap" in it2 or "pe_ttm" in it2):
             it2.setdefault("valuationAsOf", as_of)
             it2.setdefault("valuationSource", source)
 
-        # returns meta
         if any(k in it2 for k in RETURN_KEYS):
             it2.setdefault("returnsAsOf", as_of)
             it2.setdefault("returnsSource", source)
@@ -316,6 +321,7 @@ def _is_meaningful_valuation(val: Dict[str, Any]) -> bool:
     mcap_ok = mcap not in (None, 0, 0.0)
     pe_ok = pe not in (None, 0, 0.0)
     return close_ok or mcap_ok or pe_ok
+
 
 # ------------------------
 # injection utils
@@ -354,6 +360,7 @@ def _ensure_asset_metrics_shape(node: Dict[str, Any]) -> bool:
 
     return changed
 
+
 # ------------------------
 # injection
 # ------------------------
@@ -362,29 +369,26 @@ def inject_metrics_into_theme(
     kr_val_by_ticker: Dict[str, Dict[str, Any]],
     kr_ret_by_ticker: Dict[str, Dict[str, Any]],
     fmp_val_by_aid: Dict[str, Dict[str, Any]],
-    fmp_ret_by_aid: Dict[str, Dict[str, Any]],
+    ret_fmp_by_aid: Dict[str, Dict[str, Any]],
     ret_all_by_aid: Dict[str, Dict[str, Any]],
-) -> Tuple[int, int, bool, int, int]:
+) -> Tuple[int, int, bool]:
     """
-    return:
-      (updated_asset_nodes, scanned_asset_nodes, structural_changed,
-       updated_us_valuation_nodes, updated_us_return_nodes)
+    return: (updated_asset_nodes, scanned_asset_nodes, structural_changed)
+    structural_changed: updated=0이라도 파일에 저장해야 하는 '스키마 보정' 발생 여부
     """
     theme_obj = read_json(theme_path)
     if not isinstance(theme_obj, dict):
-        return (0, 0, False, 0, 0)
+        return (0, 0, False)
 
     theme_obj = _normalize_theme_obj(theme_obj)
 
     nodes = theme_obj.get("nodes", [])
     if not isinstance(nodes, list):
-        return (0, 0, False, 0, 0)
+        return (0, 0, False)
 
     updated = 0
     scanned = 0
-    updated_us_val = 0
-    updated_us_ret = 0
-    structural_changed = False
+    structural_changed = False  # ✅ 여기 핵심
 
     for node in nodes:
         if not isinstance(node, dict):
@@ -426,31 +430,25 @@ def inject_metrics_into_theme(
                         changed_any = _set_if_meaningful(metrics, k, ret.get(k)) or changed_any
 
         # ======================
-        # (2) US valuation by asset_id (FMP, country=US only)
+        # (2) Overseas valuation by asset_id (FMP 등)
         # ======================
-        if aid and country == "US":
+        if aid and country != "KR":
             fmp = fmp_val_by_aid.get(aid)
             if fmp and _is_meaningful_valuation(fmp):
-                before = dict(metrics)
                 for k in VAL_KEYS:
                     if k in fmp:
                         changed_any = _set_if_meaningful(metrics, k, fmp.get(k)) or changed_any
-                if metrics != before:
-                    updated_us_val += 1
 
         # ======================
-        # (3) US returns by asset_id (FMP, country=US only)
+        # (3) US returns by asset_id (FMP)
         # ======================
         if aid and country == "US":
-            r = fmp_ret_by_aid.get(aid)
+            r = ret_fmp_by_aid.get(aid)
             if r:
-                before = dict(metrics)
                 for rk in RETURN_KEYS:
                     changed_any = _set_if_meaningful(metrics, rk, r.get(rk)) or changed_any
                 for k in RET_META_KEYS:
                     changed_any = _set_if_meaningful(metrics, k, r.get(k)) or changed_any
-                if metrics != before:
-                    updated_us_ret += 1
 
         # ======================
         # (4) Returns all by asset_id (optional, later)
@@ -466,13 +464,16 @@ def inject_metrics_into_theme(
         if changed_any:
             updated += 1
 
+    # ✅ updated=0이어도 schema 보정이 있으면 저장
     if updated > 0 or structural_changed:
         write_json(theme_path, theme_obj)
+
+        # ✅ public 폴더가 있으면 미러링
         if HAS_PUBLIC_THEME_DIR:
             out_path = THEME_PUBLIC_DIR / theme_path.name
             write_json(out_path, theme_obj)
 
-    return (updated, scanned, structural_changed, updated_us_val, updated_us_ret)
+    return (updated, scanned, structural_changed)
 
 
 def rebuild_index(themes: List[Union[Dict[str, Any], str]]) -> None:
@@ -500,20 +501,18 @@ def main() -> None:
     kr_val_by_ticker = load_kr_valuation_by_ticker()
     kr_ret_by_ticker = load_returns_by_ticker(RET_KR_PATH, default_source="PYKRX")
 
-    # US valuation (FMP: assetId map)
+    # Overseas valuation (FMP)
     fmp_val_by_aid = load_items_by_asset_id(VAL_FMP_PATH, default_source="FMP")
 
-    # US returns (FMP stable)
-    fmp_ret_by_aid = load_items_by_asset_id(RET_FMP_PATH, default_source="FMP_STABLE")
+    # US returns (FMP)
+    ret_fmp_by_aid = load_items_by_asset_id(RET_FMP_PATH, default_source="FMP")
 
-    # optional (later)
+    # Returns all (optional)
     ret_all_by_aid = load_items_by_asset_id(RET_ALL_PATH, default_source="AUTO")
 
     total_updated = 0
     total_scanned = 0
     total_structural = 0
-    total_updated_us_val = 0
-    total_updated_us_ret = 0
 
     for t in themes:
         theme_id = None
@@ -530,34 +529,27 @@ def main() -> None:
             print(f"⚠ Theme file not found: {theme_path}")
             continue
 
-        updated, scanned, structural_changed, us_val, us_ret = inject_metrics_into_theme(
+        updated, scanned, structural_changed = inject_metrics_into_theme(
             theme_path,
             kr_val_by_ticker,
             kr_ret_by_ticker,
             fmp_val_by_aid,
-            fmp_ret_by_aid,
+            ret_fmp_by_aid,
             ret_all_by_aid,
         )
 
         total_updated += updated
         total_scanned += scanned
-        total_updated_us_val += us_val
-        total_updated_us_ret += us_ret
         if structural_changed:
             total_structural += 1
 
         if scanned > 0:
             extra = " +schema" if structural_changed and updated == 0 else ""
-            us_extra = ""
-            if us_val or us_ret:
-                us_extra = f", usVal+{us_val}, usRet+{us_ret}"
-            print(f"  - {theme_id}: updated {updated}/{scanned} asset nodes{us_extra}{extra}")
+            print(f"  - {theme_id}: updated {updated}/{scanned} asset nodes{extra}")
 
     rebuild_index(themes)
 
     print(f"✅ Metrics injected into {total_updated} asset nodes (scanned={total_scanned}).")
-    print(f"✅ US valuation injected: {total_updated_us_val} nodes (country=US, source=FMP).")
-    print(f"✅ US returns injected: {total_updated_us_ret} nodes (country=US, source=FMP_STABLE).")
     if total_structural:
         print(f"✅ Schema-normalized themes written: {total_structural} (even if updated=0)")
     if HAS_PUBLIC_THEME_DIR:

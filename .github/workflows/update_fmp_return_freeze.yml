@@ -1,10 +1,10 @@
-name: Update Overseas Returns + Freeze (FMP)
+name: Update US Returns + Freeze (FMP)
 
 on:
   workflow_dispatch: {}
   schedule:
-    # valuation job과 충돌 방지: 20분 뒤 실행(예: valuation이 21:40 UTC면 22:00 UTC)
-    - cron: "0 22 * * *"
+    # KST 06:45 = UTC 21:45 (미국장 마감 후)
+    - cron: "45 21 * * *"
 
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run US returns updater (FMP Stable)
+      - name: Run US returns updater (FMP)
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: |
@@ -51,5 +51,5 @@ jobs:
           git add data/theme/T_*.json
           git add data/theme/index.json
 
-          git commit -m "chore: US returns + freeze update (FMP stable)"
+          git commit -m "chore: US returns + freeze update (FMP)"
           git push
