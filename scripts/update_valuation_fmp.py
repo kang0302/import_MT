@@ -1,5 +1,5 @@
 # import_MT/scripts/update_valuation_fmp.py
-# MoneyTree - Overseas Valuation Cache Builder (FMP - stable endpoints)
+# MoneyTree - US Valuation Cache Builder (FMP stable/quote, Starter-friendly)
 #
 # Output:
 #   data/cache/valuation_fmp.json
@@ -8,27 +8,26 @@
 # {
 #   "asOf": "YYYY-MM-DD",
 #   "source": "FMP",
+#   "scope": "US",
 #   "items": {
-#     "A_001": { "ticker": "AAPL", "close": 123.45, "marketCap": 123456789, "pe_ttm": 28.3 },
+#     "A_001": { "ticker": "AAPL", "close": 123.45, "marketCap": 123456789, "pe_ttm": 12.3 },
 #     ...
+#   },
+#   "skipped": {
+#     "PAYMENT_REQUIRED": ["BA.", ...],
+#     "INVALID_SYMBOL": ["", ...],
+#     "HTTP_OTHER": ["XXX", ...]
 #   },
 #   "updatedAt": "YYYY-MM-DD"
 # }
-#
-# 핵심:
-# - legacy(/api/v3/...) 호출은 "legacy only"로 막힐 수 있음
-# - Starter에서 안정적으로 동작시키기 위해:
-#   ✅ /stable/quote 는 "심볼 1개씩" 호출 (symbol=AAPL)
-#   ❌ /stable/batch-quote 같은 batch 엔드포인트는 402(Payment Required)로 막힐 수 있음
 
 import csv
-import hashlib
 import json
 import os
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, Tuple
 
 import requests
 
@@ -39,9 +38,10 @@ SSOT_PATH = DATA_DIR / "ssot" / "asset_ssot.csv"
 CACHE_DIR = DATA_DIR / "cache"
 OUT_PATH = CACHE_DIR / "valuation_fmp.json"
 
-FMP_BASE = "https://financialmodelingprep.com"  # stable endpoints base
+FMP_BASE = "https://financialmodelingprep.com"
+QUOTE_ENDPOINT = f"{FMP_BASE}/stable/quote"  # ✅ Starter-friendly: single symbol quote
 
-# 거래일/데이터 생존 체크용(단일 심볼 호출로 확인)
+# 거래일(asOf) 판별용(US 대표)
 SENTINEL_SYMBOLS = ["AAPL", "MSFT", "SPY"]
 
 # -----------------------------
@@ -53,13 +53,19 @@ def write_json(path: Path, obj: Any) -> None:
 
 
 def to_float_or_none(x: Any) -> Optional[float]:
-    if x is None:
-        return None
     try:
-        if isinstance(x, str) and x.strip() in ("", "-", "N/A", "null"):
+        if x is None:
             return None
-        v = float(x)
-        if v != v:  # NaN
+        if isinstance(x, (int, float)):
+            v = float(x)
+            if v != v:  # NaN
+                return None
+            return v
+        s = str(x).strip()
+        if s in ("", "-", "N/A", "None"):
+            return None
+        v = float(s)
+        if v != v:
             return None
         return v
     except Exception:
@@ -67,38 +73,56 @@ def to_float_or_none(x: Any) -> Optional[float]:
 
 
 def to_int_or_none(x: Any) -> Optional[int]:
-    if x is None:
-        return None
     try:
-        if isinstance(x, str) and x.strip() in ("", "-", "N/A", "null"):
+        if x is None:
             return None
-        return int(float(x))
+        if isinstance(x, int):
+            return x
+        if isinstance(x, float):
+            return int(x)
+        s = str(x).strip()
+        if s in ("", "-", "N/A", "None"):
+            return None
+        return int(float(s))
     except Exception:
         return None
 
 
-def http_get_json(url: str, params: Dict[str, Any], retry: int = 5, sleep_base: float = 1.0) -> Any:
-    last_err = None
-    for i in range(retry):
-        try:
-            resp = requests.get(url, params=params, timeout=30)
-            # Rate limit
-            if resp.status_code == 429:
-                time.sleep(sleep_base * (2 ** i))
-                continue
-            resp.raise_for_status()
-            return resp.json()
-        except Exception as e:
-            last_err = e
-            time.sleep(sleep_base * (2 ** i))
-    raise SystemExit(f"❌ HTTP failed: {url} params={params} err={last_err}")
-
-
-def load_overseas_assets_from_ssot() -> Dict[str, str]:
+def normalize_symbol(sym: str) -> str:
     """
-    return: assetId -> ticker(symbol)
-    - country != KR
-    - ticker required
+    ✅ 운영 안정용 심볼 정규화
+    - 공백 제거
+    - 끝의 '.' 같은 불필요 문자를 1차 제거(BA. -> BA)
+    - 대문자화
+    주의: 해외(UK: VOD.L 등) 같은 접미사는 US-only 모드에서는 어차피 제외되지만,
+         SSOT에 이상값(BA.) 등이 섞인 걸 방어하기 위한 최소 처리.
+    """
+    s = (sym or "").strip().upper()
+    if s.endswith("."):
+        s = s[:-1]
+    return s
+
+
+def http_get_json(url: str, params: Dict[str, Any], timeout: int = 25) -> Tuple[int, Any]:
+    """
+    returns: (status_code, json_or_text)
+    """
+    resp = requests.get(url, params=params, timeout=timeout)
+    ctype = (resp.headers.get("content-type") or "").lower()
+    if "application/json" in ctype:
+        try:
+            return resp.status_code, resp.json()
+        except Exception:
+            return resp.status_code, resp.text
+    return resp.status_code, resp.text
+
+
+# -----------------------------
+# SSOT load (US only)
+# -----------------------------
+def load_us_assets_from_ssot() -> Dict[str, str]:
+    """
+    return: asset_id -> symbol (US only)
     """
     if not SSOT_PATH.exists():
         raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
@@ -113,16 +137,12 @@ def load_overseas_assets_from_ssot() -> Dict[str, str]:
 
             if not aid:
                 continue
-            if country == "KR":
+            if country != "US":  # ✅ 핵심: US only
                 continue
             if not tkr:
                 continue
 
-            # 혹시 SSOT에 "AAPL,MSFT" 같은 값이 들어있으면 방어적으로 첫 토큰만 사용
-            if "," in tkr:
-                tkr = tkr.split(",")[0].strip()
-
-            out[aid] = tkr
+            out[aid] = normalize_symbol(tkr)
 
     return out
 
@@ -130,105 +150,123 @@ def load_overseas_assets_from_ssot() -> Dict[str, str]:
 # -----------------------------
 # FMP stable quote (single symbol)
 # -----------------------------
-def fetch_quote_single(symbol: str, api_key: str) -> Optional[Dict[str, Any]]:
+def fetch_quote_single(symbol: str, api_key: str) -> Tuple[str, Optional[Dict[str, Any]]]:
     """
-    GET https://financialmodelingprep.com/stable/quote?symbol=AAPL&apikey=...
-    Expected: list with 1 dict (commonly), but handle dict too.
+    Returns: (status_tag, quote_dict_or_none)
+      status_tag:
+        - "OK"
+        - "PAYMENT_REQUIRED" (402)
+        - "RATE_LIMIT" (429)
+        - "UNAUTHORIZED" (401)
+        - "FORBIDDEN" (403)
+        - "NOT_FOUND" (404)
+        - "HTTP_OTHER"
+        - "BAD_JSON"
     """
-    symbol = (symbol or "").strip()
-    if not symbol:
-        return None
-    if "," in symbol:
-        # 절대 다중 심볼을 넣지 않는다(402 트리거 가능)
-        symbol = symbol.split(",")[0].strip()
+    params = {"symbol": symbol, "apikey": api_key}
+    code, data = http_get_json(QUOTE_ENDPOINT, params=params)
 
-    url = f"{FMP_BASE}/stable/quote"
-    data = http_get_json(url, {"symbol": symbol, "apikey": api_key})
+    if code == 200:
+        # stable/quote는 보통 list 형태
+        if isinstance(data, list) and len(data) > 0 and isinstance(data[0], dict):
+            return "OK", data[0]
+        # 혹시 dict로 오는 케이스 방어
+        if isinstance(data, dict) and data.get("symbol"):
+            return "OK", data
+        return "BAD_JSON", None
 
-    # FMP가 에러를 dict로 줄 때도 있음
-    if isinstance(data, dict):
-        # {"Error Message": "..."} 형태
-        if data.get("Error Message"):
-            return None
-        # 혹시 단일 dict 반환이면
-        if data.get("symbol") == symbol:
-            return data
-        return None
-
-    if isinstance(data, list) and len(data) > 0 and isinstance(data[0], dict):
-        return data[0]
-
-    return None
+    if code == 402:
+        return "PAYMENT_REQUIRED", None
+    if code == 429:
+        return "RATE_LIMIT", None
+    if code == 401:
+        return "UNAUTHORIZED", None
+    if code == 403:
+        return "FORBIDDEN", None
+    if code == 404:
+        return "NOT_FOUND", None
+    return "HTTP_OTHER", None
 
 
-def is_data_alive(api_key: str) -> bool:
-    ok = 0
+def find_asof_from_sentinels(api_key: str) -> str:
+    """
+    asOf는 "엄밀한 거래일"을 전세계로 통일하는 게 불가능하니,
+    US-only에서는 sentinel의 quote timestamp(Unix) 또는 서버시간 기반으로 "오늘"을 기록.
+    - quote 응답에 'timestamp'가 있으면 그걸 UTC->date로 변환
+    - 없으면 그냥 오늘(UTC 기준)로 기록
+    """
+    # fallback
+    fallback = datetime.utcnow().strftime("%Y-%m-%d")
+
     for sym in SENTINEL_SYMBOLS:
-        q = fetch_quote_single(sym, api_key=api_key)
-        if not q:
+        tag, q = fetch_quote_single(sym, api_key=api_key)
+        if tag != "OK" or not isinstance(q, dict):
             continue
-        price = to_float_or_none(q.get("price"))
-        if price not in (None, 0, 0.0):
-            ok += 1
-    return ok >= 1
+        ts = q.get("timestamp")
+        try:
+            ts_i = int(ts)
+            d = datetime.utcfromtimestamp(ts_i).strftime("%Y-%m-%d")
+            return d
+        except Exception:
+            pass
+
+    return fallback
 
 
-# -----------------------------
-# main
-# -----------------------------
 def main() -> None:
     api_key = (os.environ.get("FMP_API_KEY") or "").strip()
     if not api_key:
         raise SystemExit("❌ Missing env FMP_API_KEY")
 
-    # 아주 흔한 실수: secrets에 공백/줄바꿈 들어감
-    api_key_clean = api_key.replace("\n", "").replace("\r", "").strip()
-    if api_key_clean != api_key:
-        api_key = api_key_clean
-
-    print(f"✅ FMP_API_KEY length={len(api_key)} sha256={hashlib.sha256(api_key.encode()).hexdigest()[:12]}...")
-
-    if not is_data_alive(api_key=api_key):
-        raise SystemExit("❌ FMP stable/quote does not return valid sentinel data. Check API key / plan / permissions.")
-
-    assets = load_overseas_assets_from_ssot()
+    assets = load_us_assets_from_ssot()
     if not assets:
-        raise SystemExit("❌ Overseas assets not found in SSOT (country!=KR & ticker required)")
+        raise SystemExit("❌ US assets not found in SSOT (country=US & ticker required)")
 
-    # 중복 심볼은 1번만 호출하기 위해 심볼 캐시
-    unique_symbols = sorted(set(assets.values()))
-    print(f"✅ Overseas assets={len(assets)} uniqueSymbols={len(unique_symbols)}")
+    # asOf 결정 (US sentinel 기반)
+    as_of = find_asof_from_sentinels(api_key=api_key)
+    print(f"✅ Using asOf: {as_of}")
 
-    quote_cache: Dict[str, Dict[str, Any]] = {}
+    # 스킵/에러 기록
+    skipped = {
+        "PAYMENT_REQUIRED": [],
+        "INVALID_SYMBOL": [],
+        "RATE_LIMIT": [],
+        "UNAUTHORIZED": [],
+        "FORBIDDEN": [],
+        "NOT_FOUND": [],
+        "HTTP_OTHER": [],
+        "BAD_JSON": [],
+    }
+
+    items: Dict[str, Dict[str, Any]] = {}
     nonzero_count = 0
 
-    # 1) 심볼별 quote 수집(단일 호출)
-    for i, sym in enumerate(unique_symbols, 1):
-        q = fetch_quote_single(sym, api_key=api_key)
-        if q:
-            quote_cache[sym] = q
+    # 진행 로그
+    print(f"✅ US assets={len(assets)}")
 
-        if i % 50 == 0:
-            print(f"  ... fetched {i}/{len(unique_symbols)} quotes")
+    # 개별 호출(Starter-friendly). 429 방지 위해 약간 슬립.
+    for i, (asset_id, raw_sym) in enumerate(assets.items(), 1):
+        sym = normalize_symbol(raw_sym)
+        if not sym:
+            skipped["INVALID_SYMBOL"].append(raw_sym)
+            continue
 
-        # Starter/안정성: 너무 빨리 치지 않도록 약간의 텀
-        time.sleep(0.25)
+        # 429 방지: 심볼당 약간 쉬기
+        time.sleep(0.12)
 
-    # 2) assetId 기준으로 items 구성
-    items: Dict[str, Dict[str, Any]] = {}
-    max_ts: Optional[int] = None
+        tag, q = fetch_quote_single(sym, api_key=api_key)
 
-    for asset_id, sym in assets.items():
-        q = quote_cache.get(sym, {}) if isinstance(quote_cache, dict) else {}
+        if tag != "OK" or not q:
+            skipped.setdefault(tag, []).append(sym)
+            # ✅ 핵심: 402 포함 어떤 에러든 "스킵하고 계속"
+            if i % 25 == 0:
+                print(f"  ... processed {i}/{len(assets)} (skipped so far={sum(len(v) for v in skipped.values())})")
+            continue
 
         close = to_float_or_none(q.get("price"))
         market_cap = to_int_or_none(q.get("marketCap"))
-        # stable/quote에는 "pe"가 없을 수도 있음(있으면 사용)
-        pe_ttm = to_float_or_none(q.get("pe"))
-
-        ts = to_int_or_none(q.get("timestamp"))
-        if ts is not None:
-            max_ts = ts if max_ts is None else max(max_ts, ts)
+        # stable/quote는 PER를 직접 안 줄 수 있어요. 있으면 쓰고 없으면 None.
+        pe_ttm = to_float_or_none(q.get("pe")) if "pe" in q else None
 
         if (close not in (None, 0, 0.0)) or (market_cap not in (None, 0)) or (pe_ttm not in (None, 0, 0.0)):
             nonzero_count += 1
@@ -240,28 +278,28 @@ def main() -> None:
             "pe_ttm": pe_ttm,
         }
 
+        if i % 25 == 0:
+            print(f"  ... processed {i}/{len(assets)} (ok={len(items)}, skipped={sum(len(v) for v in skipped.values())})")
+
     if nonzero_count == 0:
-        print("❌ All values are zero/None. Sample check:")
+        # sentinel sanity
+        print("❌ All values are zero/None. Sentinel check:")
         for s in SENTINEL_SYMBOLS:
-            qq = quote_cache.get(s, {})
-            print(s, "price=", qq.get("price"), "mcap=", qq.get("marketCap"), "pe=", qq.get("pe"), "ts=", qq.get("timestamp"))
-        raise SystemExit("❌ FMP stable quote returned no meaningful values. Failing workflow.")
+            tag, q = fetch_quote_single(s, api_key=api_key)
+            print("  ", s, "->", tag, ("price=" + str(q.get("price"))) if q else "")
+        raise SystemExit("❌ FMP valuation fetch returned no meaningful values. Failing workflow.")
 
-    # asOf: quote timestamp가 있으면 그 날짜(UTC) 사용, 없으면 오늘(UTC)
-    if max_ts is not None:
-        as_of = datetime.utcfromtimestamp(max_ts).strftime("%Y-%m-%d")
-    else:
-        as_of = datetime.utcnow().strftime("%Y-%m-%d")
-
-    out = {
+    payload = {
         "asOf": as_of,
         "source": "FMP",
+        "scope": "US",
         "items": items,
+        "skipped": skipped,
         "updatedAt": datetime.utcnow().strftime("%Y-%m-%d"),
     }
 
-    write_json(OUT_PATH, out)
-    print(f"✅ wrote: {OUT_PATH} (items={len(items)}, nonzero={nonzero_count}, asOf={as_of})")
+    write_json(OUT_PATH, payload)
+    print(f"✅ wrote: {OUT_PATH} (items={len(items)}, nonzero={nonzero_count}, skipped={sum(len(v) for v in skipped.values())})")
 
 
 if __name__ == "__main__":
