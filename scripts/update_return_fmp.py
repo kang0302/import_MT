@@ -1,5 +1,5 @@
 # scripts/update_return_fmp.py
-# MoneyTree - Overseas Returns Cache Builder (FMP Stable)
+# MoneyTree - US Returns Cache Builder (FMP Stable)
 #
 # Output:
 #   data/cache/returns_fmp.json
@@ -11,6 +11,7 @@
 # {
 #   "asOf": "YYYY-MM-DD",
 #   "source": "FMP_STABLE",
+#   "scope": "US",
 #   "items": {
 #     "A_001": {
 #       "ticker": "AAPL",
@@ -21,6 +22,15 @@
 #       "return_1y": 20.1,
 #       "return_3y": 55.0
 #     }
+#   },
+#   "skipped": {
+#     "PAYMENT_REQUIRED": ["XXX", ...],
+#     "RATE_LIMIT": ["YYY", ...],
+#     "UNAUTHORIZED": [],
+#     "FORBIDDEN": [],
+#     "NOT_FOUND": [],
+#     "HTTP_OTHER": [],
+#     "BAD_JSON": []
 #   },
 #   "updatedAt": "YYYY-MM-DD"
 # }
@@ -60,7 +70,6 @@ HORIZON_TO_TRADING_DAYS = {
     "return_1y": 252,
     "return_3y": 756,
 }
-
 
 # -----------------------------
 # helpers
@@ -108,29 +117,40 @@ def safe_symbol_filename(sym: str) -> str:
     return sym
 
 
-def http_get_json(url: str, params: dict, retry: int = 5, sleep_base: float = 1.0) -> Any:
-    last_err = None
-    for i in range(retry):
+def normalize_symbol(sym: str) -> str:
+    """
+    ✅ 운영 안정용 심볼 정규화
+    - 공백 제거
+    - 끝 '.' 제거(BA. -> BA)
+    - 대문자
+    """
+    s = (sym or "").strip().upper()
+    if s.endswith("."):
+        s = s[:-1]
+    return s
+
+
+def http_get_json_status(url: str, params: dict, timeout: int = 30) -> Tuple[int, Any]:
+    """
+    returns: (status_code, json_or_text)
+    """
+    resp = requests.get(url, params=params, timeout=timeout)
+    ctype = (resp.headers.get("content-type") or "").lower()
+    if "application/json" in ctype:
         try:
-            resp = requests.get(url, params=params, timeout=30)
-            if resp.status_code == 429:
-                time.sleep(sleep_base * (2 ** i))
-                continue
-            resp.raise_for_status()
-            return resp.json()
-        except Exception as e:
-            last_err = e
-            time.sleep(sleep_base * (2 ** i))
-    raise SystemExit(f"❌ HTTP failed: {url} err={last_err}")
+            return resp.status_code, resp.json()
+        except Exception:
+            return resp.status_code, resp.text
+    return resp.status_code, resp.text
 
 
 # -----------------------------
-# SSOT parsing
+# SSOT parsing (US only)
 # -----------------------------
-def load_overseas_assets_from_ssot() -> Dict[str, str]:
+def load_us_assets_from_ssot() -> Dict[str, str]:
     """
     return: assetId -> ticker(symbol)
-    - country != KR
+    - country == US only
     - ticker 존재
     """
     if not SSOT_PATH.exists():
@@ -146,12 +166,12 @@ def load_overseas_assets_from_ssot() -> Dict[str, str]:
 
             if not aid or not is_asset_id(aid):
                 continue
-            if country == "KR":
+            if country != "US":  # ✅ 핵심: US only
                 continue
             if not tkr:
                 continue
 
-            out[aid] = tkr.strip().upper()
+            out[aid] = normalize_symbol(tkr)
 
     return out
 
@@ -159,14 +179,41 @@ def load_overseas_assets_from_ssot() -> Dict[str, str]:
 # -----------------------------
 # FMP Stable: historical EOD full
 # -----------------------------
-def fetch_eod_full(symbol: str, api_key: str) -> Any:
+def fetch_eod_full(symbol: str, api_key: str) -> Tuple[str, Optional[Any]]:
     """
     ✅ Stable endpoint ONLY
     GET /stable/historical-price-eod/full?symbol=XXX&apikey=...
+    return: (status_tag, raw_obj_or_none)
+      status_tag:
+        - OK
+        - PAYMENT_REQUIRED (402)
+        - RATE_LIMIT (429)
+        - UNAUTHORIZED (401)
+        - FORBIDDEN (403)
+        - NOT_FOUND (404)
+        - HTTP_OTHER
+        - BAD_JSON
     """
     url = f"{FMP_STABLE_BASE}/historical-price-eod/full"
-    params = {"symbol": symbol, "apikey": api_key}
-    return http_get_json(url, params=params, retry=5, sleep_base=1.0)
+    code, data = http_get_json_status(url, params={"symbol": symbol, "apikey": api_key}, timeout=30)
+
+    if code == 200:
+        # dict/list 모두 허용
+        if isinstance(data, (dict, list)):
+            return "OK", data
+        return "BAD_JSON", None
+
+    if code == 402:
+        return "PAYMENT_REQUIRED", None
+    if code == 429:
+        return "RATE_LIMIT", None
+    if code == 401:
+        return "UNAUTHORIZED", None
+    if code == 403:
+        return "FORBIDDEN", None
+    if code == 404:
+        return "NOT_FOUND", None
+    return "HTTP_OTHER", None
 
 
 def save_sentinel_raw(symbol: str, raw_obj: Any) -> None:
@@ -209,7 +256,6 @@ def parse_eod_series(raw_obj: Any) -> Optional[List[Tuple[date, float]]]:
             continue
 
         ds = r.get("date") or r.get("datetime") or r.get("time")
-        # close 우선, 없으면 price
         c = r.get("close") if "close" in r else r.get("price")
 
         if not ds:
@@ -265,39 +311,48 @@ def compute_returns_from_series(closes: List[Tuple[date, float]]) -> Tuple[str, 
 
 
 def main() -> None:
-    print("=== Update FMP Returns Start (Stable) ===")
+    print("=== Update FMP Returns Start (Stable, US-only) ===")
     api_key = (os.environ.get("FMP_API_KEY") or "").strip()
     if not api_key:
         raise SystemExit("❌ Missing env FMP_API_KEY")
 
-    asset_map = load_overseas_assets_from_ssot()
-    print(f"✅ Collected overseas assets from SSOT: {len(asset_map)} (assetId 기준)")
+    asset_map = load_us_assets_from_ssot()
+    print(f"✅ Collected US assets from SSOT: {len(asset_map)} (assetId 기준)")
+
+    skipped = {
+        "PAYMENT_REQUIRED": [],
+        "RATE_LIMIT": [],
+        "UNAUTHORIZED": [],
+        "FORBIDDEN": [],
+        "NOT_FOUND": [],
+        "HTTP_OTHER": [],
+        "BAD_JSON": [],
+    }
 
     items: Dict[str, Dict[str, Optional[float]]] = {}
     effective_as_of: Optional[str] = None
 
-    # ticker 중복 제거: ticker별로 historical 1회만 호출
     unique_symbols = sorted(list(set(asset_map.values())))
     series_cache: Dict[str, Optional[List[Tuple[date, float]]]] = {}
 
-    # ✅ 먼저 ticker별로 시계열 확보
+    # ✅ ticker별 시계열 확보(1회 호출)
     for i, sym in enumerate(unique_symbols, 1):
-        try:
-            raw = fetch_eod_full(sym, api_key=api_key)
-            save_sentinel_raw(sym, raw)
-            closes = parse_eod_series(raw)
-            series_cache[sym] = closes
-        except Exception as e:
-            print(f"❌ failed symbol={sym} err={e}")
-            series_cache[sym] = None
-
-        if i % 25 == 0:
-            print(f"  ... fetched {i}/{len(unique_symbols)} symbols")
-
         # rate-limit 완화
         time.sleep(0.2)
 
-    # ✅ assetId별로 returns 계산(시계열 재사용)
+        tag, raw = fetch_eod_full(sym, api_key=api_key)
+        if tag != "OK" or raw is None:
+            skipped.setdefault(tag, []).append(sym)
+            series_cache[sym] = None
+        else:
+            save_sentinel_raw(sym, raw)
+            closes = parse_eod_series(raw)
+            series_cache[sym] = closes
+
+        if i % 25 == 0:
+            print(f"  ... fetched {i}/{len(unique_symbols)} symbols (skipped={sum(len(v) for v in skipped.values())})")
+
+    # ✅ assetId별 returns 계산(시계열 재사용)
     for j, (asset_id, sym) in enumerate(asset_map.items(), 1):
         closes = series_cache.get(sym)
 
@@ -317,13 +372,16 @@ def main() -> None:
     payload = {
         "asOf": effective_as_of or date.today().isoformat(),
         "source": "FMP_STABLE",
+        "scope": "US",
         "items": items,
+        "skipped": skipped,
         "updatedAt": datetime.utcnow().strftime("%Y-%m-%d"),
     }
 
     write_json(OUT_PATH, payload)
     print(f"✅ wrote: {OUT_PATH}")
     print(f"✅ items: {len(items)}")
+    print(f"✅ skipped(total)={sum(len(v) for v in skipped.values())}")
     print(f"✅ sentinel raw saved to: {HIST_DIR} (only: {', '.join(SENTINEL_SYMBOLS)})")
     print("=== Update FMP Returns Completed ===")
 

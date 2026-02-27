@@ -3,7 +3,7 @@ name: Update Overseas Returns + Freeze (FMP)
 on:
   workflow_dispatch: {}
   schedule:
-    # valuation job과 충돌 방지: 20분 뒤 실행
+    # valuation job과 충돌 방지: 20분 뒤 실행(예: valuation이 21:40 UTC면 22:00 UTC)
     - cron: "0 22 * * *"
 
 permissions:
@@ -27,15 +27,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Overseas returns updater (FMP)
+      - name: Run US returns updater (FMP Stable)
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: |
-          python scripts/update_return_fmp.py
+          python -u scripts/update_return_fmp.py
 
       - name: Inject metrics into Freeze + update theme index
         run: |
-          python scripts/build_freeze.py
+          python -u scripts/build_freeze.py
 
       - name: Commit & push if changed
         run: |
@@ -51,5 +51,5 @@ jobs:
           git add data/theme/T_*.json
           git add data/theme/index.json
 
-          git commit -m "chore: overseas returns + freeze update (FMP)"
+          git commit -m "chore: US returns + freeze update (FMP stable)"
           git push

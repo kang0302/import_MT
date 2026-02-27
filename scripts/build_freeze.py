@@ -19,7 +19,11 @@ HAS_PUBLIC_THEME_DIR = THEME_PUBLIC_DIR.exists()
 # ========================
 VAL_KR_PATH = DATA_DIR / "cache" / "valuation_kr.json"
 RET_KR_PATH = DATA_DIR / "cache" / "returns_kr.json"
+
 VAL_FMP_PATH = DATA_DIR / "cache" / "valuation_fmp.json"
+RET_FMP_PATH = DATA_DIR / "cache" / "returns_fmp.json"   # ✅ 추가: US returns (FMP stable)
+
+# optional (later / 통합용)
 RET_ALL_PATH = DATA_DIR / "cache" / "returns_all.json"
 
 RETURN_KEYS = ["return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
@@ -207,11 +211,9 @@ def load_kr_valuation_by_ticker() -> Dict[str, Dict[str, Any]]:
         if not isinstance(it, dict):
             continue
 
-        # items key는 asset_id일 가능성이 높고, ticker는 item에 존재
         t = (it.get("ticker") or "").strip()
         if not t and isinstance(k, str) and k.strip().isdigit():
             t = k.strip()
-
         if not t:
             continue
 
@@ -246,8 +248,6 @@ def load_returns_by_ticker(path: Path, default_source: str) -> Dict[str, Dict[st
         if not isinstance(it, dict):
             continue
 
-        # ✅ key가 "005930" 처럼 ticker일 수도 있고, "A_088" 처럼 assetId일 수도 있음
-        # -> assetId인 경우 item["ticker"]를 사용
         t = ""
         if isinstance(k, str) and k.strip().isdigit():
             t = k.strip().zfill(6)
@@ -292,11 +292,12 @@ def load_items_by_asset_id(path: Path, default_source: str) -> Dict[str, Dict[st
 
         it2 = dict(it)
 
-        # asOf/source 메타 주입 (추적용)
+        # valuation meta
         if ("close" in it2 or "marketCap" in it2 or "pe_ttm" in it2):
             it2.setdefault("valuationAsOf", as_of)
             it2.setdefault("valuationSource", source)
 
+        # returns meta
         if any(k in it2 for k in RETURN_KEYS):
             it2.setdefault("returnsAsOf", as_of)
             it2.setdefault("returnsSource", source)
@@ -361,26 +362,29 @@ def inject_metrics_into_theme(
     kr_val_by_ticker: Dict[str, Dict[str, Any]],
     kr_ret_by_ticker: Dict[str, Dict[str, Any]],
     fmp_val_by_aid: Dict[str, Dict[str, Any]],
+    fmp_ret_by_aid: Dict[str, Dict[str, Any]],
     ret_all_by_aid: Dict[str, Dict[str, Any]],
-) -> Tuple[int, int, bool, int]:
+) -> Tuple[int, int, bool, int, int]:
     """
-    return: (updated_asset_nodes, scanned_asset_nodes, structural_changed, updated_us_asset_nodes)
-    structural_changed: updated=0이라도 파일에 저장해야 하는 '스키마 보정' 발생 여부
+    return:
+      (updated_asset_nodes, scanned_asset_nodes, structural_changed,
+       updated_us_valuation_nodes, updated_us_return_nodes)
     """
     theme_obj = read_json(theme_path)
     if not isinstance(theme_obj, dict):
-        return (0, 0, False, 0)
+        return (0, 0, False, 0, 0)
 
     theme_obj = _normalize_theme_obj(theme_obj)
 
     nodes = theme_obj.get("nodes", [])
     if not isinstance(nodes, list):
-        return (0, 0, False, 0)
+        return (0, 0, False, 0, 0)
 
     updated = 0
     scanned = 0
-    updated_us = 0
-    structural_changed = False  # ✅ 여기 핵심
+    updated_us_val = 0
+    updated_us_ret = 0
+    structural_changed = False
 
     for node in nodes:
         if not isinstance(node, dict):
@@ -422,42 +426,53 @@ def inject_metrics_into_theme(
                         changed_any = _set_if_meaningful(metrics, k, ret.get(k)) or changed_any
 
         # ======================
-        # (2) US valuation by asset_id (FMP: country=US only)
-        # ✅ 핵심 변경: country != KR  ->  country == US
+        # (2) US valuation by asset_id (FMP, country=US only)
         # ======================
         if aid and country == "US":
             fmp = fmp_val_by_aid.get(aid)
             if fmp and _is_meaningful_valuation(fmp):
+                before = dict(metrics)
                 for k in VAL_KEYS:
                     if k in fmp:
                         changed_any = _set_if_meaningful(metrics, k, fmp.get(k)) or changed_any
-                if changed_any:
-                    updated_us += 1
+                if metrics != before:
+                    updated_us_val += 1
 
         # ======================
-        # (3) Returns all by asset_id (optional, later)
+        # (3) US returns by asset_id (FMP, country=US only)
         # ======================
-        if aid:
-            r = ret_all_by_aid.get(aid)
+        if aid and country == "US":
+            r = fmp_ret_by_aid.get(aid)
             if r:
+                before = dict(metrics)
                 for rk in RETURN_KEYS:
                     changed_any = _set_if_meaningful(metrics, rk, r.get(rk)) or changed_any
                 for k in RET_META_KEYS:
                     changed_any = _set_if_meaningful(metrics, k, r.get(k)) or changed_any
+                if metrics != before:
+                    updated_us_ret += 1
+
+        # ======================
+        # (4) Returns all by asset_id (optional, later)
+        # ======================
+        if aid:
+            r2 = ret_all_by_aid.get(aid)
+            if r2:
+                for rk in RETURN_KEYS:
+                    changed_any = _set_if_meaningful(metrics, rk, r2.get(rk)) or changed_any
+                for k in RET_META_KEYS:
+                    changed_any = _set_if_meaningful(metrics, k, r2.get(k)) or changed_any
 
         if changed_any:
             updated += 1
 
-    # ✅ 핵심: updated=0이어도 "구조 보정"이 있으면 저장해야 findstr/web에 키가 남는다
     if updated > 0 or structural_changed:
         write_json(theme_path, theme_obj)
-
-        # ✅ public 폴더가 있으면 미러링(웹 반영 루프 방지)
         if HAS_PUBLIC_THEME_DIR:
             out_path = THEME_PUBLIC_DIR / theme_path.name
             write_json(out_path, theme_obj)
 
-    return (updated, scanned, structural_changed, updated_us)
+    return (updated, scanned, structural_changed, updated_us_val, updated_us_ret)
 
 
 def rebuild_index(themes: List[Union[Dict[str, Any], str]]) -> None:
@@ -488,13 +503,17 @@ def main() -> None:
     # US valuation (FMP: assetId map)
     fmp_val_by_aid = load_items_by_asset_id(VAL_FMP_PATH, default_source="FMP")
 
-    # Returns all (optional, later)
+    # US returns (FMP stable)
+    fmp_ret_by_aid = load_items_by_asset_id(RET_FMP_PATH, default_source="FMP_STABLE")
+
+    # optional (later)
     ret_all_by_aid = load_items_by_asset_id(RET_ALL_PATH, default_source="AUTO")
 
     total_updated = 0
     total_scanned = 0
     total_structural = 0
-    total_updated_us = 0
+    total_updated_us_val = 0
+    total_updated_us_ret = 0
 
     for t in themes:
         theme_id = None
@@ -511,30 +530,34 @@ def main() -> None:
             print(f"⚠ Theme file not found: {theme_path}")
             continue
 
-        updated, scanned, structural_changed, updated_us = inject_metrics_into_theme(
+        updated, scanned, structural_changed, us_val, us_ret = inject_metrics_into_theme(
             theme_path,
             kr_val_by_ticker,
             kr_ret_by_ticker,
             fmp_val_by_aid,
+            fmp_ret_by_aid,
             ret_all_by_aid,
         )
 
         total_updated += updated
         total_scanned += scanned
-        total_updated_us += updated_us
+        total_updated_us_val += us_val
+        total_updated_us_ret += us_ret
         if structural_changed:
             total_structural += 1
 
-        # 테마별 로그(디버깅)
         if scanned > 0:
             extra = " +schema" if structural_changed and updated == 0 else ""
-            us_extra = f", us+{updated_us}" if updated_us else ""
+            us_extra = ""
+            if us_val or us_ret:
+                us_extra = f", usVal+{us_val}, usRet+{us_ret}"
             print(f"  - {theme_id}: updated {updated}/{scanned} asset nodes{us_extra}{extra}")
 
     rebuild_index(themes)
 
     print(f"✅ Metrics injected into {total_updated} asset nodes (scanned={total_scanned}).")
-    print(f"✅ US valuation injected into {total_updated_us} asset nodes (country=US, source=FMP).")
+    print(f"✅ US valuation injected: {total_updated_us_val} nodes (country=US, source=FMP).")
+    print(f"✅ US returns injected: {total_updated_us_ret} nodes (country=US, source=FMP_STABLE).")
     if total_structural:
         print(f"✅ Schema-normalized themes written: {total_structural} (even if updated=0)")
     if HAS_PUBLIC_THEME_DIR:
