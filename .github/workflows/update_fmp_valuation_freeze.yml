@@ -27,15 +27,30 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # ✅ [핵심] 러너가 실제로 실행할 파일을 "증거"로 남긴다
+      - name: Debug - verify script file on runner
+        run: |
+          echo "PWD=$(pwd)"
+          echo "LIST scripts/:"
+          ls -al scripts
+          echo "---- HEAD of scripts/update_valuation_fmp.py ----"
+          python -c "from pathlib import Path; p=Path('scripts/update_valuation_fmp.py'); print('EXISTS:', p.exists()); print('ABS:', p.resolve()); print('SIZE:', p.stat().st_size if p.exists() else None); print('SHA256:'); import hashlib; print(hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else 'NA'); print('--- FIRST 80 LINES ---'); print('\n'.join(p.read_text(encoding='utf-8').splitlines()[:80]) if p.exists() else '')"
+          echo "---- GREP: batch-quote in scripts/update_valuation_fmp.py ----"
+          (grep -n "batch-quote" -n scripts/update_valuation_fmp.py || true)
+          (grep -n "stable/batch-quote" -n scripts/update_valuation_fmp.py || true)
+          echo "---- GREP: stable/quote in scripts/update_valuation_fmp.py ----"
+          (grep -n "stable/quote" -n scripts/update_valuation_fmp.py || true)
+
       - name: Run Overseas valuation updater (FMP)
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: |
-          python scripts/update_valuation_fmp.py
+          # ✅ -u: 로그 버퍼링 방지 (Actions에서 바로바로 출력)
+          python -u scripts/update_valuation_fmp.py
 
       - name: Inject metrics into Freeze + update theme index
         run: |
-          python scripts/build_freeze.py
+          python -u scripts/build_freeze.py
 
       - name: Commit & push if changed
         run: |
