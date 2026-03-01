@@ -1,10 +1,10 @@
-name: Update US Returns + Freeze (FMP)
+name: Update Overseas Returns + Freeze (FMP)
 
 on:
   workflow_dispatch: {}
   schedule:
-    # KST 06:45 = UTC 21:45 (미국장 마감 후)
-    - cron: "45 21 * * *"
+    # KST 07:10 = UTC 22:10 (valuation 이후 약간 텀)
+    - cron: "10 22 * * *"
 
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run US returns updater (FMP)
+      - name: Run Overseas returns updater (FMP)
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: |
@@ -51,5 +51,5 @@ jobs:
           git add data/theme/T_*.json
           git add data/theme/index.json
 
-          git commit -m "chore: US returns + freeze update (FMP)"
+          git commit -m "chore: overseas returns + freeze update (FMP)"
           git push

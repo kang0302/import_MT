@@ -1,265 +1,256 @@
-# import_MT/scripts/update_return_fmp.py
-import csv
 import json
 import os
 import time
-from datetime import datetime
+import hashlib
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+
+BASE_DIR = Path(__file__).resolve().parents[1]          # .../moneytree-web/import_MT
 DATA_DIR = BASE_DIR / "data"
 SSOT_PATH = DATA_DIR / "ssot" / "asset_ssot.csv"
-
 CACHE_DIR = DATA_DIR / "cache"
 OUT_PATH = CACHE_DIR / "returns_fmp.json"
 
 FMP_BASE = "https://financialmodelingprep.com"
 
+# Stable EOD full history endpoint (docs show: /stable/historical-price-eod/full?symbol=...)
+# :contentReference[oaicite:3]{index=3}
+HIST_EOD_FULL_PATH = "/stable/historical-price-eod/full"
+
+REQUEST_TIMEOUT = 25
+SLEEP_BETWEEN_CALLS = 0.25
+MAX_RETRIES = 2
+SKIP_HTTP_STATUS = {401, 402, 403, 404}
+
 RETURN_KEYS = ["return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
 
 
-def write_json(path: Path, obj: Any) -> None:
+# =========================
+# helpers
+# =========================
+def yyyymmdd(d: datetime) -> str:
+    return d.strftime("%Y-%m-%d")
+
+
+def write_json_atomic(path: Path, obj: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
 
 
-def to_float_or_none(x) -> Optional[float]:
-    if x is None:
-        return None
+def http_get_json(url: str, params: Dict[str, Any]) -> Any:
+    r = requests.get(url, params=params, timeout=REQUEST_TIMEOUT)
+    r.raise_for_status()
+    return r.json()
+
+
+def to_float_or_none(x: Any) -> Optional[float]:
     try:
-        if isinstance(x, str) and x.strip() in ("", "-", "N/A"):
+        if x is None:
             return None
-        v = float(x)
-        if v != v:  # NaN
+        if isinstance(x, (int, float)):
+            return float(x)
+        s = str(x).strip()
+        if s == "" or s.lower() == "nan":
             return None
-        return v
+        return float(s)
     except Exception:
         return None
 
 
-def safe_get(url: str, params: Dict[str, Any], timeout: int = 25, retry: int = 5, sleep_base: float = 1.0) -> Tuple[Optional[Any], Optional[int], Optional[str]]:
+def normalize_symbol(sym: str) -> str:
+    s = (sym or "").strip()
+    while s.endswith("."):
+        s = s[:-1]
+    return s
+
+
+def load_overseas_assets_from_ssot() -> Dict[str, Dict[str, str]]:
     """
-    return: (json_or_none, status_code_or_none, error_tag)
-      error_tag:
-        - "PAYMENT_REQUIRED" (402)
-        - "INVALID_API_KEY"
-        - "HTTP_ERROR"
-        - "EXCEPTION"
+    KR 제외(=해외/글로벌) 자산만 returns 대상으로.
+    반환: {asset_id: {"ticker":"...", "country":"..", "exchange":".."}}
     """
-    last_err = None
-    for i in range(retry):
-        try:
-            resp = requests.get(url, params=params, timeout=timeout)
+    import csv
 
-            if resp.status_code == 429:
-                time.sleep(sleep_base * (2 ** i))
-                continue
-
-            if resp.status_code == 402:
-                return None, 402, "PAYMENT_REQUIRED"
-
-            if resp.status_code in (401, 403):
-                # FMP는 메시지로 invalid key를 주기도 함
-                try:
-                    j = resp.json()
-                    msg = (j.get("Error Message") or "").lower()
-                    if "invalid api key" in msg:
-                        return None, resp.status_code, "INVALID_API_KEY"
-                except Exception:
-                    pass
-                return None, resp.status_code, "HTTP_ERROR"
-
-            resp.raise_for_status()
-            return resp.json(), resp.status_code, None
-
-        except Exception as e:
-            last_err = e
-            time.sleep(sleep_base * (2 ** i))
-
-    return None, None, f"EXCEPTION:{last_err}"
-
-
-def load_us_assets_from_ssot() -> Dict[str, str]:
     if not SSOT_PATH.exists():
-        raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
+        raise SystemExit(f"SSOT not found: {SSOT_PATH}")
 
-    out: Dict[str, str] = {}
+    out: Dict[str, Dict[str, str]] = {}
     with SSOT_PATH.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
-        for r in reader:
-            aid = (r.get("asset_id") or "").strip()
-            tkr = (r.get("ticker") or "").strip()
-            country = (r.get("country") or "").strip().upper()
+        for row in reader:
+            aid = (row.get("asset_id") or "").strip()
+            country = (row.get("country") or "").strip().upper()
+            ticker = (row.get("ticker") or "").strip()
+            exchange = (row.get("exchange") or "").strip()
 
-            if not aid or not tkr:
+            if not aid:
+                continue
+            if country == "KR":
+                continue
+            if not ticker:
                 continue
 
-            # ✅ US만
-            if country != "US":
-                continue
-
-            out[aid] = tkr
-
+            out[aid] = {
+                "ticker": normalize_symbol(ticker),
+                "country": country,
+                "exchange": exchange,
+            }
     return out
 
 
-def ytd_anchor_year(ts_utc: datetime) -> int:
-    return ts_utc.year
-
-
-def compute_return(cur: Optional[float], past: Optional[float]) -> Optional[float]:
-    if cur in (None, 0, 0.0) or past in (None, 0, 0.0):
-        return None
-    try:
-        return (float(cur) / float(past) - 1.0) * 100.0
-    except Exception:
-        return None
-
-
-def fetch_eod_series(symbol: str, api_key: str) -> Tuple[Optional[List[Dict[str, Any]]], Optional[str], Optional[str]]:
+def parse_hist_payload(payload: Any) -> List[Dict[str, Any]]:
     """
-    stable endpoint (EOD):
-      /stable/historical-price-eod/full?symbol=XXX&apikey=...
-    return: (list_or_none, asof_date, error_tag)
+    기대 형태(대부분):
+      {"symbol":"AAPL", "historical":[{"date":"2026-02-26","close":...}, ...]}
     """
-    url = f"{FMP_BASE}/stable/historical-price-eod/full"
-    data, status, err = safe_get(url, {"symbol": symbol, "apikey": api_key})
-    if err:
-        return None, None, err
-
-    # 보통 list 형태
-    if isinstance(data, list):
-        series = [x for x in data if isinstance(x, dict) and x.get("date") and x.get("close") is not None]
-        if not series:
-            return None, None, "HTTP_ERROR"
-        # 최신일 기준 내림차순
-        series.sort(key=lambda x: x["date"], reverse=True)
-        return series, series[0].get("date"), None
-
-    # dict로 내려오는 케이스 방어
-    if isinstance(data, dict):
-        # 일부 응답은 {"symbol": "...", "historical": [...]} 형태일 수 있음
-        hist = data.get("historical") if isinstance(data.get("historical"), list) else None
+    if isinstance(payload, dict):
+        hist = payload.get("historical")
         if isinstance(hist, list):
-            series = [x for x in hist if isinstance(x, dict) and x.get("date") and x.get("close") is not None]
-            if not series:
-                return None, None, "HTTP_ERROR"
-            series.sort(key=lambda x: x["date"], reverse=True)
-            return series, series[0].get("date"), None
-
-    return None, None, "HTTP_ERROR"
+            return [x for x in hist if isinstance(x, dict)]
+    return []
 
 
-def pick_close_on_or_before(series: List[Dict[str, Any]], target_date: str) -> Optional[float]:
-    # series는 date desc라고 가정
-    for row in series:
-        d = row.get("date")
-        if not d:
+def compute_returns_from_closes(hist: List[Dict[str, Any]]) -> Tuple[Optional[str], Dict[str, Optional[float]]]:
+    """
+    hist: [{"date": "...", "close": ...}, ...]  (최신이 앞일 수도 뒤일 수도 있음)
+    - trading day index 기반으로 3d/7d/1m/1y/3y 계산
+    - ytd는 해당 연도 첫 거래일 close 기준
+    """
+    rows: List[Tuple[str, float]] = []
+    for r in hist:
+        d = (r.get("date") or "").strip()
+        c = to_float_or_none(r.get("close"))
+        if not d or c is None:
             continue
-        if d <= target_date:
-            return to_float_or_none(row.get("close"))
-    return None
+        rows.append((d, c))
+
+    if not rows:
+        return (None, {k: None for k in RETURN_KEYS})
+
+    # 날짜 오름차순 정렬
+    rows.sort(key=lambda x: x[0])
+
+    as_of_date = rows[-1][0]
+    last_close = rows[-1][1]
+
+    def ret_at_back(trading_days_back: int) -> Optional[float]:
+        i = len(rows) - 1 - trading_days_back
+        if i < 0:
+            return None
+        base = rows[i][1]
+        if base in (0, 0.0) or base is None:
+            return None
+        return (last_close / base - 1.0) * 100.0
+
+    # YTD: 같은 연도의 첫 거래일
+    y = as_of_date[:4]
+    ytd_base = None
+    for d, c in rows:
+        if d.startswith(y):
+            ytd_base = c
+            break
+    ytd_ret = None
+    if ytd_base not in (None, 0, 0.0):
+        ytd_ret = (last_close / ytd_base - 1.0) * 100.0
+
+    out = {
+        "return_3d": ret_at_back(3),
+        "return_7d": ret_at_back(7),
+        "return_1m": ret_at_back(21),
+        "return_ytd": ytd_ret,
+        "return_1y": ret_at_back(252),
+        "return_3y": ret_at_back(756),
+    }
+    return (as_of_date, out)
+
+
+def fetch_history(symbol: str, api_key: str, from_date: str, to_date: str) -> Tuple[List[Dict[str, Any]], Optional[str]]:
+    url = f"{FMP_BASE}{HIST_EOD_FULL_PATH}"
+    params = {"symbol": symbol, "apikey": api_key, "from": from_date, "to": to_date}
+
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            data = http_get_json(url, params)
+            hist = parse_hist_payload(data)
+            return (hist, None)
+        except requests.HTTPError as e:
+            status = e.response.status_code if e.response is not None else None
+            if status in SKIP_HTTP_STATUS:
+                return ([], f"http_{status}")
+            if attempt >= MAX_RETRIES:
+                return ([], f"http_error:{status}")
+            time.sleep(0.7 + attempt * 0.7)
+        except Exception as e:
+            if attempt >= MAX_RETRIES:
+                return ([], f"error:{type(e).__name__}")
+            time.sleep(0.7 + attempt * 0.7)
+
+    return ([], "unknown")
 
 
 def main() -> None:
-    api_key = (os.environ.get("FMP_API_KEY") or "").strip()
+    api_key = (os.getenv("FMP_API_KEY") or "").strip()
     if not api_key:
-        raise SystemExit("❌ Missing env FMP_API_KEY")
+        raise SystemExit("FMP_API_KEY is missing (set env var)")
 
-    assets = load_us_assets_from_ssot()
-    if not assets:
-        raise SystemExit("❌ US assets not found in SSOT (country==US & ticker required)")
+    sha = hashlib.sha256(api_key.encode("utf-8")).hexdigest()[:12]
+    print(f"✅ FMP_API_KEY length={len(api_key)} sha256={sha}...")
 
-    symbols = sorted(list(set(assets.values())))
-    print(f"US assets={len(assets)} uniqueSymbols={len(symbols)}")
+    assets = load_overseas_assets_from_ssot()
+    unique_symbols = len(set(v["ticker"] for v in assets.values()))
+    print(f"✅ Overseas assets={len(assets)} uniqueSymbols={unique_symbols} (KR excluded)")
 
-    now_utc = datetime.utcnow()
-    ytd_year = ytd_anchor_year(now_utc)
+    # 3y 계산하려면 3y+버퍼 만큼
+    today = datetime.utcnow()
+    from_dt = today - timedelta(days=365 * 3 + 30)
+    from_date = yyyymmdd(from_dt)
+    to_date = yyyymmdd(today)
 
     items: Dict[str, Dict[str, Any]] = {}
-    as_of_global = ""
+    ok = 0
+    skipped = 0
+    last_asof_seen: Optional[str] = None
 
-    skipped_402 = 0
-    ok_count = 0
+    for idx, (aid, meta) in enumerate(assets.items(), start=1):
+        sym = meta["ticker"]
 
-    for aid, sym in assets.items():
-        series, as_of, err = fetch_eod_series(sym, api_key=api_key)
-
-        if err == "PAYMENT_REQUIRED":
-            skipped_402 += 1
-            # ✅ 402 심볼은 스킵하고 계속
-            continue
-
+        hist, err = fetch_history(sym, api_key, from_date, to_date)
         if err:
-            # 기타 에러는 로그만 남기고 스킵
-            print(f"⚠ skip symbol={sym} err={err}")
+            skipped += 1
+            print(f"⚠ skip {aid} sym={sym} err={err}")
+            time.sleep(SLEEP_BETWEEN_CALLS)
             continue
 
-        if not series or not as_of:
-            continue
+        asof, rets = compute_returns_from_closes(hist)
+        if asof:
+            last_asof_seen = asof
 
-        if not as_of_global:
-            as_of_global = as_of
-
-        # 현재 close
-        cur = to_float_or_none(series[0].get("close"))
-
-        # 과거 기준일들
-        # 단순히 "거래일 기준 N일"은 정확 매칭이 어려워서:
-        # - series의 index를 써서 근사치로 잡는다 (eod series가 trading days로만 구성되기 때문)
-        def close_by_trading_index(idx: int) -> Optional[float]:
-            if idx < 0 or idx >= len(series):
-                return None
-            return to_float_or_none(series[idx].get("close"))
-
-        close_3d = close_by_trading_index(3)
-        close_7d = close_by_trading_index(7)
-        close_1m = close_by_trading_index(21)   # 대략 21 trading days
-        close_1y = close_by_trading_index(252)  # 대략 252 trading days
-        close_3y = close_by_trading_index(252 * 3)
-
-        # YTD: 올해 1/1 이후 첫 거래일 close를 찾아서 사용
-        ytd_target = f"{ytd_year}-01-01"
-        ytd_close = pick_close_on_or_before(list(reversed(series)), ytd_target)  # asc로 만들어 탐색
-        # reversed(series)은 asc가 아니므로 방어: 아래처럼 확실히 asc 정렬
-        series_asc = list(series)
-        series_asc.sort(key=lambda x: x["date"])
-        ytd_close = None
-        for row in series_asc:
-            d = row.get("date")
-            if d and d >= ytd_target:
-                ytd_close = to_float_or_none(row.get("close"))
-                break
-
-        out = {
+        items[aid] = {
             "ticker": sym,
-            "return_3d": compute_return(cur, close_3d),
-            "return_7d": compute_return(cur, close_7d),
-            "return_1m": compute_return(cur, close_1m),
-            "return_ytd": compute_return(cur, ytd_close),
-            "return_1y": compute_return(cur, close_1y),
-            "return_3y": compute_return(cur, close_3y),
+            "exchange": meta.get("exchange", ""),
+            "country": meta.get("country", ""),
+            **rets,
         }
+        ok += 1
 
-        items[aid] = out
-        ok_count += 1
+        if idx % 15 == 0:
+            print(f"  ...progress {idx}/{len(assets)} ok={ok} skipped={skipped}")
 
-        time.sleep(0.25)
+        time.sleep(SLEEP_BETWEEN_CALLS)
 
-    out_obj = {
-        "asOf": as_of_global or now_utc.strftime("%Y-%m-%d"),
-        "source": "FMP",
-        "items": items,
-        "skipped402": skipped_402,
-        "ok": ok_count,
-        "total": len(assets),
-    }
+    out_asof = last_asof_seen or yyyymmdd(today)
+    out = {"asOf": out_asof, "source": "FMP", "items": items}
+    write_json_atomic(OUT_PATH, out)
 
-    write_json(OUT_PATH, out_obj)
-    print(f"✅ wrote: {OUT_PATH} items={len(items)} skipped402={skipped_402}")
+    print(f"✅ wrote: {OUT_PATH} items={len(items)} ok={ok} skipped={skipped}")
+    if ok == 0:
+        raise SystemExit("❌ No returns computed (all skipped). Check plan/key/symbol formats.")
 
 
 if __name__ == "__main__":

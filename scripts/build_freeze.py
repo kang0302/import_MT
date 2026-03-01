@@ -1,8 +1,8 @@
-# import_MT/scripts/build_freeze.py
 import json
 import re
 from pathlib import Path
 from typing import Any, Dict, List, Union, Tuple
+
 
 BASE_DIR = Path(__file__).resolve().parents[1]  # .../moneytree-web/import_MT
 PROJECT_DIR = BASE_DIR.parent                   # .../moneytree-web
@@ -19,11 +19,8 @@ HAS_PUBLIC_THEME_DIR = THEME_PUBLIC_DIR.exists()
 VAL_KR_PATH = DATA_DIR / "cache" / "valuation_kr.json"
 RET_KR_PATH = DATA_DIR / "cache" / "returns_kr.json"
 
-VAL_FMP_PATH = DATA_DIR / "cache" / "valuation_fmp.json"
-RET_FMP_PATH = DATA_DIR / "cache" / "returns_fmp.json"   # ✅ US returns (asset_id 기반)
-
-# (미래 확장용) 전세계 returns 통합 파일을 만들면 여기로
-RET_ALL_PATH = DATA_DIR / "cache" / "returns_all.json"
+VAL_FMP_PATH = DATA_DIR / "cache" / "valuation_fmp.json"   # 글로벌(Non-KR) valuation
+RET_FMP_PATH = DATA_DIR / "cache" / "returns_fmp.json"     # 글로벌(Non-KR) returns
 
 RETURN_KEYS = ["return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
 VAL_KEYS = ["close", "marketCap", "pe_ttm", "valuationAsOf", "valuationSource"]
@@ -138,7 +135,7 @@ def _normalize_theme_obj(theme_obj: Dict[str, Any]) -> Dict[str, Any]:
                 links = []
     theme_obj["links"] = links
 
-    # normalize nodes
+    # normalize nodes exposure
     for node in theme_obj["nodes"]:
         if not isinstance(node, dict):
             continue
@@ -214,7 +211,6 @@ def load_kr_valuation_by_ticker() -> Dict[str, Dict[str, Any]]:
         if not isinstance(it, dict):
             continue
 
-        # items key는 asset_id일 가능성이 높고, ticker는 item에 존재
         t = (it.get("ticker") or "").strip()
         if not t and isinstance(k, str) and k.strip().isdigit():
             t = k.strip()
@@ -253,7 +249,6 @@ def load_returns_by_ticker(path: Path, default_source: str) -> Dict[str, Dict[st
         if not isinstance(it, dict):
             continue
 
-        # ✅ key가 ticker일 수도 있고(asset_id일 수도), item["ticker"] 보조
         t = ""
         if isinstance(k, str) and k.strip().isdigit():
             t = k.strip().zfill(6)
@@ -298,11 +293,12 @@ def load_items_by_asset_id(path: Path, default_source: str) -> Dict[str, Dict[st
 
         it2 = dict(it)
 
-        # asOf/source 메타 주입 (추적용)
+        # valuation meta
         if ("close" in it2 or "marketCap" in it2 or "pe_ttm" in it2):
             it2.setdefault("valuationAsOf", as_of)
             it2.setdefault("valuationSource", source)
 
+        # returns meta
         if any(k in it2 for k in RETURN_KEYS):
             it2.setdefault("returnsAsOf", as_of)
             it2.setdefault("returnsSource", source)
@@ -369,8 +365,7 @@ def inject_metrics_into_theme(
     kr_val_by_ticker: Dict[str, Dict[str, Any]],
     kr_ret_by_ticker: Dict[str, Dict[str, Any]],
     fmp_val_by_aid: Dict[str, Dict[str, Any]],
-    ret_fmp_by_aid: Dict[str, Dict[str, Any]],
-    ret_all_by_aid: Dict[str, Dict[str, Any]],
+    fmp_ret_by_aid: Dict[str, Dict[str, Any]],
 ) -> Tuple[int, int, bool]:
     """
     return: (updated_asset_nodes, scanned_asset_nodes, structural_changed)
@@ -388,7 +383,7 @@ def inject_metrics_into_theme(
 
     updated = 0
     scanned = 0
-    structural_changed = False  # ✅ 여기 핵심
+    structural_changed = False
 
     for node in nodes:
         if not isinstance(node, dict):
@@ -410,9 +405,7 @@ def inject_metrics_into_theme(
         metrics = node.setdefault("metrics", {})
         changed_any = False
 
-        # ======================
         # (1) KR valuation/returns by ticker
-        # ======================
         if country == "KR" and ticker:
             t6 = ticker.zfill(6)
             if _is_valid_kr_ticker(t6):
@@ -429,9 +422,7 @@ def inject_metrics_into_theme(
                     for k in RET_META_KEYS:
                         changed_any = _set_if_meaningful(metrics, k, ret.get(k)) or changed_any
 
-        # ======================
-        # (2) Overseas valuation by asset_id (FMP 등)
-        # ======================
+        # (2) Global (Non-KR) valuation by asset_id
         if aid and country != "KR":
             fmp = fmp_val_by_aid.get(aid)
             if fmp and _is_meaningful_valuation(fmp):
@@ -439,27 +430,14 @@ def inject_metrics_into_theme(
                     if k in fmp:
                         changed_any = _set_if_meaningful(metrics, k, fmp.get(k)) or changed_any
 
-        # ======================
-        # (3) US returns by asset_id (FMP)
-        # ======================
-        if aid and country == "US":
-            r = ret_fmp_by_aid.get(aid)
+        # (3) Global (Non-KR) returns by asset_id
+        if aid and country != "KR":
+            r = fmp_ret_by_aid.get(aid)
             if r:
                 for rk in RETURN_KEYS:
                     changed_any = _set_if_meaningful(metrics, rk, r.get(rk)) or changed_any
                 for k in RET_META_KEYS:
                     changed_any = _set_if_meaningful(metrics, k, r.get(k)) or changed_any
-
-        # ======================
-        # (4) Returns all by asset_id (optional, later)
-        # ======================
-        if aid:
-            r2 = ret_all_by_aid.get(aid)
-            if r2:
-                for rk in RETURN_KEYS:
-                    changed_any = _set_if_meaningful(metrics, rk, r2.get(rk)) or changed_any
-                for k in RET_META_KEYS:
-                    changed_any = _set_if_meaningful(metrics, k, r2.get(k)) or changed_any
 
         if changed_any:
             updated += 1
@@ -468,7 +446,6 @@ def inject_metrics_into_theme(
     if updated > 0 or structural_changed:
         write_json(theme_path, theme_obj)
 
-        # ✅ public 폴더가 있으면 미러링
         if HAS_PUBLIC_THEME_DIR:
             out_path = THEME_PUBLIC_DIR / theme_path.name
             write_json(out_path, theme_obj)
@@ -501,14 +478,9 @@ def main() -> None:
     kr_val_by_ticker = load_kr_valuation_by_ticker()
     kr_ret_by_ticker = load_returns_by_ticker(RET_KR_PATH, default_source="PYKRX")
 
-    # Overseas valuation (FMP)
+    # Global (Non-KR) valuation/returns (FMP)
     fmp_val_by_aid = load_items_by_asset_id(VAL_FMP_PATH, default_source="FMP")
-
-    # US returns (FMP)
-    ret_fmp_by_aid = load_items_by_asset_id(RET_FMP_PATH, default_source="FMP")
-
-    # Returns all (optional)
-    ret_all_by_aid = load_items_by_asset_id(RET_ALL_PATH, default_source="AUTO")
+    fmp_ret_by_aid = load_items_by_asset_id(RET_FMP_PATH, default_source="FMP")
 
     total_updated = 0
     total_scanned = 0
@@ -534,8 +506,7 @@ def main() -> None:
             kr_val_by_ticker,
             kr_ret_by_ticker,
             fmp_val_by_aid,
-            ret_fmp_by_aid,
-            ret_all_by_aid,
+            fmp_ret_by_aid,
         )
 
         total_updated += updated
