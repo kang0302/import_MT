@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+# ✅ 동시 실행으로 인한 push 충돌 방지 (fetch-first / non-fast-forward 제거)
+concurrency:
+  group: update-fmp-returns-freeze
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -16,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # ✅ rebase/pull 안정화
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,10 +46,14 @@ jobs:
           python -u scripts/build_freeze.py
 
       - name: Commit & push if changed
+        shell: bash
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # 변경 없으면 종료
           if git diff --quiet; then
             echo "No changes to commit."
             exit 0
@@ -51,5 +63,22 @@ jobs:
           git add data/theme/T_*.json
           git add data/theme/index.json
 
-          git commit -m "chore: overseas returns + freeze update (FMP)"
-          git push
+          # commit이 없을 수도 있으니 안전하게 처리
+          git commit -m "chore: overseas returns + freeze update (FMP)" || echo "No commit created."
+
+          # ✅ push 충돌 대응: pull --rebase 후 push (재시도 포함)
+          for i in 1 2 3; do
+            echo "Attempt $i: git pull --rebase && git push"
+            git pull --rebase origin main || true
+
+            if git push origin main; then
+              echo "Push succeeded."
+              exit 0
+            fi
+
+            echo "Push failed (likely fetch-first). Retrying in 5s..."
+            sleep 5
+          done
+
+          echo "Push failed after retries."
+          exit 1
