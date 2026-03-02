@@ -1,10 +1,10 @@
-name: Update Overseas Returns + Freeze (FMP)
+name: Update KR Returns + Freeze (PYKRX)
 
 on:
   workflow_dispatch: {}
   schedule:
-    # valuation보다 10분 뒤 (KST 06:50 = UTC 21:50)
-    - cron: "50 21 * * *"
+    # valuation 이후 10분 뒤 (16:10 KST = 07:10 UTC)
+    - cron: "10 7 * * *"
 
 concurrency:
   group: mt-freeze-commit-main
@@ -33,11 +33,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Overseas returns updater (FMP)
-        env:
-          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+      - name: Run KR returns updater (PYKRX)
         run: |
-          python -u scripts/update_return_fmp.py
+          python -u scripts/update_return_kr.py
 
       - name: Inject metrics into Freeze + update theme index
         run: |
@@ -47,20 +45,19 @@ jobs:
         shell: bash
         run: |
           set -e
-
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
 
-          if git diff --quiet; then
+          git add data/cache/returns_kr.json
+          git add data/theme/T_*.json
+          git add data/theme/index.json
+
+          if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git add data/cache/returns_fmp.json
-          git add data/theme/T_*.json
-          git add data/theme/index.json
-
-          git commit -m "chore: overseas returns + freeze update (FMP)"
+          git commit -m "chore: KR returns + freeze update (PYKRX)"
           git push origin HEAD:"${GITHUB_REF_NAME}"

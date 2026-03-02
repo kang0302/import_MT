@@ -3,8 +3,13 @@ name: Update KR Valuation + Freeze (PYKRX)
 on:
   workflow_dispatch: {}
   schedule:
-    # 16:00 KST = 07:00 UTC (매일)
+    # 16:00 KST = 07:00 UTC
     - cron: "0 7 * * *"
+
+# ✅ 다른 커밋 워크플로와 충돌 방지 (FMP/Freeze와 동일 그룹)
+concurrency:
+  group: mt-freeze-commit-main
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -16,6 +21,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,25 +36,30 @@ jobs:
 
       - name: Run KR valuation updater (PYKRX)
         run: |
-          python scripts/update_valuation_kr.py
+          python -u scripts/update_valuation_kr.py
 
       - name: Inject metrics into Freeze + update theme index
         run: |
-          python scripts/build_freeze.py
+          python -u scripts/build_freeze.py
 
-      - name: Commit & push if changed
+      - name: Commit & push if changed (rebase-safe)
+        shell: bash
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
+          # ✅ fetch-first 방지
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
 
           git add data/cache/valuation_kr.json
           git add data/theme/T_*.json
           git add data/theme/index.json
 
-          git commit -m "chore: KR valuation + freeze update (16:00 KST, PYKRX)"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: KR valuation + freeze update (PYKRX)"
+          git push origin HEAD:"${GITHUB_REF_NAME}"

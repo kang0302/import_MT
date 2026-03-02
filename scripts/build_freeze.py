@@ -84,8 +84,10 @@ def load_themes() -> List[Union[Dict[str, Any], str]]:
     index_path = THEME_DIR / "index.json"
     idx = read_json(index_path)
 
+    # ✅ 과거 호환 (dict {"themes":[...]})
     if isinstance(idx, dict):
         themes = idx.get("themes", []) or []
+    # ✅ 현재 권장 (list [...])
     elif isinstance(idx, list):
         themes = idx
     else:
@@ -338,7 +340,11 @@ def _set_if_meaningful(metrics: Dict[str, Any], key: str, value: Any) -> bool:
 
 def _ensure_asset_metrics_shape(node: Dict[str, Any]) -> bool:
     """
-    ✅ ASSET 노드의 metrics 구조를 강제(RETURN_KEYS 항상 존재)
+    ✅ ASSET 노드의 metrics 구조를 강제
+    - RETURN_KEYS 항상 존재
+    - VAL_KEYS 항상 존재
+    - RET_META_KEYS 항상 존재
+    값이 없어도 '키'는 유지하여 UI/타입 안전성 보장
     return: 구조 변경이 있었는지 여부
     """
     changed = False
@@ -349,9 +355,22 @@ def _ensure_asset_metrics_shape(node: Dict[str, Any]) -> bool:
         metrics = node["metrics"]
         changed = True
 
+    # returns keys
     for rk in RETURN_KEYS:
         if rk not in metrics:
             metrics[rk] = None
+            changed = True
+
+    # valuation keys (항상 존재)
+    for vk in VAL_KEYS:
+        if vk not in metrics:
+            metrics[vk] = None
+            changed = True
+
+    # returns meta keys (항상 존재)
+    for mk in RET_META_KEYS:
+        if mk not in metrics:
+            metrics[mk] = None
             changed = True
 
     return changed

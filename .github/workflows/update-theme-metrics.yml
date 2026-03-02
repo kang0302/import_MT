@@ -1,15 +1,21 @@
-name: Update theme metrics (multi-theme)
+name: Build master.json (only)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # daily 12:00 KST (UTC+9)
+    # daily 12:00 KST = 03:00 UTC
+    - cron: "0 3 * * *"
+
+# ✅ 커밋/푸시 경쟁 방지: KR/FMP/Freeze와 동일 그룹
+concurrency:
+  group: mt-freeze-commit-main
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  update:
+  build-master:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,36 +35,37 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas requests pykrx lxml
 
-      - name: Run updater
-        env:
-          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-        run: |
-          python scripts/update_theme_metrics.py
+      # ✅ A안: theme metrics 업데이트 금지 (테마는 build_freeze만 만진다)
+      # - name: Run theme metrics updater
+      #   run: |
+      #     python scripts/update_theme_metrics.py
 
       - name: Build master.json (assets + business fields)
         run: |
           python scripts/build_master_json.py
 
-      - name: Commit & push if changed
+      - name: Commit & push master.json only (rebase-safe)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
         run: |
           set -e
 
           git config user.name "moneytree-bot"
           git config user.email "moneytree-bot@users.noreply.github.com"
 
-          if git diff --quiet; then
-            echo "No changes."
+          # ✅ 원격 변경 흡수 (fetch-first 방지)
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+
+          # ✅ master만 추적
+          git add data/master/master.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
             exit 0
           fi
 
-          git add data/theme/T_009.json data/theme/T_006.json || true
-          git add data/theme/*.json data/theme/index.json data/master/master.json
-          git commit -m "chore: update theme metrics (multi-theme)"
-    
+          git commit -m "chore: build master.json"
 
-          # make sure remote uses token (robust)
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push origin HEAD:main
-
+          git push origin HEAD:"${GITHUB_REF_NAME}"
