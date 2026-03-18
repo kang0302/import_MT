@@ -4,47 +4,25 @@
   "themeName": "LG그룹휴머노이드관련주_test123",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": [
-      "3d",
-      "7d",
-      "1m",
-      "ytd",
-      "1y",
-      "3y"
-    ],
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
     "dataAsOf": "2026-02-21T16:00:00+09:00",
     "notes": "T_009 v5 정본(보존형). 기존 metrics(ret3d/ret7d/ret1m/retYtd/ret1y/ret3y/perFwd12m 등)는 절대 삭제하지 않고 그대로 유지한다. v5 표준 키(return_7d/return_30d/return_90d, per)도 함께 둬서 프론트는 표준 키로 읽고, 기존 ret* 값은 원본/호환/실험 필드로 유지한다. 가격/수익률은 스냅샷(일 1회)로 갱신, PER은 저빈도 갱신(주/월).",
     "sources": [
-      {
-        "name": "price",
-        "provider": "KRX+Stooq",
-        "method": "scheduled_snapshot"
-      },
-      {
-        "name": "per",
-        "provider": "TBD",
-        "method": "low_frequency_refresh"
-      }
+      { "name": "price", "provider": "KRX+Stooq", "method": "scheduled_snapshot" },
+      { "name": "per", "provider": "TBD", "method": "low_frequency_refresh" }
     ],
     "metricsUpdatedAtUTC": "2026-01-17T08:22:40Z",
     "metricsStatus": "PARTIAL",
     "metricsLastError": "Some assets not updated (failed_assets=2)."
   },
   "nodes": [
-    {
-      "id": "T_009",
-      "type": "THEME",
-      "name": "LG그룹휴머노이드관련주"
-    },
+    { "id": "T_009", "type": "THEME", "name": "LG그룹휴머노이드관련주" },
+
     {
       "id": "A_079",
       "type": "ASSET",
       "name": "LG전자",
-      "exposure": {
-        "ticker": "066570",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
+      "exposure": { "ticker": "066570", "exchange": "KOSPI", "country": "KR" },
       "metrics": {
         "perFwd12m": 12.4,
         "ret3d": 8.37,
@@ -82,15 +60,12 @@
         "lastError": ""
       }
     },
+
     {
       "id": "A_080",
       "type": "ASSET",
       "name": "LG이노텍",
-      "exposure": {
-        "ticker": "011070",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
+      "exposure": { "ticker": "011070", "exchange": "KOSPI", "country": "KR" },
       "metrics": {
         "perFwd12m": 6.0,
         "ret3d": 106.0071,
@@ -128,16 +103,12 @@
         "lastError": ""
       }
     },
+
     {
       "id": "A_081",
       "type": "ASSET",
       "name": "베어로보틱스",
-      "exposure": {
-        "ticker": "",
-        "exchange": "",
-        "country": "US",
-        "theme_status": "Unlisted"
-      },
+      "exposure": { "ticker": "", "exchange": "", "country": "US", "theme_status": "Unlisted" },
       "metrics": {
         "perFwd12m": 0,
         "ret3d": 0.08,
@@ -161,15 +132,12 @@
         "return_3y": null
       }
     },
+
     {
       "id": "A_082",
       "type": "ASSET",
       "name": "로보티즈",
-      "exposure": {
-        "ticker": "108490",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
+      "exposure": { "ticker": "108490", "exchange": "KOSDAQ", "country": "KR" },
       "metrics": {
         "perFwd12m": 500.0,
         "ret3d": 3.8306,
@@ -207,15 +175,12 @@
         "lastError": ""
       }
     },
+
     {
       "id": "A_083",
       "type": "ASSET",
       "name": "로보스타",
-      "exposure": {
-        "ticker": "090360",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
+      "exposure": { "ticker": "090360", "exchange": "KOSDAQ", "country": "KR" },
       "metrics": {
         "perFwd12m": 101.87,
         "ret3d": 9.3407,
@@ -253,15 +218,12 @@
         "lastError": ""
       }
     },
+
     {
       "id": "A_084",
       "type": "ASSET",
       "name": "엔젤로보틱스",
-      "exposure": {
-        "ticker": "455900",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
+      "exposure": { "ticker": "455900", "exchange": "KOSDAQ", "country": "KR" },
       "metrics": {
         "perFwd12m": 600.0,
         "ret3d": 14.0033,
@@ -299,15 +261,12 @@
         "lastError": ""
       }
     },
+
     {
       "id": "A_085",
       "type": "ASSET",
       "name": "삼성전기",
-      "exposure": {
-        "ticker": "009150",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
+      "exposure": { "ticker": "009150", "exchange": "KOSPI", "country": "KR" },
       "metrics": {
         "perFwd12m": 500.0,
         "ret3d": 17.301,
@@ -345,15 +304,12 @@
         "lastError": ""
       }
     },
+
     {
       "id": "A_086",
       "type": "ASSET",
       "name": "Sony",
-      "exposure": {
-        "ticker": "SONY",
-        "exchange": "NYSE",
-        "country": "US"
-      },
+      "exposure": { "ticker": "SONY", "exchange": "NYSE", "country": "US" },
       "metrics": {
         "perFwd12m": 17.2,
         "ret3d": 0.09,
@@ -370,18 +326,6 @@
         "return_90d": null,
         "per": null,
         "market_cap": null,
-<<<<<<< Updated upstream
-        "return_3d": 6.759259259259243,
-        "return_1m": 3.5008976660682034,
-        "return_ytd": -10.896445131375575,
-        "return_1y": -9.426551453260023,
-        "return_3y": 39.75757575757575,
-        "close": 23.06,
-        "marketCap": 137623774910,
-        "valuationAsOf": "2026-02-28",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-02-27",
-=======
         "return_3d": 4.245500692201198,
         "return_1m": -0.04424778761062953,
         "return_ytd": -12.712519319938176,
@@ -392,7 +336,6 @@
         "valuationAsOf": "2026-03-01",
         "valuationSource": "FMP",
         "returnsAsOf": "2026-03-01",
->>>>>>> Stashed changes
         "returnsSource": "FMP"
       },
       "metricsMeta": {
@@ -403,15 +346,12 @@
         "lastError": "US latest price missing => no US FWD PER"
       }
     },
+
     {
       "id": "A_002",
       "type": "ASSET",
       "name": "테슬라",
-      "exposure": {
-        "ticker": "TSLA",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
+      "exposure": { "ticker": "TSLA", "exchange": "NASDAQ", "country": "US" },
       "metrics": {
         "perFwd12m": 52.6,
         "ret3d": -0.42,
@@ -428,18 +368,6 @@
         "return_90d": null,
         "per": null,
         "market_cap": null,
-<<<<<<< Updated upstream
-        "return_3d": -1.6781474424739873,
-        "return_1m": -6.709776109025167,
-        "return_ytd": -8.11742415595681,
-        "return_1y": 38.41471801925722,
-        "return_3y": 100.39330877227917,
-        "close": 402.51,
-        "marketCap": 1510391397880,
-        "valuationAsOf": "2026-02-28",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-02-27",
-=======
         "return_3d": 2.1884300827851755,
         "return_1m": -5.179856115107917,
         "return_ytd": -6.73180085374484,
@@ -450,7 +378,6 @@
         "valuationAsOf": "2026-03-01",
         "valuationSource": "FMP",
         "returnsAsOf": "2026-03-01",
->>>>>>> Stashed changes
         "returnsSource": "FMP"
       },
       "metricsMeta": {
@@ -461,279 +388,70 @@
         "lastError": "US latest price missing => no US FWD PER"
       }
     },
-    {
-      "id": "BF_020",
-      "type": "BUSINESS_FIELD",
-      "name": "소프트웨어"
-    },
-    {
-      "id": "BF_021",
-      "type": "BUSINESS_FIELD",
-      "name": "액추에이터"
-    },
-    {
-      "id": "BF_022",
-      "type": "BUSINESS_FIELD",
-      "name": "산업용로봇제어기"
-    },
-    {
-      "id": "BF_023",
-      "type": "BUSINESS_FIELD",
-      "name": "웨어러블관절구동"
-    },
-    {
-      "id": "BF_024",
-      "type": "BUSINESS_FIELD",
-      "name": "고해상도카메라모듈"
-    },
-    {
-      "id": "BF_025",
-      "type": "BUSINESS_FIELD",
-      "name": "옵티머스"
-    }
+
+    { "id": "BF_020", "type": "BUSINESS_FIELD", "name": "소프트웨어" },
+    { "id": "BF_021", "type": "BUSINESS_FIELD", "name": "액추에이터" },
+    { "id": "BF_022", "type": "BUSINESS_FIELD", "name": "산업용로봇제어기" },
+    { "id": "BF_023", "type": "BUSINESS_FIELD", "name": "웨어러블관절구동" },
+    { "id": "BF_024", "type": "BUSINESS_FIELD", "name": "고해상도카메라모듈" },
+    { "id": "BF_025", "type": "BUSINESS_FIELD", "name": "옵티머스" }
   ],
   "edges": [
-    {
-      "from": "A_079",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_080",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_081",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_082",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_083",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_084",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_085",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_086",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_002",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_081",
-      "to": "BF_020",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_082",
-      "to": "BF_021",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_083",
-      "to": "BF_022",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_084",
-      "to": "BF_023",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_080",
-      "to": "BF_024",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_085",
-      "to": "BF_024",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_086",
-      "to": "BF_024",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_002",
-      "to": "BF_025",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_079",
-      "to": "A_081",
-      "type": "PARTNERS"
-    },
-    {
-      "from": "A_079",
-      "to": "A_083",
-      "type": "PARTNERS"
-    },
-    {
-      "from": "A_079",
-      "to": "A_084",
-      "type": "PARTNERS"
-    },
-    {
-      "from": "A_079",
-      "to": "A_082",
-      "type": "INVESTS"
-    },
-    {
-      "from": "A_080",
-      "to": "A_002",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_085",
-      "to": "A_002",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_086",
-      "to": "A_002",
-      "type": "SUPPLIES"
-    }
+    { "from": "A_079", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_080", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_081", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_082", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_083", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_084", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_085", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_086", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_002", "to": "T_009", "type": "THEMED_AS" },
+
+    { "from": "A_081", "to": "BF_020", "type": "OPERATES" },
+    { "from": "A_082", "to": "BF_021", "type": "OPERATES" },
+    { "from": "A_083", "to": "BF_022", "type": "OPERATES" },
+    { "from": "A_084", "to": "BF_023", "type": "OPERATES" },
+    { "from": "A_080", "to": "BF_024", "type": "OPERATES" },
+    { "from": "A_085", "to": "BF_024", "type": "OPERATES" },
+    { "from": "A_086", "to": "BF_024", "type": "OPERATES" },
+    { "from": "A_002", "to": "BF_025", "type": "OPERATES" },
+
+    { "from": "A_079", "to": "A_081", "type": "PARTNERS" },
+    { "from": "A_079", "to": "A_083", "type": "PARTNERS" },
+    { "from": "A_079", "to": "A_084", "type": "PARTNERS" },
+    { "from": "A_079", "to": "A_082", "type": "INVESTS" },
+
+    { "from": "A_080", "to": "A_002", "type": "SUPPLIES" },
+    { "from": "A_085", "to": "A_002", "type": "SUPPLIES" },
+    { "from": "A_086", "to": "A_002", "type": "SUPPLIES" }
   ],
   "links": [
-    {
-      "from": "A_079",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_080",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_081",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_082",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_083",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_084",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_085",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_086",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_002",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_081",
-      "to": "BF_020",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_082",
-      "to": "BF_021",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_083",
-      "to": "BF_022",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_084",
-      "to": "BF_023",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_080",
-      "to": "BF_024",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_085",
-      "to": "BF_024",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_086",
-      "to": "BF_024",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_002",
-      "to": "BF_025",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_079",
-      "to": "A_081",
-      "type": "PARTNERS"
-    },
-    {
-      "from": "A_079",
-      "to": "A_083",
-      "type": "PARTNERS"
-    },
-    {
-      "from": "A_079",
-      "to": "A_084",
-      "type": "PARTNERS"
-    },
-    {
-      "from": "A_079",
-      "to": "A_082",
-      "type": "INVESTS"
-    },
-    {
-      "from": "A_080",
-      "to": "A_002",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_085",
-      "to": "A_002",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_086",
-      "to": "A_002",
-      "type": "SUPPLIES"
-    }
+    { "from": "A_079", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_080", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_081", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_082", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_083", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_084", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_085", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_086", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_002", "to": "T_009", "type": "THEMED_AS" },
+
+    { "from": "A_081", "to": "BF_020", "type": "OPERATES" },
+    { "from": "A_082", "to": "BF_021", "type": "OPERATES" },
+    { "from": "A_083", "to": "BF_022", "type": "OPERATES" },
+    { "from": "A_084", "to": "BF_023", "type": "OPERATES" },
+    { "from": "A_080", "to": "BF_024", "type": "OPERATES" },
+    { "from": "A_085", "to": "BF_024", "type": "OPERATES" },
+    { "from": "A_086", "to": "BF_024", "type": "OPERATES" },
+    { "from": "A_002", "to": "BF_025", "type": "OPERATES" },
+
+    { "from": "A_079", "to": "A_081", "type": "PARTNERS" },
+    { "from": "A_079", "to": "A_083", "type": "PARTNERS" },
+    { "from": "A_079", "to": "A_084", "type": "PARTNERS" },
+    { "from": "A_079", "to": "A_082", "type": "INVESTS" },
+
+    { "from": "A_080", "to": "A_002", "type": "SUPPLIES" },
+    { "from": "A_085", "to": "A_002", "type": "SUPPLIES" },
+    { "from": "A_086", "to": "A_002", "type": "SUPPLIES" }
   ]
 }
