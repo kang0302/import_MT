@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_069",
+  "themeName": "글로벌SNS플랫폼",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-03-25T00:00:00+09:00",
+    "notes": "g69 누적 import 기반 글로벌 SNS 플랫폼 테마",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_069", "type": "THEME", "name": "글로벌SNS플랫폼" },
+
+    { "id": "A_050", "type": "ASSET", "name": "알파벳",
+      "exposure": {"ticker":"GOOGL","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_245", "type": "ASSET", "name": "퍼플렉시티AI" },
+    { "id": "A_373", "type": "ASSET", "name": "메타",
+      "exposure": {"ticker":"META","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_581", "type": "ASSET", "name": "레딧",
+      "exposure": {"ticker":"RDDT","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_582", "type": "ASSET", "name": "스냅",
+      "exposure": {"ticker":"SNAP","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_583", "type": "ASSET", "name": "핀터레스트",
+      "exposure": {"ticker":"PINS","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_584", "type": "ASSET", "name": "X" },
+    { "id": "A_585", "type": "ASSET", "name": "트럼프미디어",
+      "exposure": {"ticker":"DJT","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_586", "type": "ASSET", "name": "오픈AI" },
+    { "id": "A_587", "type": "ASSET", "name": "유튜브" },
+
+    { "id": "A_589", "type": "ASSET", "name": "SOCL",
+      "exposure": {"ticker":"SOCL","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    }
+  ],
+  "edges": [
+    {"from":"A_581","to":"T_069","type":"THEMED_AS"},
+    {"from":"A_582","to":"T_069","type":"THEMED_AS"},
+    {"from":"A_583","to":"T_069","type":"THEMED_AS"},
+    {"from":"A_584","to":"T_069","type":"THEMED_AS"},
+    {"from":"A_585","to":"T_069","type":"THEMED_AS"},
+    {"from":"A_373","to":"T_069","type":"THEMED_AS"},
+
+    {"from":"T_069","to":"A_589","type":"EXPOSED_TO"},
+
+    {"from":"A_581","to":"A_050","type":"SUPPLIES"},
+    {"from":"A_581","to":"A_586","type":"SUPPLIES"},
+    {"from":"A_245","to":"A_582","type":"SUPPLIES"},
+
+    {"from":"A_050","to":"A_587","type":"INVESTS"},
+
+    {"from":"A_581","to":"A_587","type":"COMPETES"}
+  ]
+}
