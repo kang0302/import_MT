@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_065",
+  "themeName": "글로벌사모펀드(PE)주식",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-03-25T00:00:00+09:00",
+    "notes": "g65 누적 import 기반 글로벌 사모펀드(PE) 주식 테마",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_065", "type": "THEME", "name": "글로벌사모펀드(PE)주식" },
+
+    { "id": "A_547", "type": "ASSET", "name": "KKR",
+      "exposure": {"ticker":"KKR","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_548", "type": "ASSET", "name": "블랙스톤",
+      "exposure": {"ticker":"BX","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_549", "type": "ASSET", "name": "블랙록",
+      "exposure": {"ticker":"BLK","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_550", "type": "ASSET", "name": "아폴로",
+      "exposure": {"ticker":"APO","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_551", "type": "ASSET", "name": "칼라일",
+      "exposure": {"ticker":"CG","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_552", "type": "ASSET", "name": "TPG",
+      "exposure": {"ticker":"TPG","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+    { "id": "A_553", "type": "ASSET", "name": "브룩필드",
+      "exposure": {"ticker":"BAM","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "C_002", "type": "CHARACTER", "name": "고배당" },
+
+    { "id": "M_067", "type": "MACRO", "name": "사모신용리스크" },
+    { "id": "M_068", "type": "MACRO", "name": "금리인하" },
+    { "id": "M_069", "type": "MACRO", "name": "유동성확대" },
+    { "id": "M_045", "type": "MACRO", "name": "IPO시장호황" }
+  ],
+  "edges": [
+    {"from":"A_547","to":"T_065","type":"THEMED_AS"},
+    {"from":"A_548","to":"T_065","type":"THEMED_AS"},
+    {"from":"A_549","to":"T_065","type":"THEMED_AS"},
+    {"from":"A_550","to":"T_065","type":"THEMED_AS"},
+    {"from":"A_551","to":"T_065","type":"THEMED_AS"},
+    {"from":"A_552","to":"T_065","type":"THEMED_AS"},
+    {"from":"A_553","to":"T_065","type":"THEMED_AS"},
+
+    {"from":"T_065","to":"C_002","type":"HAS_TRAIT"},
+
+    {"from":"M_067","to":"T_065","type":"IMPACTS"},
+    {"from":"M_068","to":"T_065","type":"IMPACTS"},
+    {"from":"M_069","to":"T_065","type":"IMPACTS"},
+    {"from":"M_045","to":"T_065","type":"IMPACTS"}
+  ]
+}
