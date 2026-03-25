@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_070",
+  "themeName": "K-AI광네트워크",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-03-25T00:00:00+09:00",
+    "notes": "g70 누적 import 기반 K-AI 광 네트워크 인프라 테마",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_070", "type": "THEME", "name": "K-AI광네트워크" },
+
+    { "id": "A_579", "type": "ASSET", "name": "RFHIC",
+      "exposure": {"ticker":"218410","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_590", "type": "ASSET", "name": "RF머트리얼즈",
+      "exposure": {"ticker":"327260","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_400", "type": "ASSET", "name": "루멘텀홀딩스",
+      "exposure": {"ticker":"LITE","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_592", "type": "ASSET", "name": "KMW",
+      "exposure": {"ticker":"032500","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_591", "type": "ASSET", "name": "쏠리드",
+      "exposure": {"ticker":"050890","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_593", "type": "ASSET", "name": "우리넷",
+      "exposure": {"ticker":"115440","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_594", "type": "ASSET", "name": "오이솔루션",
+      "exposure": {"ticker":"138080","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_595", "type": "ASSET", "name": "대한광통신",
+      "exposure": {"ticker":"010170","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_596", "type": "ASSET", "name": "유비쿼스",
+      "exposure": {"ticker":"078070","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "BF_131", "type": "BUSINESS_FIELD", "name": "소버린AI인프라" },
+
+    { "id": "M_052", "type": "MACRO", "name": "AI추론확대" },
+    { "id": "M_054", "type": "MACRO", "name": "5G/6G" }
+  ],
+  "edges": [
+    {"from":"A_579","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_590","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_400","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_592","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_591","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_593","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_594","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_595","to":"T_070","type":"THEMED_AS"},
+    {"from":"A_596","to":"T_070","type":"THEMED_AS"},
+
+    {"from":"M_052","to":"T_070","type":"IMPACTS"},
+    {"from":"M_054","to":"T_070","type":"IMPACTS"},
+
+    {"from":"A_579","to":"A_590","type":"INVESTS"},
+    {"from":"A_590","to":"A_400","type":"SUPPLIES"},
+
+    {"from":"A_594","to":"BF_131","type":"OPERATES"},
+    {"from":"A_595","to":"BF_131","type":"OPERATES"}
+  ]
+}
