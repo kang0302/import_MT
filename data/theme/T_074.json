@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_074",
+  "themeName": "K-첨단복합소재",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-03-26T00:00:00+09:00",
+    "notes": "g74 누적 import 기반 K-첨단복합소재 테마",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_074", "type": "THEME", "name": "K-첨단복합소재" },
+
+    { "id": "A_624", "type": "ASSET", "name": "코오롱인더",
+      "exposure": {"ticker":"120110","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_625", "type": "ASSET", "name": "동진쎄미켐",
+      "exposure": {"ticker":"005290","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_626", "type": "ASSET", "name": "이녹스첨단소재",
+      "exposure": {"ticker":"272290","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_627", "type": "ASSET", "name": "덕산네오룩스",
+      "exposure": {"ticker":"213420","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_628", "type": "ASSET", "name": "나노신소재",
+      "exposure": {"ticker":"121600","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+      "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+      "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "BF_138", "type": "BUSINESS_FIELD", "name": "반도체패키징/고분자소재" },
+    { "id": "BF_139", "type": "BUSINESS_FIELD", "name": "전고체/리튬" },
+    { "id": "BF_140", "type": "BUSINESS_FIELD", "name": "우주/방산차폐소재" },
+    { "id": "BF_141", "type": "BUSINESS_FIELD", "name": "OLED소재" }
+  ],
+  "edges": [
+    {"from":"A_624","to":"T_074","type":"THEMED_AS"},
+    {"from":"A_625","to":"T_074","type":"THEMED_AS"},
+    {"from":"A_626","to":"T_074","type":"THEMED_AS"},
+    {"from":"A_627","to":"T_074","type":"THEMED_AS"},
+    {"from":"A_628","to":"T_074","type":"THEMED_AS"},
+
+    {"from":"A_624","to":"BF_138","type":"OPERATES"},
+    {"from":"A_625","to":"BF_138","type":"OPERATES"},
+    {"from":"A_626","to":"BF_138","type":"OPERATES"},
+    {"from":"A_626","to":"BF_139","type":"OPERATES"},
+    {"from":"A_626","to":"BF_140","type":"OPERATES"},
+    {"from":"A_627","to":"BF_141","type":"OPERATES"},
+    {"from":"A_628","to":"BF_141","type":"OPERATES"}
+  ]
+}
