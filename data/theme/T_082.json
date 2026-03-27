@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_082",
+  "themeName": "글로벌석탄발전",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-03-27T00:00:00+09:00",
+    "notes": "g82 누적 import 기반 글로벌 석탄 발전 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_082",
+      "type": "THEME",
+      "name": "글로벌석탄발전"
+    },
+
+    {
+      "id": "A_663",
+      "type": "ASSET",
+      "name": "코어내추럴리소시즈",
+      "exposure": {"ticker": "CNR", "exchange": "NYSE", "country": "US"},
+      "metrics": {"close": null,"marketCap": null,"pe_ttm": null,"valuationAsOf": null,"valuationSource": null,"return_3d": null,"return_7d": null,"return_1m": null,"return_ytd": null,"return_1y": null,"return_3y": null,"returnsAsOf": null,"returnsSource": null}
+    },
+    {
+      "id": "A_664",
+      "type": "ASSET",
+      "name": "피바디에너지",
+      "exposure": {"ticker": "BTU", "exchange": "NYSE", "country": "US"},
+      "metrics": {"close": null,"marketCap": null,"pe_ttm": null,"valuationAsOf": null,"valuationSource": null,"return_3d": null,"return_7d": null,"return_1m": null,"return_ytd": null,"return_1y": null,"return_3y": null,"returnsAsOf": null,"returnsSource": null}
+    },
+    {
+      "id": "A_665",
+      "type": "ASSET",
+      "name": "워리어메트콜",
+      "exposure": {"ticker": "HCC", "exchange": "NYSE", "country": "US"},
+      "metrics": {"close": null,"marketCap": null,"pe_ttm": null,"valuationAsOf": null,"valuationSource": null,"return_3d": null,"return_7d": null,"return_1m": null,"return_ytd": null,"return_1y": null,"return_3y": null,"returnsAsOf": null,"returnsSource": null}
+    },
+    {
+      "id": "A_666",
+      "type": "ASSET",
+      "name": "얼라이언스리소스파트너스",
+      "exposure": {"ticker": "ARLP", "exchange": "NASDAQ", "country": "US"},
+      "metrics": {"close": null,"marketCap": null,"pe_ttm": null,"valuationAsOf": null,"valuationSource": null,"return_3d": null,"return_7d": null,"return_1m": null,"return_ytd": null,"return_1y": null,"return_3y": null,"returnsAsOf": null,"returnsSource": null}
+    },
+    {
+      "id": "A_667",
+      "type": "ASSET",
+      "name": "글렌코어",
+      "exposure": {"ticker": "GLNCY", "exchange": "OTC", "country": "US"},
+      "metrics": {"close": null,"marketCap": null,"pe_ttm": null,"valuationAsOf": null,"valuationSource": null,"return_3d": null,"return_7d": null,"return_1m": null,"return_ytd": null,"return_1y": null,"return_3y": null,"returnsAsOf": null,"returnsSource": null}
+    },
+
+    {
+      "id": "BF_152",
+      "type": "BUSINESS_FIELD",
+      "name": "석탄채굴/발전연료"
+    }
+  ],
+  "edges": [
+    { "from": "A_663", "to": "T_082", "type": "THEMED_AS" },
+    { "from": "A_664", "to": "T_082", "type": "THEMED_AS" },
+    { "from": "A_665", "to": "T_082", "type": "THEMED_AS" },
+    { "from": "A_666", "to": "T_082", "type": "THEMED_AS" },
+    { "from": "A_667", "to": "T_082", "type": "THEMED_AS" },
+
+    { "from": "A_663", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_664", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_665", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_666", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_667", "to": "BF_152", "type": "OPERATES" },
+
+    { "from": "M_089", "to": "T_082", "type": "IMPACTS" },
+    { "from": "M_035", "to": "T_082", "type": "IMPACTS" },
+    { "from": "M_088", "to": "T_082", "type": "IMPACTS" },
+    { "from": "M_060", "to": "T_082", "type": "IMPACTS" },
+
+    { "from": "T_082", "to": "C_075", "type": "HAS_TRAIT" },
+    { "from": "A_666", "to": "C_076", "type": "HAS_TRAIT" }
+  ]
+}
