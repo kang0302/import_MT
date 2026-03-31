@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_088",
+  "themeName": "K-탈플라스틱관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-03-31T00:00:00+09:00",
+    "notes": "g88 누적 import 기반 탈플라스틱 대체 소재 테마",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_088", "type": "THEME", "name": "K-탈플라스틱관련주" },
+
+    { "id": "A_688", "type": "ASSET", "name": "에코플라스틱",
+      "exposure": {"ticker":"038110","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_689", "type": "ASSET", "name": "삼보판지",
+      "exposure": {"ticker":"023600","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_690", "type": "ASSET", "name": "신대양제지",
+      "exposure": {"ticker":"016590","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_691", "type": "ASSET", "name": "한국팩키지",
+      "exposure": {"ticker":"037230","exchange":"KOSDAQ","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "BF_164", "type": "BUSINESS_FIELD", "name": "재생플라스틱기술" },
+    { "id": "BF_165", "type": "BUSINESS_FIELD", "name": "골판지" },
+    { "id": "BF_166", "type": "BUSINESS_FIELD", "name": "식품포장종이" },
+
+    { "id": "M_059", "type": "MACRO", "name": "유가상승" },
+    { "id": "M_094", "type": "MACRO", "name": "나프타공급불안" },
+
+    { "id": "C_084", "type": "CHARACTER", "name": "펀더멘탈약함" },
+    { "id": "C_085", "type": "CHARACTER", "name": "테마성" }
+  ],
+  "edges": [
+    { "source": "A_688", "target": "T_088", "type": "THEMED_AS" },
+    { "source": "A_689", "target": "T_088", "type": "THEMED_AS" },
+    { "source": "A_690", "target": "T_088", "type": "THEMED_AS" },
+    { "source": "A_691", "target": "T_088", "type": "THEMED_AS" },
+
+    { "source": "A_688", "target": "BF_164", "type": "OPERATES" },
+    { "source": "A_689", "target": "BF_165", "type": "OPERATES" },
+    { "source": "A_690", "target": "BF_165", "type": "OPERATES" },
+    { "source": "A_691", "target": "BF_166", "type": "OPERATES" },
+
+    { "source": "M_059", "target": "T_088", "type": "IMPACTS" },
+    { "source": "M_094", "target": "T_088", "type": "IMPACTS" },
+
+    { "source": "T_088", "target": "C_084", "type": "HAS_TRAIT" },
+    { "source": "T_088", "target": "C_085", "type": "HAS_TRAIT" }
+  ]
+}
