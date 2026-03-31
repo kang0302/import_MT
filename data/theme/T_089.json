@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_089",
+  "themeName": "글로벌탄소배출권",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-03-31T00:00:00+09:00",
+    "notes": "g89 누적 import 기반 글로벌탄소배출권 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_089",
+      "type": "THEME",
+      "name": "글로벌탄소배출권"
+    },
+    {
+      "id": "A_692",
+      "type": "ASSET",
+      "name": "KRBN",
+      "exposure": {
+        "ticker": "KRBN",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_693",
+      "type": "ASSET",
+      "name": "KEUA",
+      "exposure": {
+        "ticker": "KEUA",
+        "exchange": "LSE",
+        "country": "UK"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_694",
+      "type": "ASSET",
+      "name": "KCCA",
+      "exposure": {
+        "ticker": "KCCA",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_695",
+      "type": "ASSET",
+      "name": "CO2.L",
+      "exposure": {
+        "ticker": "CO2.L",
+        "exchange": "LSE",
+        "country": "UK"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_086",
+      "type": "CHARACTER",
+      "name": "유가상관관계낮음"
+    },
+    {
+      "id": "C_087",
+      "type": "CHARACTER",
+      "name": "리스크온자산"
+    },
+    {
+      "id": "C_088",
+      "type": "CHARACTER",
+      "name": "경기/전력수요연관성큼"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_692",
+      "to": "T_089",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_693",
+      "to": "T_089",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_694",
+      "to": "T_089",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_695",
+      "to": "T_089",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_089",
+      "to": "C_086",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "T_089",
+      "to": "C_087",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "T_089",
+      "to": "C_088",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
