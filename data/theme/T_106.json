@@ -4,100 +4,402 @@
   "themeName": "K_IT_LGCNS_vs삼성SDS",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
     "dataAsOf": "2026-04-06T00:00:00+09:00",
     "notes": "국내 IT서비스 양강(LG CNS vs 삼성SDS) 경쟁 구조 + 클라우드/AI/물류/AIDC 확장",
     "sources": []
   },
   "nodes": [
-    { "id": "T_106", "type": "THEME", "name": "K_IT_LGCNS_vs삼성SDS" },
-
+    {
+      "id": "T_106",
+      "type": "THEME",
+      "name": "K_IT_LGCNS_vs삼성SDS"
+    },
     {
       "id": "A_215",
       "type": "ASSET",
       "name": "LG씨엔에스",
-      "exposure": { "ticker": "064400", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "064400",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {
-        "close": null, "marketCap": null, "pe_ttm": null,
-        "valuationAsOf": null, "valuationSource": null,
-        "return_3d": null, "return_7d": null, "return_1m": null,
-        "return_ytd": null, "return_1y": null, "return_3y": null,
-        "returnsAsOf": null, "returnsSource": null
+        "close": 74500,
+        "marketCap": 7218003126000,
+        "pe_ttm": 17.82,
+        "valuationAsOf": "2026-02-27",
+        "valuationSource": "PYKRX",
+        "return_3d": -3.1932773109243695,
+        "return_7d": -5.882352941176472,
+        "return_1m": -11.248073959938365,
+        "return_ytd": -7.987220447284349,
+        "return_1y": 10.769230769230775,
+        "return_3y": null,
+        "returnsAsOf": "2026-04-06",
+        "returnsSource": "PYKRX"
       }
     },
     {
       "id": "A_791",
       "type": "ASSET",
       "name": "삼성SDS",
-      "exposure": { "ticker": "018260", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "018260",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {
-        "close": null, "marketCap": null, "pe_ttm": null,
-        "valuationAsOf": null, "valuationSource": null,
-        "return_3d": null, "return_7d": null, "return_1m": null,
-        "return_ytd": null, "return_1y": null, "return_3y": null,
-        "returnsAsOf": null, "returnsSource": null
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": -2.37027546444587,
+        "return_7d": -2.37027546444587,
+        "return_1m": -7.016473459426475,
+        "return_ytd": -12.96402055968018,
+        "return_1y": 26.683291770573557,
+        "return_3y": 20.189274447949536,
+        "returnsAsOf": "2026-04-06",
+        "returnsSource": "PYKRX"
       }
     },
     {
       "id": "A_210",
       "type": "ASSET",
       "name": "마이크로소프트",
-      "exposure": { "ticker": "MSFT", "exchange": "NASDAQ", "country": "US" },
+      "exposure": {
+        "ticker": "MSFT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
       "metrics": {
-        "close": null, "marketCap": null, "pe_ttm": null,
-        "valuationAsOf": null, "valuationSource": null,
-        "return_3d": null, "return_7d": null, "return_1m": null,
-        "return_ytd": null, "return_1y": null, "return_3y": null,
-        "returnsAsOf": null, "returnsSource": null
+        "close": 373.46,
+        "marketCap": 2773175779800,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-04-05",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-04-05",
+        "returnsSource": "FMP"
       }
     },
-
-    { "id": "BF_185", "type": "BUSINESS_FIELD", "name": "물류로보틱스" },
-    { "id": "BF_186", "type": "BUSINESS_FIELD", "name": "물류BPO" },
-    { "id": "BF_187", "type": "BUSINESS_FIELD", "name": "외주IT서비스" },
-    { "id": "BF_188", "type": "BUSINESS_FIELD", "name": "클라우드&AI" },
-    { "id": "BF_189", "type": "BUSINESS_FIELD", "name": "AIDC개발관리운영" },
-    { "id": "BF_190", "type": "BUSINESS_FIELD", "name": "스마트팩토리" },
-    { "id": "BF_191", "type": "BUSINESS_FIELD", "name": "스마트물류" },
-    { "id": "BF_192", "type": "BUSINESS_FIELD", "name": "SI/컨설팅" },
-
-    { "id": "BF_193", "type": "BUSINESS_FIELD", "name": "인도네시아" },
-    { "id": "BF_194", "type": "BUSINESS_FIELD", "name": "베트남" },
-    { "id": "BF_195", "type": "BUSINESS_FIELD", "name": "북미" },
-
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_114", "type": "MACRO", "name": "로보틱스확대" },
-    { "id": "M_115", "type": "MACRO", "name": "공공IT확대" }
+    {
+      "id": "BF_185",
+      "type": "BUSINESS_FIELD",
+      "name": "물류로보틱스"
+    },
+    {
+      "id": "BF_186",
+      "type": "BUSINESS_FIELD",
+      "name": "물류BPO"
+    },
+    {
+      "id": "BF_187",
+      "type": "BUSINESS_FIELD",
+      "name": "외주IT서비스"
+    },
+    {
+      "id": "BF_188",
+      "type": "BUSINESS_FIELD",
+      "name": "클라우드&AI"
+    },
+    {
+      "id": "BF_189",
+      "type": "BUSINESS_FIELD",
+      "name": "AIDC개발관리운영"
+    },
+    {
+      "id": "BF_190",
+      "type": "BUSINESS_FIELD",
+      "name": "스마트팩토리"
+    },
+    {
+      "id": "BF_191",
+      "type": "BUSINESS_FIELD",
+      "name": "스마트물류"
+    },
+    {
+      "id": "BF_192",
+      "type": "BUSINESS_FIELD",
+      "name": "SI/컨설팅"
+    },
+    {
+      "id": "BF_193",
+      "type": "BUSINESS_FIELD",
+      "name": "인도네시아"
+    },
+    {
+      "id": "BF_194",
+      "type": "BUSINESS_FIELD",
+      "name": "베트남"
+    },
+    {
+      "id": "BF_195",
+      "type": "BUSINESS_FIELD",
+      "name": "북미"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_114",
+      "type": "MACRO",
+      "name": "로보틱스확대"
+    },
+    {
+      "id": "M_115",
+      "type": "MACRO",
+      "name": "공공IT확대"
+    }
   ],
   "edges": [
-    { "source": "A_215", "target": "T_106", "type": "THEMED_AS" },
-    { "source": "A_791", "target": "T_106", "type": "THEMED_AS" },
-    { "source": "A_210", "target": "T_106", "type": "THEMED_AS" },
-
-    { "source": "A_215", "target": "A_791", "type": "COMPETES" },
-    { "source": "A_791", "target": "A_215", "type": "COMPETES" },
-
-    { "source": "A_215", "target": "A_210", "type": "PARTNERS" },
-
-    { "source": "A_215", "target": "BF_187", "type": "OPERATES" },
-    { "source": "A_215", "target": "BF_188", "type": "OPERATES" },
-    { "source": "A_215", "target": "BF_189", "type": "OPERATES" },
-    { "source": "A_215", "target": "BF_190", "type": "OPERATES" },
-    { "source": "A_215", "target": "BF_191", "type": "OPERATES" },
-    { "source": "A_215", "target": "BF_192", "type": "OPERATES" },
-
-    { "source": "A_791", "target": "BF_185", "type": "OPERATES" },
-    { "source": "A_791", "target": "BF_186", "type": "OPERATES" },
-    { "source": "A_791", "target": "BF_187", "type": "OPERATES" },
-    { "source": "A_791", "target": "BF_188", "type": "OPERATES" },
-    { "source": "A_791", "target": "BF_189", "type": "OPERATES" },
-
-    { "source": "BF_189", "target": "BF_193", "type": "SUB" },
-    { "source": "BF_189", "target": "BF_194", "type": "SUB" },
-    { "source": "BF_189", "target": "BF_195", "type": "SUB" },
-
-    { "source": "M_055", "target": "T_106", "type": "IMPACTS" },
-    { "source": "M_114", "target": "T_106", "type": "IMPACTS" },
-    { "source": "M_115", "target": "T_106", "type": "IMPACTS" }
+    {
+      "source": "A_215",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_791",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_210",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_215",
+      "target": "A_791",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_791",
+      "target": "A_215",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_215",
+      "target": "A_210",
+      "type": "PARTNERS"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_190",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_191",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_192",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_185",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_186",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_193",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_194",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_195",
+      "type": "SUB"
+    },
+    {
+      "source": "M_055",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_114",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_115",
+      "target": "T_106",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "source": "A_215",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_791",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_210",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_215",
+      "target": "A_791",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_791",
+      "target": "A_215",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_215",
+      "target": "A_210",
+      "type": "PARTNERS"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_190",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_191",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_192",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_185",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_186",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_193",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_194",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_195",
+      "type": "SUB"
+    },
+    {
+      "source": "M_055",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_114",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_115",
+      "target": "T_106",
+      "type": "IMPACTS"
+    }
   ]
 }
