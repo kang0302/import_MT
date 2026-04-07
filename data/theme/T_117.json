@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_117",
+  "themeName": "미국항공주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-04-07T00:00:00+09:00",
+    "notes": "g117 누적 import 기반 미국항공주 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_117",
+      "type": "THEME",
+      "name": "미국항공주"
+    },
+    {
+      "id": "M_118",
+      "type": "MACRO",
+      "name": "관세불확실성"
+    },
+    {
+      "id": "M_119",
+      "type": "MACRO",
+      "name": "연방정부셧다운"
+    },
+    {
+      "id": "M_037",
+      "type": "MACRO",
+      "name": "유가하락"
+    },
+    {
+      "id": "A_844",
+      "type": "ASSET",
+      "name": "유나이티드에어라인스",
+      "exposure": {
+        "ticker": "UAL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_845",
+      "type": "ASSET",
+      "name": "델타",
+      "exposure": {
+        "ticker": "DAL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_846",
+      "type": "ASSET",
+      "name": "아메리칸에어라인",
+      "exposure": {
+        "ticker": "AAL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_847",
+      "type": "ASSET",
+      "name": "사우스웨스트에어라인스",
+      "exposure": {
+        "ticker": "LUV",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_848",
+      "type": "ASSET",
+      "name": "JETS",
+      "exposure": {
+        "ticker": "JETS",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_099",
+      "type": "CHARACTER",
+      "name": "국제선강점"
+    },
+    {
+      "id": "C_100",
+      "type": "CHARACTER",
+      "name": "프리미엄"
+    },
+    {
+      "id": "C_101",
+      "type": "CHARACTER",
+      "name": "전략변화:프리미엄화"
+    }
+  ],
+  "edges": [
+    { "from": "M_118", "to": "T_117", "type": "IMPACTS" },
+    { "from": "M_119", "to": "T_117", "type": "IMPACTS" },
+    { "from": "M_037", "to": "T_117", "type": "IMPACTS" },
+    { "from": "A_844", "to": "T_117", "type": "THEMED_AS" },
+    { "from": "A_845", "to": "T_117", "type": "THEMED_AS" },
+    { "from": "A_846", "to": "T_117", "type": "THEMED_AS" },
+    { "from": "A_847", "to": "T_117", "type": "THEMED_AS" },
+    { "from": "A_844", "to": "C_099", "type": "HAS_TRAIT" },
+    { "from": "A_846", "to": "C_100", "type": "HAS_TRAIT" },
+    { "from": "A_847", "to": "C_101", "type": "HAS_TRAIT" },
+    { "from": "T_117", "to": "A_848", "type": "EXPOSED_TO" }
+  ]
+}
