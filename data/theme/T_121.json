@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_121",
+  "themeName": "북극항로수혜",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-04-07T00:00:00+09:00",
+    "notes": "g121 누적 import 기반 북극항로수혜 테마",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_121", "type": "THEME", "name": "북극항로수혜" },
+
+    { "id": "A_090", "type": "ASSET", "name": "삼성중공업",
+      "exposure": {"ticker":"010140","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_813", "type": "ASSET", "name": "한화오션",
+      "exposure": {"ticker":"042660","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_814", "type": "ASSET", "name": "HD현대중공업",
+      "exposure": {"ticker":"329180","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_509", "type": "ASSET", "name": "HMM",
+      "exposure": {"ticker":"011200","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_292", "type": "ASSET", "name": "현대글로비스",
+      "exposure": {"ticker":"086280","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_868", "type": "ASSET", "name": "동방",
+      "exposure": {"ticker":"004140","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "A_869", "type": "ASSET", "name": "KCTC",
+      "exposure": {"ticker":"009070","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,
+                  "return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,
+                  "returnsAsOf":null,"returnsSource":null}
+    },
+
+    { "id": "BF_237", "type": "BUSINESS_FIELD", "name": "쇄빙선/극지선박" },
+    { "id": "BF_238", "type": "BUSINESS_FIELD", "name": "해운" },
+    { "id": "BF_239", "type": "BUSINESS_FIELD", "name": "물류" }
+  ],
+
+  "edges": [
+    { "from": "A_090", "to": "T_121", "type": "THEMED_AS" },
+    { "from": "A_813", "to": "T_121", "type": "THEMED_AS" },
+    { "from": "A_814", "to": "T_121", "type": "THEMED_AS" },
+    { "from": "A_509", "to": "T_121", "type": "THEMED_AS" },
+    { "from": "A_292", "to": "T_121", "type": "THEMED_AS" },
+    { "from": "A_868", "to": "T_121", "type": "THEMED_AS" },
+    { "from": "A_869", "to": "T_121", "type": "THEMED_AS" },
+
+    { "from": "A_090", "to": "BF_237", "type": "OPERATES" },
+    { "from": "A_813", "to": "BF_237", "type": "OPERATES" },
+    { "from": "A_814", "to": "BF_237", "type": "OPERATES" },
+
+    { "from": "A_509", "to": "BF_238", "type": "OPERATES" },
+    { "from": "A_292", "to": "BF_238", "type": "OPERATES" },
+
+    { "from": "A_868", "to": "BF_239", "type": "OPERATES" },
+    { "from": "A_869", "to": "BF_239", "type": "OPERATES" }
+  ]
+}
