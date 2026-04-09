@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_130",
+  "themeName": "글로벌AI저전력고속반도체",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-04-09T00:00:00+09:00",
+    "notes": "g130 누적 import 기반 글로벌AI저전력고속반도체 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_130",
+      "type": "THEME",
+      "name": "글로벌AI저전력고속반도체"
+    },
+    {
+      "id": "M_116",
+      "type": "MACRO",
+      "name": "데이터센터확대"
+    },
+    {
+      "id": "BF_144",
+      "type": "BUSINESS_FIELD",
+      "name": "네트워크장비·스위치"
+    },
+    {
+      "id": "BF_066",
+      "type": "BUSINESS_FIELD",
+      "name": "광통신모듈"
+    },
+    {
+      "id": "A_927",
+      "type": "ASSET",
+      "name": "크레도",
+      "exposure": {
+        "ticker": "CRDO",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_264",
+      "type": "ASSET",
+      "name": "중지이노라이트",
+      "exposure": {
+        "ticker": "300308",
+        "exchange": "SZSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_414",
+      "type": "ASSET",
+      "name": "마벨테크놀로지",
+      "exposure": {
+        "ticker": "MRVL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_413",
+      "type": "ASSET",
+      "name": "브로드컴",
+      "exposure": {
+        "ticker": "AVGO",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_199",
+      "type": "ASSET",
+      "name": "시에나",
+      "exposure": {
+        "ticker": "CIEN",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    }
+  ],
+  "edges": [
+    { "from": "M_116", "to": "T_130", "type": "IMPACTS" },
+
+    { "from": "A_927", "to": "T_130", "type": "THEMED_AS" },
+    { "from": "A_264", "to": "T_130", "type": "THEMED_AS" },
+    { "from": "A_414", "to": "T_130", "type": "THEMED_AS" },
+    { "from": "A_413", "to": "T_130", "type": "THEMED_AS" },
+    { "from": "A_199", "to": "T_130", "type": "THEMED_AS" },
+
+    { "from": "A_927", "to": "BF_144", "type": "OPERATES" },
+    { "from": "A_264", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_414", "to": "BF_144", "type": "OPERATES" },
+    { "from": "A_413", "to": "BF_144", "type": "OPERATES" },
+    { "from": "A_199", "to": "BF_066", "type": "OPERATES" }
+  ]
+}
