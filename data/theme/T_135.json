@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_135",
+  "themeName": "코오롱그룹관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-11T00:00:00+09:00",
+    "notes": "g135 누적 import 기반 코오롱그룹관련주 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_135",
+      "type": "THEME",
+      "name": "코오롱그룹관련주"
+    },
+
+    {
+      "id": "A_957",
+      "type": "ASSET",
+      "name": "코오롱",
+      "exposure": {
+        "ticker": "002020",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_958",
+      "type": "ASSET",
+      "name": "Kolon Life Science",
+      "exposure": {
+        "ticker": "102940",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_959",
+      "type": "ASSET",
+      "name": "Kolon TissueGene(B)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_960",
+      "type": "ASSET",
+      "name": "코오롱모빌리티그룹",
+      "exposure": {
+        "ticker": "450140",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_391",
+      "type": "ASSET",
+      "name": "코오롱글로벌",
+      "exposure": {
+        "ticker": "003070",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_624",
+      "type": "ASSET",
+      "name": "코오롱인더",
+      "exposure": {
+        "ticker": "120110",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "C_114",
+      "type": "CHARACTER",
+      "name": "인보사단일파이프라인"
+    },
+    {
+      "id": "BF_180",
+      "type": "BUSINESS_FIELD",
+      "name": "건설"
+    },
+    {
+      "id": "BF_253",
+      "type": "BUSINESS_FIELD",
+      "name": "화학/섬유"
+    }
+  ],
+  "edges": [
+    { "from": "A_957", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_958", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_959", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_960", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_391", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_624", "to": "T_135", "type": "THEMED_AS" },
+
+    { "from": "A_958", "to": "A_959", "type": "INVESTS" },
+
+    { "from": "A_391", "to": "BF_180", "type": "OPERATES" },
+    { "from": "A_624", "to": "BF_253", "type": "OPERATES" },
+
+    { "from": "A_959", "to": "C_114", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_957", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_958", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_959", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_960", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_391", "to": "T_135", "type": "THEMED_AS" },
+    { "from": "A_624", "to": "T_135", "type": "THEMED_AS" },
+
+    { "from": "A_958", "to": "A_959", "type": "INVESTS" },
+
+    { "from": "A_391", "to": "BF_180", "type": "OPERATES" },
+    { "from": "A_624", "to": "BF_253", "type": "OPERATES" },
+
+    { "from": "A_959", "to": "C_114", "type": "HAS_TRAIT" }
+  ]
+}
