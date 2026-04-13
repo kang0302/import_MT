@@ -1,0 +1,330 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_138",
+  "themeName": "글로벌카지노주식",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-13T00:00:00+09:00",
+    "notes": "g138 누적 import 기반 글로벌카지노주식 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_138",
+      "type": "THEME",
+      "name": "글로벌카지노주식"
+    },
+    {
+      "id": "A_966",
+      "type": "ASSET",
+      "name": "라스베이거스샌즈",
+      "exposure": {
+        "ticker": "LVS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_709",
+      "type": "ASSET",
+      "name": "엠지엠리조트",
+      "exposure": {
+        "ticker": "MGM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_967",
+      "type": "ASSET",
+      "name": "윈리조트",
+      "exposure": {
+        "ticker": "WYNN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_968",
+      "type": "ASSET",
+      "name": "갤럭시엔터테인먼트",
+      "exposure": {
+        "ticker": "0027",
+        "exchange": "HKEX",
+        "country": "HK"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "BF_258",
+      "type": "BUSINESS_FIELD",
+      "name": "싱가폴"
+    },
+    {
+      "id": "BF_259",
+      "type": "BUSINESS_FIELD",
+      "name": "마카오"
+    },
+    {
+      "id": "BF_260",
+      "type": "BUSINESS_FIELD",
+      "name": "라스베가스"
+    },
+    {
+      "id": "C_114",
+      "type": "CHARACTER",
+      "name": "VIP중심"
+    },
+    {
+      "id": "C_115",
+      "type": "CHARACTER",
+      "name": "지역규제/정책리스크민감"
+    },
+    {
+      "id": "C_116",
+      "type": "CHARACTER",
+      "name": "미국대중임의소비"
+    },
+    {
+      "id": "C_117",
+      "type": "CHARACTER",
+      "name": "중국카지노규제민감"
+    },
+    {
+      "id": "C_118",
+      "type": "CHARACTER",
+      "name": "코비드후미국철수"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_966",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_709",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_967",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_968",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_966",
+      "to": "BF_258",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_966",
+      "to": "BF_260",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_709",
+      "to": "BF_260",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_967",
+      "to": "BF_259",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_967",
+      "to": "BF_260",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_968",
+      "to": "BF_259",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_138",
+      "to": "C_115",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_966",
+      "to": "C_116",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_709",
+      "to": "C_116",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_966",
+      "to": "C_118",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "BF_258",
+      "to": "C_114",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "BF_259",
+      "to": "C_117",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_966",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_709",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_967",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_968",
+      "to": "T_138",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_966",
+      "to": "BF_258",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_966",
+      "to": "BF_260",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_709",
+      "to": "BF_260",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_967",
+      "to": "BF_259",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_967",
+      "to": "BF_260",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_968",
+      "to": "BF_259",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_138",
+      "to": "C_115",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_966",
+      "to": "C_116",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_709",
+      "to": "C_116",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_966",
+      "to": "C_118",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "BF_258",
+      "to": "C_114",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "BF_259",
+      "to": "C_117",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
