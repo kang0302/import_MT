@@ -1,0 +1,320 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_143",
+  "themeName": "인텔생태계",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-14T00:00:00+09:00",
+    "notes": "g143 누적 import 기반 인텔생태계 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_143",
+      "type": "THEME",
+      "name": "인텔생태계"
+    },
+    {
+      "id": "A_242",
+      "type": "ASSET",
+      "name": "인텔",
+      "exposure": {
+        "ticker": "INTC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_993",
+      "type": "ASSET",
+      "name": "소프트뱅크",
+      "exposure": {
+        "ticker": "9984",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_050",
+      "type": "ASSET",
+      "name": "알파벳",
+      "exposure": {
+        "ticker": "GOOGL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_137",
+      "type": "ASSET",
+      "name": "스페이스X(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_120",
+      "type": "CHARACTER",
+      "name": "미국정부전략자산"
+    },
+    {
+      "id": "BF_241",
+      "type": "BUSINESS_FIELD",
+      "name": "파운드리"
+    },
+    {
+      "id": "BF_242",
+      "type": "BUSINESS_FIELD",
+      "name": "레거시CPU"
+    },
+    {
+      "id": "BF_243",
+      "type": "BUSINESS_FIELD",
+      "name": "하이퍼스케일러CPU"
+    },
+    {
+      "id": "BF_244",
+      "type": "BUSINESS_FIELD",
+      "name": "우주데이터센터"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_242",
+      "to": "T_143",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_055",
+      "to": "T_143",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_993",
+      "to": "T_143",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_993",
+      "to": "A_242",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_055",
+      "to": "A_242",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_242",
+      "to": "A_137",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_242",
+      "to": "A_050",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_241",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_242",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_243",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_244",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_137",
+      "to": "BF_244",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_050",
+      "to": "BF_243",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "C_120",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_242",
+      "to": "T_143",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_055",
+      "to": "T_143",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_993",
+      "to": "T_143",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_993",
+      "to": "A_242",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_055",
+      "to": "A_242",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_242",
+      "to": "A_137",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_242",
+      "to": "A_050",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_241",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_242",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_243",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_244",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_137",
+      "to": "BF_244",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_050",
+      "to": "BF_243",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_242",
+      "to": "C_120",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
