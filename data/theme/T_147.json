@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_147",
+  "themeName": "글로벌크루즈주식",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-04-15T00:00:00+09:00",
+    "notes": "g147 누적 import 기반 글로벌크루즈주식 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_147",
+      "type": "THEME",
+      "name": "글로벌크루즈주식"
+    },
+    {
+      "id": "M_143",
+      "type": "MACRO",
+      "name": "저유가"
+    },
+    {
+      "id": "M_057",
+      "type": "MACRO",
+      "name": "저금리"
+    },
+    {
+      "id": "M_144",
+      "type": "MACRO",
+      "name": "긍정적소비심리"
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "A_1017",
+      "type": "ASSET",
+      "name": "카니발",
+      "exposure": {
+        "ticker": "CCL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1018",
+      "type": "ASSET",
+      "name": "로열캐리비안",
+      "exposure": {
+        "ticker": "RCL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1019",
+      "type": "ASSET",
+      "name": "노르웨이안크루즈",
+      "exposure": {
+        "ticker": "NCLH",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1020",
+      "type": "ASSET",
+      "name": "CRUZ",
+      "exposure": {
+        "ticker": "CRUZ",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "M_143",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_057",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_144",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_1017",
+      "to": "T_147",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1018",
+      "to": "T_147",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1019",
+      "to": "T_147",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1017",
+      "to": "A_1020",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1018",
+      "to": "A_1020",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1019",
+      "to": "A_1020",
+      "type": "IN_ETF"
+    }
+  ],
+  "links": [
+    {
+      "from": "M_143",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_057",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_144",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_147",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_1017",
+      "to": "T_147",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1018",
+      "to": "T_147",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1019",
+      "to": "T_147",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1017",
+      "to": "A_1020",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1018",
+      "to": "A_1020",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1019",
+      "to": "A_1020",
+      "type": "IN_ETF"
+    }
+  ]
+}
