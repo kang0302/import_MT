@@ -4,7 +4,14 @@
   "themeName": "BNPL",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
     "dataAsOf": "2026-04-16T00:00:00+09:00",
     "notes": "g150 누적 import 기반 BNPL 테마",
     "sources": []
@@ -15,7 +22,6 @@
       "type": "THEME",
       "name": "BNPL"
     },
-
     {
       "id": "M_145",
       "type": "MACRO",
@@ -41,7 +47,6 @@
       "type": "MACRO",
       "name": "대출건전성"
     },
-
     {
       "id": "A_1029",
       "type": "ASSET",
@@ -77,19 +82,19 @@
         "country": "US"
       },
       "metrics": {
-        "close": null,
-        "marketCap": null,
+        "close": 59.62,
+        "marketCap": 19860056834,
         "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
+        "valuationAsOf": "2026-04-15",
+        "valuationSource": "FMP",
         "return_3d": null,
         "return_7d": null,
         "return_1m": null,
         "return_ytd": null,
         "return_1y": null,
         "return_3y": null,
-        "returnsAsOf": null,
-        "returnsSource": null
+        "returnsAsOf": "2026-04-15",
+        "returnsSource": "FMP"
       }
     },
     {
@@ -152,19 +157,19 @@
         "country": "US"
       },
       "metrics": {
-        "close": null,
-        "marketCap": null,
+        "close": 49.57,
+        "marketCap": 45637364050,
         "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
+        "valuationAsOf": "2026-04-15",
+        "valuationSource": "FMP",
         "return_3d": null,
         "return_7d": null,
         "return_1m": null,
         "return_ytd": null,
         "return_1y": null,
         "return_3y": null,
-        "returnsAsOf": null,
-        "returnsSource": null
+        "returnsAsOf": "2026-04-15",
+        "returnsSource": "FMP"
       }
     },
     {
@@ -177,19 +182,19 @@
         "country": "US"
       },
       "metrics": {
-        "close": null,
-        "marketCap": null,
+        "close": 248.5,
+        "marketCap": 2667622650000,
         "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
+        "valuationAsOf": "2026-04-15",
+        "valuationSource": "FMP",
         "return_3d": null,
         "return_7d": null,
         "return_1m": null,
         "return_ytd": null,
         "return_1y": null,
         "return_3y": null,
-        "returnsAsOf": null,
-        "returnsSource": null
+        "returnsAsOf": "2026-04-15",
+        "returnsSource": "FMP"
       }
     },
     {
@@ -244,41 +249,147 @@
     }
   ],
   "edges": [
-    { "from": "M_145", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_146", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_147", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_148", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_149", "to": "T_150", "type": "IMPACTS" },
-
-    { "from": "A_1029", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_915", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_1030", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_1031", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_349", "to": "T_150", "type": "THEMED_AS" },
-
-    { "from": "A_915", "to": "A_211", "type": "PARTNERS" },
-    { "from": "A_1032", "to": "A_1031", "type": "INVESTS" },
-
-    { "from": "A_349", "to": "A_1033", "type": "IN_ETF" },
-    { "from": "A_1032", "to": "A_1033", "type": "IN_ETF" }
+    {
+      "from": "M_145",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_146",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_147",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_148",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_149",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_1029",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_915",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1030",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1031",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_349",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_915",
+      "to": "A_211",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_1032",
+      "to": "A_1031",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_349",
+      "to": "A_1033",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1032",
+      "to": "A_1033",
+      "type": "IN_ETF"
+    }
   ],
   "links": [
-    { "from": "M_145", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_146", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_147", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_148", "to": "T_150", "type": "IMPACTS" },
-    { "from": "M_149", "to": "T_150", "type": "IMPACTS" },
-
-    { "from": "A_1029", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_915", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_1030", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_1031", "to": "T_150", "type": "THEMED_AS" },
-    { "from": "A_349", "to": "T_150", "type": "THEMED_AS" },
-
-    { "from": "A_915", "to": "A_211", "type": "PARTNERS" },
-    { "from": "A_1032", "to": "A_1031", "type": "INVESTS" },
-
-    { "from": "A_349", "to": "A_1033", "type": "IN_ETF" },
-    { "from": "A_1032", "to": "A_1033", "type": "IN_ETF" }
+    {
+      "from": "M_145",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_146",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_147",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_148",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_149",
+      "to": "T_150",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_1029",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_915",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1030",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1031",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_349",
+      "to": "T_150",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_915",
+      "to": "A_211",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_1032",
+      "to": "A_1031",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_349",
+      "to": "A_1033",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1032",
+      "to": "A_1033",
+      "type": "IN_ETF"
+    }
   ]
 }
