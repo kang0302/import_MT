@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_161",
+  "themeName": "K 바이오 - 한올바이오파마",
+
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-04-20",
+    "notes": "자가면역질환 기반 항체신약 + 글로벌 파트너십 + 투자 구조",
+    "sources": []
+  },
+
+  "nodes": [
+    {
+      "id": "T_161",
+      "type": "THEME",
+      "name": "K 바이오 - 한올바이오파마"
+    },
+
+    {
+      "id": "A_1092",
+      "type": "ASSET",
+      "name": "하버바이오메드",
+      "exposure": { "ticker": "3728", "exchange": "HKEX", "country": "HK" },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_1093",
+      "type": "ASSET",
+      "name": "한올바이오파마",
+      "exposure": { "ticker": "009420", "exchange": "KOSPI", "country": "KR" },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_1094",
+      "type": "ASSET",
+      "name": "이뮤노반트",
+      "exposure": { "ticker": "IMVT", "exchange": "NASDAQ", "country": "US" },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_1095",
+      "type": "ASSET",
+      "name": "아제닉스",
+      "exposure": { "ticker": "ARGX", "exchange": "NASDAQ", "country": "US" },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "A_923",
+      "type": "ASSET",
+      "name": "대웅제약",
+      "exposure": { "ticker": "069620", "exchange": "KOSPI", "country": "KR" },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+
+    {
+      "id": "M_157",
+      "type": "MACRO",
+      "name": "글로벌빅파마투자"
+    },
+    {
+      "id": "M_158",
+      "type": "MACRO",
+      "name": "자가면역질환확산"
+    }
+  ],
+
+  "edges": [
+    { "from": "A_1092", "to": "T_161", "type": "THEMED_AS" },
+    { "from": "A_1093", "to": "T_161", "type": "THEMED_AS" },
+    { "from": "A_1094", "to": "T_161", "type": "THEMED_AS" },
+    { "from": "A_1095", "to": "T_161", "type": "THEMED_AS" },
+    { "from": "A_923", "to": "T_161", "type": "THEMED_AS" },
+
+    { "from": "A_1093", "to": "A_1092", "type": "PARTNERS" },
+    { "from": "A_1093", "to": "A_1094", "type": "PARTNERS" },
+
+    { "from": "A_923", "to": "A_1093", "type": "INVESTS" },
+
+    { "from": "M_157", "to": "T_161", "type": "IMPACTS" },
+    { "from": "M_158", "to": "T_161", "type": "IMPACTS" }
+  ]
+}
