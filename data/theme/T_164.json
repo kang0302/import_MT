@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_164",
-  "themeName": "글로벌 로봇 ETF",
+  "themeName": "글로벌로봇ETF",
   "meta": {
     "periodDefault": "3d",
     "periodOptions": [
@@ -13,16 +13,15 @@
       "3y"
     ],
     "dataAsOf": "2026-04-20T00:00:00+09:00",
-    "notes": "g164 누적 import 기반 글로벌 로봇 ETF 테마",
+    "notes": "g164 누적 import 기반 글로벌로봇ETF 테마",
     "sources": []
   },
   "nodes": [
     {
       "id": "T_164",
       "type": "THEME",
-      "name": "글로벌 로봇 ETF"
+      "name": "글로벌로봇ETF"
     },
-
     {
       "id": "A_1110",
       "type": "ASSET",
@@ -225,13 +224,13 @@
       }
     },
     {
-      "id": "A_259",
+      "id": "A_1112",
       "type": "ASSET",
-      "name": "PTC",
+      "name": "파눅",
       "exposure": {
-        "ticker": "PTC",
-        "exchange": "NASDAQ",
-        "country": "US"
+        "ticker": "6954",
+        "exchange": "TSE",
+        "country": "JP"
       },
       "metrics": {
         "close": null,
@@ -250,7 +249,7 @@
       }
     },
     {
-      "id": "A_1108",
+      "id": "A_1113",
       "type": "ASSET",
       "name": "키엔스",
       "exposure": {
@@ -275,11 +274,61 @@
       }
     },
     {
-      "id": "A_1109",
+      "id": "A_1114",
       "type": "ASSET",
       "name": "아이로봇",
       "exposure": {
         "ticker": "IRBT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1115",
+      "type": "ASSET",
+      "name": "옴론",
+      "exposure": {
+        "ticker": "6645",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1116",
+      "type": "ASSET",
+      "name": "테라다인",
+      "exposure": {
+        "ticker": "TER",
         "exchange": "NASDAQ",
         "country": "US"
       },
@@ -325,6 +374,31 @@
       }
     },
     {
+      "id": "A_937",
+      "type": "ASSET",
+      "name": "트림블",
+      "exposure": {
+        "ticker": "TRMB",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
       "id": "A_002",
       "type": "ASSET",
       "name": "테슬라",
@@ -350,13 +424,13 @@
       }
     },
     {
-      "id": "A_346",
+      "id": "A_1117",
       "type": "ASSET",
-      "name": "로빈후드",
+      "name": "코마츠",
       "exposure": {
-        "ticker": "HOOD",
-        "exchange": "NASDAQ",
-        "country": "US"
+        "ticker": "6301",
+        "exchange": "TSE",
+        "country": "JP"
       },
       "metrics": {
         "close": null,
@@ -376,24 +450,19 @@
     },
 
     {
+      "id": "M_018",
+      "type": "MACRO",
+      "name": "피지컬AI확산"
+    },
+    {
       "id": "M_057",
       "type": "MACRO",
       "name": "저금리"
     },
     {
-      "id": "M_114",
-      "type": "MACRO",
-      "name": "로보틱스확대"
-    },
-    {
       "id": "M_028",
       "type": "MACRO",
       "name": "자동화확산"
-    },
-    {
-      "id": "M_018",
-      "type": "MACRO",
-      "name": "피지컬AI확산"
     }
   ],
   "edges": [
@@ -445,18 +514,28 @@
       "type": "IN_ETF"
     },
     {
-      "from": "A_259",
+      "from": "A_1112",
+      "to": "A_145",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1113",
       "to": "A_145",
       "type": "IN_ETF"
     },
 
     {
-      "from": "A_1108",
+      "from": "A_1114",
       "to": "A_1111",
       "type": "IN_ETF"
     },
     {
-      "from": "A_1109",
+      "from": "A_1115",
+      "to": "A_1111",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1116",
       "to": "A_1111",
       "type": "IN_ETF"
     },
@@ -472,28 +551,28 @@
       "type": "IN_ETF"
     },
     {
-      "from": "A_346",
+      "from": "A_1117",
+      "to": "A_144",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_937",
       "to": "A_144",
       "type": "IN_ETF"
     },
 
+    {
+      "from": "M_018",
+      "to": "T_164",
+      "type": "IMPACTS"
+    },
     {
       "from": "M_057",
       "to": "T_164",
       "type": "IMPACTS"
     },
     {
-      "from": "M_114",
-      "to": "T_164",
-      "type": "IMPACTS"
-    },
-    {
       "from": "M_028",
-      "to": "T_164",
-      "type": "IMPACTS"
-    },
-    {
-      "from": "M_018",
       "to": "T_164",
       "type": "IMPACTS"
     }
@@ -547,18 +626,28 @@
       "type": "IN_ETF"
     },
     {
-      "from": "A_259",
+      "from": "A_1112",
+      "to": "A_145",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1113",
       "to": "A_145",
       "type": "IN_ETF"
     },
 
     {
-      "from": "A_1108",
+      "from": "A_1114",
       "to": "A_1111",
       "type": "IN_ETF"
     },
     {
-      "from": "A_1109",
+      "from": "A_1115",
+      "to": "A_1111",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1116",
       "to": "A_1111",
       "type": "IN_ETF"
     },
@@ -574,28 +663,28 @@
       "type": "IN_ETF"
     },
     {
-      "from": "A_346",
+      "from": "A_1117",
+      "to": "A_144",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_937",
       "to": "A_144",
       "type": "IN_ETF"
     },
 
+    {
+      "from": "M_018",
+      "to": "T_164",
+      "type": "IMPACTS"
+    },
     {
       "from": "M_057",
       "to": "T_164",
       "type": "IMPACTS"
     },
     {
-      "from": "M_114",
-      "to": "T_164",
-      "type": "IMPACTS"
-    },
-    {
       "from": "M_028",
-      "to": "T_164",
-      "type": "IMPACTS"
-    },
-    {
-      "from": "M_018",
       "to": "T_164",
       "type": "IMPACTS"
     }
