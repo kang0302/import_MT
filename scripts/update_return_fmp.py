@@ -1,5 +1,7 @@
+import io
 import json
 import os
+import sys
 import time
 import hashlib
 from datetime import datetime, timedelta
@@ -7,6 +9,14 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
+
+# Windows cp949 콘솔에서도 unicode 출력(⚠/✅ 등)으로 죽지 않게 강제 utf-8 + replace.
+# (PYTHONIOENCODING이 안 잡힌 환경에서도 안전.)
+try:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+except Exception:
+    pass
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]          # .../moneytree-web/import_MT
@@ -106,9 +116,12 @@ def load_overseas_assets_from_ssot() -> Dict[str, Dict[str, str]]:
 
 def parse_hist_payload(payload: Any) -> List[Dict[str, Any]]:
     """
-    기대 형태(대부분):
-      {"symbol":"AAPL", "historical":[{"date":"2026-02-26","close":...}, ...]}
+    FMP 응답 형태 두 가지 모두 지원:
+      (1) 새 stable API (현재): [{"symbol":"AAPL","date":"...","close":...}, ...]  flat list
+      (2) 옛 v3 API:           {"symbol":"AAPL", "historical":[{"date":"...","close":...}, ...]}
     """
+    if isinstance(payload, list):
+        return [x for x in payload if isinstance(x, dict)]
     if isinstance(payload, dict):
         hist = payload.get("historical")
         if isinstance(hist, list):

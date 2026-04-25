@@ -1,7 +1,16 @@
+import io
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any, Dict, List, Union, Tuple
+
+# Windows cp949 console safety
+try:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+except Exception:
+    pass
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]  # .../moneytree-web/import_MT

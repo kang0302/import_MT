@@ -1,0 +1,68 @@
+name: Update KR Close + Freeze (EODHD)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 16:05 KST = 07:05 UTC (매일)
+    - cron: "5 7 * * *"
+
+concurrency:
+  group: mt-freeze-commit-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run KR close updater (EODHD)
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+          EODHD_SLEEP_SEC: "0.15"
+          EODHD_RETRIES: "3"
+          EODHD_TIMEOUT_SEC: "30"
+          EODHD_SENTINEL: "005930.KO"
+        run: |
+          python -u scripts/update_close_kr_eodhd.py
+
+      - name: Inject metrics into Freeze + update theme index
+        run: |
+          python -u scripts/build_freeze.py
+
+      - name: Commit & push if changed (rebase-safe)
+        shell: bash
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+
+          git add data/cache/valuation_kr.json
+          git add data/theme/T_*.json
+          git add data/theme/index.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: KR close + freeze update (EODHD)"
+          git push origin HEAD:"${GITHUB_REF_NAME}"
