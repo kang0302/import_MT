@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_180",
+  "themeName": "머스크테라팹관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-04-25T00:00:00+09:00",
+    "notes": "g180 누적 import 기반 Musk Tera Fab 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_180",
+      "type": "THEME",
+      "name": "머스크테라팹관련주"
+    },
+
+    {
+      "id": "A_002",
+      "type": "ASSET",
+      "name": "테슬라",
+      "exposure": {"ticker":"TSLA","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_137",
+      "type": "ASSET",
+      "name": "스페이스X(비)",
+      "exposure": {"ticker":null,"exchange":null,"country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_1195",
+      "type": "ASSET",
+      "name": "테라팹(비)",
+      "exposure": {"ticker":null,"exchange":null,"country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_803",
+      "type": "ASSET",
+      "name": "램리서치",
+      "exposure": {"ticker":"LRCX","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_952",
+      "type": "ASSET",
+      "name": "어플라이드머티리얼즈",
+      "exposure": {"ticker":"AMAT","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_242",
+      "type": "ASSET",
+      "name": "인텔",
+      "exposure": {"ticker":"INTC","exchange":"NASDAQ","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+
+    {"id":"M_114","type":"MACRO","name":"로보틱스확산"},
+    {"id":"M_021","type":"MACRO","name":"자율주행확산"},
+    {"id":"M_055","type":"MACRO","name":"AI확산"},
+    {"id":"M_066","type":"MACRO","name":"우주산업확대"},
+
+    {"id":"C_127","type":"CHARACTER","name":"수직계열화"},
+    {"id":"C_128","type":"CHARACTER","name":"단기수혜예상"}
+  ],
+
+  "edges": [
+    {"from":"A_002","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_137","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_1195","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_803","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_952","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_242","to":"T_180","type":"THEMED_AS"},
+
+    {"from":"M_114","to":"T_180","type":"IMPACTS"},
+    {"from":"M_021","to":"T_180","type":"IMPACTS"},
+    {"from":"M_055","to":"T_180","type":"IMPACTS"},
+    {"from":"M_066","to":"T_180","type":"IMPACTS"},
+
+    {"from":"T_180","to":"C_127","type":"HAS_TRAIT"},
+    {"from":"A_803","to":"C_128","type":"HAS_TRAIT"},
+    {"from":"A_952","to":"C_128","type":"HAS_TRAIT"}
+  ],
+
+  "links": [
+    {"from":"A_002","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_137","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_1195","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_803","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_952","to":"T_180","type":"THEMED_AS"},
+    {"from":"A_242","to":"T_180","type":"THEMED_AS"},
+
+    {"from":"M_114","to":"T_180","type":"IMPACTS"},
+    {"from":"M_021","to":"T_180","type":"IMPACTS"},
+    {"from":"M_055","to":"T_180","type":"IMPACTS"},
+    {"from":"M_066","to":"T_180","type":"IMPACTS"},
+
+    {"from":"T_180","to":"C_127","type":"HAS_TRAIT"},
+    {"from":"A_803","to":"C_128","type":"HAS_TRAIT"},
+    {"from":"A_952","to":"C_128","type":"HAS_TRAIT"}
+  ]
+}
