@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_179",
+  "themeName": "글로벌선박엔진관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-04-25T00:00:00+09:00",
+    "notes": "g179 누적 import 기반 글로벌 선박 엔진 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_179",
+      "type": "THEME",
+      "name": "글로벌선박엔진관련주"
+    },
+
+    {
+      "id": "A_813",
+      "type": "ASSET",
+      "name": "한화오션",
+      "exposure": {"ticker":"042660","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_814",
+      "type": "ASSET",
+      "name": "HD현대중공업",
+      "exposure": {"ticker":"329180","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_1194",
+      "type": "ASSET",
+      "name": "HD현대마린엔진",
+      "exposure": {"ticker":"071970","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_934",
+      "type": "ASSET",
+      "name": "HD현대마린솔루션",
+      "exposure": {"ticker":"443060","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_574",
+      "type": "ASSET",
+      "name": "STX엔진",
+      "exposure": {"ticker":"077970","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_1195",
+      "type": "ASSET",
+      "name": "한화엔진",
+      "exposure": {"ticker":"082740","exchange":"KOSPI","country":"KR"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_167",
+      "type": "ASSET",
+      "name": "GE버노바",
+      "exposure": {"ticker":"GEV","exchange":"NYSE","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_256",
+      "type": "ASSET",
+      "name": "지멘스",
+      "exposure": {"ticker":"SIEGY","exchange":"OTC","country":"US"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+    {
+      "id": "A_311",
+      "type": "ASSET",
+      "name": "미쓰비시중공업",
+      "exposure": {"ticker":"7011","exchange":"TSE","country":"JP"},
+      "metrics": {"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}
+    },
+
+    {"id":"M_168","type":"MACRO","name":"가스터빈업체공급병목"},
+    {"id":"M_169","type":"MACRO","name":"친환경선박전환"},
+    {"id":"M_170","type":"MACRO","name":"데이터센터발전수요"}
+  ],
+
+  "edges": [
+    {"from":"A_813","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_814","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_1194","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_934","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_574","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_1195","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_167","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_256","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_311","to":"T_179","type":"THEMED_AS"},
+
+    {"from":"M_168","to":"T_179","type":"IMPACTS"},
+    {"from":"M_169","to":"T_179","type":"IMPACTS"},
+    {"from":"M_170","to":"T_179","type":"IMPACTS"}
+  ],
+
+  "links": [
+    {"from":"A_813","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_814","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_1194","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_934","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_574","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_1195","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_167","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_256","to":"T_179","type":"THEMED_AS"},
+    {"from":"A_311","to":"T_179","type":"THEMED_AS"},
+
+    {"from":"M_168","to":"T_179","type":"IMPACTS"},
+    {"from":"M_169","to":"T_179","type":"IMPACTS"},
+    {"from":"M_170","to":"T_179","type":"IMPACTS"}
+  ]
+}
