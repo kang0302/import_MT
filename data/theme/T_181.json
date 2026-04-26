@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_181",
+  "themeName": "멀티모멘텀삼성전기",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-04-25T00:00:00+09:00",
+    "notes": "g181 누적 import 기반 멀티모멘텀 삼성전기 테마",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_181","type":"THEME","name":"멀티모멘텀삼성전기"},
+
+    {"id":"A_153","type":"ASSET","name":"샤오미","exposure":{"ticker":"XIACY","exchange":"OTC","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_374","type":"ASSET","name":"애플","exposure":{"ticker":"AAPL","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_002","type":"ASSET","name":"테슬라","exposure":{"ticker":"TSLA","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_085","type":"ASSET","name":"삼성전기","exposure":{"ticker":"009150","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_088","type":"ASSET","name":"삼성전자","exposure":{"ticker":"005930","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_413","type":"ASSET","name":"브로드컴","exposure":{"ticker":"AVGO","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_242","type":"ASSET","name":"인텔","exposure":{"ticker":"INTC","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_004","type":"ASSET","name":"현대차","exposure":{"ticker":"005380","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_005","type":"ASSET","name":"기아차","exposure":{"ticker":"000270","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+
+    {"id":"BF_316","type":"BUSINESS_FIELD","name":"광학통신솔루션"},
+    {"id":"BF_317","type":"BUSINESS_FIELD","name":"MLCC"},
+    {"id":"BF_318","type":"BUSINESS_FIELD","name":"패키지솔루션(FCBGA)"},
+    {"id":"BF_319","type":"BUSINESS_FIELD","name":"반도체유리기판"}
+  ],
+
+  "edges": [
+    {"from":"A_153","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_374","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_002","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_085","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_088","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_413","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_242","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_004","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_005","to":"T_181","type":"THEMED_AS"},
+
+    {"from":"A_085","to":"BF_316","type":"OPERATES"},
+    {"from":"A_085","to":"BF_317","type":"OPERATES"},
+    {"from":"A_085","to":"BF_318","type":"OPERATES"},
+    {"from":"A_085","to":"BF_319","type":"OPERATES"}
+  ],
+
+  "links": [
+    {"from":"A_153","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_374","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_002","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_085","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_088","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_413","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_242","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_004","to":"T_181","type":"THEMED_AS"},
+    {"from":"A_005","to":"T_181","type":"THEMED_AS"},
+
+    {"from":"A_085","to":"BF_316","type":"OPERATES"},
+    {"from":"A_085","to":"BF_317","type":"OPERATES"},
+    {"from":"A_085","to":"BF_318","type":"OPERATES"},
+    {"from":"A_085","to":"BF_319","type":"OPERATES"}
+  ]
+}
