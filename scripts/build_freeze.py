@@ -394,6 +394,7 @@ def inject_metrics_into_theme(
     kr_ret_by_ticker: Dict[str, Dict[str, Any]],
     fmp_val_by_aid: Dict[str, Dict[str, Any]],
     fmp_ret_by_aid: Dict[str, Dict[str, Any]],
+    ssot_by_aid: Dict[str, Dict[str, str]] | None = None,
 ) -> Tuple[int, int, bool]:
     """
     return: (updated_asset_nodes, scanned_asset_nodes, structural_changed)
@@ -426,6 +427,18 @@ def inject_metrics_into_theme(
         exposure = node.get("exposure", {}) or {}
         if not isinstance(exposure, dict):
             exposure = {}
+
+        # ✅ SSOT 기반 exposure 보충: theme JSON의 exposure가 비어있으면 SSOT에서 채움.
+        #   (그래야 KR ticker 매칭이 동작하고, exposure 자체도 production JSON에 박혀 일관성 유지.)
+        if ssot_by_aid and aid in ssot_by_aid:
+            ss = ssot_by_aid[aid]
+            for k in ("ticker", "exchange", "country"):
+                cur = (exposure.get(k) or "").strip() if isinstance(exposure.get(k), str) else exposure.get(k)
+                ss_v = (ss.get(k) or "").strip()
+                if (cur in (None, "", 0)) and ss_v:
+                    exposure[k] = ss_v
+                    structural_changed = True
+            node["exposure"] = exposure
 
         country = (exposure.get("country") or "").upper().strip()
         ticker = (exposure.get("ticker") or "").strip()
@@ -497,10 +510,35 @@ def rebuild_index(themes: List[Union[Dict[str, Any], str]]) -> None:
             write_json(THEME_PUBLIC_DIR / "index.json", themes)
 
 
+def load_ssot_by_aid() -> Dict[str, Dict[str, str]]:
+    """asset_ssot.csv → {asset_id: {ticker, exchange, country}} 단순 매핑 (exposure 보충용)."""
+    import csv
+    path = DATA_DIR / "ssot" / "asset_ssot.csv"
+    out: Dict[str, Dict[str, str]] = {}
+    if not path.exists():
+        print(f"⚠ asset_ssot.csv not found at {path}")
+        return out
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        for r in csv.DictReader(f):
+            aid = (r.get("asset_id") or "").strip()
+            if not aid:
+                continue
+            out[aid] = {
+                "ticker":   (r.get("ticker") or "").strip(),
+                "exchange": (r.get("exchange") or "").strip(),
+                "country":  (r.get("country") or "").strip(),
+            }
+    print(f"✅ Loaded SSOT exposure map: {len(out)} assets")
+    return out
+
+
 def main() -> None:
     print("=== Build Freeze Start ===")
 
     themes = load_themes()
+
+    # SSOT exposure map (theme JSON의 비어있는 ticker/exchange/country 보충용)
+    ssot_by_aid = load_ssot_by_aid()
 
     # KR
     kr_val_by_ticker = load_kr_valuation_by_ticker()
@@ -535,6 +573,7 @@ def main() -> None:
             kr_ret_by_ticker,
             fmp_val_by_aid,
             fmp_ret_by_aid,
+            ssot_by_aid=ssot_by_aid,
         )
 
         total_updated += updated

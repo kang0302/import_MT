@@ -1,5 +1,7 @@
+import io
 import json
 import os
+import sys
 import time
 import hashlib
 from datetime import datetime, timedelta
@@ -7,6 +9,13 @@ from pathlib import Path
 from typing import Any, Dict, Optional, Tuple
 
 import requests
+
+# Windows cp949 콘솔에서도 unicode 출력으로 죽지 않게 강제 utf-8 + replace.
+try:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+except Exception:
+    pass
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]          # .../moneytree-web/import_MT
