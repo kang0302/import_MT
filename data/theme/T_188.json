@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_188",
+  "themeName": "미해군조선수요",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-04-27T00:00:00+09:00",
+    "notes": "g188 누적 import 기반 미 해군 조선수요 테마",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_188","type":"THEME","name":"미해군조선수요"},
+
+    {"id":"A_418","type":"ASSET","name":"제너럴다이내믹스","exposure":{"ticker":"GD","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_417","type":"ASSET","name":"헌팅턴잉걸스","exposure":{"ticker":"HII","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_419","type":"ASSET","name":"RTX","exposure":{"ticker":"RTX","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_272","type":"ASSET","name":"L3해리스테크놀로지스","exposure":{"ticker":"LHX","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_313","type":"ASSET","name":"커티스라이트","exposure":{"ticker":"CW","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_307","type":"ASSET","name":"GE에어로스페이스","exposure":{"ticker":"GE","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_432","type":"ASSET","name":"ITA ETF","exposure":{"ticker":"ITA","exchange":"BATS","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+
+    {"id":"M_131","type":"MACRO","name":"군비증강"},
+    {"id":"M_033","type":"MACRO","name":"미중패권경쟁"},
+
+    {"id":"BF_314","type":"BUSINESS_FIELD","name":"군함/잠수함건조"},
+    {"id":"BF_129","type":"BUSINESS_FIELD","name":"유도무기·레이더·전자전"},
+    {"id":"BF_147","type":"BUSINESS_FIELD","name":"기자재"},
+    {"id":"BF_208","type":"BUSINESS_FIELD","name":"엔진"}
+  ],
+
+  "edges": [
+    {"from":"A_418","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_417","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_419","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_272","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_313","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_307","to":"T_188","type":"THEMED_AS"},
+
+    {"from":"T_188","to":"A_432","type":"EXPOSED_TO"},
+
+    {"from":"M_131","to":"T_188","type":"IMPACTS"},
+    {"from":"M_033","to":"T_188","type":"IMPACTS"},
+
+    {"from":"A_418","to":"BF_314","type":"OPERATES"},
+    {"from":"A_417","to":"BF_314","type":"OPERATES"},
+    {"from":"A_419","to":"BF_129","type":"OPERATES"},
+    {"from":"A_272","to":"BF_129","type":"OPERATES"},
+    {"from":"A_313","to":"BF_147","type":"OPERATES"},
+    {"from":"A_307","to":"BF_208","type":"OPERATES"}
+  ],
+
+  "links": [
+    {"from":"A_418","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_417","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_419","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_272","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_313","to":"T_188","type":"THEMED_AS"},
+    {"from":"A_307","to":"T_188","type":"THEMED_AS"},
+
+    {"from":"T_188","to":"A_432","type":"EXPOSED_TO"},
+
+    {"from":"M_131","to":"T_188","type":"IMPACTS"},
+    {"from":"M_033","to":"T_188","type":"IMPACTS"},
+
+    {"from":"A_418","to":"BF_314","type":"OPERATES"},
+    {"from":"A_417","to":"BF_314","type":"OPERATES"},
+    {"from":"A_419","to":"BF_129","type":"OPERATES"},
+    {"from":"A_272","to":"BF_129","type":"OPERATES"},
+    {"from":"A_313","to":"BF_147","type":"OPERATES"},
+    {"from":"A_307","to":"BF_208","type":"OPERATES"}
+  ]
+}
