@@ -1,0 +1,405 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_106",
+  "themeName": "K_IT_LGCNS_vs삼성SDS",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-06T00:00:00+09:00",
+    "notes": "국내 IT서비스 양강(LG CNS vs 삼성SDS) 경쟁 구조 + 클라우드/AI/물류/AIDC 확장",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_106",
+      "type": "THEME",
+      "name": "K_IT_LGCNS_vs삼성SDS"
+    },
+    {
+      "id": "A_215",
+      "type": "ASSET",
+      "name": "LG씨엔에스",
+      "exposure": {
+        "ticker": "064400",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": 66700,
+        "marketCap": 7218003126000,
+        "pe_ttm": 17.82,
+        "valuationAsOf": "2026-04-24",
+        "valuationSource": "EODHD",
+        "return_3d": -0.4477611940298498,
+        "return_7d": 1.5220700152207112,
+        "return_1m": 10.985021736017163,
+        "return_ytd": 8.502928629875717,
+        "return_1y": 40.67210673472268,
+        "return_3y": null,
+        "returnsAsOf": "2026-04-24",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_791",
+      "type": "ASSET",
+      "name": "삼성SDS",
+      "exposure": {
+        "ticker": "018260",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": 20.462046204620464,
+        "return_7d": 18.506493506493516,
+        "return_1m": 13.003095975232192,
+        "return_ytd": 4.226156482010279,
+        "return_1y": 55.716723549488044,
+        "return_3y": 52.3372287145242,
+        "returnsAsOf": "2026-04-17",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_210",
+      "type": "ASSET",
+      "name": "마이크로소프트",
+      "exposure": {
+        "ticker": "MSFT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": 424.62,
+        "marketCap": 3153071010600,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-04-26",
+        "valuationSource": "FMP",
+        "return_3d": 0.10844964164464788,
+        "return_7d": 3.2585963717717936,
+        "return_1m": 14.44049159120311,
+        "return_ytd": -10.216940838161293,
+        "return_1y": 13.416490825075456,
+        "return_3y": 47.20748829953199,
+        "returnsAsOf": "2026-04-24",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_185",
+      "type": "BUSINESS_FIELD",
+      "name": "물류로보틱스"
+    },
+    {
+      "id": "BF_186",
+      "type": "BUSINESS_FIELD",
+      "name": "물류BPO"
+    },
+    {
+      "id": "BF_187",
+      "type": "BUSINESS_FIELD",
+      "name": "외주IT서비스"
+    },
+    {
+      "id": "BF_188",
+      "type": "BUSINESS_FIELD",
+      "name": "클라우드&AI"
+    },
+    {
+      "id": "BF_189",
+      "type": "BUSINESS_FIELD",
+      "name": "AIDC개발관리운영"
+    },
+    {
+      "id": "BF_190",
+      "type": "BUSINESS_FIELD",
+      "name": "스마트팩토리"
+    },
+    {
+      "id": "BF_191",
+      "type": "BUSINESS_FIELD",
+      "name": "스마트물류"
+    },
+    {
+      "id": "BF_192",
+      "type": "BUSINESS_FIELD",
+      "name": "SI/컨설팅"
+    },
+    {
+      "id": "BF_193",
+      "type": "BUSINESS_FIELD",
+      "name": "인도네시아"
+    },
+    {
+      "id": "BF_194",
+      "type": "BUSINESS_FIELD",
+      "name": "베트남"
+    },
+    {
+      "id": "BF_195",
+      "type": "BUSINESS_FIELD",
+      "name": "북미"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_114",
+      "type": "MACRO",
+      "name": "로보틱스확대"
+    },
+    {
+      "id": "M_115",
+      "type": "MACRO",
+      "name": "공공IT확대"
+    }
+  ],
+  "edges": [
+    {
+      "source": "A_215",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_791",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_210",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_215",
+      "target": "A_791",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_791",
+      "target": "A_215",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_215",
+      "target": "A_210",
+      "type": "PARTNERS"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_190",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_191",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_192",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_185",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_186",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_193",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_194",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_195",
+      "type": "SUB"
+    },
+    {
+      "source": "M_055",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_114",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_115",
+      "target": "T_106",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "source": "A_215",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_791",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_210",
+      "target": "T_106",
+      "type": "THEMED_AS"
+    },
+    {
+      "source": "A_215",
+      "target": "A_791",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_791",
+      "target": "A_215",
+      "type": "COMPETES"
+    },
+    {
+      "source": "A_215",
+      "target": "A_210",
+      "type": "PARTNERS"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_190",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_191",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_215",
+      "target": "BF_192",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_185",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_186",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_187",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "source": "A_791",
+      "target": "BF_189",
+      "type": "OPERATES"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_193",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_194",
+      "type": "SUB"
+    },
+    {
+      "source": "BF_189",
+      "target": "BF_195",
+      "type": "SUB"
+    },
+    {
+      "source": "M_055",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_114",
+      "target": "T_106",
+      "type": "IMPACTS"
+    },
+    {
+      "source": "M_115",
+      "target": "T_106",
+      "type": "IMPACTS"
+    }
+  ]
+}

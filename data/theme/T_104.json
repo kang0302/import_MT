@@ -1,0 +1,245 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_104",
+  "themeName": "글로벌통신장비사",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-05T00:00:00+09:00",
+    "notes": "g104 누적 import 기반 글로벌 통신장비사 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_104",
+      "type": "THEME",
+      "name": "글로벌통신장비사"
+    },
+    {
+      "id": "A_088",
+      "type": "ASSET",
+      "name": "Samsung Electronics",
+      "exposure": {
+        "ticker": "005930",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": 219500,
+        "marketCap": 1281601610113000,
+        "pe_ttm": 43.74,
+        "valuationAsOf": "2026-04-24",
+        "valuationSource": "EODHD",
+        "return_3d": 0.22831050228311334,
+        "return_7d": 4.028436018957349,
+        "return_1m": 21.87673514714048,
+        "return_ytd": 70.81712062256808,
+        "return_1y": 303.8225247799989,
+        "return_3y": 263.02521008403363,
+        "returnsAsOf": "2026-04-24",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_238",
+      "type": "ASSET",
+      "name": "NOKIA",
+      "exposure": {
+        "ticker": "NOK",
+        "exchange": "NYSE",
+        "country": "FI"
+      },
+      "metrics": {
+        "close": 10.455,
+        "marketCap": 56466325860,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-04-26",
+        "valuationSource": "FMP",
+        "return_3d": 0.5769230769230749,
+        "return_7d": 4.704704704704721,
+        "return_1m": 24.37574316290132,
+        "return_ytd": 60.67588325652844,
+        "return_1y": 96.98681732580042,
+        "return_3y": 126.40692640692643,
+        "returnsAsOf": "2026-04-24",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_261",
+      "type": "ASSET",
+      "name": "Huawei Technologies",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "CN"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_780",
+      "type": "ASSET",
+      "name": "Ericsson",
+      "exposure": {
+        "ticker": "ERIC",
+        "exchange": "NASDAQ",
+        "country": "SE"
+      },
+      "metrics": {
+        "close": 11.37,
+        "marketCap": 37900181496,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-04-18",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-04-18",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_112",
+      "type": "MACRO",
+      "name": "통신사CAPEX사이클"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    },
+    {
+      "id": "M_054",
+      "type": "MACRO",
+      "name": "5G/6G"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "C_096",
+      "type": "CHARACTER",
+      "name": "수주공백존재"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_088",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_238",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_261",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_780",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_112",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_113",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_054",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_104",
+      "to": "C_096",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_088",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_238",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_261",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_780",
+      "to": "T_104",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_112",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_113",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_054",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_104",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_104",
+      "to": "C_096",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
