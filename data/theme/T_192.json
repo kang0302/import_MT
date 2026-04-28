@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_192",
+  "themeName": "K뷰티-의료기기",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-04-28T00:00:00+09:00",
+    "notes": "g192 누적 import 기반 K뷰티-의료기기 테마",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_192","type":"THEME","name":"K뷰티-의료기기"},
+
+    {"id":"A_921","type":"ASSET","name":"클래시스","exposure":{"ticker":"214150","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1253","type":"ASSET","name":"루트로닉","exposure":{"ticker":null,"exchange":null,"country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_924","type":"ASSET","name":"휴젤","exposure":{"ticker":"145020","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1254","type":"ASSET","name":"하이로닉","exposure":{"ticker":"149980","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1255","type":"ASSET","name":"제이시스메디칼","exposure":{"ticker":null,"exchange":null,"country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1256","type":"ASSET","name":"휴메딕스","exposure":{"ticker":"200670","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_922","type":"ASSET","name":"파마리서치","exposure":{"ticker":"214450","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1257","type":"ASSET","name":"엘앤씨바이오","exposure":{"ticker":"290650","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+
+    {"id":"M_184","type":"MACRO","name":"K-뷰티확산"},
+    {"id":"M_185","type":"MACRO","name":"비만약확산"},
+    {"id":"M_186","type":"MACRO","name":"해외가성비수출수요"},
+    {"id":"M_187","type":"MACRO","name":"외국인의료관광수요"},
+
+    {"id":"BF_346","type":"BUSINESS_FIELD","name":"스킨부스터(콜라겐)"}
+  ],
+  "edges": [
+    {"from":"A_921","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1253","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_924","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1254","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1255","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1256","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_922","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1257","to":"T_192","type":"THEMED_AS"},
+
+    {"from":"M_184","to":"T_192","type":"IMPACTS"},
+    {"from":"M_185","to":"T_192","type":"IMPACTS"},
+    {"from":"M_186","to":"T_192","type":"IMPACTS"},
+    {"from":"M_187","to":"T_192","type":"IMPACTS"},
+
+    {"from":"A_922","to":"BF_346","type":"OPERATES"},
+    {"from":"A_1257","to":"BF_346","type":"OPERATES"},
+    {"from":"A_1256","to":"BF_346","type":"OPERATES"}
+  ],
+  "links": [
+    {"from":"A_921","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1253","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_924","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1254","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1255","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1256","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_922","to":"T_192","type":"THEMED_AS"},
+    {"from":"A_1257","to":"T_192","type":"THEMED_AS"},
+
+    {"from":"M_184","to":"T_192","type":"IMPACTS"},
+    {"from":"M_185","to":"T_192","type":"IMPACTS"},
+    {"from":"M_186","to":"T_192","type":"IMPACTS"},
+    {"from":"M_187","to":"T_192","type":"IMPACTS"},
+
+    {"from":"A_922","to":"BF_346","type":"OPERATES"},
+    {"from":"A_1257","to":"BF_346","type":"OPERATES"},
+    {"from":"A_1256","to":"BF_346","type":"OPERATES"}
+  ]
+}
