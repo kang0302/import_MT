@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_003",
+  "themeName": "소프트뱅크_AI투자",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-03T00:00:00+09:00",
+    "notes": "g003 누적 import 기반 소프트뱅크_AI투자 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_003",
+      "type": "THEME",
+      "name": "소프트뱅크_AI투자"
+    },
+    {
+      "id": "A_1258",
+      "type": "ASSET",
+      "name": "소프트뱅크",
+      "exposure": {
+        "ticker": "9984",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": null, "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": null }
+    },
+    {
+      "id": "A_586",
+      "type": "ASSET",
+      "name": "오픈AI(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
+      "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": null, "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": null }
+    },
+    {
+      "id": "A_242",
+      "type": "ASSET",
+      "name": "인텔",
+      "exposure": {
+        "ticker": "INTC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": null, "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": null }
+    },
+    {
+      "id": "A_058",
+      "type": "ASSET",
+      "name": "ARM홀딩스",
+      "exposure": {
+        "ticker": "ARM",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": null, "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": null }
+    },
+    {
+      "id": "A_286",
+      "type": "ASSET",
+      "name": "ABB",
+      "exposure": {
+        "ticker": "ABB",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": null, "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": null }
+    },
+    {
+      "id": "A_1287",
+      "type": "ASSET",
+      "name": "Ampere(비상장)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
+      "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": null, "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": null }
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_114",
+      "type": "MACRO",
+      "name": "로보틱스확대"
+    },
+    {
+      "id": "BF_358",
+      "type": "BUSINESS_FIELD",
+      "name": "로봇플랫폼"
+    }
+  ],
+  "edges": [
+    {"from":"A_1258","to":"T_003","type":"THEMED_AS"},
+    {"from":"M_055","to":"T_003","type":"IMPACTS"},
+    {"from":"M_114","to":"T_003","type":"IMPACTS"},
+    {"from":"A_055","to":"A_1258","type":"INVESTS"},
+    {"from":"A_1258","to":"A_242","type":"INVESTS"},
+    {"from":"A_1258","to":"A_058","type":"INVESTS"},
+    {"from":"A_1258","to":"A_1287","type":"INVESTS"},
+    {"from":"A_1258","to":"A_286","type":"INVESTS"},
+    {"from":"A_1258","to":"A_586","type":"PARTNERS"},
+    {"from":"A_1287","to":"BF_358","type":"OPERATES"}
+  ],
+  "links": [
+    {"from":"A_1258","to":"T_003","type":"THEMED_AS"},
+    {"from":"M_055","to":"T_003","type":"IMPACTS"},
+    {"from":"M_114","to":"T_003","type":"IMPACTS"},
+    {"from":"A_055","to":"A_1258","type":"INVESTS"},
+    {"from":"A_1258","to":"A_242","type":"INVESTS"},
+    {"from":"A_1258","to":"A_058","type":"INVESTS"},
+    {"from":"A_1258","to":"A_1287","type":"INVESTS"},
+    {"from":"A_1258","to":"A_286","type":"INVESTS"},
+    {"from":"A_1258","to":"A_586","type":"PARTNERS"},
+    {"from":"A_1287","to":"BF_358","type":"OPERATES"}
+  ]
+}
