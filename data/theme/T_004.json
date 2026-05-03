@@ -24,7 +24,12 @@
     {"id":"A_010","type":"ASSET","name":"스텔란티스","exposure":{"ticker":"STLA","exchange":"NYSE","country":"NL"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
 
     {"id":"M_001","type":"MACRO","name":"환율상승"},
-    {"id":"C_001","type":"CHARACTER","name":"주주친화"}
+    {"id":"C_001","type":"CHARACTER","name":"주주친화"},
+
+    {"id":"BF_159","type":"BUSINESS_FIELD","name":"전기차"},
+    {"id":"BF_156","type":"BUSINESS_FIELD","name":"로봇"},
+    {"id":"BF_358","type":"BUSINESS_FIELD","name":"하이브리드"},
+    {"id":"BF_359","type":"BUSINESS_FIELD","name":"북미전통차량"}
   ],
 
   "edges": [
@@ -42,7 +47,21 @@
     {"from":"M_001","to":"A_004","type":"IMPACTS"},
     {"from":"M_001","to":"A_005","type":"IMPACTS"},
 
-    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"}
+    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"},
+
+    {"from":"A_001","to":"BF_159","type":"OPERATES"},
+    {"from":"A_002","to":"BF_159","type":"OPERATES"},
+    {"from":"A_002","to":"BF_156","type":"OPERATES"},
+    {"from":"A_003","to":"BF_159","type":"OPERATES"},
+    {"from":"A_003","to":"BF_156","type":"OPERATES"},
+    {"from":"A_004","to":"BF_156","type":"OPERATES"},
+    {"from":"A_004","to":"BF_358","type":"OPERATES"},
+    {"from":"A_005","to":"BF_358","type":"OPERATES"},
+    {"from":"A_006","to":"BF_358","type":"OPERATES"},
+    {"from":"A_007","to":"BF_358","type":"OPERATES"},
+    {"from":"A_008","to":"BF_359","type":"OPERATES"},
+    {"from":"A_009","to":"BF_359","type":"OPERATES"},
+    {"from":"A_010","to":"BF_359","type":"OPERATES"}
   ],
 
   "links": [
@@ -60,6 +79,20 @@
     {"from":"M_001","to":"A_004","type":"IMPACTS"},
     {"from":"M_001","to":"A_005","type":"IMPACTS"},
 
-    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"}
+    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"},
+
+    {"from":"A_001","to":"BF_159","type":"OPERATES"},
+    {"from":"A_002","to":"BF_159","type":"OPERATES"},
+    {"from":"A_002","to":"BF_156","type":"OPERATES"},
+    {"from":"A_003","to":"BF_159","type":"OPERATES"},
+    {"from":"A_003","to":"BF_156","type":"OPERATES"},
+    {"from":"A_004","to":"BF_156","type":"OPERATES"},
+    {"from":"A_004","to":"BF_358","type":"OPERATES"},
+    {"from":"A_005","to":"BF_358","type":"OPERATES"},
+    {"from":"A_006","to":"BF_358","type":"OPERATES"},
+    {"from":"A_007","to":"BF_358","type":"OPERATES"},
+    {"from":"A_008","to":"BF_359","type":"OPERATES"},
+    {"from":"A_009","to":"BF_359","type":"OPERATES"},
+    {"from":"A_010","to":"BF_359","type":"OPERATES"}
   ]
 }
