@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_004",
+  "themeName": "글로벌자동차OEM",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-05-03T00:00:00+09:00",
+    "notes": "g004 누적 import 기반 글로벌자동차OEM 테마",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_004","type":"THEME","name":"글로벌자동차OEM"},
+
+    {"id":"A_001","type":"ASSET","name":"리비안","exposure":{"ticker":"RIVN","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_002","type":"ASSET","name":"테슬라","exposure":{"ticker":"TSLA","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_003","type":"ASSET","name":"BYD","exposure":{"ticker":"1211","exchange":"HKEX","country":"CN"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_004","type":"ASSET","name":"현대차","exposure":{"ticker":"005380","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_005","type":"ASSET","name":"기아차","exposure":{"ticker":"000270","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_006","type":"ASSET","name":"도요타","exposure":{"ticker":"7203","exchange":"TSE","country":"JP"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_007","type":"ASSET","name":"혼다","exposure":{"ticker":"7267","exchange":"TSE","country":"JP"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_008","type":"ASSET","name":"GM","exposure":{"ticker":"GM","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_009","type":"ASSET","name":"포드","exposure":{"ticker":"F","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_010","type":"ASSET","name":"스텔란티스","exposure":{"ticker":"STLA","exchange":"NYSE","country":"NL"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+
+    {"id":"M_001","type":"MACRO","name":"환율상승"},
+    {"id":"C_001","type":"CHARACTER","name":"주주친화"}
+  ],
+
+  "edges": [
+    {"from":"A_001","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_002","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_003","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_004","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_005","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_006","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_007","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_008","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_009","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_010","to":"T_004","type":"THEMED_AS"},
+
+    {"from":"M_001","to":"A_004","type":"IMPACTS"},
+    {"from":"M_001","to":"A_005","type":"IMPACTS"},
+
+    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"}
+  ],
+
+  "links": [
+    {"from":"A_001","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_002","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_003","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_004","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_005","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_006","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_007","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_008","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_009","to":"T_004","type":"THEMED_AS"},
+    {"from":"A_010","to":"T_004","type":"THEMED_AS"},
+
+    {"from":"M_001","to":"A_004","type":"IMPACTS"},
+    {"from":"M_001","to":"A_005","type":"IMPACTS"},
+
+    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"}
+  ]
+}
