@@ -4,95 +4,567 @@
   "themeName": "글로벌자동차OEM",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
     "dataAsOf": "2026-05-03T00:00:00+09:00",
     "notes": "g004 누적 import 기반 글로벌자동차OEM 테마",
     "sources": []
   },
   "nodes": [
-    {"id":"T_004","type":"THEME","name":"글로벌자동차OEM"},
-
-    {"id":"A_001","type":"ASSET","name":"리비안","exposure":{"ticker":"RIVN","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_002","type":"ASSET","name":"테슬라","exposure":{"ticker":"TSLA","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_003","type":"ASSET","name":"BYD","exposure":{"ticker":"1211","exchange":"HKEX","country":"CN"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_004","type":"ASSET","name":"현대차","exposure":{"ticker":"005380","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_005","type":"ASSET","name":"기아차","exposure":{"ticker":"000270","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_006","type":"ASSET","name":"도요타","exposure":{"ticker":"7203","exchange":"TSE","country":"JP"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_007","type":"ASSET","name":"혼다","exposure":{"ticker":"7267","exchange":"TSE","country":"JP"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_008","type":"ASSET","name":"GM","exposure":{"ticker":"GM","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_009","type":"ASSET","name":"포드","exposure":{"ticker":"F","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-    {"id":"A_010","type":"ASSET","name":"스텔란티스","exposure":{"ticker":"STLA","exchange":"NYSE","country":"NL"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
-
-    {"id":"M_001","type":"MACRO","name":"환율상승"},
-    {"id":"C_001","type":"CHARACTER","name":"주주친화"},
-
-    {"id":"BF_159","type":"BUSINESS_FIELD","name":"전기차"},
-    {"id":"BF_156","type":"BUSINESS_FIELD","name":"로봇"},
-    {"id":"BF_358","type":"BUSINESS_FIELD","name":"하이브리드"},
-    {"id":"BF_359","type":"BUSINESS_FIELD","name":"북미전통차량"}
+    {
+      "id": "T_004",
+      "type": "THEME",
+      "name": "글로벌자동차OEM"
+    },
+    {
+      "id": "A_001",
+      "type": "ASSET",
+      "name": "리비안",
+      "exposure": {
+        "ticker": "RIVN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": 15.02,
+        "marketCap": 18580901046,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-05-02",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_002",
+      "type": "ASSET",
+      "name": "테슬라",
+      "exposure": {
+        "ticker": "TSLA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": 390.82,
+        "marketCap": 1467810490400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-05-02",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_003",
+      "type": "ASSET",
+      "name": "BYD",
+      "exposure": {
+        "ticker": "1211",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_004",
+      "type": "ASSET",
+      "name": "현대차",
+      "exposure": {
+        "ticker": "005380",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": 674000,
+        "marketCap": 138006734284000,
+        "pe_ttm": 14.16,
+        "valuationAsOf": "2026-02-27",
+        "valuationSource": "PYKRX",
+        "return_3d": 1.3358778625954137,
+        "return_7d": -2.7472527472527486,
+        "return_1m": 8.811475409836067,
+        "return_ytd": 77.8894472361809,
+        "return_1y": 192.2399559713814,
+        "return_3y": 194.18282548476452,
+        "returnsAsOf": "2026-04-30",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_005",
+      "type": "ASSET",
+      "name": "기아차",
+      "exposure": {
+        "ticker": "000270",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": 205500,
+        "marketCap": 80229871089000,
+        "pe_ttm": 8.26,
+        "valuationAsOf": "2026-02-27",
+        "valuationSource": "PYKRX",
+        "return_3d": -0.5242463958060273,
+        "return_7d": -5.125000000000002,
+        "return_1m": -2.253702511268507,
+        "return_ytd": 25.87064676616915,
+        "return_1y": 78.58823529411765,
+        "return_3y": 93.62244897959184,
+        "returnsAsOf": "2026-04-30",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_006",
+      "type": "ASSET",
+      "name": "도요타",
+      "exposure": {
+        "ticker": "7203",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_007",
+      "type": "ASSET",
+      "name": "혼다",
+      "exposure": {
+        "ticker": "7267",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_008",
+      "type": "ASSET",
+      "name": "GM",
+      "exposure": {
+        "ticker": "GM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": 75.77,
+        "marketCap": 68319171825,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-05-02",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_009",
+      "type": "ASSET",
+      "name": "포드",
+      "exposure": {
+        "ticker": "F",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "close": 11.8799,
+        "marketCap": 46552813738,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-05-02",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_010",
+      "type": "ASSET",
+      "name": "스텔란티스",
+      "exposure": {
+        "ticker": "STLA",
+        "exchange": "NYSE",
+        "country": "NL"
+      },
+      "metrics": {
+        "close": 7.13,
+        "marketCap": 20659055187,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-05-02",
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-02",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_001",
+      "type": "MACRO",
+      "name": "환율상승"
+    },
+    {
+      "id": "C_001",
+      "type": "CHARACTER",
+      "name": "주주친화"
+    },
+    {
+      "id": "BF_159",
+      "type": "BUSINESS_FIELD",
+      "name": "전기차"
+    },
+    {
+      "id": "BF_156",
+      "type": "BUSINESS_FIELD",
+      "name": "로봇"
+    },
+    {
+      "id": "BF_358",
+      "type": "BUSINESS_FIELD",
+      "name": "하이브리드"
+    },
+    {
+      "id": "BF_359",
+      "type": "BUSINESS_FIELD",
+      "name": "북미전통차량"
+    }
   ],
-
   "edges": [
-    {"from":"A_001","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_002","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_003","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_004","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_005","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_006","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_007","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_008","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_009","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_010","to":"T_004","type":"THEMED_AS"},
-
-    {"from":"M_001","to":"A_004","type":"IMPACTS"},
-    {"from":"M_001","to":"A_005","type":"IMPACTS"},
-
-    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"},
-
-    {"from":"A_001","to":"BF_159","type":"OPERATES"},
-    {"from":"A_002","to":"BF_159","type":"OPERATES"},
-    {"from":"A_002","to":"BF_156","type":"OPERATES"},
-    {"from":"A_003","to":"BF_159","type":"OPERATES"},
-    {"from":"A_003","to":"BF_156","type":"OPERATES"},
-    {"from":"A_004","to":"BF_156","type":"OPERATES"},
-    {"from":"A_004","to":"BF_358","type":"OPERATES"},
-    {"from":"A_005","to":"BF_358","type":"OPERATES"},
-    {"from":"A_006","to":"BF_358","type":"OPERATES"},
-    {"from":"A_007","to":"BF_358","type":"OPERATES"},
-    {"from":"A_008","to":"BF_359","type":"OPERATES"},
-    {"from":"A_009","to":"BF_359","type":"OPERATES"},
-    {"from":"A_010","to":"BF_359","type":"OPERATES"}
+    {
+      "from": "A_001",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_002",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_003",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_004",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_005",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_006",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_007",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_008",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_009",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_010",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_001",
+      "to": "A_004",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_001",
+      "to": "A_005",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_008",
+      "to": "C_001",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_001",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_002",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_002",
+      "to": "BF_156",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_003",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_003",
+      "to": "BF_156",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_004",
+      "to": "BF_156",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_004",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_005",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_006",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_007",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_008",
+      "to": "BF_359",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_009",
+      "to": "BF_359",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_010",
+      "to": "BF_359",
+      "type": "OPERATES"
+    }
   ],
-
   "links": [
-    {"from":"A_001","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_002","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_003","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_004","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_005","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_006","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_007","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_008","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_009","to":"T_004","type":"THEMED_AS"},
-    {"from":"A_010","to":"T_004","type":"THEMED_AS"},
-
-    {"from":"M_001","to":"A_004","type":"IMPACTS"},
-    {"from":"M_001","to":"A_005","type":"IMPACTS"},
-
-    {"from":"A_008","to":"C_001","type":"HAS_TRAIT"},
-
-    {"from":"A_001","to":"BF_159","type":"OPERATES"},
-    {"from":"A_002","to":"BF_159","type":"OPERATES"},
-    {"from":"A_002","to":"BF_156","type":"OPERATES"},
-    {"from":"A_003","to":"BF_159","type":"OPERATES"},
-    {"from":"A_003","to":"BF_156","type":"OPERATES"},
-    {"from":"A_004","to":"BF_156","type":"OPERATES"},
-    {"from":"A_004","to":"BF_358","type":"OPERATES"},
-    {"from":"A_005","to":"BF_358","type":"OPERATES"},
-    {"from":"A_006","to":"BF_358","type":"OPERATES"},
-    {"from":"A_007","to":"BF_358","type":"OPERATES"},
-    {"from":"A_008","to":"BF_359","type":"OPERATES"},
-    {"from":"A_009","to":"BF_359","type":"OPERATES"},
-    {"from":"A_010","to":"BF_359","type":"OPERATES"}
+    {
+      "from": "A_001",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_002",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_003",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_004",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_005",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_006",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_007",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_008",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_009",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_010",
+      "to": "T_004",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_001",
+      "to": "A_004",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_001",
+      "to": "A_005",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_008",
+      "to": "C_001",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_001",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_002",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_002",
+      "to": "BF_156",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_003",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_003",
+      "to": "BF_156",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_004",
+      "to": "BF_156",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_004",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_005",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_006",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_007",
+      "to": "BF_358",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_008",
+      "to": "BF_359",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_009",
+      "to": "BF_359",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_010",
+      "to": "BF_359",
+      "type": "OPERATES"
+    }
   ]
 }
