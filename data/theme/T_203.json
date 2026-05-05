@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_203",
+  "themeName": "CJ 그룹 관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-05-05T00:00:00+09:00",
+    "notes": "CJ 그룹 밸류체인 (식품-콘텐츠-물류)",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_203","type":"THEME","name":"CJ 그룹 관련주"},
+
+    {"id":"A_016","type":"ASSET","name":"CJ주식회사","exposure":{"ticker":"001040","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_011","type":"ASSET","name":"CJ제일제당","exposure":{"ticker":"097950","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_013","type":"ASSET","name":"CJENM","exposure":{"ticker":"035760","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_014","type":"ASSET","name":"CJCGV","exposure":{"ticker":"079160","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_012","type":"ASSET","name":"CJ대한통운","exposure":{"ticker":"000120","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_015","type":"ASSET","name":"스튜디오드래곤","exposure":{"ticker":"253450","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_038","type":"ASSET","name":"CJ프레시웨이","exposure":{"ticker":"051500","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_018","type":"ASSET","name":"CJ올리브영(비)","exposure":{"ticker":"","exchange":"","country":"KR"},"metrics":{}},
+    {"id":"A_017","type":"ASSET","name":"CJ바이오사이언스(비)","exposure":{"ticker":"","exchange":"","country":"KR"},"metrics":{}},
+    {"id":"A_019","type":"ASSET","name":"쿠팡","exposure":{"ticker":"CPNG","exchange":"NYSE","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+
+    {"id":"BF_365","type":"BUSINESS_FIELD","name":"엔터/콘텐츠"},
+    {"id":"BF_366","type":"BUSINESS_FIELD","name":"필수소비재"},
+    {"id":"BF_367","type":"BUSINESS_FIELD","name":"탈플라스틱사업"},
+
+    {"id":"M_002","type":"MACRO","name":"곡물가안정"},
+    {"id":"M_003","type":"MACRO","name":"환율하락"},
+    {"id":"M_004","type":"MACRO","name":"내수경기"},
+    {"id":"M_005","type":"MACRO","name":"합병기대"},
+    {"id":"M_006","type":"MACRO","name":"상법개정"}
+  ],
+
+  "edges": [
+    {"from":"A_016","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_011","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_013","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_014","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_012","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_015","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_038","to":"T_203","type":"THEMED_AS"},
+
+    {"from":"A_013","to":"BF_365","type":"OPERATES"},
+    {"from":"A_014","to":"BF_365","type":"OPERATES"},
+    {"from":"A_015","to":"BF_365","type":"OPERATES"},
+    {"from":"A_011","to":"BF_366","type":"OPERATES"},
+    {"from":"A_011","to":"BF_367","type":"OPERATES"},
+
+    {"from":"A_016","to":"A_018","type":"INVESTS"},
+    {"from":"A_016","to":"A_017","type":"INVESTS"},
+
+    {"from":"A_012","to":"A_019","type":"COMPETES"},
+
+    {"from":"M_004","to":"T_203","type":"IMPACTS"},
+    {"from":"M_002","to":"A_011","type":"IMPACTS"},
+    {"from":"M_003","to":"A_011","type":"IMPACTS"},
+    {"from":"M_005","to":"A_016","type":"IMPACTS"},
+    {"from":"M_006","to":"A_016","type":"IMPACTS"}
+  ],
+
+  "links": [
+    {"from":"A_016","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_011","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_013","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_014","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_012","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_015","to":"T_203","type":"THEMED_AS"},
+    {"from":"A_038","to":"T_203","type":"THEMED_AS"},
+
+    {"from":"A_013","to":"BF_365","type":"OPERATES"},
+    {"from":"A_014","to":"BF_365","type":"OPERATES"},
+    {"from":"A_015","to":"BF_365","type":"OPERATES"},
+    {"from":"A_011","to":"BF_366","type":"OPERATES"},
+    {"from":"A_011","to":"BF_367","type":"OPERATES"},
+
+    {"from":"A_016","to":"A_018","type":"INVESTS"},
+    {"from":"A_016","to":"A_017","type":"INVESTS"},
+
+    {"from":"A_012","to":"A_019","type":"COMPETES"},
+
+    {"from":"M_004","to":"T_203","type":"IMPACTS"},
+    {"from":"M_002","to":"A_011","type":"IMPACTS"},
+    {"from":"M_003","to":"A_011","type":"IMPACTS"},
+    {"from":"M_005","to":"A_016","type":"IMPACTS"},
+    {"from":"M_006","to":"A_016","type":"IMPACTS"}
+  ]
+}
