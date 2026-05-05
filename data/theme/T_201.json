@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_201",
+  "themeName": "글로벌반도체장비",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d","7d","1m","ytd","1y","3y"],
+    "dataAsOf": "2026-05-05T00:00:00+09:00",
+    "notes": "g201 반도체장비 테마 (DRAM/HBM Capex + 미세화 + 적층 구조)",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_201","type":"THEME","name":"글로벌반도체장비"},
+
+    {"id":"A_952","type":"ASSET","name":"어플라이드머티리얼즈","exposure":{"ticker":"AMAT","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_803","type":"ASSET","name":"램리서치","exposure":{"ticker":"LRCX","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1312","type":"ASSET","name":"도쿄일렉트론","exposure":{"ticker":"8035","exchange":"TSE","country":"JP"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1313","type":"ASSET","name":"나우라","exposure":{"ticker":"002371","exchange":"SZSE","country":"CN"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_906","type":"ASSET","name":"세메스","exposure":{"ticker":"","exchange":"","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_946","type":"ASSET","name":"브이엠","exposure":{"ticker":"089970","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_088","type":"ASSET","name":"삼성전자","exposure":{"ticker":"005930","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_217","type":"ASSET","name":"SK하이닉스","exposure":{"ticker":"000660","exchange":"KOSPI","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+
+    {"id":"C_139","type":"CHARACTER","name":"건식글로벌1위(~40%)"},
+
+    {"id":"M_186","type":"MACRO","name":"DRAMCAPEX"},
+    {"id":"M_187","type":"MACRO","name":"HBMCAPEX"},
+    {"id":"M_188","type":"MACRO","name":"미세화"},
+    {"id":"M_189","type":"MACRO","name":"적층단수증가"}
+  ],
+  "edges": [
+    {"from":"A_952","to":"T_201","type":"THEMED_AS"},
+    {"from":"A_803","to":"T_201","type":"THEMED_AS"},
+    {"from":"A_1312","to":"T_201","type":"THEMED_AS"},
+    {"from":"A_1313","to":"T_201","type":"THEMED_AS"},
+    {"from":"A_906","to":"T_201","type":"THEMED_AS"},
+    {"from":"A_946","to":"T_201","type":"THEMED_AS"},
+
+    {"from":"A_946","to":"A_217","type":"SUPPLIES"},
+    {"from":"A_906","to":"A_088","type":"SUPPLIES"},
+
+    {"from":"A_803","to":"C_139","type":"HAS_TRAIT"},
+
+    {"from":"M_186","to":"T_201","type":"IMPACTS"},
+    {"from":"M_187","to":"T_201","type":"IMPACTS"},
+    {"from":"M_188","to":"T_201","type":"IMPACTS"},
+    {"from":"M_189","to":"T_201","type":"IMPACTS"}
+  ]
+}
