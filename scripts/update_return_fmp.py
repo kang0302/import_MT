@@ -210,13 +210,22 @@ def compute_returns_from_closes(hist: List[Dict[str, Any]]) -> Tuple[Optional[st
     return (as_of_date, out)
 
 
+_DEBUG_DUMPED = 0
+
+
 def fetch_history(symbol: str, api_key: str, from_date: str, to_date: str) -> Tuple[List[Dict[str, Any]], Optional[str]]:
+    global _DEBUG_DUMPED
     url = f"{FMP_BASE}{HIST_EOD_FULL_PATH}"
     params = {"symbol": symbol, "apikey": api_key, "from": from_date, "to": to_date}
 
     for attempt in range(MAX_RETRIES + 1):
         try:
             data = http_get_json(url, params)
+            if _DEBUG_DUMPED < 3:
+                _DEBUG_DUMPED += 1
+                preview = json.dumps(data)[:600] if data is not None else "None"
+                dlen = len(data) if hasattr(data, "__len__") else "n/a"
+                print(f"🔍 DEBUG raw response sym={symbol} type={type(data).__name__} len={dlen} url={url}?symbol={symbol}&from={from_date}&to={to_date}&apikey=*** preview={preview}")
             hist = parse_hist_payload(data)
             return (hist, None)
         except requests.HTTPError as e:
