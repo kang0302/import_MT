@@ -70,6 +70,46 @@ def normalize_symbol(sym: str) -> str:
     return s
 
 
+# 거래소 → FMP/Yahoo-style 접미사. SSOT의 ticker는 raw(예: "PRY", "RR")로 저장하고
+# FMP 호출 직전에만 변환. 디스플레이/Google Finance URL 등 다른 경로엔 영향 없음.
+EXCHANGE_SUFFIX_MAP: Dict[str, str] = {
+    # US (no suffix)
+    "NYSE": "", "NASDAQ": "", "NYSEARCA": "", "NYSE ARCA": "", "NYSE_ARCA": "",
+    "NYSEAMERICAN": "", "AMEX": "", "BATS": "", "CBOE": "", "CBOEBZX": "", "OTC": "",
+    # Europe
+    "LSE": ".L", "XETRA": ".DE", "SIX": ".SW",
+    "EURONEXT MILAN": ".MI", "EURONEXT PARIS": ".PA",
+    "BME": ".MC", "OMX": ".ST", "HEL": ".HE", "CPH": ".CO",
+    # Asia-Pacific
+    "HKEX": ".HK", "TSE": ".T", "SSE": ".SS", "SZSE": ".SZ",
+    "TWSE": ".TW", "IDX": ".JK", "ASX": ".AX",
+    # Americas (non-US)
+    "TSX": ".TO", "TSXV": ".V",
+}
+
+# Generic "EURONEXT"(도시 미명시) → 국가로 fallback
+EURONEXT_COUNTRY_SUFFIX: Dict[str, str] = {
+    "FR": ".PA", "NL": ".AS", "BE": ".BR", "IT": ".MI",
+    "PT": ".LS", "EU": ".PA",
+}
+
+
+def to_fmp_symbol(ticker: str, exchange: str, country: str) -> str:
+    t = normalize_symbol(ticker)
+    if not t:
+        return t
+    # 이미 접미사가 붙은 raw(예: "CO2.L") 또는 클래스 표기("MOG.A")는 그대로
+    if "." in t:
+        return t
+    ex = (exchange or "").strip().upper()
+    co = (country or "").strip().upper()
+    if ex in EXCHANGE_SUFFIX_MAP:
+        return t + EXCHANGE_SUFFIX_MAP[ex]
+    if ex == "EURONEXT":
+        return t + EURONEXT_COUNTRY_SUFFIX.get(co, "")
+    return t
+
+
 def load_overseas_assets_from_ssot() -> Dict[str, Dict[str, str]]:
     """
     KR 제외(=해외/글로벌) 자산만 returns 대상으로.
@@ -218,12 +258,13 @@ def main() -> None:
     last_asof_seen: Optional[str] = None
 
     for idx, (aid, meta) in enumerate(assets.items(), start=1):
-        sym = meta["ticker"]
+        raw_ticker = meta["ticker"]
+        sym = to_fmp_symbol(raw_ticker, meta.get("exchange", ""), meta.get("country", ""))
 
         hist, err = fetch_history(sym, api_key, from_date, to_date)
         if err:
             skipped += 1
-            print(f"⚠ skip {aid} sym={sym} err={err}")
+            print(f"⚠ skip {aid} sym={sym} (raw={raw_ticker}) err={err}")
             time.sleep(SLEEP_BETWEEN_CALLS)
             continue
 
@@ -232,7 +273,8 @@ def main() -> None:
             last_asof_seen = asof
 
         items[aid] = {
-            "ticker": sym,
+            "ticker": raw_ticker,
+            "fmpSymbol": sym,
             "exchange": meta.get("exchange", ""),
             "country": meta.get("country", ""),
             **rets,
