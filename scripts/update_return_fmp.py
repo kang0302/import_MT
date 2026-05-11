@@ -146,9 +146,12 @@ def load_overseas_assets_from_ssot() -> Dict[str, Dict[str, str]]:
 
 def parse_hist_payload(payload: Any) -> List[Dict[str, Any]]:
     """
-    기대 형태(대부분):
-      {"symbol":"AAPL", "historical":[{"date":"2026-02-26","close":...}, ...]}
+    FMP 응답 형태 두 가지 모두 지원:
+      (1) 새 stable API (현재): [{"symbol":"AAPL","date":"...","close":...}, ...]  flat list
+      (2) 옛 v3 API:           {"symbol":"AAPL", "historical":[{"date":"...","close":...}, ...]}
     """
+    if isinstance(payload, list):
+        return [x for x in payload if isinstance(x, dict)]
     if isinstance(payload, dict):
         hist = payload.get("historical")
         if isinstance(hist, list):
@@ -210,22 +213,13 @@ def compute_returns_from_closes(hist: List[Dict[str, Any]]) -> Tuple[Optional[st
     return (as_of_date, out)
 
 
-_DEBUG_DUMPED = 0
-
-
 def fetch_history(symbol: str, api_key: str, from_date: str, to_date: str) -> Tuple[List[Dict[str, Any]], Optional[str]]:
-    global _DEBUG_DUMPED
     url = f"{FMP_BASE}{HIST_EOD_FULL_PATH}"
     params = {"symbol": symbol, "apikey": api_key, "from": from_date, "to": to_date}
 
     for attempt in range(MAX_RETRIES + 1):
         try:
             data = http_get_json(url, params)
-            if _DEBUG_DUMPED < 3:
-                _DEBUG_DUMPED += 1
-                preview = json.dumps(data)[:600] if data is not None else "None"
-                dlen = len(data) if hasattr(data, "__len__") else "n/a"
-                print(f"🔍 DEBUG raw response sym={symbol} type={type(data).__name__} len={dlen} url={url}?symbol={symbol}&from={from_date}&to={to_date}&apikey=*** preview={preview}")
             hist = parse_hist_payload(data)
             return (hist, None)
         except requests.HTTPError as e:
