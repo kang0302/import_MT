@@ -51,6 +51,17 @@ jobs:
 
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
 
+          # ✅ rebase가 unresolved conflict를 남기고 끝났는지 검사 (commit 전 abort)
+          if [ -n "$(git ls-files -u)" ]; then
+            echo "❌ Unmerged paths after rebase:"
+            git status --short
+            exit 1
+          fi
+          if grep -rlE '^(<<<<<<< |=======$|>>>>>>> )' data/ 2>/dev/null; then
+            echo "❌ Conflict markers found in data/ after rebase. Aborting before commit."
+            exit 1
+          fi
+
           git add data/cache/valuation_kr.json
           git add data/theme/T_*.json
           git add data/theme/index.json

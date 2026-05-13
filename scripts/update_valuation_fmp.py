@@ -109,6 +109,44 @@ def normalize_symbol(sym: str) -> str:
     return s
 
 
+# 거래소 → FMP/Yahoo-style 접미사. SSOT의 ticker는 raw(예: "PRY", "RR")로 저장하고
+# FMP 호출 직전에만 변환. 디스플레이/Google Finance URL 등 다른 경로엔 영향 없음.
+EXCHANGE_SUFFIX_MAP: Dict[str, str] = {
+    # US (no suffix)
+    "NYSE": "", "NASDAQ": "", "NYSEARCA": "", "NYSE ARCA": "", "NYSE_ARCA": "",
+    "NYSEAMERICAN": "", "AMEX": "", "BATS": "", "CBOE": "", "CBOEBZX": "", "OTC": "",
+    # Europe
+    "LSE": ".L", "XETRA": ".DE", "SIX": ".SW",
+    "EURONEXT MILAN": ".MI", "EURONEXT PARIS": ".PA",
+    "BME": ".MC", "OMX": ".ST", "HEL": ".HE", "CPH": ".CO",
+    # Asia-Pacific
+    "HKEX": ".HK", "TSE": ".T", "SSE": ".SS", "SZSE": ".SZ",
+    "TWSE": ".TW", "IDX": ".JK", "ASX": ".AX",
+    # Americas (non-US)
+    "TSX": ".TO", "TSXV": ".V",
+}
+
+EURONEXT_COUNTRY_SUFFIX: Dict[str, str] = {
+    "FR": ".PA", "NL": ".AS", "BE": ".BR", "IT": ".MI",
+    "PT": ".LS", "EU": ".PA",
+}
+
+
+def to_fmp_symbol(ticker: str, exchange: str, country: str) -> str:
+    t = normalize_symbol(ticker)
+    if not t:
+        return t
+    if "." in t:
+        return t
+    ex = (exchange or "").strip().upper()
+    co = (country or "").strip().upper()
+    if ex in EXCHANGE_SUFFIX_MAP:
+        return t + EXCHANGE_SUFFIX_MAP[ex]
+    if ex == "EURONEXT":
+        return t + EURONEXT_COUNTRY_SUFFIX.get(co, "")
+    return t
+
+
 def parse_quote_payload(payload: Any) -> Optional[Dict[str, Any]]:
     """
     stable/quote 응답은 보통 list[dict] 형태.
@@ -210,13 +248,14 @@ def main() -> None:
     skipped = 0
 
     for idx, (aid, meta) in enumerate(assets.items(), start=1):
-        sym = meta["ticker"]
+        raw_ticker = meta["ticker"]
+        sym = to_fmp_symbol(raw_ticker, meta.get("exchange", ""), meta.get("country", ""))
         q, err = fetch_quote(sym, api_key)
 
         if err:
             # 402/403/404 등은 글로벌이라도 심볼별로 뜰 수 있으니 스킵
             skipped += 1
-            print(f"⚠ skip {aid} sym={sym} err={err}")
+            print(f"⚠ skip {aid} sym={sym} (raw={raw_ticker}) err={err}")
             time.sleep(SLEEP_BETWEEN_CALLS)
             continue
 
@@ -225,7 +264,8 @@ def main() -> None:
         pe = to_float_or_none(q.get("pe"))
 
         items[aid] = {
-            "ticker": sym,
+            "ticker": raw_ticker,
+            "fmpSymbol": sym,
             "exchange": meta.get("exchange", ""),
             "country": meta.get("country", ""),
             "close": close,

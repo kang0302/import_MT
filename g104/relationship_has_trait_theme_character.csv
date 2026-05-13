@@ -1,0 +1,2 @@
+theme_id,character_id,relation_type,confidence,description
+T_104,C_096,HAS_TRAIT,0.88,일부통신장비업체는세대교체기와투자공백기에수주공백위험존재

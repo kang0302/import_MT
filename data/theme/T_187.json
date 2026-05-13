@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_187",
+  "themeName": "K-생명보험",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-27T00:00:00+09:00",
+    "notes": "g187 누적 import 기반 K-생명보험 테마",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_187",
+      "type": "THEME",
+      "name": "K-생명보험"
+    },
+    {
+      "id": "A_1229",
+      "type": "ASSET",
+      "name": "삼성생명",
+      "exposure": {
+        "ticker": "032830",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": 3.7288135593220417,
+        "return_7d": 22.645290581162314,
+        "return_1m": 30.49040511727079,
+        "return_ytd": 95.77735124760076,
+        "return_1y": 267.78846153846155,
+        "return_3y": 390.3846153846154,
+        "returnsAsOf": "2026-05-13",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_1230",
+      "type": "ASSET",
+      "name": "한화생명",
+      "exposure": {
+        "ticker": "088350",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": 3.750000000000009,
+        "return_7d": 1.9447287615148356,
+        "return_1m": 4.293193717277477,
+        "return_ytd": 53.23076923076924,
+        "return_1y": 93.0232558139535,
+        "return_3y": 106.63900414937761,
+        "returnsAsOf": "2026-05-13",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_1231",
+      "type": "ASSET",
+      "name": "교보생명",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1232",
+      "type": "ASSET",
+      "name": "동양생명",
+      "exposure": {
+        "ticker": "082640",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": -4.791154791154795,
+        "return_7d": -6.738868832731648,
+        "return_1m": -12.52821670428894,
+        "return_ytd": 21.09375,
+        "return_1y": 24.598070739549847,
+        "return_3y": 108.05369127516778,
+        "returnsAsOf": "2026-05-13",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_1233",
+      "type": "ASSET",
+      "name": "미래에셋생명",
+      "exposure": {
+        "ticker": "085620",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": -10.506329113924052,
+        "return_7d": -11.236660389202758,
+        "return_1m": -14.146933819064966,
+        "return_ytd": 50.907150480256135,
+        "return_1y": 175.09727626459144,
+        "return_3y": 450.1945525291829,
+        "returnsAsOf": "2026-05-13",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "M_072",
+      "type": "MACRO",
+      "name": "금리인상"
+    },
+    {
+      "id": "M_173",
+      "type": "MACRO",
+      "name": "주주환원정책"
+    },
+    {
+      "id": "M_174",
+      "type": "MACRO",
+      "name": "삼성전자지분/배당가치"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1229",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1230",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1231",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1232",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1233",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_072",
+      "to": "T_187",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_173",
+      "to": "T_187",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_174",
+      "to": "A_1229",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1229",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1230",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1231",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1232",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1233",
+      "to": "T_187",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_072",
+      "to": "T_187",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_173",
+      "to": "T_187",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_174",
+      "to": "A_1229",
+      "type": "IMPACTS"
+    }
+  ]
+}
