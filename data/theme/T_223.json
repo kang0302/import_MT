@@ -16,6 +16,7 @@
     "notes": "g223 누적 import 기반 글로벌 전력인프라·GE버노바 테마",
     "sources": []
   },
+
   "nodes": [
     {
       "id": "T_223",
@@ -362,6 +363,27 @@
     },
 
     {
+      "id": "M_152",
+      "type": "MACRO",
+      "name": "신재생에너지확대"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "M_218",
+      "type": "MACRO",
+      "name": "전력공급병목"
+    },
+    {
+      "id": "M_219",
+      "type": "MACRO",
+      "name": "SMR/원전확대"
+    },
+
+    {
       "id": "BF_158",
       "type": "BUSINESS_FIELD",
       "name": "ESS"
@@ -402,6 +424,26 @@
 
     {
       "from": "A_167",
+      "to": "BF_158",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_125",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_146",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_147",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
       "to": "BF_353",
       "type": "OPERATES"
     },
@@ -410,84 +452,9 @@
       "to": "BF_207",
       "type": "OPERATES"
     },
-    {
-      "from": "A_161",
-      "to": "BF_207",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_161",
-      "to": "BF_146",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1466",
-      "to": "BF_147",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1466",
-      "to": "BF_146",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1051",
-      "to": "BF_353",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1467",
-      "to": "BF_353",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1467",
-      "to": "BF_146",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1467",
-      "to": "BF_207",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1050",
-      "to": "BF_147",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1050",
-      "to": "BF_146",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1468",
-      "to": "BF_146",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1468",
-      "to": "BF_147",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1469",
-      "to": "BF_125",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1470",
-      "to": "BF_158",
-      "type": "OPERATES"
-    },
 
     {
       "from": "A_1471",
-      "to": "A_161",
-      "type": "IN_ETF"
-    },
-    {
-      "from": "A_1471",
       "to": "A_167",
       "type": "IN_ETF"
     },
@@ -497,23 +464,8 @@
       "type": "IN_ETF"
     },
     {
-      "from": "A_1472",
-      "to": "A_1467",
-      "type": "IN_ETF"
-    },
-    {
       "from": "A_1473",
-      "to": "A_1466",
-      "type": "IN_ETF"
-    },
-    {
-      "from": "A_1473",
-      "to": "A_1050",
-      "type": "IN_ETF"
-    },
-    {
-      "from": "A_1473",
-      "to": "A_1470",
+      "to": "A_167",
       "type": "IN_ETF"
     },
 
@@ -570,6 +522,96 @@
       "from": "A_167",
       "to": "T_223",
       "type": "THEMED_AS"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_158",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_125",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_146",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_147",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_353",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_167",
+      "to": "BF_207",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1471",
+      "to": "A_167",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1472",
+      "to": "A_167",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_1473",
+      "to": "A_167",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_167",
+      "to": "A_161",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_167",
+      "to": "A_1467",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_1466",
+      "to": "A_1050",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_1468",
+      "to": "A_1467",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_1469",
+      "to": "A_1470",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "M_152",
+      "to": "T_223",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_212",
+      "to": "T_223",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_218",
+      "to": "T_223",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_219",
+      "to": "T_223",
+      "type": "IMPACTS"
     }
   ]
 }
