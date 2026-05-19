@@ -1,9 +1,10 @@
-name: Update KR Valuation + Freeze (PYKRX, DEPRECATED)
+name: Update KR Close + Freeze (EODHD)
 
-# DEPRECATED 2026-05-19 — PYKRX get_market_cap_by_ticker JSON 파싱 매일 실패.
-# 후속 워크플로 update-close-kr.yml (EODHD) 가 KR Valuation 책임짐. schedule 제거 + manual dispatch 만 유지.
 on:
   workflow_dispatch: {}
+  schedule:
+    # 16:05 KST = 07:05 UTC (매일)
+    - cron: "5 7 * * *"
 
 concurrency:
   group: mt-freeze-commit-main
@@ -15,7 +16,6 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,9 +32,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run KR valuation updater (PYKRX)
+      - name: Run KR close updater (EODHD)
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+          EODHD_SLEEP_SEC: "0.15"
+          EODHD_RETRIES: "3"
+          EODHD_TIMEOUT_SEC: "30"
+          EODHD_SENTINEL: "005930.KO"
         run: |
-          python -u scripts/update_valuation_kr.py
+          python -u scripts/update_close_kr_eodhd.py
 
       - name: Inject metrics into Freeze + update theme index
         run: |
@@ -49,17 +55,6 @@ jobs:
 
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
 
-          # ✅ rebase가 unresolved conflict를 남기고 끝났는지 검사 (commit 전 abort)
-          if [ -n "$(git ls-files -u)" ]; then
-            echo "❌ Unmerged paths after rebase:"
-            git status --short
-            exit 1
-          fi
-          if grep -rlE '^(<<<<<<< |=======$|>>>>>>> )' data/ 2>/dev/null; then
-            echo "❌ Conflict markers found in data/ after rebase. Aborting before commit."
-            exit 1
-          fi
-
           git add data/cache/valuation_kr.json
           git add data/theme/T_*.json
           git add data/theme/index.json
@@ -69,5 +64,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: KR valuation + freeze update (PYKRX) [manual]"
+          git commit -m "chore: KR close + freeze update (EODHD)"
           git push origin HEAD:"${GITHUB_REF_NAME}"
