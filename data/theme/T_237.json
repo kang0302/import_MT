@@ -272,6 +272,56 @@
       "id": "C_175",
       "type": "CHARACTER",
       "name": "월배당지급"
+    },
+    {
+      "id": "A_1541",
+      "type": "ASSET",
+      "name": "PLUS고배당주",
+      "exposure": {
+        "ticker": "",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1542",
+      "type": "ASSET",
+      "name": "레드캡투어",
+      "exposure": {
+        "ticker": "038390",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
     }
   ],
   "edges": [
@@ -288,7 +338,10 @@
     { "from": "M_145", "to": "T_237", "type": "IMPACTS" },
     { "from": "M_057", "to": "T_237", "type": "IMPACTS" },
     { "from": "BF_083", "to": "T_237", "type": "THEMED_AS" },
-    { "from": "A_1535", "to": "C_175", "type": "HAS_TRAIT" }
+    { "from": "A_1535", "to": "C_175", "type": "HAS_TRAIT" },
+    { "from": "A_1541", "to": "T_237", "type": "THEMED_AS" },
+    { "from": "A_1542", "to": "T_237", "type": "THEMED_AS" },
+    { "from": "A_1541", "to": "C_175", "type": "HAS_TRAIT" }
   ],
   "links": [
     { "from": "A_957", "to": "T_237", "type": "THEMED_AS" },
@@ -304,6 +357,9 @@
     { "from": "M_145", "to": "T_237", "type": "IMPACTS" },
     { "from": "M_057", "to": "T_237", "type": "IMPACTS" },
     { "from": "BF_083", "to": "T_237", "type": "THEMED_AS" },
-    { "from": "A_1535", "to": "C_175", "type": "HAS_TRAIT" }
+    { "from": "A_1535", "to": "C_175", "type": "HAS_TRAIT" },
+    { "from": "A_1541", "to": "T_237", "type": "THEMED_AS" },
+    { "from": "A_1542", "to": "T_237", "type": "THEMED_AS" },
+    { "from": "A_1541", "to": "C_175", "type": "HAS_TRAIT" }
   ]
 }
