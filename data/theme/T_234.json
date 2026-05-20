@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_234",
+  "themeName": "글로벌후공정OSAT_첨단패키징",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-05-19T00:00:00+09:00",
+    "notes": "g234 누적 import 기반 글로벌 OSAT 첨단패키징 테마",
+    "sources": []
+  },
+  "nodes": [
+    {"id":"T_234","type":"THEME","name":"글로벌후공정OSAT_첨단패키징"},
+    {"id":"A_1514","type":"ASSET","name":"앰코테크놀로지","exposure":{"ticker":"AMKR","exchange":"NASDAQ","country":"US"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1515","type":"ASSET","name":"하나마이크론","exposure":{"ticker":"067310","exchange":"KOSDAQ","country":"KR"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1516","type":"ASSET","name":"ASE Technology","exposure":{"ticker":"ASX","exchange":"NYSE","country":"TW"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1517","type":"ASSET","name":"JCET","exposure":{"ticker":"600584","exchange":"SSE","country":"CN"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"A_1518","type":"ASSET","name":"Tongfu Microelectronics","exposure":{"ticker":"002156","exchange":"SZSE","country":"CN"},"metrics":{"close":null,"marketCap":null,"pe_ttm":null,"valuationAsOf":null,"valuationSource":null,"return_3d":null,"return_7d":null,"return_1m":null,"return_ytd":null,"return_1y":null,"return_3y":null,"returnsAsOf":null,"returnsSource":null}},
+    {"id":"M_229","type":"MACRO","name":"미세공정한계"},
+    {"id":"M_230","type":"MACRO","name":"AI반도체수요확산"}
+  ],
+  "edges": [
+    {"from":"M_229","to":"T_234","type":"IMPACTS"},
+    {"from":"M_230","to":"T_234","type":"IMPACTS"},
+    {"from":"A_1514","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1515","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1516","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1517","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1518","to":"T_234","type":"THEMED_AS"}
+  ],
+  "links": [
+    {"from":"M_229","to":"T_234","type":"IMPACTS"},
+    {"from":"M_230","to":"T_234","type":"IMPACTS"},
+    {"from":"A_1514","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1515","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1516","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1517","to":"T_234","type":"THEMED_AS"},
+    {"from":"A_1518","to":"T_234","type":"THEMED_AS"}
+  ]
+}

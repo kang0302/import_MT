@@ -1,0 +1,91 @@
+name: Auto-merge main → fix/theme-json-conflicts
+
+# 일별 데이터 업데이트 (FMP/EODHD/PYKRX) 가 main 에 push 된 뒤
+# fix 브랜치로 자동 머지하여 라이브 앱이 stale 안 되게 한다.
+#
+# 전략: -X theirs (충돌 시 main 의 값 채택) — 모든 data conflict 는 항상 main wins.
+# 구조적 fix-only 변경은 사용자가 별도 PR/merge 로 진행한다 (이번 자동화는 데이터만).
+#
+# 트리거:
+#   - 일별 데이터 업데이터 완료 직후 (KST 08:30 = UTC 23:30)
+#   - 수동 (workflow_dispatch)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 모든 data 업데이트 (KST 06:30~07:00 = UTC 21:30~22:00) 가 끝난 뒤
+    - cron: "30 23 * * *"
+
+concurrency:
+  group: auto-merge-main-to-fix
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout fix branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/theme-json-conflicts
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch all branches
+        run: git fetch origin --quiet
+
+      - name: Check if behind main
+        id: check
+        run: |
+          BEHIND=$(git rev-list --count HEAD..origin/main)
+          echo "behind=$BEHIND" >> $GITHUB_OUTPUT
+          echo "fix is $BEHIND commits behind main"
+
+      - name: Merge main into fix (theirs strategy on conflicts)
+        if: steps.check.outputs.behind != '0'
+        id: merge
+        run: |
+          set +e
+          git merge --no-ff -X theirs origin/main -m "auto-merge: main → fix (daily data sync)"
+          RC=$?
+          set -e
+          echo "merge_rc=$RC" >> $GITHUB_OUTPUT
+          if [ $RC -ne 0 ]; then
+            echo "Merge failed with -X theirs. Listing conflicts:"
+            git diff --name-only --diff-filter=U
+            git merge --abort
+          fi
+
+      - name: Push merged fix branch
+        if: steps.check.outputs.behind != '0' && steps.merge.outputs.merge_rc == '0'
+        run: git push origin fix/theme-json-conflicts
+
+      - name: Create issue on merge failure
+        if: steps.check.outputs.behind != '0' && steps.merge.outputs.merge_rc != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toISOString().split('T')[0];
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `auto-merge failed: main → fix (${today})`,
+              body: `Daily auto-merge of main into fix/theme-json-conflicts failed.\n\nThis means there is a structural conflict that -X theirs cannot resolve.\n\nManual intervention needed:\n\`\`\`bash\ngit checkout fix/theme-json-conflicts\ngit merge origin/main\n# resolve conflicts manually\ngit commit && git push origin fix/theme-json-conflicts\n\`\`\`\n\nWorkflow run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              labels: ['auto-merge-fail']
+            });
+
+      - name: Summary
+        run: |
+          echo "## Auto-merge summary" >> $GITHUB_STEP_SUMMARY
+          echo "- commits behind: ${{ steps.check.outputs.behind }}" >> $GITHUB_STEP_SUMMARY
+          echo "- merge result: ${{ steps.merge.outputs.merge_rc == '0' && 'success' || (steps.check.outputs.behind == '0' && 'no-op' || 'failed') }}" >> $GITHUB_STEP_SUMMARY
