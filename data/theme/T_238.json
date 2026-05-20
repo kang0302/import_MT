@@ -172,6 +172,21 @@
       "id": "M_232",
       "type": "MACRO",
       "name": "리프팅레이저시술확산"
+    },
+    {
+      "id": "BF_417",
+      "type": "BUSINESS_FIELD",
+      "name": "PN계열제조"
+    },
+    {
+      "id": "BF_418",
+      "type": "BUSINESS_FIELD",
+      "name": "ECM계열제조"
+    },
+    {
+      "id": "BF_419",
+      "type": "BUSINESS_FIELD",
+      "name": "콜라겐주입재"
     }
   ],
   "edges": [
@@ -224,7 +239,12 @@
       "from": "M_232",
       "to": "T_238",
       "type": "IMPACTS"
-    }
+    },
+    { "from": "A_922", "to": "BF_417", "type": "OPERATES" },
+    { "from": "A_1257", "to": "BF_418", "type": "OPERATES" },
+    { "from": "A_1543", "to": "BF_418", "type": "OPERATES" },
+    { "from": "A_1256", "to": "BF_419", "type": "OPERATES" },
+    { "from": "A_685", "to": "BF_419", "type": "OPERATES" }
   ],
   "links": [
     {
@@ -276,6 +296,11 @@
       "from": "M_232",
       "to": "T_238",
       "type": "IMPACTS"
-    }
+    },
+    { "from": "A_922", "to": "BF_417", "type": "OPERATES" },
+    { "from": "A_1257", "to": "BF_418", "type": "OPERATES" },
+    { "from": "A_1543", "to": "BF_418", "type": "OPERATES" },
+    { "from": "A_1256", "to": "BF_419", "type": "OPERATES" },
+    { "from": "A_685", "to": "BF_419", "type": "OPERATES" }
   ]
 }
