@@ -1,7 +1,9 @@
 # import_MT/scripts/update_valuation_kr.py
+import csv
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from pathlib import Path
+from typing import Any, Dict, Optional, Tuple
 
 from pykrx import stock
 
@@ -12,23 +14,37 @@ SSOT_PATH = DATA_DIR / "ssot" / "asset_ssot.csv"
 CACHE_DIR = DATA_DIR / "cache"
 OUT_PATH = CACHE_DIR / "valuation_kr.json"
 
-SENTINEL_TICKERS = ["005930", "000660"]  # 거래일 판별용(삼성전자/하이닉스)
+SENTINEL_TICKERS = ["005930", "000660"]
+LOOKBACK_DAYS = 14
+FALLBACK_DAYS = 30
 
 
-def write_json(path: Path, obj):
+# -----------------------------
+# helpers
+# -----------------------------
+def write_json_atomic(path: Path, obj: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
 
 
-def yyyymmdd(d: datetime) -> str:
+def yyyymmdd(d: date) -> str:
     return d.strftime("%Y%m%d")
 
 
-def to_float_or_none(x):
-    if x is None:
-        return None
+def to_int_or_none(x):
     try:
-        if isinstance(x, str) and x.strip() in ("", "-", "N/A"):
+        if x in (None, "", "-", "N/A"):
+            return None
+        return int(float(x))
+    except Exception:
+        return None
+
+
+def to_float_or_none(x):
+    try:
+        if x in (None, "", "-", "N/A"):
             return None
         v = float(x)
         if v != v:  # NaN
@@ -38,165 +54,163 @@ def to_float_or_none(x):
         return None
 
 
-def load_kr_assets_from_ssot():
+# -----------------------------
+# SSOT load (csv 안전 파싱)
+# -----------------------------
+def load_kr_assets_from_ssot() -> Dict[str, str]:
     if not SSOT_PATH.exists():
         raise SystemExit(f"❌ SSOT not found: {SSOT_PATH}")
 
-    txt = SSOT_PATH.read_text(encoding="utf-8-sig").splitlines()
-    if not txt:
-        raise SystemExit("❌ asset_ssot.csv is empty")
+    out: Dict[str, str] = {}
+    with SSOT_PATH.open("r", encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        required = {"asset_id", "ticker", "country"}
+        if not required.issubset(set(reader.fieldnames or [])):
+            raise SystemExit(f"❌ asset_ssot.csv missing columns: {required} / got={reader.fieldnames}")
 
-    header = [h.strip() for h in txt[0].split(",")]
-    idx_asset = header.index("asset_id")
-    idx_ticker = header.index("ticker")
-    idx_country = header.index("country")
+        for row in reader:
+            country = (row.get("country") or "").strip().upper()
+            if country != "KR":
+                continue
 
-    out = {}
-    for line in txt[1:]:
-        if not line.strip():
-            continue
-        cols = [c.strip() for c in line.split(",")]
-        if len(cols) <= max(idx_asset, idx_ticker, idx_country):
-            continue
-        if (cols[idx_country] or "").upper() != "KR":
-            continue
-        aid = cols[idx_asset]
-        t = (cols[idx_ticker] or "").strip()
-        if not t:
-            continue
-        out[aid] = t.zfill(6)
+            aid = (row.get("asset_id") or "").strip()
+            tkr = (row.get("ticker") or "").strip()
+
+            if not aid or not tkr:
+                continue
+
+            if tkr.isdigit() and len(tkr) <= 6:
+                tkr = tkr.zfill(6)
+
+            out[aid] = tkr
 
     return out
 
 
-def is_valid_trading_day(ds: str) -> bool:
+# -----------------------------
+# trading day detect
+# -----------------------------
+def detect_latest_trading_day(today: date) -> Optional[date]:
     """
-    ✅ 'len(df)>0' 같은 약한 판별이 아니라,
-    대표 종목 종가/시총이 0이 아닌지로 거래일 판별.
+    휴장/주말이면 센티넬 OHLCV로 최근 거래일을 잡는다.
+    """
+    start = today - timedelta(days=LOOKBACK_DAYS)
+    for t in SENTINEL_TICKERS:
+        try:
+            df = stock.get_market_ohlcv_by_date(yyyymmdd(start), yyyymmdd(today), t)
+            if df is not None and not df.empty:
+                return df.index[-1].date()
+        except Exception:
+            continue
+    return None
+
+
+def fetch_cap_only(ds: str):
+    """
+    ✅ CAP만 필수. (종가/시총)
     """
     try:
         cap_df = stock.get_market_cap_by_ticker(ds)
-        if cap_df is None or len(cap_df) == 0:
-            return False
-
-        # cap_df 컬럼: 종가, 시가총액 ...
-        for t in SENTINEL_TICKERS:
-            if t in cap_df.index:
-                r = cap_df.loc[t]
-                close = r.get("종가", 0)
-                mcap = r.get("시가총액", 0)
-                try:
-                    close = int(close)
-                    mcap = int(mcap)
-                except Exception:
-                    close = 0
-                    mcap = 0
-
-                if close > 0 and mcap > 0:
-                    return True
-
-        return False
+        if cap_df is None or cap_df.empty:
+            return None
+        return cap_df
     except Exception:
-        return False
+        return None
 
 
-def find_latest_trading_day(max_back_days: int = 30) -> str:
+def fetch_fundamental_optional(ds: str):
     """
-    오늘부터 거꾸로 내려가며 '진짜 거래일'을 찾는다.
+    ✅ PER는 optional. 실패/KeyError/빈 DF면 None 반환.
     """
-    d = datetime.now()
+    try:
+        df = stock.get_market_fundamental_by_ticker(ds)
+        if df is None or df.empty:
+            return None
+        return df
+    except Exception:
+        return None
 
-    # 추가 안전: 주말이면 금요일부터 시작하도록 1~2일 미리 당김
-    # (월=0 ... 일=6)
-    if d.weekday() == 5:   # 토
-        d = d - timedelta(days=1)
-    elif d.weekday() == 6: # 일
-        d = d - timedelta(days=2)
 
-    for i in range(max_back_days + 1):
-        cand = d - timedelta(days=i)
+def find_valid_trading_day_for_cap(today: date) -> Tuple[str, str]:
+    """
+    cap_df가 정상으로 확보되는 날짜를 찾는다.
+    """
+    latest = detect_latest_trading_day(today)
+    if latest is None:
+        raise SystemExit("❌ 최근 거래일 탐지 실패 (네트워크/pykrx/KRX 이슈 가능)")
+
+    for i in range(FALLBACK_DAYS + 1):
+        cand = latest - timedelta(days=i)
         ds = yyyymmdd(cand)
-        if is_valid_trading_day(ds):
-            return ds
+        cap_df = fetch_cap_only(ds)
+        if cap_df is not None:
+            return ds, cand.strftime("%Y-%m-%d")
 
-    raise SystemExit("❌ 최근 거래일을 찾지 못했습니다. (휴장/네트워크/pykrx 이슈 가능)")
+    raise SystemExit("❌ cap 데이터 확보 실패 (네트워크/pykrx/KRX 이슈 가능)")
 
 
 def main():
+    print("=== Update KR Valuation Start ===")
+
     assets = load_kr_assets_from_ssot()
     if not assets:
-        raise SystemExit("❌ KR assets not found in SSOT (country=KR & ticker required)")
+        raise SystemExit("❌ KR assets not found in SSOT")
 
-    trade_day = find_latest_trading_day(max_back_days=30)
-    as_of = datetime.strptime(trade_day, "%Y%m%d").strftime("%Y-%m-%d")
+    today = date.today()
+    trade_day, as_of = find_valid_trading_day_for_cap(today)
     print(f"✅ Using trading day: {trade_day} (asOf={as_of})")
 
-    cap_df = stock.get_market_cap_by_ticker(trade_day)
-    fun_df = stock.get_market_fundamental_by_ticker(trade_day)
+    cap_df = fetch_cap_only(trade_day)
+    if cap_df is None:
+        raise SystemExit(f"❌ cap df empty for {trade_day} (unexpected after selection)")
 
-    if cap_df is None or len(cap_df) == 0:
-        raise SystemExit(f"❌ market cap df empty for {trade_day}")
-    if fun_df is None or len(fun_df) == 0:
-        raise SystemExit(f"❌ fundamental df empty for {trade_day}")
+    # fundamental은 optional
+    fun_df = fetch_fundamental_optional(trade_day)
+    if fun_df is None:
+        print("⚠️ fundamental df unavailable. Proceeding with CAP-only (pe_ttm=None).")
 
-    items = {}
-    nonzero_count = 0
+    items: Dict[str, Dict[str, Any]] = {}
+    nonzero = 0
 
-    for asset_id, tkr in assets.items():
+    for aid, tkr in assets.items():
         close = None
         mcap = None
         pe = None
 
         if tkr in cap_df.index:
-            row = cap_df.loc[tkr]
-            close = row.get("종가", None)
-            mcap = row.get("시가총액", None)
+            r = cap_df.loc[tkr]
+            close = to_int_or_none(r.get("종가"))
+            mcap = to_int_or_none(r.get("시가총액"))
 
-        if tkr in fun_df.index:
-            row2 = fun_df.loc[tkr]
-            pe = row2.get("PER", None)
+        if fun_df is not None and tkr in fun_df.index:
+            r2 = fun_df.loc[tkr]
+            pe = to_float_or_none(r2.get("PER"))
+            if pe is not None and pe <= 0:
+                pe = None
 
-        try:
-            close = int(close) if close not in (None, "") else None
-        except Exception:
-            close = None
+        if (close not in (None, 0)) or (mcap not in (None, 0)) or (pe is not None):
+            nonzero += 1
 
-        try:
-            mcap = int(mcap) if mcap not in (None, "") else None
-        except Exception:
-            mcap = None
-
-        pe = to_float_or_none(pe)
-
-        if (close not in (None, 0)) or (mcap not in (None, 0)) or (pe not in (None, 0, 0.0)):
-            nonzero_count += 1
-
-        items[asset_id] = {
+        items[aid] = {
             "ticker": tkr,
             "close": close,
             "marketCap": mcap,
-            "pe_ttm": pe,
+            "pe_ttm": pe,  # optional
         }
 
-    if nonzero_count == 0:
-        print("❌ All values are zero/None. Sample check:")
-        for s in SENTINEL_TICKERS + ["035420", "051910"]:
-            try:
-                if s in cap_df.index:
-                    r = cap_df.loc[s]
-                    print(s, "종가=", r.get("종가"), "시총=", r.get("시가총액"))
-            except Exception:
-                pass
-        raise SystemExit("❌ KR valuation fetch returned no meaningful values. Failing workflow.")
+    if nonzero == 0:
+        raise SystemExit("❌ 모든 값이 None/0 → cap 데이터 이상")
 
     out = {
         "asOf": as_of,
         "source": "PYKRX",
         "items": items,
+        "updatedAt": datetime.now().strftime("%Y-%m-%d"),
     }
 
-    write_json(OUT_PATH, out)
-    print(f"✅ wrote: {OUT_PATH} (items={len(items)}, nonzero={nonzero_count})")
+    write_json_atomic(OUT_PATH, out)
+    print(f"✅ wrote: {OUT_PATH} (items={len(items)}, nonzero={nonzero})")
+    print("=== Update KR Valuation Completed ===")
 
 
 if __name__ == "__main__":

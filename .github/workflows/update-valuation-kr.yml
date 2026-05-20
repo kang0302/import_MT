@@ -1,11 +1,9 @@
-name: Update KR Valuation + Freeze (PYKRX)
+name: Update KR Valuation + Freeze (PYKRX, DEPRECATED)
 
+# DEPRECATED 2026-05-19 — PYKRX get_market_cap_by_ticker JSON 파싱 매일 실패.
+# 후속 워크플로 update-close-kr.yml (EODHD) 가 KR Valuation 책임짐. schedule 제거 + manual dispatch 만 유지.
 on:
   workflow_dispatch: {}
-  schedule:
-    # KR market close 15:30 KST -> 16:00 KST = 07:00 UTC
-    # return-kr는 07:10 UTC이므로 valuation이 먼저 완료되어야 함.
-    - cron: "0 7 * * *"
 
 concurrency:
   group: mt-freeze-commit-main
