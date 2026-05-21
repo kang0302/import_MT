@@ -46,14 +46,22 @@ jobs:
         run: |
           python -u scripts/build_freeze.py
 
-      - name: Commit & push if changed (rebase-safe)
+      - name: Commit & push if changed (rebase-safe, conflict auto-resolve)
         shell: bash
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          # 충돌 시 remote 우선 (cache/generated 파일은 항상 최신 remote 가 정답)
+          # -X theirs: 자동 충돌 해결 시 들어오는 쪽(origin) 채택
+          git pull --rebase -X theirs --autostash origin "${GITHUB_REF_NAME}" || {
+            echo "rebase failed; aborting and retrying with merge strategy"
+            git rebase --abort || true
+            git stash pop || true
+            git fetch origin
+            git merge -X theirs --no-edit "origin/${GITHUB_REF_NAME}"
+          }
 
           git add data/cache/valuation_kr.json
           git add data/theme/T_*.json
@@ -65,4 +73,13 @@ jobs:
           fi
 
           git commit -m "chore: KR close + freeze update (EODHD)"
-          git push origin HEAD:"${GITHUB_REF_NAME}"
+
+          # push 충돌 시 최대 3회 재시도 (concurrent commit 대응)
+          for i in 1 2 3; do
+            if git push origin HEAD:"${GITHUB_REF_NAME}"; then
+              echo "push success on attempt $i"
+              break
+            fi
+            echo "push attempt $i failed, pulling latest and retrying..."
+            git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+          done

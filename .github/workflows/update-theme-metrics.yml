@@ -55,7 +55,7 @@ jobs:
           git config user.email "moneytree-bot@users.noreply.github.com"
 
           # ✅ 원격 변경 흡수 (fetch-first 방지)
-          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git pull --rebase -X theirs --autostash origin "${GITHUB_REF_NAME}"
 
           # ✅ rebase가 unresolved conflict를 남기고 끝났는지 검사 (commit 전 abort)
           if [ -n "$(git ls-files -u)" ]; then
