@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_244",
+  "themeName": "중국메모리반도체굴기",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-21T00:00:00+09:00",
+    "description": "CXMT(창신메모리, D램 시장 점유율 7.7% 세계 4위) + YMTC(양쯔메모리, 낸드플래시 대표) 양대 중국 메모리 반도체 굴기 기업. 2026년 6~7월 상하이거래소 상장 추진 — 대규모 자금 조달로 삼성·SK하이닉스 주도 글로벌 메모리 시장 균열 시도. 중국 반도체 자립·미국 수출 규제·미중 패권 경쟁이 핵심 동인.",
+    "notes": "g244 중국 메모리 반도체 굴기 — CXMT/YMTC IPO",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_244",
+      "type": "THEME",
+      "name": "중국메모리반도체굴기"
+    },
+    {
+      "id": "A_1571",
+      "type": "ASSET",
+      "name": "창신메모리테크놀로지",
+      "exposure": {
+        "ticker": "TBD_CXMT",
+        "exchange": "SSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1572",
+      "type": "ASSET",
+      "name": "양쯔메모리테크놀로지",
+      "exposure": {
+        "ticker": "TBD_YMTC",
+        "exchange": "SSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "M_141",
+      "type": "MACRO",
+      "name": "중국반도체자립"
+    },
+    {
+      "id": "M_030",
+      "type": "MACRO",
+      "name": "미국대중국수출규제"
+    },
+    {
+      "id": "M_033",
+      "type": "MACRO",
+      "name": "미중패권경쟁"
+    },
+    {
+      "id": "BF_089",
+      "type": "BUSINESS_FIELD",
+      "name": "반도체"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1571",
+      "to": "T_244",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1572",
+      "to": "T_244",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_141",
+      "to": "T_244",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_030",
+      "to": "T_244",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_033",
+      "to": "T_244",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "BF_089",
+      "to": "T_244",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1571",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1572",
+      "to": "BF_089",
+      "type": "OPERATES"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1571",
+      "to": "T_244",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1572",
+      "to": "T_244",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_141",
+      "to": "T_244",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_030",
+      "to": "T_244",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_033",
+      "to": "T_244",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "BF_089",
+      "to": "T_244",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1571",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1572",
+      "to": "BF_089",
+      "type": "OPERATES"
+    }
+  ]
+}
