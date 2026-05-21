@@ -25,9 +25,9 @@
     {
       "id": "A_1110",
       "type": "ASSET",
-      "name": "IRBO",
+      "name": "ARTY",
       "exposure": {
-        "ticker": "IRBO",
+        "ticker": "ARTY",
         "exchange": "NYSEARCA",
         "country": "US"
       },
@@ -118,56 +118,6 @@
         "return_ytd": 12.808172914555914,
         "return_1y": 69.16940997720944,
         "return_3y": 186.2866938075852,
-        "returnsAsOf": "2026-05-20",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_286",
-      "type": "ASSET",
-      "name": "ABB",
-      "exposure": {
-        "ticker": "ABB",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "close": 37.13,
-        "marketCap": 69020585106,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-05-20",
-        "valuationSource": "FMP",
-        "return_3d": 0.18781862087469126,
-        "return_7d": 0.7011811919535482,
-        "return_1m": 3.320420586607642,
-        "return_ytd": 5.420666290231502,
-        "return_1y": null,
-        "return_3y": null,
-        "returnsAsOf": "2026-05-20",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1107",
-      "type": "ASSET",
-      "name": "업스타트",
-      "exposure": {
-        "ticker": "UPST",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "close": 28.84,
-        "marketCap": 2760321650,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-05-20",
-        "valuationSource": "FMP",
-        "return_3d": -2.2704168078617526,
-        "return_7d": 0.5228302544440622,
-        "return_1m": -13.132530120481933,
-        "return_ytd": -37.08551483420594,
-        "return_1y": -39.24583947756478,
-        "return_3y": 42.34945705824282,
         "returnsAsOf": "2026-05-20",
         "returnsSource": "FMP"
       }
@@ -461,6 +411,56 @@
       "id": "M_028",
       "type": "MACRO",
       "name": "자동화확산"
+    },
+    {
+      "id": "A_091",
+      "type": "ASSET",
+      "name": "레인보우로보틱스",
+      "exposure": {
+        "ticker": "277810",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_056",
+      "type": "ASSET",
+      "name": "AMD",
+      "exposure": {
+        "ticker": "AMD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
     }
   ],
   "edges": [
@@ -485,16 +485,6 @@
       "type": "THEMED_AS"
     },
     {
-      "from": "A_286",
-      "to": "A_1110",
-      "type": "IN_ETF"
-    },
-    {
-      "from": "A_1107",
-      "to": "A_1110",
-      "type": "IN_ETF"
-    },
-    {
       "from": "A_055",
       "to": "A_1110",
       "type": "IN_ETF"
@@ -568,6 +558,16 @@
       "from": "M_028",
       "to": "T_164",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_091",
+      "to": "A_1110",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_056",
+      "to": "A_1110",
+      "type": "IN_ETF"
     }
   ],
   "links": [
@@ -592,16 +592,6 @@
       "type": "THEMED_AS"
     },
     {
-      "from": "A_286",
-      "to": "A_1110",
-      "type": "IN_ETF"
-    },
-    {
-      "from": "A_1107",
-      "to": "A_1110",
-      "type": "IN_ETF"
-    },
-    {
       "from": "A_055",
       "to": "A_1110",
       "type": "IN_ETF"
@@ -675,6 +665,16 @@
       "from": "M_028",
       "to": "T_164",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_091",
+      "to": "A_1110",
+      "type": "IN_ETF"
+    },
+    {
+      "from": "A_056",
+      "to": "A_1110",
+      "type": "IN_ETF"
     }
   ]
 }
