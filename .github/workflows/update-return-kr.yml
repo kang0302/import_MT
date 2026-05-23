@@ -1,10 +1,10 @@
-name: Update KR Returns + Freeze (PYKRX)
+name: Update KR Returns + Freeze (PYKRX, DISABLED)
 
+# DISABLED 2026-05-23 — PYKRX cron 이 update-close-kr.yml (EODHD, 07:05 UTC) 가
+# 5분 전에 만든 returns_kr.json 을 덮어쓰던 사고를 차단. schedule 제거 + manual dispatch 만 유지.
+# (PYKRX 최종 제거 결정은 PARKED — 메모리: project_pykrx_purge_parked.md)
 on:
   workflow_dispatch: {}
-  schedule:
-    # valuation 이후 10분 뒤 (16:10 KST = 07:10 UTC)
-    - cron: "10 7 * * *"
 
 concurrency:
   group: mt-freeze-commit-main
