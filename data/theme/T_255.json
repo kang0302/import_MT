@@ -1,0 +1,779 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_255",
+  "themeName": "글로벌 농산물/곡물 인플레 수혜",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-22T00:00:00+09:00",
+    "description": "글로벌 농산물·곡물 가격 인플레이션 수혜 — 농기계 빅3 (Deere·AGCO·CNH·Kubota) + 곡물 가공 ABCD (ADM) + 비료·종자 (Nutrien·Corteva) + 농산물·곡물 ETF (DBA·TAGS·CORN·WEAT·SOYB·MOO·VEGI). 곡물가 상승·수급 악화·농업보조금이 핵심 동인.",
+    "notes": "사용자 의도 T_246 였으나 기존 일본자동차OEM 사용 중이라 T_255 로 등록. A_379 LS Mtron 사용자 미명시 제외. NTR 은 T_081 비료 테마와 교차.",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_255",
+      "type": "THEME",
+      "name": "글로벌 농산물/곡물 인플레 수혜"
+    },
+    {
+      "id": "A_375",
+      "type": "ASSET",
+      "name": "AGCO",
+      "exposure": {
+        "ticker": "AGCO",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "AGCO — 글로벌 농기계 (Fendt·Massey Ferguson)",
+        "theme_role": "농기계 빅3",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_376",
+      "type": "ASSET",
+      "name": "CNH인더스트리얼",
+      "exposure": {
+        "ticker": "CNH",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "CNH Industrial — 농기계·건설장비 (Case IH·New Holland)",
+        "theme_role": "농기계 빅3",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_377",
+      "type": "ASSET",
+      "name": "쿠보타",
+      "exposure": {
+        "ticker": "6326",
+        "exchange": "TSE",
+        "country": "JP",
+        "business_desc": "Kubota — 농기계·산업기계 (아시아 강자)",
+        "theme_role": "농기계 아시아 1위",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_378",
+      "type": "ASSET",
+      "name": "디어앤컴퍼니",
+      "exposure": {
+        "ticker": "DE",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Deere & Company — 농기계 1위 (트랙터·콤바인·정밀농업)",
+        "theme_role": "농기계 글로벌 1위 (정밀농업 강자)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_380",
+      "type": "ASSET",
+      "name": "대동",
+      "exposure": {
+        "ticker": "000490",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "대동 — 국내 농기계 1위",
+        "theme_role": "K-농기계 대표주",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_381",
+      "type": "ASSET",
+      "name": "TYM",
+      "exposure": {
+        "ticker": "002900",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "TYM — 국내 농기계 (대동 경쟁사)",
+        "theme_role": "K-농기계 2위",
+        "theme_status": "Peripheral"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_382",
+      "type": "ASSET",
+      "name": "MOO 농업ETF",
+      "exposure": {
+        "ticker": "MOO",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "VanEck Agribusiness ETF — 농업 일반 (씨앗·비료·농기계 종합)",
+        "theme_role": "농업 일반 ETF (광의)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1636",
+      "type": "ASSET",
+      "name": "DBA농산물ETF",
+      "exposure": {
+        "ticker": "DBA",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Invesco DB Agriculture Fund — 8개 농산물 분산",
+        "theme_role": "광의 농산물 분산, ~$720M",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1637",
+      "type": "ASSET",
+      "name": "TAGS 4대작물ETF",
+      "exposure": {
+        "ticker": "TAGS",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Teucrium Agricultural Fund — 옥수수·밀·대두·설탕 25% 펀드오브펀드",
+        "theme_role": "4대 작물 묶음, ~$30M",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1638",
+      "type": "ASSET",
+      "name": "CORN 옥수수ETF",
+      "exposure": {
+        "ticker": "CORN",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Teucrium Corn Fund — 옥수수 선물 단일",
+        "theme_role": "옥수수 단일 작물 노출",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1639",
+      "type": "ASSET",
+      "name": "WEAT밀ETF",
+      "exposure": {
+        "ticker": "WEAT",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Teucrium Wheat Fund — 밀 선물 단일",
+        "theme_role": "밀 단일 작물 (변동성 최대)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1640",
+      "type": "ASSET",
+      "name": "SOYB대두ETF",
+      "exposure": {
+        "ticker": "SOYB",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Teucrium Soybean Fund — 대두 선물 단일",
+        "theme_role": "대두 단일 작물 노출",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1641",
+      "type": "ASSET",
+      "name": "코르테바",
+      "exposure": {
+        "ticker": "CTVA",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Corteva — 종자·작물보호제",
+        "theme_role": "종자·농약 글로벌 1티어",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1642",
+      "type": "ASSET",
+      "name": "아처대니얼스미들랜드",
+      "exposure": {
+        "ticker": "ADM",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Archer-Daniels-Midland — 곡물 가공·트레이딩 (ABCD 빅4)",
+        "theme_role": "곡물 유통·가공 사이클 수혜",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1643",
+      "type": "ASSET",
+      "name": "VEGI농업ETF",
+      "exposure": {
+        "ticker": "VEGI",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "iShares MSCI Agriculture Producers ETF — 농업 생산",
+        "theme_role": "농업 일반 ETF (MOO 보완)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1447",
+      "type": "ASSET",
+      "name": "Nutrien",
+      "exposure": {
+        "ticker": "NTR",
+        "exchange": "NYSE",
+        "country": "CA",
+        "business_desc": "Nutrien — 비료(칼륨)·크롭인풋 소매 글로벌 1위",
+        "theme_role": "비료 직접 수혜, T_081 교차",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_463",
+      "type": "BUSINESS_FIELD",
+      "name": "농작물ETF"
+    },
+    {
+      "id": "BF_464",
+      "type": "BUSINESS_FIELD",
+      "name": "농업일반ETF"
+    },
+    {
+      "id": "M_046",
+      "type": "MACRO",
+      "name": "곡물가상승"
+    },
+    {
+      "id": "M_099",
+      "type": "MACRO",
+      "name": "곡물수급악화"
+    },
+    {
+      "id": "M_002",
+      "type": "MACRO",
+      "name": "곡물가안정"
+    },
+    {
+      "id": "M_048",
+      "type": "MACRO",
+      "name": "농업보조금"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_375",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_376",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_377",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_378",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_380",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_381",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_382",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1636",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1637",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1638",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1639",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1640",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1641",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1642",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1643",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1447",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1636",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1637",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1638",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1639",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1640",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_382",
+      "to": "BF_464",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1643",
+      "to": "BF_464",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_046",
+      "to": "T_255",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_099",
+      "to": "T_255",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_002",
+      "to": "T_255",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_048",
+      "to": "T_255",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_375",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_376",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_377",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_378",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_380",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_381",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_382",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1636",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1637",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1638",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1639",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1640",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1641",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1642",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1643",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1447",
+      "to": "T_255",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1636",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1637",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1638",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1639",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1640",
+      "to": "BF_463",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_382",
+      "to": "BF_464",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1643",
+      "to": "BF_464",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_046",
+      "to": "T_255",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_099",
+      "to": "T_255",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_002",
+      "to": "T_255",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_048",
+      "to": "T_255",
+      "type": "IMPACTS"
+    }
+  ]
+}
