@@ -38,7 +38,7 @@
         "close": 20.63,
         "marketCap": 2684857517,
         "pe_ttm": null,
-        "valuationAsOf": "2026-05-22",
+        "valuationAsOf": "2026-05-23",
         "valuationSource": "FMP",
         "return_3d": 3.046953046953038,
         "return_7d": -14.184692179700498,
@@ -66,7 +66,7 @@
         "close": 0.018,
         "marketCap": 1440465,
         "pe_ttm": null,
-        "valuationAsOf": "2026-05-22",
+        "valuationAsOf": "2026-05-23",
         "valuationSource": "FMP",
         "return_3d": -25.155925155925154,
         "return_7d": -45.61933534743202,
@@ -92,9 +92,9 @@
       },
       "metrics": {
         "close": 0.7095,
-        "marketCap": 152204778,
+        "marketCap": 157058704,
         "pe_ttm": null,
-        "valuationAsOf": "2026-05-22",
+        "valuationAsOf": "2026-05-23",
         "valuationSource": "FMP",
         "return_3d": 1.3571428571428568,
         "return_7d": -22.585924713584284,
@@ -122,7 +122,7 @@
         "close": 0.6231,
         "marketCap": 206629307,
         "pe_ttm": null,
-        "valuationAsOf": "2026-05-22",
+        "valuationAsOf": "2026-05-23",
         "valuationSource": "FMP",
         "return_3d": 10.322237960339953,
         "return_7d": -18.013157894736842,
@@ -150,7 +150,7 @@
         "close": 10.18,
         "marketCap": 8290545895,
         "pe_ttm": null,
-        "valuationAsOf": "2026-05-22",
+        "valuationAsOf": "2026-05-23",
         "valuationSource": "FMP",
         "return_3d": 5.3830227743271175,
         "return_7d": -3.3238366571699873,
@@ -196,6 +196,39 @@
       "id": "C_098",
       "type": "CHARACTER",
       "name": "고변동성"
+    },
+    {
+      "id": "A_288",
+      "type": "ASSET",
+      "name": "에스오에스랩",
+      "exposure": {
+        "ticker": "464080",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "차량용·로봇용 라이다 센서 기업",
+        "theme_role": "K-자율주행 라이다 대표주",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 14030,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-05-22",
+        "valuationSource": "EODHD",
+        "return_3d": 11.792828685258971,
+        "return_7d": -16.28878281622912,
+        "return_1m": -16.43835616438356,
+        "return_ytd": -10.064102564102562,
+        "return_1y": 29.308755760368665,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-22",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "C_196",
+      "type": "CHARACTER",
+      "name": "K-자율주행대표주"
     }
   ],
   "edges": [
@@ -258,6 +291,16 @@
       "from": "A_823",
       "to": "A_139",
       "type": "SUPPLIES"
+    },
+    {
+      "from": "A_288",
+      "to": "T_113",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_113",
+      "to": "C_196",
+      "type": "HAS_TRAIT"
     }
   ],
   "links": [
@@ -320,6 +363,16 @@
       "from": "A_823",
       "to": "A_139",
       "type": "SUPPLIES"
+    },
+    {
+      "from": "A_288",
+      "to": "T_113",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_113",
+      "to": "C_196",
+      "type": "HAS_TRAIT"
     }
   ]
 }
