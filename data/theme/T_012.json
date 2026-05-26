@@ -378,6 +378,39 @@
       "name": "특수합금",
       "type": "BUSINESS_FIELD",
       "id": "BF_031"
+    },
+    {
+      "id": "A_539",
+      "type": "ASSET",
+      "name": "OCI홀딩스",
+      "exposure": {
+        "ticker": "010060",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "OCI 홀딩스 — 태양광 폴리실리콘·화학·신재생 에너지 그룹 지주사",
+        "theme_role": "스페이스X 우주데이터센터 태양광 인프라 기대 — 폴리실리콘 글로벌 공급",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_205",
+      "type": "CHARACTER",
+      "name": "우주데이터센터태양광기대"
     }
   ],
   "edges": [
@@ -507,14 +540,14 @@
       "to": "BF_031"
     },
     {
-      "type": "THEMED_AS",
       "from": "A_539",
-      "to": "T_012"
+      "to": "T_012",
+      "type": "THEMED_AS"
     },
     {
-      "type": "OPERATES",
       "from": "A_539",
-      "to": "BF_086"
+      "to": "C_205",
+      "type": "HAS_TRAIT"
     }
   ],
   "links": [
@@ -644,14 +677,14 @@
       "to": "BF_031"
     },
     {
-      "type": "THEMED_AS",
       "from": "A_539",
-      "to": "T_012"
+      "to": "T_012",
+      "type": "THEMED_AS"
     },
     {
-      "type": "OPERATES",
       "from": "A_539",
-      "to": "BF_086"
+      "to": "C_205",
+      "type": "HAS_TRAIT"
     }
   ]
 }
