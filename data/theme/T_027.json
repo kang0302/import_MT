@@ -14,7 +14,8 @@
     ],
     "dataAsOf": "2026-02-21T16:00:00+09:00",
     "notes": "g27 누적 import 기반 T_027 freeze",
-    "sources": []
+    "sources": [],
+    "description": "중국 AI LLM 생태계의 풀스택 구조 — 빅3 클라우드(Baidu·Alibaba·Tencent) + AI 가속기 반도체 5사(Cambricon·Moore Threads·MetaX·Biren·Enflame) + AI 서버 ODM(Inspur) + 순수 LLM 플랫폼(Zhipu·DeepSeek). 정부 AI 진흥 + 미국 칩 수출 통제 + 내수 LLM 채택률 + 수출 시도가 핵심 동인."
   },
   "nodes": [
     {
@@ -322,6 +323,16 @@
       "id": "BF_142",
       "type": "BUSINESS_FIELD",
       "name": "AI서버제조(ODM/랙통합)"
+    },
+    {
+      "id": "M_218",
+      "type": "MACRO",
+      "name": "반도체수출통제"
+    },
+    {
+      "id": "M_268",
+      "type": "MACRO",
+      "name": "중국기술자립화"
     }
   ],
   "links": [
@@ -434,6 +445,16 @@
       "from": "A_1654",
       "to": "BF_408",
       "type": "OPERATES"
+    },
+    {
+      "from": "M_218",
+      "to": "T_027",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_268",
+      "to": "T_027",
+      "type": "IMPACTS"
     }
   ],
   "edges": [
@@ -546,6 +567,16 @@
       "from": "A_1654",
       "to": "BF_408",
       "type": "OPERATES"
+    },
+    {
+      "from": "M_218",
+      "to": "T_027",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_268",
+      "to": "T_027",
+      "type": "IMPACTS"
     }
   ]
 }
