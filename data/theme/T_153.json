@@ -318,7 +318,7 @@
         "valuationAsOf": "2026-05-22",
         "valuationSource": "EODHD",
         "return_3d": 19.0031152647975,
-        "return_7d": 0.0,
+        "return_7d": 0,
         "return_1m": 188.30188679245282,
         "return_ytd": 327.0542202347681,
         "return_1y": 279.1563275434243,
@@ -426,6 +426,34 @@
         "returnsAsOf": null,
         "returnsSource": null
       }
+    },
+    {
+      "id": "A_955",
+      "type": "ASSET",
+      "name": "이튼",
+      "exposure": {
+        "ticker": "ETN",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "cross-add from T_259",
+        "theme_role": "관련 테마 cross-add",
+        "theme_status": "Peripheral"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
     }
   ],
   "edges": [
@@ -518,6 +546,11 @@
       "from": "T_153",
       "to": "A_1057",
       "type": "EXPOSED_TO"
+    },
+    {
+      "from": "A_955",
+      "to": "T_153",
+      "type": "THEMED_AS"
     }
   ],
   "links": [
@@ -610,6 +643,11 @@
       "from": "T_153",
       "to": "A_1057",
       "type": "EXPOSED_TO"
+    },
+    {
+      "from": "A_955",
+      "to": "T_153",
+      "type": "THEMED_AS"
     }
   ]
 }
