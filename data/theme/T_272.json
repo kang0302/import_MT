@@ -1,0 +1,435 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_272",
+  "themeName": "미국은행주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-28T00:00:00+09:00",
+    "description": "미국은행주 — 대형은행 5 (JP모건·BAC·씨티·US뱅코프·웰스파고) + 투자은행 2 (골드만삭스·모건스탠리) + 지방중소형 4 (트루이스트·키코프·PNC·헌팅턴뱅크셰어스). 3 BF 버킷(대형은행·투자은행·지방중소형) OPERATES + M_072 금리인상 IMPACTS + A_632 XLF (Financial Select Sector SPDR) EXPOSED_TO.",
+    "notes": "11 ASSET + 1 ETF(EXPOSED_TO) + 3 BF + 1 MACRO",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_272",
+      "type": "THEME",
+      "name": "미국은행주"
+    },
+    {
+      "id": "A_293",
+      "type": "ASSET",
+      "name": "JP모건",
+      "exposure": {
+        "ticker": "JPM",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "JPMorgan Chase — 미국 자산 1위 종합금융그룹",
+        "theme_role": "대형은행 대장주 — 소매·기업·투자은행 통합",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_113",
+      "type": "ASSET",
+      "name": "뱅크오브아메리카",
+      "exposure": {
+        "ticker": "BAC",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Bank of America — 미국 2위 소매·기업금융 은행",
+        "theme_role": "대형은행 — 소매·자산관리·기업금융",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_295",
+      "type": "ASSET",
+      "name": "씨티그룹",
+      "exposure": {
+        "ticker": "C",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Citigroup — 미국 4위 글로벌 종합은행",
+        "theme_role": "대형은행 — 글로벌 트레저리·신용카드 강자",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1718",
+      "type": "ASSET",
+      "name": "US뱅코프",
+      "exposure": {
+        "ticker": "USB",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "U.S. Bancorp — 미국 5위 대형 소매·기업 은행",
+        "theme_role": "대형은행 — 중서부 거점 소매·결제 강자",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1719",
+      "type": "ASSET",
+      "name": "웰스파고은행",
+      "exposure": {
+        "ticker": "WFC",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Wells Fargo — 미국 3위 소매은행·모기지 강자",
+        "theme_role": "대형은행 — 소매·주택대출·자산관리",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_294",
+      "type": "ASSET",
+      "name": "골드만삭스",
+      "exposure": {
+        "ticker": "GS",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "The Goldman Sachs Group — 글로벌 1위 투자은행",
+        "theme_role": "투자은행 대장주 — 트레이딩·M&A·자산운용",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1724",
+      "type": "ASSET",
+      "name": "모건스탠리",
+      "exposure": {
+        "ticker": "MS",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Morgan Stanley — 글로벌 투자은행·자산관리",
+        "theme_role": "투자은행 — Wealth Management 비중 확대",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1720",
+      "type": "ASSET",
+      "name": "트루이스트파이낸셜",
+      "exposure": {
+        "ticker": "TFC",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "Truist Financial — 미국 동남부 지역은행 빅3 (BB&T+SunTrust 합병)",
+        "theme_role": "지방중소형 — 동남부 거점",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1721",
+      "type": "ASSET",
+      "name": "키코프",
+      "exposure": {
+        "ticker": "KEY",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "KeyCorp — 미국 중서부·북동부 지역은행",
+        "theme_role": "지방중소형 — 클리블랜드 본사 지역은행",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1722",
+      "type": "ASSET",
+      "name": "PNC파이낸셜서비스",
+      "exposure": {
+        "ticker": "PNC",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "PNC Financial Services — 미국 6위 지방·중소형 종합은행",
+        "theme_role": "지방중소형 — 피츠버그 본사, 동부 광역 지역은행",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1723",
+      "type": "ASSET",
+      "name": "헌팅턴뱅크셰어스",
+      "exposure": {
+        "ticker": "HBAN",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Huntington Bancshares — 미국 중서부 지역은행",
+        "theme_role": "지방중소형 — 오하이오 거점",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_632",
+      "type": "ASSET",
+      "name": "XLF",
+      "exposure": {
+        "ticker": "XLF",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Financial Select Sector SPDR Fund — S&P 500 금융 섹터 ETF",
+        "theme_role": "미국 금융 섹터 ETF — 미국은행주 테마 EXPOSED_TO",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_485",
+      "type": "BUSINESS_FIELD",
+      "name": "대형은행"
+    },
+    {
+      "id": "BF_486",
+      "type": "BUSINESS_FIELD",
+      "name": "투자은행"
+    },
+    {
+      "id": "BF_487",
+      "type": "BUSINESS_FIELD",
+      "name": "지방중소형은행"
+    },
+    {
+      "id": "M_072",
+      "type": "MACRO",
+      "name": "금리인상"
+    }
+  ],
+  "edges": [
+    { "from": "A_293",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_113",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_295",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1718", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1719", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_294",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1724", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1720", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1721", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1722", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1723", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_293",  "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_113",  "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_295",  "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_1718", "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_1719", "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_294",  "to": "BF_486", "type": "OPERATES" },
+    { "from": "A_1724", "to": "BF_486", "type": "OPERATES" },
+    { "from": "A_1720", "to": "BF_487", "type": "OPERATES" },
+    { "from": "A_1721", "to": "BF_487", "type": "OPERATES" },
+    { "from": "A_1722", "to": "BF_487", "type": "OPERATES" },
+    { "from": "A_1723", "to": "BF_487", "type": "OPERATES" },
+    { "from": "M_072",  "to": "T_272", "type": "IMPACTS" },
+    { "from": "A_632",  "to": "T_272", "type": "EXPOSED_TO" }
+  ],
+  "links": [
+    { "from": "A_293",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_113",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_295",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1718", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1719", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_294",  "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1724", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1720", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1721", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1722", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_1723", "to": "T_272", "type": "THEMED_AS" },
+    { "from": "A_293",  "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_113",  "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_295",  "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_1718", "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_1719", "to": "BF_485", "type": "OPERATES" },
+    { "from": "A_294",  "to": "BF_486", "type": "OPERATES" },
+    { "from": "A_1724", "to": "BF_486", "type": "OPERATES" },
+    { "from": "A_1720", "to": "BF_487", "type": "OPERATES" },
+    { "from": "A_1721", "to": "BF_487", "type": "OPERATES" },
+    { "from": "A_1722", "to": "BF_487", "type": "OPERATES" },
+    { "from": "A_1723", "to": "BF_487", "type": "OPERATES" },
+    { "from": "M_072",  "to": "T_272", "type": "IMPACTS" },
+    { "from": "A_632",  "to": "T_272", "type": "EXPOSED_TO" }
+  ]
+}
