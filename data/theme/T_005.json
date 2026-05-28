@@ -396,6 +396,39 @@
       "id": "BF_360",
       "type": "BUSINESS_FIELD",
       "name": "광케이블/배선"
+    },
+    {
+      "id": "A_1714",
+      "type": "ASSET",
+      "name": "스털링인프라스트럭쳐",
+      "exposure": {
+        "ticker": "STRL",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "데이터센터·반도체 공장 토목/건설 EPC (Sterling Infrastructure)",
+        "theme_role": "AI DC·반도체 신규 건설 사이클 직접 수혜",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_483",
+      "type": "BUSINESS_FIELD",
+      "name": "데이터센터반도체인프라토목건설"
     }
   ],
   "edges": [
@@ -538,6 +571,16 @@
       "from": "A_1295",
       "to": "BF_180",
       "type": "OPERATES"
+    },
+    {
+      "from": "A_1714",
+      "to": "T_005",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1714",
+      "to": "BF_483",
+      "type": "OPERATES"
     }
   ],
   "links": [
@@ -679,6 +722,16 @@
     {
       "from": "A_1295",
       "to": "BF_180",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1714",
+      "to": "T_005",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1714",
+      "to": "BF_483",
       "type": "OPERATES"
     }
   ]
