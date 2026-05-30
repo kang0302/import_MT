@@ -89,7 +89,9 @@
       "type": "THEMED_AS",
       "from": "A_136",
       "to": "T_013"
-    }
+    },
+    { "type": "EXPOSED_TO", "from": "A_1749", "to": "T_013" },
+    { "type": "HAS_TRAIT",  "from": "A_1749", "to": "C_230" }
   ],
   "themeId": "T_013",
   "themeName": "지역/국가별ETF",
@@ -674,6 +676,39 @@
         "exchange": null
       },
       "type": "ASSET"
+    },
+    {
+      "name": "VT(Vanguard)",
+      "id": "A_1749",
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      },
+      "exposure": {
+        "country": "US",
+        "ticker": "VT",
+        "exchange": "NYSEARCA",
+        "business_desc": "Vanguard Total World Stock ETF — 전세계 9,500+ 주식 노출",
+        "theme_role": "테마 EXPOSED_TO — 전세계 주식시장 통합 노출",
+        "theme_status": "Support"
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "C_230",
+      "type": "CHARACTER",
+      "name": "전세계주식시장투자"
     }
   ],
   "schemaVersion": "v5",
@@ -781,6 +816,8 @@
       "type": "THEMED_AS",
       "from": "A_136",
       "to": "T_013"
-    }
+    },
+    { "type": "EXPOSED_TO", "from": "A_1749", "to": "T_013" },
+    { "type": "HAS_TRAIT",  "from": "A_1749", "to": "C_230" }
   ]
 }
