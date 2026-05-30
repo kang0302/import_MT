@@ -171,6 +171,21 @@
         "returnsSource": "FMP",
         "pe_ttm": null
       }
+    },
+    {
+      "id": "M_302",
+      "type": "MACRO",
+      "name": "위험자산선호심리"
+    },
+    {
+      "id": "M_057",
+      "type": "MACRO",
+      "name": "저금리"
+    },
+    {
+      "id": "M_069",
+      "type": "MACRO",
+      "name": "유동성확대"
     }
   ],
   "edges": [
@@ -203,7 +218,10 @@
       "type": "THEMED_AS",
       "from": "A_078",
       "to": "T_008"
-    }
+    },
+    { "from": "M_302", "to": "T_008", "type": "IMPACTS" },
+    { "from": "M_057", "to": "T_008", "type": "IMPACTS" },
+    { "from": "M_069", "to": "T_008", "type": "IMPACTS" }
   ],
   "links": [
     {
@@ -235,6 +253,9 @@
       "type": "THEMED_AS",
       "from": "A_078",
       "to": "T_008"
-    }
+    },
+    { "from": "M_302", "to": "T_008", "type": "IMPACTS" },
+    { "from": "M_057", "to": "T_008", "type": "IMPACTS" },
+    { "from": "M_069", "to": "T_008", "type": "IMPACTS" }
   ]
 }
