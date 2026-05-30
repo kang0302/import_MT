@@ -148,35 +148,6 @@
       }
     },
     {
-      "id": "A_094",
-      "type": "ASSET",
-      "name": "Woorim PTS",
-      "exposure": {
-        "ticker": "101170",
-        "exchange": "KOSDAQ",
-        "country": "KR",
-        "assetType": "STOCK"
-      },
-      "display": {
-        "name_ko": "우림피티에스"
-      },
-      "metrics": {
-        "close": 13290,
-        "marketCap": 225720000000,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-05-29",
-        "valuationSource": "EODHD",
-        "return_3d": -4.525862068965514,
-        "return_7d": 0.07530120481926694,
-        "return_1m": -8.847736625514402,
-        "return_ytd": -23.444700460829495,
-        "return_1y": 154.8842115110888,
-        "return_3y": 77.9204107830552,
-        "returnsAsOf": "2026-05-29",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
       "id": "A_095",
       "type": "ASSET",
       "name": "Intops",
@@ -267,6 +238,97 @@
       }
     },
     {
+      "id": "A_791",
+      "type": "ASSET",
+      "name": "삼성SDS",
+      "exposure": {
+        "ticker": "018260",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Samsung SDS — 삼성그룹 IT서비스 (AI·SaaS 확장)",
+        "theme_role": "삼성그룹 IT 계열 — 휴머노이드 SW·운영 지원",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_319",
+      "type": "ASSET",
+      "name": "하이젠알앤엠",
+      "exposure": {
+        "ticker": "160190",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "HIGEN RNM — 액츄에이터·서보모터 모듈",
+        "theme_role": "2궤도 — 레인보우로보틱스 SUPPLIES (테마 직접 미연결)",
+        "theme_status": "Peripheral"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "BF_502",
+      "type": "BUSINESS_FIELD",
+      "name": "가정용로봇볼리"
+    },
+    {
+      "id": "BF_503",
+      "type": "BUSINESS_FIELD",
+      "name": "웨어러블로봇봇핏"
+    },
+    {
+      "id": "BF_504",
+      "type": "BUSINESS_FIELD",
+      "name": "로봇용정밀감속기"
+    },
+    {
+      "id": "BF_505",
+      "type": "BUSINESS_FIELD",
+      "name": "액츄에이터모듈"
+    },
+    {
+      "id": "M_018",
+      "type": "MACRO",
+      "name": "피지컬AI확산"
+    },
+    {
+      "id": "C_228",
+      "type": "CHARACTER",
+      "name": "부품내재화비중높음"
+    },
+    {
+      "id": "C_229",
+      "type": "CHARACTER",
+      "name": "레인보우감속기100%공급"
+    },
+    {
       "id": "T_010",
       "type": "THEME",
       "name": "삼성그룹휴머노이드관련주"
@@ -285,31 +347,6 @@
     },
     {
       "from": "A_091",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_092",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_093",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_094",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_095",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_096",
       "to": "T_010",
       "type": "THEMED_AS"
     },
@@ -335,9 +372,20 @@
     },
     {
       "from": "A_096",
-      "to": "BF_424",
+      "to": "BF_504",
       "type": "OPERATES"
-    }
+    },
+    { "from": "A_791", "to": "T_010", "type": "THEMED_AS" },
+    { "from": "A_088", "to": "BF_502", "type": "OPERATES" },
+    { "from": "A_088", "to": "BF_503", "type": "OPERATES" },
+    { "from": "A_319", "to": "BF_505", "type": "OPERATES" },
+    { "from": "A_092", "to": "A_091", "type": "SUPPLIES" },
+    { "from": "A_319", "to": "A_091", "type": "SUPPLIES" },
+    { "from": "A_096", "to": "A_088", "type": "SUPPLIES" },
+    { "from": "A_095", "to": "A_088", "type": "SUPPLIES" },
+    { "from": "M_018", "to": "T_010", "type": "IMPACTS" },
+    { "from": "A_091", "to": "C_228", "type": "HAS_TRAIT" },
+    { "from": "A_092", "to": "C_229", "type": "HAS_TRAIT" }
   ],
   "meta": {
     "periodDefault": "3d",
@@ -368,31 +416,6 @@
       "type": "THEMED_AS"
     },
     {
-      "from": "A_092",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_093",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_094",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_095",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_096",
-      "to": "T_010",
-      "type": "THEMED_AS"
-    },
-    {
       "from": "A_085",
       "to": "BF_423",
       "type": "OPERATES"
@@ -414,8 +437,19 @@
     },
     {
       "from": "A_096",
-      "to": "BF_424",
+      "to": "BF_504",
       "type": "OPERATES"
-    }
+    },
+    { "from": "A_791", "to": "T_010", "type": "THEMED_AS" },
+    { "from": "A_088", "to": "BF_502", "type": "OPERATES" },
+    { "from": "A_088", "to": "BF_503", "type": "OPERATES" },
+    { "from": "A_319", "to": "BF_505", "type": "OPERATES" },
+    { "from": "A_092", "to": "A_091", "type": "SUPPLIES" },
+    { "from": "A_319", "to": "A_091", "type": "SUPPLIES" },
+    { "from": "A_096", "to": "A_088", "type": "SUPPLIES" },
+    { "from": "A_095", "to": "A_088", "type": "SUPPLIES" },
+    { "from": "M_018", "to": "T_010", "type": "IMPACTS" },
+    { "from": "A_091", "to": "C_228", "type": "HAS_TRAIT" },
+    { "from": "A_092", "to": "C_229", "type": "HAS_TRAIT" }
   ]
 }
