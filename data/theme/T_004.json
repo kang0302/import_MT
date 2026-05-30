@@ -431,6 +431,26 @@
         "returnsAsOf": "2026-05-26",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "M_020",
+      "type": "MACRO",
+      "name": "EV보급확대"
+    },
+    {
+      "id": "M_287",
+      "type": "MACRO",
+      "name": "유가안정화"
+    },
+    {
+      "id": "M_114",
+      "type": "MACRO",
+      "name": "로보틱스확대"
+    },
+    {
+      "id": "C_225",
+      "type": "CHARACTER",
+      "name": "업체별사업분야차별화"
     }
   ],
   "edges": [
@@ -593,7 +613,11 @@
       "from": "A_1586",
       "to": "T_004",
       "type": "THEMED_AS"
-    }
+    },
+    { "from": "M_020", "to": "T_004", "type": "IMPACTS" },
+    { "from": "M_287", "to": "T_004", "type": "IMPACTS" },
+    { "from": "M_114", "to": "T_004", "type": "IMPACTS" },
+    { "from": "T_004", "to": "C_225", "type": "HAS_TRAIT" }
   ],
   "links": [
     {
@@ -755,6 +779,10 @@
       "from": "A_1586",
       "to": "T_004",
       "type": "THEMED_AS"
-    }
+    },
+    { "from": "M_020", "to": "T_004", "type": "IMPACTS" },
+    { "from": "M_287", "to": "T_004", "type": "IMPACTS" },
+    { "from": "M_114", "to": "T_004", "type": "IMPACTS" },
+    { "from": "T_004", "to": "C_225", "type": "HAS_TRAIT" }
   ]
 }
