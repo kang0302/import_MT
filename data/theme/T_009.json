@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_009",
-  "themeName": "LG그룹휴머노이드관련주",
+  "themeName": "LG그룹로봇관련주",
   "meta": {
     "periodDefault": "3d",
     "periodOptions": [
@@ -34,7 +34,7 @@
     {
       "id": "T_009",
       "type": "THEME",
-      "name": "LG그룹휴머노이드관련주"
+      "name": "LG그룹로봇관련주"
     },
     {
       "id": "A_079",
@@ -473,6 +473,67 @@
       "id": "BF_025",
       "type": "BUSINESS_FIELD",
       "name": "옵티머스"
+    },
+    {
+      "id": "A_215",
+      "type": "ASSET",
+      "name": "LG씨엔에스",
+      "exposure": {
+        "ticker": "064400",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "LG CNS — LG그룹 IT서비스·SI (2025.2 상장)",
+        "theme_role": "LG그룹 IT — 로봇·자동화 SI",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "EODHD",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "NVIDIA — AI 가속기·Omniverse·Isaac 로봇 플랫폼",
+        "theme_role": "2궤도 — LG전자 SUPPLIES (테마 직접 미연결)",
+        "theme_status": "Peripheral"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_018",
+      "type": "MACRO",
+      "name": "피지컬AI확산"
     }
   ],
   "edges": [
@@ -488,41 +549,6 @@
     },
     {
       "from": "A_081",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_082",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_083",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_084",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_085",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_086",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_002",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_081",
       "to": "BF_020",
       "type": "OPERATES"
     },
@@ -595,7 +621,10 @@
       "from": "A_086",
       "to": "A_002",
       "type": "SUPPLIES"
-    }
+    },
+    { "from": "A_215", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_055", "to": "A_079", "type": "SUPPLIES" },
+    { "from": "M_018", "to": "T_009", "type": "IMPACTS" }
   ],
   "links": [
     {
@@ -610,41 +639,6 @@
     },
     {
       "from": "A_081",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_082",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_083",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_084",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_085",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_086",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_002",
-      "to": "T_009",
-      "type": "THEMED_AS"
-    },
-    {
-      "from": "A_081",
       "to": "BF_020",
       "type": "OPERATES"
     },
@@ -717,6 +711,9 @@
       "from": "A_086",
       "to": "A_002",
       "type": "SUPPLIES"
-    }
+    },
+    { "from": "A_215", "to": "T_009", "type": "THEMED_AS" },
+    { "from": "A_055", "to": "A_079", "type": "SUPPLIES" },
+    { "from": "M_018", "to": "T_009", "type": "IMPACTS" }
   ]
 }
