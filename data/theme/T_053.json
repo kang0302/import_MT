@@ -346,6 +346,21 @@
       "id": "BF_112",
       "type": "BUSINESS_FIELD",
       "name": "리얼티"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_069",
+      "type": "MACRO",
+      "name": "유동성확대"
+    },
+    {
+      "id": "M_283",
+      "type": "MACRO",
+      "name": "하이브리드근무정상화"
     }
   ],
   "edges": [
@@ -468,7 +483,10 @@
       "from": "A_444",
       "to": "BF_112",
       "type": "OPERATES"
-    }
+    },
+    { "from": "M_145", "to": "T_053", "type": "IMPACTS" },
+    { "from": "M_069", "to": "T_053", "type": "IMPACTS" },
+    { "from": "M_283", "to": "T_053", "type": "IMPACTS" }
   ],
   "links": [
     {
@@ -590,6 +608,9 @@
       "from": "A_444",
       "to": "BF_112",
       "type": "OPERATES"
-    }
+    },
+    { "from": "M_145", "to": "T_053", "type": "IMPACTS" },
+    { "from": "M_069", "to": "T_053", "type": "IMPACTS" },
+    { "from": "M_283", "to": "T_053", "type": "IMPACTS" }
   ]
 }
