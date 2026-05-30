@@ -429,6 +429,26 @@
       "id": "BF_483",
       "type": "BUSINESS_FIELD",
       "name": "데이터센터반도체인프라토목건설"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_288",
+      "type": "MACRO",
+      "name": "하이퍼스케일러CAPEX"
+    },
+    {
+      "id": "M_277",
+      "type": "MACRO",
+      "name": "지역정부규제리스크"
+    },
+    {
+      "id": "M_289",
+      "type": "MACRO",
+      "name": "전력수급"
     }
   ],
   "edges": [
@@ -581,7 +601,11 @@
       "from": "A_1714",
       "to": "BF_483",
       "type": "OPERATES"
-    }
+    },
+    { "from": "M_055", "to": "T_005", "type": "IMPACTS" },
+    { "from": "M_288", "to": "T_005", "type": "IMPACTS" },
+    { "from": "M_277", "to": "T_005", "type": "IMPACTS" },
+    { "from": "M_289", "to": "T_005", "type": "IMPACTS" }
   ],
   "links": [
     {
@@ -733,6 +757,10 @@
       "from": "A_1714",
       "to": "BF_483",
       "type": "OPERATES"
-    }
+    },
+    { "from": "M_055", "to": "T_005", "type": "IMPACTS" },
+    { "from": "M_288", "to": "T_005", "type": "IMPACTS" },
+    { "from": "M_277", "to": "T_005", "type": "IMPACTS" },
+    { "from": "M_289", "to": "T_005", "type": "IMPACTS" }
   ]
 }
