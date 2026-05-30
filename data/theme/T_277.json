@@ -296,6 +296,34 @@
       "id": "M_301",
       "type": "MACRO",
       "name": "제련수급밸런스"
+    },
+    {
+      "id": "A_067",
+      "type": "ASSET",
+      "name": "ZINC",
+      "exposure": {
+        "ticker": "ZINC",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "United States Zinc ETF — 아연 가격 추종 ETF",
+        "theme_role": "테마 EXPOSED_TO — 아연 가격 직접 노출",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
     }
   ],
   "edges": [
@@ -403,6 +431,11 @@
       "from": "M_301",
       "to": "T_277",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_067",
+      "to": "T_277",
+      "type": "EXPOSED_TO"
     }
   ],
   "links": [
@@ -510,6 +543,11 @@
       "from": "M_301",
       "to": "T_277",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_067",
+      "to": "T_277",
+      "type": "EXPOSED_TO"
     }
   ]
 }
