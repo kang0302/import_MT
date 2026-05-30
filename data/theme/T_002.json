@@ -421,6 +421,21 @@
         "returnsAsOf": "2026-05-26",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "M_284",
+      "type": "MACRO",
+      "name": "원달러환율상승"
+    },
+    {
+      "id": "M_285",
+      "type": "MACRO",
+      "name": "미국소비심리"
+    },
+    {
+      "id": "M_286",
+      "type": "MACRO",
+      "name": "글로벌브랜드재고감소"
     }
   ],
   "edges": [
@@ -513,7 +528,10 @@
       "from": "A_1280",
       "to": "A_834",
       "type": "SUPPLIES"
-    }
+    },
+    { "from": "M_284", "to": "T_002", "type": "IMPACTS" },
+    { "from": "M_285", "to": "T_002", "type": "IMPACTS" },
+    { "from": "M_286", "to": "T_002", "type": "IMPACTS" }
   ],
   "links": [
     {
@@ -605,6 +623,9 @@
       "from": "A_1280",
       "to": "A_834",
       "type": "SUPPLIES"
-    }
+    },
+    { "from": "M_284", "to": "T_002", "type": "IMPACTS" },
+    { "from": "M_285", "to": "T_002", "type": "IMPACTS" },
+    { "from": "M_286", "to": "T_002", "type": "IMPACTS" }
   ]
 }
