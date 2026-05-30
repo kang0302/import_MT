@@ -307,6 +307,11 @@
       "id": "BF_036",
       "type": "BUSINESS_FIELD",
       "name": "카메라/센서"
+    },
+    {
+      "id": "M_018",
+      "type": "MACRO",
+      "name": "피지컬AI확산"
     }
   ],
   "edges": [
@@ -399,7 +404,9 @@
       "from": "A_085",
       "to": "BF_036",
       "type": "OPERATES"
-    }
+    },
+    { "from": "A_152", "to": "T_015", "type": "EXPOSED_TO" },
+    { "from": "M_018", "to": "T_015", "type": "IMPACTS" }
   ],
   "meta": {
     "dataAsOf": "2026-02-21T16:00:00+09:00",
@@ -505,6 +512,8 @@
       "from": "A_085",
       "to": "BF_036",
       "type": "OPERATES"
-    }
+    },
+    { "from": "A_152", "to": "T_015", "type": "EXPOSED_TO" },
+    { "from": "M_018", "to": "T_015", "type": "IMPACTS" }
   ]
 }
