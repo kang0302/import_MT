@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_018",
-  "themeName": "글로벌EdgeAI",
+  "themeName": "글로벌 EdgeAI/컴퓨팅 반도체",
   "meta": {
     "periodDefault": "3d",
     "periodOptions": [
@@ -20,7 +20,7 @@
     {
       "id": "T_018",
       "type": "THEME",
-      "name": "글로벌EdgeAI"
+      "name": "글로벌 EdgeAI/컴퓨팅 반도체"
     },
     {
       "id": "A_174",
@@ -366,6 +366,86 @@
       "id": "M_019",
       "type": "MACRO",
       "name": "AI추론확산"
+    },
+    {
+      "id": "A_059",
+      "type": "ASSET",
+      "name": "퀄컴",
+      "exposure": {
+        "ticker": "QCOM",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Qualcomm — 모바일·자동차·IoT SoC + 5G·AI Edge 가속기",
+        "theme_role": "Edge AI 모바일·자동차 — Snapdragon X·AI200",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null, "marketCap": null, "pe_ttm": null,
+        "valuationAsOf": null, "valuationSource": "FMP",
+        "return_3d": null, "return_7d": null, "return_1m": null,
+        "return_ytd": null, "return_1y": null, "return_3y": null,
+        "returnsAsOf": null, "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_189",
+      "type": "ASSET",
+      "name": "텍사스인스트루먼트",
+      "exposure": {
+        "ticker": "TXN",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Texas Instruments — 아날로그·임베디드 MCU 1위",
+        "theme_role": "임베디드 MCU·아날로그 — Edge AI 인프라",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null, "marketCap": null, "pe_ttm": null,
+        "valuationAsOf": null, "valuationSource": "FMP",
+        "return_3d": null, "return_7d": null, "return_1m": null,
+        "return_ytd": null, "return_1y": null, "return_3y": null,
+        "returnsAsOf": null, "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_191",
+      "type": "ASSET",
+      "name": "아날로그디바이스",
+      "exposure": {
+        "ticker": "ADI",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Analog Devices — 고성능 아날로그·신호처리·임베디드",
+        "theme_role": "임베디드·아날로그 — Edge AI 센서 신호처리",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null, "marketCap": null, "pe_ttm": null,
+        "valuationAsOf": null, "valuationSource": "FMP",
+        "return_3d": null, "return_7d": null, "return_1m": null,
+        "return_ytd": null, "return_1y": null, "return_3y": null,
+        "returnsAsOf": null, "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1758",
+      "type": "ASSET",
+      "name": "온세미",
+      "exposure": {
+        "ticker": "ON",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "ON Semiconductor — 자동차·산업 전력반도체·이미지센서·임베디드",
+        "theme_role": "임베디드·전력반도체 — 자동차·산업 Edge",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null, "marketCap": null, "pe_ttm": null,
+        "valuationAsOf": null, "valuationSource": "FMP",
+        "return_3d": null, "return_7d": null, "return_1m": null,
+        "return_ytd": null, "return_1y": null, "return_3y": null,
+        "returnsAsOf": null, "returnsSource": "FMP"
+      }
     }
   ],
   "edges": [
@@ -478,7 +558,15 @@
       "from": "M_019",
       "to": "T_018",
       "type": "IMPACTS"
-    }
+    },
+    { "from": "A_059",  "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_189",  "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_191",  "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_1758", "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_059",  "to": "BF_042", "type": "OPERATES" },
+    { "from": "A_189",  "to": "BF_042", "type": "OPERATES" },
+    { "from": "A_191",  "to": "BF_042", "type": "OPERATES" },
+    { "from": "A_1758", "to": "BF_042", "type": "OPERATES" }
   ],
   "links": [
     {
@@ -590,6 +678,14 @@
       "from": "M_019",
       "to": "T_018",
       "type": "IMPACTS"
-    }
+    },
+    { "from": "A_059",  "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_189",  "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_191",  "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_1758", "to": "T_018", "type": "THEMED_AS" },
+    { "from": "A_059",  "to": "BF_042", "type": "OPERATES" },
+    { "from": "A_189",  "to": "BF_042", "type": "OPERATES" },
+    { "from": "A_191",  "to": "BF_042", "type": "OPERATES" },
+    { "from": "A_1758", "to": "BF_042", "type": "OPERATES" }
   ]
 }
