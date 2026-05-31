@@ -350,6 +350,39 @@
       "id": "M_055",
       "type": "MACRO",
       "name": "AI확산"
+    },
+    {
+      "id": "A_1750",
+      "type": "ASSET",
+      "name": "소시오넥스트",
+      "exposure": {
+        "ticker": "6526",
+        "exchange": "TSE",
+        "country": "JP",
+        "business_desc": "Socionext — 일본 맞춤형 반도체(ASIC) 설계 (HPC·AI·자동차·5G)",
+        "theme_role": "ASIC 설계 강자 — Fabless, TSMC 양산",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": "FMP",
+        "return_3d": null,
+        "return_7d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_506",
+      "type": "BUSINESS_FIELD",
+      "name": "맞춤형반도체ASIC설계"
     }
   ],
   "edges": [
@@ -452,7 +485,9 @@
       "from": "A_1673",
       "to": "BF_475",
       "type": "OPERATES"
-    }
+    },
+    { "from": "A_1750", "to": "T_262", "type": "THEMED_AS" },
+    { "from": "A_1750", "to": "BF_506", "type": "OPERATES" }
   ],
   "links": [
     {
@@ -554,6 +589,8 @@
       "from": "A_1673",
       "to": "BF_475",
       "type": "OPERATES"
-    }
+    },
+    { "from": "A_1750", "to": "T_262", "type": "THEMED_AS" },
+    { "from": "A_1750", "to": "BF_506", "type": "OPERATES" }
   ]
 }
