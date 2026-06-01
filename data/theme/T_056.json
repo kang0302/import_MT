@@ -20,7 +20,7 @@
     {
       "id": "T_056",
       "type": "THEME",
-      "name": "반도체기판"
+      "name": "글로벌반도체기판(PCB)"
     },
     {
       "id": "A_454",
@@ -324,7 +324,9 @@
     },
     { "id": "M_202", "type": "MACRO", "name": "고집적화" },
     { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_255", "type": "MACRO", "name": "데이터센터확산" }
+    { "id": "M_255", "type": "MACRO", "name": "데이터센터확산" },
+    { "id": "BF_231", "type": "BUSINESS_FIELD", "name": "고밀도PCB" },
+    { "id": "BF_513", "type": "BUSINESS_FIELD", "name": "반도체패키지기판ABF_FCBGA" }
   ],
   "edges": [
     {
@@ -389,7 +391,19 @@
     },
     { "from": "M_202", "to": "T_056", "type": "IMPACTS" },
     { "from": "M_055", "to": "T_056", "type": "IMPACTS" },
-    { "from": "M_255", "to": "T_056", "type": "IMPACTS" }
+    { "from": "M_255", "to": "T_056", "type": "IMPACTS" },
+    { "from": "A_454", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_455", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_459", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_460", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_463", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_456", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_457", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_080", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_458", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_085", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_461", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_462", "to": "BF_513", "type": "OPERATES" }
   ],
   "links": [
     {
@@ -454,6 +468,18 @@
     },
     { "from": "M_202", "to": "T_056", "type": "IMPACTS" },
     { "from": "M_055", "to": "T_056", "type": "IMPACTS" },
-    { "from": "M_255", "to": "T_056", "type": "IMPACTS" }
+    { "from": "M_255", "to": "T_056", "type": "IMPACTS" },
+    { "from": "A_454", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_455", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_459", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_460", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_463", "to": "BF_231", "type": "OPERATES" },
+    { "from": "A_456", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_457", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_080", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_458", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_085", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_461", "to": "BF_513", "type": "OPERATES" },
+    { "from": "A_462", "to": "BF_513", "type": "OPERATES" }
   ]
 }
