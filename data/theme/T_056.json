@@ -321,7 +321,10 @@
         "returnsAsOf": "2026-05-22",
         "returnsSource": "PYKRX"
       }
-    }
+    },
+    { "id": "M_202", "type": "MACRO", "name": "고집적화" },
+    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
+    { "id": "M_255", "type": "MACRO", "name": "데이터센터확산" }
   ],
   "edges": [
     {
@@ -383,7 +386,10 @@
       "from": "A_463",
       "to": "T_056",
       "type": "THEMED_AS"
-    }
+    },
+    { "from": "M_202", "to": "T_056", "type": "IMPACTS" },
+    { "from": "M_055", "to": "T_056", "type": "IMPACTS" },
+    { "from": "M_255", "to": "T_056", "type": "IMPACTS" }
   ],
   "links": [
     {
@@ -445,6 +451,9 @@
       "from": "A_463",
       "to": "T_056",
       "type": "THEMED_AS"
-    }
+    },
+    { "from": "M_202", "to": "T_056", "type": "IMPACTS" },
+    { "from": "M_055", "to": "T_056", "type": "IMPACTS" },
+    { "from": "M_255", "to": "T_056", "type": "IMPACTS" }
   ]
 }
