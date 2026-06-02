@@ -4,63 +4,373 @@
   "themeName": "K-데이터센터·클라우드·GPUaaS",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-01T00:00:00+09:00",
     "description": "K-데이터센터·클라우드·GPUaaS — 5 자산 (삼성SDS·KT·NHN·카카오·LG CNS). 3 BF OPERATES (데이터센터·클라우드&AI·GPUaaS 신규) + 4 macro IMPACTS (AI확산·데이터센터확산·소버린AI·엣지컴퓨팅확산).",
     "notes": "5 ASSET + 3 BF + 4 MACRO",
     "sources": []
   },
   "nodes": [
-    { "id": "T_284", "type": "THEME", "name": "K-데이터센터·클라우드·GPUaaS" },
-    { "id": "A_791", "type": "ASSET", "name": "삼성SDS", "exposure": { "ticker": "018260", "exchange": "KOSPI", "country": "KR", "business_desc": "삼성그룹 IT서비스·데이터센터 운영·AI 인프라", "theme_role": "K-데이터센터 빅3 + AI/SaaS·GPUaaS 확장", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_1784", "type": "ASSET", "name": "KT", "exposure": { "ticker": "030200", "exchange": "KOSPI", "country": "KR", "business_desc": "KT Corporation — 통신 + 데이터센터·클라우드·AICT 사업 확장", "theme_role": "K-데이터센터 빅3 — 마이크로소프트 협력 AI 클라우드", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_1785", "type": "ASSET", "name": "NHN", "exposure": { "ticker": "181710", "exchange": "KOSPI", "country": "KR", "business_desc": "NHN Corporation — NHN Cloud·게임·결제", "theme_role": "공공 클라우드 1위 — NHN Cloud", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_514", "type": "ASSET", "name": "카카오", "exposure": { "ticker": "035720", "exchange": "KOSPI", "country": "KR", "business_desc": "Kakao — 카카오톡 + 카카오엔터프라이즈 클라우드·AI", "theme_role": "K-클라우드 — 카카오 i 클라우드", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_215", "type": "ASSET", "name": "LG씨엔에스", "exposure": { "ticker": "064400", "exchange": "KOSPI", "country": "KR", "business_desc": "LG CNS — LG그룹 IT서비스·데이터센터·클라우드 (DAP)", "theme_role": "K-데이터센터 빅3 — LG그룹 SI·DAP", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "BF_090", "type": "BUSINESS_FIELD", "name": "데이터센터" },
-    { "id": "BF_188", "type": "BUSINESS_FIELD", "name": "클라우드&AI" },
-    { "id": "BF_512", "type": "BUSINESS_FIELD", "name": "GPUaaS" },
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_255", "type": "MACRO", "name": "데이터센터확산" },
-    { "id": "M_307", "type": "MACRO", "name": "소버린AI" },
-    { "id": "M_309", "type": "MACRO", "name": "엣지컴퓨팅확산" }
+    {
+      "id": "T_284",
+      "type": "THEME",
+      "name": "K-데이터센터·클라우드·GPUaaS"
+    },
+    {
+      "id": "A_791",
+      "type": "ASSET",
+      "name": "삼성SDS",
+      "exposure": {
+        "ticker": "018260",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성그룹 IT서비스·데이터센터 운영·AI 인프라",
+        "theme_role": "K-데이터센터 빅3 + AI/SaaS·GPUaaS 확장",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 362000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-01",
+        "valuationSource": "EODHD",
+        "return_3d": 13.859649122807017,
+        "return_7d": 8.588957055214719,
+        "return_1m": 8.046614872364044,
+        "return_ytd": 11.193603655054263,
+        "return_1y": 48.62595419847329,
+        "return_3y": 65.70212765957446,
+        "returnsAsOf": "2026-05-22",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_1784",
+      "type": "ASSET",
+      "name": "KT",
+      "exposure": {
+        "ticker": "030200",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "KT Corporation — 통신 + 데이터센터·클라우드·AICT 사업 확장",
+        "theme_role": "K-데이터센터 빅3 — 마이크로소프트 협력 AI 클라우드",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 53200,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-01",
+        "valuationSource": "EODHD",
+        "return_3d": -0.3745318352059934,
+        "return_7d": -3.5922537448692005,
+        "return_1m": -11.665808947759748,
+        "return_ytd": 5.802252189870449,
+        "return_1y": 6.825657085921932,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-01",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1785",
+      "type": "ASSET",
+      "name": "NHN",
+      "exposure": {
+        "ticker": "181710",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "NHN Corporation — NHN Cloud·게임·결제",
+        "theme_role": "공공 클라우드 1위 — NHN Cloud",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 59600,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-01",
+        "valuationSource": "EODHD",
+        "return_3d": 59.14552736982643,
+        "return_7d": 60.21505376344085,
+        "return_1m": 44.66019417475729,
+        "return_ytd": 95.52893754952383,
+        "return_1y": 210.9313260274697,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-01",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_514",
+      "type": "ASSET",
+      "name": "카카오",
+      "exposure": {
+        "ticker": "035720",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Kakao — 카카오톡 + 카카오엔터프라이즈 클라우드·AI",
+        "theme_role": "K-클라우드 — 카카오 i 클라우드",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 42700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-01",
+        "valuationSource": "EODHD",
+        "return_3d": 0.6009615384615419,
+        "return_7d": -2.5611175785797413,
+        "return_1m": -14.504596527068436,
+        "return_ytd": -32.608695652173914,
+        "return_1y": 9.842519685039374,
+        "return_3y": -28.705281090289603,
+        "returnsAsOf": "2026-05-22",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_215",
+      "type": "ASSET",
+      "name": "LG씨엔에스",
+      "exposure": {
+        "ticker": "064400",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "LG CNS — LG그룹 IT서비스·데이터센터·클라우드 (DAP)",
+        "theme_role": "K-데이터센터 빅3 — LG그룹 SI·DAP",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 143700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-01",
+        "valuationSource": "EODHD",
+        "return_3d": 11.229946524064172,
+        "return_7d": 13.197278911564636,
+        "return_1m": 24.179104477611936,
+        "return_ytd": 32.907348242811494,
+        "return_1y": 48.3065953654189,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-22",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "BF_090",
+      "type": "BUSINESS_FIELD",
+      "name": "데이터센터"
+    },
+    {
+      "id": "BF_188",
+      "type": "BUSINESS_FIELD",
+      "name": "클라우드&AI"
+    },
+    {
+      "id": "BF_512",
+      "type": "BUSINESS_FIELD",
+      "name": "GPUaaS"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_255",
+      "type": "MACRO",
+      "name": "데이터센터확산"
+    },
+    {
+      "id": "M_307",
+      "type": "MACRO",
+      "name": "소버린AI"
+    },
+    {
+      "id": "M_309",
+      "type": "MACRO",
+      "name": "엣지컴퓨팅확산"
+    }
   ],
   "edges": [
-    { "from": "A_791",  "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_1784", "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_1785", "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_514",  "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_215",  "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_791",  "to": "BF_090", "type": "OPERATES" },
-    { "from": "A_791",  "to": "BF_512", "type": "OPERATES" },
-    { "from": "A_1784", "to": "BF_090", "type": "OPERATES" },
-    { "from": "A_1784", "to": "BF_188", "type": "OPERATES" },
-    { "from": "A_1785", "to": "BF_188", "type": "OPERATES" },
-    { "from": "A_514",  "to": "BF_188", "type": "OPERATES" },
-    { "from": "A_215",  "to": "BF_090", "type": "OPERATES" },
-    { "from": "A_215",  "to": "BF_188", "type": "OPERATES" },
-    { "from": "M_055", "to": "T_284", "type": "IMPACTS" },
-    { "from": "M_255", "to": "T_284", "type": "IMPACTS" },
-    { "from": "M_307", "to": "T_284", "type": "IMPACTS" },
-    { "from": "M_309", "to": "T_284", "type": "IMPACTS" }
+    {
+      "from": "A_791",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1784",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1785",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_514",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_215",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_791",
+      "to": "BF_090",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_791",
+      "to": "BF_512",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1784",
+      "to": "BF_090",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1784",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1785",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_514",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_215",
+      "to": "BF_090",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_215",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_055",
+      "to": "T_284",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_255",
+      "to": "T_284",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_307",
+      "to": "T_284",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_309",
+      "to": "T_284",
+      "type": "IMPACTS"
+    }
   ],
   "links": [
-    { "from": "A_791",  "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_1784", "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_1785", "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_514",  "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_215",  "to": "T_284", "type": "THEMED_AS" },
-    { "from": "A_791",  "to": "BF_090", "type": "OPERATES" },
-    { "from": "A_791",  "to": "BF_512", "type": "OPERATES" },
-    { "from": "A_1784", "to": "BF_090", "type": "OPERATES" },
-    { "from": "A_1784", "to": "BF_188", "type": "OPERATES" },
-    { "from": "A_1785", "to": "BF_188", "type": "OPERATES" },
-    { "from": "A_514",  "to": "BF_188", "type": "OPERATES" },
-    { "from": "A_215",  "to": "BF_090", "type": "OPERATES" },
-    { "from": "A_215",  "to": "BF_188", "type": "OPERATES" },
-    { "from": "M_055", "to": "T_284", "type": "IMPACTS" },
-    { "from": "M_255", "to": "T_284", "type": "IMPACTS" },
-    { "from": "M_307", "to": "T_284", "type": "IMPACTS" },
-    { "from": "M_309", "to": "T_284", "type": "IMPACTS" }
+    {
+      "from": "A_791",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1784",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1785",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_514",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_215",
+      "to": "T_284",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_791",
+      "to": "BF_090",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_791",
+      "to": "BF_512",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1784",
+      "to": "BF_090",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1784",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1785",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_514",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_215",
+      "to": "BF_090",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_215",
+      "to": "BF_188",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_055",
+      "to": "T_284",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_255",
+      "to": "T_284",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_307",
+      "to": "T_284",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_309",
+      "to": "T_284",
+      "type": "IMPACTS"
+    }
   ]
 }
