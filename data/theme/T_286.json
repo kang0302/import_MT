@@ -4,98 +4,732 @@
   "themeName": "K-반도체:엔비디아 루빈 공급망 수혜주",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-01T00:00:00+09:00",
     "description": "엔비디아 루빈(Rubin) 공급망 수혜주 — 13 자산 (메모리·반도체 PCB·MLCC·동박·테스트·전력·냉각). AI칩 (SK하이닉스·삼성전자) + PCB (이수페타시스·티엘비) + MLCC (삼성전기·삼화콘덴서·아모텍 신규) + 소재 (두산·롯데에너지머티) + 테스트 (티에스이·리노공업) + 전력 (LS일렉트릭) + 냉각 (GST). 8 BF + Agentic AI IMPACTS + 랙단위인프라수요 HAS_TRAIT.",
     "notes": "13 ASSET + 8 BF + 1 MACRO + 1 CHARACTER. 신규 BF 2 (MLCC·동박), CHAR 1, ASSET 2.",
     "sources": []
   },
   "nodes": [
-    { "id": "T_286", "type": "THEME", "name": "K-반도체:엔비디아 루빈 공급망 수혜주" },
-    { "id": "A_217", "type": "ASSET", "name": "SK하이닉스", "exposure": { "ticker": "000660", "exchange": "KOSPI", "country": "KR", "business_desc": "SK hynix — HBM 1위, NVIDIA 핵심 메모리 공급", "theme_role": "Rubin AI 칩 메모리 핵심", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_088", "type": "ASSET", "name": "삼성전자", "exposure": { "ticker": "005930", "exchange": "KOSPI", "country": "KR", "business_desc": "Samsung Electronics — HBM·메모리·파운드리", "theme_role": "Rubin 메모리·파운드리", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_085", "type": "ASSET", "name": "삼성전기", "exposure": { "ticker": "009150", "exchange": "KOSPI", "country": "KR", "business_desc": "Samsung Electro-Mechanics — 반도체기판·MLCC·카메라모듈", "theme_role": "반도체기판·MLCC 빅2 — Rubin 공급", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_463", "type": "ASSET", "name": "이수페타시스", "exposure": { "ticker": "007660", "exchange": "KOSPI", "country": "KR", "business_desc": "Isu Petasys — 다층 PCB·MLB·HBM 통신용", "theme_role": "Rubin AI 서버 PCB 핵심", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_460", "type": "ASSET", "name": "티엘비", "exposure": { "ticker": "356860", "exchange": "KOSDAQ", "country": "KR", "business_desc": "TLB — 메모리모듈 PCB·서버용 다층 PCB", "theme_role": "Rubin 서버 PCB", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_762", "type": "ASSET", "name": "삼화콘덴서", "exposure": { "ticker": "001820", "exchange": "KOSPI", "country": "KR", "business_desc": "Samwha Capacitor — MLCC·필름콘덴서·전력전자 캐패시터", "theme_role": "MLCC — 산업·차량·서버", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_471", "type": "ASSET", "name": "티에스이", "exposure": { "ticker": "131290", "exchange": "KOSDAQ", "country": "KR", "business_desc": "TSE — 반도체 테스트 솔루션·번인보드·소켓", "theme_role": "Rubin 테스트 인프라", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_545", "type": "ASSET", "name": "LS일렉트릭", "exposure": { "ticker": "010120", "exchange": "KOSPI", "country": "KR", "business_desc": "LS ELECTRIC — 전력·자동화·DC 전력 솔루션", "theme_role": "Rubin AIDC 전력 핵심", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_107", "type": "ASSET", "name": "지에스티", "exposure": { "ticker": "083450", "exchange": "KOSDAQ", "country": "KR", "business_desc": "GST — 반도체 폐가스·온도조절·액침냉각 신사업", "theme_role": "신사업 기대 — Rubin DC 냉각", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_1136", "type": "ASSET", "name": "롯데에너지머티리얼즈", "exposure": { "ticker": "020150", "exchange": "KOSPI", "country": "KR", "business_desc": "Lotte Energy Materials — 2차전지박·AI회로박", "theme_role": "Rubin AI회로용 동박", "theme_status": "Core" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_1795", "type": "ASSET", "name": "아모텍", "exposure": { "ticker": "052710", "exchange": "KOSDAQ", "country": "KR", "business_desc": "Amotech — 칩 안테나·MLCC·NFC·차량용 칩", "theme_role": "MLCC·EMI 솔루션", "theme_status": "Support" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_1796", "type": "ASSET", "name": "리노공업", "exposure": { "ticker": "058470", "exchange": "KOSPI", "country": "KR", "business_desc": "Leeno Industrial — 반도체 테스트핀·소켓·IC 테스트", "theme_role": "Rubin 테스트 핀·소켓 핵심", "theme_status": "Support" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "A_944", "type": "ASSET", "name": "두산", "exposure": { "ticker": "000150", "exchange": "KOSPI", "country": "KR", "business_desc": "Doosan — 두산그룹 지주·전자 BG (CCL·소재)", "theme_role": "Rubin 소재/화학 — 전자 BG CCL", "theme_status": "Support" }, "metrics": { "close": null, "marketCap": null, "pe_ttm": null, "valuationAsOf": null, "valuationSource": "EODHD", "return_3d": null, "return_7d": null, "return_1m": null, "return_ytd": null, "return_1y": null, "return_3y": null, "returnsAsOf": null, "returnsSource": "EODHD" } },
-    { "id": "BF_009", "type": "BUSINESS_FIELD", "name": "AI칩" },
-    { "id": "BF_089", "type": "BUSINESS_FIELD", "name": "반도체" },
-    { "id": "BF_517", "type": "BUSINESS_FIELD", "name": "수동소자MLCC" },
-    { "id": "BF_136", "type": "BUSINESS_FIELD", "name": "소재/화학" },
-    { "id": "BF_518", "type": "BUSINESS_FIELD", "name": "AI회로용동박" },
-    { "id": "BF_142", "type": "BUSINESS_FIELD", "name": "AI서버제조(ODM/랙통합)" },
-    { "id": "BF_143", "type": "BUSINESS_FIELD", "name": "전력" },
-    { "id": "BF_065", "type": "BUSINESS_FIELD", "name": "냉각" },
-    { "id": "M_276", "type": "MACRO", "name": "Agentic AI 확산" },
-    { "id": "C_245", "type": "CHARACTER", "name": "랙단위인프라수요" }
+    {
+      "id": "T_286",
+      "type": "THEME",
+      "name": "K-반도체:엔비디아 루빈 공급망 수혜주"
+    },
+    {
+      "id": "A_217",
+      "type": "ASSET",
+      "name": "SK하이닉스",
+      "exposure": {
+        "ticker": "000660",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "SK hynix — HBM 1위, NVIDIA 핵심 메모리 공급",
+        "theme_role": "Rubin AI 칩 메모리 핵심",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 1000000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": 0.0,
+        "return_7d": 0.0,
+        "return_1m": 0.0,
+        "return_ytd": 48.00779449067174,
+        "return_1y": 398.0160367807394,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_088",
+      "type": "ASSET",
+      "name": "삼성전자",
+      "exposure": {
+        "ticker": "005930",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Samsung Electronics — HBM·메모리·파운드리",
+        "theme_role": "Rubin 메모리·파운드리",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 360500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": 20.36727879799667,
+        "return_7d": 20.36727879799667,
+        "return_1m": 59.513274336283196,
+        "return_ytd": 181.12671219229784,
+        "return_1y": 556.2790276036894,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_085",
+      "type": "ASSET",
+      "name": "삼성전기",
+      "exposure": {
+        "ticker": "009150",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Samsung Electro-Mechanics — 반도체기판·MLCC·카메라모듈",
+        "theme_role": "반도체기판·MLCC 빅2 — Rubin 공급",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 1000000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": 0.0,
+        "return_7d": 0.0,
+        "return_1m": 20.918984268440145,
+        "return_ytd": 270.3703703333333,
+        "return_1y": 745.189647283166,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_463",
+      "type": "ASSET",
+      "name": "이수페타시스",
+      "exposure": {
+        "ticker": "007660",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Isu Petasys — 다층 PCB·MLB·HBM 통신용",
+        "theme_role": "Rubin AI 서버 PCB 핵심",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 136300,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": 6.901960784313732,
+        "return_7d": 6.651017214397492,
+        "return_1m": -6.643835616438354,
+        "return_ytd": 12.40588172229231,
+        "return_1y": 236.80184042561075,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_460",
+      "type": "ASSET",
+      "name": "티엘비",
+      "exposure": {
+        "ticker": "356860",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "TLB — 메모리모듈 PCB·서버용 다층 PCB",
+        "theme_role": "Rubin 서버 PCB",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 101000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -16.279344034999955,
+        "return_7d": -4.716981132075471,
+        "return_1m": 18.963486454652532,
+        "return_ytd": 71.47707979626486,
+        "return_1y": 480.96566098922284,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_762",
+      "type": "ASSET",
+      "name": "삼화콘덴서",
+      "exposure": {
+        "ticker": "001820",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Samwha Capacitor — MLCC·필름콘덴서·전력전자 캐패시터",
+        "theme_role": "MLCC — 산업·차량·서버",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 107700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -31.049935979513442,
+        "return_7d": 37.19745222929936,
+        "return_1m": 51.69014084507042,
+        "return_ytd": 257.2139303482587,
+        "return_1y": 352.52100840336135,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_471",
+      "type": "ASSET",
+      "name": "티에스이",
+      "exposure": {
+        "ticker": "131290",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "TSE — 반도체 테스트 솔루션·번인보드·소켓",
+        "theme_role": "Rubin 테스트 인프라",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 204500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -0.24390243902439046,
+        "return_7d": -9.713024282560712,
+        "return_1m": 21.14928909952607,
+        "return_ytd": 222.5552050473186,
+        "return_1y": 414.8065215488758,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_545",
+      "type": "ASSET",
+      "name": "LS일렉트릭",
+      "exposure": {
+        "ticker": "010120",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "LS ELECTRIC — 전력·자동화·DC 전력 솔루션",
+        "theme_role": "Rubin AIDC 전력 핵심",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 241500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -2.0283975659229236,
+        "return_7d": -11.049723756906083,
+        "return_1m": -11.538461538461542,
+        "return_ytd": 146.15837192389898,
+        "return_1y": 407.2510380661448,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_107",
+      "type": "ASSET",
+      "name": "지에스티",
+      "exposure": {
+        "ticker": "083450",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "GST — 반도체 폐가스·온도조절·액침냉각 신사업",
+        "theme_role": "신사업 기대 — Rubin DC 냉각",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 48200,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -12.204007285974495,
+        "return_7d": -16.17391304347826,
+        "return_1m": -2.822580645161288,
+        "return_ytd": 58.55263157894737,
+        "return_1y": 167.997617712463,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1136",
+      "type": "ASSET",
+      "name": "롯데에너지머티리얼즈",
+      "exposure": {
+        "ticker": "020150",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Lotte Energy Materials — 2차전지박·AI회로박",
+        "theme_role": "Rubin AI회로용 동박",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "close": 67300,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": 17.452006980802803,
+        "return_7d": 16.637781629116112,
+        "return_1m": -1.4641288433382083,
+        "return_ytd": 124.33333333333331,
+        "return_1y": 233.16831683168314,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1795",
+      "type": "ASSET",
+      "name": "아모텍",
+      "exposure": {
+        "ticker": "052710",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "Amotech — 칩 안테나·MLCC·NFC·차량용 칩",
+        "theme_role": "MLCC·EMI 솔루션",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": 21300,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -29.470198675496682,
+        "return_7d": 9.118852459016402,
+        "return_1m": -10.126582278481012,
+        "return_ytd": 104.61095100864553,
+        "return_1y": 167.92452830188677,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1796",
+      "type": "ASSET",
+      "name": "리노공업",
+      "exposure": {
+        "ticker": "058470",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Leeno Industrial — 반도체 테스트핀·소켓·IC 테스트",
+        "theme_role": "Rubin 테스트 핀·소켓 핵심",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": 92800,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": -6.357214934409683,
+        "return_7d": -10.769230769230765,
+        "return_1m": -17.216770740410347,
+        "return_ytd": 42.989214175654844,
+        "return_1y": 147.69476778754319,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_944",
+      "type": "ASSET",
+      "name": "두산",
+      "exposure": {
+        "ticker": "000150",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Doosan — 두산그룹 지주·전자 BG (CCL·소재)",
+        "theme_role": "Rubin 소재/화학 — 전자 BG CCL",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "close": 1000000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-02",
+        "valuationSource": "EODHD",
+        "return_3d": 0.0,
+        "return_7d": 0.0,
+        "return_1m": 0.0,
+        "return_ytd": 31.60998531907724,
+        "return_1y": 144.92297269252626,
+        "return_3y": null,
+        "returnsAsOf": "2026-06-02",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "BF_009",
+      "type": "BUSINESS_FIELD",
+      "name": "AI칩"
+    },
+    {
+      "id": "BF_089",
+      "type": "BUSINESS_FIELD",
+      "name": "반도체"
+    },
+    {
+      "id": "BF_517",
+      "type": "BUSINESS_FIELD",
+      "name": "수동소자MLCC"
+    },
+    {
+      "id": "BF_136",
+      "type": "BUSINESS_FIELD",
+      "name": "소재/화학"
+    },
+    {
+      "id": "BF_518",
+      "type": "BUSINESS_FIELD",
+      "name": "AI회로용동박"
+    },
+    {
+      "id": "BF_142",
+      "type": "BUSINESS_FIELD",
+      "name": "AI서버제조(ODM/랙통합)"
+    },
+    {
+      "id": "BF_143",
+      "type": "BUSINESS_FIELD",
+      "name": "전력"
+    },
+    {
+      "id": "BF_065",
+      "type": "BUSINESS_FIELD",
+      "name": "냉각"
+    },
+    {
+      "id": "M_276",
+      "type": "MACRO",
+      "name": "Agentic AI 확산"
+    },
+    {
+      "id": "C_245",
+      "type": "CHARACTER",
+      "name": "랙단위인프라수요"
+    }
   ],
   "edges": [
-    { "from": "A_217",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_088",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_085",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_463",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_460",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_762",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_471",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_545",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_107",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_1136", "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_1795", "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_1796", "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_944",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_217",  "to": "BF_009", "type": "OPERATES" },
-    { "from": "A_088",  "to": "BF_009", "type": "OPERATES" },
-    { "from": "A_085",  "to": "BF_089", "type": "OPERATES" },
-    { "from": "A_463",  "to": "BF_089", "type": "OPERATES" },
-    { "from": "A_460",  "to": "BF_089", "type": "OPERATES" },
-    { "from": "A_085",  "to": "BF_517", "type": "OPERATES" },
-    { "from": "A_762",  "to": "BF_517", "type": "OPERATES" },
-    { "from": "A_1795", "to": "BF_517", "type": "OPERATES" },
-    { "from": "A_944",  "to": "BF_136", "type": "OPERATES" },
-    { "from": "A_1136", "to": "BF_518", "type": "OPERATES" },
-    { "from": "A_471",  "to": "BF_142", "type": "OPERATES" },
-    { "from": "A_1796", "to": "BF_142", "type": "OPERATES" },
-    { "from": "A_545",  "to": "BF_143", "type": "OPERATES" },
-    { "from": "A_107",  "to": "BF_065", "type": "OPERATES" },
-    { "from": "M_276", "to": "T_286", "type": "IMPACTS" },
-    { "from": "T_286", "to": "C_245", "type": "HAS_TRAIT" }
+    {
+      "from": "A_217",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_088",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_085",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_463",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_460",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_762",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_471",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_545",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_107",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1136",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1795",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1796",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_944",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_217",
+      "to": "BF_009",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_088",
+      "to": "BF_009",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_085",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_463",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_460",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_085",
+      "to": "BF_517",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_762",
+      "to": "BF_517",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1795",
+      "to": "BF_517",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_944",
+      "to": "BF_136",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1136",
+      "to": "BF_518",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_471",
+      "to": "BF_142",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1796",
+      "to": "BF_142",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_143",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_107",
+      "to": "BF_065",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_276",
+      "to": "T_286",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_286",
+      "to": "C_245",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_217",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_088",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_085",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_463",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_460",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_762",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_471",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_545",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_107",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_1136", "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_1795", "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_1796", "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_944",  "to": "T_286", "type": "THEMED_AS" },
-    { "from": "A_217",  "to": "BF_009", "type": "OPERATES" },
-    { "from": "A_088",  "to": "BF_009", "type": "OPERATES" },
-    { "from": "A_085",  "to": "BF_089", "type": "OPERATES" },
-    { "from": "A_463",  "to": "BF_089", "type": "OPERATES" },
-    { "from": "A_460",  "to": "BF_089", "type": "OPERATES" },
-    { "from": "A_085",  "to": "BF_517", "type": "OPERATES" },
-    { "from": "A_762",  "to": "BF_517", "type": "OPERATES" },
-    { "from": "A_1795", "to": "BF_517", "type": "OPERATES" },
-    { "from": "A_944",  "to": "BF_136", "type": "OPERATES" },
-    { "from": "A_1136", "to": "BF_518", "type": "OPERATES" },
-    { "from": "A_471",  "to": "BF_142", "type": "OPERATES" },
-    { "from": "A_1796", "to": "BF_142", "type": "OPERATES" },
-    { "from": "A_545",  "to": "BF_143", "type": "OPERATES" },
-    { "from": "A_107",  "to": "BF_065", "type": "OPERATES" },
-    { "from": "M_276", "to": "T_286", "type": "IMPACTS" },
-    { "from": "T_286", "to": "C_245", "type": "HAS_TRAIT" }
+    {
+      "from": "A_217",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_088",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_085",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_463",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_460",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_762",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_471",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_545",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_107",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1136",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1795",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1796",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_944",
+      "to": "T_286",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_217",
+      "to": "BF_009",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_088",
+      "to": "BF_009",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_085",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_463",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_460",
+      "to": "BF_089",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_085",
+      "to": "BF_517",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_762",
+      "to": "BF_517",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1795",
+      "to": "BF_517",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_944",
+      "to": "BF_136",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1136",
+      "to": "BF_518",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_471",
+      "to": "BF_142",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1796",
+      "to": "BF_142",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_143",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_107",
+      "to": "BF_065",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_276",
+      "to": "T_286",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_286",
+      "to": "C_245",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
