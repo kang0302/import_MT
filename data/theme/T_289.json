@@ -4,113 +4,296 @@
   "themeName": "IPO스타_퍼플렉시티AI관련주",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "periodOptions": [
+      "3d",
+      "7d",
+      "1m",
+      "ytd",
+      "1y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-03T00:00:00+09:00",
     "description": "2025년 9월 미래에셋그룹 주도로 200억 달러 기업가치를 평가받으며 2억 달러를 조달한 퍼플렉시티AI(Perplexity AI) IPO 기대 테마. NVIDIA·Jeff Bezos·SK Telecom 등 핵심 투자자, Intel과는 AI 추론 오케스트레이터 파트너십. 미래에셋자산운용이 Series E 라운드 리드. 미래에셋증권은 2궤도(미래에셋자산운용 지분 보유 경로)로 연결.",
     "notes": "T_289 IPO스타_퍼플렉시티AI관련주 — pre-IPO ~$20-22B 기업가치, Series E 미래에셋 리드",
     "sources": []
   },
   "nodes": [
-    { "id": "T_289", "type": "THEME", "name": "IPO스타_퍼플렉시티AI관련주" },
+    {
+      "id": "T_289",
+      "type": "THEME",
+      "name": "IPO스타_퍼플렉시티AI관련주"
+    },
     {
       "id": "A_055",
       "type": "ASSET",
       "name": "엔비디아",
-      "exposure": { "ticker": "NVDA", "exchange": "NASDAQ", "country": "US" },
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
       "metrics": {}
     },
     {
       "id": "A_110",
       "type": "ASSET",
       "name": "미래에셋증권",
-      "exposure": { "ticker": "006800", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "006800",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {}
     },
     {
       "id": "A_211",
       "type": "ASSET",
       "name": "아마존",
-      "exposure": { "ticker": "AMZN", "exchange": "NASDAQ", "country": "US" },
+      "exposure": {
+        "ticker": "AMZN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
       "metrics": {}
     },
     {
       "id": "A_214",
       "type": "ASSET",
       "name": "SK텔레콤",
-      "exposure": { "ticker": "017670", "exchange": "KOSPI", "country": "KR" },
+      "exposure": {
+        "ticker": "017670",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
       "metrics": {}
     },
     {
       "id": "A_242",
       "type": "ASSET",
       "name": "인텔",
-      "exposure": { "ticker": "INTC", "exchange": "NASDAQ", "country": "US" },
+      "exposure": {
+        "ticker": "INTC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
       "metrics": {}
     },
     {
       "id": "A_245",
       "type": "ASSET",
       "name": "퍼플렉시티AI(비)",
-      "exposure": { "ticker": "", "exchange": "", "country": "US" },
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
       "metrics": {}
     },
     {
       "id": "A_1807",
       "type": "ASSET",
       "name": "미래에셋자산운용(비)",
-      "exposure": { "ticker": "", "exchange": "", "country": "KR" },
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "KR"
+      },
       "metrics": {}
     },
     {
       "id": "A_1808",
       "type": "ASSET",
       "name": "제프베이조스(비)",
-      "exposure": { "ticker": "", "exchange": "", "country": "US" },
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
       "metrics": {}
     },
-    { "id": "BF_519", "type": "BUSINESS_FIELD", "name": "AI추론오케스트레이터" },
-    { "id": "M_315", "type": "MACRO", "name": "온디바이스AI수요확대" },
-    { "id": "M_276", "type": "MACRO", "name": "Agentic AI 확산" },
-    { "id": "M_034", "type": "MACRO", "name": "LLM확산" }
+    {
+      "id": "BF_519",
+      "type": "BUSINESS_FIELD",
+      "name": "AI추론오케스트레이터"
+    },
+    {
+      "id": "M_315",
+      "type": "MACRO",
+      "name": "온디바이스AI수요확대"
+    },
+    {
+      "id": "M_276",
+      "type": "MACRO",
+      "name": "Agentic AI 확산"
+    },
+    {
+      "id": "M_034",
+      "type": "MACRO",
+      "name": "LLM확산"
+    }
   ],
   "edges": [
-    { "from": "A_055", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_211", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_214", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_242", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_245", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_1807", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_1808", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_245", "to": "A_242", "type": "PARTNERS" },
-    { "from": "A_242", "to": "BF_519", "type": "OPERATES" },
-    { "from": "A_1807", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_055", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_1808", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_214", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_110", "to": "A_1807", "type": "INVESTS" },
-    { "from": "A_1808", "to": "A_211", "type": "INVESTS" },
-    { "from": "M_315", "to": "T_289", "type": "IMPACTS" },
-    { "from": "M_276", "to": "T_289", "type": "IMPACTS" },
-    { "from": "M_034", "to": "T_289", "type": "IMPACTS" }
+    {
+      "from": "A_055",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_214",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_245",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1807",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1808",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_245",
+      "to": "A_242",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_519",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1807",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_055",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_1808",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_214",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_110",
+      "to": "A_1807",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_1808",
+      "to": "A_211",
+      "type": "INVESTS"
+    },
+    {
+      "from": "M_315",
+      "to": "T_289",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_276",
+      "to": "T_289",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_034",
+      "to": "T_289",
+      "type": "IMPACTS"
+    }
   ],
   "links": [
-    { "from": "A_055", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_211", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_214", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_242", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_245", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_1807", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_1808", "to": "T_289", "type": "THEMED_AS" },
-    { "from": "A_245", "to": "A_242", "type": "PARTNERS" },
-    { "from": "A_242", "to": "BF_519", "type": "OPERATES" },
-    { "from": "A_1807", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_055", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_1808", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_214", "to": "A_245", "type": "INVESTS" },
-    { "from": "A_110", "to": "A_1807", "type": "INVESTS" },
-    { "from": "A_1808", "to": "A_211", "type": "INVESTS" },
-    { "from": "M_315", "to": "T_289", "type": "IMPACTS" },
-    { "from": "M_276", "to": "T_289", "type": "IMPACTS" },
-    { "from": "M_034", "to": "T_289", "type": "IMPACTS" }
+    {
+      "from": "A_055",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_214",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_245",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1807",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1808",
+      "to": "T_289",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_245",
+      "to": "A_242",
+      "type": "PARTNERS"
+    },
+    {
+      "from": "A_242",
+      "to": "BF_519",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1807",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_055",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_1808",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_214",
+      "to": "A_245",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_110",
+      "to": "A_1807",
+      "type": "INVESTS"
+    },
+    {
+      "from": "A_1808",
+      "to": "A_211",
+      "type": "INVESTS"
+    },
+    {
+      "from": "M_315",
+      "to": "T_289",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_276",
+      "to": "T_289",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_034",
+      "to": "T_289",
+      "type": "IMPACTS"
+    }
   ]
 }
