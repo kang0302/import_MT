@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_290",
+  "themeName": "K-결제인프라",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["3d", "7d", "1m", "ytd", "1y", "3y"],
+    "dataAsOf": "2026-06-04T00:00:00+09:00",
+    "description": "K-결제인프라 — 카카오페이·NHN KCP·KG이니시스·헥토파이낸셜 등 PG 온라인전자지급, 다날·갤럭시아머니트리 등 휴대폰/소액결제, 나이스정보통신·한국정보통신·KIS정보통신 등 VAN(오프라인카드), 코나아이의 카드플랫폼, 한국전자금융의 ATM·VAN, 쿠콘의 결제·금융데이터까지 한국 결제 인프라 12개 핵심 사업자 통합 테마. 이커머스 확산(M_324)·가상자산 결제 확산(M_325)이 상방 드라이버.",
+    "notes": "T_290 K-결제인프라 — G290 그래프 모델 기반, BF 6 layer (VAN/카드/ATM/데이터/소액/PG)",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_290", "type": "THEME", "name": "K-결제인프라" },
+    {
+      "id": "A_515", "type": "ASSET", "name": "카카오페이",
+      "exposure": { "ticker": "377300", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_517", "type": "ASSET", "name": "헥토파이낸셜",
+      "exposure": { "ticker": "234340", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_518", "type": "ASSET", "name": "NHN KCP",
+      "exposure": { "ticker": "060250", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1818", "type": "ASSET", "name": "KG이니시스",
+      "exposure": { "ticker": "035600", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_520", "type": "ASSET", "name": "다날",
+      "exposure": { "ticker": "064260", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1811", "type": "ASSET", "name": "쿠콘(비)",
+      "exposure": { "ticker": "", "exchange": "", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1812", "type": "ASSET", "name": "갤럭시아머니트리",
+      "exposure": { "ticker": "094480", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1813", "type": "ASSET", "name": "KIS정보통신(비)",
+      "exposure": { "ticker": "", "exchange": "", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1814", "type": "ASSET", "name": "나이스정보통신",
+      "exposure": { "ticker": "030190", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1815", "type": "ASSET", "name": "한국전자금융",
+      "exposure": { "ticker": "063570", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1816", "type": "ASSET", "name": "코나아이",
+      "exposure": { "ticker": "052400", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1817", "type": "ASSET", "name": "한국정보통신",
+      "exposure": { "ticker": "025770", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    { "id": "BF_523", "type": "BUSINESS_FIELD", "name": "VAN오프라인카드" },
+    { "id": "BF_524", "type": "BUSINESS_FIELD", "name": "카드플랫폼" },
+    { "id": "BF_525", "type": "BUSINESS_FIELD", "name": "ATMVAN" },
+    { "id": "BF_526", "type": "BUSINESS_FIELD", "name": "결제금융데이터" },
+    { "id": "BF_527", "type": "BUSINESS_FIELD", "name": "휴대폰소액결제" },
+    { "id": "BF_528", "type": "BUSINESS_FIELD", "name": "PG온라인전자지급" },
+    { "id": "M_324", "type": "MACRO", "name": "이커머스확산" },
+    { "id": "M_325", "type": "MACRO", "name": "가상자산결제확산" }
+  ],
+  "edges": [
+    { "from": "A_515", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_517", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_518", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1818", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_520", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1811", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1812", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1813", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1814", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1815", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1816", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1817", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1813", "to": "BF_523", "type": "OPERATES" },
+    { "from": "A_1814", "to": "BF_523", "type": "OPERATES" },
+    { "from": "A_1817", "to": "BF_523", "type": "OPERATES" },
+    { "from": "A_1816", "to": "BF_524", "type": "OPERATES" },
+    { "from": "A_1815", "to": "BF_525", "type": "OPERATES" },
+    { "from": "A_1811", "to": "BF_526", "type": "OPERATES" },
+    { "from": "A_1812", "to": "BF_527", "type": "OPERATES" },
+    { "from": "A_520", "to": "BF_527", "type": "OPERATES" },
+    { "from": "A_1818", "to": "BF_528", "type": "OPERATES" },
+    { "from": "A_518", "to": "BF_528", "type": "OPERATES" },
+    { "from": "A_517", "to": "BF_528", "type": "OPERATES" },
+    { "from": "A_1814", "to": "A_1817", "type": "INVESTS" },
+    { "from": "M_324", "to": "T_290", "type": "IMPACTS" },
+    { "from": "M_325", "to": "A_517", "type": "IMPACTS" }
+  ],
+  "links": [
+    { "from": "A_515", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_517", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_518", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1818", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_520", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1811", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1812", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1813", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1814", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1815", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1816", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1817", "to": "T_290", "type": "THEMED_AS" },
+    { "from": "A_1813", "to": "BF_523", "type": "OPERATES" },
+    { "from": "A_1814", "to": "BF_523", "type": "OPERATES" },
+    { "from": "A_1817", "to": "BF_523", "type": "OPERATES" },
+    { "from": "A_1816", "to": "BF_524", "type": "OPERATES" },
+    { "from": "A_1815", "to": "BF_525", "type": "OPERATES" },
+    { "from": "A_1811", "to": "BF_526", "type": "OPERATES" },
+    { "from": "A_1812", "to": "BF_527", "type": "OPERATES" },
+    { "from": "A_520", "to": "BF_527", "type": "OPERATES" },
+    { "from": "A_1818", "to": "BF_528", "type": "OPERATES" },
+    { "from": "A_518", "to": "BF_528", "type": "OPERATES" },
+    { "from": "A_517", "to": "BF_528", "type": "OPERATES" },
+    { "from": "A_1814", "to": "A_1817", "type": "INVESTS" },
+    { "from": "M_324", "to": "T_290", "type": "IMPACTS" },
+    { "from": "M_325", "to": "A_517", "type": "IMPACTS" }
+  ]
+}
