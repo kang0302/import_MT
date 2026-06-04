@@ -36,8 +36,9 @@ THEME_DIR = DATA_DIR / "theme"
 CACHE_DIR = DATA_DIR / "cache"
 OUT_PATH = CACHE_DIR / "returns_kr.json"
 
-RETURN_KEYS = ["return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
+RETURN_KEYS = ["return_1d", "return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
 HORIZON_TO_TRADING_DAYS = {
+    "return_1d": 1,
     "return_3d": 3,
     "return_7d": 7,
     "return_1m": 21,
