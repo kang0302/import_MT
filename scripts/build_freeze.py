@@ -22,7 +22,7 @@ RET_KR_PATH = DATA_DIR / "cache" / "returns_kr.json"
 VAL_FMP_PATH = DATA_DIR / "cache" / "valuation_fmp.json"   # 글로벌(Non-KR) valuation
 RET_FMP_PATH = DATA_DIR / "cache" / "returns_fmp.json"     # 글로벌(Non-KR) returns
 
-RETURN_KEYS = ["return_1d", "return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
+RETURN_KEYS = ["return_1d", "return_3d", "return_7d", "return_15d", "return_1m", "return_ytd", "return_1y", "return_3y"]
 VAL_KEYS = ["close", "marketCap", "pe_ttm", "valuationAsOf", "valuationSource"]
 RET_META_KEYS = ["returnsAsOf", "returnsSource"]
 
