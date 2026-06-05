@@ -26,7 +26,7 @@ SLEEP_BETWEEN_CALLS = 0.25
 MAX_RETRIES = 2
 SKIP_HTTP_STATUS = {401, 402, 403, 404}
 
-RETURN_KEYS = ["return_1d", "return_3d", "return_7d", "return_15d", "return_1m", "return_ytd", "return_1y", "return_3y"]
+RETURN_KEYS = ["return_1d", "return_3d", "return_7d", "return_15d", "return_1m", "return_ytd", "return_1y", "return_2y", "return_3y"]
 
 
 # =========================
@@ -210,6 +210,7 @@ def compute_returns_from_closes(hist: List[Dict[str, Any]]) -> Tuple[Optional[st
         "return_1m": ret_at_back(21),
         "return_ytd": ytd_ret,
         "return_1y": ret_at_back(252),
+        "return_2y": ret_at_back(504),
         "return_3y": ret_at_back(756),
     }
     return (as_of_date, out)
