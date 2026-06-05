@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_296",
+  "themeName": "빅머니_캐시우드_ARKW혁신인터넷",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-05T00:00:00+09:00",
+    "description": "ARK Next Generation Internet ETF (ARKW) — 캐시 우드의 혁신 인터넷 플랫폼 ETF. TOP10 보유 (2026-06-04 기준): AMD 9.08%·Tesla 8.96%·Robinhood 4.94%·CoreWeave·Shopify·Roku·Amazon·Circle·Alphabet·Coinbase 등 AI·클라우드·가상자산·핀테크 혁신 인터넷 크로스오버. AI확산(M_055)·LLM확산(M_034)·암호화폐거래량(M_043)·USDC발행잔액(M_042)·AI수요확대(M_051)·AI생산성개선(M_204) 매크로 드라이버.",
+    "notes": "T_296 빅머니_캐시우드_ARKW혁신인터넷 — ARKW TOP10 + ETF 노출",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_296", "type": "THEME", "name": "빅머니_캐시우드_ARKW혁신인터넷" },
+    {
+      "id": "A_1127", "type": "ASSET", "name": "ARKW",
+      "exposure": { "ticker": "ARKW", "exchange": "NYSEARCA", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_056", "type": "ASSET", "name": "AMD",
+      "exposure": { "ticker": "AMD", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_002", "type": "ASSET", "name": "테슬라",
+      "exposure": { "ticker": "TSLA", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_346", "type": "ASSET", "name": "로빈후드",
+      "exposure": { "ticker": "HOOD", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_240", "type": "ASSET", "name": "코어위브",
+      "exposure": { "ticker": "CRWV", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1845", "type": "ASSET", "name": "쇼피파이",
+      "exposure": { "ticker": "SHOP", "exchange": "NYSE", "country": "CA" }, "metrics": {}
+    },
+    {
+      "id": "A_831", "type": "ASSET", "name": "로쿠",
+      "exposure": { "ticker": "ROKU", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_211", "type": "ASSET", "name": "아마존",
+      "exposure": { "ticker": "AMZN", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_348", "type": "ASSET", "name": "서클",
+      "exposure": { "ticker": "CRCL", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_050", "type": "ASSET", "name": "알파벳",
+      "exposure": { "ticker": "GOOGL", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_347", "type": "ASSET", "name": "코인베이스",
+      "exposure": { "ticker": "COIN", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    { "id": "BF_009", "type": "BUSINESS_FIELD", "name": "AI칩" },
+    { "id": "BF_008", "type": "BUSINESS_FIELD", "name": "클라우드" },
+    { "id": "BF_088", "type": "BUSINESS_FIELD", "name": "기관용수탁/트레이딩" },
+    { "id": "BF_011", "type": "BUSINESS_FIELD", "name": "스트리밍" },
+    { "id": "BF_059", "type": "BUSINESS_FIELD", "name": "클라우드인프라" },
+    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
+    { "id": "M_034", "type": "MACRO", "name": "LLM확산" },
+    { "id": "M_043", "type": "MACRO", "name": "암호화폐거래량" },
+    { "id": "M_042", "type": "MACRO", "name": "USDC발행잔액" },
+    { "id": "M_051", "type": "MACRO", "name": "AI수요확대" },
+    { "id": "M_204", "type": "MACRO", "name": "AI생산성개선" }
+  ],
+  "edges": [
+    { "from": "A_1127", "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_056",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_002",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_346",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_240",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_1845", "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_831",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_211",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_348",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_050",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_347",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_056", "to": "BF_009", "type": "OPERATES" },
+    { "from": "A_346", "to": "BF_088", "type": "OPERATES" },
+    { "from": "A_240", "to": "BF_059", "type": "OPERATES" },
+    { "from": "A_831", "to": "BF_011", "type": "OPERATES" },
+    { "from": "A_211", "to": "BF_008", "type": "OPERATES" },
+    { "from": "A_348", "to": "BF_088", "type": "OPERATES" },
+    { "from": "A_050", "to": "BF_008", "type": "OPERATES" },
+    { "from": "A_347", "to": "BF_088", "type": "OPERATES" },
+    { "from": "M_055", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_034", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_043", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_042", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_051", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_204", "to": "T_296", "type": "IMPACTS" }
+  ],
+  "links": [
+    { "from": "A_1127", "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_056",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_002",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_346",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_240",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_1845", "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_831",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_211",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_348",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_050",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_347",  "to": "T_296", "type": "THEMED_AS" },
+    { "from": "A_056", "to": "BF_009", "type": "OPERATES" },
+    { "from": "A_346", "to": "BF_088", "type": "OPERATES" },
+    { "from": "A_240", "to": "BF_059", "type": "OPERATES" },
+    { "from": "A_831", "to": "BF_011", "type": "OPERATES" },
+    { "from": "A_211", "to": "BF_008", "type": "OPERATES" },
+    { "from": "A_348", "to": "BF_088", "type": "OPERATES" },
+    { "from": "A_050", "to": "BF_008", "type": "OPERATES" },
+    { "from": "A_347", "to": "BF_088", "type": "OPERATES" },
+    { "from": "M_055", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_034", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_043", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_042", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_051", "to": "T_296", "type": "IMPACTS" },
+    { "from": "M_204", "to": "T_296", "type": "IMPACTS" }
+  ]
+}
