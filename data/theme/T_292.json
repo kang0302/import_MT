@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_292",
+  "themeName": "글로벌러닝화스니커즈",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-05T00:00:00+09:00",
+    "description": "글로벌 러닝화·스니커즈 브랜드 경쟁 테마 — Nike·Adidas·On Holding(ONON)·Deckers Outdoor 4개 핵심 브랜드 + 화승엔터프라이즈(Adidas 소재/부품 공급망). 건강관심 소비 트렌드(M_331)·긍정적 소비심리(M_144)·내수소비(M_195)·브랜드 재고수준(M_332)·글로벌 여행수요(M_036)가 핵심 매크로 드라이버.",
+    "notes": "T_292 글로벌러닝화스니커즈 — 5 ASSET + 5 MACRO + 1 SUPPLIES (화승→Adidas)",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_292", "type": "THEME", "name": "글로벌러닝화스니커즈" },
+    {
+      "id": "A_834", "type": "ASSET", "name": "나이키",
+      "exposure": { "ticker": "NKE", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_835", "type": "ASSET", "name": "아디다스",
+      "exposure": { "ticker": "ADDYY", "exchange": "OTC", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1828", "type": "ASSET", "name": "온홀딩",
+      "exposure": { "ticker": "ONON", "exchange": "NYSE", "country": "CH" }, "metrics": {}
+    },
+    {
+      "id": "A_1829", "type": "ASSET", "name": "데커스아웃도어",
+      "exposure": { "ticker": "DECK", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1279", "type": "ASSET", "name": "화승엔터프라이즈",
+      "exposure": { "ticker": "241590", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    { "id": "M_144", "type": "MACRO", "name": "긍정적소비심리" },
+    { "id": "M_195", "type": "MACRO", "name": "내수소비" },
+    { "id": "M_036", "type": "MACRO", "name": "글로벌여행수요" },
+    { "id": "M_331", "type": "MACRO", "name": "건강관심소비트렌드" },
+    { "id": "M_332", "type": "MACRO", "name": "브랜드재고수준" }
+  ],
+  "edges": [
+    { "from": "A_834", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_835", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1828", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1829", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1279", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1279", "to": "A_835", "type": "SUPPLIES" },
+    { "from": "M_144", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_195", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_036", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_331", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_332", "to": "T_292", "type": "IMPACTS" }
+  ],
+  "links": [
+    { "from": "A_834", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_835", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1828", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1829", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1279", "to": "T_292", "type": "THEMED_AS" },
+    { "from": "A_1279", "to": "A_835", "type": "SUPPLIES" },
+    { "from": "M_144", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_195", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_036", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_331", "to": "T_292", "type": "IMPACTS" },
+    { "from": "M_332", "to": "T_292", "type": "IMPACTS" }
+  ]
+}
