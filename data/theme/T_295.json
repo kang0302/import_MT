@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_295",
+  "themeName": "빅머니_캐시우드_ARKX우주방산혁신",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-05T00:00:00+09:00",
+    "description": "ARK Space & Defense Innovation ETF (ARKX, 구 ARK Space Exploration) — 펀드명 변경과 함께 우주·방산 섹터 비중을 80% 이상으로 확대. TOP10 핵심 보유 종목: Rocket Lab·L3Harris·Kratos·Teradyne·AeroVironment·Deere·Archer·Palantir·Trimble·AMD. 미중갈등(M_138)·우주산업확대(M_066)·방산수요증가(M_026) 매크로 드라이버.",
+    "notes": "T_295 미국우주방산혁신ETF — ARKX 리브랜딩 후 우주+방산+자율화 포트폴리오",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_295", "type": "THEME", "name": "빅머니_캐시우드_ARKX우주방산혁신" },
+    {
+      "id": "A_429", "type": "ASSET", "name": "ARKX",
+      "exposure": { "ticker": "ARKX", "exchange": "BATS", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_118", "type": "ASSET", "name": "로켓랩",
+      "exposure": { "ticker": "RKLB", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_272", "type": "ASSET", "name": "L3해리스테크놀로지스",
+      "exposure": { "ticker": "LHX", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_270", "type": "ASSET", "name": "크라토스",
+      "exposure": { "ticker": "KTOS", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1116", "type": "ASSET", "name": "테라다인",
+      "exposure": { "ticker": "TER", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_271", "type": "ASSET", "name": "에어로바이론먼트",
+      "exposure": { "ticker": "AVAV", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_378", "type": "ASSET", "name": "디어앤컴퍼니",
+      "exposure": { "ticker": "DE", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_424", "type": "ASSET", "name": "아처에비에이션",
+      "exposure": { "ticker": "ACHR", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_266", "type": "ASSET", "name": "팔란티어",
+      "exposure": { "ticker": "PLTR", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_937", "type": "ASSET", "name": "트림블",
+      "exposure": { "ticker": "TRMB", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_056", "type": "ASSET", "name": "AMD",
+      "exposure": { "ticker": "AMD", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    { "id": "BF_102", "type": "BUSINESS_FIELD", "name": "방산/항공" },
+    { "id": "BF_107", "type": "BUSINESS_FIELD", "name": "우주발사체/탐사" },
+    { "id": "BF_106", "type": "BUSINESS_FIELD", "name": "UAM/eVTOL항공" },
+    { "id": "BF_152", "type": "BUSINESS_FIELD", "name": "드론기체/플랫폼" },
+    { "id": "BF_067", "type": "BUSINESS_FIELD", "name": "자율무기체계" },
+    { "id": "M_138", "type": "MACRO", "name": "미중갈등" },
+    { "id": "M_066", "type": "MACRO", "name": "우주산업확대" },
+    { "id": "M_026", "type": "MACRO", "name": "방산수요증가" }
+  ],
+  "edges": [
+    { "from": "A_429",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_118",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_272",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_270",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_1116", "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_271",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_378",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_424",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_266",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_937",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_056",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_118", "to": "BF_107", "type": "OPERATES" },
+    { "from": "A_272", "to": "BF_102", "type": "OPERATES" },
+    { "from": "A_270", "to": "BF_102", "type": "OPERATES" },
+    { "from": "A_270", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_271", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_271", "to": "BF_067", "type": "OPERATES" },
+    { "from": "A_424", "to": "BF_106", "type": "OPERATES" },
+    { "from": "A_266", "to": "BF_067", "type": "OPERATES" },
+    { "from": "M_138", "to": "T_295", "type": "IMPACTS" },
+    { "from": "M_066", "to": "T_295", "type": "IMPACTS" },
+    { "from": "M_026", "to": "T_295", "type": "IMPACTS" }
+  ],
+  "links": [
+    { "from": "A_429",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_118",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_272",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_270",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_1116", "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_271",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_378",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_424",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_266",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_937",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_056",  "to": "T_295", "type": "THEMED_AS" },
+    { "from": "A_118", "to": "BF_107", "type": "OPERATES" },
+    { "from": "A_272", "to": "BF_102", "type": "OPERATES" },
+    { "from": "A_270", "to": "BF_102", "type": "OPERATES" },
+    { "from": "A_270", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_271", "to": "BF_152", "type": "OPERATES" },
+    { "from": "A_271", "to": "BF_067", "type": "OPERATES" },
+    { "from": "A_424", "to": "BF_106", "type": "OPERATES" },
+    { "from": "A_266", "to": "BF_067", "type": "OPERATES" },
+    { "from": "M_138", "to": "T_295", "type": "IMPACTS" },
+    { "from": "M_066", "to": "T_295", "type": "IMPACTS" },
+    { "from": "M_026", "to": "T_295", "type": "IMPACTS" }
+  ]
+}
