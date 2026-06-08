@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_303",
+  "themeName": "글로벌토큰증권STO실물자산토큰화수혜주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-07T00:00:00+09:00",
+    "description": "글로벌 토큰증권(STO) + 실물자산(RWA) 토큰화 수혜주 — 글로벌 STO 인프라 (Securitize·tZERO·ADDX) + BlackRock + 국내 대형 증권사·금융지주 (미래에셋·한국금융지주·하나금융지주·키움·삼성·SK·대신). 블랙록 BUIDL 토큰화 펀드 발행 파트너 Securitize 가 표준 견인. 국내 토큰증권법 (2027 시행 예정) + 자체 메인넷 구축 경쟁. USDC발행잔액·암호화폐거래량·규제완화·토큰증권법시행 4 매크로 + STO발행유통플랫폼·RWA토큰화 2 BF.",
+    "notes": "T_303 글로벌토큰증권STO 수혜주 — Spec 의 한국금융지주·하나금융지주·대신증권 '신규' 라벨이나 SSOT 이미 존재 → 재사용. 신규 = Securitize·tZERO·ADDX 3개만.",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_303", "type": "THEME", "name": "글로벌토큰증권STO실물자산토큰화수혜주" },
+    {
+      "id": "A_549", "type": "ASSET", "name": "블랙록",
+      "exposure": { "ticker": "BLK", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1870", "type": "ASSET", "name": "시큐리타이즈(비)",
+      "exposure": { "ticker": "", "exchange": "", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1871", "type": "ASSET", "name": "티제로",
+      "exposure": { "ticker": "TZROP", "exchange": "OTC", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_1872", "type": "ASSET", "name": "ADDX(비)",
+      "exposure": { "ticker": "", "exchange": "", "country": "SG" }, "metrics": {}
+    },
+    {
+      "id": "A_110", "type": "ASSET", "name": "미래에셋증권",
+      "exposure": { "ticker": "006800", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_988", "type": "ASSET", "name": "한국금융지주",
+      "exposure": { "ticker": "071050", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_1537", "type": "ASSET", "name": "하나금융지주",
+      "exposure": { "ticker": "086790", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_984", "type": "ASSET", "name": "대신증권",
+      "exposure": { "ticker": "003540", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_986", "type": "ASSET", "name": "키움증권",
+      "exposure": { "ticker": "039490", "exchange": "KOSDAQ", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_982", "type": "ASSET", "name": "삼성증권",
+      "exposure": { "ticker": "016360", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    {
+      "id": "A_983", "type": "ASSET", "name": "SK증권",
+      "exposure": { "ticker": "001510", "exchange": "KOSPI", "country": "KR" }, "metrics": {}
+    },
+    { "id": "BF_539", "type": "BUSINESS_FIELD", "name": "STO발행유통플랫폼" },
+    { "id": "BF_540", "type": "BUSINESS_FIELD", "name": "RWA토큰화" },
+    { "id": "M_042", "type": "MACRO", "name": "USDC발행잔액" },
+    { "id": "M_043", "type": "MACRO", "name": "암호화폐거래량" },
+    { "id": "M_147", "type": "MACRO", "name": "규제완화" },
+    { "id": "M_334", "type": "MACRO", "name": "토큰증권법시행" },
+    { "id": "C_267", "type": "CHARACTER", "name": "최대수수료수익잠재력" },
+    { "id": "C_268", "type": "CHARACTER", "name": "인프라완성도높음" },
+    { "id": "C_269", "type": "CHARACTER", "name": "조각투자플랫폼보유" }
+  ],
+  "edges": [
+    { "from": "A_549",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1870", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1871", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1872", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_110",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_988",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1537", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_984",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_986",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_982",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_983",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1870", "to": "BF_539", "type": "OPERATES" },
+    { "from": "A_1871", "to": "BF_539", "type": "OPERATES" },
+    { "from": "A_1872", "to": "BF_539", "type": "OPERATES" },
+    { "from": "A_1870", "to": "BF_540", "type": "OPERATES" },
+    { "from": "A_549",  "to": "BF_540", "type": "OPERATES" },
+    { "from": "M_042", "to": "T_303", "type": "IMPACTS" },
+    { "from": "M_043", "to": "T_303", "type": "IMPACTS" },
+    { "from": "M_147", "to": "T_303", "type": "IMPACTS" },
+    { "from": "M_334", "to": "T_303", "type": "IMPACTS" },
+    { "from": "A_986",  "to": "C_267", "type": "HAS_TRAIT" },
+    { "from": "A_110",  "to": "C_268", "type": "HAS_TRAIT" },
+    { "from": "A_984",  "to": "C_269", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_549",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1870", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1871", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1872", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_110",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_988",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1537", "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_984",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_986",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_982",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_983",  "to": "T_303", "type": "THEMED_AS" },
+    { "from": "A_1870", "to": "BF_539", "type": "OPERATES" },
+    { "from": "A_1871", "to": "BF_539", "type": "OPERATES" },
+    { "from": "A_1872", "to": "BF_539", "type": "OPERATES" },
+    { "from": "A_1870", "to": "BF_540", "type": "OPERATES" },
+    { "from": "A_549",  "to": "BF_540", "type": "OPERATES" },
+    { "from": "M_042", "to": "T_303", "type": "IMPACTS" },
+    { "from": "M_043", "to": "T_303", "type": "IMPACTS" },
+    { "from": "M_147", "to": "T_303", "type": "IMPACTS" },
+    { "from": "M_334", "to": "T_303", "type": "IMPACTS" },
+    { "from": "A_986",  "to": "C_267", "type": "HAS_TRAIT" },
+    { "from": "A_110",  "to": "C_268", "type": "HAS_TRAIT" },
+    { "from": "A_984",  "to": "C_269", "type": "HAS_TRAIT" }
+  ]
+}
