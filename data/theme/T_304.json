@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_304",
+  "themeName": "글로벌AI팩토리광네트워크병목수혜주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-08T00:00:00+09:00",
+    "description": "AI팩토리 (광)네트워크 병목 수혜주 — 3계층 구조: (1) Scale-up (수 m 구리→광, SerDes 200→400G, NVLink, CPO, 실리콘 포토닉스 — NVDA·AVGO), (2) Scale-out (수백 m PAM4 DSP, 800G/1.6T 광모듈 — MRVL·COHR·LITE·POET), (3) Scale-across (수백 km 코히런트 DSP, 장거리 광모듈, 실리콘 포토닉스 — CIEN·CSCO·GLW·CRDO). 데이터센터확대(M_116)·엔비디아 루빈(M_017)·Agentic AI 확산(M_276)·토큰당 비용 축소(M_335) 매크로 드라이버.",
+    "notes": "T_304 글로벌AI팩토리 광네트워크 병목 수혜주 — Scale-up/out/across 3계층",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_304", "type": "THEME", "name": "글로벌AI팩토리광네트워크병목수혜주" },
+    {
+      "id": "A_055", "type": "ASSET", "name": "엔비디아",
+      "exposure": { "ticker": "NVDA", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_413", "type": "ASSET", "name": "브로드컴",
+      "exposure": { "ticker": "AVGO", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_192", "type": "ASSET", "name": "마벨테크놀로지",
+      "exposure": { "ticker": "MRVL", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_199", "type": "ASSET", "name": "시에나",
+      "exposure": { "ticker": "CIEN", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_399", "type": "ASSET", "name": "코히어런트",
+      "exposure": { "ticker": "COHR", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_400", "type": "ASSET", "name": "루멘텀홀딩스",
+      "exposure": { "ticker": "LITE", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_900", "type": "ASSET", "name": "코닝",
+      "exposure": { "ticker": "GLW", "exchange": "NYSE", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_927", "type": "ASSET", "name": "크레도",
+      "exposure": { "ticker": "CRDO", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_910", "type": "ASSET", "name": "POET테크놀로지스",
+      "exposure": { "ticker": "POET", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    {
+      "id": "A_212", "type": "ASSET", "name": "시스코",
+      "exposure": { "ticker": "CSCO", "exchange": "NASDAQ", "country": "US" }, "metrics": {}
+    },
+    { "id": "BF_066", "type": "BUSINESS_FIELD", "name": "광통신모듈" },
+    { "id": "BF_093", "type": "BUSINESS_FIELD", "name": "Intra-데이터센터" },
+    { "id": "BF_094", "type": "BUSINESS_FIELD", "name": "In-데이터센터" },
+    { "id": "BF_144", "type": "BUSINESS_FIELD", "name": "네트워크장비/스위치" },
+    { "id": "M_116", "type": "MACRO", "name": "데이터센터확대" },
+    { "id": "M_017", "type": "MACRO", "name": "엔비디아루빈개발" },
+    { "id": "M_276", "type": "MACRO", "name": "Agentic AI 확산" },
+    { "id": "M_335", "type": "MACRO", "name": "토큰당비용축소니즈" }
+  ],
+  "edges": [
+    { "from": "A_055", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_413", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_192", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_199", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_399", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_400", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_900", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_927", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_910", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_212", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_055", "to": "BF_093", "type": "OPERATES" },
+    { "from": "A_413", "to": "BF_093", "type": "OPERATES" },
+    { "from": "A_192", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_399", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_400", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_910", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_199", "to": "BF_094", "type": "OPERATES" },
+    { "from": "A_212", "to": "BF_094", "type": "OPERATES" },
+    { "from": "A_212", "to": "BF_144", "type": "OPERATES" },
+    { "from": "A_900", "to": "BF_094", "type": "OPERATES" },
+    { "from": "A_927", "to": "BF_093", "type": "OPERATES" },
+    { "from": "M_116", "to": "T_304", "type": "IMPACTS" },
+    { "from": "M_017", "to": "T_304", "type": "IMPACTS" },
+    { "from": "M_276", "to": "T_304", "type": "IMPACTS" },
+    { "from": "M_335", "to": "T_304", "type": "IMPACTS" }
+  ],
+  "links": [
+    { "from": "A_055", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_413", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_192", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_199", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_399", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_400", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_900", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_927", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_910", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_212", "to": "T_304", "type": "THEMED_AS" },
+    { "from": "A_055", "to": "BF_093", "type": "OPERATES" },
+    { "from": "A_413", "to": "BF_093", "type": "OPERATES" },
+    { "from": "A_192", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_399", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_400", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_910", "to": "BF_066", "type": "OPERATES" },
+    { "from": "A_199", "to": "BF_094", "type": "OPERATES" },
+    { "from": "A_212", "to": "BF_094", "type": "OPERATES" },
+    { "from": "A_212", "to": "BF_144", "type": "OPERATES" },
+    { "from": "A_900", "to": "BF_094", "type": "OPERATES" },
+    { "from": "A_927", "to": "BF_093", "type": "OPERATES" },
+    { "from": "M_116", "to": "T_304", "type": "IMPACTS" },
+    { "from": "M_017", "to": "T_304", "type": "IMPACTS" },
+    { "from": "M_276", "to": "T_304", "type": "IMPACTS" },
+    { "from": "M_335", "to": "T_304", "type": "IMPACTS" }
+  ]
+}
