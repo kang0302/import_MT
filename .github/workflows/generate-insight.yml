@@ -1,0 +1,80 @@
+name: Generate Insight (Claude)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_id:
+        description: 'Target ID (예: T_286 또는 A_217)'
+        required: true
+        type: string
+      extra_context:
+        description: '추가 컨텍스트 (선택)'
+        required: false
+        type: string
+      model:
+        description: 'Claude 모델'
+        required: false
+        default: 'claude-sonnet-4-5'
+        type: choice
+        options:
+          - claude-sonnet-4-5
+          - claude-opus-4-7
+          - claude-haiku-4-5
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate target_id format
+        run: |
+          if [[ ! "${{ inputs.target_id }}" =~ ^(T|A)_[0-9]+$ ]]; then
+            echo "❌ target_id 형식 오류: ${{ inputs.target_id }} (T_xxx 또는 A_xxx)"
+            exit 1
+          fi
+
+      - name: Generate insight via Claude API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TARGET_ID: ${{ inputs.target_id }}
+          EXTRA_CONTEXT: ${{ inputs.extra_context }}
+          MODEL: ${{ inputs.model }}
+        run: |
+          python scripts/generate_insight.py
+
+      - name: Configure git
+        run: |
+          git config user.name "moneytree-insight-bot"
+          git config user.email "noreply@anthropic.com"
+
+      - name: Commit + push
+        run: |
+          git pull --rebase origin main
+          git add data/insights/${{ inputs.target_id }}.md
+          if git diff --cached --quiet; then
+            echo "ℹ️ 변경 사항 없음 (동일 내용 재생성)"
+            exit 0
+          fi
+          git commit -m "docs(insights): ${{ inputs.target_id }} 자동 생성 (${{ inputs.model }})"
+          git push origin main
+
+      - name: Summary
+        run: |
+          echo "## ✅ 인사이트 생성 완료" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Target**: \`${{ inputs.target_id }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Model**: \`${{ inputs.model }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **File**: \`data/insights/${{ inputs.target_id }}.md\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "5분 후 \`/graph/${{ inputs.target_id }}\` 페이지에서 NEW 배지 확인 가능." >> $GITHUB_STEP_SUMMARY
