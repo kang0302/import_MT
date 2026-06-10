@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_316",
+  "themeName": "빅머니_달리오_올웨더분산",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Bridgewater All Weather portfolio (Ray Dalio) — 인플레/디플레/성장/침체 4박자 매크로 분산 (리스크 패리티). 핵심 자산: 장기국채 (TLT) + 금 (GLD·IAU) + 신흥국 주식 (EEM) + 미국 전체 (VTI) + 회사채 (LQD) + 부동산 (VNQ). 매크로 환경 어떤 상황이든 평균 수익 추구.",
+    "notes": "T_316 빅머니 시리즈 — 달리오 All Weather 리스크 패리티",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_316", "type": "THEME", "name": "빅머니_달리오_올웨더분산" },
+    { "id": "A_1487", "type": "ASSET", "name": "TLT",  "exposure": { "ticker": "TLT", "exchange": "NASDAQ", "country": "US" } },
+    { "id": "A_063",  "type": "ASSET", "name": "GLD",  "exposure": { "ticker": "GLD", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_881",  "type": "ASSET", "name": "IAU",  "exposure": { "ticker": "IAU", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1926", "type": "ASSET", "name": "VNQ",  "exposure": { "ticker": "VNQ", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1927", "type": "ASSET", "name": "EEM",  "exposure": { "ticker": "EEM", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1928", "type": "ASSET", "name": "VTI",  "exposure": { "ticker": "VTI", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1929", "type": "ASSET", "name": "LQD",  "exposure": { "ticker": "LQD", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "M_072", "type": "MACRO", "name": "금리인상" },
+    { "id": "M_075", "type": "MACRO", "name": "기후변화" },
+    { "id": "C_290", "type": "CHARACTER", "name": "13F빅머니추적" },
+    { "id": "C_293", "type": "CHARACTER", "name": "리스크패리티분산" }
+  ],
+  "edges": [
+    { "from": "A_1487", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_063",  "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_881",  "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1926", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1927", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1928", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1929", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "M_072", "to": "T_316", "type": "IMPACTS" },
+    { "from": "M_075", "to": "T_316", "type": "IMPACTS" },
+    { "from": "T_316", "to": "C_290", "type": "HAS_TRAIT" },
+    { "from": "T_316", "to": "C_293", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_1487", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_063",  "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_881",  "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1926", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1927", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1928", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "A_1929", "to": "T_316", "type": "THEMED_AS" },
+    { "from": "M_072", "to": "T_316", "type": "IMPACTS" },
+    { "from": "M_075", "to": "T_316", "type": "IMPACTS" },
+    { "from": "T_316", "to": "C_290", "type": "HAS_TRAIT" },
+    { "from": "T_316", "to": "C_293", "type": "HAS_TRAIT" }
+  ]
+}
