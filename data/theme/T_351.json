@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_351",
+  "themeName": "글로벌핵융합",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "글로벌 핵융합 (Fusion) 메가트렌드 — 2030 이전 상업화 1차 목표. 비상장 1티어: Commonwealth Fusion Systems (MIT)·Helion (Microsoft deal)·TAE Technologies·Type One. 상장 수혜: BWXT (HALEU 농축)·GE Vernova (터빈)·Constellation Energy (원전)·Westinghouse(비)·우라늄 ETF (URA·NLR). 미국·중국·EU 정부 자금 가속.",
+    "notes": "T_351 신규 — 글로벌 핵융합 메가트렌드",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_351", "type": "THEME", "name": "글로벌핵융합" },
+    { "id": "A_1972", "type": "ASSET", "name": "커먼웰스퓨전(비)", "exposure": { "ticker": "", "exchange": "PRIVATE","country": "US" } },
+    { "id": "A_1973", "type": "ASSET", "name": "헬리온에너지(비)",  "exposure": { "ticker": "", "exchange": "PRIVATE","country": "US" } },
+    { "id": "A_1974", "type": "ASSET", "name": "TAE테크놀로지(비)", "exposure": { "ticker": "", "exchange": "PRIVATE","country": "US" } },
+    { "id": "A_1975", "type": "ASSET", "name": "타입원에너지(비)",  "exposure": { "ticker": "", "exchange": "PRIVATE","country": "US" } },
+    { "id": "A_173",  "type": "ASSET", "name": "웨스팅하우스(비)",  "exposure": { "ticker": "", "exchange": "PRIVATE","country": "US" } },
+    { "id": "A_169",  "type": "ASSET", "name": "BWX테크놀로지",     "exposure": { "ticker": "BWXT","exchange": "NYSE","country": "US" } },
+    { "id": "A_167",  "type": "ASSET", "name": "GE버노바",          "exposure": { "ticker": "GEV","exchange": "NYSE","country": "US" } },
+    { "id": "A_1655", "type": "ASSET", "name": "컨스텔레이션에너지", "exposure": { "ticker": "CEG","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_165",  "type": "ASSET", "name": "Cameco",           "exposure": { "ticker": "CCJ","exchange": "NYSE","country": "US" } },
+    { "id": "A_069",  "type": "ASSET", "name": "URA",              "exposure": { "ticker": "URA","exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1350", "type": "ASSET", "name": "NLR",              "exposure": { "ticker": "NLR","exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_210",  "type": "ASSET", "name": "마이크로소프트",     "exposure": { "ticker": "MSFT","exchange": "NASDAQ","country": "US" } },
+    { "id": "C_317", "type": "CHARACTER", "name": "핵융합상업화수혜" }
+  ],
+  "edges": [
+    { "from": "A_1972", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1973", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1974", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1975", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_173",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_169",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_167",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1655", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_165",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_069",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1350", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_210",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_210",  "to": "A_1973", "type": "INVESTS" },
+    { "from": "T_351", "to": "C_317", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_1972", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1973", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1974", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1975", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_173",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_169",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_167",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1655", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_165",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_069",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_1350", "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_210",  "to": "T_351", "type": "THEMED_AS" },
+    { "from": "A_210",  "to": "A_1973", "type": "INVESTS" },
+    { "from": "T_351", "to": "C_317", "type": "HAS_TRAIT" }
+  ]
+}
