@@ -4,50 +4,201 @@
   "themeName": "빅머니_액크먼_PSH집중포트",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Pershing Square Capital — Bill Ackman 의 7-10 종목 concentrated long-only 포트폴리오. 활동주의 + 고품질 wide-moat 기업 선호. 13F 분기 공개 — 대표 보유: Chipotle·Hilton·Restaurant Brands·Brookfield·Howard Hughes·Alphabet·Nike. 단기 trade 적고 장기 hold (평균 5년+).",
     "notes": "T_314 빅머니 시리즈 — 액크먼 PSH 13F 추적",
     "sources": []
   },
   "nodes": [
-    { "id": "T_314", "type": "THEME", "name": "빅머니_액크먼_PSH집중포트" },
-    { "id": "A_302",  "type": "ASSET", "name": "치폴레멕시칸그릴",   "exposure": { "ticker": "CMG",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1679", "type": "ASSET", "name": "힐튼월드와이드홀딩스","exposure": { "ticker": "HLT",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1921", "type": "ASSET", "name": "RBI(레스토랑브랜즈)", "exposure": { "ticker": "QSR",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1922", "type": "ASSET", "name": "브룩필드코퍼레이션",   "exposure": { "ticker": "BN",   "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1923", "type": "ASSET", "name": "하워드휴즈홀딩스",     "exposure": { "ticker": "HHH",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_050",  "type": "ASSET", "name": "알파벳",             "exposure": { "ticker": "GOOGL","exchange": "NASDAQ", "country": "US" } },
-    { "id": "A_834",  "type": "ASSET", "name": "나이키",             "exposure": { "ticker": "NKE",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "M_072", "type": "MACRO", "name": "금리인상" },
-    { "id": "M_144", "type": "MACRO", "name": "긍정적소비심리" },
-    { "id": "C_290", "type": "CHARACTER", "name": "13F빅머니추적" },
-    { "id": "C_291", "type": "CHARACTER", "name": "활동주의캠페인" }
+    {
+      "id": "T_314",
+      "type": "THEME",
+      "name": "빅머니_액크먼_PSH집중포트"
+    },
+    {
+      "id": "A_302",
+      "type": "ASSET",
+      "name": "치폴레멕시칸그릴",
+      "exposure": {
+        "ticker": "CMG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1679",
+      "type": "ASSET",
+      "name": "힐튼월드와이드홀딩스",
+      "exposure": {
+        "ticker": "HLT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1921",
+      "type": "ASSET",
+      "name": "RBI(레스토랑브랜즈)",
+      "exposure": {
+        "ticker": "QSR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1922",
+      "type": "ASSET",
+      "name": "브룩필드코퍼레이션",
+      "exposure": {
+        "ticker": "BN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1923",
+      "type": "ASSET",
+      "name": "하워드휴즈홀딩스",
+      "exposure": {
+        "ticker": "HHH",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_050",
+      "type": "ASSET",
+      "name": "알파벳",
+      "exposure": {
+        "ticker": "GOOGL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_834",
+      "type": "ASSET",
+      "name": "나이키",
+      "exposure": {
+        "ticker": "NKE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_144",
+      "type": "MACRO",
+      "name": "긍정적소비심리"
+    },
+    {
+      "id": "C_291",
+      "type": "CHARACTER",
+      "name": "활동주의캠페인"
+    }
   ],
   "edges": [
-    { "from": "A_302",  "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1679", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1921", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1922", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1923", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_050",  "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_834",  "to": "T_314", "type": "THEMED_AS" },
-    { "from": "M_072", "to": "T_314", "type": "IMPACTS" },
-    { "from": "M_144", "to": "T_314", "type": "IMPACTS" },
-    { "from": "T_314", "to": "C_290", "type": "HAS_TRAIT" },
-    { "from": "T_314", "to": "C_291", "type": "HAS_TRAIT" }
+    {
+      "from": "A_302",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1679",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1921",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1922",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1923",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_050",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_834",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_144",
+      "to": "T_314",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_314",
+      "to": "C_291",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_302",  "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1679", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1921", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1922", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_1923", "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_050",  "to": "T_314", "type": "THEMED_AS" },
-    { "from": "A_834",  "to": "T_314", "type": "THEMED_AS" },
-    { "from": "M_072", "to": "T_314", "type": "IMPACTS" },
-    { "from": "M_144", "to": "T_314", "type": "IMPACTS" },
-    { "from": "T_314", "to": "C_290", "type": "HAS_TRAIT" },
-    { "from": "T_314", "to": "C_291", "type": "HAS_TRAIT" }
+    {
+      "from": "A_302",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1679",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1921",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1922",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1923",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_050",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_834",
+      "to": "T_314",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_144",
+      "to": "T_314",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_314",
+      "to": "C_291",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
