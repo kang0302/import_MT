@@ -4,53 +4,391 @@
   "themeName": "글로벌송전망노후화수혜",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "글로벌 송전망 노후화 + AI DC 전력 수요 폭증 수혜주. 미국 전력망 60% 50년+, 송전 capa 2배 필요. 장비: Eaton·Hubbell·ABB·Schneider·Emerson. 건설 EPC: Quanta Services. 유틸리티 IOU: NextEra·Duke·Southern·AEP·Edison. IIJA $73B 송전 자금 + AI capex 사이클.",
     "notes": "T_354 신규 — 글로벌 송전망 노후화 11사",
     "sources": []
   },
   "nodes": [
-    { "id": "T_354", "type": "THEME", "name": "글로벌송전망노후화수혜" },
-    { "id": "A_955",  "type": "ASSET", "name": "이튼",              "exposure": { "ticker": "ETN", "exchange": "NYSE","country": "US" } },
-    { "id": "A_1987", "type": "ASSET", "name": "허벨",              "exposure": { "ticker": "HUBB","exchange": "NYSE","country": "US" } },
-    { "id": "A_1860", "type": "ASSET", "name": "퀀타서비스",         "exposure": { "ticker": "PWR", "exchange": "NYSE","country": "US" } },
-    { "id": "A_1062", "type": "ASSET", "name": "NextEra Energy",   "exposure": { "ticker": "NEE", "exchange": "NYSE","country": "US" } },
-    { "id": "A_1063", "type": "ASSET", "name": "듀크에너지",         "exposure": { "ticker": "DUK", "exchange": "NYSE","country": "US" } },
-    { "id": "A_1064", "type": "ASSET", "name": "써던컴퍼니",         "exposure": { "ticker": "SO",  "exchange": "NYSE","country": "US" } },
-    { "id": "A_1065", "type": "ASSET", "name": "아메리칸일렉트릭파워","exposure": { "ticker": "AEP", "exchange": "NASDAQ","country": "US" } },
-    { "id": "A_1988", "type": "ASSET", "name": "에디슨인터내셔널",    "exposure": { "ticker": "EIX", "exchange": "NYSE","country": "US" } },
-    { "id": "A_286",  "type": "ASSET", "name": "ABB",               "exposure": { "ticker": "ABB", "exchange": "NYSE","country": "US" } },
-    { "id": "A_100",  "type": "ASSET", "name": "슈나이더일렉트릭",    "exposure": { "ticker": "SU",  "exchange": "EURONEXT","country": "FR" } },
-    { "id": "A_1989", "type": "ASSET", "name": "에머슨일렉트릭",      "exposure": { "ticker": "EMR", "exchange": "NYSE","country": "US" } },
-    { "id": "C_320", "type": "CHARACTER", "name": "송전망노후화수혜" }
+    {
+      "id": "T_354",
+      "type": "THEME",
+      "name": "글로벌송전망노후화수혜"
+    },
+    {
+      "id": "A_955",
+      "type": "ASSET",
+      "name": "이튼",
+      "exposure": {
+        "ticker": "ETN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1987",
+      "type": "ASSET",
+      "name": "허벨",
+      "exposure": {
+        "ticker": "HUBB",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1860",
+      "type": "ASSET",
+      "name": "퀀타서비스",
+      "exposure": {
+        "ticker": "PWR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1062",
+      "type": "ASSET",
+      "name": "NextEra Energy",
+      "exposure": {
+        "ticker": "NEE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1063",
+      "type": "ASSET",
+      "name": "듀크에너지",
+      "exposure": {
+        "ticker": "DUK",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1064",
+      "type": "ASSET",
+      "name": "써던컴퍼니",
+      "exposure": {
+        "ticker": "SO",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1065",
+      "type": "ASSET",
+      "name": "아메리칸일렉트릭파워",
+      "exposure": {
+        "ticker": "AEP",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1988",
+      "type": "ASSET",
+      "name": "에디슨인터내셔널",
+      "exposure": {
+        "ticker": "EIX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_286",
+      "type": "ASSET",
+      "name": "ABB",
+      "exposure": {
+        "ticker": "ABB",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_100",
+      "type": "ASSET",
+      "name": "슈나이더일렉트릭",
+      "exposure": {
+        "ticker": "SU",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "A_1989",
+      "type": "ASSET",
+      "name": "에머슨일렉트릭",
+      "exposure": {
+        "ticker": "EMR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_320",
+      "type": "CHARACTER",
+      "name": "송전망노후화수혜"
+    },
+    {
+      "id": "BF_566",
+      "type": "BUSINESS_FIELD",
+      "name": "송전망장비메이저"
+    },
+    {
+      "id": "BF_567",
+      "type": "BUSINESS_FIELD",
+      "name": "송전EPC건설"
+    },
+    {
+      "id": "BF_568",
+      "type": "BUSINESS_FIELD",
+      "name": "전력유틸리티IOU"
+    }
   ],
   "edges": [
-    { "from": "A_955",  "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1987", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1860", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1062", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1063", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1064", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1065", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1988", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_286",  "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_100",  "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1989", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "T_354", "to": "C_320", "type": "HAS_TRAIT" }
+    {
+      "from": "A_955",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1987",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1860",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1062",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1063",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1064",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1065",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1988",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_286",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_100",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1989",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_354",
+      "to": "C_320",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_955",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1987",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_286",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_100",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1989",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1860",
+      "to": "BF_567",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1062",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1063",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1064",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1065",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1988",
+      "to": "BF_568",
+      "type": "OPERATES"
+    }
   ],
   "links": [
-    { "from": "A_955",  "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1987", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1860", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1062", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1063", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1064", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1065", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1988", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_286",  "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_100",  "to": "T_354", "type": "THEMED_AS" },
-    { "from": "A_1989", "to": "T_354", "type": "THEMED_AS" },
-    { "from": "T_354", "to": "C_320", "type": "HAS_TRAIT" }
+    {
+      "from": "A_955",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1987",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1860",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1062",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1063",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1064",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1065",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1988",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_286",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_100",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1989",
+      "to": "T_354",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_354",
+      "to": "C_320",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_955",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1987",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_286",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_100",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1989",
+      "to": "BF_566",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1860",
+      "to": "BF_567",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1062",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1063",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1064",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1065",
+      "to": "BF_568",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1988",
+      "to": "BF_568",
+      "type": "OPERATES"
+    }
   ]
 }
