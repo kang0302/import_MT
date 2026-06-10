@@ -4,65 +4,409 @@
   "themeName": "글로벌보험사",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "글로벌 보험사 (재보험·손해보험·생명보험) — 버크셔해서웨이 (BRK-B) + Allianz + AIG + Prudential + Chubb + Munich Re. 금리 사이클 + 기후 재보험 손실 + 자율주행 손해율 감소가 핵심 변수. 듀레이션 자산·인플레 헷지 성격.",
     "notes": "T_310 신규 — 글로벌 보험 6사",
     "sources": []
   },
   "nodes": [
-    { "id": "T_310", "type": "THEME", "name": "글로벌보험사" },
-    { "id": "A_1902", "type": "ASSET", "name": "버크셔해서웨이", "exposure": { "ticker": "BRK-B", "exchange": "NYSE", "country": "US" } },
-    { "id": "A_1903", "type": "ASSET", "name": "알리안츠",       "exposure": { "ticker": "ALIZY", "exchange": "OTC",  "country": "US" } },
-    { "id": "A_1904", "type": "ASSET", "name": "AIG",            "exposure": { "ticker": "AIG",   "exchange": "NYSE", "country": "US" } },
-    { "id": "A_1905", "type": "ASSET", "name": "프루덴셜파이낸셜", "exposure": { "ticker": "PRU",   "exchange": "NYSE", "country": "US" } },
-    { "id": "A_1771", "type": "ASSET", "name": "CHUBB",           "exposure": { "ticker": "CB",    "exchange": "NYSE", "country": "US" } },
-    { "id": "A_1906", "type": "ASSET", "name": "뮌헨재보험",      "exposure": { "ticker": "MURGY", "exchange": "OTC",  "country": "US" } },
-    { "id": "M_072", "type": "MACRO", "name": "금리인상" },
-    { "id": "M_075", "type": "MACRO", "name": "기후변화" },
-    { "id": "M_021", "type": "MACRO", "name": "자율주행보급확대" },
-    { "id": "BF_555", "type": "BUSINESS_FIELD", "name": "재보험" },
-    { "id": "BF_556", "type": "BUSINESS_FIELD", "name": "손해보험" },
-    { "id": "BF_557", "type": "BUSINESS_FIELD", "name": "생명보험" }
+    {
+      "id": "T_310",
+      "type": "THEME",
+      "name": "글로벌보험사"
+    },
+    {
+      "id": "A_1902",
+      "type": "ASSET",
+      "name": "버크셔해서웨이",
+      "exposure": {
+        "ticker": "BRK-B",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.1232032854209475,
+        "return_3d": 1.874098990869788,
+        "return_7d": 2.765132355420663,
+        "return_15d": -0.1597116999058068,
+        "return_1m": 2.4498886414253906,
+        "return_ytd": -1.8617288920197206,
+        "return_1y": -1.2015480315279659,
+        "return_2y": 19.063316484750835,
+        "return_3y": 47.990768398997055,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-06-09",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1903",
+      "type": "ASSET",
+      "name": "알리안츠",
+      "exposure": {
+        "ticker": "ALIZY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.4852634021814692,
+        "return_3d": 1.438181396427729,
+        "return_7d": -1.3089596027984762,
+        "return_15d": -2.104320573091567,
+        "return_1m": -3.2736120327361284,
+        "return_ytd": -3.6996256331204624,
+        "return_1y": 7.975308641975309,
+        "return_2y": 53.54634831460672,
+        "return_3y": 94.44197421076032,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-06-09",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1904",
+      "type": "ASSET",
+      "name": "AIG",
+      "exposure": {
+        "ticker": "AIG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.24291497975706955,
+        "return_3d": 0.6535947712418277,
+        "return_7d": -0.41762090798869167,
+        "return_15d": -5.666156202143946,
+        "return_1m": -3.195390256678887,
+        "return_ytd": -12.2819508721965,
+        "return_1y": -15.365239294710332,
+        "return_2y": -3.561643835616446,
+        "return_3y": 33.913043478260875,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-06-09",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1905",
+      "type": "ASSET",
+      "name": "프루덴셜파이낸셜",
+      "exposure": {
+        "ticker": "PRU",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.019282684149635188,
+        "return_3d": 0.36778939217965156,
+        "return_7d": 3.0405405405405483,
+        "return_15d": 0.6991648863857058,
+        "return_1m": 2.866779089376048,
+        "return_ytd": -8.931237375955037,
+        "return_1y": -1.7806402727789328,
+        "return_2y": -12.103746397694525,
+        "return_3y": 24.879576107899794,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-06-09",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1771",
+      "type": "ASSET",
+      "name": "CHUBB",
+      "exposure": {
+        "ticker": "CB",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.0096930533117998,
+        "return_3d": 3.3799682034976186,
+        "return_7d": 4.2985917300227605,
+        "return_15d": -1.5741833923652027,
+        "return_1m": 1.7175572519084081,
+        "return_ytd": 4.860349609752945,
+        "return_1y": 10.656184058266959,
+        "return_2y": 22.77859597447227,
+        "return_3y": 69.02162611769597,
+        "close": 325.13,
+        "marketCap": 126104956264,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-06-09",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-06-09",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1906",
+      "type": "ASSET",
+      "name": "뮌헨재보험",
+      "exposure": {
+        "ticker": "MURGY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.9436345966958424,
+        "return_3d": 2.641878669275921,
+        "return_7d": 0.2868068833651982,
+        "return_15d": -6.838365896980458,
+        "return_1m": -11.176968670618127,
+        "return_ytd": -17.85434612372748,
+        "return_1y": -20.53030303030302,
+        "return_2y": 6.714140386571721,
+        "return_3y": 42.72108843537416,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-06-09",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_072",
+      "type": "MACRO",
+      "name": "금리인상"
+    },
+    {
+      "id": "M_075",
+      "type": "MACRO",
+      "name": "기후변화"
+    },
+    {
+      "id": "M_021",
+      "type": "MACRO",
+      "name": "자율주행보급확대"
+    },
+    {
+      "id": "BF_555",
+      "type": "BUSINESS_FIELD",
+      "name": "재보험"
+    },
+    {
+      "id": "BF_556",
+      "type": "BUSINESS_FIELD",
+      "name": "손해보험"
+    },
+    {
+      "id": "BF_557",
+      "type": "BUSINESS_FIELD",
+      "name": "생명보험"
+    }
   ],
   "edges": [
-    { "from": "A_1902", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1903", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1904", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1905", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1771", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1906", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "M_072", "to": "T_310", "type": "IMPACTS" },
-    { "from": "M_075", "to": "T_310", "type": "IMPACTS" },
-    { "from": "M_021", "to": "T_310", "type": "IMPACTS" },
-    { "from": "A_1902", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1902", "to": "BF_555", "type": "OPERATES" },
-    { "from": "A_1903", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1903", "to": "BF_557", "type": "OPERATES" },
-    { "from": "A_1904", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1904", "to": "BF_557", "type": "OPERATES" },
-    { "from": "A_1905", "to": "BF_557", "type": "OPERATES" },
-    { "from": "A_1771", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1906", "to": "BF_555", "type": "OPERATES" }
+    {
+      "from": "A_1902",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1903",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1904",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1905",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1771",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1906",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_072",
+      "to": "T_310",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_075",
+      "to": "T_310",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_021",
+      "to": "T_310",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_1902",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1902",
+      "to": "BF_555",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1903",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1903",
+      "to": "BF_557",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1904",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1904",
+      "to": "BF_557",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1905",
+      "to": "BF_557",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1771",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1906",
+      "to": "BF_555",
+      "type": "OPERATES"
+    }
   ],
   "links": [
-    { "from": "A_1902", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1903", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1904", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1905", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1771", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "A_1906", "to": "T_310", "type": "THEMED_AS" },
-    { "from": "M_072", "to": "T_310", "type": "IMPACTS" },
-    { "from": "M_075", "to": "T_310", "type": "IMPACTS" },
-    { "from": "M_021", "to": "T_310", "type": "IMPACTS" },
-    { "from": "A_1902", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1902", "to": "BF_555", "type": "OPERATES" },
-    { "from": "A_1903", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1903", "to": "BF_557", "type": "OPERATES" },
-    { "from": "A_1904", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1904", "to": "BF_557", "type": "OPERATES" },
-    { "from": "A_1905", "to": "BF_557", "type": "OPERATES" },
-    { "from": "A_1771", "to": "BF_556", "type": "OPERATES" },
-    { "from": "A_1906", "to": "BF_555", "type": "OPERATES" }
+    {
+      "from": "A_1902",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1903",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1904",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1905",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1771",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1906",
+      "to": "T_310",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_072",
+      "to": "T_310",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_075",
+      "to": "T_310",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_021",
+      "to": "T_310",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_1902",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1902",
+      "to": "BF_555",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1903",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1903",
+      "to": "BF_557",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1904",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1904",
+      "to": "BF_557",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1905",
+      "to": "BF_557",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1771",
+      "to": "BF_556",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1906",
+      "to": "BF_555",
+      "type": "OPERATES"
+    }
   ]
 }
