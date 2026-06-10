@@ -4,72 +4,306 @@
   "themeName": "K-스마트팜농업기술",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "K-스마트팜·농업기술 — 농기계 (대동) + 온실 시공 (그린플러스) + 스마트팜 운영 (우듬지팜) + 종자/육종 (농우바이오) + 식물공장 (우리바이오) + 작물보호 (팜한농). 식량안보·기후변화·인구고령화 메가트렌드. K-농업 수출 ramp.",
     "notes": "T_313 신규 — K-스마트팜 6사",
     "sources": []
   },
   "nodes": [
-    { "id": "T_313", "type": "THEME", "name": "K-스마트팜농업기술" },
-    { "id": "A_380",  "type": "ASSET", "name": "대동",         "exposure": { "ticker": "000490", "exchange": "KOSPI",  "country": "KR" } },
-    { "id": "A_1916", "type": "ASSET", "name": "그린플러스",    "exposure": { "ticker": "195870", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1917", "type": "ASSET", "name": "우듬지팜",      "exposure": { "ticker": "333430", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1918", "type": "ASSET", "name": "농우바이오",    "exposure": { "ticker": "900120", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1919", "type": "ASSET", "name": "우리바이오",    "exposure": { "ticker": "082850", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1920", "type": "ASSET", "name": "팜한농(비)",    "exposure": { "ticker": "",      "exchange": "PRIVATE","country": "KR" } },
-    { "id": "M_075", "type": "MACRO", "name": "기후변화" },
-    { "id": "M_002", "type": "MACRO", "name": "곡물가안정" },
-    { "id": "M_046", "type": "MACRO", "name": "곡물가인상" },
-    { "id": "M_099", "type": "MACRO", "name": "곡물수급악화" },
-    { "id": "M_344", "type": "MACRO", "name": "식량안보" },
-    { "id": "BF_562", "type": "BUSINESS_FIELD", "name": "스마트팜시공" },
-    { "id": "BF_563", "type": "BUSINESS_FIELD", "name": "스마트팜솔루션" },
-    { "id": "BF_564", "type": "BUSINESS_FIELD", "name": "종종/육종연구" },
-    { "id": "BF_565", "type": "BUSINESS_FIELD", "name": "식물공장" },
-    { "id": "C_287", "type": "CHARACTER", "name": "식량안보메가트렌드" },
-    { "id": "C_288", "type": "CHARACTER", "name": "기후변화대응농업" }
+    {
+      "id": "T_313",
+      "type": "THEME",
+      "name": "K-스마트팜농업기술"
+    },
+    {
+      "id": "A_380",
+      "type": "ASSET",
+      "name": "대동",
+      "exposure": {
+        "ticker": "000490",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1916",
+      "type": "ASSET",
+      "name": "그린플러스",
+      "exposure": {
+        "ticker": "195870",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1917",
+      "type": "ASSET",
+      "name": "우듬지팜",
+      "exposure": {
+        "ticker": "333430",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1918",
+      "type": "ASSET",
+      "name": "농우바이오",
+      "exposure": {
+        "ticker": "900120",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1919",
+      "type": "ASSET",
+      "name": "우리바이오",
+      "exposure": {
+        "ticker": "082850",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1920",
+      "type": "ASSET",
+      "name": "팜한농(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "PRIVATE",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "M_075",
+      "type": "MACRO",
+      "name": "기후변화"
+    },
+    {
+      "id": "M_099",
+      "type": "MACRO",
+      "name": "곡물수급악화"
+    },
+    {
+      "id": "M_344",
+      "type": "MACRO",
+      "name": "식량안보"
+    },
+    {
+      "id": "BF_562",
+      "type": "BUSINESS_FIELD",
+      "name": "스마트팜시공"
+    },
+    {
+      "id": "BF_563",
+      "type": "BUSINESS_FIELD",
+      "name": "스마트팜솔루션"
+    },
+    {
+      "id": "BF_564",
+      "type": "BUSINESS_FIELD",
+      "name": "종종/육종연구"
+    },
+    {
+      "id": "BF_565",
+      "type": "BUSINESS_FIELD",
+      "name": "식물공장"
+    },
+    {
+      "id": "C_287",
+      "type": "CHARACTER",
+      "name": "식량안보메가트렌드"
+    },
+    {
+      "id": "C_288",
+      "type": "CHARACTER",
+      "name": "기후변화대응농업"
+    }
   ],
   "edges": [
-    { "from": "A_380",  "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1916", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1917", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1918", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1919", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1920", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "M_075", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_002", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_046", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_099", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_344", "to": "T_313", "type": "IMPACTS" },
-    { "from": "A_380",  "to": "BF_563", "type": "OPERATES" },
-    { "from": "A_1916", "to": "BF_562", "type": "OPERATES" },
-    { "from": "A_1917", "to": "BF_563", "type": "OPERATES" },
-    { "from": "A_1918", "to": "BF_564", "type": "OPERATES" },
-    { "from": "A_1919", "to": "BF_565", "type": "OPERATES" },
-    { "from": "A_1920", "to": "BF_564", "type": "OPERATES" },
-    { "from": "T_313", "to": "C_287", "type": "HAS_TRAIT" },
-    { "from": "T_313", "to": "C_288", "type": "HAS_TRAIT" }
+    {
+      "from": "A_380",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1916",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1917",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1918",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1919",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1920",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_075",
+      "to": "T_313",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_099",
+      "to": "T_313",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_344",
+      "to": "T_313",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_380",
+      "to": "BF_563",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1916",
+      "to": "BF_562",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1917",
+      "to": "BF_563",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1918",
+      "to": "BF_564",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1919",
+      "to": "BF_565",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1920",
+      "to": "BF_564",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_313",
+      "to": "C_287",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "T_313",
+      "to": "C_288",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_380",  "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1916", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1917", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1918", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1919", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "A_1920", "to": "T_313", "type": "THEMED_AS" },
-    { "from": "M_075", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_002", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_046", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_099", "to": "T_313", "type": "IMPACTS" },
-    { "from": "M_344", "to": "T_313", "type": "IMPACTS" },
-    { "from": "A_380",  "to": "BF_563", "type": "OPERATES" },
-    { "from": "A_1916", "to": "BF_562", "type": "OPERATES" },
-    { "from": "A_1917", "to": "BF_563", "type": "OPERATES" },
-    { "from": "A_1918", "to": "BF_564", "type": "OPERATES" },
-    { "from": "A_1919", "to": "BF_565", "type": "OPERATES" },
-    { "from": "A_1920", "to": "BF_564", "type": "OPERATES" },
-    { "from": "T_313", "to": "C_287", "type": "HAS_TRAIT" },
-    { "from": "T_313", "to": "C_288", "type": "HAS_TRAIT" }
+    {
+      "from": "A_380",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1916",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1917",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1918",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1919",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1920",
+      "to": "T_313",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_075",
+      "to": "T_313",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_099",
+      "to": "T_313",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_344",
+      "to": "T_313",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_380",
+      "to": "BF_563",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1916",
+      "to": "BF_562",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1917",
+      "to": "BF_563",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1918",
+      "to": "BF_564",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1919",
+      "to": "BF_565",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1920",
+      "to": "BF_564",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_313",
+      "to": "C_287",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "T_313",
+      "to": "C_288",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
