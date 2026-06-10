@@ -4,90 +4,326 @@
   "themeName": "K-EV충전인프라",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "K-EV충전인프라 — 국내 전기차 충전 인프라 8축: DC급속충전기 제조 (SK시그넷) + 충전기+전력 (LS일렉트릭) + 인프라 운영 (에스트래픽) + 핵심부품 (중앙제어) + 충방전 장비 (원익PNE) + 충전 사업 (대유플러스) + 충전+주차 플랫폼 (휴맥스모빌리티) + IPO 대기 (LS이링크). EV 보급 확대·AI 전력수요·LS 그룹 리밸런싱이 핵심 동인.",
     "notes": "T_307 신규 — K-EV 충전 인프라 8축",
     "sources": []
   },
   "nodes": [
-    { "id": "T_307", "type": "THEME", "name": "K-EV충전인프라" },
-
-    { "id": "A_545",  "type": "ASSET", "name": "LS일렉트릭",       "exposure": { "ticker": "010120", "exchange": "KOSPI",  "country": "KR" } },
-    { "id": "A_657",  "type": "ASSET", "name": "에스트래픽",        "exposure": { "ticker": "234300", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1888", "type": "ASSET", "name": "SK시그넷",          "exposure": { "ticker": "419650", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1889", "type": "ASSET", "name": "중앙제어",          "exposure": { "ticker": "105740", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1706", "type": "ASSET", "name": "원익PNE",           "exposure": { "ticker": "217820", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1890", "type": "ASSET", "name": "대유플러스",        "exposure": { "ticker": "000300", "exchange": "KOSPI",  "country": "KR" } },
-    { "id": "A_1891", "type": "ASSET", "name": "휴맥스모빌리티",    "exposure": { "ticker": "115160", "exchange": "KOSDAQ", "country": "KR" } },
-    { "id": "A_1129", "type": "ASSET", "name": "LS이링크(비)",      "exposure": { "ticker": "",       "exchange": "PRIVATE", "country": "KR" } },
-
-    { "id": "M_020", "type": "MACRO", "name": "EV보급확대" },
-    { "id": "M_340", "type": "MACRO", "name": "충전요금인하압력" },
-    { "id": "M_341", "type": "MACRO", "name": "전력원가상승" },
-    { "id": "M_342", "type": "MACRO", "name": "경쟁심화" },
-
-    { "id": "BF_143", "type": "BUSINESS_FIELD", "name": "전력" },
-    { "id": "BF_183", "type": "BUSINESS_FIELD", "name": "모빌리티" },
-    { "id": "BF_549", "type": "BUSINESS_FIELD", "name": "EV충전기제조" },
-    { "id": "BF_550", "type": "BUSINESS_FIELD", "name": "충전인프라운영" },
-
-    { "id": "C_278", "type": "CHARACTER", "name": "EV충전인프라운영자" },
-    { "id": "C_279", "type": "CHARACTER", "name": "DC급속충전기제조" }
+    {
+      "id": "T_307",
+      "type": "THEME",
+      "name": "K-EV충전인프라"
+    },
+    {
+      "id": "A_545",
+      "type": "ASSET",
+      "name": "LS일렉트릭",
+      "exposure": {
+        "ticker": "010120",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_657",
+      "type": "ASSET",
+      "name": "에스트래픽",
+      "exposure": {
+        "ticker": "234300",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1888",
+      "type": "ASSET",
+      "name": "SK시그넷",
+      "exposure": {
+        "ticker": "419650",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1889",
+      "type": "ASSET",
+      "name": "중앙제어",
+      "exposure": {
+        "ticker": "105740",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1706",
+      "type": "ASSET",
+      "name": "원익PNE",
+      "exposure": {
+        "ticker": "217820",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1890",
+      "type": "ASSET",
+      "name": "대유플러스",
+      "exposure": {
+        "ticker": "000300",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1129",
+      "type": "ASSET",
+      "name": "LS이링크(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "PRIVATE",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "M_020",
+      "type": "MACRO",
+      "name": "EV보급확대"
+    },
+    {
+      "id": "M_340",
+      "type": "MACRO",
+      "name": "충전요금인하압력"
+    },
+    {
+      "id": "M_341",
+      "type": "MACRO",
+      "name": "전력원가상승"
+    },
+    {
+      "id": "M_342",
+      "type": "MACRO",
+      "name": "경쟁심화"
+    },
+    {
+      "id": "BF_143",
+      "type": "BUSINESS_FIELD",
+      "name": "전력"
+    },
+    {
+      "id": "BF_549",
+      "type": "BUSINESS_FIELD",
+      "name": "EV충전기제조"
+    },
+    {
+      "id": "BF_550",
+      "type": "BUSINESS_FIELD",
+      "name": "충전인프라운영"
+    }
   ],
   "edges": [
-    { "from": "A_545",  "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_657",  "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1888", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1889", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1706", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1890", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1891", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1129", "to": "T_307", "type": "THEMED_AS" },
-
-    { "from": "M_020", "to": "T_307", "type": "IMPACTS" },
-    { "from": "M_340", "to": "T_307", "type": "IMPACTS" },
-    { "from": "M_341", "to": "T_307", "type": "IMPACTS" },
-    { "from": "M_342", "to": "T_307", "type": "IMPACTS" },
-
-    { "from": "A_545",  "to": "BF_143", "type": "OPERATES" },
-    { "from": "A_545",  "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_657",  "to": "BF_550", "type": "OPERATES" },
-    { "from": "A_1888", "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_1889", "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_1706", "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_1890", "to": "BF_550", "type": "OPERATES" },
-    { "from": "A_1891", "to": "BF_183", "type": "OPERATES" },
-    { "from": "A_1891", "to": "BF_550", "type": "OPERATES" },
-    { "from": "A_1129", "to": "BF_549", "type": "OPERATES" },
-
-    { "from": "T_307", "to": "C_278", "type": "HAS_TRAIT" },
-    { "from": "T_307", "to": "C_279", "type": "HAS_TRAIT" }
+    {
+      "from": "A_545",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_657",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1888",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1889",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1706",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1890",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1129",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_020",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_340",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_341",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_342",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_143",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_657",
+      "to": "BF_550",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1888",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1889",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1706",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1890",
+      "to": "BF_550",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1129",
+      "to": "BF_549",
+      "type": "OPERATES"
+    }
   ],
   "links": [
-    { "from": "A_545",  "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_657",  "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1888", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1889", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1706", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1890", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1891", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "A_1129", "to": "T_307", "type": "THEMED_AS" },
-    { "from": "M_020", "to": "T_307", "type": "IMPACTS" },
-    { "from": "M_340", "to": "T_307", "type": "IMPACTS" },
-    { "from": "M_341", "to": "T_307", "type": "IMPACTS" },
-    { "from": "M_342", "to": "T_307", "type": "IMPACTS" },
-    { "from": "A_545",  "to": "BF_143", "type": "OPERATES" },
-    { "from": "A_545",  "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_657",  "to": "BF_550", "type": "OPERATES" },
-    { "from": "A_1888", "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_1889", "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_1706", "to": "BF_549", "type": "OPERATES" },
-    { "from": "A_1890", "to": "BF_550", "type": "OPERATES" },
-    { "from": "A_1891", "to": "BF_183", "type": "OPERATES" },
-    { "from": "A_1891", "to": "BF_550", "type": "OPERATES" },
-    { "from": "A_1129", "to": "BF_549", "type": "OPERATES" },
-    { "from": "T_307", "to": "C_278", "type": "HAS_TRAIT" },
-    { "from": "T_307", "to": "C_279", "type": "HAS_TRAIT" }
+    {
+      "from": "A_545",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_657",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1888",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1889",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1706",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1890",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1129",
+      "to": "T_307",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_020",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_340",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_341",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_342",
+      "to": "T_307",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_143",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_657",
+      "to": "BF_550",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1888",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1889",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1706",
+      "to": "BF_549",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1890",
+      "to": "BF_550",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1129",
+      "to": "BF_549",
+      "type": "OPERATES"
+    }
   ]
 }
