@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_333",
+  "themeName": "빅머니_카슨블록_MUDDYWATERS중국숏",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Muddy Waters Research — Carson Block 의 중국 기업·소형주 short 거장. Sino-Forest (2011) · NQ Mobile · Luckin Coffee (회계부정 → 상폐 → 회복) · dLocal · Burford · Block (XYZ) target. 회계·governance·grey market 의혹 지적.",
+    "notes": "T_333 빅머니 시리즈 — Muddy Waters short target",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_333", "type": "THEME", "name": "빅머니_카슨블록_MUDDYWATERS중국숏" },
+    { "id": "A_1959", "type": "ASSET", "name": "러킨커피",     "exposure": { "ticker": "LKNCY","exchange": "OTC","country": "US" } },
+    { "id": "A_1960", "type": "ASSET", "name": "디로컬",       "exposure": { "ticker": "DLO", "exchange": "NASDAQ","country": "UY" } },
+    { "id": "A_1032", "type": "ASSET", "name": "블록",         "exposure": { "ticker": "XYZ", "exchange": "NYSE","country": "US" } },
+    { "id": "A_051",  "type": "ASSET", "name": "알리바바",     "exposure": { "ticker": "BABA","exchange": "NYSE","country": "US" } },
+    { "id": "A_049",  "type": "ASSET", "name": "바이두",       "exposure": { "ticker": "BIDU","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_878",  "type": "ASSET", "name": "징둥닷컴",      "exposure": { "ticker": "JD",  "exchange": "NASDAQ","country": "US" } },
+    { "id": "C_309", "type": "CHARACTER", "name": "중국기업숏셀러target" }
+  ],
+  "edges": [
+    { "from": "A_1959", "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_1960", "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_1032", "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_051",  "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_049",  "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_878",  "to": "T_333", "type": "THEMED_AS" },
+    { "from": "T_333", "to": "C_309", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_1959", "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_1960", "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_1032", "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_051",  "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_049",  "to": "T_333", "type": "THEMED_AS" },
+    { "from": "A_878",  "to": "T_333", "type": "THEMED_AS" },
+    { "from": "T_333", "to": "C_309", "type": "HAS_TRAIT" }
+  ]
+}
