@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_341",
+  "themeName": "빅머니_브루스버코위츠_FAIRHOLME가치",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Fairholme Capital — Bruce Berkowitz 의 concentrated 가치주 (St. Joe 70%+). 13F: St. Joe·Enstar·Berkshire·Liberty Global. Florida 부동산 거대 베팅.",
+    "notes": "T_341 빅머니 시리즈",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_341",
+      "type": "THEME",
+      "name": "빅머니_브루스버코위츠_FAIRHOLME가치"
+    },
+    {
+      "id": "A_1968",
+      "type": "ASSET",
+      "name": "세인트조",
+      "exposure": {
+        "ticker": "JOE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1969",
+      "type": "ASSET",
+      "name": "엔스타그룹",
+      "exposure": {
+        "ticker": "ESGR",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1902",
+      "type": "ASSET",
+      "name": "버크셔해서웨이",
+      "exposure": {
+        "ticker": "BRK-B",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1931",
+      "type": "ASSET",
+      "name": "리버티글로벌",
+      "exposure": {
+        "ticker": "LBTYK",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_310",
+      "type": "CHARACTER",
+      "name": "단일거장가치투자"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1968",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1969",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1902",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1931",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_341",
+      "to": "C_310",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1968",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1969",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1902",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1931",
+      "to": "T_341",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_341",
+      "to": "C_310",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
