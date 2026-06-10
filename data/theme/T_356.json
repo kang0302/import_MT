@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_356",
+  "themeName": "멕시코Nearshoring수혜",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "멕시코 Nearshoring 수혜 — 미·중 갈등 + USMCA + 미국 공장 이전. iShares EWW ETF + 멕시코 대형 (Cemex·Grupo Bimbo) + 미국 인프라/장비 (Caterpillar·Eaton·Honeywell). Trump 25% 관세 위협 vs USMCA 협상 변동성 큼.",
+    "notes": "T_356 신규 — 멕시코 nearshoring 수혜",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_356", "type": "THEME", "name": "멕시코Nearshoring수혜" },
+    { "id": "A_133",  "type": "ASSET", "name": "EWW(멕시코)",  "exposure": { "ticker": "EWW","exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1992", "type": "ASSET", "name": "세멕스",       "exposure": { "ticker": "CX", "exchange": "NYSE","country": "MX" } },
+    { "id": "A_1993", "type": "ASSET", "name": "그루포빔보",    "exposure": { "ticker": "BIMBOA","exchange": "BMV","country": "MX" } },
+    { "id": "A_310",  "type": "ASSET", "name": "캐터필라",      "exposure": { "ticker": "CAT","exchange": "NYSE","country": "US" } },
+    { "id": "A_955",  "type": "ASSET", "name": "이튼",         "exposure": { "ticker": "ETN","exchange": "NYSE","country": "US" } },
+    { "id": "A_420",  "type": "ASSET", "name": "하니웰인터내셔널","exposure":{ "ticker": "HON","exchange": "NASDAQ","country": "US" } },
+    { "id": "C_327", "type": "CHARACTER", "name": "미국공장이전수혜" }
+  ],
+  "edges": [
+    { "from": "A_133",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_1992", "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_1993", "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_310",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_955",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_420",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "T_356", "to": "C_327", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_133",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_1992", "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_1993", "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_310",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_955",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "A_420",  "to": "T_356", "type": "THEMED_AS" },
+    { "from": "T_356", "to": "C_327", "type": "HAS_TRAIT" }
+  ]
+}
