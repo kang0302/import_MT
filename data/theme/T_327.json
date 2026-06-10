@@ -1,53 +1,209 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_327",
-  "themeName": "빅머니_막스_OAKTREE신용사이클",
+  "themeName": "빅머니_하워드막스_OAKTREE신용사이클",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Oaktree Capital Management — Howard Marks (distressed credit 거장) 의 사이클 view 추종 자산. distressed debt 직접 13F 적음. 그의 'Sea Change' thesis 베팅: HY 채권 (HYG·JNK) + alt 운용사 (BAM·KKR·BX·APO) + 장기국채 (TLT). 신용 사이클 + 금리 정상화 베팅.",
     "notes": "T_327 빅머니 시리즈 — 막스 OAKTREE view 추종 자산",
     "sources": []
   },
   "nodes": [
-    { "id": "T_327", "type": "THEME", "name": "빅머니_막스_OAKTREE신용사이클" },
-    { "id": "A_1953", "type": "ASSET", "name": "HYG",            "exposure": { "ticker": "HYG", "exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_1954", "type": "ASSET", "name": "JNK",            "exposure": { "ticker": "JNK", "exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_1929", "type": "ASSET", "name": "LQD",            "exposure": { "ticker": "LQD", "exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_553",  "type": "ASSET", "name": "브룩필드",        "exposure": { "ticker": "BAM", "exchange": "NYSE","country": "US" } },
-    { "id": "A_547",  "type": "ASSET", "name": "KKR",            "exposure": { "ticker": "KKR", "exchange": "NYSE","country": "US" } },
-    { "id": "A_548",  "type": "ASSET", "name": "블랙스톤",        "exposure": { "ticker": "BX",  "exchange": "NYSE","country": "US" } },
-    { "id": "A_550",  "type": "ASSET", "name": "아폴로",          "exposure": { "ticker": "APO", "exchange": "NYSE","country": "US" } },
-    { "id": "A_1487", "type": "ASSET", "name": "TLT",            "exposure": { "ticker": "TLT", "exchange": "NASDAQ","country": "US" } },
-    { "id": "M_059", "type": "MACRO", "name": "유가상승" },
-    { "id": "M_343", "type": "MACRO", "name": "인구학적메가트렌드" },
-    { "id": "C_303", "type": "CHARACTER", "name": "distressed credit사이클" }
+    {
+      "id": "T_327",
+      "type": "THEME",
+      "name": "빅머니_하워드막스_OAKTREE신용사이클"
+    },
+    {
+      "id": "A_1953",
+      "type": "ASSET",
+      "name": "HYG",
+      "exposure": {
+        "ticker": "HYG",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1954",
+      "type": "ASSET",
+      "name": "JNK",
+      "exposure": {
+        "ticker": "JNK",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1929",
+      "type": "ASSET",
+      "name": "LQD",
+      "exposure": {
+        "ticker": "LQD",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_553",
+      "type": "ASSET",
+      "name": "브룩필드",
+      "exposure": {
+        "ticker": "BAM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_547",
+      "type": "ASSET",
+      "name": "KKR",
+      "exposure": {
+        "ticker": "KKR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_548",
+      "type": "ASSET",
+      "name": "블랙스톤",
+      "exposure": {
+        "ticker": "BX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_550",
+      "type": "ASSET",
+      "name": "아폴로",
+      "exposure": {
+        "ticker": "APO",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1487",
+      "type": "ASSET",
+      "name": "TLT",
+      "exposure": {
+        "ticker": "TLT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_303",
+      "type": "CHARACTER",
+      "name": "distressed credit사이클"
+    }
   ],
   "edges": [
-    { "from": "A_1953", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_1954", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_1929", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_553",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_547",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_548",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_550",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_1487", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "M_059", "to": "T_327", "type": "IMPACTS" },
-    { "from": "M_343", "to": "T_327", "type": "IMPACTS" },
-    { "from": "T_327", "to": "C_303", "type": "HAS_TRAIT" }
+    {
+      "from": "A_1953",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1954",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1929",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_553",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_547",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_548",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_550",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1487",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_327",
+      "to": "C_303",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_1953", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_1954", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_1929", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_553",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_547",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_548",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_550",  "to": "T_327", "type": "THEMED_AS" },
-    { "from": "A_1487", "to": "T_327", "type": "THEMED_AS" },
-    { "from": "M_059", "to": "T_327", "type": "IMPACTS" },
-    { "from": "M_343", "to": "T_327", "type": "IMPACTS" },
-    { "from": "T_327", "to": "C_303", "type": "HAS_TRAIT" }
+    {
+      "from": "A_1953",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1954",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1929",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_553",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_547",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_548",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_550",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1487",
+      "to": "T_327",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_327",
+      "to": "C_303",
+      "type": "HAS_TRAIT"
+    }
   ]
 }

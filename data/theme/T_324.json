@@ -1,59 +1,249 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_324",
-  "themeName": "빅머니_로엡_THIRDPOINT활동주의",
+  "themeName": "빅머니_다니엘로엡_THIRDPOINT활동주의",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Third Point — Daniel Loeb 의 활동주의 + special situations 헤지펀드. 캠페인 대상 (Salesforce·Disney·Bath & Body Works) + 빅테크 long (META·AMZN·MSFT·NOW) + 인프라/PE (KKR·Vertiv·PG&E). 활동주의 letter 로 변화 유도하는 스타일.",
     "notes": "T_324 빅머니 시리즈 — 로엡 Third Point 13F 추적",
     "sources": []
   },
   "nodes": [
-    { "id": "T_324", "type": "THEME", "name": "빅머니_로엡_THIRDPOINT활동주의" },
-    { "id": "A_373", "type": "ASSET", "name": "메타",         "exposure": { "ticker": "META","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_211", "type": "ASSET", "name": "아마존",       "exposure": { "ticker": "AMZN","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_210", "type": "ASSET", "name": "마이크로소프트","exposure": { "ticker": "MSFT","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_046", "type": "ASSET", "name": "세일즈포스",    "exposure": { "ticker": "CRM", "exchange": "NYSE","country": "US" } },
-    { "id": "A_044", "type": "ASSET", "name": "서비스나우",    "exposure": { "ticker": "NOW", "exchange": "NYSE","country": "US" } },
-    { "id": "A_099", "type": "ASSET", "name": "버티브",       "exposure": { "ticker": "VRT", "exchange": "NYSE","country": "US" } },
-    { "id": "A_328", "type": "ASSET", "name": "디즈니",       "exposure": { "ticker": "DIS", "exchange": "NYSE","country": "US" } },
-    { "id": "A_547", "type": "ASSET", "name": "KKR",          "exposure": { "ticker": "KKR", "exchange": "NYSE","country": "US" } },
-    { "id": "A_1946","type": "ASSET", "name": "배스앤드바디웍스","exposure":{ "ticker": "BBWI","exchange": "NYSE","country": "US" } },
-    { "id": "A_1947","type": "ASSET", "name": "PG&E",        "exposure": { "ticker": "PCG", "exchange": "NYSE","country": "US" } },
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_144", "type": "MACRO", "name": "긍정적소비심리" },
-    { "id": "C_300", "type": "CHARACTER", "name": "활동주의캠페인_special situations" }
+    {
+      "id": "T_324",
+      "type": "THEME",
+      "name": "빅머니_다니엘로엡_THIRDPOINT활동주의"
+    },
+    {
+      "id": "A_373",
+      "type": "ASSET",
+      "name": "메타",
+      "exposure": {
+        "ticker": "META",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_211",
+      "type": "ASSET",
+      "name": "아마존",
+      "exposure": {
+        "ticker": "AMZN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_210",
+      "type": "ASSET",
+      "name": "마이크로소프트",
+      "exposure": {
+        "ticker": "MSFT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_046",
+      "type": "ASSET",
+      "name": "세일즈포스",
+      "exposure": {
+        "ticker": "CRM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_044",
+      "type": "ASSET",
+      "name": "서비스나우",
+      "exposure": {
+        "ticker": "NOW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_099",
+      "type": "ASSET",
+      "name": "버티브",
+      "exposure": {
+        "ticker": "VRT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_328",
+      "type": "ASSET",
+      "name": "디즈니",
+      "exposure": {
+        "ticker": "DIS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_547",
+      "type": "ASSET",
+      "name": "KKR",
+      "exposure": {
+        "ticker": "KKR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1946",
+      "type": "ASSET",
+      "name": "배스앤드바디웍스",
+      "exposure": {
+        "ticker": "BBWI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1947",
+      "type": "ASSET",
+      "name": "PG&E",
+      "exposure": {
+        "ticker": "PCG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_300",
+      "type": "CHARACTER",
+      "name": "활동주의캠페인_special situations"
+    }
   ],
   "edges": [
-    { "from": "A_373", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_211", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_210", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_046", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_044", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_099", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_328", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_547", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_1946","to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_1947","to": "T_324", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_324", "type": "IMPACTS" },
-    { "from": "M_144", "to": "T_324", "type": "IMPACTS" },
-    { "from": "T_324", "to": "C_300", "type": "HAS_TRAIT" }
+    {
+      "from": "A_373",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_211",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_210",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_046",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_044",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_099",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_328",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_547",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1946",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1947",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_324",
+      "to": "C_300",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_373", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_211", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_210", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_046", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_044", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_099", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_328", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_547", "to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_1946","to": "T_324", "type": "THEMED_AS" },
-    { "from": "A_1947","to": "T_324", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_324", "type": "IMPACTS" },
-    { "from": "M_144", "to": "T_324", "type": "IMPACTS" },
-    { "from": "T_324", "to": "C_300", "type": "HAS_TRAIT" }
+    {
+      "from": "A_373",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_211",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_210",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_046",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_044",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_099",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_328",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_547",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1946",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1947",
+      "to": "T_324",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_324",
+      "to": "C_300",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
