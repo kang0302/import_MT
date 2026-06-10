@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_322",
+  "themeName": "빅머니_건들락_DOUBLELINE채권",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "DoubleLine Capital — Jeffrey Gundlach (채권 King) 의 매크로 view 추종 자산 묶음. 채권 13F 추적 어려워 그의 view 베팅 자산 모음: 금 (GLD·IAU·GDX) + 신흥국 (EEM·INDA·EWZ) + 미국 장기국채 (TLT, 현재 short view). 달러 약세 + 인플레 헷지 + EM 강세 thesis.",
+    "notes": "T_322 빅머니 시리즈 — 건들락 DoubleLine view 자산",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_322", "type": "THEME", "name": "빅머니_건들락_DOUBLELINE채권" },
+    { "id": "A_063",  "type": "ASSET", "name": "GLD",  "exposure": { "ticker": "GLD",  "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_881",  "type": "ASSET", "name": "IAU",  "exposure": { "ticker": "IAU",  "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_891",  "type": "ASSET", "name": "GDX",  "exposure": { "ticker": "GDX",  "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1927", "type": "ASSET", "name": "EEM",  "exposure": { "ticker": "EEM",  "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_130",  "type": "ASSET", "name": "INDA(인도)", "exposure": { "ticker": "INDA","exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1938", "type": "ASSET", "name": "EWZ",  "exposure": { "ticker": "EWZ",  "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_1487", "type": "ASSET", "name": "TLT",  "exposure": { "ticker": "TLT",  "exchange": "NASDAQ",  "country": "US" } },
+    { "id": "M_058", "type": "MACRO", "name": "인구고령화" },
+    { "id": "M_343", "type": "MACRO", "name": "인구학적메가트렌드" },
+    { "id": "C_299", "type": "CHARACTER", "name": "채권매크로마스터" }
+  ],
+  "edges": [
+    { "from": "A_063",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_881",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_891",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_1927", "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_130",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_1938", "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_1487", "to": "T_322", "type": "THEMED_AS" },
+    { "from": "M_058", "to": "T_322", "type": "IMPACTS" },
+    { "from": "M_343", "to": "T_322", "type": "IMPACTS" },
+    { "from": "T_322", "to": "C_299", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_063",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_881",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_891",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_1927", "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_130",  "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_1938", "to": "T_322", "type": "THEMED_AS" },
+    { "from": "A_1487", "to": "T_322", "type": "THEMED_AS" },
+    { "from": "M_058", "to": "T_322", "type": "IMPACTS" },
+    { "from": "M_343", "to": "T_322", "type": "IMPACTS" },
+    { "from": "T_322", "to": "C_299", "type": "HAS_TRAIT" }
+  ]
+}
