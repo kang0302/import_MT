@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_318",
+  "themeName": "빅머니_클라먼_BAUPOST가치투자",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Baupost Group — Seth Klarman (Margin of Safety 저자) 의 가치투자 + special situations 포트폴리오. 보수적 가치주 + spin-off + 디스카운트 자산. 핵심: Liberty Global·Ferguson·WESCO·Willis Towers Watson·Restaurant Brands·Theravance Biopharma. 절대수익·낮은 상관성 추구.",
+    "notes": "T_318 빅머니 시리즈 — 클라먼 BAUPOST 가치투자",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_318", "type": "THEME", "name": "빅머니_클라먼_BAUPOST가치투자" },
+    { "id": "A_1931", "type": "ASSET", "name": "리버티글로벌",      "exposure": { "ticker": "LBTYK","exchange": "NASDAQ", "country": "US" } },
+    { "id": "A_1932", "type": "ASSET", "name": "퍼거슨",            "exposure": { "ticker": "FERG", "exchange": "NYSE",   "country": "US" } },
+    { "id": "A_1933", "type": "ASSET", "name": "웨스코인터내셔널",   "exposure": { "ticker": "WCC",  "exchange": "NYSE",   "country": "US" } },
+    { "id": "A_1921", "type": "ASSET", "name": "RBI(레스토랑브랜즈)","exposure": { "ticker": "QSR",  "exchange": "NYSE",   "country": "US" } },
+    { "id": "A_1934", "type": "ASSET", "name": "윌리스타워스왓슨",   "exposure": { "ticker": "WTW",  "exchange": "NASDAQ", "country": "US" } },
+    { "id": "A_1935", "type": "ASSET", "name": "테라반스바이오파마", "exposure": { "ticker": "TBPH", "exchange": "NASDAQ", "country": "US" } },
+    { "id": "M_072", "type": "MACRO", "name": "금리인상" },
+    { "id": "M_075", "type": "MACRO", "name": "기후변화" },
+    { "id": "C_290", "type": "CHARACTER", "name": "13F빅머니추적" },
+    { "id": "C_295", "type": "CHARACTER", "name": "가치투자절대수익" }
+  ],
+  "edges": [
+    { "from": "A_1931", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1932", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1933", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1921", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1934", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1935", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "M_072", "to": "T_318", "type": "IMPACTS" },
+    { "from": "M_075", "to": "T_318", "type": "IMPACTS" },
+    { "from": "T_318", "to": "C_290", "type": "HAS_TRAIT" },
+    { "from": "T_318", "to": "C_295", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_1931", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1932", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1933", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1921", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1934", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "A_1935", "to": "T_318", "type": "THEMED_AS" },
+    { "from": "M_072", "to": "T_318", "type": "IMPACTS" },
+    { "from": "M_075", "to": "T_318", "type": "IMPACTS" },
+    { "from": "T_318", "to": "C_290", "type": "HAS_TRAIT" },
+    { "from": "T_318", "to": "C_295", "type": "HAS_TRAIT" }
+  ]
+}
