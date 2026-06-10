@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_326",
+  "themeName": "빅머니_폴슨_PAULSON금베팅",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Paulson & Co — John Paulson (Big Short 명성, 2007 서브프라임 baset) 의 헤지펀드 (2020 패밀리오피스 전환). 금광주 + 바이오 + 헬스케어 가치 special situations. 핵심: Newmont·Barrick·Bausch·Madrigal·Trilogy Metals·GLD. 매크로 incidence 베팅.",
+    "notes": "T_326 빅머니 시리즈 — 폴슨 PAULSON 13F 추적",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_326", "type": "THEME", "name": "빅머니_폴슨_PAULSON금베팅" },
+    { "id": "A_882",  "type": "ASSET", "name": "뉴몬트",         "exposure": { "ticker": "NEM", "exchange": "NYSE","country": "US" } },
+    { "id": "A_883",  "type": "ASSET", "name": "배릭골드",       "exposure": { "ticker": "GOLD","exchange": "NYSE","country": "CA" } },
+    { "id": "A_1944", "type": "ASSET", "name": "바슈헬스",       "exposure": { "ticker": "BHC", "exchange": "NYSE","country": "US" } },
+    { "id": "A_1011", "type": "ASSET", "name": "마드리갈",       "exposure": { "ticker": "MDGL","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_1952", "type": "ASSET", "name": "트릴로지메탈스",  "exposure": { "ticker": "TMQ", "exchange": "NYSE_AMERICAN","country": "US" } },
+    { "id": "A_063",  "type": "ASSET", "name": "GLD",           "exposure": { "ticker": "GLD", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "A_891",  "type": "ASSET", "name": "GDX",           "exposure": { "ticker": "GDX", "exchange": "NYSEARCA","country": "US" } },
+    { "id": "M_059", "type": "MACRO", "name": "유가상승" },
+    { "id": "M_343", "type": "MACRO", "name": "인구학적메가트렌드" },
+    { "id": "C_302", "type": "CHARACTER", "name": "금베팅매크로" }
+  ],
+  "edges": [
+    { "from": "A_882",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_883",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_1944", "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_1011", "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_1952", "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_063",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_891",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "M_059", "to": "T_326", "type": "IMPACTS" },
+    { "from": "M_343", "to": "T_326", "type": "IMPACTS" },
+    { "from": "T_326", "to": "C_302", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_882",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_883",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_1944", "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_1011", "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_1952", "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_063",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "A_891",  "to": "T_326", "type": "THEMED_AS" },
+    { "from": "M_059", "to": "T_326", "type": "IMPACTS" },
+    { "from": "M_343", "to": "T_326", "type": "IMPACTS" },
+    { "from": "T_326", "to": "C_302", "type": "HAS_TRAIT" }
+  ]
+}
