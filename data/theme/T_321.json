@@ -1,59 +1,249 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_321",
-  "themeName": "빅머니_코먼_TIGERGLOBAL",
+  "themeName": "빅머니_체이스코먼_TIGERGLOBAL",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Tiger Global Management — Chase Coleman (Tiger Cub) 의 테크 crossover 펀드. 상장 + 비상장 통합 (PE Tiger Global Investment X). 13F longs: META·MSFT·TSM·NU·MELI·APP·SE·CPNG·WDAY·HOOD. 신흥국 핀테크 + 글로벌 e-commerce + SaaS 통합 stack.",
     "notes": "T_321 빅머니 시리즈 — 코먼 Tiger Global 13F 추적",
     "sources": []
   },
   "nodes": [
-    { "id": "T_321", "type": "THEME", "name": "빅머니_코먼_TIGERGLOBAL" },
-    { "id": "A_373", "type": "ASSET", "name": "메타",         "exposure": { "ticker": "META","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_210", "type": "ASSET", "name": "마이크로소프트","exposure": { "ticker": "MSFT","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_232", "type": "ASSET", "name": "TSMC",         "exposure": { "ticker": "2330","exchange": "TWSE","country": "TW" } },
-    { "id": "A_365", "type": "ASSET", "name": "Nu홀딩스",     "exposure": { "ticker": "NU",  "exchange": "NYSE","country": "US" } },
-    { "id": "A_367", "type": "ASSET", "name": "메르카도리브레","exposure":{ "ticker": "MELI","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_281", "type": "ASSET", "name": "앱러빈",       "exposure": { "ticker": "APP", "exchange": "NASDAQ","country": "US" } },
-    { "id": "A_366", "type": "ASSET", "name": "씨그룹",       "exposure": { "ticker": "SE",  "exchange": "NYSE","country": "US" } },
-    { "id": "A_019", "type": "ASSET", "name": "쿠팡",         "exposure": { "ticker": "CPNG","exchange": "NYSE","country": "US" } },
-    { "id": "A_042", "type": "ASSET", "name": "워크데이",      "exposure": { "ticker": "WDAY","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_346", "type": "ASSET", "name": "로빈후드",      "exposure": { "ticker": "HOOD","exchange": "NASDAQ","country": "US" } },
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_051", "type": "MACRO", "name": "AI수요확대" },
-    { "id": "C_298", "type": "CHARACTER", "name": "비상장상장crossover" }
+    {
+      "id": "T_321",
+      "type": "THEME",
+      "name": "빅머니_체이스코먼_TIGERGLOBAL"
+    },
+    {
+      "id": "A_373",
+      "type": "ASSET",
+      "name": "메타",
+      "exposure": {
+        "ticker": "META",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_210",
+      "type": "ASSET",
+      "name": "마이크로소프트",
+      "exposure": {
+        "ticker": "MSFT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_232",
+      "type": "ASSET",
+      "name": "TSMC",
+      "exposure": {
+        "ticker": "2330",
+        "exchange": "TWSE",
+        "country": "TW"
+      }
+    },
+    {
+      "id": "A_365",
+      "type": "ASSET",
+      "name": "Nu홀딩스",
+      "exposure": {
+        "ticker": "NU",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_367",
+      "type": "ASSET",
+      "name": "메르카도리브레",
+      "exposure": {
+        "ticker": "MELI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_281",
+      "type": "ASSET",
+      "name": "앱러빈",
+      "exposure": {
+        "ticker": "APP",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_366",
+      "type": "ASSET",
+      "name": "씨그룹",
+      "exposure": {
+        "ticker": "SE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_019",
+      "type": "ASSET",
+      "name": "쿠팡",
+      "exposure": {
+        "ticker": "CPNG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_042",
+      "type": "ASSET",
+      "name": "워크데이",
+      "exposure": {
+        "ticker": "WDAY",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_346",
+      "type": "ASSET",
+      "name": "로빈후드",
+      "exposure": {
+        "ticker": "HOOD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_298",
+      "type": "CHARACTER",
+      "name": "비상장상장crossover"
+    }
   ],
   "edges": [
-    { "from": "A_373", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_210", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_232", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_365", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_367", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_281", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_366", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_019", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_042", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_346", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_321", "type": "IMPACTS" },
-    { "from": "M_051", "to": "T_321", "type": "IMPACTS" },
-    { "from": "T_321", "to": "C_298", "type": "HAS_TRAIT" }
+    {
+      "from": "A_373",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_210",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_232",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_365",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_367",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_281",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_366",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_019",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_042",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_346",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_321",
+      "to": "C_298",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_373", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_210", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_232", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_365", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_367", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_281", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_366", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_019", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_042", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "A_346", "to": "T_321", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_321", "type": "IMPACTS" },
-    { "from": "M_051", "to": "T_321", "type": "IMPACTS" },
-    { "from": "T_321", "to": "C_298", "type": "HAS_TRAIT" }
+    {
+      "from": "A_373",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_210",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_232",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_365",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_367",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_281",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_366",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_019",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_042",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_346",
+      "to": "T_321",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_321",
+      "to": "C_298",
+      "type": "HAS_TRAIT"
+    }
   ]
 }

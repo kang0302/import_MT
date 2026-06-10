@@ -1,59 +1,249 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_320",
-  "themeName": "빅머니_라폿_COATUE테크",
+  "themeName": "빅머니_필립라폿_COATUE테크",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Coatue Management — Philippe Laffont (Tiger Cub) 의 테크 long/short 1티어 펀드. 상장 + 비상장 통합 (Coatue Tech Fund + Coatue Growth). 13F longs: MSFT·META·AMZN·NVDA·TSM·SPOT·SNOW·DDOG·TEAM·HOOD. AI capex + SaaS + 핀테크 stack.",
     "notes": "T_320 빅머니 시리즈 — 라폿 Coatue 13F 추적",
     "sources": []
   },
   "nodes": [
-    { "id": "T_320", "type": "THEME", "name": "빅머니_라폿_COATUE테크" },
-    { "id": "A_210", "type": "ASSET", "name": "마이크로소프트","exposure": { "ticker": "MSFT","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_373", "type": "ASSET", "name": "메타",         "exposure": { "ticker": "META","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_211", "type": "ASSET", "name": "아마존",       "exposure": { "ticker": "AMZN","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_055", "type": "ASSET", "name": "엔비디아",     "exposure": { "ticker": "NVDA","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_232", "type": "ASSET", "name": "TSMC",        "exposure": { "ticker": "2330","exchange": "TWSE","country": "TW" } },
-    { "id": "A_749", "type": "ASSET", "name": "스포티파이",   "exposure": { "ticker": "SPOT","exchange": "NYSE","country": "US" } },
-    { "id": "A_274", "type": "ASSET", "name": "스노우플레이크","exposure": { "ticker": "SNOW","exchange": "NYSE","country": "US" } },
-    { "id": "A_276", "type": "ASSET", "name": "데이터독",     "exposure": { "ticker": "DDOG","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_1937","type": "ASSET", "name": "아틀라시안",   "exposure": { "ticker": "TEAM","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_346", "type": "ASSET", "name": "로빈후드",     "exposure": { "ticker": "HOOD","exchange": "NASDAQ","country": "US" } },
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_204", "type": "MACRO", "name": "AI생산성개선" },
-    { "id": "C_297", "type": "CHARACTER", "name": "테크long헷지" }
+    {
+      "id": "T_320",
+      "type": "THEME",
+      "name": "빅머니_필립라폿_COATUE테크"
+    },
+    {
+      "id": "A_210",
+      "type": "ASSET",
+      "name": "마이크로소프트",
+      "exposure": {
+        "ticker": "MSFT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_373",
+      "type": "ASSET",
+      "name": "메타",
+      "exposure": {
+        "ticker": "META",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_211",
+      "type": "ASSET",
+      "name": "아마존",
+      "exposure": {
+        "ticker": "AMZN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_232",
+      "type": "ASSET",
+      "name": "TSMC",
+      "exposure": {
+        "ticker": "2330",
+        "exchange": "TWSE",
+        "country": "TW"
+      }
+    },
+    {
+      "id": "A_749",
+      "type": "ASSET",
+      "name": "스포티파이",
+      "exposure": {
+        "ticker": "SPOT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_274",
+      "type": "ASSET",
+      "name": "스노우플레이크",
+      "exposure": {
+        "ticker": "SNOW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_276",
+      "type": "ASSET",
+      "name": "데이터독",
+      "exposure": {
+        "ticker": "DDOG",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1937",
+      "type": "ASSET",
+      "name": "아틀라시안",
+      "exposure": {
+        "ticker": "TEAM",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_346",
+      "type": "ASSET",
+      "name": "로빈후드",
+      "exposure": {
+        "ticker": "HOOD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_297",
+      "type": "CHARACTER",
+      "name": "테크long헷지"
+    }
   ],
   "edges": [
-    { "from": "A_210", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_373", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_211", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_055", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_232", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_749", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_274", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_276", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_1937","to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_346", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_320", "type": "IMPACTS" },
-    { "from": "M_204", "to": "T_320", "type": "IMPACTS" },
-    { "from": "T_320", "to": "C_297", "type": "HAS_TRAIT" }
+    {
+      "from": "A_210",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_373",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_211",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_055",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_232",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_749",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_274",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_276",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1937",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_346",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_320",
+      "to": "C_297",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_210", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_373", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_211", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_055", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_232", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_749", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_274", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_276", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_1937","to": "T_320", "type": "THEMED_AS" },
-    { "from": "A_346", "to": "T_320", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_320", "type": "IMPACTS" },
-    { "from": "M_204", "to": "T_320", "type": "IMPACTS" },
-    { "from": "T_320", "to": "C_297", "type": "HAS_TRAIT" }
+    {
+      "from": "A_210",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_373",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_211",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_055",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_232",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_749",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_274",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_276",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1937",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_346",
+      "to": "T_320",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_320",
+      "to": "C_297",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
