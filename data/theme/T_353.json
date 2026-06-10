@@ -4,58 +4,411 @@
   "themeName": "글로벌항공기OEM밸류체인",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "글로벌 항공기 OEM 밸류체인 — 듀오폴리 Boeing·Airbus + 라틴 Embraer + 중국 COMAC. 엔진 GE Aerospace·Rolls-Royce. 부품·구조 Spirit AeroSystems (Boeing 인수)·Honeywell·Bombardier. 방산 LMT 통합. Boeing 위기 (737 MAX·787·Starliner) + Airbus 우위 + 중국 C919 진출이 핵심 동인.",
     "notes": "T_353 신규 — 글로벌 항공기 OEM",
     "sources": []
   },
   "nodes": [
-    { "id": "T_353", "type": "THEME", "name": "글로벌항공기OEM밸류체인" },
-    { "id": "A_1475", "type": "ASSET", "name": "보잉",              "exposure": { "ticker": "BA",   "exchange": "NYSE","country": "US" } },
-    { "id": "A_1041", "type": "ASSET", "name": "에어버스",           "exposure": { "ticker": "AIR",  "exchange": "Euronext","country": "EU" } },
-    { "id": "A_1983", "type": "ASSET", "name": "엠브라에르",         "exposure": { "ticker": "ERJ",  "exchange": "NYSE","country": "US" } },
-    { "id": "A_1986", "type": "ASSET", "name": "COMAC(비)",         "exposure": { "ticker": "",     "exchange": "PRIVATE","country": "CN" } },
-    { "id": "A_1985", "type": "ASSET", "name": "봄바디어",           "exposure": { "ticker": "BBD.B","exchange": "TSX","country": "CA" } },
-    { "id": "A_307",  "type": "ASSET", "name": "GE에어로스페이스",   "exposure": { "ticker": "GE",   "exchange": "NYSE","country": "US" } },
-    { "id": "A_162",  "type": "ASSET", "name": "롤스로이스홀딩스",    "exposure": { "ticker": "RR.",  "exchange": "LSE","country": "GB" } },
-    { "id": "A_1984", "type": "ASSET", "name": "스피릿에어로시스템",  "exposure": { "ticker": "SPR",  "exchange": "NYSE","country": "US" } },
-    { "id": "A_420",  "type": "ASSET", "name": "하니웰인터내셔널",    "exposure": { "ticker": "HON",  "exchange": "NASDAQ","country": "US" } },
-    { "id": "A_421",  "type": "ASSET", "name": "록히드마틴",         "exposure": { "ticker": "LMT",  "exchange": "NYSE","country": "US" } },
-    { "id": "C_319", "type": "CHARACTER", "name": "글로벌항공기복항사이클" }
+    {
+      "id": "T_353",
+      "type": "THEME",
+      "name": "글로벌항공기OEM밸류체인"
+    },
+    {
+      "id": "A_1475",
+      "type": "ASSET",
+      "name": "보잉",
+      "exposure": {
+        "ticker": "BA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1041",
+      "type": "ASSET",
+      "name": "에어버스",
+      "exposure": {
+        "ticker": "AIR",
+        "exchange": "Euronext",
+        "country": "EU"
+      }
+    },
+    {
+      "id": "A_1983",
+      "type": "ASSET",
+      "name": "엠브라에르",
+      "exposure": {
+        "ticker": "ERJ",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1986",
+      "type": "ASSET",
+      "name": "COMAC(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "PRIVATE",
+        "country": "CN"
+      }
+    },
+    {
+      "id": "A_1985",
+      "type": "ASSET",
+      "name": "봄바디어",
+      "exposure": {
+        "ticker": "BBD.B",
+        "exchange": "TSX",
+        "country": "CA"
+      }
+    },
+    {
+      "id": "A_307",
+      "type": "ASSET",
+      "name": "GE에어로스페이스",
+      "exposure": {
+        "ticker": "GE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_162",
+      "type": "ASSET",
+      "name": "롤스로이스홀딩스",
+      "exposure": {
+        "ticker": "RR.",
+        "exchange": "LSE",
+        "country": "GB"
+      }
+    },
+    {
+      "id": "A_1984",
+      "type": "ASSET",
+      "name": "스피릿에어로시스템",
+      "exposure": {
+        "ticker": "SPR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_420",
+      "type": "ASSET",
+      "name": "하니웰인터내셔널",
+      "exposure": {
+        "ticker": "HON",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_421",
+      "type": "ASSET",
+      "name": "록히드마틴",
+      "exposure": {
+        "ticker": "LMT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_319",
+      "type": "CHARACTER",
+      "name": "글로벌항공기복항사이클"
+    },
+    {
+      "id": "C_321",
+      "type": "CHARACTER",
+      "name": "OEM듀오폴리"
+    },
+    {
+      "id": "C_322",
+      "type": "CHARACTER",
+      "name": "OEM도전자"
+    },
+    {
+      "id": "C_323",
+      "type": "CHARACTER",
+      "name": "항공엔진메이저"
+    },
+    {
+      "id": "C_324",
+      "type": "CHARACTER",
+      "name": "항공공급망"
+    },
+    {
+      "id": "C_325",
+      "type": "CHARACTER",
+      "name": "방산연계항공"
+    }
   ],
   "edges": [
-    { "from": "A_1475", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1041", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1983", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1986", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1985", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_307",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_162",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1984", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_420",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_421",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1984", "to": "A_1475", "type": "SUPPLIES" },
-    { "from": "A_307",  "to": "A_1475", "type": "SUPPLIES" },
-    { "from": "A_307",  "to": "A_1041", "type": "SUPPLIES" },
-    { "from": "A_162",  "to": "A_1041", "type": "SUPPLIES" },
-    { "from": "T_353", "to": "C_319", "type": "HAS_TRAIT" }
+    {
+      "from": "A_1475",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1041",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1983",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1986",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1985",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_307",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_162",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1984",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_420",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_421",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1984",
+      "to": "A_1475",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_307",
+      "to": "A_1475",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_307",
+      "to": "A_1041",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_162",
+      "to": "A_1041",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "T_353",
+      "to": "C_319",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1475",
+      "to": "C_321",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1041",
+      "to": "C_321",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1983",
+      "to": "C_322",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1986",
+      "to": "C_322",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1985",
+      "to": "C_322",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_307",
+      "to": "C_323",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_162",
+      "to": "C_323",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1984",
+      "to": "C_324",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_420",
+      "to": "C_324",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_421",
+      "to": "C_325",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_1475", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1041", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1983", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1986", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1985", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_307",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_162",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1984", "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_420",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_421",  "to": "T_353", "type": "THEMED_AS" },
-    { "from": "A_1984", "to": "A_1475", "type": "SUPPLIES" },
-    { "from": "A_307",  "to": "A_1475", "type": "SUPPLIES" },
-    { "from": "A_307",  "to": "A_1041", "type": "SUPPLIES" },
-    { "from": "A_162",  "to": "A_1041", "type": "SUPPLIES" },
-    { "from": "T_353", "to": "C_319", "type": "HAS_TRAIT" }
+    {
+      "from": "A_1475",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1041",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1983",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1986",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1985",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_307",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_162",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1984",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_420",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_421",
+      "to": "T_353",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1984",
+      "to": "A_1475",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_307",
+      "to": "A_1475",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_307",
+      "to": "A_1041",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "A_162",
+      "to": "A_1041",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "T_353",
+      "to": "C_319",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1475",
+      "to": "C_321",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1041",
+      "to": "C_321",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1983",
+      "to": "C_322",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1986",
+      "to": "C_322",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1985",
+      "to": "C_322",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_307",
+      "to": "C_323",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_162",
+      "to": "C_323",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1984",
+      "to": "C_324",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_420",
+      "to": "C_324",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_421",
+      "to": "C_325",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
