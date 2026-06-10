@@ -1,50 +1,189 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_328",
-  "themeName": "빅머니_밀러_MILLERVALUE비트코인",
+  "themeName": "빅머니_빌밀러_MILLERVALUE비트코인",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Miller Value Partners — Bill Miller (1980-2005 15년 연속 S&P 500 outperform) 의 가치주 + Bitcoin 베팅. 개인 자산 50%+ 비트코인 보유 공언. 핵심: MSTR·COIN·BITO·AMZN + 비트코인 채굴주 (MARA·RIOT). 가치주 + 디지털 금 thesis.",
     "notes": "T_328 빅머니 시리즈 — 밀러 Miller Value 비트코인 + 가치",
     "sources": []
   },
   "nodes": [
-    { "id": "T_328", "type": "THEME", "name": "빅머니_밀러_MILLERVALUE비트코인" },
-    { "id": "A_1862", "type": "ASSET", "name": "스트래티지",     "exposure": { "ticker": "MSTR","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_347",  "type": "ASSET", "name": "코인베이스",    "exposure": { "ticker": "COIN","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_073",  "type": "ASSET", "name": "BITO",         "exposure": { "ticker": "BITO","exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_074",  "type": "ASSET", "name": "BITU",         "exposure": { "ticker": "BITU","exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_916",  "type": "ASSET", "name": "마라홀딩스",    "exposure": { "ticker": "MARA","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_917",  "type": "ASSET", "name": "라이엇플랫폼즈","exposure": { "ticker": "RIOT","exchange": "NASDAQ","country": "US" } },
-    { "id": "A_211",  "type": "ASSET", "name": "아마존",       "exposure": { "ticker": "AMZN","exchange": "NASDAQ","country": "US" } },
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_059", "type": "MACRO", "name": "유가상승" },
-    { "id": "C_304", "type": "CHARACTER", "name": "비트코인자산화" }
+    {
+      "id": "T_328",
+      "type": "THEME",
+      "name": "빅머니_빌밀러_MILLERVALUE비트코인"
+    },
+    {
+      "id": "A_1862",
+      "type": "ASSET",
+      "name": "스트래티지",
+      "exposure": {
+        "ticker": "MSTR",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_347",
+      "type": "ASSET",
+      "name": "코인베이스",
+      "exposure": {
+        "ticker": "COIN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_073",
+      "type": "ASSET",
+      "name": "BITO",
+      "exposure": {
+        "ticker": "BITO",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_074",
+      "type": "ASSET",
+      "name": "BITU",
+      "exposure": {
+        "ticker": "BITU",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_916",
+      "type": "ASSET",
+      "name": "마라홀딩스",
+      "exposure": {
+        "ticker": "MARA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_917",
+      "type": "ASSET",
+      "name": "라이엇플랫폼즈",
+      "exposure": {
+        "ticker": "RIOT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_211",
+      "type": "ASSET",
+      "name": "아마존",
+      "exposure": {
+        "ticker": "AMZN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_304",
+      "type": "CHARACTER",
+      "name": "비트코인자산화"
+    }
   ],
   "edges": [
-    { "from": "A_1862", "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_347",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_073",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_074",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_916",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_917",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_211",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_328", "type": "IMPACTS" },
-    { "from": "M_059", "to": "T_328", "type": "IMPACTS" },
-    { "from": "T_328", "to": "C_304", "type": "HAS_TRAIT" }
+    {
+      "from": "A_1862",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_347",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_073",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_074",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_916",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_917",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_211",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_328",
+      "to": "C_304",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_1862", "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_347",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_073",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_074",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_916",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_917",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "A_211",  "to": "T_328", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_328", "type": "IMPACTS" },
-    { "from": "M_059", "to": "T_328", "type": "IMPACTS" },
-    { "from": "T_328", "to": "C_304", "type": "HAS_TRAIT" }
+    {
+      "from": "A_1862",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_347",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_073",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_074",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_916",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_917",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_211",
+      "to": "T_328",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_328",
+      "to": "C_304",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
