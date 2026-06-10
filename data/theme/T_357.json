@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_357",
+  "themeName": "호주광산_구리철광석우라늄",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "호주 광산 빅3 + 리튬·우라늄 — 글로벌 자원 megaplay. BHP (구리+철광석+칼륨)·Rio Tinto (철광석+구리+알루미늄)·Fortescue (철광석 + 그린 수소)·Pilbara Minerals (리튬). 중국 수요 + 미국 디리스킹 + 에너지 전환 trifecta.",
+    "notes": "T_357 신규 — 호주 광산 빅3 + 리튬",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_357", "type": "THEME", "name": "호주광산_구리철광석우라늄" },
+    { "id": "A_1747", "type": "ASSET", "name": "BHP",            "exposure": { "ticker": "BHP",  "exchange": "NYSE","country": "US" } },
+    { "id": "A_702",  "type": "ASSET", "name": "Rio Tinto",      "exposure": { "ticker": "RIO",  "exchange": "NYSE","country": "GB" } },
+    { "id": "A_1994", "type": "ASSET", "name": "포테스큐메탈스",   "exposure": { "ticker": "FSUGY","exchange": "OTC","country": "AU" } },
+    { "id": "A_1995", "type": "ASSET", "name": "필바라미네랄스",   "exposure": { "ticker": "PILBF","exchange": "OTC","country": "AU" } },
+    { "id": "C_328", "type": "CHARACTER", "name": "호주광산메가" }
+  ],
+  "edges": [
+    { "from": "A_1747", "to": "T_357", "type": "THEMED_AS" },
+    { "from": "A_702",  "to": "T_357", "type": "THEMED_AS" },
+    { "from": "A_1994", "to": "T_357", "type": "THEMED_AS" },
+    { "from": "A_1995", "to": "T_357", "type": "THEMED_AS" },
+    { "from": "T_357", "to": "C_328", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_1747", "to": "T_357", "type": "THEMED_AS" },
+    { "from": "A_702",  "to": "T_357", "type": "THEMED_AS" },
+    { "from": "A_1994", "to": "T_357", "type": "THEMED_AS" },
+    { "from": "A_1995", "to": "T_357", "type": "THEMED_AS" },
+    { "from": "T_357", "to": "C_328", "type": "HAS_TRAIT" }
+  ]
+}
