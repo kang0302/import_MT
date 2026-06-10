@@ -4,29 +4,146 @@
   "themeName": "베트남ETF_차이나대체",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "베트남 ETF — 차이나 대체·미국 nearshoring 동남아 hub. VanEck VNM + Global X VNAM ETF + VinFast 자체. 인구학적 보너스 + Samsung·Apple·Intel 공장 이전 수혜 + FDI ramp. 미·중 갈등 시 가장 강한 nearshoring vehicle.",
     "notes": "T_355 신규 — 베트남 ETF 차이나 대체",
     "sources": []
   },
   "nodes": [
-    { "id": "T_355", "type": "THEME", "name": "베트남ETF_차이나대체" },
-    { "id": "A_129",  "type": "ASSET", "name": "VNM(베트남)",  "exposure": { "ticker": "VNM", "exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_1990", "type": "ASSET", "name": "VNAM",        "exposure": { "ticker": "VNAM","exchange": "NYSEARCA","country": "US" } },
-    { "id": "A_1991", "type": "ASSET", "name": "빈패스트",      "exposure": { "ticker": "VFS","exchange": "NASDAQ","country": "VN" } },
-    { "id": "C_326", "type": "CHARACTER", "name": "차이나대체노출" }
+    {
+      "id": "T_355",
+      "type": "THEME",
+      "name": "베트남ETF_차이나대체"
+    },
+    {
+      "id": "A_129",
+      "type": "ASSET",
+      "name": "VNM(베트남)",
+      "exposure": {
+        "ticker": "VNM",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1990",
+      "type": "ASSET",
+      "name": "VNAM",
+      "exposure": {
+        "ticker": "VNAM",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1991",
+      "type": "ASSET",
+      "name": "빈패스트",
+      "exposure": {
+        "ticker": "VFS",
+        "exchange": "NASDAQ",
+        "country": "VN"
+      }
+    },
+    {
+      "id": "C_326",
+      "type": "CHARACTER",
+      "name": "차이나대체노출"
+    },
+    {
+      "id": "A_1996",
+      "type": "ASSET",
+      "name": "한투베트남VN30선물ETN(H)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "KRX",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1997",
+      "type": "ASSET",
+      "name": "ACE베트남VN30(합성)",
+      "exposure": {
+        "ticker": "245710",
+        "exchange": "KRX",
+        "country": "KR"
+      }
+    }
   ],
   "edges": [
-    { "from": "A_129",  "to": "T_355", "type": "THEMED_AS" },
-    { "from": "A_1990", "to": "T_355", "type": "THEMED_AS" },
-    { "from": "A_1991", "to": "T_355", "type": "THEMED_AS" },
-    { "from": "T_355", "to": "C_326", "type": "HAS_TRAIT" }
+    {
+      "from": "A_129",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1990",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1991",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_355",
+      "to": "C_326",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1996",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1997",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    }
   ],
   "links": [
-    { "from": "A_129",  "to": "T_355", "type": "THEMED_AS" },
-    { "from": "A_1990", "to": "T_355", "type": "THEMED_AS" },
-    { "from": "A_1991", "to": "T_355", "type": "THEMED_AS" },
-    { "from": "T_355", "to": "C_326", "type": "HAS_TRAIT" }
+    {
+      "from": "A_129",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1990",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1991",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_355",
+      "to": "C_326",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1996",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1997",
+      "to": "T_355",
+      "type": "THEMED_AS"
+    }
   ]
 }
