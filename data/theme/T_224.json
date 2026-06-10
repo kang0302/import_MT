@@ -17,7 +17,8 @@
     ],
     "dataAsOf": "2026-05-14T00:00:00+09:00",
     "notes": "미중 기술패권 및 공급망 재편 관련 글로벌 테크/산업재 테마",
-    "sources": []
+    "sources": [],
+    "description": "엔비디아·AMD·TSMC·애플·테슬라·브로드컴·캐터필러·보잉 등 미·중 관계 변화에 직접 노출된 글로벌 테크·산업재 묶음. 반도체 수출통제·미·중 정상회담·양안리스크 3대 매크로 이벤트에 동조해 단기 변동성 큰 헷징·이벤트 플레이 후보. 펜타곤 제재리스트(알리바바·바이두·BYD)는 신규 차이나테크 리스크 노출."
   },
   "nodes": [
     {
@@ -263,6 +264,51 @@
       "id": "M_220",
       "type": "MACRO",
       "name": "양안리스크"
+    },
+    {
+      "id": "A_051",
+      "type": "ASSET",
+      "name": "알리바바",
+      "exposure": {
+        "ticker": "BABA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_049",
+      "type": "ASSET",
+      "name": "바이두",
+      "exposure": {
+        "ticker": "BIDU",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_003",
+      "type": "ASSET",
+      "name": "BYD",
+      "exposure": {
+        "ticker": "1211",
+        "exchange": "HKEX",
+        "country": "CN"
+      }
+    },
+    {
+      "id": "BF_010",
+      "type": "BUSINESS_FIELD",
+      "name": "AI플랫폼"
+    },
+    {
+      "id": "BF_159",
+      "type": "BUSINESS_FIELD",
+      "name": "전기차"
+    },
+    {
+      "id": "C_289",
+      "type": "CHARACTER",
+      "name": "펜타곤제재리스트편입"
     }
   ],
   "edges": [
@@ -320,6 +366,51 @@
       "from": "M_220",
       "to": "T_224",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_051",
+      "to": "T_224",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_049",
+      "to": "T_224",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_003",
+      "to": "T_224",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_051",
+      "to": "BF_010",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_049",
+      "to": "BF_010",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_003",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_051",
+      "to": "C_289",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_049",
+      "to": "C_289",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_003",
+      "to": "C_289",
+      "type": "HAS_TRAIT"
     }
   ],
   "links": [
@@ -377,6 +468,51 @@
       "from": "M_220",
       "to": "T_224",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_051",
+      "to": "T_224",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_049",
+      "to": "T_224",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_003",
+      "to": "T_224",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_051",
+      "to": "BF_010",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_049",
+      "to": "BF_010",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_003",
+      "to": "BF_159",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_051",
+      "to": "C_289",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_049",
+      "to": "C_289",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_003",
+      "to": "C_289",
+      "type": "HAS_TRAIT"
     }
   ]
 }
