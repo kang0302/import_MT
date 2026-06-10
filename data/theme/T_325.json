@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_325",
+  "themeName": "빅머니_아인혼_GREENLIGHT가치숏",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Greenlight Capital — David Einhorn 의 가치주 long + 숏 셀러 포트폴리오. AI 거품·소비재 약세 숏 + 에너지·LNG·운송 long. 핵심: Greenbrier·Penn·CONSOL·Solvay·Golar LNG·HP·Brookfield·Magnera. Tesla·Lehman·Allied Capital 숏으로 유명.",
+    "notes": "T_325 빅머니 시리즈 — 아인혼 Greenlight 13F 추적",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_325", "type": "THEME", "name": "빅머니_아인혼_GREENLIGHT가치숏" },
+    { "id": "A_1948", "type": "ASSET", "name": "그린브리어",     "exposure": { "ticker": "GBX", "exchange": "NYSE","country": "US" } },
+    { "id": "A_710",  "type": "ASSET", "name": "펜엔터테인먼트",  "exposure": { "ticker": "PENN","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_1949", "type": "ASSET", "name": "콘솔에너지",     "exposure": { "ticker": "CEIX","exchange": "NYSE","country": "US" } },
+    { "id": "A_1950", "type": "ASSET", "name": "솔베이",         "exposure": { "ticker": "SOLB","exchange": "EBR","country": "BE" } },
+    { "id": "A_495",  "type": "ASSET", "name": "골라LNG",        "exposure": { "ticker": "GLNG","exchange": "NASDAQ","country": "BM" } },
+    { "id": "A_417",  "type": "ASSET", "name": "HP",            "exposure": { "ticker": "HPQ","exchange": "NYSE","country": "US" } },
+    { "id": "A_553",  "type": "ASSET", "name": "브룩필드",       "exposure": { "ticker": "BAM","exchange": "NYSE","country": "US" } },
+    { "id": "A_1951", "type": "ASSET", "name": "마그네라",       "exposure": { "ticker": "MAGN","exchange": "NYSE","country": "US" } },
+    { "id": "M_059", "type": "MACRO", "name": "유가상승" },
+    { "id": "M_037", "type": "MACRO", "name": "유가하락" },
+    { "id": "C_301", "type": "CHARACTER", "name": "가치주long숏셀러" }
+  ],
+  "edges": [
+    { "from": "A_1948", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_710",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_1949", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_1950", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_495",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_417",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_553",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_1951", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "M_059", "to": "T_325", "type": "IMPACTS" },
+    { "from": "M_037", "to": "T_325", "type": "IMPACTS" },
+    { "from": "T_325", "to": "C_301", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_1948", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_710",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_1949", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_1950", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_495",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_417",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_553",  "to": "T_325", "type": "THEMED_AS" },
+    { "from": "A_1951", "to": "T_325", "type": "THEMED_AS" },
+    { "from": "M_059", "to": "T_325", "type": "IMPACTS" },
+    { "from": "M_037", "to": "T_325", "type": "IMPACTS" },
+    { "from": "T_325", "to": "C_301", "type": "HAS_TRAIT" }
+  ]
+}
