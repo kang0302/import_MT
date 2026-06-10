@@ -4,53 +4,216 @@
   "themeName": "빅머니_드러켄밀러_DUQ매크로",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Duquesne Family Office — Stanley Druckenmiller (소로스 협력자, 매크로 마스터) 의 분기 13F 포트폴리오. AI 인프라 + 글로벌 그로스주 + 매크로 베팅 (vs SPY 풋). 핵심: Coupang·Natera·Teva·Vistra·argenx·Microsoft·Corteva. NVDA 비중 축소 → AI 인프라 보강주 회전.",
     "notes": "T_317 빅머니 시리즈 — 드러켄밀러 13F 추적",
     "sources": []
   },
   "nodes": [
-    { "id": "T_317", "type": "THEME", "name": "빅머니_드러켄밀러_DUQ매크로" },
-    { "id": "A_019",  "type": "ASSET", "name": "쿠팡",          "exposure": { "ticker": "CPNG", "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1701", "type": "ASSET", "name": "NTRA",          "exposure": { "ticker": "NTRA", "exchange": "NASDAQ", "country": "US" } },
-    { "id": "A_1930", "type": "ASSET", "name": "테바파마수티컬", "exposure": { "ticker": "TEVA", "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1061", "type": "ASSET", "name": "비스트라에너지", "exposure": { "ticker": "VST",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1095", "type": "ASSET", "name": "아제닉스",      "exposure": { "ticker": "ARGX", "exchange": "NASDAQ", "country": "US" } },
-    { "id": "A_210",  "type": "ASSET", "name": "마이크로소프트", "exposure": { "ticker": "MSFT", "exchange": "NASDAQ", "country": "US" } },
-    { "id": "A_1641", "type": "ASSET", "name": "코르테바",      "exposure": { "ticker": "CTVA", "exchange": "NYSE",   "country": "US" } },
-    { "id": "M_055", "type": "MACRO", "name": "AI확산" },
-    { "id": "M_051", "type": "MACRO", "name": "AI수요확대" },
-    { "id": "M_072", "type": "MACRO", "name": "금리인상" },
-    { "id": "C_290", "type": "CHARACTER", "name": "13F빅머니추적" },
-    { "id": "C_294", "type": "CHARACTER", "name": "매크로마스터" }
+    {
+      "id": "T_317",
+      "type": "THEME",
+      "name": "빅머니_드러켄밀러_DUQ매크로"
+    },
+    {
+      "id": "A_019",
+      "type": "ASSET",
+      "name": "쿠팡",
+      "exposure": {
+        "ticker": "CPNG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1701",
+      "type": "ASSET",
+      "name": "NTRA",
+      "exposure": {
+        "ticker": "NTRA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1930",
+      "type": "ASSET",
+      "name": "테바파마수티컬",
+      "exposure": {
+        "ticker": "TEVA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1061",
+      "type": "ASSET",
+      "name": "비스트라에너지",
+      "exposure": {
+        "ticker": "VST",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1095",
+      "type": "ASSET",
+      "name": "아제닉스",
+      "exposure": {
+        "ticker": "ARGX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_210",
+      "type": "ASSET",
+      "name": "마이크로소프트",
+      "exposure": {
+        "ticker": "MSFT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1641",
+      "type": "ASSET",
+      "name": "코르테바",
+      "exposure": {
+        "ticker": "CTVA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_051",
+      "type": "MACRO",
+      "name": "AI수요확대"
+    },
+    {
+      "id": "C_294",
+      "type": "CHARACTER",
+      "name": "매크로마스터"
+    }
   ],
   "edges": [
-    { "from": "A_019",  "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1701", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1930", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1061", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1095", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_210",  "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1641", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_317", "type": "IMPACTS" },
-    { "from": "M_051", "to": "T_317", "type": "IMPACTS" },
-    { "from": "M_072", "to": "T_317", "type": "IMPACTS" },
-    { "from": "T_317", "to": "C_290", "type": "HAS_TRAIT" },
-    { "from": "T_317", "to": "C_294", "type": "HAS_TRAIT" }
+    {
+      "from": "A_019",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1701",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1930",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1061",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1095",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_210",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1641",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_317",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_051",
+      "to": "T_317",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_317",
+      "to": "C_294",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_019",  "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1701", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1930", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1061", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1095", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_210",  "to": "T_317", "type": "THEMED_AS" },
-    { "from": "A_1641", "to": "T_317", "type": "THEMED_AS" },
-    { "from": "M_055", "to": "T_317", "type": "IMPACTS" },
-    { "from": "M_051", "to": "T_317", "type": "IMPACTS" },
-    { "from": "M_072", "to": "T_317", "type": "IMPACTS" },
-    { "from": "T_317", "to": "C_290", "type": "HAS_TRAIT" },
-    { "from": "T_317", "to": "C_294", "type": "HAS_TRAIT" }
+    {
+      "from": "A_019",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1701",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1930",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1061",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1095",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_210",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1641",
+      "to": "T_317",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_317",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_051",
+      "to": "T_317",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_317",
+      "to": "C_294",
+      "type": "HAS_TRAIT"
+    }
   ]
 }

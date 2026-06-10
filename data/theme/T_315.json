@@ -4,47 +4,181 @@
   "themeName": "빅머니_버리_SCION매크로베팅",
   "meta": {
     "periodDefault": "3d",
-    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Scion Asset Management — Michael Burry (Big Short 주인공) 의 high turnover 매크로 베팅 포트폴리오. 매 분기 포트폴리오 50%+ 변동. 최근 분기 핵심: 중국 인터넷 (BABA·BIDU·JD) + 헬스케어·소비재 (EL·MOH) + AI 거품 헷지 (NVDA 풋옵션). 시장 시그널 강하지만 변동성 큼.",
     "notes": "T_315 빅머니 시리즈 — 버리 SCION 13F 추적",
     "sources": []
   },
   "nodes": [
-    { "id": "T_315", "type": "THEME", "name": "빅머니_버리_SCION매크로베팅" },
-    { "id": "A_051",  "type": "ASSET", "name": "알리바바", "exposure": { "ticker": "BABA", "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_049",  "type": "ASSET", "name": "바이두",   "exposure": { "ticker": "BIDU", "exchange": "NASDAQ", "country": "US" } },
-    { "id": "A_878",  "type": "ASSET", "name": "징둥닷컴", "exposure": { "ticker": "JD",   "exchange": "NASDAQ", "country": "US" } },
-    { "id": "A_1924", "type": "ASSET", "name": "에스티로더", "exposure": { "ticker": "EL",  "exchange": "NYSE",   "country": "US" } },
-    { "id": "A_1925", "type": "ASSET", "name": "몰리나헬스케어","exposure":{ "ticker": "MOH","exchange": "NYSE",   "country": "US" } },
-    { "id": "A_055",  "type": "ASSET", "name": "엔비디아", "exposure": { "ticker": "NVDA", "exchange": "NASDAQ", "country": "US" } },
-    { "id": "M_039", "type": "MACRO", "name": "중국내수소비" },
-    { "id": "M_072", "type": "MACRO", "name": "금리인상" },
-    { "id": "C_290", "type": "CHARACTER", "name": "13F빅머니추적" },
-    { "id": "C_292", "type": "CHARACTER", "name": "매크로숏셀러" }
+    {
+      "id": "T_315",
+      "type": "THEME",
+      "name": "빅머니_버리_SCION매크로베팅"
+    },
+    {
+      "id": "A_051",
+      "type": "ASSET",
+      "name": "알리바바",
+      "exposure": {
+        "ticker": "BABA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_049",
+      "type": "ASSET",
+      "name": "바이두",
+      "exposure": {
+        "ticker": "BIDU",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_878",
+      "type": "ASSET",
+      "name": "징둥닷컴",
+      "exposure": {
+        "ticker": "JD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1924",
+      "type": "ASSET",
+      "name": "에스티로더",
+      "exposure": {
+        "ticker": "EL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1925",
+      "type": "ASSET",
+      "name": "몰리나헬스케어",
+      "exposure": {
+        "ticker": "MOH",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_039",
+      "type": "MACRO",
+      "name": "중국내수소비"
+    },
+    {
+      "id": "C_292",
+      "type": "CHARACTER",
+      "name": "매크로숏셀러"
+    }
   ],
   "edges": [
-    { "from": "A_051",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_049",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_878",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_1924", "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_1925", "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_055",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "M_039", "to": "T_315", "type": "IMPACTS" },
-    { "from": "M_072", "to": "T_315", "type": "IMPACTS" },
-    { "from": "T_315", "to": "C_290", "type": "HAS_TRAIT" },
-    { "from": "T_315", "to": "C_292", "type": "HAS_TRAIT" }
+    {
+      "from": "A_051",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_049",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_878",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1924",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1925",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_055",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_039",
+      "to": "T_315",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_315",
+      "to": "C_292",
+      "type": "HAS_TRAIT"
+    }
   ],
   "links": [
-    { "from": "A_051",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_049",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_878",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_1924", "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_1925", "to": "T_315", "type": "THEMED_AS" },
-    { "from": "A_055",  "to": "T_315", "type": "THEMED_AS" },
-    { "from": "M_039", "to": "T_315", "type": "IMPACTS" },
-    { "from": "M_072", "to": "T_315", "type": "IMPACTS" },
-    { "from": "T_315", "to": "C_290", "type": "HAS_TRAIT" },
-    { "from": "T_315", "to": "C_292", "type": "HAS_TRAIT" }
+    {
+      "from": "A_051",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_049",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_878",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1924",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1925",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_055",
+      "to": "T_315",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_039",
+      "to": "T_315",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_315",
+      "to": "C_292",
+      "type": "HAS_TRAIT"
+    }
   ]
 }
