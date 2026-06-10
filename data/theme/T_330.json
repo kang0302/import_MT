@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_330",
+  "themeName": "빅머니_노르웨이GPFG_세계최대SWF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": ["1d", "3d", "7d", "15d", "1m", "ytd", "1y", "2y", "3y"],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "Norway Government Pension Fund Global (GPFG) — $1.8조 세계 최대 SWF (Sovereign Wealth Fund). 9000+ 글로벌 종목 보유, 분기마다 holdings 공개. 톱 비중: AAPL·MSFT·GOOGL·AMZN·NVDA·META·TSMC·ASML·NVO·BRK-B. 글로벌 시가총액 가중 분산.",
+    "notes": "T_330 빅머니 시리즈 — Norway SWF 분산",
+    "sources": []
+  },
+  "nodes": [
+    { "id": "T_330", "type": "THEME", "name": "빅머니_노르웨이GPFG_세계최대SWF" },
+    { "id": "A_374",  "type": "ASSET", "name": "애플",          "exposure": { "ticker": "AAPL","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_210",  "type": "ASSET", "name": "마이크로소프트", "exposure": { "ticker": "MSFT","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_050",  "type": "ASSET", "name": "알파벳",        "exposure": { "ticker": "GOOGL","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_211",  "type": "ASSET", "name": "아마존",        "exposure": { "ticker": "AMZN","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_055",  "type": "ASSET", "name": "엔비디아",      "exposure": { "ticker": "NVDA","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_373",  "type": "ASSET", "name": "메타",          "exposure": { "ticker": "META","exchange": "NASDAQ","country": "US" } },
+    { "id": "A_232",  "type": "ASSET", "name": "TSMC",          "exposure": { "ticker": "2330","exchange": "TWSE","country": "TW" } },
+    { "id": "A_802",  "type": "ASSET", "name": "ASML",          "exposure": { "ticker": "ASML","exchange": "NASDAQ","country": "NL" } },
+    { "id": "A_1215", "type": "ASSET", "name": "노보노디스크",   "exposure": { "ticker": "NVO", "exchange": "NYSE","country": "US" } },
+    { "id": "A_1902", "type": "ASSET", "name": "버크셔해서웨이", "exposure": { "ticker": "BRK-B","exchange": "NYSE","country": "US" } },
+    { "id": "C_306", "type": "CHARACTER", "name": "SWF글로벌분산" }
+  ],
+  "edges": [
+    { "from": "A_374",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_210",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_050",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_211",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_055",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_373",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_232",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_802",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_1215", "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_1902", "to": "T_330", "type": "THEMED_AS" },
+    { "from": "T_330", "to": "C_306", "type": "HAS_TRAIT" }
+  ],
+  "links": [
+    { "from": "A_374",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_210",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_050",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_211",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_055",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_373",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_232",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_802",  "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_1215", "to": "T_330", "type": "THEMED_AS" },
+    { "from": "A_1902", "to": "T_330", "type": "THEMED_AS" },
+    { "from": "T_330", "to": "C_306", "type": "HAS_TRAIT" }
+  ]
+}
