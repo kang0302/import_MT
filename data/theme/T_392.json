@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_392",
+  "themeName": "K폐배터리리사이클",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "K-폐배터리 리사이클 — 성일하이텍·새빗켐·코스모화학. EV 폐배터리 추출·재제련. 글로벌 첫 폐EV 사이클 시작 (2027-30 ramp). 리튬·코발트·니켈 자급 + ESG 압박.",
+    "notes": "T_392 신규 — 한국 batch",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_392",
+      "type": "THEME",
+      "name": "K폐배터리리사이클"
+    },
+    {
+      "id": "A_2128",
+      "type": "ASSET",
+      "name": "성일하이텍",
+      "exposure": {
+        "ticker": "365340",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2129",
+      "type": "ASSET",
+      "name": "새빗켐",
+      "exposure": {
+        "ticker": "107600",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2130",
+      "type": "ASSET",
+      "name": "코스모화학",
+      "exposure": {
+        "ticker": "005420",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "M_062",
+      "type": "MACRO",
+      "name": "신재생에너지전환"
+    },
+    {
+      "id": "M_177",
+      "type": "MACRO",
+      "name": "탄소중립"
+    },
+    {
+      "id": "M_253",
+      "type": "MACRO",
+      "name": "탈탄소"
+    },
+    {
+      "id": "C_429",
+      "type": "CHARACTER",
+      "name": "K배터리리사이클메이저"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2128",
+      "to": "T_392",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2129",
+      "to": "T_392",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2130",
+      "to": "T_392",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_062",
+      "to": "T_392",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_392",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_253",
+      "to": "T_392",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_392",
+      "to": "C_429",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2128",
+      "to": "T_392",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2129",
+      "to": "T_392",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2130",
+      "to": "T_392",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_062",
+      "to": "T_392",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_392",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_253",
+      "to": "T_392",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_392",
+      "to": "C_429",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}

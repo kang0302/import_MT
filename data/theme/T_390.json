@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_390",
+  "themeName": "K화장품ODM_백엔드",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "K-화장품 ODM (위탁생산) — 한국콜마·코스맥스·코스메카코리아·한국화장품제조. 인디 브랜드 폭발 시 OEM 수요 동반. 중국·미국·인도네시아 ODM 공장 capa ramp.",
+    "notes": "T_390 신규 — 한국 batch",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_390",
+      "type": "THEME",
+      "name": "K화장품ODM_백엔드"
+    },
+    {
+      "id": "A_1156",
+      "type": "ASSET",
+      "name": "한국콜마",
+      "exposure": {
+        "ticker": "161890",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1155",
+      "type": "ASSET",
+      "name": "코스맥스",
+      "exposure": {
+        "ticker": "192820",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2124",
+      "type": "ASSET",
+      "name": "코스메카코리아",
+      "exposure": {
+        "ticker": "241710",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2125",
+      "type": "ASSET",
+      "name": "한국화장품제조",
+      "exposure": {
+        "ticker": "003350",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "M_039",
+      "type": "MACRO",
+      "name": "중국내수소비"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "M_350",
+      "type": "MACRO",
+      "name": "GLP-1비만약사이클"
+    },
+    {
+      "id": "C_427",
+      "type": "CHARACTER",
+      "name": "K뷰티위탁생산엔진"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1156",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1155",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2124",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2125",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_039",
+      "to": "T_390",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_346",
+      "to": "T_390",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_390",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_390",
+      "to": "C_427",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1156",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1155",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2124",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2125",
+      "to": "T_390",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_039",
+      "to": "T_390",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_346",
+      "to": "T_390",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_390",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_390",
+      "to": "C_427",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}

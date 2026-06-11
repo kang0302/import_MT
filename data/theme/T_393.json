@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_393",
+  "themeName": "K바이오CDMO",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "K-바이오 CDMO (위탁개발생산) — 삼성바이오로직스·셀트리온·SK바이오사이언스·바이오플러스. 미국 BIOSECURE 법 (중국 WuXi 배제) 직접 수혜. 항체·mRNA·세포치료제 캐파 ramp.",
+    "notes": "T_393 신규 — 한국 batch",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_393",
+      "type": "THEME",
+      "name": "K바이오CDMO"
+    },
+    {
+      "id": "A_719",
+      "type": "ASSET",
+      "name": "삼성바이오로직스",
+      "exposure": {
+        "ticker": "207940",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_717",
+      "type": "ASSET",
+      "name": "셀트리온",
+      "exposure": {
+        "ticker": "068270",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_1725",
+      "type": "ASSET",
+      "name": "SK바이오사이언스",
+      "exposure": {
+        "ticker": "302440",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2131",
+      "type": "ASSET",
+      "name": "바이오플러스",
+      "exposure": {
+        "ticker": "099430",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "C_430",
+      "type": "CHARACTER",
+      "name": "K위탁생산바이오"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_719",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_717",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1725",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2131",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_393",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_393",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_346",
+      "to": "T_393",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_393",
+      "to": "C_430",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_719",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_717",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1725",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2131",
+      "to": "T_393",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_393",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_393",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_346",
+      "to": "T_393",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_393",
+      "to": "C_430",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
