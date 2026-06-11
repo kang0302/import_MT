@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_359",
+  "themeName": "미국트럭운송LTL",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "미국 트럭 운송·물류 LTL (Less-than-Truckload) + TL (Truckload) 메이저. Old Dominion (LTL 1위)·Saia·XPO·J.B. Hunt·Knight-Swift·Werner. 미국 화물 수송 사이클 + Yellow Corp 파산 후 capa 흡수.",
+    "notes": "T_359 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_359",
+      "type": "THEME",
+      "name": "미국트럭운송LTL"
+    },
+    {
+      "id": "A_2002",
+      "type": "ASSET",
+      "name": "올드도미니언",
+      "exposure": {
+        "ticker": "ODFL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2004",
+      "type": "ASSET",
+      "name": "사이아",
+      "exposure": {
+        "ticker": "SAIA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_409",
+      "type": "ASSET",
+      "name": "XPO",
+      "exposure": {
+        "ticker": "XPO",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_410",
+      "type": "ASSET",
+      "name": "J.B.헌트트랜스포트서비스",
+      "exposure": {
+        "ticker": "JBHT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2003",
+      "type": "ASSET",
+      "name": "나이트스위프트",
+      "exposure": {
+        "ticker": "KNX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2005",
+      "type": "ASSET",
+      "name": "워너엔터프라이즈",
+      "exposure": {
+        "ticker": "WERN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_330",
+      "type": "CHARACTER",
+      "name": "LTL장거리트럭"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2002",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2004",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_409",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_410",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2003",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2005",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_359",
+      "to": "C_330",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2002",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2004",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_409",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_410",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2003",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2005",
+      "to": "T_359",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_359",
+      "to": "C_330",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
