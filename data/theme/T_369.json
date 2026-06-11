@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_369",
+  "themeName": "유럽핀테크은행메이저",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "유럽 핀테크/은행 6사 — HSBC (영국·아시아 글로벌)·BNP Paribas (프랑스 1위)·UBS Group (스위스 자산운용·Credit Suisse 인수)·Banco Santander (스페인·라틴 강자)·Deutsche Bank (독일 IB turnaround)·ING (네덜란드 디지털 뱅킹). ECB 금리·재구조화·러시아 노출·미·중 갈등이 핵심 동인.",
+    "notes": "T_369 유럽 특화 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_369",
+      "type": "THEME",
+      "name": "유럽핀테크은행메이저"
+    },
+    {
+      "id": "A_2041",
+      "type": "ASSET",
+      "name": "HSBC홀딩스",
+      "exposure": {
+        "ticker": "HSBC",
+        "exchange": "NYSE",
+        "country": "UK"
+      }
+    },
+    {
+      "id": "A_2042",
+      "type": "ASSET",
+      "name": "BNP파리바",
+      "exposure": {
+        "ticker": "BNPQY",
+        "exchange": "OTC",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "A_2043",
+      "type": "ASSET",
+      "name": "UBS그룹",
+      "exposure": {
+        "ticker": "UBS",
+        "exchange": "NYSE",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "A_2044",
+      "type": "ASSET",
+      "name": "산탄데르",
+      "exposure": {
+        "ticker": "SAN",
+        "exchange": "NYSE",
+        "country": "ES"
+      }
+    },
+    {
+      "id": "A_2045",
+      "type": "ASSET",
+      "name": "도이체방크",
+      "exposure": {
+        "ticker": "DB",
+        "exchange": "NYSE",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "A_2046",
+      "type": "ASSET",
+      "name": "ING그룹",
+      "exposure": {
+        "ticker": "ING",
+        "exchange": "NYSE",
+        "country": "NL"
+      }
+    },
+    {
+      "id": "M_072",
+      "type": "MACRO",
+      "name": "금리인상"
+    },
+    {
+      "id": "M_359",
+      "type": "MACRO",
+      "name": "ECB금리정책"
+    },
+    {
+      "id": "M_095",
+      "type": "MACRO",
+      "name": "유럽환경규제"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "C_380",
+      "type": "CHARACTER",
+      "name": "유럽은행메이저"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2041",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2042",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2043",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2044",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2045",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2046",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_072",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_359",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_095",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_357",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_369",
+      "to": "C_380",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2041",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2042",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2043",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2044",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2045",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2046",
+      "to": "T_369",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_072",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_359",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_095",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_357",
+      "to": "T_369",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_369",
+      "to": "C_380",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
