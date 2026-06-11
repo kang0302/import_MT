@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_362",
+  "themeName": "글로벌음악라벨3대장",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "글로벌 음악 라벨 3대장 — Universal Music Group (UMG, 1위)·Warner Music Group (WMG, 3위)·Sony Music (Sony 자회사). Spotify·Apple Music 의 공급사 — 스트리밍 royalty 메가 수혜. AI 음악 (Suno·Udio) 소송 변수.",
+    "notes": "T_362 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_362",
+      "type": "THEME",
+      "name": "글로벌음악라벨3대장"
+    },
+    {
+      "id": "A_2013",
+      "type": "ASSET",
+      "name": "유니버설뮤직",
+      "exposure": {
+        "ticker": "UMG",
+        "exchange": "AMS",
+        "country": "NL"
+      }
+    },
+    {
+      "id": "A_2014",
+      "type": "ASSET",
+      "name": "워너뮤직",
+      "exposure": {
+        "ticker": "WMG",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_086",
+      "type": "ASSET",
+      "name": "Sony",
+      "exposure": {
+        "ticker": "SONY",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_333",
+      "type": "CHARACTER",
+      "name": "음악IP라이센싱"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2013",
+      "to": "T_362",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2014",
+      "to": "T_362",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_086",
+      "to": "T_362",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_362",
+      "to": "C_333",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2013",
+      "to": "T_362",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2014",
+      "to": "T_362",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_086",
+      "to": "T_362",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_362",
+      "to": "C_333",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}

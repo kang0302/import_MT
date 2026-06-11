@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_360",
+  "themeName": "글로벌데이터센터REIT_AIDC수혜",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "글로벌 데이터센터 REIT — Equinix·Digital Realty·Iron Mountain·American Tower. AI DC 폭증 직격 수혜. Hyperscaler PPA + colocation + interconnect 수익. AI capex 사이클 + 전력 PPA 우위.",
+    "notes": "T_360 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_360",
+      "type": "THEME",
+      "name": "글로벌데이터센터REIT_AIDC수혜"
+    },
+    {
+      "id": "A_826",
+      "type": "ASSET",
+      "name": "Equinix",
+      "exposure": {
+        "ticker": "EQIX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1288",
+      "type": "ASSET",
+      "name": "디지털리얼티",
+      "exposure": {
+        "ticker": "DLR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2006",
+      "type": "ASSET",
+      "name": "아이언마운틴",
+      "exposure": {
+        "ticker": "IRM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2007",
+      "type": "ASSET",
+      "name": "아메리칸타워",
+      "exposure": {
+        "ticker": "AMT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_331",
+      "type": "CHARACTER",
+      "name": "AIDC부동산REIT"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_826",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1288",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2006",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2007",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_360",
+      "to": "C_331",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_826",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1288",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2006",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2007",
+      "to": "T_360",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_360",
+      "to": "C_331",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}

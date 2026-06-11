@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_361",
+  "themeName": "글로벌폐기물환경메이저",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "description": "글로벌 폐기물·환경 메이저 — Waste Management (US 1위)·Republic Services·GFL Environmental (캐나다)·Veolia (프랑스)·Casella. 안정적 cash flow + 가격 인상 + recycling·재활용 + landfill 가스 등 부산물 수익.",
+    "notes": "T_361 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_361",
+      "type": "THEME",
+      "name": "글로벌폐기물환경메이저"
+    },
+    {
+      "id": "A_2008",
+      "type": "ASSET",
+      "name": "웨이스트매니지먼트",
+      "exposure": {
+        "ticker": "WM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2009",
+      "type": "ASSET",
+      "name": "리퍼블릭서비스",
+      "exposure": {
+        "ticker": "RSG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2010",
+      "type": "ASSET",
+      "name": "GFL환경",
+      "exposure": {
+        "ticker": "GFL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2011",
+      "type": "ASSET",
+      "name": "베올리아",
+      "exposure": {
+        "ticker": "VEOEY",
+        "exchange": "OTC",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2012",
+      "type": "ASSET",
+      "name": "카셀라웨이스트",
+      "exposure": {
+        "ticker": "CWST",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_332",
+      "type": "CHARACTER",
+      "name": "폐기물처리메가"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2008",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2009",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2010",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2011",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2012",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_361",
+      "to": "C_332",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2008",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2009",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2010",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2011",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2012",
+      "to": "T_361",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_361",
+      "to": "C_332",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
