@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_371",
+  "themeName": "글로벌철강통합",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "글로벌 철강 통합 6사 — POSCO Holdings (한국 1위)·Nippon Steel (일본 1위, 2025 US Steel 인수 진행)·ArcelorMittal (글로벌 1위·룩셈부르크)·Cleveland-Cliffs (미국)·Nucor (미국 미니밀 1위)·Steel Dynamics (미국)·US Steel (Nippon 인수 target). Trump 25% 관세 + 중국 공급 과잉 + 일본·미국 합병이 핵심 동인.",
+    "notes": "T_371 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_371",
+      "type": "THEME",
+      "name": "글로벌철강통합"
+    },
+    {
+      "id": "A_603",
+      "type": "ASSET",
+      "name": "포스코홀딩스",
+      "exposure": {
+        "ticker": "005490",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2052",
+      "type": "ASSET",
+      "name": "일본제철",
+      "exposure": {
+        "ticker": "NPSCY",
+        "exchange": "OTC",
+        "country": "JP"
+      }
+    },
+    {
+      "id": "A_2053",
+      "type": "ASSET",
+      "name": "아르셀로미탈",
+      "exposure": {
+        "ticker": "MT",
+        "exchange": "NYSE",
+        "country": "LU"
+      }
+    },
+    {
+      "id": "A_2054",
+      "type": "ASSET",
+      "name": "클리블랜드클리프스",
+      "exposure": {
+        "ticker": "CLF",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2055",
+      "type": "ASSET",
+      "name": "누코어",
+      "exposure": {
+        "ticker": "NUE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1295",
+      "type": "ASSET",
+      "name": "스틸다이내믹스",
+      "exposure": {
+        "ticker": "STLD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2056",
+      "type": "ASSET",
+      "name": "US스틸",
+      "exposure": {
+        "ticker": "X",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_362",
+      "type": "MACRO",
+      "name": "미국관세철강"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_070",
+      "type": "MACRO",
+      "name": "트럼프정책리스크"
+    },
+    {
+      "id": "C_382",
+      "type": "CHARACTER",
+      "name": "글로벌철강통합"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_603",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2052",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2053",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2054",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2055",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1295",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2056",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_362",
+      "to": "T_371",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_371",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_070",
+      "to": "T_371",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_371",
+      "to": "C_382",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_603",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2052",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2053",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2054",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2055",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1295",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2056",
+      "to": "T_371",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_362",
+      "to": "T_371",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_371",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_070",
+      "to": "T_371",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_371",
+      "to": "C_382",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
