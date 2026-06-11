@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_386",
+  "themeName": "유럽화학메이저",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "유럽 화학 메이저 — BASF·Air Liquide·Linde·Solvay·Akzo Nobel·Covestro. 산업 가스 + 정밀 화학 + 코팅 통합. 미국 인프라 capex + 중국 EV (배터리 화학) + EU 환경규제. BASF 는 천연가스 cost shock 회복.",
+    "notes": "T_386 신규 — 유럽 batch",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_386",
+      "type": "THEME",
+      "name": "유럽화학메이저"
+    },
+    {
+      "id": "A_2083",
+      "type": "ASSET",
+      "name": "BASF",
+      "exposure": {
+        "ticker": "BASFY",
+        "exchange": "OTC",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "A_768",
+      "type": "ASSET",
+      "name": "Air Liquide",
+      "exposure": {
+        "ticker": "AI",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "A_767",
+      "type": "ASSET",
+      "name": "Linde",
+      "exposure": {
+        "ticker": "LIN",
+        "exchange": "NASDAQ",
+        "country": "IE"
+      }
+    },
+    {
+      "id": "A_1950",
+      "type": "ASSET",
+      "name": "솔베이",
+      "exposure": {
+        "ticker": "SOLB",
+        "exchange": "EBR",
+        "country": "BE"
+      }
+    },
+    {
+      "id": "A_2109",
+      "type": "ASSET",
+      "name": "악조노벨",
+      "exposure": {
+        "ticker": "AKZOY",
+        "exchange": "OTC",
+        "country": "NL"
+      }
+    },
+    {
+      "id": "A_2110",
+      "type": "ASSET",
+      "name": "코베스트로",
+      "exposure": {
+        "ticker": "CVVTY",
+        "exchange": "OTC",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "M_363"
+    },
+    {
+      "id": "M_348",
+      "type": "MACRO",
+      "name": "M_348"
+    },
+    {
+      "id": "M_095",
+      "type": "MACRO",
+      "name": "M_095"
+    },
+    {
+      "id": "C_423",
+      "type": "CHARACTER",
+      "name": "유럽화학메이저"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2083",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_768",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_767",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1950",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2109",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2110",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_386",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_348",
+      "to": "T_386",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_095",
+      "to": "T_386",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_386",
+      "to": "C_423",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2083",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_768",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_767",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1950",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2109",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2110",
+      "to": "T_386",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_386",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_348",
+      "to": "T_386",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_095",
+      "to": "T_386",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_386",
+      "to": "C_423",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
