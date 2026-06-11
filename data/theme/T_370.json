@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_370",
+  "themeName": "유럽통신메이저",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "유럽 통신 5사 — Vodafone (영국 글로벌, 인도 Vi 매각 진행)·Deutsche Telekom (T-Mobile US 70% 보유)·Orange (프랑스·아프리카)·BT Group (영국)·Telefonica (스페인·라틴). EU 5G 배포 + 통합 deal + 미국 T-Mobile 지분 가치·라틴/아프리카 통신 사이클.",
+    "notes": "T_370 유럽 특화 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_370",
+      "type": "THEME",
+      "name": "유럽통신메이저"
+    },
+    {
+      "id": "A_2047",
+      "type": "ASSET",
+      "name": "보다폰",
+      "exposure": {
+        "ticker": "VOD",
+        "exchange": "NASDAQ",
+        "country": "UK"
+      }
+    },
+    {
+      "id": "A_2048",
+      "type": "ASSET",
+      "name": "도이체텔레콤",
+      "exposure": {
+        "ticker": "DTEGY",
+        "exchange": "OTC",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "A_2049",
+      "type": "ASSET",
+      "name": "오랑주",
+      "exposure": {
+        "ticker": "ORAN",
+        "exchange": "NYSE",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "A_2050",
+      "type": "ASSET",
+      "name": "BT그룹",
+      "exposure": {
+        "ticker": "BTGOF",
+        "exchange": "OTC",
+        "country": "UK"
+      }
+    },
+    {
+      "id": "A_2051",
+      "type": "ASSET",
+      "name": "텔레포니카",
+      "exposure": {
+        "ticker": "TEF",
+        "exchange": "NYSE",
+        "country": "ES"
+      }
+    },
+    {
+      "id": "M_361",
+      "type": "MACRO",
+      "name": "EU5G6G배포"
+    },
+    {
+      "id": "M_360",
+      "type": "MACRO",
+      "name": "EU통신규제"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "C_381",
+      "type": "CHARACTER",
+      "name": "유럽통신메이저"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2047",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2048",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2049",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2050",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2051",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_361",
+      "to": "T_370",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_360",
+      "to": "T_370",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_357",
+      "to": "T_370",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_370",
+      "to": "C_381",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2047",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2048",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2049",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2050",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2051",
+      "to": "T_370",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_361",
+      "to": "T_370",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_360",
+      "to": "T_370",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_357",
+      "to": "T_370",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_370",
+      "to": "C_381",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
