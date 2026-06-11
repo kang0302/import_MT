@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_367",
+  "themeName": "유럽풍력재생에너지",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "유럽 풍력·재생에너지 5사 — Vestas (덴마크 풍력 터빈 1위)·Ørsted (덴마크 해상풍력 운영 1위)·Iberdrola (스페인 재생에너지 메이저)·EDP (포르투갈 재생)·SSE (영국 풍력). 미국 IRA·트럼프 정책 변동성 + 해상풍력 비용 인플레.",
+    "notes": "T_367 유럽 특화 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_367",
+      "type": "THEME",
+      "name": "유럽풍력재생에너지"
+    },
+    {
+      "id": "A_560",
+      "type": "ASSET",
+      "name": "베스타스",
+      "exposure": {
+        "ticker": "VWS",
+        "exchange": "CPH",
+        "country": "DK"
+      }
+    },
+    {
+      "id": "A_2031",
+      "type": "ASSET",
+      "name": "오스테드",
+      "exposure": {
+        "ticker": "DNNGY",
+        "exchange": "OTC",
+        "country": "DK"
+      }
+    },
+    {
+      "id": "A_2032",
+      "type": "ASSET",
+      "name": "이베르드롤라",
+      "exposure": {
+        "ticker": "IBDRY",
+        "exchange": "OTC",
+        "country": "ES"
+      }
+    },
+    {
+      "id": "A_2033",
+      "type": "ASSET",
+      "name": "EDP",
+      "exposure": {
+        "ticker": "EDPFY",
+        "exchange": "OTC",
+        "country": "PT"
+      }
+    },
+    {
+      "id": "A_2034",
+      "type": "ASSET",
+      "name": "SSE",
+      "exposure": {
+        "ticker": "SSEZY",
+        "exchange": "OTC",
+        "country": "UK"
+      }
+    },
+    {
+      "id": "C_347",
+      "type": "CHARACTER",
+      "name": "유럽풍력재생에너지"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_560",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2031",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2032",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2033",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2034",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_367",
+      "to": "C_347",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_560",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2031",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2032",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2033",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2034",
+      "to": "T_367",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "T_367",
+      "to": "C_347",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
