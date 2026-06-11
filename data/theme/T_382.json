@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_382",
+  "themeName": "유럽반도체밸류체인",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "유럽 반도체 밸류체인 — ASML·STMicroelectronics·Infineon·NXP·BE Semiconductor·Soitec. ASML 노광 독점 + STM/Infineon/NXP 자동차 반도체 + BESI 본딩 + Soitec SOI 웨이퍼. AI수요 + AI생산성 + 중국 반도체자립 대응.",
+    "notes": "T_382 신규 — 유럽 batch",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_382",
+      "type": "THEME",
+      "name": "유럽반도체밸류체인"
+    },
+    {
+      "id": "A_802",
+      "type": "ASSET",
+      "name": "ASML",
+      "exposure": {
+        "ticker": "ASML",
+        "exchange": "NASDAQ",
+        "country": "NL"
+      }
+    },
+    {
+      "id": "A_061",
+      "type": "ASSET",
+      "name": "STMicro",
+      "exposure": {
+        "ticker": "STM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_197",
+      "type": "ASSET",
+      "name": "인피니언테크놀로지스",
+      "exposure": {
+        "ticker": "IFNNY",
+        "exchange": "OTC",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_060",
+      "type": "ASSET",
+      "name": "NXP",
+      "exposure": {
+        "ticker": "NXPI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1170",
+      "type": "ASSET",
+      "name": "BESI",
+      "exposure": {
+        "ticker": "BESI",
+        "exchange": "EURONEXT",
+        "country": "NL"
+      }
+    },
+    {
+      "id": "A_2100",
+      "type": "ASSET",
+      "name": "소이텍",
+      "exposure": {
+        "ticker": "SOIGY",
+        "exchange": "OTC",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "M_055"
+    },
+    {
+      "id": "M_204",
+      "type": "MACRO",
+      "name": "M_204"
+    },
+    {
+      "id": "M_141",
+      "type": "MACRO",
+      "name": "M_141"
+    },
+    {
+      "id": "C_419",
+      "type": "CHARACTER",
+      "name": "유럽반도체밸류체인"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_802",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_061",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_197",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_060",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1170",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2100",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_382",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_204",
+      "to": "T_382",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_141",
+      "to": "T_382",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_382",
+      "to": "C_419",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_802",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_061",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_197",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_060",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1170",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2100",
+      "to": "T_382",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_382",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_204",
+      "to": "T_382",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_141",
+      "to": "T_382",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_382",
+      "to": "C_419",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}

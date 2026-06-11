@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_380",
+  "themeName": "스위스SMI안정거장",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "description": "스위스 SMI 안정 거장 — Nestlé·Roche·Novartis·UBS·ABB·Zurich Insurance·Richemont. 글로벌 매출 비중 95%+ — defensive 안정 거장. 인구고령화 + AI확산 + ECB 금리. CHF 강세 시 환손실 리스크.",
+    "notes": "T_380 신규 — 유럽 batch",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_380",
+      "type": "THEME",
+      "name": "스위스SMI안정거장"
+    },
+    {
+      "id": "A_2093",
+      "type": "ASSET",
+      "name": "네슬레",
+      "exposure": {
+        "ticker": "NSRGY",
+        "exchange": "OTC",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "A_1634",
+      "type": "ASSET",
+      "name": "로슈",
+      "exposure": {
+        "ticker": "RHHBY",
+        "exchange": "OTC",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "A_743",
+      "type": "ASSET",
+      "name": "노바티스",
+      "exposure": {
+        "ticker": "NVS",
+        "exchange": "NYSE",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "A_2043",
+      "type": "ASSET",
+      "name": "UBS그룹",
+      "exposure": {
+        "ticker": "UBS",
+        "exchange": "NYSE",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "A_286",
+      "type": "ASSET",
+      "name": "ABB",
+      "exposure": {
+        "ticker": "ABB",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2094",
+      "type": "ASSET",
+      "name": "취리히보험",
+      "exposure": {
+        "ticker": "ZURVY",
+        "exchange": "OTC",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "A_336",
+      "type": "ASSET",
+      "name": "리치몬트",
+      "exposure": {
+        "ticker": "CFR",
+        "exchange": "SIX",
+        "country": "CH"
+      }
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "M_058"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "M_055"
+    },
+    {
+      "id": "M_359",
+      "type": "MACRO",
+      "name": "M_359"
+    },
+    {
+      "id": "C_417",
+      "type": "CHARACTER",
+      "name": "스위스SMI안정거장"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2093",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1634",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_743",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2043",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_286",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2094",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_336",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_380",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_380",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_359",
+      "to": "T_380",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_380",
+      "to": "C_417",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2093",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1634",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_743",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2043",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_286",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2094",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_336",
+      "to": "T_380",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_380",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_380",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_359",
+      "to": "T_380",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_380",
+      "to": "C_417",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
