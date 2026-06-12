@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_399",
+  "themeName": "글로벌카드결제_핀테크",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-12T00:00:00+09:00",
+    "description": "글로벌 카드 결제·핀테크 메이저 — Visa·MasterCard 네트워크 듀오폴리 + Amex 럭셔리 + Discover (Capital One 인수 진행) + PayPal·Block 디지털 결제. 미국 소비 + AI 사기방지 + BNPL/디지털 전환.",
+    "notes": "T_399 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_399",
+      "type": "THEME",
+      "name": "글로벌카드결제_핀테크"
+    },
+    {
+      "id": "A_1761",
+      "type": "ASSET",
+      "name": "비자",
+      "exposure": {
+        "ticker": "V",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2156",
+      "type": "ASSET",
+      "name": "마스터카드",
+      "exposure": {
+        "ticker": "MA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1772",
+      "type": "ASSET",
+      "name": "아메리칸익스프레스",
+      "exposure": {
+        "ticker": "AXP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2157",
+      "type": "ASSET",
+      "name": "디스커버파이낸셜",
+      "exposure": {
+        "ticker": "DFS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_349",
+      "type": "ASSET",
+      "name": "페이팔",
+      "exposure": {
+        "ticker": "PYPL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1032",
+      "type": "ASSET",
+      "name": "블록",
+      "exposure": {
+        "ticker": "XYZ",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_463",
+      "type": "CHARACTER",
+      "name": "카드네트워크듀오폴리"
+    },
+    {
+      "id": "C_464",
+      "type": "CHARACTER",
+      "name": "럭셔리T_E_고소득카드"
+    },
+    {
+      "id": "C_465",
+      "type": "CHARACTER",
+      "name": "카드_미국소비대출통합"
+    },
+    {
+      "id": "C_466",
+      "type": "CHARACTER",
+      "name": "디지털결제전환_온라인"
+    },
+    {
+      "id": "C_467",
+      "type": "CHARACTER",
+      "name": "핀테크통합_BTC_캐시앱"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_376",
+      "type": "MACRO",
+      "name": "디지털결제전환_BNPL"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1761",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2156",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1772",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2157",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_349",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1032",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1761",
+      "to": "C_463",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2156",
+      "to": "C_463",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1772",
+      "to": "C_464",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2157",
+      "to": "C_465",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_349",
+      "to": "C_466",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1032",
+      "to": "C_467",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_346",
+      "to": "T_399",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_399",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_376",
+      "to": "T_399",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1761",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2156",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1772",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2157",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_349",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1032",
+      "to": "T_399",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1761",
+      "to": "C_463",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2156",
+      "to": "C_463",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1772",
+      "to": "C_464",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2157",
+      "to": "C_465",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_349",
+      "to": "C_466",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1032",
+      "to": "C_467",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_346",
+      "to": "T_399",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_399",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_376",
+      "to": "T_399",
+      "type": "IMPACTS"
+    }
+  ]
+}
