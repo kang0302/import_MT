@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_174",
-  "themeName": "HBM장비_본더",
+  "themeName": "글로벌반도체_후공정_HBM본딩장비",
   "meta": {
     "periodDefault": "3d",
     "periodOptions": [
@@ -23,7 +23,7 @@
     {
       "id": "T_174",
       "type": "THEME",
-      "name": "HBM장비_본더"
+      "name": "글로벌반도체_후공정_HBM본딩장비"
     },
     {
       "id": "A_1026",
@@ -286,6 +286,41 @@
       "id": "BF_305",
       "type": "BUSINESS_FIELD",
       "name": "하이브리드본더"
+    },
+    {
+      "id": "A_2142",
+      "type": "ASSET",
+      "name": "ASMPT",
+      "exposure": {
+        "ticker": "0522",
+        "exchange": "HKEX",
+        "country": "HK"
+      }
+    },
+    {
+      "id": "M_368",
+      "type": "MACRO",
+      "name": "AI가속기GPU_CapEx"
+    },
+    {
+      "id": "M_369",
+      "type": "MACRO",
+      "name": "고적층화3D"
+    },
+    {
+      "id": "M_370",
+      "type": "MACRO",
+      "name": "하이브리드본딩전환"
+    },
+    {
+      "id": "M_371",
+      "type": "MACRO",
+      "name": "메모리3사HBM_capex경쟁"
+    },
+    {
+      "id": "C_437",
+      "type": "CHARACTER",
+      "name": "장비공정수직통합"
     }
   ],
   "edges": [
@@ -325,11 +360,6 @@
       "type": "OPERATES"
     },
     {
-      "from": "A_1170",
-      "to": "BF_304",
-      "type": "OPERATES"
-    },
-    {
       "from": "A_952",
       "to": "BF_305",
       "type": "OPERATES"
@@ -363,6 +393,46 @@
       "from": "A_1168",
       "to": "A_1169",
       "type": "INVESTS"
+    },
+    {
+      "from": "A_2142",
+      "to": "T_174",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2142",
+      "to": "BF_304",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1170",
+      "to": "BF_305",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_952",
+      "to": "C_437",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_368",
+      "to": "T_174",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_369",
+      "to": "T_174",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_370",
+      "to": "T_174",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_371",
+      "to": "T_174",
+      "type": "IMPACTS"
     }
   ],
   "links": [
@@ -402,11 +472,6 @@
       "type": "OPERATES"
     },
     {
-      "from": "A_1170",
-      "to": "BF_304",
-      "type": "OPERATES"
-    },
-    {
       "from": "A_952",
       "to": "BF_305",
       "type": "OPERATES"
@@ -440,6 +505,46 @@
       "from": "A_1168",
       "to": "A_1169",
       "type": "INVESTS"
+    },
+    {
+      "from": "A_2142",
+      "to": "T_174",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2142",
+      "to": "BF_304",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1170",
+      "to": "BF_305",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_952",
+      "to": "C_437",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_368",
+      "to": "T_174",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_369",
+      "to": "T_174",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_370",
+      "to": "T_174",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_371",
+      "to": "T_174",
+      "type": "IMPACTS"
     }
   ]
 }
