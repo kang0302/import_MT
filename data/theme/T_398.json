@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_398",
+  "themeName": "글로벌인공위성LEO통신",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-12T00:00:00+09:00",
+    "description": "글로벌 인공위성 LEO 통신 — SES·Eutelsat·AST SpaceMobile·Globalstar·Iridium·Viasat. Starlink (SpaceX, 비상장) 대신 상장 LEO 통신 vehicle. AT&T·Verizon·Apple 직판 + 정부 위성통신 cycle.",
+    "notes": "T_398 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_398",
+      "type": "THEME",
+      "name": "글로벌인공위성LEO통신"
+    },
+    {
+      "id": "A_2150",
+      "type": "ASSET",
+      "name": "SES위성통신",
+      "exposure": {
+        "ticker": "SESG",
+        "exchange": "OTC",
+        "country": "LU"
+      }
+    },
+    {
+      "id": "A_2151",
+      "type": "ASSET",
+      "name": "유텔샛",
+      "exposure": {
+        "ticker": "ETL",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "A_425",
+      "type": "ASSET",
+      "name": "AST스페이스모바일",
+      "exposure": {
+        "ticker": "ASTS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2152",
+      "type": "ASSET",
+      "name": "글로벌스타",
+      "exposure": {
+        "ticker": "GSAT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2153",
+      "type": "ASSET",
+      "name": "이리듐",
+      "exposure": {
+        "ticker": "IRDM",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2154",
+      "type": "ASSET",
+      "name": "비아샛",
+      "exposure": {
+        "ticker": "VSAT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_066",
+      "type": "MACRO",
+      "name": "우주산업확대"
+    },
+    {
+      "id": "M_374",
+      "type": "MACRO",
+      "name": "LEO위성통신_ramp"
+    },
+    {
+      "id": "M_361",
+      "type": "MACRO",
+      "name": "EU5G6G배포"
+    },
+    {
+      "id": "C_450",
+      "type": "CHARACTER",
+      "name": "LEO위성통신네트워크"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2150",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2151",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_425",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2152",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2153",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2154",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_066",
+      "to": "T_398",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_374",
+      "to": "T_398",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_361",
+      "to": "T_398",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_398",
+      "to": "C_450",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2150",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2151",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_425",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2152",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2153",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2154",
+      "to": "T_398",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_066",
+      "to": "T_398",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_374",
+      "to": "T_398",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_361",
+      "to": "T_398",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_398",
+      "to": "C_450",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
