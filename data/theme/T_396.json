@@ -1,0 +1,604 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_396",
+  "themeName": "글로벌화물항공_익스프레스",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-12T00:00:00+09:00",
+    "description": "글로벌 화물항공·익스프레스 메이저 — FedEx·UPS·DHL·ATSG·Cargojet·SF·Cathay·ANA·대한항공·Lufthansa. e-commerce cross-border (Temu·Shein·Amazon) 폭증 + 홍해 우회 + 제트연료 cycle. 화물항공 BAI 운임 지수 강세.",
+    "notes": "T_396 신규 — 글로벌 화물항공·익스프레스",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_396",
+      "type": "THEME",
+      "name": "글로벌화물항공_익스프레스"
+    },
+    {
+      "id": "A_298",
+      "type": "ASSET",
+      "name": "페덱스",
+      "exposure": {
+        "ticker": "FDX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_299",
+      "type": "ASSET",
+      "name": "UPS",
+      "exposure": {
+        "ticker": "UPS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2084",
+      "type": "ASSET",
+      "name": "도이치포스트DHL",
+      "exposure": {
+        "ticker": "DPSGY",
+        "exchange": "OTC",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "A_2143",
+      "type": "ASSET",
+      "name": "ATSG",
+      "exposure": {
+        "ticker": "ATSG",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2144",
+      "type": "ASSET",
+      "name": "카고젯",
+      "exposure": {
+        "ticker": "CJT",
+        "exchange": "TSX",
+        "country": "CA"
+      }
+    },
+    {
+      "id": "A_2145",
+      "type": "ASSET",
+      "name": "SF홀딩",
+      "exposure": {
+        "ticker": "002352",
+        "exchange": "SZSE",
+        "country": "CN"
+      }
+    },
+    {
+      "id": "A_2146",
+      "type": "ASSET",
+      "name": "캐세이퍼시픽",
+      "exposure": {
+        "ticker": "0293",
+        "exchange": "HKEX",
+        "country": "HK"
+      }
+    },
+    {
+      "id": "A_2147",
+      "type": "ASSET",
+      "name": "ANA홀딩스",
+      "exposure": {
+        "ticker": "9202",
+        "exchange": "TSE",
+        "country": "JP"
+      }
+    },
+    {
+      "id": "A_1593",
+      "type": "ASSET",
+      "name": "대한항공",
+      "exposure": {
+        "ticker": "003490",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2148",
+      "type": "ASSET",
+      "name": "루프트한자",
+      "exposure": {
+        "ticker": "DLAKY",
+        "exchange": "OTC",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "BF_570",
+      "type": "BUSINESS_FIELD",
+      "name": "화물항공"
+    },
+    {
+      "id": "BF_571",
+      "type": "BUSINESS_FIELD",
+      "name": "익스프레스배송"
+    },
+    {
+      "id": "C_438",
+      "type": "CHARACTER",
+      "name": "미국익스프레스1위_MemphisHub"
+    },
+    {
+      "id": "C_439",
+      "type": "CHARACTER",
+      "name": "미국통합물류2위_WorldportHub"
+    },
+    {
+      "id": "C_440",
+      "type": "CHARACTER",
+      "name": "글로벌포워딩1위_ExpressDHL"
+    },
+    {
+      "id": "C_441",
+      "type": "CHARACTER",
+      "name": "AmazonAir화물기lease"
+    },
+    {
+      "id": "C_442",
+      "type": "CHARACTER",
+      "name": "캐나다화물전용_AmazonCA파트너"
+    },
+    {
+      "id": "C_443",
+      "type": "CHARACTER",
+      "name": "중국익스프레스1위_자사화물기"
+    },
+    {
+      "id": "C_444",
+      "type": "CHARACTER",
+      "name": "아시아화물1위_HK"
+    },
+    {
+      "id": "C_445",
+      "type": "CHARACTER",
+      "name": "일본NipponCargoAirlines"
+    },
+    {
+      "id": "C_446",
+      "type": "CHARACTER",
+      "name": "화물매출30pct비중"
+    },
+    {
+      "id": "C_447",
+      "type": "CHARACTER",
+      "name": "AI반도체호황수혜"
+    },
+    {
+      "id": "C_448",
+      "type": "CHARACTER",
+      "name": "독일LufthansaCargo"
+    },
+    {
+      "id": "M_059",
+      "type": "MACRO",
+      "name": "유가상승"
+    },
+    {
+      "id": "M_372",
+      "type": "MACRO",
+      "name": "글로벌e커머스무역량"
+    },
+    {
+      "id": "M_373",
+      "type": "MACRO",
+      "name": "화물항공운임_BAI"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_298",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_298",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_299",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_299",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2084",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2084",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2143",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2143",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2144",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2144",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2145",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2145",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2146",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2146",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2147",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2147",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1593",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1593",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2148",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2148",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_298",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_299",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2084",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2145",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2147",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_298",
+      "to": "C_438",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_299",
+      "to": "C_439",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2084",
+      "to": "C_440",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2143",
+      "to": "C_441",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2144",
+      "to": "C_442",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2145",
+      "to": "C_443",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2146",
+      "to": "C_444",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2147",
+      "to": "C_445",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1593",
+      "to": "C_446",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1593",
+      "to": "C_447",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2148",
+      "to": "C_448",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_059",
+      "to": "T_396",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_372",
+      "to": "T_396",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_373",
+      "to": "T_396",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_298",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_298",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_299",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_299",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2084",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2084",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2143",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2143",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2144",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2144",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2145",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2145",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2146",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2146",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2147",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2147",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1593",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1593",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2148",
+      "to": "T_396",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2148",
+      "to": "BF_570",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_298",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_299",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2084",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2145",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2147",
+      "to": "BF_571",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_298",
+      "to": "C_438",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_299",
+      "to": "C_439",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2084",
+      "to": "C_440",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2143",
+      "to": "C_441",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2144",
+      "to": "C_442",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2145",
+      "to": "C_443",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2146",
+      "to": "C_444",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2147",
+      "to": "C_445",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1593",
+      "to": "C_446",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1593",
+      "to": "C_447",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2148",
+      "to": "C_448",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_059",
+      "to": "T_396",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_372",
+      "to": "T_396",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_373",
+      "to": "T_396",
+      "type": "IMPACTS"
+    }
+  ]
+}
