@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_400",
+  "themeName": "글로벌데이터센터REIT",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-12T00:00:00+09:00",
+    "description": "글로벌 데이터센터 REIT — Equinix (인터커넥션 메가)·Digital Realty (하이퍼스케일)·Iron Mountain (기록+DC)·Switch (비상장 인수)·NEXTDC (호주 1위). AI 데이터센터 capex 폭증 직접 수혜.",
+    "notes": "T_400 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_400",
+      "type": "THEME",
+      "name": "글로벌데이터센터REIT"
+    },
+    {
+      "id": "A_826",
+      "type": "ASSET",
+      "name": "Equinix",
+      "exposure": {
+        "ticker": "EQIX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1288",
+      "type": "ASSET",
+      "name": "디지털리얼티",
+      "exposure": {
+        "ticker": "DLR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2006",
+      "type": "ASSET",
+      "name": "아이언마운틴",
+      "exposure": {
+        "ticker": "IRM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2158",
+      "type": "ASSET",
+      "name": "스위치(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2159",
+      "type": "ASSET",
+      "name": "넥스트DC",
+      "exposure": {
+        "ticker": "NXT",
+        "exchange": "ASX",
+        "country": "AU"
+      }
+    },
+    {
+      "id": "C_468",
+      "type": "CHARACTER",
+      "name": "DC_REIT_인터커넥션메가"
+    },
+    {
+      "id": "C_469",
+      "type": "CHARACTER",
+      "name": "DC_REIT_엔터프라이즈하이퍼스케일"
+    },
+    {
+      "id": "C_470",
+      "type": "CHARACTER",
+      "name": "기록관리_DC병합"
+    },
+    {
+      "id": "C_471",
+      "type": "CHARACTER",
+      "name": "미국DC운영_비상장"
+    },
+    {
+      "id": "C_472",
+      "type": "CHARACTER",
+      "name": "호주DC1위"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_377",
+      "type": "MACRO",
+      "name": "글로벌DC_capex폭증"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_826",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1288",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2006",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2158",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2159",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_826",
+      "to": "C_468",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1288",
+      "to": "C_469",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2006",
+      "to": "C_470",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2158",
+      "to": "C_471",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2159",
+      "to": "C_472",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_055",
+      "to": "T_400",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_400",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_377",
+      "to": "T_400",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_826",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1288",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2006",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2158",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2159",
+      "to": "T_400",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_826",
+      "to": "C_468",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1288",
+      "to": "C_469",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2006",
+      "to": "C_470",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2158",
+      "to": "C_471",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2159",
+      "to": "C_472",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_055",
+      "to": "T_400",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_400",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_377",
+      "to": "T_400",
+      "type": "IMPACTS"
+    }
+  ]
+}
