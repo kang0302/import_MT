@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_424",
+  "themeName": "미국산업자동화_MRO",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "미국 산업 자동화·MRO 거장 — Honeywell (항공+빌딩+3분할)·Emerson (공정 자동화)·Rockwell (공장 PLC 1위)·Roper (니치 SW M&A)·Dover (다각 산업)·Parker Hannifin (모션 제어)·Eaton (DC 전력). 미국 리쇼어링 + 데이터센터 capex + 자동화 trifecta.",
+    "notes": "T_424 신규 — 미국 S&P500 자동화 메이저",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_424",
+      "type": "THEME",
+      "name": "미국산업자동화_MRO"
+    },
+    {
+      "id": "A_2229",
+      "type": "ASSET",
+      "name": "허니웰",
+      "exposure": {
+        "ticker": "HON",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_607",
+      "type": "CHARACTER",
+      "name": "항공우주_빌딩자동화_3분할"
+    },
+    {
+      "id": "A_2230",
+      "type": "ASSET",
+      "name": "에머슨일렉트릭",
+      "exposure": {
+        "ticker": "EMR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_608",
+      "type": "CHARACTER",
+      "name": "공정자동화_DCS_엔지니어링"
+    },
+    {
+      "id": "A_2231",
+      "type": "ASSET",
+      "name": "록웰오토메이션",
+      "exposure": {
+        "ticker": "ROK",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_609",
+      "type": "CHARACTER",
+      "name": "공장자동화_PLC1위"
+    },
+    {
+      "id": "A_2232",
+      "type": "ASSET",
+      "name": "로퍼테크놀로지",
+      "exposure": {
+        "ticker": "ROP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_610",
+      "type": "CHARACTER",
+      "name": "니치SW_M&A전략"
+    },
+    {
+      "id": "A_2233",
+      "type": "ASSET",
+      "name": "도버",
+      "exposure": {
+        "ticker": "DOV",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_611",
+      "type": "CHARACTER",
+      "name": "다각산업장비_M&A"
+    },
+    {
+      "id": "A_2234",
+      "type": "ASSET",
+      "name": "파커하니핀",
+      "exposure": {
+        "ticker": "PH",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_612",
+      "type": "CHARACTER",
+      "name": "모션제어_펌프밸브"
+    },
+    {
+      "id": "A_955",
+      "type": "ASSET",
+      "name": "이튼",
+      "exposure": {
+        "ticker": "ETN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_613",
+      "type": "CHARACTER",
+      "name": "전력관리_DC전력_데이터센터"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_028",
+      "type": "MACRO",
+      "name": "자동화확산"
+    },
+    {
+      "id": "M_400",
+      "type": "MACRO",
+      "name": "미국제조리쇼어링_capex"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2229",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2229",
+      "to": "C_607",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2230",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2230",
+      "to": "C_608",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2231",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2231",
+      "to": "C_609",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2232",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2232",
+      "to": "C_610",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2233",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2233",
+      "to": "C_611",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2234",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2234",
+      "to": "C_612",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_955",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_955",
+      "to": "C_613",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_363",
+      "to": "T_424",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_028",
+      "to": "T_424",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_424",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2229",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2229",
+      "to": "C_607",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2230",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2230",
+      "to": "C_608",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2231",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2231",
+      "to": "C_609",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2232",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2232",
+      "to": "C_610",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2233",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2233",
+      "to": "C_611",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2234",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2234",
+      "to": "C_612",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_955",
+      "to": "T_424",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_955",
+      "to": "C_613",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_363",
+      "to": "T_424",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_028",
+      "to": "T_424",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_424",
+      "type": "IMPACTS"
+    }
+  ]
+}
