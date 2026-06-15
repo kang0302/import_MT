@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_406",
+  "themeName": "글로벌캐주얼외식체인",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "글로벌 캐주얼·패스트캐주얼 외식 체인 — Cheesecake Factory·Chipotle·CAVA·Sweetgreen·Texas Roadhouse·Brinker(Chili's). 미국 소비 강세 + GLP-1 사이클 (외식 영향) + AI 디지털 주문. 풀서비스 + 패스트캐주얼 통합.",
+    "notes": "T_406 신규",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_406",
+      "type": "THEME",
+      "name": "글로벌캐주얼외식체인"
+    },
+    {
+      "id": "A_2180",
+      "type": "ASSET",
+      "name": "치즈케이크팩토리",
+      "exposure": {
+        "ticker": "CAKE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_302",
+      "type": "ASSET",
+      "name": "치폴레멕시칸그릴",
+      "exposure": {
+        "ticker": "CMG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2181",
+      "type": "ASSET",
+      "name": "카바",
+      "exposure": {
+        "ticker": "CAVA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_301",
+      "type": "ASSET",
+      "name": "Sweetgreen",
+      "exposure": {
+        "ticker": "SG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2182",
+      "type": "ASSET",
+      "name": "텍사스로드하우스",
+      "exposure": {
+        "ticker": "TXRH",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2183",
+      "type": "ASSET",
+      "name": "브링커인터내셔널",
+      "exposure": {
+        "ticker": "EAT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_487",
+      "type": "CHARACTER",
+      "name": "풀서비스다이닝거장"
+    },
+    {
+      "id": "C_488",
+      "type": "CHARACTER",
+      "name": "패스트캐주얼브리토1위"
+    },
+    {
+      "id": "C_489",
+      "type": "CHARACTER",
+      "name": "지중해패스트캐주얼"
+    },
+    {
+      "id": "C_490",
+      "type": "CHARACTER",
+      "name": "친환경샐러드볼"
+    },
+    {
+      "id": "C_491",
+      "type": "CHARACTER",
+      "name": "미국스테이크하우스1위"
+    },
+    {
+      "id": "C_492",
+      "type": "CHARACTER",
+      "name": "카주얼다이닝Chilis"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "M_350",
+      "type": "MACRO",
+      "name": "GLP-1비만약사이클"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2180",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_302",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2181",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_301",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2182",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2183",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2180",
+      "to": "C_487",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_302",
+      "to": "C_488",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2181",
+      "to": "C_489",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_301",
+      "to": "C_490",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2182",
+      "to": "C_491",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2183",
+      "to": "C_492",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_346",
+      "to": "T_406",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_406",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_406",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2180",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_302",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2181",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_301",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2182",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2183",
+      "to": "T_406",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2180",
+      "to": "C_487",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_302",
+      "to": "C_488",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2181",
+      "to": "C_489",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_301",
+      "to": "C_490",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2182",
+      "to": "C_491",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2183",
+      "to": "C_492",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_346",
+      "to": "T_406",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_406",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_406",
+      "type": "IMPACTS"
+    }
+  ]
+}
