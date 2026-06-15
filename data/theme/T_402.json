@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_402",
+  "themeName": "K-탈모치료건보수혜주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "K-탈모치료 건강보험 적용 수혜주 — 정은경 보건복지부 장관 2026 하반기 탈모치료 건보 적용 추진 발표 (2026-06). JW신약·TS트릴리온 상한가, 올릭스·인벤티지랩·바이오니아 강세. 치료제 + 샴푸 + 파이프라인 + siRNA 화장품 통합.",
+    "notes": "T_402 신규 — 정책 이벤트 트리거 (정은경 2026-06)",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_402",
+      "type": "THEME",
+      "name": "K-탈모치료건보수혜주"
+    },
+    {
+      "id": "A_2160",
+      "type": "ASSET",
+      "name": "JW신약",
+      "exposure": {
+        "ticker": "067290",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2161",
+      "type": "ASSET",
+      "name": "TS트릴리온",
+      "exposure": {
+        "ticker": "317240",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_712",
+      "type": "ASSET",
+      "name": "올릭스",
+      "exposure": {
+        "ticker": "226950",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2162",
+      "type": "ASSET",
+      "name": "인벤티지랩",
+      "exposure": {
+        "ticker": "389470",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "A_2163",
+      "type": "ASSET",
+      "name": "바이오니아",
+      "exposure": {
+        "ticker": "064550",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "BF_460",
+      "type": "BUSINESS_FIELD",
+      "name": "탈모치료제개발"
+    },
+    {
+      "id": "BF_572",
+      "type": "BUSINESS_FIELD",
+      "name": "탈모샴푸헤어케어"
+    },
+    {
+      "id": "BF_573",
+      "type": "BUSINESS_FIELD",
+      "name": "탈모치료파이프라인"
+    },
+    {
+      "id": "BF_171",
+      "type": "BUSINESS_FIELD",
+      "name": "RNA치료제"
+    },
+    {
+      "id": "M_011",
+      "type": "MACRO",
+      "name": "정책이벤트민감"
+    },
+    {
+      "id": "M_379",
+      "type": "MACRO",
+      "name": "건강보험적용확대"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2160",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2161",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_712",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2162",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2163",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2160",
+      "to": "BF_460",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2161",
+      "to": "BF_572",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_712",
+      "to": "BF_460",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2162",
+      "to": "BF_573",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2163",
+      "to": "BF_171",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_011",
+      "to": "T_402",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_379",
+      "to": "T_402",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2160",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2161",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_712",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2162",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2163",
+      "to": "T_402",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2160",
+      "to": "BF_460",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2161",
+      "to": "BF_572",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_712",
+      "to": "BF_460",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2162",
+      "to": "BF_573",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2163",
+      "to": "BF_171",
+      "type": "OPERATES"
+    },
+    {
+      "from": "M_011",
+      "to": "T_402",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_379",
+      "to": "T_402",
+      "type": "IMPACTS"
+    }
+  ]
+}
