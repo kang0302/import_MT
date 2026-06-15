@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_409",
+  "themeName": "글로벌면역질환_자가면역",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "글로벌 면역질환·자가면역 — AbbVie Humira·J&J Stelara·Amgen Otezla·Regeneron Dupixent·Sanofi·BMS. 바이오시밀러 침투 vs 차세대 IL-23·JAK 신약.",
+    "notes": "T_409 신규 — 질병중심 바이오",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_409",
+      "type": "THEME",
+      "name": "글로벌면역질환_자가면역"
+    },
+    {
+      "id": "A_1006",
+      "type": "ASSET",
+      "name": "애브비",
+      "exposure": {
+        "ticker": "ABBV",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1703",
+      "type": "ASSET",
+      "name": "존슨앤존슨",
+      "exposure": {
+        "ticker": "JNJ",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1004",
+      "type": "ASSET",
+      "name": "암젠",
+      "exposure": {
+        "ticker": "AMGN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1001",
+      "type": "ASSET",
+      "name": "리제네론",
+      "exposure": {
+        "ticker": "REGN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1318",
+      "type": "ASSET",
+      "name": "Sanofi",
+      "exposure": {
+        "ticker": "SNY",
+        "exchange": "NASDAQ",
+        "country": "FR"
+      }
+    },
+    {
+      "id": "A_2190",
+      "type": "ASSET",
+      "name": "BMS",
+      "exposure": {
+        "ticker": "BMY",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_390",
+      "type": "MACRO",
+      "name": "자가면역바이오시밀러"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "C_496",
+      "type": "CHARACTER",
+      "name": "자가면역바이오시밀러거장"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1006",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1703",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1004",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1001",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1318",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2190",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_409",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_390",
+      "to": "T_409",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_409",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_409",
+      "to": "C_496",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1006",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1703",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1004",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1001",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1318",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2190",
+      "to": "T_409",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_409",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_390",
+      "to": "T_409",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_409",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_409",
+      "to": "C_496",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}

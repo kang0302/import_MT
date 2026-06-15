@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_415",
+  "themeName": "글로벌신장질환_CKD",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "글로벌 신장질환·CKD — Bayer Kerendia·Otsuka·Travere·Calliditas·Cara. SGLT2 인접 + IgA신증 FDA 승인 사이클.",
+    "notes": "T_415 신규 — 질병중심 바이오",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_415",
+      "type": "THEME",
+      "name": "글로벌신장질환_CKD"
+    },
+    {
+      "id": "A_2030",
+      "type": "ASSET",
+      "name": "바이엘",
+      "exposure": {
+        "ticker": "BAYRY",
+        "exchange": "OTC",
+        "country": "DE"
+      }
+    },
+    {
+      "id": "A_2202",
+      "type": "ASSET",
+      "name": "오츠카홀딩스",
+      "exposure": {
+        "ticker": "OTSKY",
+        "exchange": "OTC",
+        "country": "JP"
+      }
+    },
+    {
+      "id": "A_2207",
+      "type": "ASSET",
+      "name": "트라베리",
+      "exposure": {
+        "ticker": "TVTX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2208",
+      "type": "ASSET",
+      "name": "칼리디타스",
+      "exposure": {
+        "ticker": "CALT",
+        "exchange": "NASDAQ",
+        "country": "SE"
+      }
+    },
+    {
+      "id": "A_2209",
+      "type": "ASSET",
+      "name": "카라테라퓨틱스",
+      "exposure": {
+        "ticker": "CARA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_350",
+      "type": "MACRO",
+      "name": "GLP-1비만약사이클"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "C_502",
+      "type": "CHARACTER",
+      "name": "신장CKD신약파이프라인"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2030",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2202",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2207",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2208",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2209",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_415",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_415",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_415",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_415",
+      "to": "C_502",
+      "type": "HAS_TRAIT"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2030",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2202",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2207",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2208",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2209",
+      "to": "T_415",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_415",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_415",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_055",
+      "to": "T_415",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_415",
+      "to": "C_502",
+      "type": "HAS_TRAIT"
+    }
+  ]
+}
