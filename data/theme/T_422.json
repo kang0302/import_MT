@@ -1,0 +1,269 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_422",
+  "themeName": "북미Class1철도빅5",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "북미 Class I 철도 빅5 — Union Pacific (서부 1위)·CSX (동부 1위·PSR 선두)·Norfolk Southern (동부 2위, 2023 Ohio 회복)·CPKC (멕시코·캐나다·미국 3국 통합 first-of-kind)·CNI (캐나다 1위, 석유샌드+곡물). 북미 nearshoring 화물 + PSR 마진 사이클 + 디젤 cost.",
+    "notes": "T_422 신규 — 북미 철도 Class I 빅5",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_422",
+      "type": "THEME",
+      "name": "북미Class1철도빅5"
+    },
+    {
+      "id": "A_1764",
+      "type": "ASSET",
+      "name": "유니언퍼시픽",
+      "exposure": {
+        "ticker": "UNP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_594",
+      "type": "CHARACTER",
+      "name": "서부미국1위_듀오폴리"
+    },
+    {
+      "id": "A_2218",
+      "type": "ASSET",
+      "name": "CSX",
+      "exposure": {
+        "ticker": "CSX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_595",
+      "type": "CHARACTER",
+      "name": "동부미국1위_PSR선두"
+    },
+    {
+      "id": "A_2219",
+      "type": "ASSET",
+      "name": "노포크서던",
+      "exposure": {
+        "ticker": "NSC",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_596",
+      "type": "CHARACTER",
+      "name": "동부미국2위_Ohio사고회복"
+    },
+    {
+      "id": "A_2220",
+      "type": "ASSET",
+      "name": "CPKC",
+      "exposure": {
+        "ticker": "CP",
+        "exchange": "NYSE",
+        "country": "CA"
+      }
+    },
+    {
+      "id": "C_597",
+      "type": "CHARACTER",
+      "name": "CPKC_멕시코캐나다미국3국통합"
+    },
+    {
+      "id": "A_2221",
+      "type": "ASSET",
+      "name": "캐나다내셔널철도",
+      "exposure": {
+        "ticker": "CNI",
+        "exchange": "NYSE",
+        "country": "CA"
+      }
+    },
+    {
+      "id": "C_598",
+      "type": "CHARACTER",
+      "name": "캐나다1위_석유샌드_곡물"
+    },
+    {
+      "id": "M_037",
+      "type": "MACRO",
+      "name": "유가하락"
+    },
+    {
+      "id": "M_397",
+      "type": "MACRO",
+      "name": "북미nearshoring화물량"
+    },
+    {
+      "id": "M_398",
+      "type": "MACRO",
+      "name": "PSR_정밀스케줄링철도"
+    },
+    {
+      "id": "M_399",
+      "type": "MACRO",
+      "name": "미국인프라법IIJA화물"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1764",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1764",
+      "to": "C_594",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2218",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2218",
+      "to": "C_595",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2219",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2219",
+      "to": "C_596",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2220",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2220",
+      "to": "C_597",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2221",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2221",
+      "to": "C_598",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_037",
+      "to": "T_422",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_397",
+      "to": "T_422",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_398",
+      "to": "T_422",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_399",
+      "to": "T_422",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1764",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1764",
+      "to": "C_594",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2218",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2218",
+      "to": "C_595",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2219",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2219",
+      "to": "C_596",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2220",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2220",
+      "to": "C_597",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2221",
+      "to": "T_422",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2221",
+      "to": "C_598",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_037",
+      "to": "T_422",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_397",
+      "to": "T_422",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_398",
+      "to": "T_422",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_399",
+      "to": "T_422",
+      "type": "IMPACTS"
+    }
+  ]
+}
