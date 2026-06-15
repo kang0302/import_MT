@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_423",
+  "themeName": "미국화학_산업가스",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "description": "미국 화학·산업가스 거장 — Linde·Air Products (산업가스 듀오폴리)·Sherwin/PPG (페인트 듀오폴리)·Eastman·DuPont·Dow·LyondellBasell (석유화학). 미국 인프라capex + 리쇼어링 + 수소·탄소중립 trifecta.",
+    "notes": "T_423 신규 — 미국 S&P500 화학 메이저",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_423",
+      "type": "THEME",
+      "name": "미국화학_산업가스"
+    },
+    {
+      "id": "A_767",
+      "type": "ASSET",
+      "name": "Linde",
+      "exposure": {
+        "ticker": "LIN",
+        "exchange": "NASDAQ",
+        "country": "IE"
+      }
+    },
+    {
+      "id": "C_599",
+      "type": "CHARACTER",
+      "name": "글로벌산업가스1위_Praxair합병"
+    },
+    {
+      "id": "A_2222",
+      "type": "ASSET",
+      "name": "에어프로덕츠",
+      "exposure": {
+        "ticker": "APD",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_600",
+      "type": "CHARACTER",
+      "name": "산업가스2위_수소진출"
+    },
+    {
+      "id": "A_2223",
+      "type": "ASSET",
+      "name": "셔윈윌리엄스",
+      "exposure": {
+        "ticker": "SHW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_601",
+      "type": "CHARACTER",
+      "name": "페인트1위_건축_브랜드강자"
+    },
+    {
+      "id": "A_2224",
+      "type": "ASSET",
+      "name": "PPG인더스트리",
+      "exposure": {
+        "ticker": "PPG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_602",
+      "type": "CHARACTER",
+      "name": "페인트2위_자동차코팅"
+    },
+    {
+      "id": "A_2225",
+      "type": "ASSET",
+      "name": "이스트만케미컬",
+      "exposure": {
+        "ticker": "EMN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_603",
+      "type": "CHARACTER",
+      "name": "특수정밀화학_Tritan"
+    },
+    {
+      "id": "A_2226",
+      "type": "ASSET",
+      "name": "듀폰드네무어스",
+      "exposure": {
+        "ticker": "DD",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_604",
+      "type": "CHARACTER",
+      "name": "농업_전자소재_분할"
+    },
+    {
+      "id": "A_2227",
+      "type": "ASSET",
+      "name": "다우",
+      "exposure": {
+        "ticker": "DOW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_605",
+      "type": "CHARACTER",
+      "name": "폴리에틸렌_나프타크래커"
+    },
+    {
+      "id": "A_2228",
+      "type": "ASSET",
+      "name": "리욘델바젤",
+      "exposure": {
+        "ticker": "LYB",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_606",
+      "type": "CHARACTER",
+      "name": "폴리프로필렌_플라스틱1위"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_059",
+      "type": "MACRO",
+      "name": "유가상승"
+    },
+    {
+      "id": "M_177",
+      "type": "MACRO",
+      "name": "탄소중립"
+    },
+    {
+      "id": "M_400",
+      "type": "MACRO",
+      "name": "미국제조리쇼어링_capex"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_767",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_767",
+      "to": "C_599",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2222",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2222",
+      "to": "C_600",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2223",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2223",
+      "to": "C_601",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2224",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2224",
+      "to": "C_602",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2225",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2225",
+      "to": "C_603",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2226",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2226",
+      "to": "C_604",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2227",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2227",
+      "to": "C_605",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2228",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2228",
+      "to": "C_606",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_363",
+      "to": "T_423",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_059",
+      "to": "T_423",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_423",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_423",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_767",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_767",
+      "to": "C_599",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2222",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2222",
+      "to": "C_600",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2223",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2223",
+      "to": "C_601",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2224",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2224",
+      "to": "C_602",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2225",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2225",
+      "to": "C_603",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2226",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2226",
+      "to": "C_604",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2227",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2227",
+      "to": "C_605",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2228",
+      "to": "T_423",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2228",
+      "to": "C_606",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_363",
+      "to": "T_423",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_059",
+      "to": "T_423",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_423",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_423",
+      "type": "IMPACTS"
+    }
+  ]
+}
