@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_439",
+  "themeName": "미국산업물류_REIT",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 산업·물류 REIT — Stag·EastGroup·Rexford·IIPR·Plymouth. e커머스 창고 + 미국 리쇼어링 + 선벨트 사이클.",
+    "notes": "T_439 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_439",
+      "type": "THEME",
+      "name": "미국산업물류_REIT"
+    },
+    {
+      "id": "A_2311",
+      "type": "ASSET",
+      "name": "스택인더스트리얼",
+      "exposure": {
+        "ticker": "STAG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_715",
+      "type": "CHARACTER",
+      "name": "산업물류_단일임차인_경공업"
+    },
+    {
+      "id": "A_2312",
+      "type": "ASSET",
+      "name": "이스트그룹",
+      "exposure": {
+        "ticker": "EGP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_716",
+      "type": "CHARACTER",
+      "name": "산업물류_선벨트_급성장"
+    },
+    {
+      "id": "A_440",
+      "type": "ASSET",
+      "name": "렉스포드인더스트리얼리얼리티",
+      "exposure": {
+        "ticker": "REXR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_717",
+      "type": "CHARACTER",
+      "name": "산업물류_캘리포니아남부독점"
+    },
+    {
+      "id": "A_2313",
+      "type": "ASSET",
+      "name": "이노베이티브인더스트리",
+      "exposure": {
+        "ticker": "IIPR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_718",
+      "type": "CHARACTER",
+      "name": "대마초_의료대마_부동산"
+    },
+    {
+      "id": "A_2314",
+      "type": "ASSET",
+      "name": "플리머스인더스트리",
+      "exposure": {
+        "ticker": "PLYM",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_719",
+      "type": "CHARACTER",
+      "name": "산업물류_단지작은창고"
+    },
+    {
+      "id": "M_417",
+      "type": "MACRO",
+      "name": "산업물류REIT_e커머스창고"
+    },
+    {
+      "id": "M_400",
+      "type": "MACRO",
+      "name": "미국제조리쇼어링_capex"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2311",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2311",
+      "to": "C_715",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2312",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2312",
+      "to": "C_716",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_440",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_440",
+      "to": "C_717",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2313",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2313",
+      "to": "C_718",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2314",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2314",
+      "to": "C_719",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_417",
+      "to": "T_439",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_439",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_439",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2311",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2311",
+      "to": "C_715",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2312",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2312",
+      "to": "C_716",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_440",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_440",
+      "to": "C_717",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2313",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2313",
+      "to": "C_718",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2314",
+      "to": "T_439",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2314",
+      "to": "C_719",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_417",
+      "to": "T_439",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_439",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_439",
+      "type": "IMPACTS"
+    }
+  ]
+}

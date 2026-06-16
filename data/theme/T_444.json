@@ -1,0 +1,259 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_444",
+  "themeName": "미국소형광업_금속",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 광업·금속 — Cleveland-Cliffs (US 철강)·Olympic Steel·Worthington·Coeur·Hecla·Pan American. 관세 수혜 + 은·금 사이클.",
+    "notes": "T_444 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_444",
+      "type": "THEME",
+      "name": "미국소형광업_금속"
+    },
+    {
+      "id": "A_2054",
+      "type": "ASSET",
+      "name": "클리블랜드-클리프스",
+      "exposure": {
+        "ticker": "CLF",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_741",
+      "type": "CHARACTER",
+      "name": "미국철광석_철강_관세수혜"
+    },
+    {
+      "id": "A_2333",
+      "type": "ASSET",
+      "name": "올림픽스틸",
+      "exposure": {
+        "ticker": "ZEUS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_742",
+      "type": "CHARACTER",
+      "name": "특수강_가공_OlympicSteel"
+    },
+    {
+      "id": "A_2334",
+      "type": "ASSET",
+      "name": "워딩턴스틸",
+      "exposure": {
+        "ticker": "WS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_743",
+      "type": "CHARACTER",
+      "name": "워딩턴스틸_철강제조분할"
+    },
+    {
+      "id": "A_1082",
+      "type": "ASSET",
+      "name": "코어마이닝",
+      "exposure": {
+        "ticker": "CDE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1081",
+      "type": "ASSET",
+      "name": "헤클라마이닝",
+      "exposure": {
+        "ticker": "HL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_1084",
+      "type": "ASSET",
+      "name": "판아메리칸실버",
+      "exposure": {
+        "ticker": "PAAS",
+        "exchange": "NYSE",
+        "country": "CA"
+      }
+    },
+    {
+      "id": "M_362",
+      "type": "MACRO",
+      "name": "미국관세철강"
+    },
+    {
+      "id": "M_223",
+      "type": "MACRO",
+      "name": "중국희토류수출통제"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2054",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2054",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2333",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2333",
+      "to": "C_742",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2334",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2334",
+      "to": "C_743",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1082",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1082",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1081",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1081",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1084",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1084",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_362",
+      "to": "T_444",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_223",
+      "to": "T_444",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2054",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2054",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2333",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2333",
+      "to": "C_742",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2334",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2334",
+      "to": "C_743",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1082",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1082",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1081",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1081",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1084",
+      "to": "T_444",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1084",
+      "to": "C_741",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_362",
+      "to": "T_444",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_223",
+      "to": "T_444",
+      "type": "IMPACTS"
+    }
+  ]
+}

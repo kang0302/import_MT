@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_438",
+  "themeName": "미국자기보관_REIT",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 자기보관 REIT — Public Storage·Extra Space (Life Storage 합병)·CubeSmart·National Storage·Life Storage. 인구이동·이혼·재택 reset 사이클.",
+    "notes": "T_438 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_438",
+      "type": "THEME",
+      "name": "미국자기보관_REIT"
+    },
+    {
+      "id": "A_2306",
+      "type": "ASSET",
+      "name": "퍼블릭스토리지",
+      "exposure": {
+        "ticker": "PSA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_710",
+      "type": "CHARACTER",
+      "name": "자기보관1위_PSA_가장큰_REIT"
+    },
+    {
+      "id": "A_2307",
+      "type": "ASSET",
+      "name": "엑스트라스페이스",
+      "exposure": {
+        "ticker": "EXR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_711",
+      "type": "CHARACTER",
+      "name": "자기보관2위_EXR_LifeStorage합병"
+    },
+    {
+      "id": "A_2308",
+      "type": "ASSET",
+      "name": "큐브스마트",
+      "exposure": {
+        "ticker": "CUBE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_712",
+      "type": "CHARACTER",
+      "name": "자기보관3위_CubeSmart"
+    },
+    {
+      "id": "A_2309",
+      "type": "ASSET",
+      "name": "내셔널스토리지",
+      "exposure": {
+        "ticker": "NSA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_713",
+      "type": "CHARACTER",
+      "name": "자기보관소형_NSA"
+    },
+    {
+      "id": "A_2310",
+      "type": "ASSET",
+      "name": "라이프스토리지(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_714",
+      "type": "CHARACTER",
+      "name": "자기보관피인수_LSI_EXR"
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_416",
+      "type": "MACRO",
+      "name": "self_storage_사이클"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2306",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2306",
+      "to": "C_710",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2307",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2307",
+      "to": "C_711",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2308",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2308",
+      "to": "C_712",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2309",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2309",
+      "to": "C_713",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2310",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2310",
+      "to": "C_714",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_058",
+      "to": "T_438",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_145",
+      "to": "T_438",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_416",
+      "to": "T_438",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2306",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2306",
+      "to": "C_710",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2307",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2307",
+      "to": "C_711",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2308",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2308",
+      "to": "C_712",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2309",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2309",
+      "to": "C_713",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2310",
+      "to": "T_438",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2310",
+      "to": "C_714",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_058",
+      "to": "T_438",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_145",
+      "to": "T_438",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_416",
+      "to": "T_438",
+      "type": "IMPACTS"
+    }
+  ]
+}

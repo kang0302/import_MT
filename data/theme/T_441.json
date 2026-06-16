@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_441",
+  "themeName": "미국헬스케어_REIT",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 헬스케어 REIT — Healthpeak·Sabra·Medical Properties (Steward 회복)·CareTrust·National Health Investors. 인구고령화 + 시니어 housing.",
+    "notes": "T_441 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_441",
+      "type": "THEME",
+      "name": "미국헬스케어_REIT"
+    },
+    {
+      "id": "A_445",
+      "type": "ASSET",
+      "name": "헬스피크",
+      "exposure": {
+        "ticker": "DOC",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_724",
+      "type": "CHARACTER",
+      "name": "헬스케어REIT_연구건물"
+    },
+    {
+      "id": "A_2318",
+      "type": "ASSET",
+      "name": "사브라헬스케어",
+      "exposure": {
+        "ticker": "SBRA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_725",
+      "type": "CHARACTER",
+      "name": "SNF_요양원_장기요양"
+    },
+    {
+      "id": "A_2319",
+      "type": "ASSET",
+      "name": "메디컬프로퍼티스",
+      "exposure": {
+        "ticker": "MPW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_726",
+      "type": "CHARACTER",
+      "name": "병원Steward파산_MPW회복"
+    },
+    {
+      "id": "A_2320",
+      "type": "ASSET",
+      "name": "케어트러스트",
+      "exposure": {
+        "ticker": "CTRE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_727",
+      "type": "CHARACTER",
+      "name": "SNF_장기요양_CareTrust"
+    },
+    {
+      "id": "A_447",
+      "type": "ASSET",
+      "name": "내셔널헬스인베스터스",
+      "exposure": {
+        "ticker": "NHI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_728",
+      "type": "CHARACTER",
+      "name": "헬스케어소형_NHI"
+    },
+    {
+      "id": "M_419",
+      "type": "MACRO",
+      "name": "senior_housing_인구고령화"
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_445",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_445",
+      "to": "C_724",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2318",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2318",
+      "to": "C_725",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2319",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2319",
+      "to": "C_726",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2320",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2320",
+      "to": "C_727",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_447",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_447",
+      "to": "C_728",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_419",
+      "to": "T_441",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_441",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_145",
+      "to": "T_441",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_445",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_445",
+      "to": "C_724",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2318",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2318",
+      "to": "C_725",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2319",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2319",
+      "to": "C_726",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2320",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2320",
+      "to": "C_727",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_447",
+      "to": "T_441",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_447",
+      "to": "C_728",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_419",
+      "to": "T_441",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_441",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_145",
+      "to": "T_441",
+      "type": "IMPACTS"
+    }
+  ]
+}
