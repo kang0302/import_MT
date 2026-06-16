@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_437",
+  "themeName": "미국펫코노미_반려",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 펫코노미·반려 — Petco·Chewy·Trupanion·Heska·Phibro·BarkBox. 펫코노미 가족화 + 지출 증가 + 동물의약품 사이클.",
+    "notes": "T_437 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_437",
+      "type": "THEME",
+      "name": "미국펫코노미_반려"
+    },
+    {
+      "id": "A_1895",
+      "type": "ASSET",
+      "name": "펫코",
+      "exposure": {
+        "ticker": "WOOF",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_708",
+      "type": "CHARACTER",
+      "name": "펫리테일_매장_도시"
+    },
+    {
+      "id": "A_1894",
+      "type": "ASSET",
+      "name": "츄이",
+      "exposure": {
+        "ticker": "CHWY",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_709",
+      "type": "CHARACTER",
+      "name": "펫이커머스1위_DTC"
+    },
+    {
+      "id": "A_2302",
+      "type": "ASSET",
+      "name": "트루패니언",
+      "exposure": {
+        "ticker": "TRUP",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_704",
+      "type": "CHARACTER",
+      "name": "반려동물보험1위_TRUP"
+    },
+    {
+      "id": "A_2303",
+      "type": "ASSET",
+      "name": "헤스카(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_705",
+      "type": "CHARACTER",
+      "name": "동물진단_Antech인수"
+    },
+    {
+      "id": "A_2304",
+      "type": "ASSET",
+      "name": "피브로애니멀",
+      "exposure": {
+        "ticker": "PAHC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_706",
+      "type": "CHARACTER",
+      "name": "동물의약품_사료첨가제"
+    },
+    {
+      "id": "A_2305",
+      "type": "ASSET",
+      "name": "바크박스",
+      "exposure": {
+        "ticker": "BARK",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_707",
+      "type": "CHARACTER",
+      "name": "펫박스_구독_BarkBox"
+    },
+    {
+      "id": "M_415",
+      "type": "MACRO",
+      "name": "펫코노미_가족화_지출증가"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_1895",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1895",
+      "to": "C_708",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1894",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1894",
+      "to": "C_709",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2302",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2302",
+      "to": "C_704",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2303",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2303",
+      "to": "C_705",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2304",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2304",
+      "to": "C_706",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2305",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2305",
+      "to": "C_707",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_415",
+      "to": "T_437",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_346",
+      "to": "T_437",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1895",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1895",
+      "to": "C_708",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1894",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1894",
+      "to": "C_709",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2302",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2302",
+      "to": "C_704",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2303",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2303",
+      "to": "C_705",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2304",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2304",
+      "to": "C_706",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2305",
+      "to": "T_437",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2305",
+      "to": "C_707",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_415",
+      "to": "T_437",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_346",
+      "to": "T_437",
+      "type": "IMPACTS"
+    }
+  ]
+}

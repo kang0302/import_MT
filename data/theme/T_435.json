@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_435",
+  "themeName": "미국디지털헬스_원격진료",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 디지털 헬스·원격진료 — Teladoc·Hims&Hers·DocGo·Doximity·HealthEquity·R1 RCM. GLP-1·만성질환 원격처방 + HSA·RCM 인프라.",
+    "notes": "T_435 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_435",
+      "type": "THEME",
+      "name": "미국디지털헬스_원격진료"
+    },
+    {
+      "id": "A_2293",
+      "type": "ASSET",
+      "name": "텔라닥헬스",
+      "exposure": {
+        "ticker": "TDOC",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_691",
+      "type": "CHARACTER",
+      "name": "원격진료1위_Livongo만성질환"
+    },
+    {
+      "id": "A_1218",
+      "type": "ASSET",
+      "name": "힘즈앤허스",
+      "exposure": {
+        "ticker": "HIMS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_692",
+      "type": "CHARACTER",
+      "name": "GLP1_탈모_원격처방D2C"
+    },
+    {
+      "id": "A_2294",
+      "type": "ASSET",
+      "name": "닥고",
+      "exposure": {
+        "ticker": "DCGO",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_693",
+      "type": "CHARACTER",
+      "name": "의료수송_NEMT_지역의료"
+    },
+    {
+      "id": "A_2295",
+      "type": "ASSET",
+      "name": "독시미티",
+      "exposure": {
+        "ticker": "DOCS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_694",
+      "type": "CHARACTER",
+      "name": "의사SNS_채용_광고"
+    },
+    {
+      "id": "A_2296",
+      "type": "ASSET",
+      "name": "헬스이쿼티",
+      "exposure": {
+        "ticker": "HQY",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_695",
+      "type": "CHARACTER",
+      "name": "HSA_의료비저축계좌1위"
+    },
+    {
+      "id": "A_2297",
+      "type": "ASSET",
+      "name": "R1RCM(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_696",
+      "type": "CHARACTER",
+      "name": "RCM_의료수익주기_TowerBrook인수"
+    },
+    {
+      "id": "M_414",
+      "type": "MACRO",
+      "name": "원격진료_디지털헬스확대"
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2293",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2293",
+      "to": "C_691",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1218",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1218",
+      "to": "C_692",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2294",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2294",
+      "to": "C_693",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2295",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2295",
+      "to": "C_694",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2296",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2296",
+      "to": "C_695",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2297",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2297",
+      "to": "C_696",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_414",
+      "to": "T_435",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_435",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2293",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2293",
+      "to": "C_691",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1218",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1218",
+      "to": "C_692",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2294",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2294",
+      "to": "C_693",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2295",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2295",
+      "to": "C_694",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2296",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2296",
+      "to": "C_695",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2297",
+      "to": "T_435",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2297",
+      "to": "C_696",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_414",
+      "to": "T_435",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_058",
+      "to": "T_435",
+      "type": "IMPACTS"
+    }
+  ]
+}
