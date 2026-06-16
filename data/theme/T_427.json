@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_427",
+  "themeName": "미국소형자산운용",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 자산운용 — Cohen & Steers (REIT/인프라 ETF)·Manning&Napier·Pzena (가치)·Westwood·Lazard (자문)·Federated Hermes (MMF 1위). 액티브 vs 패시브 사이클 회전 + 금리 인하 (MMF 압박).",
+    "notes": "T_427 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_427",
+      "type": "THEME",
+      "name": "미국소형자산운용"
+    },
+    {
+      "id": "A_2248",
+      "type": "ASSET",
+      "name": "코헨앤스티어스",
+      "exposure": {
+        "ticker": "CNS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_638",
+      "type": "CHARACTER",
+      "name": "부동산_인프라_ETF전문"
+    },
+    {
+      "id": "A_2249",
+      "type": "ASSET",
+      "name": "매닝앤네이피어",
+      "exposure": {
+        "ticker": "MN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_639",
+      "type": "CHARACTER",
+      "name": "멀티에셋_액티브소형"
+    },
+    {
+      "id": "A_2250",
+      "type": "ASSET",
+      "name": "즈나인베스트먼트",
+      "exposure": {
+        "ticker": "PZN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_640",
+      "type": "CHARACTER",
+      "name": "가치투자_딥밸류"
+    },
+    {
+      "id": "A_2251",
+      "type": "ASSET",
+      "name": "웨스트우드홀딩스",
+      "exposure": {
+        "ticker": "WHG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_641",
+      "type": "CHARACTER",
+      "name": "멀티에셋_소형액티브"
+    },
+    {
+      "id": "A_2252",
+      "type": "ASSET",
+      "name": "라자드",
+      "exposure": {
+        "ticker": "LAZ",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_642",
+      "type": "CHARACTER",
+      "name": "자산운용_금융자문통합"
+    },
+    {
+      "id": "A_2253",
+      "type": "ASSET",
+      "name": "페더레이티드헤르메스",
+      "exposure": {
+        "ticker": "FHI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_643",
+      "type": "CHARACTER",
+      "name": "머니마켓펀드1위"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_405",
+      "type": "MACRO",
+      "name": "액티브패시브_사이클회전"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2248",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2248",
+      "to": "C_638",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2249",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2249",
+      "to": "C_639",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2250",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2250",
+      "to": "C_640",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2251",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2251",
+      "to": "C_641",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2252",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2252",
+      "to": "C_642",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2253",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2253",
+      "to": "C_643",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_145",
+      "to": "T_427",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_405",
+      "to": "T_427",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2248",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2248",
+      "to": "C_638",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2249",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2249",
+      "to": "C_639",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2250",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2250",
+      "to": "C_640",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2251",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2251",
+      "to": "C_641",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2252",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2252",
+      "to": "C_642",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2253",
+      "to": "T_427",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2253",
+      "to": "C_643",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_145",
+      "to": "T_427",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_405",
+      "to": "T_427",
+      "type": "IMPACTS"
+    }
+  ]
+}

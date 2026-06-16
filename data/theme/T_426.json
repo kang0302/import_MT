@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_426",
+  "themeName": "미국소형보험_Specialty",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 보험 (Specialty) — Kinsale (E&S 1위)·Erie·Cincinnati·Old Republic·RLI·Markel (미니 버크셔). P&C 하드마켓 사이클 + 자연재해 손실 + 금리 인하 (투자수익) 통합.",
+    "notes": "T_426 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_426",
+      "type": "THEME",
+      "name": "미국소형보험_Specialty"
+    },
+    {
+      "id": "A_2242",
+      "type": "ASSET",
+      "name": "킨세일캐피탈",
+      "exposure": {
+        "ticker": "KNSL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_632",
+      "type": "CHARACTER",
+      "name": "EnS보험1위_급성장"
+    },
+    {
+      "id": "A_2243",
+      "type": "ASSET",
+      "name": "이리인뎀니티",
+      "exposure": {
+        "ticker": "ERIE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_633",
+      "type": "CHARACTER",
+      "name": "펜실베이니아가족P_C거장"
+    },
+    {
+      "id": "A_2244",
+      "type": "ASSET",
+      "name": "신시내티파이낸셜",
+      "exposure": {
+        "ticker": "CINF",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_634",
+      "type": "CHARACTER",
+      "name": "미드웨스트P_C거장_배당"
+    },
+    {
+      "id": "A_2245",
+      "type": "ASSET",
+      "name": "올드리퍼블릭",
+      "exposure": {
+        "ticker": "ORI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_635",
+      "type": "CHARACTER",
+      "name": "일반_Title보험거장"
+    },
+    {
+      "id": "A_2246",
+      "type": "ASSET",
+      "name": "RLI",
+      "exposure": {
+        "ticker": "RLI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_636",
+      "type": "CHARACTER",
+      "name": "특수P_C_니치독점"
+    },
+    {
+      "id": "A_2247",
+      "type": "ASSET",
+      "name": "마클그룹",
+      "exposure": {
+        "ticker": "MKL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_637",
+      "type": "CHARACTER",
+      "name": "미니버크셔_specialty투자"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_404",
+      "type": "MACRO",
+      "name": "P_C보험_하드마켓사이클"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2242",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2242",
+      "to": "C_632",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2243",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2243",
+      "to": "C_633",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2244",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2244",
+      "to": "C_634",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2245",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2245",
+      "to": "C_635",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2246",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2246",
+      "to": "C_636",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2247",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2247",
+      "to": "C_637",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_145",
+      "to": "T_426",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_404",
+      "to": "T_426",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2242",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2242",
+      "to": "C_632",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2243",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2243",
+      "to": "C_633",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2244",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2244",
+      "to": "C_634",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2245",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2245",
+      "to": "C_635",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2246",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2246",
+      "to": "C_636",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2247",
+      "to": "T_426",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2247",
+      "to": "C_637",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_145",
+      "to": "T_426",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_404",
+      "to": "T_426",
+      "type": "IMPACTS"
+    }
+  ]
+}
