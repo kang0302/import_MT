@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_425",
+  "themeName": "미국BDC_사모대출_PrivateCredit",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 BDC (Business Development Company) 사모대출 메가 — Ares·Main Street·Hercules·MFIC·Sixth Street·Blue Owl OBDC·Golub. 변동금리 시니어 시큐어드 대출 + 8-12% 배당. Fed 금리 인하 + 사모대출 폭발 + LBO 활성화 trifecta.",
+    "notes": "T_425 신규 — Russell 2000 BDC 사모대출",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_425",
+      "type": "THEME",
+      "name": "미국BDC_사모대출_PrivateCredit"
+    },
+    {
+      "id": "A_2235",
+      "type": "ASSET",
+      "name": "에이리스캐피탈",
+      "exposure": {
+        "ticker": "ARCC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_625",
+      "type": "CHARACTER",
+      "name": "BDC최대규모_25bnUSD"
+    },
+    {
+      "id": "A_2236",
+      "type": "ASSET",
+      "name": "메인스트리트캐피탈",
+      "exposure": {
+        "ticker": "MAIN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_626",
+      "type": "CHARACTER",
+      "name": "BDC2위_월별배당내부운용"
+    },
+    {
+      "id": "A_2237",
+      "type": "ASSET",
+      "name": "허큘리스캐피탈",
+      "exposure": {
+        "ticker": "HTGC",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_627",
+      "type": "CHARACTER",
+      "name": "벤처대출BDC1위_Venture"
+    },
+    {
+      "id": "A_2238",
+      "type": "ASSET",
+      "name": "MFIC",
+      "exposure": {
+        "ticker": "MFIC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_628",
+      "type": "CHARACTER",
+      "name": "미드캡사모대출_Apollo자회사"
+    },
+    {
+      "id": "A_2239",
+      "type": "ASSET",
+      "name": "식스스트리트",
+      "exposure": {
+        "ticker": "TSLX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_629",
+      "type": "CHARACTER",
+      "name": "SixthStreet_상장BDC_Senior"
+    },
+    {
+      "id": "A_2240",
+      "type": "ASSET",
+      "name": "블루아울캐피탈콥(OBDC)",
+      "exposure": {
+        "ticker": "OBDC",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_630",
+      "type": "CHARACTER",
+      "name": "BlueOwl자회사_OBDC_OBDE합병"
+    },
+    {
+      "id": "A_2241",
+      "type": "ASSET",
+      "name": "골럽캐피탈",
+      "exposure": {
+        "ticker": "GBDC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_631",
+      "type": "CHARACTER",
+      "name": "Golub_Sponsor전문_Middle"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_401",
+      "type": "MACRO",
+      "name": "사모대출_PrivateCredit_사이클"
+    },
+    {
+      "id": "M_402",
+      "type": "MACRO",
+      "name": "기업레버리지_LBO활성화"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2235",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2235",
+      "to": "C_625",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2236",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2236",
+      "to": "C_626",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2237",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2237",
+      "to": "C_627",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2238",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2238",
+      "to": "C_628",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2239",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2239",
+      "to": "C_629",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2240",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2240",
+      "to": "C_630",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2241",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2241",
+      "to": "C_631",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_145",
+      "to": "T_425",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_401",
+      "to": "T_425",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_402",
+      "to": "T_425",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2235",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2235",
+      "to": "C_625",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2236",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2236",
+      "to": "C_626",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2237",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2237",
+      "to": "C_627",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2238",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2238",
+      "to": "C_628",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2239",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2239",
+      "to": "C_629",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2240",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2240",
+      "to": "C_630",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2241",
+      "to": "T_425",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2241",
+      "to": "C_631",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_145",
+      "to": "T_425",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_401",
+      "to": "T_425",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_402",
+      "to": "T_425",
+      "type": "IMPACTS"
+    }
+  ]
+}
