@@ -1,0 +1,304 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_436",
+  "themeName": "미국소형의류_SPA_오프프라이스",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 의류 SPA·오프프라이스 — American Eagle·Abercrombie·Buckle·Five Below·Ross·Burlington·TJX. 미국 소비 강세 + GLP-1 영향 + 오프프라이스 사이클.",
+    "notes": "T_436 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_436",
+      "type": "THEME",
+      "name": "미국소형의류_SPA_오프프라이스"
+    },
+    {
+      "id": "A_840",
+      "type": "ASSET",
+      "name": "아메리칸이글",
+      "exposure": {
+        "ticker": "AEO",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_697",
+      "type": "CHARACTER",
+      "name": "학생청바지_캐주얼1위"
+    },
+    {
+      "id": "A_841",
+      "type": "ASSET",
+      "name": "아베크롬비",
+      "exposure": {
+        "ticker": "ANF",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_699",
+      "type": "CHARACTER",
+      "name": "어드밴스드프레피_A_F부활"
+    },
+    {
+      "id": "A_2298",
+      "type": "ASSET",
+      "name": "버클",
+      "exposure": {
+        "ticker": "BKE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2299",
+      "type": "ASSET",
+      "name": "파이브빌로우",
+      "exposure": {
+        "ticker": "FIVE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_700",
+      "type": "CHARACTER",
+      "name": "달러스토어_Teen_Tweens"
+    },
+    {
+      "id": "A_2300",
+      "type": "ASSET",
+      "name": "로스스토어즈",
+      "exposure": {
+        "ticker": "ROST",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_701",
+      "type": "CHARACTER",
+      "name": "오프프라이스_재고처분_가치"
+    },
+    {
+      "id": "A_2301",
+      "type": "ASSET",
+      "name": "벌링턴스토어",
+      "exposure": {
+        "ticker": "BURL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_702",
+      "type": "CHARACTER",
+      "name": "오프프라이스_가족_Burlington"
+    },
+    {
+      "id": "A_862",
+      "type": "ASSET",
+      "name": "TJX컴퍼니",
+      "exposure": {
+        "ticker": "TJX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_703",
+      "type": "CHARACTER",
+      "name": "오프프라이스1위_TJX_Marshalls"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "M_350",
+      "type": "MACRO",
+      "name": "GLP-1비만약사이클"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_840",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_840",
+      "to": "C_697",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_841",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_841",
+      "to": "C_699",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2298",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2298",
+      "to": "C_697",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2299",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2299",
+      "to": "C_700",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2300",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2300",
+      "to": "C_701",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2301",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2301",
+      "to": "C_702",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_862",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_862",
+      "to": "C_703",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_346",
+      "to": "T_436",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_436",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_840",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_840",
+      "to": "C_697",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_841",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_841",
+      "to": "C_699",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2298",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2298",
+      "to": "C_697",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2299",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2299",
+      "to": "C_700",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2300",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2300",
+      "to": "C_701",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2301",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2301",
+      "to": "C_702",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_862",
+      "to": "T_436",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_862",
+      "to": "C_703",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_346",
+      "to": "T_436",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_350",
+      "to": "T_436",
+      "type": "IMPACTS"
+    }
+  ]
+}
