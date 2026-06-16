@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_446",
+  "themeName": "미국소형해운_Tanker_Bulk",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 해운 (Tanker + Bulk) — Frontline·Euronav·International Seaways·Star Bulk·SFL·DHT. VLCC + BDI 운임 사이클.",
+    "notes": "T_446 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_446",
+      "type": "THEME",
+      "name": "미국소형해운_Tanker_Bulk"
+    },
+    {
+      "id": "A_2340",
+      "type": "ASSET",
+      "name": "프론트라인",
+      "exposure": {
+        "ticker": "FRO",
+        "exchange": "NYSE",
+        "country": "BM"
+      }
+    },
+    {
+      "id": "C_749",
+      "type": "CHARACTER",
+      "name": "VLCC원유유조선_Frontline"
+    },
+    {
+      "id": "A_2341",
+      "type": "ASSET",
+      "name": "유로내브(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "BE"
+      }
+    },
+    {
+      "id": "C_750",
+      "type": "CHARACTER",
+      "name": "VLCC_벨기에_Euronav피인수"
+    },
+    {
+      "id": "A_2342",
+      "type": "ASSET",
+      "name": "인터내셔널씨웨이즈",
+      "exposure": {
+        "ticker": "INSW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_751",
+      "type": "CHARACTER",
+      "name": "정유운반선_시웨이즈_INSW"
+    },
+    {
+      "id": "A_2343",
+      "type": "ASSET",
+      "name": "스타벌크",
+      "exposure": {
+        "ticker": "SBLK",
+        "exchange": "NASDAQ",
+        "country": "GR"
+      }
+    },
+    {
+      "id": "C_752",
+      "type": "CHARACTER",
+      "name": "드라이벌크_곡물철광석_SBLK"
+    },
+    {
+      "id": "A_2344",
+      "type": "ASSET",
+      "name": "SFL",
+      "exposure": {
+        "ticker": "SFL",
+        "exchange": "NYSE",
+        "country": "BM"
+      }
+    },
+    {
+      "id": "C_753",
+      "type": "CHARACTER",
+      "name": "선박_드라이벌크_SFL"
+    },
+    {
+      "id": "A_2345",
+      "type": "ASSET",
+      "name": "DHT",
+      "exposure": {
+        "ticker": "DHT",
+        "exchange": "NYSE",
+        "country": "BM"
+      }
+    },
+    {
+      "id": "C_754",
+      "type": "CHARACTER",
+      "name": "VLCC원유_DHT"
+    },
+    {
+      "id": "M_423",
+      "type": "MACRO",
+      "name": "해운운임_VLCC_BDI"
+    },
+    {
+      "id": "M_059",
+      "type": "MACRO",
+      "name": "유가상승"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2340",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2340",
+      "to": "C_749",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2341",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2341",
+      "to": "C_750",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2342",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2342",
+      "to": "C_751",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2343",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2343",
+      "to": "C_752",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2344",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2344",
+      "to": "C_753",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2345",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2345",
+      "to": "C_754",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_423",
+      "to": "T_446",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_059",
+      "to": "T_446",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2340",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2340",
+      "to": "C_749",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2341",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2341",
+      "to": "C_750",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2342",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2342",
+      "to": "C_751",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2343",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2343",
+      "to": "C_752",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2344",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2344",
+      "to": "C_753",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2345",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2345",
+      "to": "C_754",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_423",
+      "to": "T_446",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_059",
+      "to": "T_446",
+      "type": "IMPACTS"
+    }
+  ]
+}

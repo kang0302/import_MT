@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_443",
+  "themeName": "미국소형정밀화학",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 정밀 화학 — Olin·Cabot·HB Fuller·NewMarket·Innospec·Quaker·Chase. 특수 화학 니치 + 미국 인프라.",
+    "notes": "T_443 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_443",
+      "type": "THEME",
+      "name": "미국소형정밀화학"
+    },
+    {
+      "id": "A_2326",
+      "type": "ASSET",
+      "name": "올린",
+      "exposure": {
+        "ticker": "OLN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_734",
+      "type": "CHARACTER",
+      "name": "염소_가성소다_TDI_Olin"
+    },
+    {
+      "id": "A_2327",
+      "type": "ASSET",
+      "name": "캐봇",
+      "exposure": {
+        "ticker": "CBT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_735",
+      "type": "CHARACTER",
+      "name": "카본블랙_타이어강화"
+    },
+    {
+      "id": "A_2328",
+      "type": "ASSET",
+      "name": "HB풀러",
+      "exposure": {
+        "ticker": "FUL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_736",
+      "type": "CHARACTER",
+      "name": "산업접착제_HB_Fuller"
+    },
+    {
+      "id": "A_2329",
+      "type": "ASSET",
+      "name": "뉴마켓",
+      "exposure": {
+        "ticker": "NEU",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_737",
+      "type": "CHARACTER",
+      "name": "석유첨가제_NewMarket"
+    },
+    {
+      "id": "A_2330",
+      "type": "ASSET",
+      "name": "이노스펙",
+      "exposure": {
+        "ticker": "IOSP",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_738",
+      "type": "CHARACTER",
+      "name": "연료첨가제_Innospec"
+    },
+    {
+      "id": "A_2331",
+      "type": "ASSET",
+      "name": "퀘이커휴턴",
+      "exposure": {
+        "ticker": "KWR",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_739",
+      "type": "CHARACTER",
+      "name": "금속처리_화학_Quaker"
+    },
+    {
+      "id": "A_2332",
+      "type": "ASSET",
+      "name": "체이스인더스트리(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_740",
+      "type": "CHARACTER",
+      "name": "산업화학_니치_Chase"
+    },
+    {
+      "id": "M_421",
+      "type": "MACRO",
+      "name": "특수화학_니치사이클"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2326",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2326",
+      "to": "C_734",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2327",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2327",
+      "to": "C_735",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2328",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2328",
+      "to": "C_736",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2329",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2329",
+      "to": "C_737",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2330",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2330",
+      "to": "C_738",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2331",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2331",
+      "to": "C_739",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2332",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2332",
+      "to": "C_740",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_421",
+      "to": "T_443",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_443",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2326",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2326",
+      "to": "C_734",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2327",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2327",
+      "to": "C_735",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2328",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2328",
+      "to": "C_736",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2329",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2329",
+      "to": "C_737",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2330",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2330",
+      "to": "C_738",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2331",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2331",
+      "to": "C_739",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2332",
+      "to": "T_443",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2332",
+      "to": "C_740",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_421",
+      "to": "T_443",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_363",
+      "to": "T_443",
+      "type": "IMPACTS"
+    }
+  ]
+}

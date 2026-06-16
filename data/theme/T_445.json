@@ -1,0 +1,239 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_445",
+  "themeName": "미국자동차부품_Aftermarket",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 자동차 부품 (Aftermarket) — Dorman·Standard Motor·Motorcar Parts·Snap-on·LKQ. 자동차 MRO + 노후 차량 사이클.",
+    "notes": "T_445 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_445",
+      "type": "THEME",
+      "name": "미국자동차부품_Aftermarket"
+    },
+    {
+      "id": "A_2335",
+      "type": "ASSET",
+      "name": "도먼",
+      "exposure": {
+        "ticker": "DORM",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_744",
+      "type": "CHARACTER",
+      "name": "자동차MRO_Aftermarket1위_Dorman"
+    },
+    {
+      "id": "A_2336",
+      "type": "ASSET",
+      "name": "스탠다드모터",
+      "exposure": {
+        "ticker": "SMP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_745",
+      "type": "CHARACTER",
+      "name": "자동차MRO_엔진관리부품_Standard"
+    },
+    {
+      "id": "A_2337",
+      "type": "ASSET",
+      "name": "모터카파츠",
+      "exposure": {
+        "ticker": "MPAA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_746",
+      "type": "CHARACTER",
+      "name": "자동차MRO_재제조_MotorcarParts"
+    },
+    {
+      "id": "A_2338",
+      "type": "ASSET",
+      "name": "스냅온",
+      "exposure": {
+        "ticker": "SNA",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_747",
+      "type": "CHARACTER",
+      "name": "수공구_프리미엄_SnapOn"
+    },
+    {
+      "id": "A_2339",
+      "type": "ASSET",
+      "name": "LKQ",
+      "exposure": {
+        "ticker": "LKQ",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_748",
+      "type": "CHARACTER",
+      "name": "자동차MRO_LKQ_세계1위_재활용"
+    },
+    {
+      "id": "M_422",
+      "type": "MACRO",
+      "name": "자동차MRO_aftermarket"
+    },
+    {
+      "id": "M_349",
+      "type": "MACRO",
+      "name": "미국관세자동차"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2335",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2335",
+      "to": "C_744",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2336",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2336",
+      "to": "C_745",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2337",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2337",
+      "to": "C_746",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2338",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2338",
+      "to": "C_747",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2339",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2339",
+      "to": "C_748",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_422",
+      "to": "T_445",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_349",
+      "to": "T_445",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2335",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2335",
+      "to": "C_744",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2336",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2336",
+      "to": "C_745",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2337",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2337",
+      "to": "C_746",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2338",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2338",
+      "to": "C_747",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2339",
+      "to": "T_445",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2339",
+      "to": "C_748",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_422",
+      "to": "T_445",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_349",
+      "to": "T_445",
+      "type": "IMPACTS"
+    }
+  ]
+}

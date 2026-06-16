@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_440",
+  "themeName": "미국셀룰러타워_REIT",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 셀룰러 타워 REIT — American Tower (글로벌 1위)·Crown Castle (Fiber 분할)·SBA (브라질)·Uniti. 5G/6G 트래픽 + 데이터 수요.",
+    "notes": "T_440 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_440",
+      "type": "THEME",
+      "name": "미국셀룰러타워_REIT"
+    },
+    {
+      "id": "A_2007",
+      "type": "ASSET",
+      "name": "아메리칸타워",
+      "exposure": {
+        "ticker": "AMT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_720",
+      "type": "CHARACTER",
+      "name": "글로벌타워REIT1위_AMT"
+    },
+    {
+      "id": "A_2315",
+      "type": "ASSET",
+      "name": "크라운캐슬",
+      "exposure": {
+        "ticker": "CCI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_721",
+      "type": "CHARACTER",
+      "name": "북미타워2위_CCI_Fiber분할"
+    },
+    {
+      "id": "A_2316",
+      "type": "ASSET",
+      "name": "SBA통신",
+      "exposure": {
+        "ticker": "SBAC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_722",
+      "type": "CHARACTER",
+      "name": "북미타워3위_SBAC_브라질"
+    },
+    {
+      "id": "A_2317",
+      "type": "ASSET",
+      "name": "유니티그룹",
+      "exposure": {
+        "ticker": "UNIT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_723",
+      "type": "CHARACTER",
+      "name": "광섬유타워_Uniti_Windstream"
+    },
+    {
+      "id": "M_418",
+      "type": "MACRO",
+      "name": "5G6G타워_데이터수요"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2007",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2007",
+      "to": "C_720",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2315",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2315",
+      "to": "C_721",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2316",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2316",
+      "to": "C_722",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2317",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2317",
+      "to": "C_723",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_418",
+      "to": "T_440",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_145",
+      "to": "T_440",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2007",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2007",
+      "to": "C_720",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2315",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2315",
+      "to": "C_721",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2316",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2316",
+      "to": "C_722",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2317",
+      "to": "T_440",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2317",
+      "to": "C_723",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_418",
+      "to": "T_440",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_145",
+      "to": "T_440",
+      "type": "IMPACTS"
+    }
+  ]
+}
