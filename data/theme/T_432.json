@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_432",
+  "themeName": "미국폐기물_재활용",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 폐기물·재활용 — Republic Services·Casella·Stericycle·US Ecology·Clean Harbors·Waste Connections. ESG 의무화 + 순환경제 + 안정 cash flow.",
+    "notes": "T_432 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_432",
+      "type": "THEME",
+      "name": "미국폐기물_재활용"
+    },
+    {
+      "id": "A_2009",
+      "type": "ASSET",
+      "name": "리퍼블릭서비스",
+      "exposure": {
+        "ticker": "RSG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_672",
+      "type": "CHARACTER",
+      "name": "일반폐기물_매립_재활용"
+    },
+    {
+      "id": "A_2012",
+      "type": "ASSET",
+      "name": "카셀라웨이스트",
+      "exposure": {
+        "ticker": "CWST",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_673",
+      "type": "CHARACTER",
+      "name": "지역폐기물_NE미국"
+    },
+    {
+      "id": "A_2276",
+      "type": "ASSET",
+      "name": "스테리사이클(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_674",
+      "type": "CHARACTER",
+      "name": "의료폐기물_Sharps"
+    },
+    {
+      "id": "A_2277",
+      "type": "ASSET",
+      "name": "US에코로지(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_675",
+      "type": "CHARACTER",
+      "name": "특수폐기물_방사선처리"
+    },
+    {
+      "id": "A_2278",
+      "type": "ASSET",
+      "name": "클린하버스",
+      "exposure": {
+        "ticker": "CLH",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_676",
+      "type": "CHARACTER",
+      "name": "산업서비스_환경정화"
+    },
+    {
+      "id": "A_2279",
+      "type": "ASSET",
+      "name": "웨이스트커넥션",
+      "exposure": {
+        "ticker": "WCN",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_677",
+      "type": "CHARACTER",
+      "name": "지역폐기물_캐나다_미국"
+    },
+    {
+      "id": "M_411",
+      "type": "MACRO",
+      "name": "ESG의무화_폐기물순환경제"
+    },
+    {
+      "id": "M_177",
+      "type": "MACRO",
+      "name": "탄소중립"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2009",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2009",
+      "to": "C_672",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2012",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2012",
+      "to": "C_673",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2276",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2276",
+      "to": "C_674",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2277",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2277",
+      "to": "C_675",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2278",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2278",
+      "to": "C_676",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2279",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2279",
+      "to": "C_677",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_411",
+      "to": "T_432",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_432",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2009",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2009",
+      "to": "C_672",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2012",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2012",
+      "to": "C_673",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2276",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2276",
+      "to": "C_674",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2277",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2277",
+      "to": "C_675",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2278",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2278",
+      "to": "C_676",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2279",
+      "to": "T_432",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2279",
+      "to": "C_677",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_411",
+      "to": "T_432",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_432",
+      "type": "IMPACTS"
+    }
+  ]
+}

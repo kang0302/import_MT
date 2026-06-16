@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_431",
+  "themeName": "미국소형건설_중장비",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 건설·중장비 — Terex·Manitowoc·Astec·Watts·Hayward·Mueller·Sun Communities. 미국 인프라 capex + 리쇼어링 + 부동산 사이클.",
+    "notes": "T_431 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_431",
+      "type": "THEME",
+      "name": "미국소형건설_중장비"
+    },
+    {
+      "id": "A_2269",
+      "type": "ASSET",
+      "name": "테렉스",
+      "exposure": {
+        "ticker": "TEX",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_665",
+      "type": "CHARACTER",
+      "name": "크레인_건설중장비1위"
+    },
+    {
+      "id": "A_2270",
+      "type": "ASSET",
+      "name": "매니토웍",
+      "exposure": {
+        "ticker": "MTW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_666",
+      "type": "CHARACTER",
+      "name": "크레인_타워크레인전문"
+    },
+    {
+      "id": "A_2271",
+      "type": "ASSET",
+      "name": "아스텍",
+      "exposure": {
+        "ticker": "ASTE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_667",
+      "type": "CHARACTER",
+      "name": "도로건설장비_아스팔트"
+    },
+    {
+      "id": "A_2272",
+      "type": "ASSET",
+      "name": "와츠워터",
+      "exposure": {
+        "ticker": "WTS",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_668",
+      "type": "CHARACTER",
+      "name": "수처리_밸브배관"
+    },
+    {
+      "id": "A_2273",
+      "type": "ASSET",
+      "name": "헤이워드",
+      "exposure": {
+        "ticker": "HAYW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_669",
+      "type": "CHARACTER",
+      "name": "수영장장비1위"
+    },
+    {
+      "id": "A_2274",
+      "type": "ASSET",
+      "name": "뮬러인더스트리",
+      "exposure": {
+        "ticker": "MLI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_670",
+      "type": "CHARACTER",
+      "name": "구리튜브_HVAC"
+    },
+    {
+      "id": "A_2275",
+      "type": "ASSET",
+      "name": "선커뮤니티",
+      "exposure": {
+        "ticker": "SUI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_671",
+      "type": "CHARACTER",
+      "name": "주거MFR_커뮤니티REIT"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_400",
+      "type": "MACRO",
+      "name": "미국제조리쇼어링_capex"
+    },
+    {
+      "id": "M_177",
+      "type": "MACRO",
+      "name": "탄소중립"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2269",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2269",
+      "to": "C_665",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2270",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2270",
+      "to": "C_666",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2271",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2271",
+      "to": "C_667",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2272",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2272",
+      "to": "C_668",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2273",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2273",
+      "to": "C_669",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2274",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2274",
+      "to": "C_670",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2275",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2275",
+      "to": "C_671",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_363",
+      "to": "T_431",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_431",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_431",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2269",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2269",
+      "to": "C_665",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2270",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2270",
+      "to": "C_666",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2271",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2271",
+      "to": "C_667",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2272",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2272",
+      "to": "C_668",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2273",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2273",
+      "to": "C_669",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2274",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2274",
+      "to": "C_670",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2275",
+      "to": "T_431",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2275",
+      "to": "C_671",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_363",
+      "to": "T_431",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_400",
+      "to": "T_431",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_177",
+      "to": "T_431",
+      "type": "IMPACTS"
+    }
+  ]
+}
