@@ -1,0 +1,339 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_430",
+  "themeName": "미국소형방산부품_MRO",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 방산 부품·MRO — VSE·HEICO·Curtiss-Wright·Moog·Hexcel·Mercury·Kratos·AeroVironment. Trump 5% GDP 방산 + 지정학 리스크 + 드론·무인기 사이클.",
+    "notes": "T_430 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_430",
+      "type": "THEME",
+      "name": "미국소형방산부품_MRO"
+    },
+    {
+      "id": "A_2266",
+      "type": "ASSET",
+      "name": "VSE",
+      "exposure": {
+        "ticker": "VSEC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_657",
+      "type": "CHARACTER",
+      "name": "항공우주MRO_정부계약"
+    },
+    {
+      "id": "A_2075",
+      "type": "ASSET",
+      "name": "HEICO",
+      "exposure": {
+        "ticker": "HEI",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_664",
+      "type": "CHARACTER",
+      "name": "복합소재_부품_TransDigm style"
+    },
+    {
+      "id": "A_313",
+      "type": "ASSET",
+      "name": "커티스라이트",
+      "exposure": {
+        "ticker": "CW",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_662",
+      "type": "CHARACTER",
+      "name": "정밀유도_액추에이터"
+    },
+    {
+      "id": "A_209",
+      "type": "ASSET",
+      "name": "무그",
+      "exposure": {
+        "ticker": "MOG.A",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "A_2267",
+      "type": "ASSET",
+      "name": "헥셀",
+      "exposure": {
+        "ticker": "HXL",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_658",
+      "type": "CHARACTER",
+      "name": "첨단복합소재_항공"
+    },
+    {
+      "id": "A_2268",
+      "type": "ASSET",
+      "name": "머큐리시스템",
+      "exposure": {
+        "ticker": "MRCY",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_659",
+      "type": "CHARACTER",
+      "name": "국방전자_레이더RF"
+    },
+    {
+      "id": "A_270",
+      "type": "ASSET",
+      "name": "크라토스",
+      "exposure": {
+        "ticker": "KTOS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_661",
+      "type": "CHARACTER",
+      "name": "무인전투기_타깃드론"
+    },
+    {
+      "id": "A_271",
+      "type": "ASSET",
+      "name": "에어로바이런먼트",
+      "exposure": {
+        "ticker": "AVAV",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_660",
+      "type": "CHARACTER",
+      "name": "드론_무인기1위"
+    },
+    {
+      "id": "M_410",
+      "type": "MACRO",
+      "name": "미국방산국방예산_5pctGDP"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2266",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2266",
+      "to": "C_657",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2075",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2075",
+      "to": "C_664",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_313",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_313",
+      "to": "C_662",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_209",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_209",
+      "to": "C_662",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2267",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2267",
+      "to": "C_658",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2268",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2268",
+      "to": "C_659",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_270",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_270",
+      "to": "C_661",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_271",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_271",
+      "to": "C_660",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_410",
+      "to": "T_430",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_113",
+      "to": "T_430",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2266",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2266",
+      "to": "C_657",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2075",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2075",
+      "to": "C_664",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_313",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_313",
+      "to": "C_662",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_209",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_209",
+      "to": "C_662",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2267",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2267",
+      "to": "C_658",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2268",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2268",
+      "to": "C_659",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_270",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_270",
+      "to": "C_661",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_271",
+      "to": "T_430",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_271",
+      "to": "C_660",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_410",
+      "to": "T_430",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_113",
+      "to": "T_430",
+      "type": "IMPACTS"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_429",
+  "themeName": "미국LNG_인프라_수출",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 LNG 인프라·수출 — Cheniere (1위)·NextDecade·Tellurian·Venture Global·New Fortress·Excelerate. 미국 LNG 수출 확대 + 에너지 개발 + 유가 사이클.",
+    "notes": "T_429 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_429",
+      "type": "THEME",
+      "name": "미국LNG_인프라_수출"
+    },
+    {
+      "id": "A_489",
+      "type": "ASSET",
+      "name": "셰니어에너지",
+      "exposure": {
+        "ticker": "LNG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_651",
+      "type": "CHARACTER",
+      "name": "미국LNG수출1위_SabinePass"
+    },
+    {
+      "id": "A_2261",
+      "type": "ASSET",
+      "name": "넥스트디케이드",
+      "exposure": {
+        "ticker": "NEXT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_652",
+      "type": "CHARACTER",
+      "name": "RioGrandeLNG_2027출시"
+    },
+    {
+      "id": "A_2262",
+      "type": "ASSET",
+      "name": "텔루리안(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_653",
+      "type": "CHARACTER",
+      "name": "Tellurian_Woodside인수"
+    },
+    {
+      "id": "A_2263",
+      "type": "ASSET",
+      "name": "벤처글로벌",
+      "exposure": {
+        "ticker": "VG",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_654",
+      "type": "CHARACTER",
+      "name": "VentureGlobal_CalcasieuPass"
+    },
+    {
+      "id": "A_2264",
+      "type": "ASSET",
+      "name": "뉴포트리스에너지",
+      "exposure": {
+        "ticker": "NFE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_655",
+      "type": "CHARACTER",
+      "name": "신흥국LNG_FSRU"
+    },
+    {
+      "id": "A_2265",
+      "type": "ASSET",
+      "name": "엑셀러레이트에너지",
+      "exposure": {
+        "ticker": "EE",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_656",
+      "type": "CHARACTER",
+      "name": "FSRU운영_LNG수입터미널"
+    },
+    {
+      "id": "M_409",
+      "type": "MACRO",
+      "name": "미국LNG수출확대"
+    },
+    {
+      "id": "M_073",
+      "type": "MACRO",
+      "name": "미국에너지개발확대"
+    },
+    {
+      "id": "M_059",
+      "type": "MACRO",
+      "name": "유가상승"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_489",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_489",
+      "to": "C_651",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2261",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2261",
+      "to": "C_652",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2262",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2262",
+      "to": "C_653",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2263",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2263",
+      "to": "C_654",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2264",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2264",
+      "to": "C_655",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2265",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2265",
+      "to": "C_656",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_409",
+      "to": "T_429",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_073",
+      "to": "T_429",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_059",
+      "to": "T_429",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_489",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_489",
+      "to": "C_651",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2261",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2261",
+      "to": "C_652",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2262",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2262",
+      "to": "C_653",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2263",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2263",
+      "to": "C_654",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2264",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2264",
+      "to": "C_655",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2265",
+      "to": "T_429",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2265",
+      "to": "C_656",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_409",
+      "to": "T_429",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_073",
+      "to": "T_429",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_059",
+      "to": "T_429",
+      "type": "IMPACTS"
+    }
+  ]
+}

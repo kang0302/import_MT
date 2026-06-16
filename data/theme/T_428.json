@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_428",
+  "themeName": "미국소형OFS_Oilfield_Services",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-06-16T00:00:00+09:00",
+    "description": "미국 소형 OFS (Oilfield Services) — Liberty Energy·NOV·H&P·Patterson-UTI·ProPetro·RPC·Weatherford. 셰일 capex 생산성 cycle + 미국 에너지 개발 확대 + 유가 사이클.",
+    "notes": "T_428 신규 — Russell 2000",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_428",
+      "type": "THEME",
+      "name": "미국소형OFS_Oilfield_Services"
+    },
+    {
+      "id": "A_2254",
+      "type": "ASSET",
+      "name": "리버티에너지",
+      "exposure": {
+        "ticker": "LBRT",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_644",
+      "type": "CHARACTER",
+      "name": "셰일프랙_OFS_LFC"
+    },
+    {
+      "id": "A_2255",
+      "type": "ASSET",
+      "name": "NOV",
+      "exposure": {
+        "ticker": "NOV",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_645",
+      "type": "CHARACTER",
+      "name": "OFS장비_드릴파이프1위"
+    },
+    {
+      "id": "A_2256",
+      "type": "ASSET",
+      "name": "H&P",
+      "exposure": {
+        "ticker": "HP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_646",
+      "type": "CHARACTER",
+      "name": "드릴링리그1위_미국"
+    },
+    {
+      "id": "A_2257",
+      "type": "ASSET",
+      "name": "패터슨UTI",
+      "exposure": {
+        "ticker": "PTEN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_647",
+      "type": "CHARACTER",
+      "name": "육상시추서비스_NexTier합병"
+    },
+    {
+      "id": "A_2258",
+      "type": "ASSET",
+      "name": "프로페트로",
+      "exposure": {
+        "ticker": "PUMP",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_648",
+      "type": "CHARACTER",
+      "name": "퍼미안프랙전문"
+    },
+    {
+      "id": "A_2259",
+      "type": "ASSET",
+      "name": "RPC",
+      "exposure": {
+        "ticker": "RES",
+        "exchange": "NYSE",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_649",
+      "type": "CHARACTER",
+      "name": "OFS중소형_서비스"
+    },
+    {
+      "id": "A_2260",
+      "type": "ASSET",
+      "name": "웨더포드",
+      "exposure": {
+        "ticker": "WFRD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      }
+    },
+    {
+      "id": "C_650",
+      "type": "CHARACTER",
+      "name": "OFS복합_심해+육상"
+    },
+    {
+      "id": "M_059",
+      "type": "MACRO",
+      "name": "유가상승"
+    },
+    {
+      "id": "M_073",
+      "type": "MACRO",
+      "name": "미국에너지개발확대"
+    },
+    {
+      "id": "M_408",
+      "type": "MACRO",
+      "name": "셰일capex_생산성cycle"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_2254",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2254",
+      "to": "C_644",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2255",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2255",
+      "to": "C_645",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2256",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2256",
+      "to": "C_646",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2257",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2257",
+      "to": "C_647",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2258",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2258",
+      "to": "C_648",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2259",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2259",
+      "to": "C_649",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2260",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2260",
+      "to": "C_650",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_059",
+      "to": "T_428",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_073",
+      "to": "T_428",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_408",
+      "to": "T_428",
+      "type": "IMPACTS"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2254",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2254",
+      "to": "C_644",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2255",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2255",
+      "to": "C_645",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2256",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2256",
+      "to": "C_646",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2257",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2257",
+      "to": "C_647",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2258",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2258",
+      "to": "C_648",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2259",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2259",
+      "to": "C_649",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2260",
+      "to": "T_428",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2260",
+      "to": "C_650",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_059",
+      "to": "T_428",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_073",
+      "to": "T_428",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_408",
+      "to": "T_428",
+      "type": "IMPACTS"
+    }
+  ]
+}
