@@ -52,7 +52,31 @@ CI/커밋 흐름에서 실행. 검사: (a) 저장소 레코드 필수필드, (b)
 confidence 범위·status 값, (c) edges==links 일관성. 또한 테마별 **근거 커버리지%**(비-legacy/전체)를 출력 —
 BAROMETER처럼 품질 지표로 노출 가능. 위반 시 종료코드 1.
 
-## 4. AI 인제스트 계약(후속)
+## 4. AI 인제스트 계약 — 근거 없는 엣지는 시스템에 못 들어온다
 
-LLM은 JSON을 직접 쓰지 않고 `EdgeProposal`을 emit하며, 여기엔 `evidence(url+quote+date)`가 **필수**.
-근거 없으면 동일 검증기가 거부 → 출처(#3)가 AI 가드레일(#2)을 자동으로 강제. 관련 메모: 벤치마크-팔란티어.
+LLM은 theme JSON을 **직접 수정하지 않는다.** 오직 `EdgeProposal`을 staging으로 emit하고, 게이트가
+검증을 통과한 것만 반영한다. 근거 없는 제안은 게이트가 거부 → 출처(#3)가 AI 가드레일(#2)을 자동 강제.
+
+**무결성 핵심 — 출처 포인터는 사람이 공급한다.** 매체·URL·일자(`SOURCE_*`)는 운영자가 입력하고,
+LLM은 (a) 제공된 출처 텍스트에서 근거 문장(`quote`)을 **그대로 발췌**, (b) 컨텍스트에 제시된 **기존
+노드 ID**로 from/to 매핑, (c) 관계 type·confidence만 결정. → LLM이 출처를 지어낼 수 없다. 반영 시
+`status=proposed`(captured_by=`llm:<model>`)로 들어가고, 사람 검수 후 `verified`로 승격.
+
+**도구**
+- `scripts/propose_edges.py` — Claude tool-use(structured output)로 EdgeProposal[] 강제 생성.
+  필수 env: `ANTHROPIC_API_KEY` `THEME_ID` `SOURCE_PUBLISHER` `SOURCE_TEXT|SOURCE_FILE` +
+  (`SOURCE_URL` 또는 `SOURCE_PUBLISHED`). 산출: `data/staging/edge_proposals.jsonl`.
+- `scripts/apply_edge_proposals.py` — **게이트**. 검증: 테마 존재 / from·to가 그 테마의 기존 노드 /
+  type 허용값 / confidence 0~1 / `quote`+`publisher`+(`url`|`published`) 필수. 통과분만
+  evidence_ssot에 EV 발급·엣지 추가(status=proposed). 거부분은 `edge_proposals.rejected.jsonl`로
+  사유 기록. 모드: `--dry-run`(기본, 변경 없음) / `--apply` / `--apply --status verified`(검수완료).
+
+**파이프라인**
+```
+ANTHROPIC_API_KEY=... THEME_ID=T_257 SOURCE_PUBLISHER="한경 와우넷 6/12" \
+  SOURCE_PUBLISHED=2026-06-12 SOURCE_FILE=article.txt python scripts/propose_edges.py
+python scripts/apply_edge_proposals.py --dry-run      # 게이트 검증·요약
+python scripts/apply_edge_proposals.py --apply        # 통과분만 반영(proposed)
+python scripts/validate_provenance.py                 # 최종 정합성·커버리지
+```
+staging 런타임 파일은 .gitignore 대상(샘플 `edge_proposals.sample.jsonl`만 추적). 관련 메모: 벤치마크-팔란티어.
