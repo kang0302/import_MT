@@ -233,6 +233,77 @@
       "id": "M_059",
       "type": "MACRO",
       "name": "유가상승"
+    },
+    {
+      "id": "A_2577",
+      "type": "ASSET",
+      "name": "스코르피오탱커스",
+      "exposure": {
+        "ticker": "STNG",
+        "exchange": "NYSE",
+        "country": "MC"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_1566",
+      "type": "CHARACTER",
+      "name": "정유제품선_MR_LR_STNG"
+    },
+    {
+      "id": "A_2578",
+      "type": "ASSET",
+      "name": "노르딕아메리칸탱커스",
+      "exposure": {
+        "ticker": "NAT",
+        "exchange": "NYSE",
+        "country": "BM"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_1567",
+      "type": "CHARACTER",
+      "name": "수에즈막스원유_NAT"
+    },
+    {
+      "id": "M_1080",
+      "type": "MACRO",
+      "name": "전쟁위기_운임/보험료상승"
     }
   ],
   "edges": [
@@ -305,6 +376,31 @@
       "from": "M_059",
       "to": "T_446",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_2577",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2577",
+      "to": "C_1566",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2578",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2578",
+      "to": "C_1567",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_1080",
+      "to": "T_446",
+      "type": "IMPACTS"
     }
   ],
   "links": [
@@ -375,6 +471,31 @@
     },
     {
       "from": "M_059",
+      "to": "T_446",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "A_2577",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2577",
+      "to": "C_1566",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2578",
+      "to": "T_446",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2578",
+      "to": "C_1567",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_1080",
       "to": "T_446",
       "type": "IMPACTS"
     }
