@@ -33,6 +33,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # ✅ Level 1: 스크립트 실행 전 최신 main 동기화 → 산출물이 최신 기준 생성(commit 시 rebase 불필요)
+      - name: Sync to latest main BEFORE running scripts
+        run: |
+          git fetch origin
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+
       - name: Run Overseas returns updater (FMP)
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
@@ -43,35 +49,40 @@ jobs:
         run: |
           python -u scripts/build_freeze.py
 
-      - name: Commit & push if changed (rebase-safe)
+      # ✅ Level 1 commit: rebase/merge 로 fresh 캐시를 버리지 않는다.
+      #    push 거부 시 → 최신 reset 후 스크립트 재실행(재생성) 후 재시도.
+      - name: Commit & push if changed (regenerate-on-latest)
         shell: bash
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: |
           set -e
-
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git pull --rebase -X theirs --autostash origin "${GITHUB_REF_NAME}"
+          stage_and_commit() {
+            git add data/cache/returns_fmp.json data/theme/T_*.json data/theme/index.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit."
+              return 1
+            fi
+            git commit -m "chore: overseas returns + freeze update (FMP)"
+            return 0
+          }
 
-          # ✅ rebase가 unresolved conflict를 남기고 끝났는지 검사 (commit 전 abort)
-          if [ -n "$(git ls-files -u)" ]; then
-            echo "❌ Unmerged paths after rebase:"
-            git status --short
-            exit 1
-          fi
-          if grep -rlE '^(<<<<<<< |=======$|>>>>>>> )' data/ 2>/dev/null; then
-            echo "❌ Conflict markers found in data/ after rebase. Aborting before commit."
-            exit 1
-          fi
+          stage_and_commit || exit 0
 
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-
-          git add data/cache/returns_fmp.json
-          git add data/theme/T_*.json
-          git add data/theme/index.json
-
-          git commit -m "chore: overseas returns + freeze update (FMP)"
-          git push origin HEAD:"${GITHUB_REF_NAME}"
+          for i in 1 2 3 4 5; do
+            if git push origin HEAD:"${GITHUB_REF_NAME}"; then
+              echo "push success on attempt $i"
+              exit 0
+            fi
+            echo "push attempt $i rejected → 최신으로 reset 후 재생성"
+            git reset --hard HEAD~1 || true
+            git fetch origin
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            python -u scripts/update_return_fmp.py
+            python -u scripts/build_freeze.py
+            stage_and_commit || exit 0
+          done
+          echo "❌ push failed after retries"; exit 1
