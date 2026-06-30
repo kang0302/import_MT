@@ -18,7 +18,8 @@
     "dataAsOf": "2026-02-21T16:00:00+09:00",
     "notes": "g23 누적 import 기반 T_023 freeze",
     "sources": [],
-    "provenanceSeed": "T_023 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_023 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "augmentNote": "T_023 보강(2026-06-30) — 로켓랩 이리듐 인수 위성통신 수직계열화"
   },
   "nodes": [
     {
@@ -250,6 +251,83 @@
       "id": "M_066",
       "type": "MACRO",
       "name": "우주산업확대"
+    },
+    {
+      "id": "A_118",
+      "type": "ASSET",
+      "name": "로켓랩",
+      "exposure": {
+        "ticker": "RKLB",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Rocket Lab — 발사체(Electron·Neutron)+위성제조, 이리듐 인수로 위성통신까지 수직계열화",
+        "theme_role": "발사·위성·통신 수직계열화",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_2153",
+      "type": "ASSET",
+      "name": "이리듐",
+      "exposure": {
+        "ticker": "IRDM",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Iridium Communications — LEO 위성통신 서비스(글로벌 음성·데이터), 로켓랩 80억달러 피인수",
+        "theme_role": "위성통신 서비스(로켓랩 피인수)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "BF_104",
+      "type": "BUSINESS_FIELD",
+      "name": "위성통신서비스"
+    },
+    {
+      "id": "BF_107",
+      "type": "BUSINESS_FIELD",
+      "name": "우주발사체/탐사"
+    },
+    {
+      "id": "C_1571",
+      "type": "CHARACTER",
+      "name": "이리듐인수수직계열화"
     }
   ],
   "edges": [
@@ -392,6 +470,46 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_118",
+      "to": "T_023",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2153",
+      "to": "T_023",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_107",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2153",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "A_2153",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_001300"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "T_023",
+      "to": "C_1571",
+      "type": "HAS_TRAIT"
     }
   ],
   "links": [
@@ -534,6 +652,46 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_118",
+      "to": "T_023",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2153",
+      "to": "T_023",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_107",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2153",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "A_2153",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_001300"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "T_023",
+      "to": "C_1571",
+      "type": "HAS_TRAIT"
     }
   ]
 }

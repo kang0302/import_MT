@@ -17,7 +17,8 @@
     ],
     "dataAsOf": "2026-04-14T00:00:00+09:00",
     "notes": "T_051 format + exposure/metrics fully structured",
-    "sources": []
+    "sources": [],
+    "augmentNote": "T_052 보강(2026-06-30) — 로켓랩 이리듐 인수 위성통신 수직계열화"
   },
   "nodes": [
     {
@@ -478,6 +479,57 @@
       "id": "M_026",
       "type": "MACRO",
       "name": "방산수요증가"
+    },
+    {
+      "id": "A_2153",
+      "type": "ASSET",
+      "name": "이리듐",
+      "exposure": {
+        "ticker": "IRDM",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Iridium Communications — LEO 위성통신 서비스(글로벌 음성·데이터), 로켓랩 80억달러 피인수",
+        "theme_role": "위성통신 서비스(로켓랩 피인수)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "M_025",
+      "type": "MACRO",
+      "name": "항공우주산업확대"
+    },
+    {
+      "id": "BF_107",
+      "type": "BUSINESS_FIELD",
+      "name": "우주발사체/탐사"
+    },
+    {
+      "id": "BF_104",
+      "type": "BUSINESS_FIELD",
+      "name": "위성통신서비스"
+    },
+    {
+      "id": "C_1570",
+      "type": "CHARACTER",
+      "name": "위성통신수직계열화"
     }
   ],
   "edges": [
@@ -570,6 +622,46 @@
       "from": "M_026",
       "to": "T_052",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_2153",
+      "to": "T_052",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_107",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2153",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "A_2153",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_001300"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "M_025",
+      "to": "T_052",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_052",
+      "to": "C_1570",
+      "type": "HAS_TRAIT"
     }
   ],
   "links": [
@@ -662,6 +754,46 @@
       "from": "M_026",
       "to": "T_052",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_2153",
+      "to": "T_052",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_107",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_2153",
+      "to": "BF_104",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_118",
+      "to": "A_2153",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_001300"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "M_025",
+      "to": "T_052",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "T_052",
+      "to": "C_1570",
+      "type": "HAS_TRAIT"
     }
   ]
 }
