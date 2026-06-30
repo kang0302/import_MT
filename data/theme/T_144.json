@@ -17,7 +17,8 @@
     ],
     "dataAsOf": "2026-04-14T00:00:00+09:00",
     "notes": "g144 누적 import 기반 중국기술내재화 테마",
-    "sources": []
+    "sources": [],
+    "augmentNote": "T_144 보강(2026-06-30) — 애플 CXMT/YMTC 메모리 공급망"
   },
   "nodes": [
     {
@@ -367,6 +368,47 @@
         "returnsAsOf": "2026-06-29",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_374",
+      "type": "ASSET",
+      "name": "애플",
+      "exposure": {
+        "ticker": "AAPL",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Apple — CXMT(창신메모리) 메모리 채용으로 중국 메모리 공급망 편입",
+        "theme_role": "CXMT 채용 수요처(중국기술 내재화 촉매)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "BF_442",
+      "type": "BUSINESS_FIELD",
+      "name": "메모리"
+    },
+    {
+      "id": "C_1568",
+      "type": "CHARACTER",
+      "name": "중국메모리공급망채용"
     }
   ],
   "edges": [
@@ -499,6 +541,56 @@
       "from": "A_1572",
       "to": "BF_089",
       "type": "OPERATES"
+    },
+    {
+      "from": "A_374",
+      "to": "T_144",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1571",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "A_1571",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1572",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_144",
+      "to": "C_1568",
+      "type": "HAS_TRAIT"
     }
   ],
   "links": [
@@ -631,6 +723,56 @@
       "from": "A_1572",
       "to": "BF_089",
       "type": "OPERATES"
+    },
+    {
+      "from": "A_374",
+      "to": "T_144",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1571",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "A_1571",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1572",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_144",
+      "to": "C_1568",
+      "type": "HAS_TRAIT"
     }
   ]
 }

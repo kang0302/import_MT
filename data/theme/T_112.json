@@ -18,7 +18,8 @@
     "dataAsOf": "2026-04-06T00:00:00+09:00",
     "notes": "설계-반도체제조-디스플레이-기판/커넥터-배터리-카메라모듈-조립으로 이어지는 글로벌 아이폰 공급망 구조",
     "sources": [],
-    "provenanceSeed": "T_112 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_112 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "augmentNote": "T_112 보강(2026-06-30) — 애플 CXMT/YMTC 메모리 공급망"
   },
   "nodes": [
     {
@@ -538,6 +539,93 @@
       "id": "M_330",
       "type": "MACRO",
       "name": "아이폰AI도입"
+    },
+    {
+      "id": "A_1571",
+      "type": "ASSET",
+      "name": "CXMT(창신메모리)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "CN",
+        "business_desc": "ChangXin Memory — 중국 DRAM, 애플 메모리 공급망 신규 편입",
+        "theme_role": "중국 메모리 공급(신규 편입)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_1572",
+      "type": "ASSET",
+      "name": "양쯔메모리테크놀로지",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "CN",
+        "business_desc": "Yangtze Memory — 중국 NAND, 애플 공급망 주시 대상",
+        "theme_role": "중국 NAND 공급(잠재)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "BF_442",
+      "type": "BUSINESS_FIELD",
+      "name": "메모리"
+    },
+    {
+      "id": "C_1569",
+      "type": "CHARACTER",
+      "name": "중국메모리공급망편입"
+    },
+    {
+      "id": "M_030",
+      "type": "MACRO",
+      "name": "미국대중국수출규제"
+    },
+    {
+      "id": "M_033",
+      "type": "MACRO",
+      "name": "미중패권경쟁"
+    },
+    {
+      "id": "M_141",
+      "type": "MACRO",
+      "name": "중국반도체자립"
     }
   ],
   "edges": [
@@ -920,6 +1008,76 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "T_112",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1572",
+      "to": "T_112",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1571",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "A_1571",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1572",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_112",
+      "to": "C_1569",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_030",
+      "to": "T_112",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_033",
+      "to": "T_112",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_141",
+      "to": "T_112",
+      "type": "IMPACTS"
     }
   ],
   "links": [
@@ -1302,6 +1460,76 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "T_112",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1572",
+      "to": "T_112",
+      "type": "THEMED_AS"
+    },
+    {
+      "from": "A_1571",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "A_1571",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_001299"
+      ],
+      "confidence": 0.87,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "A_1572",
+      "to": "BF_442",
+      "type": "OPERATES"
+    },
+    {
+      "from": "T_112",
+      "to": "C_1569",
+      "type": "HAS_TRAIT"
+    },
+    {
+      "from": "M_030",
+      "to": "T_112",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_033",
+      "to": "T_112",
+      "type": "IMPACTS"
+    },
+    {
+      "from": "M_141",
+      "to": "T_112",
+      "type": "IMPACTS"
     }
   ]
 }
