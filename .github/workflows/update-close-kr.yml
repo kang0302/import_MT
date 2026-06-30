@@ -32,6 +32,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # ✅ Level 1: 스크립트 실행 전에 최신 main 으로 동기화 → 산출물이 최신 기준으로 생성됨
+      #    (commit 시 rebase 불필요 → -X theirs 로 fresh 캐시를 버리던 데이터 손실 차단)
+      - name: Sync to latest main BEFORE running scripts
+        run: |
+          git fetch origin
+          git reset --hard "origin/${GITHUB_REF_NAME}"
+
       - name: Run KR close updater (EODHD)
         env:
           EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
@@ -46,40 +53,46 @@ jobs:
         run: |
           python -u scripts/build_freeze.py
 
-      - name: Commit & push if changed (rebase-safe, conflict auto-resolve)
+      # ✅ Level 1 commit: rebase/merge 로 fresh 캐시를 버리지 않는다.
+      #    push 거부(=다른 잡이 먼저 push) 시 → 최신으로 reset 후 스크립트 재실행(재생성) 후 재시도.
+      #    build_freeze 는 모든 캐시(KR+FMP)를 읽어 theme 를 완전 재생성하므로 충돌 자체가 없다.
+      - name: Commit & push if changed (regenerate-on-latest)
         shell: bash
+        env:
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+          EODHD_SLEEP_SEC: "0.15"
+          EODHD_RETRIES: "3"
+          EODHD_TIMEOUT_SEC: "30"
+          EODHD_SENTINEL: "005930.KO"
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # 충돌 시 remote 우선 (cache/generated 파일은 항상 최신 remote 가 정답)
-          # -X theirs: 자동 충돌 해결 시 들어오는 쪽(origin) 채택
-          git pull --rebase -X theirs --autostash origin "${GITHUB_REF_NAME}" || {
-            echo "rebase failed; aborting and retrying with merge strategy"
-            git rebase --abort || true
-            git stash pop || true
-            git fetch origin
-            git merge -X theirs --no-edit "origin/${GITHUB_REF_NAME}"
+          stage_and_commit() {
+            git add data/cache/valuation_kr.json data/cache/returns_kr.json \
+                    data/theme/T_*.json data/theme/index.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit."
+              return 1
+            fi
+            git commit -m "chore: KR close + freeze update (EODHD)"
+            return 0
           }
 
-          git add data/cache/valuation_kr.json
-          git add data/theme/T_*.json
-          git add data/theme/index.json
+          stage_and_commit || exit 0
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-
-          git commit -m "chore: KR close + freeze update (EODHD)"
-
-          # push 충돌 시 최대 3회 재시도 (concurrent commit 대응)
-          for i in 1 2 3; do
+          for i in 1 2 3 4 5; do
             if git push origin HEAD:"${GITHUB_REF_NAME}"; then
               echo "push success on attempt $i"
-              break
+              exit 0
             fi
-            echo "push attempt $i failed, pulling latest and retrying..."
-            git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+            echo "push attempt $i rejected → 최신으로 reset 후 재생성"
+            git reset --hard HEAD~1 || true
+            git fetch origin
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            python -u scripts/update_close_kr_eodhd.py
+            python -u scripts/build_freeze.py
+            stage_and_commit || exit 0
           done
+          echo "❌ push failed after retries"; exit 1
