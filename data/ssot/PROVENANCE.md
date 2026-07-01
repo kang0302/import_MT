@@ -23,6 +23,12 @@ JSONL(한 줄당 1 JSON). 레코드 스키마:
 | `url` 또는 `published` | ✅(택1) | 둘 중 최소 하나. `url`=1차 출처 링크, `published`=발행 일자/시기. |
 | `reviewed_by` | – | 사람 검수자(있으면). |
 | `note` | – | 비고(시드/한계 등). |
+| `source_type` | – | 출처 유형(사람친화 한글): `공시`\|`IR`\|`뉴스`\|`산업리포트`\|`판단`. `kind`의 사람용 라벨(공시→filing, IR→company_disclosure, 뉴스→article, 산업리포트→public_report, 판단→manual). |
+| `source_ref` | – | 문서명·페이지 등 사람이 읽는 출처 식별자(예: "SEC 424B3 (CIK 1327068) FY2026"). `url` 보완. |
+| `as_of` | – | 근거 시점(관계는 시간에 따라 변함 — backfill의 핵심). 보통 `published`와 동일. |
+| `conf_grade` | – | `H`\|`M`\|`L`. 엣지 `confidence`(0~1)의 등급 요약(H≈0.9·M≈0.7·L≈0.5). SUPPLIES/IN_ETF/OPERATES=사실기반→H 용이, THEMED_AS/IMPACTS/EXPOSED_TO=해석→M/L 명시. |
+
+> **BACKFILL 정책(2026-07-01):** 사실기반 관계(SUPPLIES·IN_ETF·OPERATES)부터 `source_type=공시/IR` + `source_ref`(1차 출처) + `as_of` + `conf_grade=H`로 채운 뒤, 해석적 관계(THEMED_AS·IMPACTS·EXPOSED_TO)로 확장. 파일럿: T_001 USO THEMED_AS → SEC 424B3 공시 기반(EV_000377, H). manual-seed는 in-place 업그레이드(엣지 ref·id 유지).
 
 ## 2. 엣지 확장 필드 (`data/theme/*.json`의 `edges`/`links`)
 
