@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_585",
+  "themeName": "중화권지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "중국 본토·홍콩·대만을 아우르는 중화권 대표 지수 ETF(MCHI·EWH·EWT). 텐센트·알리바바·TSMC 등.",
+    "notes": "T_585 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_585",
+      "type": "THEME",
+      "name": "중화권지수ETF"
+    },
+    {
+      "name": "MCHI(중국)",
+      "id": "A_124",
+      "metrics": {
+        "return_1d": -1.2031826120706524,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": -1.7371163867979211,
+        "return_15d": -5.913879135095179,
+        "return_3d": 0.2362669816893037,
+        "return_1m": -10.980940723902787,
+        "return_ytd": -18.20372750642675,
+        "return_1y": -7.888547132259827,
+        "return_2y": 20.897649014485854,
+        "return_3y": 12.284958094397869,
+        "close": 50.91,
+        "marketCap": 6312921965,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "MCHI",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "EWH(홍콩)",
+      "id": "A_125",
+      "metrics": {
+        "return_1d": -0.6172839506172756,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": -0.8996212121212155,
+        "return_15d": -2.104770813844714,
+        "return_3d": -0.6644518272425293,
+        "return_1m": -9.667673716012093,
+        "return_ytd": -4.298125285779609,
+        "return_1y": 5.123053741838279,
+        "return_2y": 37.42613263296126,
+        "return_3y": 7.942238267148016,
+        "close": 20.93,
+        "marketCap": 844191122,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWH",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "EWT(대만)",
+      "id": "A_126",
+      "metrics": {
+        "return_1d": -0.78531554546315,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": -0.3610794374762416,
+        "return_15d": 7.000000000000006,
+        "return_3d": -0.8791001039795909,
+        "return_1m": -2.1006441975539136,
+        "return_ytd": 61.89593947815348,
+        "return_1y": 82.11184439041335,
+        "return_2y": 94.29312581063553,
+        "return_3y": 121.317011397214,
+        "close": 104.86,
+        "marketCap": 8913100210,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWT",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "M_358",
+      "type": "MACRO",
+      "name": "신흥국GDP성장"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_124",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001615"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_125",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001616"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_126",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001617"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_585",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001618"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_585",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001619"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_585",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001620"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_124",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001615"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_125",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001616"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_126",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001617"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_585",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001618"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_585",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001619"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_585",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001620"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}

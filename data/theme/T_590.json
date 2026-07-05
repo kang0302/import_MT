@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_590",
+  "themeName": "인도지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "인도 대형·중소형 대표 지수 ETF(INDA·SMIN). 구조적 성장·인구 보너스.",
+    "notes": "T_590 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_590",
+      "type": "THEME",
+      "name": "인도지수ETF"
+    },
+    {
+      "name": "INDA(인도)",
+      "id": "A_130",
+      "metrics": {
+        "return_1d": 0.7112375533428139,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 0.9985734664764712,
+        "return_15d": 4.77801268498943,
+        "return_3d": 0.7726718178121317,
+        "return_1m": 3.185509056839475,
+        "return_ytd": -9.164222873900297,
+        "return_1y": -11.246418338108889,
+        "return_2y": -11.18279569892472,
+        "return_3y": 15.202231520223153,
+        "close": 49.56,
+        "marketCap": 9768208499,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "INDA",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "SMIN(인도중소형)",
+      "id": "A_131",
+      "metrics": {
+        "return_1d": 0.8545791197835273,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 1.5197132616487474,
+        "return_15d": 7.4017897770362495,
+        "return_3d": 1.563396442914522,
+        "return_1m": 6.002994011976059,
+        "return_ytd": 1.1426939008712944,
+        "return_1y": -7.979207277452893,
+        "return_2y": -12.146401985111655,
+        "return_3y": 22.93402777777778,
+        "close": 70.81,
+        "marketCap": 645380680,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "SMIN",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    },
+    {
+      "id": "M_358",
+      "type": "MACRO",
+      "name": "신흥국GDP성장"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_130",
+      "to": "T_590",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001636"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_131",
+      "to": "T_590",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001637"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_590",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001638"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_590",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001639"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_590",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001640"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_130",
+      "to": "T_590",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001636"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_131",
+      "to": "T_590",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001637"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_590",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001638"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_590",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001639"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_590",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001640"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}

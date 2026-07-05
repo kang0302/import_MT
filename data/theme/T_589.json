@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_589",
+  "themeName": "중남미지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "멕시코 등 중남미 대표 지수 ETF(EWW). 니어쇼어링 수혜.",
+    "notes": "T_589 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_589",
+      "type": "THEME",
+      "name": "중남미지수ETF"
+    },
+    {
+      "name": "EWW(멕시코)",
+      "id": "A_133",
+      "metrics": {
+        "return_1d": 0.3055666268101609,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 1.0303760203398848,
+        "return_15d": 1.4648568740760703,
+        "return_3d": -0.8145034156594955,
+        "return_1m": -4.527061203844207,
+        "return_ytd": 8.383577375825446,
+        "return_1y": 23.527486910994778,
+        "return_2y": 34.317737057463084,
+        "return_3y": 20.203789205540513,
+        "close": 75.5,
+        "marketCap": 1872391620,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWW",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "M_358",
+      "type": "MACRO",
+      "name": "신흥국GDP성장"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_133",
+      "to": "T_589",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001632"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_589",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001633"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_589",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001634"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_589",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001635"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_133",
+      "to": "T_589",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001632"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_589",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001633"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_589",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001634"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_589",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001635"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}

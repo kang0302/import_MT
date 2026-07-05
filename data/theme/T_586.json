@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_586",
+  "themeName": "유럽지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "유럽 선진국·영국·이탈리아 대표 지수 ETF(VGK·EWU·EWI). 셸·아스트라제네카·페라리 등.",
+    "notes": "T_586 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_586",
+      "type": "THEME",
+      "name": "유럽지수ETF"
+    },
+    {
+      "name": "VGK(유럽)",
+      "id": "A_123",
+      "metrics": {
+        "return_1d": 1.8001595078044774,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 2.5126204681046316,
+        "return_15d": 3.0684046602837745,
+        "return_3d": 1.4533893493811734,
+        "return_1m": 0.438399280575541,
+        "return_ytd": 5.664616840113523,
+        "return_1y": 15.201134605466727,
+        "return_2y": 33.63745139096619,
+        "return_3y": 46.74002299228115,
+        "close": 89.35,
+        "marketCap": 38103561879,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "VGK",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "EWU(영국)",
+      "id": "A_127",
+      "metrics": {
+        "return_1d": 2.6556377884196847,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 3.489137590520075,
+        "return_15d": 2.9469548133595147,
+        "return_3d": 2.188515709642469,
+        "return_1m": 0.4900916258256949,
+        "return_ytd": 6.072874493927105,
+        "return_1y": 18.343789209535743,
+        "return_2y": 35.05154639175257,
+        "return_3y": 46.550652579241756,
+        "close": 47.16,
+        "marketCap": 3472418955,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWU",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "EWI(이탈리아)",
+      "id": "A_122",
+      "metrics": {
+        "return_1d": 2.536783358701178,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 2.0535263423666184,
+        "return_15d": 3.358336174565313,
+        "return_3d": 2.919708029197099,
+        "return_1m": 1.916288451840642,
+        "return_ytd": 9.916606236403203,
+        "return_1y": 26.181061394380855,
+        "return_2y": 68.9799331103679,
+        "return_3y": 94.88910318225652,
+        "close": 60.63,
+        "marketCap": 691239417,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWI",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_123",
+      "to": "T_586",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001621"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_127",
+      "to": "T_586",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001622"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_122",
+      "to": "T_586",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001623"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_586",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001624"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_123",
+      "to": "T_586",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001621"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_127",
+      "to": "T_586",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001622"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_122",
+      "to": "T_586",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001623"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_586",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001624"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}
