@@ -65,6 +65,68 @@
       "id": "M_113",
       "type": "MACRO",
       "name": "지정학리스크"
+    },
+    {
+      "id": "A_2631",
+      "type": "ASSET",
+      "name": "FLAU",
+      "exposure": {
+        "ticker": "FLAU",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "FLAU는 호주 대표주를 담는 Franklin ETF다.",
+        "theme_role": "지역지수ETF",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_2632",
+      "type": "ASSET",
+      "name": "EPP",
+      "exposure": {
+        "ticker": "EPP",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "EPP는 일본 제외 태평양(호주 비중 최대)을 담는 iShares ETF다.",
+        "theme_role": "지역지수ETF",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
     }
   ],
   "edges": [
@@ -87,6 +149,26 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_2631",
+      "to": "T_591",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001671"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2632",
+      "to": "T_591",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001672"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -108,6 +190,26 @@
         "EV_001642"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_2631",
+      "to": "T_591",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001671"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2632",
+      "to": "T_591",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001672"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]
