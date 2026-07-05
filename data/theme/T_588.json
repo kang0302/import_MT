@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_588",
+  "themeName": "동남아시아지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "싱가포르·베트남 등 동남아 대표 지수 ETF(EWS·VNM). 니어쇼어링·내수 성장.",
+    "notes": "T_588 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_588",
+      "type": "THEME",
+      "name": "동남아시아지수ETF"
+    },
+    {
+      "name": "EWS(싱가포르)",
+      "id": "A_128",
+      "metrics": {
+        "return_1d": 1.548821548821544,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 1.7887276409044972,
+        "return_15d": 5.713284262180163,
+        "return_3d": 1.106268856855519,
+        "return_1m": 0.6004002668445585,
+        "return_ytd": 8.684684684684685,
+        "return_1y": 16.89922480620154,
+        "return_2y": 56.18850336613155,
+        "return_3y": 63.29182458040066,
+        "close": 30.16,
+        "marketCap": 936591807,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWS",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "VNM(베트남)",
+      "id": "A_129",
+      "metrics": {
+        "return_1d": -0.21586616297897265,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 1.6492578339746933,
+        "return_15d": 3.8180797304884884,
+        "return_3d": 0.27114967462038564,
+        "return_1m": 1.9856591285162706,
+        "return_ytd": -3.2443746729461043,
+        "return_1y": 34.76676384839648,
+        "return_2y": 50.44751830756713,
+        "return_3y": 35.65663976522375,
+        "close": 18.49,
+        "marketCap": 567995641,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "VNM",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "M_358",
+      "type": "MACRO",
+      "name": "신흥국GDP성장"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_128",
+      "to": "T_588",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001627"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_129",
+      "to": "T_588",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001628"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_588",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001629"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_588",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001630"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_588",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001631"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_128",
+      "to": "T_588",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001627"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_129",
+      "to": "T_588",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001628"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_588",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001629"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_588",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001630"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_358",
+      "to": "T_588",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001631"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}

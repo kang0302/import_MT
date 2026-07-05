@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_582",
+  "themeName": "미국지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "미국 S&P500·나스닥100·다우 등 미국 대표 지수를 추종하는 ETF 묶음. 글로벌 자산배분의 코어 익스포저.",
+    "notes": "T_582 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_582",
+      "type": "THEME",
+      "name": "미국지수ETF"
+    },
+    {
+      "name": "SPY",
+      "id": "A_020",
+      "metrics": {
+        "return_1d": -0.13140956876207532,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 1.5267591810027348,
+        "return_15d": 2.66738348289981,
+        "return_3d": 0.510121457489876,
+        "return_1m": -1.94715431099175,
+        "return_ytd": 9.018253143434297,
+        "return_1y": 20.58285436736016,
+        "return_2y": 36.31421930193823,
+        "return_3y": 70.75452231927916,
+        "close": 744.78,
+        "marketCap": 778731742171,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "SPY",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "QQQ(미국)",
+      "id": "A_120",
+      "metrics": {
+        "return_1d": -1.7333866541638376,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": -0.14713094654241754,
+        "return_15d": 2.7260015280600847,
+        "return_3d": -1.5854601701469462,
+        "return_1m": -4.497694864372248,
+        "return_ytd": 16.22520876826723,
+        "return_1y": 30.276604691127808,
+        "return_2y": 47.96204397749215,
+        "return_3y": 95.86070417502681,
+        "close": 712.6,
+        "marketCap": 485464981687,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "QQQ",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "name": "DIA",
+      "id": "A_031",
+      "metrics": {
+        "return_1d": 1.0490045941807136,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 2.1795517014439936,
+        "return_15d": 5.523238380809592,
+        "return_3d": 1.1884680263763325,
+        "return_1m": 2.6903997665596924,
+        "return_ytd": 9.149556479126609,
+        "return_1y": 18.65404931556116,
+        "return_2y": 34.8145878026356,
+        "return_3y": 55.61123721368981,
+        "close": 527.88,
+        "marketCap": 45253678031,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "DIA",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_020",
+      "to": "T_582",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001606"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_120",
+      "to": "T_582",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001607"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_031",
+      "to": "T_582",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001608"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_582",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001609"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_020",
+      "to": "T_582",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001606"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_120",
+      "to": "T_582",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001607"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_031",
+      "to": "T_582",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001608"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_582",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001609"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}

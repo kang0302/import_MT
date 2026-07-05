@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_584",
+  "themeName": "일본지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "도요타·소니 등 일본 대형주를 담아 엔저·기업개혁에 노출된 지수 ETF(EWJ).",
+    "notes": "T_584 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_584",
+      "type": "THEME",
+      "name": "일본지수ETF"
+    },
+    {
+      "name": "EWJ(일본)",
+      "id": "A_132",
+      "metrics": {
+        "return_1d": 0.09672219236969148,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 0.42048517520216766,
+        "return_15d": 4.3117930339343635,
+        "return_3d": -0.07509923827915266,
+        "return_1m": -0.4701859371660566,
+        "return_ytd": 14.521086929792215,
+        "return_1y": 25.154528352593395,
+        "return_2y": 37.679231337767916,
+        "return_3y": 52.33889434085705,
+        "close": 93.14,
+        "marketCap": 22185612975,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EWJ",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_132",
+      "to": "T_584",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001613"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_584",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001614"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_132",
+      "to": "T_584",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001613"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_584",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001614"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}

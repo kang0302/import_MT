@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_587",
+  "themeName": "중동이스라엘아프리카지수ETF",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-05T00:00:00+09:00",
+    "description": "이스라엘 기술·방산 대표 지수 ETF(EIS) 등 중동·아프리카 익스포저.",
+    "notes": "T_587 — 지역/국가별ETF(T_013) 분할",
+    "sources": []
+  },
+  "nodes": [
+    {
+      "id": "T_587",
+      "type": "THEME",
+      "name": "중동이스라엘아프리카지수ETF"
+    },
+    {
+      "name": "EIS(이스라엘)",
+      "id": "A_134",
+      "metrics": {
+        "return_1d": -0.09950248756218638,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 0.8200836820083657,
+        "return_15d": -0.8476668586947622,
+        "return_3d": 0.727363932781544,
+        "return_1m": -9.126565092774175,
+        "return_ytd": 7.5714285714285845,
+        "return_1y": 29.10415773681956,
+        "return_2y": 99.07468605419696,
+        "return_3y": 122.65754943633343,
+        "close": 120.48,
+        "marketCap": 885561734,
+        "valuationAsOf": "2026-07-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-03",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": null,
+        "ticker": "EIS",
+        "exchange": null
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_134",
+      "to": "T_587",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001625"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_587",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001626"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_134",
+      "to": "T_587",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001625"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_113",
+      "to": "T_587",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001626"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    }
+  ]
+}
