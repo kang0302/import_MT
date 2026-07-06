@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_592",
-  "themeName": "미국우주항공_드론/UAM",
+  "themeName": "미국우주항공_드론/무인비행체",
   "meta": {
     "periodDefault": "3d",
     "periodOptions": [
@@ -16,77 +16,15 @@
       "3y"
     ],
     "dataAsOf": "2026-07-06T00:00:00+09:00",
-    "description": "미국 우주항공 중 드론·도심항공모빌리티(UAM) 세그먼트. 조비·아처(eVTOL), 에어로바이론먼트·크라토스(군용 무인기).",
-    "notes": "T_592 — 미국우주항공 분할(2026-07-06)",
+    "description": "미국 군용·상업 무인비행체(드론) 세그먼트. 배회탄·무인전투기·sUAS. 에어로바이론먼트(Switchblade)·크라토스(Valkyrie)·레드캣(미국산 sUAS)·온다스(자율드론).",
+    "notes": "T_592 — UAM 분리 후 무인비행체 재편(2026-07-06)",
     "sources": []
   },
   "nodes": [
     {
       "id": "T_592",
       "type": "THEME",
-      "name": "미국우주항공_드론/UAM"
-    },
-    {
-      "id": "A_423",
-      "type": "ASSET",
-      "name": "조비에비에이션",
-      "exposure": {
-        "ticker": "JOBY",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "UAM 항공기",
-        "theme_role": "도심항공모빌리티",
-        "theme_status": "Speculative"
-      },
-      "metrics": {
-        "return_1d": -3.9592760180995445,
-        "close": 8.49,
-        "marketCap": 8351127813,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-05",
-        "valuationSource": "FMP",
-        "return_3d": -1.6222479721900385,
-        "return_7d": -11.099476439790578,
-        "return_15d": -4.176072234762973,
-        "return_1m": -28.47514743049705,
-        "return_ytd": -40.877437325905284,
-        "return_1y": -13.455657492354744,
-        "return_2y": 66.47058823529413,
-        "return_3y": 32.86384976525822,
-        "returnsAsOf": "2026-07-02",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_424",
-      "type": "ASSET",
-      "name": "아처에비에이션",
-      "exposure": {
-        "ticker": "ACHR",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "eVTOL 항공기",
-        "theme_role": "UAM 경쟁",
-        "theme_status": "Speculative"
-      },
-      "metrics": {
-        "return_1d": 1.2195121951219523,
-        "close": 4.98,
-        "marketCap": 3782798040,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-05",
-        "valuationSource": "FMP",
-        "return_3d": 6.410256410256432,
-        "return_7d": -5.142857142857138,
-        "return_15d": -1.3861386138613763,
-        "return_1m": -26.112759643916906,
-        "return_ytd": -38.745387453874535,
-        "return_1y": -49.59514170040485,
-        "return_2y": 42.693409742120345,
-        "return_3y": 46.90265486725664,
-        "returnsAsOf": "2026-07-02",
-        "returnsSource": "FMP"
-      }
+      "name": "미국우주항공_드론/무인비행체"
     },
     {
       "id": "A_271",
@@ -120,6 +58,11 @@
       }
     },
     {
+      "id": "C_1890",
+      "type": "CHARACTER",
+      "name": "배회탄소형무인기방산"
+    },
+    {
       "id": "A_270",
       "type": "ASSET",
       "name": "크라토스",
@@ -151,112 +94,9 @@
       }
     },
     {
-      "id": "M_246",
-      "type": "MACRO",
-      "name": "자율주행확산"
-    },
-    {
-      "id": "M_061",
-      "type": "MACRO",
-      "name": "러-우전쟁"
-    },
-    {
-      "id": "M_1092",
-      "type": "MACRO",
-      "name": "미-이란중동전쟁"
-    },
-    {
-      "id": "A_2070",
-      "type": "ASSET",
-      "name": "버티컬에어로스페이스",
-      "exposure": {
-        "ticker": "EVTL",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "버티컬에어로스페이스는 VX4 전기 기체가 영국 CAA Permit to Fly를 확보해 인증·상업화 단계에 진입한 영국 eVTOL 기업이다.",
-        "theme_role": "드론/UAM",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "returnsAsOf": null,
-        "returnsSource": null
-      }
-    },
-    {
-      "id": "A_2069",
-      "type": "ASSET",
-      "name": "EVE홀딩",
-      "exposure": {
-        "ticker": "EVEX",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "EVE홀딩은 브라질 Embraer 스핀오프로 lift+cruise 설계와 Embraer 인증 레거시를 활용한 asset-light UAM 플랫폼을 지향한다.",
-        "theme_role": "드론/UAM",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "returnsAsOf": null,
-        "returnsSource": null
-      }
-    },
-    {
-      "id": "A_2634",
-      "type": "ASSET",
-      "name": "BETA테크놀로지스",
-      "exposure": {
-        "ticker": "BETA",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "BETA테크놀로지스는 eVTOL 통합 파일럿 프로그램 7건 선정으로 상업 운항 경로를 가속하는 최근 상장 UAM 기업이다.",
-        "theme_role": "드론/UAM",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "returnsAsOf": null,
-        "returnsSource": null
-      }
+      "id": "C_1891",
+      "type": "CHARACTER",
+      "name": "저비용무인전투기CCA"
     },
     {
       "id": "A_668",
@@ -290,6 +130,11 @@
       }
     },
     {
+      "id": "C_1895",
+      "type": "CHARACTER",
+      "name": "미국산sUAS_BlackWidow고성장"
+    },
+    {
       "id": "A_269",
       "type": "ASSET",
       "name": "온다스홀딩스",
@@ -319,6 +164,11 @@
         "returnsAsOf": null,
         "returnsSource": null
       }
+    },
+    {
+      "id": "C_1896",
+      "type": "CHARACTER",
+      "name": "자율드론통신인프라급성장"
     },
     {
       "id": "A_2635",
@@ -383,72 +233,22 @@
       }
     },
     {
-      "id": "C_1888",
-      "type": "CHARACTER",
-      "name": "eVTOL선두FAA인증"
+      "id": "M_246",
+      "type": "MACRO",
+      "name": "자율주행확산"
     },
     {
-      "id": "C_1889",
-      "type": "CHARACTER",
-      "name": "eVTOL미드나이트양산"
+      "id": "M_061",
+      "type": "MACRO",
+      "name": "러-우전쟁"
     },
     {
-      "id": "C_1890",
-      "type": "CHARACTER",
-      "name": "배회탄소형무인기방산"
-    },
-    {
-      "id": "C_1891",
-      "type": "CHARACTER",
-      "name": "저비용무인전투기CCA"
-    },
-    {
-      "id": "C_1892",
-      "type": "CHARACTER",
-      "name": "영국VX4_CAA인증"
-    },
-    {
-      "id": "C_1893",
-      "type": "CHARACTER",
-      "name": "엠브라에르스핀오프assetlight"
-    },
-    {
-      "id": "C_1894",
-      "type": "CHARACTER",
-      "name": "eVTOL통합파일럿7건선두"
-    },
-    {
-      "id": "C_1895",
-      "type": "CHARACTER",
-      "name": "미국산sUAS_BlackWidow고성장"
-    },
-    {
-      "id": "C_1896",
-      "type": "CHARACTER",
-      "name": "자율드론통신인프라급성장"
+      "id": "M_1092",
+      "type": "MACRO",
+      "name": "미-이란중동전쟁"
     }
   ],
   "edges": [
-    {
-      "from": "A_423",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001767"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_424",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001768"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
     {
       "from": "A_271",
       "to": "T_592",
@@ -460,6 +260,16 @@
       "status": "verified"
     },
     {
+      "from": "A_271",
+      "to": "C_1890",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001793"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
       "from": "A_270",
       "to": "T_592",
       "type": "THEMED_AS",
@@ -467,6 +277,76 @@
         "EV_001770"
       ],
       "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_270",
+      "to": "C_1891",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001794"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_668",
+      "to": "T_592",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001787"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_668",
+      "to": "C_1895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001798"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_269",
+      "to": "T_592",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001788"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_269",
+      "to": "C_1896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001799"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_2635",
+      "to": "T_592",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_001789"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2636",
+      "to": "T_592",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_001790"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -495,166 +375,6 @@
       "type": "IMPACTS",
       "evidence": [
         "EV_001783"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2070",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001784"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_2069",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001785"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_2634",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001786"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_668",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001787"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_269",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001788"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_2635",
-      "to": "T_592",
-      "type": "EXPOSED_TO",
-      "evidence": [
-        "EV_001789"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_2636",
-      "to": "T_592",
-      "type": "EXPOSED_TO",
-      "evidence": [
-        "EV_001790"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_423",
-      "to": "C_1888",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001791"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_424",
-      "to": "C_1889",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001792"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_271",
-      "to": "C_1890",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001793"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_270",
-      "to": "C_1891",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001794"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2070",
-      "to": "C_1892",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001795"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2069",
-      "to": "C_1893",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001796"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2634",
-      "to": "C_1894",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001797"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_668",
-      "to": "C_1895",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001798"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_269",
-      "to": "C_1896",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001799"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -662,26 +382,6 @@
   ],
   "links": [
     {
-      "from": "A_423",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001767"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_424",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001768"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
       "from": "A_271",
       "to": "T_592",
       "type": "THEMED_AS",
@@ -692,6 +392,16 @@
       "status": "verified"
     },
     {
+      "from": "A_271",
+      "to": "C_1890",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001793"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
       "from": "A_270",
       "to": "T_592",
       "type": "THEMED_AS",
@@ -699,6 +409,76 @@
         "EV_001770"
       ],
       "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_270",
+      "to": "C_1891",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001794"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_668",
+      "to": "T_592",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001787"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_668",
+      "to": "C_1895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001798"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_269",
+      "to": "T_592",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001788"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_269",
+      "to": "C_1896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_001799"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_2635",
+      "to": "T_592",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_001789"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2636",
+      "to": "T_592",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_001790"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -727,166 +507,6 @@
       "type": "IMPACTS",
       "evidence": [
         "EV_001783"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2070",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001784"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_2069",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001785"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_2634",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001786"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_668",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001787"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_269",
-      "to": "T_592",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_001788"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_2635",
-      "to": "T_592",
-      "type": "EXPOSED_TO",
-      "evidence": [
-        "EV_001789"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_2636",
-      "to": "T_592",
-      "type": "EXPOSED_TO",
-      "evidence": [
-        "EV_001790"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_423",
-      "to": "C_1888",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001791"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_424",
-      "to": "C_1889",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001792"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_271",
-      "to": "C_1890",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001793"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_270",
-      "to": "C_1891",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001794"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2070",
-      "to": "C_1892",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001795"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2069",
-      "to": "C_1893",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001796"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2634",
-      "to": "C_1894",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001797"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_668",
-      "to": "C_1895",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001798"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_269",
-      "to": "C_1896",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001799"
       ],
       "confidence": 0.75,
       "status": "verified"
