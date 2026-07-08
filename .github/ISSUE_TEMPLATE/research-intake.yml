@@ -1,0 +1,42 @@
+name: Research Intake
+description: 이동 중 리서치 캡처 — raw 관찰만. 판단·승격은 데스크에서.
+title: "[intake] "
+labels: ["intake", "unprocessed"]
+body:
+  - type: input
+    id: theme
+    attributes:
+      label: 테마 후보
+      description: 떠오른 테마 이름. 확신 없어도 됨 — 후보일 뿐.
+      placeholder: 예) 글로벌 전력망 노후화 / HBM 후공정
+    validations:
+      required: false
+
+  - type: input
+    id: tickers
+    attributes:
+      label: 티커
+      description: 관련 종목. 쉼표로 구분. KR/US 섞여도 됨.
+      placeholder: 예) 005930.KS, VRT, 267260.KS
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: 소스 URL
+      description: 한 줄에 하나씩. 여러 개 OK.
+      placeholder: |
+        https://...
+        https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: note
+    attributes:
+      label: 한 줄 메모
+      description: 왜 걸렸는지 raw하게. 판단 말고 관찰. 나중의 나를 위한 미끼.
+      placeholder: 예) 이 공급망 노드가 US 뉴스에 먼저 뜸 — KR 반응 시차 볼 것
+    validations:
+      required: false
