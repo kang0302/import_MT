@@ -269,6 +269,83 @@
       "id": "M_372",
       "type": "MACRO",
       "name": "글로벌e커머스무역량"
+    },
+    {
+      "id": "M_1098",
+      "type": "MACRO",
+      "name": "SCFI상하이컨테이너운임지수"
+    },
+    {
+      "id": "A_2644",
+      "type": "ASSET",
+      "name": "BOAT",
+      "exposure": {
+        "ticker": "BOAT",
+        "exchange": "BATS",
+        "country": "US",
+        "business_desc": "SonicShares Global Shipping ETF. 글로벌 해운주(컨테이너·벌크·탱커)를 담되 컨테이너 선사 비중이 높은 미국 상장 해운 ETF.",
+        "theme_role": "2궤도",
+        "theme_status": "Ref"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_1929",
+      "type": "CHARACTER",
+      "name": "컨테이너비중높음"
+    },
+    {
+      "id": "A_2645",
+      "type": "ASSET",
+      "name": "KODEX운송",
+      "exposure": {
+        "ticker": "140710",
+        "exchange": "KRX",
+        "country": "KR",
+        "business_desc": "삼성 KODEX 운송 ETF. HMM·대한항공·팬오션 등 국내 해운·항공·운송주를 담는 한국 운송 섹터 ETF.",
+        "theme_role": "2궤도",
+        "theme_status": "Ref"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_1930",
+      "type": "CHARACTER",
+      "name": "한국운송섹터ETF"
     }
   ],
   "edges": [
@@ -331,6 +408,56 @@
       "from": "M_372",
       "to": "T_352",
       "type": "IMPACTS"
+    },
+    {
+      "from": "M_1098",
+      "to": "T_352",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002457"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2644",
+      "to": "T_352",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_002458"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2644",
+      "to": "C_1929",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002459"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2645",
+      "to": "T_352",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_002460"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2645",
+      "to": "C_1930",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002461"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
@@ -393,6 +520,56 @@
       "from": "M_372",
       "to": "T_352",
       "type": "IMPACTS"
+    },
+    {
+      "from": "M_1098",
+      "to": "T_352",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002457"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2644",
+      "to": "T_352",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_002458"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2644",
+      "to": "C_1929",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002459"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2645",
+      "to": "T_352",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_002460"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2645",
+      "to": "C_1930",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002461"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ]
 }
