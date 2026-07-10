@@ -17,7 +17,15 @@
     ],
     "dataAsOf": "2026-03-26T00:00:00+09:00",
     "notes": "g77 누적 import 기반 중동/이스라엘 ETF 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-10",
+        "kind": "보강",
+        "title": "국가별 ETF CHR 정의",
+        "detail": "터키·사우디·카타르·UAE·이스라엘 5개 국가 ETF에 시장 특성(리라 변동성·비전2030 유가·LNG 금융·금융허브·기술방산) 기반 CHR을 정의하고 상투적 근거를 구체화했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -32,7 +40,8 @@
       "exposure": {
         "ticker": "TUR",
         "exchange": "NASDAQ",
-        "country": "TR"
+        "country": "TR",
+        "business_desc": "iShares MSCI Turkey ETF. 은행·산업 중심 터키 대표주 ETF로 리라 통화·초인플레·급격한 금리정책 변동성이 큰 변수."
       },
       "metrics": {
         "return_1d": -0.46499612503229093,
@@ -60,7 +69,8 @@
       "exposure": {
         "ticker": "KSA",
         "exchange": "NYSEARCA",
-        "country": "SA"
+        "country": "SA",
+        "business_desc": "iShares MSCI Saudi Arabia ETF. 아람코·알라지은행 등 사우디 대표주 ETF로 비전2030 투자와 유가가 핵심 동인."
       },
       "metrics": {
         "return_1d": -0.9325872635225219,
@@ -88,7 +98,8 @@
       "exposure": {
         "ticker": "QAT",
         "exchange": "NASDAQ",
-        "country": "QA"
+        "country": "QA",
+        "business_desc": "iShares MSCI Qatar ETF. QNB 등 금융과 LNG 기반 경제의 카타르 대표주 ETF로 천연가스 수출·중동 유동성에 노출."
       },
       "metrics": {
         "return_1d": -0.7242339832869038,
@@ -116,7 +127,8 @@
       "exposure": {
         "ticker": "UAE",
         "exchange": "NASDAQ",
-        "country": "AE"
+        "country": "AE",
+        "business_desc": "iShares MSCI UAE ETF. 두바이·아부다비 은행·부동산 중심 아랍에미리트 ETF로 중동 금융·물류 허브 지위가 특징."
       },
       "metrics": {
         "return_1d": 0.8337675872850392,
@@ -144,7 +156,8 @@
       "exposure": {
         "ticker": "EIS",
         "exchange": "NYSEARCA",
-        "country": "IL"
+        "country": "IL",
+        "business_desc": "iShares MSCI Israel ETF. 기술·방산·제약(테바) 중심 이스라엘 대표주 ETF로 '스타트업 네이션' 혁신과 중동 지정학 리스크가 공존."
       },
       "metrics": {
         "return_1d": 0.05020500376535786,
@@ -179,6 +192,31 @@
       "id": "M_084",
       "type": "MACRO",
       "name": "중동전쟁"
+    },
+    {
+      "id": "C_1969",
+      "type": "CHARACTER",
+      "name": "터키증시리라변동성"
+    },
+    {
+      "id": "C_1970",
+      "type": "CHARACTER",
+      "name": "사우디비전2030유가"
+    },
+    {
+      "id": "C_1971",
+      "type": "CHARACTER",
+      "name": "카타르LNG금융"
+    },
+    {
+      "id": "C_1972",
+      "type": "CHARACTER",
+      "name": "UAE금융부동산허브"
+    },
+    {
+      "id": "C_1973",
+      "type": "CHARACTER",
+      "name": "이스라엘기술방산"
     }
   ],
   "edges": [
@@ -187,7 +225,7 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002357"
+        "EV_002542"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -197,9 +235,9 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002358"
+        "EV_002544"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -207,7 +245,7 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002359"
+        "EV_002546"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -217,7 +255,7 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002360"
+        "EV_002548"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -227,9 +265,9 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002361"
+        "EV_002550"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -260,6 +298,56 @@
         "EV_002364"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_648",
+      "to": "C_1969",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002543"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_650",
+      "to": "C_1970",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002545"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_651",
+      "to": "C_1971",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002547"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_652",
+      "to": "C_1972",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002549"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_134",
+      "to": "C_1973",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002551"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     }
   ],
@@ -269,7 +357,7 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002357"
+        "EV_002542"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -279,9 +367,9 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002358"
+        "EV_002544"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -289,7 +377,7 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002359"
+        "EV_002546"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -299,7 +387,7 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002360"
+        "EV_002548"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -309,9 +397,9 @@
       "to": "T_077",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002361"
+        "EV_002550"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -342,6 +430,56 @@
         "EV_002364"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_648",
+      "to": "C_1969",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002543"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_650",
+      "to": "C_1970",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002545"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_651",
+      "to": "C_1971",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002547"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_652",
+      "to": "C_1972",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002549"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_134",
+      "to": "C_1973",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002551"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     }
   ]
