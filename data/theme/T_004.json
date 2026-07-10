@@ -18,7 +18,15 @@
     "dataAsOf": "2026-05-03T00:00:00+09:00",
     "notes": "g004 누적 import 기반 글로벌자동차OEM 테마",
     "sources": [],
-    "provenanceSeed": "T_004 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_004 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-10",
+        "kind": "변경",
+        "title": "매크로는 테마에만 연결",
+        "detail": "개별 자산·BF에 직접 걸려 있던 매크로 IMPACTS 엣지를 테마 레벨로 정리(repoint 1, 중복제거 1)했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -610,17 +618,7 @@
     },
     {
       "from": "M_001",
-      "to": "A_004",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_000054"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "M_001",
-      "to": "A_005",
+      "to": "T_004",
       "type": "IMPACTS",
       "evidence": [
         "EV_000054"
@@ -982,17 +980,7 @@
     },
     {
       "from": "M_001",
-      "to": "A_004",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_000054"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "M_001",
-      "to": "A_005",
+      "to": "T_004",
       "type": "IMPACTS",
       "evidence": [
         "EV_000054"
