@@ -17,7 +17,15 @@
     ],
     "dataAsOf": "2026-03-26T00:00:00+09:00",
     "notes": "g73 누적 import 기반 글로벌원자재:유가 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-10",
+        "kind": "변경",
+        "title": "매크로 정리 + ETF별 CHR 정의",
+        "detail": "중복·모호한 매크로(유가상승·유가하락·글로벌여행수요·에너지수급) 4종을 제거하고, 10개 원유 ETF(USO·BNO·XLE·XOP·OIH·IXC·VDE·DBO·KODEX WTI·RISE 원유생산)에 추종 대상·구조(근월물/브렌트/E&P/유전서비스/롤최적화/환헤지/합성) 기반 CHR을 정의했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -32,7 +40,8 @@
       "exposure": {
         "ticker": "USO",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "United States Oil Fund. WTI 원유선물 근월물을 추종하는 대표 원유 ETF로 콘탱고 국면 롤오버 비용에 노출된다."
       },
       "metrics": {
         "return_1d": -2.851795740130103,
@@ -60,7 +69,8 @@
       "exposure": {
         "ticker": "BNO",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "United States Brent Oil Fund. 브렌트 원유선물을 추종해 중동·해상 리스크가 반영되는 국제 유가에 노출된다."
       },
       "metrics": {
         "return_1d": -3.2132201055772303,
@@ -88,7 +98,8 @@
       "exposure": {
         "ticker": "XLE",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Energy Select Sector SPDR. 엑슨모빌·셰브론이 약 40%를 차지하는 미 통합 에너지 메이저 섹터 ETF."
       },
       "metrics": {
         "return_1d": -1.4028776978417312,
@@ -116,7 +127,8 @@
       "exposure": {
         "ticker": "XOP",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "SPDR S&P Oil & Gas E&P. 원유·가스 시추(E&P) 기업을 동일가중으로 담아 유가 베타가 큰 ETF."
       },
       "metrics": {
         "return_1d": -1.5618248040002447,
@@ -144,7 +156,8 @@
       "exposure": {
         "ticker": "OIH",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "VanEck Oil Services ETF. 슐럼버거·핼리버튼 등 유전서비스·시추장비 기업 중심 ETF."
       },
       "metrics": {
         "return_1d": -0.8813487547309595,
@@ -172,7 +185,8 @@
       "exposure": {
         "ticker": "IXC",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "iShares Global Energy ETF. 엑슨·셰브론·쉘·토탈에너지 등 글로벌 에너지 대형주 ETF."
       },
       "metrics": {
         "return_1d": -1.3024883359253447,
@@ -200,7 +214,8 @@
       "exposure": {
         "ticker": "VDE",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Vanguard Energy ETF. 미 에너지 섹터를 광범위·저보수로 담는 뱅가드 ETF."
       },
       "metrics": {
         "return_1d": -1.3572065757614382,
@@ -228,7 +243,8 @@
       "exposure": {
         "ticker": "DBO",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Invesco DB Oil Fund. 콘탱고를 완화하는 옵티멈일드 룰로 WTI 선물을 굴리는 롤 최적화 원유 ETF."
       },
       "metrics": {
         "return_1d": -2.8907922912205564,
@@ -256,7 +272,8 @@
       "exposure": {
         "ticker": "261220",
         "exchange": "KRX",
-        "country": "KR"
+        "country": "KR",
+        "business_desc": "KODEX WTI원유선물(H). 국내 상장 환헤지형 WTI 원유선물 ETF로 원화 투자자의 유가 노출 수단."
       },
       "metrics": {
         "return_1d": null,
@@ -284,7 +301,8 @@
       "exposure": {
         "ticker": "219390",
         "exchange": "KRX",
-        "country": "KR"
+        "country": "KR",
+        "business_desc": "RISE 미국S&P원유생산기업(합성). 미 원유 생산기업 지수를 합성 복제하는 국내 상장 ETF."
       },
       "metrics": {
         "return_1d": null,
@@ -306,29 +324,9 @@
       }
     },
     {
-      "id": "M_036",
-      "type": "MACRO",
-      "name": "글로벌여행수요"
-    },
-    {
-      "id": "M_037",
-      "type": "MACRO",
-      "name": "유가하락"
-    },
-    {
-      "id": "M_059",
-      "type": "MACRO",
-      "name": "유가상승"
-    },
-    {
       "id": "M_061",
       "type": "MACRO",
       "name": "러-우전쟁"
-    },
-    {
-      "id": "M_064",
-      "type": "MACRO",
-      "name": "에너지수급"
     },
     {
       "id": "M_076",
@@ -369,6 +367,56 @@
       "id": "M_084",
       "type": "MACRO",
       "name": "중동전쟁"
+    },
+    {
+      "id": "C_1959",
+      "type": "CHARACTER",
+      "name": "WTI근월물원유선물"
+    },
+    {
+      "id": "C_1960",
+      "type": "CHARACTER",
+      "name": "브렌트원유선물국제유가"
+    },
+    {
+      "id": "C_1961",
+      "type": "CHARACTER",
+      "name": "미에너지메이저섹터"
+    },
+    {
+      "id": "C_1962",
+      "type": "CHARACTER",
+      "name": "미원유가스E&P동일가중"
+    },
+    {
+      "id": "C_1963",
+      "type": "CHARACTER",
+      "name": "유전서비스시추장비"
+    },
+    {
+      "id": "C_1964",
+      "type": "CHARACTER",
+      "name": "글로벌에너지대형주"
+    },
+    {
+      "id": "C_1965",
+      "type": "CHARACTER",
+      "name": "미에너지광범위저보수"
+    },
+    {
+      "id": "C_1966",
+      "type": "CHARACTER",
+      "name": "롤최적화WTI원유"
+    },
+    {
+      "id": "C_1967",
+      "type": "CHARACTER",
+      "name": "국내환헤지WTI원유ETF"
+    },
+    {
+      "id": "C_1968",
+      "type": "CHARACTER",
+      "name": "국내합성미원유생산기업"
     }
   ],
   "edges": [
@@ -377,9 +425,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002283"
+        "EV_002522"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -387,9 +435,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002284"
+        "EV_002524"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -397,9 +445,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002285"
+        "EV_002526"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -407,9 +455,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002286"
+        "EV_002528"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -417,9 +465,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002287"
+        "EV_002530"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -427,9 +475,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002288"
+        "EV_002532"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -437,7 +485,7 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002289"
+        "EV_002534"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -447,7 +495,7 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002290"
+        "EV_002536"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -457,7 +505,7 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002291"
+        "EV_002538"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -467,39 +515,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002292"
+        "EV_002540"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_036",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002293"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_037",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002294"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_059",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002295"
-      ],
-      "confidence": 0.75,
+      "confidence": 0.78,
       "status": "verified"
     },
     {
@@ -508,16 +526,6 @@
       "type": "IMPACTS",
       "evidence": [
         "EV_002296"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_064",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002297"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -600,6 +608,106 @@
         "EV_002305"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_070",
+      "to": "C_1959",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002523"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_071",
+      "to": "C_1960",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002525"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_503",
+      "to": "C_1961",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002527"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_617",
+      "to": "C_1962",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002529"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_618",
+      "to": "C_1963",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002531"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_619",
+      "to": "C_1964",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002533"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_620",
+      "to": "C_1965",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002535"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_621",
+      "to": "C_1966",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002537"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_622",
+      "to": "C_1967",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002539"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_623",
+      "to": "C_1968",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002541"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ],
@@ -609,9 +717,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002283"
+        "EV_002522"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -619,9 +727,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002284"
+        "EV_002524"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -629,9 +737,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002285"
+        "EV_002526"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -639,9 +747,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002286"
+        "EV_002528"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -649,9 +757,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002287"
+        "EV_002530"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -659,9 +767,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002288"
+        "EV_002532"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -669,7 +777,7 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002289"
+        "EV_002534"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -679,7 +787,7 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002290"
+        "EV_002536"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -689,7 +797,7 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002291"
+        "EV_002538"
       ],
       "confidence": 0.8,
       "status": "verified"
@@ -699,39 +807,9 @@
       "to": "T_073",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002292"
+        "EV_002540"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_036",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002293"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_037",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002294"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_059",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002295"
-      ],
-      "confidence": 0.75,
+      "confidence": 0.78,
       "status": "verified"
     },
     {
@@ -740,16 +818,6 @@
       "type": "IMPACTS",
       "evidence": [
         "EV_002296"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_064",
-      "to": "T_073",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002297"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -832,6 +900,106 @@
         "EV_002305"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_070",
+      "to": "C_1959",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002523"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_071",
+      "to": "C_1960",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002525"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_503",
+      "to": "C_1961",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002527"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_617",
+      "to": "C_1962",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002529"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_618",
+      "to": "C_1963",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002531"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_619",
+      "to": "C_1964",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002533"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_620",
+      "to": "C_1965",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002535"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_621",
+      "to": "C_1966",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002537"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_622",
+      "to": "C_1967",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002539"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_623",
+      "to": "C_1968",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002541"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ]
