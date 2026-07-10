@@ -17,7 +17,15 @@
     ],
     "dataAsOf": "2026-03-26T00:00:00+09:00",
     "notes": "g75 누적 import 기반 Top12SectorETF 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-10",
+        "kind": "보강",
+        "title": "섹터 ETF별 CHR 정의·근거 리서치",
+        "detail": "13개 섹터 ETF(SPY·XLK·XLC·XLV·XLF·XLI·XLB·XLP·XLY·XLU·XLRE·XLE·SMH)에 상위 구성종목·핵심 동인 기반 포지션 CHR을 정의하고, 상투적이던 THEMED_AS 근거를 구성비중·수혜 논리로 구체화했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -32,7 +40,8 @@
       "exposure": {
         "ticker": "SPY",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "SPDR S&P500 ETF. 미국 대형주 500종목 시총가중 벤치마크로 상위 10종목(애플·MS·엔비디아·아마존·메타 등) 집중도가 사상 최고 수준."
       },
       "metrics": {
         "return_1d": 0.8465253555138164,
@@ -60,7 +69,8 @@
       "exposure": {
         "ticker": "XLE",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Energy Select Sector SPDR. 엑슨모빌·셰브론 양대 비중 약 40%에 코노코 등 정유·E&P, 유가·OPEC+·중동 지정학 리스크에 연동."
       },
       "metrics": {
         "return_1d": -1.4028776978417312,
@@ -88,7 +98,8 @@
       "exposure": {
         "ticker": "XLK",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Technology Select Sector SPDR. 애플·MS·엔비디아·브로드컴 등 IT 하드웨어·소프트웨어·반도체 집중, AI capex 사이클 최대 수혜 섹터."
       },
       "metrics": {
         "return_1d": 2.1775082690187464,
@@ -116,7 +127,8 @@
       "exposure": {
         "ticker": "XLC",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Communication Services Select Sector SPDR. 메타·알파벳 양대 비중 약 45%에 넷플릭스·통신을 더한 플랫폼·미디어 섹터, AI 광고·스트리밍 수혜."
       },
       "metrics": {
         "return_1d": 0.9592545221998927,
@@ -144,7 +156,8 @@
       "exposure": {
         "ticker": "XLV",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Health Care Select Sector SPDR. 일라이릴리·유나이티드헬스·J&J·머크 등 제약·바이오·보험, 방어적 성격에 GLP-1(비만치료) 성장 동력."
       },
       "metrics": {
         "return_1d": -0.08009858287123528,
@@ -172,7 +185,8 @@
       "exposure": {
         "ticker": "XLF",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Financial Select Sector SPDR. 버크셔·JPM·비자·마스터카드 등 은행·결제·보험, 순이자마진·자본시장·규제완화에 민감."
       },
       "metrics": {
         "return_1d": 1.0369292341277037,
@@ -200,7 +214,8 @@
       "exposure": {
         "ticker": "XLI",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Industrial Select Sector SPDR. GE에어로스페이스·캐터필러·RTX·유니온퍼시픽 등 항공·방산·기계·운송, 리쇼어링·인프라·방산 사이클 수혜."
       },
       "metrics": {
         "return_1d": 0.3824409710675214,
@@ -228,7 +243,8 @@
       "exposure": {
         "ticker": "XLB",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Materials Select Sector SPDR. 린데(산업가스)·셔윈윌리엄스·프리포트맥모란(구리) 등 화학·금속·건자재, 원자재·건설·전동화 수요 연동."
       },
       "metrics": {
         "return_1d": 0.1993620414673103,
@@ -256,7 +272,8 @@
       "exposure": {
         "ticker": "XLP",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Consumer Staples Select Sector SPDR. 코스트코·월마트·P&G·코카콜라 등 필수소비재, 경기방어·배당·가격전가력이 특징."
       },
       "metrics": {
         "return_1d": -1.4101196824268247,
@@ -284,7 +301,8 @@
       "exposure": {
         "ticker": "XLY",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Consumer Discretionary Select Sector SPDR. 아마존·테슬라 양대 비중에 홈디포·맥도날드 등 임의소비재, 소비 사이클·이커머스·EV 연동."
       },
       "metrics": {
         "return_1d": 1.3443191673894184,
@@ -312,7 +330,8 @@
       "exposure": {
         "ticker": "XLU",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Utilities Select Sector SPDR. 넥스트에라·서던·듀크·콘스텔레이션 등 전력·유틸, AI 데이터센터 전력수요와 금리(할인율)에 민감."
       },
       "metrics": {
         "return_1d": -0.50705467372133,
@@ -340,7 +359,8 @@
       "exposure": {
         "ticker": "XLRE",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "business_desc": "Real Estate Select Sector SPDR. 프로로지스(물류)·아메리칸타워(통신)·에퀴닉스(데이터센터) 등 REIT, 금리인하 수혜+데이터센터 구조 성장."
       },
       "metrics": {
         "return_1d": 0.18120045300111798,
@@ -368,7 +388,8 @@
       "exposure": {
         "ticker": "SMH",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "business_desc": "VanEck Semiconductor ETF. 엔비디아 최상위 비중에 TSMC·브로드컴·AMD 등 반도체 25종목, AI 가속기 사이클 순수 노출."
       },
       "metrics": {
         "return_1d": 2.483979763912303,
@@ -403,6 +424,71 @@
       "id": "M_145",
       "type": "MACRO",
       "name": "금리인하"
+    },
+    {
+      "id": "C_1946",
+      "type": "CHARACTER",
+      "name": "미국대형주벤치마크"
+    },
+    {
+      "id": "C_1947",
+      "type": "CHARACTER",
+      "name": "빅테크반도체집중섹터"
+    },
+    {
+      "id": "C_1948",
+      "type": "CHARACTER",
+      "name": "플랫폼미디어통신섹터"
+    },
+    {
+      "id": "C_1949",
+      "type": "CHARACTER",
+      "name": "제약바이오헬스방어섹터"
+    },
+    {
+      "id": "C_1950",
+      "type": "CHARACTER",
+      "name": "은행결제금융섹터"
+    },
+    {
+      "id": "C_1951",
+      "type": "CHARACTER",
+      "name": "방산기계항공산업섹터"
+    },
+    {
+      "id": "C_1952",
+      "type": "CHARACTER",
+      "name": "화학금속소재섹터"
+    },
+    {
+      "id": "C_1953",
+      "type": "CHARACTER",
+      "name": "필수소비방어배당섹터"
+    },
+    {
+      "id": "C_1954",
+      "type": "CHARACTER",
+      "name": "이커머스자동차소비섹터"
+    },
+    {
+      "id": "C_1955",
+      "type": "CHARACTER",
+      "name": "전력유틸AI전력수요섹터"
+    },
+    {
+      "id": "C_1956",
+      "type": "CHARACTER",
+      "name": "리츠데이터센터물류섹터"
+    },
+    {
+      "id": "C_1957",
+      "type": "CHARACTER",
+      "name": "원유가스에너지섹터"
+    },
+    {
+      "id": "C_1958",
+      "type": "CHARACTER",
+      "name": "AI반도체집중ETF"
     }
   ],
   "edges": [
@@ -411,9 +497,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002321"
+        "EV_002496"
       ],
-      "confidence": 0.8,
+      "confidence": 0.85,
       "status": "verified"
     },
     {
@@ -421,9 +507,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002322"
+        "EV_002518"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -431,9 +517,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002323"
+        "EV_002498"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -441,9 +527,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002324"
+        "EV_002500"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -451,9 +537,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002325"
+        "EV_002502"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -461,9 +547,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002326"
+        "EV_002504"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -471,9 +557,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002327"
+        "EV_002506"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -481,9 +567,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002328"
+        "EV_002508"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -491,9 +577,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002329"
+        "EV_002510"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -501,9 +587,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002330"
+        "EV_002512"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -511,9 +597,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002331"
+        "EV_002514"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -521,9 +607,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002332"
+        "EV_002516"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -531,9 +617,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002333"
+        "EV_002520"
       ],
-      "confidence": 0.8,
+      "confidence": 0.84,
       "status": "verified"
     },
     {
@@ -564,6 +650,136 @@
         "EV_002336"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_020",
+      "to": "C_1946",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002497"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_629",
+      "to": "C_1947",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002499"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_630",
+      "to": "C_1948",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002501"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_631",
+      "to": "C_1949",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002503"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_632",
+      "to": "C_1950",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002505"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_633",
+      "to": "C_1951",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002507"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_634",
+      "to": "C_1952",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002509"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_635",
+      "to": "C_1953",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002511"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_636",
+      "to": "C_1954",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002513"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_637",
+      "to": "C_1955",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002515"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_638",
+      "to": "C_1956",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002517"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_503",
+      "to": "C_1957",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002519"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_639",
+      "to": "C_1958",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002521"
+      ],
+      "confidence": 0.84,
       "status": "verified"
     }
   ],
@@ -573,9 +789,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002321"
+        "EV_002496"
       ],
-      "confidence": 0.8,
+      "confidence": 0.85,
       "status": "verified"
     },
     {
@@ -583,9 +799,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002322"
+        "EV_002518"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -593,9 +809,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002323"
+        "EV_002498"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -603,9 +819,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002324"
+        "EV_002500"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -613,9 +829,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002325"
+        "EV_002502"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -623,9 +839,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002326"
+        "EV_002504"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -633,9 +849,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002327"
+        "EV_002506"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -643,9 +859,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002328"
+        "EV_002508"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -653,9 +869,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002329"
+        "EV_002510"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -663,9 +879,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002330"
+        "EV_002512"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -673,9 +889,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002331"
+        "EV_002514"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -683,9 +899,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002332"
+        "EV_002516"
       ],
-      "confidence": 0.8,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
@@ -693,9 +909,9 @@
       "to": "T_075",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_002333"
+        "EV_002520"
       ],
-      "confidence": 0.8,
+      "confidence": 0.84,
       "status": "verified"
     },
     {
@@ -726,6 +942,136 @@
         "EV_002336"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_020",
+      "to": "C_1946",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002497"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_629",
+      "to": "C_1947",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002499"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_630",
+      "to": "C_1948",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002501"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_631",
+      "to": "C_1949",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002503"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_632",
+      "to": "C_1950",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002505"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_633",
+      "to": "C_1951",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002507"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_634",
+      "to": "C_1952",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002509"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_635",
+      "to": "C_1953",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002511"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_636",
+      "to": "C_1954",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002513"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_637",
+      "to": "C_1955",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002515"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_638",
+      "to": "C_1956",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002517"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_503",
+      "to": "C_1957",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002519"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_639",
+      "to": "C_1958",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002521"
+      ],
+      "confidence": 0.84,
       "status": "verified"
     }
   ]
