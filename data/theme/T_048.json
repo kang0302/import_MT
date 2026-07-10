@@ -423,6 +423,109 @@
       "id": "C_1807",
       "type": "CHARACTER",
       "name": "메타자체실리콘CPU_IP"
+    },
+    {
+      "id": "A_413",
+      "type": "ASSET",
+      "name": "브로드컴",
+      "exposure": {
+        "ticker": "AVGO",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "커스텀 AI 가속기(ASIC) 설계 강자. 메타 MTIA 400('아이리스') 자체 AI 칩 설계 담당, 2026.9 양산 예정.",
+        "theme_role": "2궤도",
+        "theme_status": "Ref"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_232",
+      "type": "ASSET",
+      "name": "TSMC",
+      "exposure": {
+        "ticker": "2330",
+        "exchange": "TWSE",
+        "country": "TW",
+        "business_desc": "글로벌 파운드리 1위. 브로드컴이 설계한 메타 MTIA 400 커스텀 AI 칩을 위탁생산.",
+        "theme_role": "2궤도",
+        "theme_status": "Ref"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "A_220",
+      "type": "ASSET",
+      "name": "샌디스크",
+      "exposure": {
+        "ticker": "SNDK",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "낸드 플래시·스토리지. 메타와 플래시 스토리지 장기 공급계약 체결.",
+        "theme_role": "2궤도",
+        "theme_status": "Ref"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "BF_610",
+      "type": "BUSINESS_FIELD",
+      "name": "커스텀AI가속기내재화"
+    },
+    {
+      "id": "C_1714",
+      "type": "CHARACTER",
+      "name": "MTIA자체칩_메타"
     }
   ],
   "edges": [
@@ -735,6 +838,56 @@
       ],
       "confidence": 0.72,
       "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "A_413",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_002450"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "A_232",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002451"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "A_373",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002452"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "BF_610",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002453"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_1714",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002454"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1046,6 +1199,56 @@
         "EV_001555"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "A_413",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_002450"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "A_232",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002451"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "A_373",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002452"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "BF_610",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002453"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_1714",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002454"
+      ],
+      "confidence": 0.7,
       "status": "verified"
     }
   ]
