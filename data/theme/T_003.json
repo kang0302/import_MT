@@ -22,6 +22,12 @@
     "changelog": [
       {
         "date": "2026-07-11",
+        "kind": "변경",
+        "title": "허브형→전 자산 1궤도 재구조화",
+        "detail": "소프트뱅크 중심 INVESTS/PARTNERS 자산간 엣지를 제거하고 7개 자산을 THEMED_AS(1궤도)로 승격, 소프트뱅크와의 관계(지배자회사·인수·지분투자·후속투자·매도)를 각 자산의 CHR로 전환·백필했다."
+      },
+      {
+        "date": "2026-07-11",
         "kind": "보강",
         "title": "오픈AI 관련 매크로 2종 추가",
         "detail": "오픈AI 상장 성공여부·애플-오픈AI 지재권 소송 매크로를 테마에 IMPACTS로 연결했다."
@@ -41,7 +47,8 @@
       "exposure": {
         "ticker": "9984",
         "exchange": "TSE",
-        "country": "JP"
+        "country": "JP",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 10.647906895952763,
@@ -69,7 +76,8 @@
       "exposure": {
         "ticker": "NVDA",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 4.033928395305253,
@@ -97,7 +105,8 @@
       "exposure": {
         "ticker": "",
         "exchange": "",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": null,
@@ -125,7 +134,8 @@
       "exposure": {
         "ticker": "INTC",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -2.399146969966237,
@@ -153,7 +163,8 @@
       "exposure": {
         "ticker": "ARM",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -1.3663952176167449,
@@ -181,7 +192,8 @@
       "exposure": {
         "ticker": "ABB",
         "exchange": "NYSE",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -0.0802756243049263,
@@ -209,7 +221,8 @@
       "exposure": {
         "ticker": "",
         "exchange": "",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": null,
@@ -259,6 +272,41 @@
       "id": "M_1101",
       "type": "MACRO",
       "name": "애플-오픈AI지재권소송"
+    },
+    {
+      "id": "C_2632",
+      "type": "CHARACTER",
+      "name": "AI인프라전영역베팅지주"
+    },
+    {
+      "id": "C_2633",
+      "type": "CHARACTER",
+      "name": "소프트뱅크투자후전량매도NVDA"
+    },
+    {
+      "id": "C_2634",
+      "type": "CHARACTER",
+      "name": "소프트뱅크지분투자인텔"
+    },
+    {
+      "id": "C_2635",
+      "type": "CHARACTER",
+      "name": "소프트뱅크지배자회사ARM"
+    },
+    {
+      "id": "C_2636",
+      "type": "CHARACTER",
+      "name": "소프트뱅크인수Ampere"
+    },
+    {
+      "id": "C_2637",
+      "type": "CHARACTER",
+      "name": "소프트뱅크로보틱스인수ABB"
+    },
+    {
+      "id": "C_2638",
+      "type": "CHARACTER",
+      "name": "소프트뱅크최대투자OpenAI"
     }
   ],
   "edges": [
@@ -267,7 +315,7 @@
       "to": "T_003",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_000414"
+        "EV_004576"
       ],
       "confidence": 0.85,
       "status": "verified"
@@ -290,66 +338,6 @@
         "EV_000416"
       ],
       "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_055",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000417"
-      ],
-      "confidence": 0.6,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_242",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000418"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_058",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000419"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_1287",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000420"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_286",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000421"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_586",
-      "type": "PARTNERS",
-      "evidence": [
-        "EV_000422"
-      ],
-      "confidence": 0.9,
       "status": "verified"
     },
     {
@@ -390,6 +378,136 @@
         "EV_003307"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "C_2632",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004577"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004578"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_2633",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004579"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004580"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "C_2634",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004581"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004582"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "C_2635",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004583"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1287",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004584"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1287",
+      "to": "C_2636",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004585"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004586"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_2637",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004587"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_586",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004588"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_586",
+      "to": "C_2638",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004589"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ],
@@ -399,7 +517,7 @@
       "to": "T_003",
       "type": "THEMED_AS",
       "evidence": [
-        "EV_000414"
+        "EV_004576"
       ],
       "confidence": 0.85,
       "status": "verified"
@@ -422,66 +540,6 @@
         "EV_000416"
       ],
       "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_055",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000417"
-      ],
-      "confidence": 0.6,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_242",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000418"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_058",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000419"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_1287",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000420"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_286",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_000421"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_1258",
-      "to": "A_586",
-      "type": "PARTNERS",
-      "evidence": [
-        "EV_000422"
-      ],
-      "confidence": 0.9,
       "status": "verified"
     },
     {
@@ -522,6 +580,136 @@
         "EV_003307"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "C_2632",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004577"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004578"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_2633",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004579"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004580"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "C_2634",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004581"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004582"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "C_2635",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004583"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1287",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004584"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1287",
+      "to": "C_2636",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004585"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004586"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_2637",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004587"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_586",
+      "to": "T_003",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004588"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_586",
+      "to": "C_2638",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004589"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]

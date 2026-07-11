@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-11",
+        "kind": "변경",
+        "title": "허브형→전 자산 1궤도 재구조화",
+        "detail": "오픈AI 중심 SUPPLIES/INVESTS 자산간 엣지를 제거하고 11개 자산을 THEMED_AS(1궤도)로 승격, 오픈AI와의 관계(GPU공급·커스텀칩·클라우드·최대투자자·스타게이트·도입고객)를 각 자산의 CHR로 전환·백필했다."
+      },
+      {
         "date": "2026-07-10",
         "kind": "변경",
         "title": "매크로는 테마에만 연결",
@@ -40,7 +46,8 @@
       "exposure": {
         "ticker": "",
         "exchange": "",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": null,
@@ -68,7 +75,8 @@
       "exposure": {
         "ticker": "NVDA",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 4.033928395305253,
@@ -96,7 +104,8 @@
       "exposure": {
         "ticker": "AMD",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 2.0430933567456844,
@@ -124,7 +133,8 @@
       "exposure": {
         "ticker": "AVGO",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -0.28421131360474305,
@@ -152,7 +162,8 @@
       "exposure": {
         "ticker": "CRWV",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -0.9141583054626645,
@@ -180,7 +191,8 @@
       "exposure": {
         "ticker": "ORCL",
         "exchange": "NYSE",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -2.4545832755512365,
@@ -208,7 +220,8 @@
       "exposure": {
         "ticker": "INTU",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 0.577950106079439,
@@ -236,7 +249,8 @@
       "exposure": {
         "ticker": "WMT",
         "exchange": "NYSE",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 1.5061046252562216,
@@ -264,7 +278,8 @@
       "exposure": {
         "ticker": "DIS",
         "exchange": "NYSE",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": -0.5719039201414144,
@@ -292,7 +307,8 @@
       "exposure": {
         "ticker": "MSFT",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 0.1925278384847573,
@@ -320,7 +336,8 @@
       "exposure": {
         "ticker": "9984",
         "exchange": "TSE",
-        "country": "JP"
+        "country": "JP",
+        "theme_role": "1궤도"
       },
       "metrics": {
         "return_1d": 10.647906895952763,
@@ -350,150 +367,585 @@
       "id": "M_251",
       "type": "MACRO",
       "name": "생성형AI경쟁"
+    },
+    {
+      "id": "C_2639",
+      "type": "CHARACTER",
+      "name": "생성형AI모델선두중심"
+    },
+    {
+      "id": "C_2640",
+      "type": "CHARACTER",
+      "name": "오픈AI핵심GPU공급NVDA"
+    },
+    {
+      "id": "C_2641",
+      "type": "CHARACTER",
+      "name": "오픈AIGPU공급지분AMD"
+    },
+    {
+      "id": "C_2642",
+      "type": "CHARACTER",
+      "name": "오픈AI커스텀칩공동설계브로드컴"
+    },
+    {
+      "id": "C_2643",
+      "type": "CHARACTER",
+      "name": "오픈AI_GPU클라우드공급코어위브"
+    },
+    {
+      "id": "C_2644",
+      "type": "CHARACTER",
+      "name": "오픈AI스타게이트클라우드오라클"
+    },
+    {
+      "id": "C_2645",
+      "type": "CHARACTER",
+      "name": "오픈AI엔터프라이즈도입인튜이트"
+    },
+    {
+      "id": "C_2646",
+      "type": "CHARACTER",
+      "name": "오픈AI커머스도입월마트"
+    },
+    {
+      "id": "C_2647",
+      "type": "CHARACTER",
+      "name": "오픈AI콘텐츠파트너디즈니"
+    },
+    {
+      "id": "C_2648",
+      "type": "CHARACTER",
+      "name": "오픈AI최대투자자Azure_MS"
+    },
+    {
+      "id": "C_2649",
+      "type": "CHARACTER",
+      "name": "오픈AI스타게이트투자소프트뱅크"
     }
   ],
   "edges": [
     {
       "from": "A_586",
       "to": "T_193",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004590"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
     },
     {
       "from": "M_251",
       "to": "T_193",
-      "type": "IMPACTS"
-    },
-    {
-      "from": "A_055",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_056",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_413",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_240",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_895",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_045",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_296",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_328",
-      "to": "A_586",
-      "type": "INVESTS"
-    },
-    {
-      "from": "A_210",
-      "to": "A_586",
-      "type": "INVESTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_004612"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "A_586",
       "to": "BF_439",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_004613"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     },
     {
       "from": "A_895",
       "to": "BF_439",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_004614"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     },
     {
       "from": "A_1258",
       "to": "BF_439",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_004615"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_586",
+      "to": "C_2639",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004591"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004592"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_2640",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004593"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004594"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "C_2641",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004595"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004596"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_2642",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004597"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_240",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004598"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_240",
+      "to": "C_2643",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004599"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_895",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004600"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_895",
+      "to": "C_2644",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004601"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_045",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004602"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_045",
+      "to": "C_2645",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004603"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_296",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004604"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_296",
+      "to": "C_2646",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004605"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_328",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004606"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_328",
+      "to": "C_2647",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004607"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_210",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004608"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_210",
+      "to": "C_2648",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004609"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004610"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "C_2649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004611"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_586",
       "to": "T_193",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004590"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
     },
     {
       "from": "M_251",
       "to": "T_193",
-      "type": "IMPACTS"
-    },
-    {
-      "from": "A_055",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_056",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_413",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_240",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_895",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_045",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_296",
-      "to": "A_586",
-      "type": "SUPPLIES"
-    },
-    {
-      "from": "A_328",
-      "to": "A_586",
-      "type": "INVESTS"
-    },
-    {
-      "from": "A_210",
-      "to": "A_586",
-      "type": "INVESTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_004612"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "A_586",
       "to": "BF_439",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_004613"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     },
     {
       "from": "A_895",
       "to": "BF_439",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_004614"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     },
     {
       "from": "A_1258",
       "to": "BF_439",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_004615"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_586",
+      "to": "C_2639",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004591"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004592"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_2640",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004593"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004594"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "C_2641",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004595"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004596"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_2642",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004597"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_240",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004598"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_240",
+      "to": "C_2643",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004599"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_895",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004600"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_895",
+      "to": "C_2644",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004601"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_045",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004602"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_045",
+      "to": "C_2645",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004603"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_296",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004604"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_296",
+      "to": "C_2646",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004605"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_328",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004606"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_328",
+      "to": "C_2647",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004607"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_210",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004608"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_210",
+      "to": "C_2648",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004609"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004610"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "C_2649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004611"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ]
 }
