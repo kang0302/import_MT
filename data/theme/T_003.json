@@ -18,7 +18,15 @@
     "dataAsOf": "2026-05-03T00:00:00+09:00",
     "notes": "g003 누적 import 기반 소프트뱅크_AI투자 테마",
     "sources": [],
-    "provenanceSeed": "T_003 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_003 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-11",
+        "kind": "보강",
+        "title": "오픈AI 관련 매크로 2종 추가",
+        "detail": "오픈AI 상장 성공여부·애플-오픈AI 지재권 소송 매크로를 테마에 IMPACTS로 연결했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -241,6 +249,16 @@
       "id": "BF_609",
       "type": "BUSINESS_FIELD",
       "name": "AI컴퓨트렌탈('27)"
+    },
+    {
+      "id": "M_1100",
+      "type": "MACRO",
+      "name": "오픈AI상장성공여부"
+    },
+    {
+      "id": "M_1101",
+      "type": "MACRO",
+      "name": "애플-오픈AI지재권소송"
     }
   ],
   "edges": [
@@ -353,6 +371,26 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "M_1100",
+      "to": "T_003",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003306"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1101",
+      "to": "T_003",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003307"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     }
   ],
   "links": [
@@ -464,6 +502,26 @@
         "EV_001321"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_1100",
+      "to": "T_003",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003306"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1101",
+      "to": "T_003",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003307"
+      ],
+      "confidence": 0.7,
       "status": "verified"
     }
   ]
