@@ -19,7 +19,21 @@
     "notes": "설계-반도체제조-디스플레이-기판/커넥터-배터리-카메라모듈-조립으로 이어지는 글로벌 아이폰 공급망 구조",
     "sources": [],
     "provenanceSeed": "T_112 공개사실 시드(2026-06-29) — evidence_ssot 참조",
-    "augmentNote": "T_112 보강(2026-06-30) — 애플 CXMT/YMTC 메모리 공급망"
+    "augmentNote": "T_112 보강(2026-06-30) — 애플 CXMT/YMTC 메모리 공급망",
+    "changelog": [
+      {
+        "date": "2026-07-11",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "아이폰 공급망 종목에 부품 포지션(카메라·OLED·기판·배터리·조립·AP·메모리) CHR 정의."
+      },
+      {
+        "date": "2026-07-11",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목별 사업·관계 사실로 구체화하고 2026 이벤트 2건을 추가했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -621,6 +635,96 @@
       "id": "M_1082",
       "type": "MACRO",
       "name": "메모리반도체가격상승('26)"
+    },
+    {
+      "id": "C_2196",
+      "type": "CHARACTER",
+      "name": "아이폰생태계중심"
+    },
+    {
+      "id": "C_2197",
+      "type": "CHARACTER",
+      "name": "애플AP파운드리"
+    },
+    {
+      "id": "C_2198",
+      "type": "CHARACTER",
+      "name": "아이폰OLED패널"
+    },
+    {
+      "id": "C_2199",
+      "type": "CHARACTER",
+      "name": "중국OLED패널BOE"
+    },
+    {
+      "id": "C_2200",
+      "type": "CHARACTER",
+      "name": "아이폰OLED1위삼성D"
+    },
+    {
+      "id": "C_2201",
+      "type": "CHARACTER",
+      "name": "아이폰MLCC적층세라믹"
+    },
+    {
+      "id": "C_2202",
+      "type": "CHARACTER",
+      "name": "아이폰연성FPCB"
+    },
+    {
+      "id": "C_2203",
+      "type": "CHARACTER",
+      "name": "아이폰반도체기판"
+    },
+    {
+      "id": "C_2204",
+      "type": "CHARACTER",
+      "name": "아이폰AP기판이비덴"
+    },
+    {
+      "id": "C_2205",
+      "type": "CHARACTER",
+      "name": "아이폰배터리셀ATL"
+    },
+    {
+      "id": "C_2206",
+      "type": "CHARACTER",
+      "name": "아이폰배터리팩Desay"
+    },
+    {
+      "id": "C_2207",
+      "type": "CHARACTER",
+      "name": "아이폰배터리삼성SDI"
+    },
+    {
+      "id": "C_2208",
+      "type": "CHARACTER",
+      "name": "아이폰인도조립위스트론"
+    },
+    {
+      "id": "C_2209",
+      "type": "CHARACTER",
+      "name": "아이폰최대조립폭스콘"
+    },
+    {
+      "id": "C_2210",
+      "type": "CHARACTER",
+      "name": "아이폰조립페가트론"
+    },
+    {
+      "id": "C_2211",
+      "type": "CHARACTER",
+      "name": "아이폰카메라모듈"
+    },
+    {
+      "id": "C_2212",
+      "type": "CHARACTER",
+      "name": "중국D램굴기CXMT"
+    },
+    {
+      "id": "C_2213",
+      "type": "CHARACTER",
+      "name": "중국낸드굴기YMTC"
     }
   ],
   "edges": [
@@ -1007,12 +1111,22 @@
     {
       "from": "A_1571",
       "to": "T_112",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003325"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1572",
       "to": "T_112",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003326"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1571",
@@ -1047,17 +1161,32 @@
     {
       "from": "A_1571",
       "to": "BF_442",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003327"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1572",
       "to": "BF_442",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003328"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_030",
       "to": "T_112",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003329"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_1081",
@@ -1072,7 +1201,192 @@
     {
       "from": "M_1082",
       "to": "T_112",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003330"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "C_2196",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003484"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_2197",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003485"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_686",
+      "to": "C_2198",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003486"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_815",
+      "to": "C_2199",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003487"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_816",
+      "to": "C_2200",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003488"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_085",
+      "to": "C_2201",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003489"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_817",
+      "to": "C_2202",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003490"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_462",
+      "to": "C_2203",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003491"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_457",
+      "to": "C_2204",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003492"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_818",
+      "to": "C_2205",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003493"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_819",
+      "to": "C_2206",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003494"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_146",
+      "to": "C_2207",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003495"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_820",
+      "to": "C_2208",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003496"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_644",
+      "to": "C_2209",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003497"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_821",
+      "to": "C_2210",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003498"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_080",
+      "to": "C_2211",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003499"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "C_2212",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003500"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "C_2213",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003501"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1459,12 +1773,22 @@
     {
       "from": "A_1571",
       "to": "T_112",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003325"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1572",
       "to": "T_112",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003326"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1571",
@@ -1499,17 +1823,32 @@
     {
       "from": "A_1571",
       "to": "BF_442",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003327"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1572",
       "to": "BF_442",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003328"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_030",
       "to": "T_112",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003329"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_1081",
@@ -1524,7 +1863,192 @@
     {
       "from": "M_1082",
       "to": "T_112",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003330"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "C_2196",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003484"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_2197",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003485"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_686",
+      "to": "C_2198",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003486"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_815",
+      "to": "C_2199",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003487"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_816",
+      "to": "C_2200",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003488"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_085",
+      "to": "C_2201",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003489"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_817",
+      "to": "C_2202",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003490"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_462",
+      "to": "C_2203",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003491"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_457",
+      "to": "C_2204",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003492"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_818",
+      "to": "C_2205",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003493"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_819",
+      "to": "C_2206",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003494"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_146",
+      "to": "C_2207",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003495"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_820",
+      "to": "C_2208",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003496"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_644",
+      "to": "C_2209",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003497"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_821",
+      "to": "C_2210",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003498"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_080",
+      "to": "C_2211",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003499"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "C_2212",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003500"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "C_2213",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003501"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
