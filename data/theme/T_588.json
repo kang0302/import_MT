@@ -18,7 +18,15 @@
     "dataAsOf": "2026-07-05T00:00:00+09:00",
     "description": "싱가포르·베트남 등 동남아 대표 지수 ETF(EWS·VNM). 니어쇼어링·내수 성장.",
     "notes": "T_588 — 지역/국가별ETF(T_013) 분할",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-11",
+        "kind": "보강",
+        "title": "EWM(말레이시아) ETF 추가",
+        "detail": "동남아시아 지수 바스켓에 말레이시아 국가 ETF(EWM)를 THEMED_AS로 추가하고 CHR을 정의했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -228,6 +236,42 @@
       "id": "M_358",
       "type": "MACRO",
       "name": "신흥국GDP성장"
+    },
+    {
+      "id": "A_2651",
+      "type": "ASSET",
+      "name": "EWM(말레이시아)",
+      "exposure": {
+        "ticker": "EWM",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "iShares MSCI Malaysia ETF. 말레이시아 은행·팜오일·통신 등 대형주를 담는 미국 상장 국가 지수 ETF.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_2503",
+      "type": "CHARACTER",
+      "name": "말레이시아은행팜오일ETF"
     }
   ],
   "edges": [
@@ -360,6 +404,26 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_2651",
+      "to": "T_588",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004220"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2651",
+      "to": "C_2503",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004221"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
@@ -491,6 +555,26 @@
         "EV_001745"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_2651",
+      "to": "T_588",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_004220"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2651",
+      "to": "C_2503",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_004221"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ]
