@@ -17,7 +17,21 @@
     ],
     "dataAsOf": "2026-04-02T00:00:00+09:00",
     "notes": "g101 누적 import 기반 글로벌 MLCC 관련주 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-11",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "MLCC 종목에 순위·용도(서버/전장/소형고용량)·유통 포지션 기반 CHR 정의."
+      },
+      {
+        "date": "2026-07-11",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목별 사업·관계 사실로 구체화하고 2026 이벤트 2건을 추가했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -251,130 +265,425 @@
         "returnsAsOf": null,
         "returnsSource": "EODHD"
       }
+    },
+    {
+      "id": "C_2102",
+      "type": "CHARACTER",
+      "name": "MLCC글로벌2위전장서버"
+    },
+    {
+      "id": "C_2103",
+      "type": "CHARACTER",
+      "name": "국내MLCC전장커패시터"
+    },
+    {
+      "id": "C_2104",
+      "type": "CHARACTER",
+      "name": "MLCC글로벌1위"
+    },
+    {
+      "id": "C_2105",
+      "type": "CHARACTER",
+      "name": "대만수동부품메이저"
+    },
+    {
+      "id": "C_2106",
+      "type": "CHARACTER",
+      "name": "일본소형고용량MLCC"
+    },
+    {
+      "id": "C_2107",
+      "type": "CHARACTER",
+      "name": "슈퍼커패시터연료전지소재"
+    },
+    {
+      "id": "C_2108",
+      "type": "CHARACTER",
+      "name": "삼성전기MLCC유통슈퍼커패시터"
     }
   ],
   "edges": [
     {
       "from": "A_085",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003042"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
     },
     {
       "from": "A_762",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003043"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
     },
     {
       "from": "A_763",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003044"
+      ],
+      "confidence": 0.84,
+      "status": "verified"
     },
     {
       "from": "A_764",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003045"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     },
     {
       "from": "A_765",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003046"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     },
     {
       "from": "M_103",
       "to": "T_101",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003051"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "M_020",
       "to": "T_101",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003052"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "M_104",
       "to": "T_101",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003053"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "A_1656",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003047"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_1657",
       "to": "A_085",
-      "type": "PARTNERS"
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_003048"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1657",
       "to": "BF_520",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003049"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "A_1657",
       "to": "BF_521",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003050"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_085",
+      "to": "C_2102",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003219"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_762",
+      "to": "C_2103",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003220"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_763",
+      "to": "C_2104",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003221"
+      ],
+      "confidence": 0.84,
+      "status": "verified"
+    },
+    {
+      "from": "A_764",
+      "to": "C_2105",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003222"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_765",
+      "to": "C_2106",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003223"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1656",
+      "to": "C_2107",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003224"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1657",
+      "to": "C_2108",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003225"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_085",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003042"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
     },
     {
       "from": "A_762",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003043"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
     },
     {
       "from": "A_763",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003044"
+      ],
+      "confidence": 0.84,
+      "status": "verified"
     },
     {
       "from": "A_764",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003045"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     },
     {
       "from": "A_765",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003046"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     },
     {
       "from": "M_103",
       "to": "T_101",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003051"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "M_020",
       "to": "T_101",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003052"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "M_104",
       "to": "T_101",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_003053"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "A_1656",
       "to": "T_101",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_003047"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_1657",
       "to": "A_085",
-      "type": "PARTNERS"
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_003048"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1657",
       "to": "BF_520",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003049"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "A_1657",
       "to": "BF_521",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_003050"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_085",
+      "to": "C_2102",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003219"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_762",
+      "to": "C_2103",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003220"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_763",
+      "to": "C_2104",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003221"
+      ],
+      "confidence": 0.84,
+      "status": "verified"
+    },
+    {
+      "from": "A_764",
+      "to": "C_2105",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003222"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_765",
+      "to": "C_2106",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003223"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1656",
+      "to": "C_2107",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003224"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1657",
+      "to": "C_2108",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_003225"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
