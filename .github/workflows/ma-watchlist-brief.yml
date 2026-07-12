@@ -1,0 +1,52 @@
+name: MA watchlist brief (daily)
+
+# 관심종목 이동평균선(30/60/120일) 데일리 브리핑 생성.
+# 일별 종가 업데이트(update-close-kr / update-return-fmp) 이후, auto-merge(KST 08:30) 이전에 실행하여
+# data/ma_brief/latest.md 를 main 에 커밋한다. 앱은 main raw 에서 이 파일을 읽는다.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # KST 07:20 = UTC 22:20 (전일 종가 확정 후, auto-merge 전)
+    - cron: "20 22 * * *"
+
+concurrency:
+  group: ma-watchlist-brief
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Generate MA brief
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: python scripts/ma_watchlist_brief.py
+
+      - name: Commit brief
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ma_brief
+          if git diff --cached --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "chore(ma-brief): daily $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin main
