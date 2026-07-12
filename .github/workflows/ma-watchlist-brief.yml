@@ -20,6 +20,9 @@ permissions:
 jobs:
   brief:
     runs-on: ubuntu-latest
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,3 +53,19 @@ jobs:
           git commit -m "chore(ma-brief): daily $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
           git push origin main
+
+      # 이메일 발송 (Gmail 앱 비밀번호 시크릿이 등록된 경우에만 동작)
+      - name: Email brief
+        if: ${{ env.MAIL_USERNAME != '' && env.MAIL_PASSWORD != '' }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: MoneyTree MA Brief <${{ secrets.MAIL_USERNAME }}>
+          to: kang0302@gmail.com
+          subject: "[MoneyTree] 관심종목 이동평균선 브리핑"
+          html_body: file://data/ma_brief/latest.html
+          attachments: data/ma_brief/latest.md

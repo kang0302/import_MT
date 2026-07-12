@@ -102,7 +102,7 @@ def signals(cl):
 def main():
     wl = json.loads((DATA/"watchlist.json").read_text(encoding="utf-8"))
     items = wl.get("items", [])
-    rows_out, asof = [], None
+    rows_out, drows, asof = [], [], None
     n_up = n_dn = n_bull = n_bear = n_break = n_lose = 0
     missing = []
     for it in items:
@@ -110,19 +110,18 @@ def main():
         rows = hist_kr(tk) if co == "KR" else hist_us(tk)
         if not rows:
             rows_out.append(f"| {name} ({tk}) | 데이터 없음 | — | — | — | — | — |")
-            missing.append(name); continue
+            drows.append((f"{name} ({tk})","데이터 없음","—","—","—","—","—")); missing.append(name); continue
         cl, d = closes_desc(rows)
         if d and (asof is None or d > asof): asof = d
         if len(cl) < 30:
             rows_out.append(f"| {name} ({tk}) | 데이터 부족 | — | — | — | — | — |")
-            missing.append(name); continue
+            drows.append((f"{name} ({tk})","데이터 부족","—","—","—","—","—")); missing.append(name); continue
         c0 = cl[0]
         m30, m60, m120 = sma(cl,30), sma(cl,60), sma(cl,120)
         # 배열
         if None not in (m30,m60,m120) and m30>m60>m120: align="🟢 정배열"; n_bull+=1
         elif None not in (m30,m60,m120) and m30<m60<m120: align="🔴 역배열"; n_bear+=1
         else: align="⚪ 혼조"
-        if m30 is not None: (n_up if c0>=m30 else n_dn);
         if m30 is not None and c0>=m30: n_up+=1
         elif m30 is not None: n_dn+=1
         sig = signals(cl)
@@ -131,6 +130,7 @@ def main():
             if "이탈" in s: n_lose+=1
         sig_txt = " · ".join(sig) if sig else "—"
         rows_out.append(f"| {name} ({tk}) | {c0:,.2f} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {align} | {sig_txt} |")
+        drows.append((f"{name} ({tk})", f"{c0:,.2f}", arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), align, sig_txt))
     asof = asof or TO
     md = []
     md.append(f"# 📈 관심종목 이동평균선 브리핑")
@@ -149,6 +149,29 @@ def main():
     text = "\n".join(md) + "\n"
     (OUT/"latest.md").write_text(text, encoding="utf-8")
     (OUT/f"{TODAY.isoformat()}.md").write_text(text, encoding="utf-8")
+
+    # HTML (이메일 본문용)
+    def esc(s): return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+    def cellcol(v):
+        if v.startswith("▲"): return "#16a34a"
+        if v.startswith("▼"): return "#dc2626"
+        return "#334155"
+    head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","30일선","60일선","120일선","배열","오늘 신호"])
+    body = ""
+    for r in drows:
+        tds = ""
+        for i,v in enumerate(r):
+            col = cellcol(v) if i in (2,3,4) else "#0f172a"
+            tds += f"<td style='padding:6px 10px;border:1px solid #e2e8f0;color:{col};white-space:nowrap'>{esc(v)}</td>"
+        body += f"<tr>{tds}</tr>"
+    html = f"""<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#0f172a">
+<h2 style="margin:0 0 6px">📈 관심종목 이동평균선 브리핑</h2>
+<p style="margin:0 0 4px;color:#475569">기준일(전일 종가): <b>{esc(asof)}</b> · 종목 {len(items)}개 · 생성 {TODAY.isoformat()}</p>
+<p style="margin:0 0 10px;color:#475569">30일선 상회 <b>{n_up}</b> / 하회 <b>{n_dn}</b> · 정배열 <b>{n_bull}</b> / 역배열 <b>{n_bear}</b> · 오늘 상향돌파 <b>{n_break}</b> · 이탈 <b>{n_lose}</b></p>
+<table style="border-collapse:collapse;font-size:13px"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>
+<p style="margin:10px 0 0;color:#94a3b8;font-size:11px">▲ 상회 / ▼ 하회 (괄호=이격도%). 정배열=30&gt;60&gt;120일선. 신호=전일 대비 당일 돌파·이탈·골든/데드크로스.</p>
+</div>"""
+    (OUT/"latest.html").write_text(html, encoding="utf-8")
     print(f"✅ ma_brief 생성: asof={asof} 종목={len(items)} 데이터없음={len(missing)} {missing}")
     print(f"   정배열={n_bull} 역배열={n_bear} 30선상회={n_up} 하회={n_dn} 돌파={n_break} 이탈={n_lose}")
 
