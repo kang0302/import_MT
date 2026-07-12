@@ -21,6 +21,12 @@
     "changelog": [
       {
         "date": "2026-07-12",
+        "kind": "변경",
+        "title": "매크로 정리(데이터센터확대 삭제·AI데이터센터확대로 교체·신재생에너지확산 추가)",
+        "detail": "데이터센터확대 제거, AI데이터센터전력수요증가→AI데이터센터확대 교체, 신재생에너지확산 신규 추가."
+      },
+      {
+        "date": "2026-07-12",
         "kind": "보강",
         "title": "자산별 테마관점 CHR 정의",
         "detail": "전 자산에 테마 내 역할·포지션 기반 CHR을 정의했다."
@@ -470,16 +476,6 @@
       "name": "ESS주도주"
     },
     {
-      "id": "M_116",
-      "type": "MACRO",
-      "name": "데이터센터확대"
-    },
-    {
-      "id": "M_035",
-      "type": "MACRO",
-      "name": "AI데이터센터전력수요증가"
-    },
-    {
       "id": "C_2808",
       "type": "CHARACTER",
       "name": "각형ESS배터리삼성SDI"
@@ -553,6 +549,16 @@
       "id": "C_2822",
       "type": "CHARACTER",
       "name": "인버터ESS솔라엣지"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "M_1117",
+      "type": "MACRO",
+      "name": "신재생에너지확산"
     }
   ],
   "edges": [
@@ -747,26 +753,6 @@
       "status": "verified"
     },
     {
-      "from": "M_116",
-      "to": "T_168",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_005005"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_035",
-      "to": "T_168",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_005006"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
       "from": "A_146",
       "to": "C_2808",
       "type": "HAS_TRAIT",
@@ -914,6 +900,26 @@
         "EV_005133"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_168",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005161"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_1117",
+      "to": "T_168",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005162"
+      ],
+      "confidence": 0.75,
       "status": "verified"
     }
   ],
@@ -1109,26 +1115,6 @@
       "status": "verified"
     },
     {
-      "from": "M_116",
-      "to": "T_168",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_005005"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_035",
-      "to": "T_168",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_005006"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
       "from": "A_146",
       "to": "C_2808",
       "type": "HAS_TRAIT",
@@ -1276,6 +1262,26 @@
         "EV_005133"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_168",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005161"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_1117",
+      "to": "T_168",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005162"
+      ],
+      "confidence": 0.75,
       "status": "verified"
     }
   ]
