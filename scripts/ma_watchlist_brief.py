@@ -111,6 +111,30 @@ def seq7(cl):
     return "".join(syms) if syms else "—", "-".join(words) if words else "—"
 
 
+def momentum_text(cl):
+    """최근 7거래일 등락을 해석하는 문구."""
+    ch = []
+    for i in range(min(7, len(cl)-1)):
+        d = cl[i] - cl[i+1]
+        ch.append(1 if d > 0 else (-1 if d < 0 else 0))
+    if not ch:
+        return "최근 등락 데이터 부족"
+    ups = ch.count(1); downs = ch.count(-1)
+    s = ch[0]; streak = 1
+    for x in ch[1:]:
+        if x == s and x != 0: streak += 1
+        else: break
+    if s == 1 and streak >= 3:
+        return f"최근 {streak}거래일 연속 상승세로 단기 매수 모멘텀 강함"
+    if s == -1 and streak >= 3:
+        return f"최근 {streak}거래일 연속 하락세로 단기 매도 압력 지속"
+    if ups > downs:
+        return f"최근 7거래일 중 {ups}일 상승({downs}일 하락)으로 단기 매수 우위"
+    if downs > ups:
+        return f"최근 7거래일 중 {downs}일 하락({ups}일 상승)으로 단기 매도 우위"
+    return f"최근 7거래일 상승·하락 {ups}:{downs} 균형으로 방향성 중립"
+
+
 def interpret(c0, m30, m60, m120, align_key, sig):
     """종목별 이평선 상황 해석 텍스트(규칙 기반)."""
     if None in (m30, m60, m120):
@@ -180,7 +204,7 @@ def main():
         sig_txt = " · ".join(sig) if sig else "—"
         rows_out.append(f"| {mdlabel} | {c0:,.2f} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {align} | {sym7} | {sig_txt} |")
         drows.append((htmlabel, f"{c0:,.2f}", arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), align, sym7, sig_txt))
-        interps.append((mdlabel, htmlabel, words7, interpret(c0, m30, m60, m120, align_key, sig)))
+        interps.append((mdlabel, htmlabel, momentum_text(cl), interpret(c0, m30, m60, m120, align_key, sig)))
     asof = asof or TO
     md = []
     md.append(f"# 📈 관심종목 이동평균선 브리핑")
@@ -196,10 +220,10 @@ def main():
     md.append("")
     md.append("## 🧭 종목별 해석")
     md.append("")
-    for mdl, _, w7, txt in interps:
-        md.append(f"- {mdl} — 최근 7일(과거→최근): {w7} · {txt}")
+    for mdl, _, mom, txt in interps:
+        md.append(f"- {mdl} — {txt} {mom}.")
     md.append("")
-    md.append("> ▲ 상회 / ▼ 하회 (괄호=이격도%). 정배열=30>60>120일선. 최근7일 ▲=상승·▼=하락(과거→최근). 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.")
+    md.append("> ▲(적) 상회·상승 / ▼(청) 하회·하락 (괄호=이격도%). 정배열=30>60>120일선. 최근7일=과거→최근. 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.")
     md.append("")
     text = "\n".join(md) + "\n"
     (OUT/"latest.md").write_text(text, encoding="utf-8")
@@ -208,21 +232,27 @@ def main():
     # HTML (이메일 본문용)
     def esc(s): return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
     def cellcol(v):
-        if v.startswith("▲"): return "#16a34a"
-        if v.startswith("▼"): return "#dc2626"
+        if v.startswith("▲"): return "#dc2626"   # 상승=적색
+        if v.startswith("▼"): return "#2563eb"   # 하락=청색
         return "#334155"
     head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","30일선","60일선","120일선","배열","최근7일","오늘 신호"])
     body = ""
     for r in drows:
         tds = ""
         for i,v in enumerate(r):
-            col = cellcol(v) if i in (2,3,4) else "#0f172a"
-            cell = v if i == 0 else esc(v)
+            if i == 6:  # 최근7일 시퀀스: 문자별 적/청
+                cell = "".join(("<span style='color:#dc2626'>▲</span>" if c=="▲" else
+                                "<span style='color:#2563eb'>▼</span>" if c=="▼" else
+                                f"<span style='color:#94a3b8'>{esc(c)}</span>") for c in str(v))
+                col = "#0f172a"
+            else:
+                col = cellcol(v) if i in (2,3,4) else "#0f172a"
+                cell = v if i == 0 else esc(v)
             tds += f"<td style='padding:6px 10px;border:1px solid #e2e8f0;color:{col};white-space:nowrap'>{cell}</td>"
         body += f"<tr>{tds}</tr>"
     interp_html = "".join(
-        f"<li><b>{h}</b> — 최근 7일(과거→최근): {esc(w7)} · {esc(t)}</li>"
-        for _, h, w7, t in interps
+        f"<li><b>{h}</b> — {esc(t)} {esc(mom)}.</li>"
+        for _, h, mom, t in interps
     )
     html = f"""<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#0f172a">
 <h2 style="margin:0 0 6px">📈 관심종목 이동평균선 브리핑</h2>
