@@ -99,29 +99,78 @@ def signals(cl):
         elif a1 >= b1 and a0 < b0: sig.append("데드크로스(30<60)")
     return sig
 
+def seq7(cl):
+    """최근 7거래일 등락 시퀀스 (과거→최근). (기호문자열, 워딩문자열) 반환."""
+    syms, words = [], []
+    for i in range(min(7, len(cl)-1)):
+        d = cl[i] - cl[i+1]
+        if d > 0: syms.append("▲"); words.append("상승")
+        elif d < 0: syms.append("▼"); words.append("하락")
+        else: syms.append("-"); words.append("보합")
+    syms = syms[::-1]; words = words[::-1]
+    return "".join(syms) if syms else "—", "-".join(words) if words else "—"
+
+
+def interpret(c0, m30, m60, m120, align_key, sig):
+    """종목별 이평선 상황 해석 텍스트(규칙 기반)."""
+    if None in (m30, m60, m120):
+        return "120일 이동평균 계산에 필요한 데이터가 부족합니다."
+    g30 = (c0/m30-1)*100; g60 = (c0/m60-1)*100; g120 = (c0/m120-1)*100
+    above = [n for n, g in zip((30,60,120), (g30,g60,g120)) if g >= 0]
+    parts = []
+    if len(above) == 3:
+        base = "단기·중기·장기(30·60·120일) 이평선을 모두 상회하는 상승추세"
+    elif len(above) == 0:
+        base = "세 이평선을 모두 하회하는 하락추세"
+    else:
+        up = "·".join(f"{n}일선" for n in above)
+        base = f"{up}은 상회하나 나머지 이평선은 하회하는 혼조 국면"
+    if align_key == "bull": base += " (이평선 정배열, 추세 견조)"
+    elif align_key == "bear": base += " (역배열, 추세 약세)"
+    parts.append(base)
+    for x in sig:
+        if "상향돌파" in x: parts.append(f"금일 {x.replace('일선 상향돌파','')}일선을 상향 돌파해 단기 반등 시도")
+        elif "이탈" in x: parts.append(f"금일 {x.replace('일선 이탈','')}일선을 이탈해 단기 약세로 전환")
+        elif "골든" in x: parts.append("골든크로스(30>60일선)로 추세 개선 신호")
+        elif "데드" in x: parts.append("데드크로스(30<60일선)로 추세 악화 신호")
+    near = [n for n, g in zip((30,60,120), (g30,g60,g120)) if abs(g) <= 2]
+    if near and not sig:
+        parts.append(f"{near[0]}일선 부근에서 지지·저항 공방")
+    if g120 >= 25: parts.append("장기선 대비 이격이 커 단기 과열 구간")
+    elif g120 <= -25: parts.append("장기선 대비 과대낙폭으로 기술적 반등 여지")
+    return ". ".join(parts) + "."
+
+
 def main():
     wl = json.loads((DATA/"watchlist.json").read_text(encoding="utf-8"))
     items = wl.get("items", [])
-    rows_out, drows, asof = [], [], None
+    rows_out, drows, interps, asof = [], [], [], None
     n_up = n_dn = n_bull = n_bear = n_break = n_lose = 0
     missing = []
     for it in items:
         tk, co, name = it["ticker"], it.get("country","US"), it.get("name", it["ticker"])
+        # 종목명 링크: 국내=네이버금융, 해외=야후파이낸스
+        link = (f"https://finance.naver.com/item/main.naver?code={tk}" if co == "KR"
+                else f"https://finance.yahoo.com/quote/{tk}")
+        label = f"{name} ({tk})"
+        mdlabel = f"[{label}]({link})"
+        htmlabel = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
         rows = hist_kr(tk) if co == "KR" else hist_us(tk)
         if not rows:
-            rows_out.append(f"| {name} ({tk}) | 데이터 없음 | — | — | — | — | — |")
-            drows.append((f"{name} ({tk})","데이터 없음","—","—","—","—","—")); missing.append(name); continue
+            rows_out.append(f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — |")
+            drows.append((htmlabel,"데이터 없음","—","—","—","—","—","—")); interps.append((mdlabel, htmlabel, "—", "데이터 없음(해석 불가).")); missing.append(name); continue
         cl, d = closes_desc(rows)
         if d and (asof is None or d > asof): asof = d
         if len(cl) < 30:
-            rows_out.append(f"| {name} ({tk}) | 데이터 부족 | — | — | — | — | — |")
-            drows.append((f"{name} ({tk})","데이터 부족","—","—","—","—","—")); missing.append(name); continue
+            rows_out.append(f"| {mdlabel} | 데이터 부족 | — | — | — | — | — | — |")
+            drows.append((htmlabel,"데이터 부족","—","—","—","—","—","—")); interps.append((mdlabel, htmlabel, "—", "데이터 부족(해석 불가).")); missing.append(name); continue
         c0 = cl[0]
         m30, m60, m120 = sma(cl,30), sma(cl,60), sma(cl,120)
         # 배열
-        if None not in (m30,m60,m120) and m30>m60>m120: align="🟢 정배열"; n_bull+=1
-        elif None not in (m30,m60,m120) and m30<m60<m120: align="🔴 역배열"; n_bear+=1
-        else: align="⚪ 혼조"
+        if None not in (m30,m60,m120) and m30>m60>m120: align="🟢 정배열"; align_key="bull"; n_bull+=1
+        elif None not in (m30,m60,m120) and m30<m60<m120: align="🔴 역배열"; align_key="bear"; n_bear+=1
+        else: align="⚪ 혼조"; align_key="flat"
+        sym7, words7 = seq7(cl)
         if m30 is not None and c0>=m30: n_up+=1
         elif m30 is not None: n_dn+=1
         sig = signals(cl)
@@ -129,8 +178,9 @@ def main():
             if "상향돌파" in s: n_break+=1
             if "이탈" in s: n_lose+=1
         sig_txt = " · ".join(sig) if sig else "—"
-        rows_out.append(f"| {name} ({tk}) | {c0:,.2f} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {align} | {sig_txt} |")
-        drows.append((f"{name} ({tk})", f"{c0:,.2f}", arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), align, sig_txt))
+        rows_out.append(f"| {mdlabel} | {c0:,.2f} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {align} | {sym7} | {sig_txt} |")
+        drows.append((htmlabel, f"{c0:,.2f}", arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), align, sym7, sig_txt))
+        interps.append((mdlabel, htmlabel, words7, interpret(c0, m30, m60, m120, align_key, sig)))
     asof = asof or TO
     md = []
     md.append(f"# 📈 관심종목 이동평균선 브리핑")
@@ -140,11 +190,16 @@ def main():
     md.append(f"- 30일선 상회 **{n_up}** / 하회 **{n_dn}**  ·  정배열 **{n_bull}** / 역배열 **{n_bear}**")
     md.append(f"- 오늘 상향돌파 **{n_break}** · 이탈 **{n_lose}**" + (f"  ·  데이터 없음 {len(missing)}" if missing else ""))
     md.append("")
-    md.append("| 종목 | 종가 | vs 30일선 | vs 60일선 | vs 120일선 | 배열 | 오늘 신호 |")
-    md.append("| --- | --- | --- | --- | --- | --- | --- |")
+    md.append("| 종목 | 종가 | vs 30일선 | vs 60일선 | vs 120일선 | 배열 | 최근7일 | 오늘 신호 |")
+    md.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
     md += rows_out
     md.append("")
-    md.append("> ▲ 상회 / ▼ 하회 (괄호=이격도%). 정배열=30>60>120일선, 역배열=반대. 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.")
+    md.append("## 🧭 종목별 해석")
+    md.append("")
+    for mdl, _, w7, txt in interps:
+        md.append(f"- {mdl} — 최근 7일(과거→최근): {w7} · {txt}")
+    md.append("")
+    md.append("> ▲ 상회 / ▼ 하회 (괄호=이격도%). 정배열=30>60>120일선. 최근7일 ▲=상승·▼=하락(과거→최근). 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.")
     md.append("")
     text = "\n".join(md) + "\n"
     (OUT/"latest.md").write_text(text, encoding="utf-8")
@@ -156,19 +211,26 @@ def main():
         if v.startswith("▲"): return "#16a34a"
         if v.startswith("▼"): return "#dc2626"
         return "#334155"
-    head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","30일선","60일선","120일선","배열","오늘 신호"])
+    head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","30일선","60일선","120일선","배열","최근7일","오늘 신호"])
     body = ""
     for r in drows:
         tds = ""
         for i,v in enumerate(r):
             col = cellcol(v) if i in (2,3,4) else "#0f172a"
-            tds += f"<td style='padding:6px 10px;border:1px solid #e2e8f0;color:{col};white-space:nowrap'>{esc(v)}</td>"
+            cell = v if i == 0 else esc(v)
+            tds += f"<td style='padding:6px 10px;border:1px solid #e2e8f0;color:{col};white-space:nowrap'>{cell}</td>"
         body += f"<tr>{tds}</tr>"
+    interp_html = "".join(
+        f"<li><b>{h}</b> — 최근 7일(과거→최근): {esc(w7)} · {esc(t)}</li>"
+        for _, h, w7, t in interps
+    )
     html = f"""<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#0f172a">
 <h2 style="margin:0 0 6px">📈 관심종목 이동평균선 브리핑</h2>
 <p style="margin:0 0 4px;color:#475569">기준일(전일 종가): <b>{esc(asof)}</b> · 종목 {len(items)}개 · 생성 {TODAY.isoformat()}</p>
 <p style="margin:0 0 10px;color:#475569">30일선 상회 <b>{n_up}</b> / 하회 <b>{n_dn}</b> · 정배열 <b>{n_bull}</b> / 역배열 <b>{n_bear}</b> · 오늘 상향돌파 <b>{n_break}</b> · 이탈 <b>{n_lose}</b></p>
 <table style="border-collapse:collapse;font-size:13px"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>
+<h3 style="margin:14px 0 6px">🧭 종목별 해석</h3>
+<ul style="margin:0;padding-left:18px;color:#334155;font-size:13px;line-height:1.6">{interp_html}</ul>
 <p style="margin:10px 0 0;color:#94a3b8;font-size:11px">▲ 상회 / ▼ 하회 (괄호=이격도%). 정배열=30&gt;60&gt;120일선. 신호=전일 대비 당일 돌파·이탈·골든/데드크로스.</p>
 </div>"""
     (OUT/"latest.html").write_text(html, encoding="utf-8")
