@@ -21,8 +21,9 @@ jobs:
   brief:
     runs-on: ubuntu-latest
     env:
-      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
-      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+      # 사용자명(수신/발신 주소)은 비밀 아님 → 직접 지정. 비밀번호만 시크릿(GMAIL_MOVING_AVERAGE = Gmail 앱 비밀번호).
+      MAIL_USERNAME: kang0302@gmail.com
+      MAIL_PASSWORD: ${{ secrets.GMAIL_MOVING_AVERAGE }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -62,9 +63,9 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           secure: true
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          from: MoneyTree MA Brief <${{ secrets.MAIL_USERNAME }}>
+          username: ${{ env.MAIL_USERNAME }}
+          password: ${{ env.MAIL_PASSWORD }}
+          from: MoneyTree MA Brief <${{ env.MAIL_USERNAME }}>
           to: kang0302@gmail.com
           subject: "[MoneyTree] 관심종목 이동평균선 브리핑"
           html_body: file://data/ma_brief/latest.html
