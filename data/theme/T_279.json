@@ -18,7 +18,15 @@
     "dataAsOf": "2026-05-31T00:00:00+09:00",
     "description": "기업용AI데이터플랫폼+스토리지 — 12 자산. 기존 6 (Pure Storage·MongoDB·Palantir·Snowflake·Datadog·Oracle) + 신규 6 (NetApp·IBM·Nutanix·VAST데이터·WEKA·DDN). 4 BF (HDD·DB/검색/DW·저장최적화·옵저버빌리티/분석) + 5 macro IMPACTS (AI수요확대·AI추론확대·LLM확산·Agentic AI확산·엣지컴퓨팅확산). 에이전트 AI 긴 컨텍스트 추론용 고속 스토리지 강자.",
     "notes": "12 ASSET + 4 BF + 5 MACRO",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-13",
+        "kind": "보강",
+        "title": "스노우플레이크(A_274) 보강",
+        "detail": "스노우플레이크의 오픈AI 협력(2026.2)·데이터클라우드 공유 CHR·AI 데이터 SaaS 매크로를 보강했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -442,6 +450,50 @@
       "id": "M_309",
       "type": "MACRO",
       "name": "엣지컴퓨팅확산"
+    },
+    {
+      "id": "A_586",
+      "type": "ASSET",
+      "name": "오픈AI(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US",
+        "theme_role": "1궤도"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "M_375",
+      "type": "MACRO",
+      "name": "AI데이터SaaS_ARR폭증"
+    },
+    {
+      "id": "M_280",
+      "type": "MACRO",
+      "name": "비정형데이터확산"
+    },
+    {
+      "id": "C_1649",
+      "type": "CHARACTER",
+      "name": "데이터클라우드공유_스노우플레이크"
     }
   ],
   "edges": [
@@ -599,6 +651,56 @@
       "from": "M_309",
       "to": "T_279",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_586",
+      "to": "T_279",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006470"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "A_586",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_006471"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_1649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006472"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_375",
+      "to": "T_279",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006473"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_280",
+      "to": "T_279",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006474"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     }
   ],
   "links": [
@@ -756,6 +858,56 @@
       "from": "M_309",
       "to": "T_279",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_586",
+      "to": "T_279",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006470"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "A_586",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_006471"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_1649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006472"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_375",
+      "to": "T_279",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006473"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_280",
+      "to": "T_279",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006474"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     }
   ]
 }

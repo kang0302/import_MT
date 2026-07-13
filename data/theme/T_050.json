@@ -18,7 +18,15 @@
     "dataAsOf": "2026-07-05T00:00:00+09:00",
     "description": "에이전틱 AI가 좌석기반 SaaS 과금모델(ERP·워크플로·CRM)을 잠식할 수 있다는 'SaaS 멸망론'에 노출된 소프트웨어 기업군.",
     "notes": "T_050 — AI공포트레이드 산업별 분할(2026-07-05)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-13",
+        "kind": "보강",
+        "title": "스노우플레이크(A_274) 보강",
+        "detail": "스노우플레이크를 AI 공포 반증 사례로 편입하고 데이터클라우드 공유 CHR·AI 데이터 SaaS 매크로를 보강했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -206,6 +214,44 @@
         "returnsAsOf": "2026-07-09",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_274",
+      "type": "ASSET",
+      "name": "스노우플레이크",
+      "exposure": {
+        "ticker": "SNOW",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.2580283375079557,
+        "return_3d": -0.4909796757250562,
+        "return_7d": 2.7308447937131497,
+        "return_15d": 11.483029165955983,
+        "return_1m": 9.09204706667779,
+        "return_ytd": 20.64510174888099,
+        "return_1y": 17.823343848580443,
+        "return_2y": 82.80660047545796,
+        "return_3y": 51.52129817444218,
+        "close": 261.45,
+        "marketCap": 90618570000,
+        "valuationAsOf": "2026-07-12",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-09",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "M_375",
+      "type": "MACRO",
+      "name": "AI데이터SaaS_ARR폭증"
+    },
+    {
+      "id": "C_1649",
+      "type": "CHARACTER",
+      "name": "데이터클라우드공유_스노우플레이크"
     }
   ],
   "edges": [
@@ -348,6 +394,36 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "T_050",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006475"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_1649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006476"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_375",
+      "to": "T_050",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006477"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     }
   ],
   "links": [
@@ -489,6 +565,36 @@
         "EV_001605"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "T_050",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006475"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_1649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006476"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_375",
+      "to": "T_050",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006477"
+      ],
+      "confidence": 0.74,
       "status": "verified"
     }
   ]
