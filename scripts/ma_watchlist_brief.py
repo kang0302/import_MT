@@ -66,6 +66,14 @@ def hist_kr(ticker):
             return d
     return None
 
+def hist_hk(ticker):
+    # 홍콩(예: 2800.HK): EODHD 우선, 실패 시 FMP
+    if EODHD_KEY:
+        d = _get(f"{EOD_BASE}/{ticker}", {"api_token": EODHD_KEY, "fmt": "json", "from": FROM, "to": TO})
+        if isinstance(d, list) and len(d) > 30:
+            return d
+    return hist_us(ticker)
+
 def closes_desc(rows):
     """[{date,close}, ...] → 최신순 종가 리스트 + 최신 날짜"""
     clean = [(r.get("date"), r.get("close")) for r in rows if r.get("date") and r.get("close") is not None]
@@ -179,7 +187,7 @@ def main():
         label = f"{name} ({tk})"
         mdlabel = f"[{label}]({link})"
         htmlabel = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
-        rows = hist_kr(tk) if co == "KR" else hist_us(tk)
+        rows = hist_kr(tk) if co == "KR" else (hist_hk(tk) if co == "HK" else hist_us(tk))
         if not rows:
             rows_out.append(f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — |")
             drows.append((htmlabel,"데이터 없음","—","—","—","—","—","—")); interps.append((mdlabel, htmlabel, "—", "데이터 없음(해석 불가).")); missing.append(name); continue
