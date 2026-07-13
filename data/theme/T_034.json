@@ -18,7 +18,15 @@
     "dataAsOf": "2026-02-21T16:00:00+09:00",
     "notes": "g34 신규 생성 · 인프라 SW 보완 레이어",
     "sources": [],
-    "provenanceSeed": "T_034 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_034 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-13",
+        "kind": "보강",
+        "title": "스노우플레이크(A_274) 보강",
+        "detail": "스노우플레이크의 AI 구동형 DW를 생성형 AI 보완 인프라SW로 편입(BF 데이터/AI·신규 CHR)하고 매크로를 보강했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -368,6 +376,21 @@
       "id": "M_034",
       "type": "MACRO",
       "name": "LLM확산"
+    },
+    {
+      "id": "M_375",
+      "type": "MACRO",
+      "name": "AI데이터SaaS_ARR폭증"
+    },
+    {
+      "id": "BF_382",
+      "type": "BUSINESS_FIELD",
+      "name": "데이터/AI"
+    },
+    {
+      "id": "C_3244",
+      "type": "CHARACTER",
+      "name": "AI구동가능DW제공매출성장"
     }
   ],
   "edges": [
@@ -600,6 +623,36 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "BF_382",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006483"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_3244",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006484"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_375",
+      "to": "T_034",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006485"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     }
   ],
   "links": [
@@ -831,6 +884,36 @@
         "EV_001003"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "BF_382",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006483"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_3244",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006484"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_375",
+      "to": "T_034",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006485"
+      ],
+      "confidence": 0.75,
       "status": "verified"
     }
   ]

@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-13",
+        "kind": "보강",
+        "title": "스노우플레이크(A_274) 보강",
+        "detail": "스노우플레이크-오픈AI 협력(2026.2)으로 오픈AI 생태계 데이터 플랫폼 축에 편입하고 AI 구동 DW CHR·매크로를 보강했다."
+      },
+      {
         "date": "2026-07-11",
         "kind": "변경",
         "title": "허브형→전 자산 1궤도 재구조화",
@@ -422,6 +428,49 @@
       "id": "C_2649",
       "type": "CHARACTER",
       "name": "오픈AI스타게이트투자소프트뱅크"
+    },
+    {
+      "id": "A_274",
+      "type": "ASSET",
+      "name": "스노우플레이크",
+      "exposure": {
+        "ticker": "SNOW",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.2580283375079557,
+        "return_3d": -0.4909796757250562,
+        "return_7d": 2.7308447937131497,
+        "return_15d": 11.483029165955983,
+        "return_1m": 9.09204706667779,
+        "return_ytd": 20.64510174888099,
+        "return_1y": 17.823343848580443,
+        "return_2y": 82.80660047545796,
+        "return_3y": 51.52129817444218,
+        "close": 261.45,
+        "marketCap": 90618570000,
+        "valuationAsOf": "2026-07-12",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-09",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "M_051",
+      "type": "MACRO",
+      "name": "AI수요확대"
+    },
+    {
+      "id": "M_276",
+      "type": "MACRO",
+      "name": "Agentic AI 확산"
+    },
+    {
+      "id": "C_3244",
+      "type": "CHARACTER",
+      "name": "AI구동가능DW제공매출성장"
     }
   ],
   "edges": [
@@ -684,6 +733,56 @@
       ],
       "confidence": 0.78,
       "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006478"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "A_586",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_006479"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_3244",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006480"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_051",
+      "to": "T_193",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006481"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_276",
+      "to": "T_193",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006482"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     }
   ],
   "links": [
@@ -945,6 +1044,56 @@
         "EV_004611"
       ],
       "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "T_193",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006478"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "A_586",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_006479"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_274",
+      "to": "C_3244",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006480"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_051",
+      "to": "T_193",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006481"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_276",
+      "to": "T_193",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006482"
+      ],
+      "confidence": 0.74,
       "status": "verified"
     }
   ]
