@@ -206,9 +206,11 @@ def main():
         # 종목명 링크: 국내=네이버금융, 해외=야후파이낸스
         link = (f"https://finance.naver.com/item/main.naver?code={tk}" if co == "KR"
                 else f"https://finance.yahoo.com/quote/{tk}")
+        sector = it.get("sector", "")
         label = f"{name} ({tk})"
-        mdlabel = f"[{label}]({link})"
-        htmlabel = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
+        mdlabel = (f"`{sector}` " if sector else "") + f"[{label}]({link})"
+        _badge = (f"<span style='display:inline-block;padding:0 5px;margin-right:4px;border-radius:4px;background:#eef2ff;color:#4338ca;font-size:11px;vertical-align:middle'>{sector}</span>" if sector else "")
+        htmlabel = _badge + f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
         rows = hist_kr(tk) if co == "KR" else (hist_hk(tk) if co == "HK" else hist_us(tk))
         if not rows:
             records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 없음","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
