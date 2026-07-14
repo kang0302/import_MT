@@ -210,7 +210,8 @@ def main():
         label = f"{name} ({tk})"
         mdlabel = (f"`{sector}` " if sector else "") + f"[{label}]({link})"
         _badge = (f"<span style='display:inline-block;padding:0 5px;margin-right:4px;border-radius:4px;background:#eef2ff;color:#4338ca;font-size:11px;vertical-align:middle'>{sector}</span>" if sector else "")
-        htmlabel = _badge + f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
+        htmlabel_plain = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
+        htmlabel = _badge + htmlabel_plain
         rows = hist_kr(tk) if co == "KR" else (hist_hk(tk) if co == "HK" else hist_us(tk))
         if not rows:
             records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 없음","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
@@ -240,7 +241,7 @@ def main():
         mdrow = f"| {mdlabel} | {c0:,.2f} | {arrow(c0,m5)} | {arrow(c0,m15)} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {sym7} | {sig_txt} |"
         records.append({"ak":align_key,"above":above_ct,"hg":hg,"md":mdrow,
                         "cells":(htmlabel, f"{c0:,.2f}", arrow(c0,m5), arrow(c0,m15), arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), hg_str, align, sym7, sig_txt),
-                        "il":(mdlabel, htmlabel, momentum_text(cl), interp_full)})
+                        "il":(mdlabel, htmlabel_plain, momentum_text(cl), interp_full)})
     asof = asof or TO
     md = []
     md.append(f"# 📈 관심종목 이동평균선 브리핑")
@@ -287,7 +288,7 @@ def main():
         if g >= -3: return "#dc2626"    # 고점 근접=적
         if g <= -20: return "#2563eb"   # 큰 낙폭=청
         return "#334155"
-    head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","5일선","15일선","30일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
+    head = "".join(f"<th>{h}</th>" for h in ["종목","종가","5일선","15일선","30일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
     def render_body(grp):
         out = ""
         for r in grp:
@@ -304,7 +305,8 @@ def main():
                 else:
                     col = cellcol(v) if i in (2,3,4,5,6) else "#0f172a"
                     cell = v if i == 0 else esc(v)
-                tds += f"<td style='padding:6px 10px;border:1px solid #e2e8f0;color:{col};white-space:nowrap'>{cell}</td>"
+                st = f" style='color:{col}'" if col in ("#dc2626","#2563eb") else ""
+                tds += f"<td{st}>{cell}</td>"
             out += f"<tr>{tds}</tr>"
         return out
     sections = ""
@@ -313,11 +315,19 @@ def main():
         if not grp: continue
         gbody = render_body(grp)
         lis = "".join(f"<li><b>{h}</b> — {esc(t)} {esc(mom)}.</li>" for _, h, mom, t in [r["il"] for r in grp])
-        sections += (f"<h3 style='margin:16px 0 6px'>{glabel} ({len(grp)})</h3>"
-                     f"<table style='border-collapse:collapse;font-size:13px'><thead><tr>{head}</tr></thead><tbody>{gbody}</tbody></table>"
-                     f"<ul style='margin:6px 0 0;padding-left:18px;color:#334155;font-size:13px;line-height:1.6'>{lis}</ul>")
-    html = f"""<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#0f172a">
-<h2 style="margin:0 0 6px">📈 관심종목 이동평균선 브리핑</h2>
+        sections += (f"<h3>{glabel} ({len(grp)})</h3>"
+                     f"<table><thead><tr>{head}</tr></thead><tbody>{gbody}</tbody></table>"
+                     f"<ul>{lis}</ul>")
+    html = f"""<div class="mb">
+<style>
+.mb{{font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#0f172a}}
+.mb h2{{margin:0 0 6px}} .mb h3{{margin:16px 0 6px}}
+.mb table{{border-collapse:collapse;font-size:13px}}
+.mb td,.mb th{{padding:5px 8px;border:1px solid #e2e8f0;white-space:nowrap}}
+.mb th{{background:#f1f5f9;text-align:left}}
+.mb ul{{margin:6px 0 0;padding-left:18px;color:#334155;font-size:12.5px;line-height:1.5}}
+</style>
+<h2>📈 관심종목 이동평균선 브리핑</h2>
 <p style="margin:0 0 4px;color:#475569">기준일(전일 종가): <b>{esc(asof)}</b> · 종목 {len(items)}개 · 생성 {TODAY.isoformat()}</p>
 <p style="margin:0 0 6px;color:#475569">🟢 정배열 <b>{n_bull}</b> · ⚪ 혼조 <b>{n_flat}</b> · 🔴 역배열 <b>{n_bear}</b> · 30일선 상회 <b>{n_up}</b>/하회 <b>{n_dn}</b> · 상향돌파 <b>{n_break}</b>·이탈 <b>{n_lose}</b></p>
 {sections}
