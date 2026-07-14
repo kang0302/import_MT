@@ -18,7 +18,15 @@
     "dataAsOf": "2026-07-05T00:00:00+09:00",
     "description": "중국 본토·홍콩·대만을 아우르는 중화권 대표 지수 ETF(MCHI·EWH·EWT). 텐센트·알리바바·TSMC 등.",
     "notes": "T_585 — 지역/국가별ETF(T_013) 분할",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-14",
+        "kind": "보강",
+        "title": "과창판STAR50(A_2703) 편입",
+        "detail": "중국 본토 STAR Market 추종 ETF(TIGER 차이나과창판STAR50)를 중화권 지수 바스켓에 편입했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -232,6 +240,42 @@
       "id": "M_268",
       "type": "MACRO",
       "name": "중국기술자립화"
+    },
+    {
+      "id": "A_2703",
+      "type": "ASSET",
+      "name": "TIGER차이나과창판STAR50합성",
+      "exposure": {
+        "ticker": "414780",
+        "exchange": "KRX",
+        "country": "KR",
+        "business_desc": "상하이 STAR Market(과창판) 상위 50종목을 합성 추종하는 국내 상장 ETF로 중국 반도체·하드테크에 집중 노출된다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3335",
+      "type": "CHARACTER",
+      "name": "중국STAR반도체지수"
     }
   ],
   "edges": [
@@ -364,6 +408,26 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_2703",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006775"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_2703",
+      "to": "C_3335",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006776"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -495,6 +559,26 @@
         "EV_001736"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_2703",
+      "to": "T_585",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006775"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_2703",
+      "to": "C_3335",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006776"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]
