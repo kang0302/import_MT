@@ -211,12 +211,13 @@ def main():
         htmlabel = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
         rows = hist_kr(tk) if co == "KR" else (hist_hk(tk) if co == "HK" else hist_us(tk))
         if not rows:
-            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 없음","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
+            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 없음","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
         cl, d = closes_desc(rows)
         if d and (asof is None or d > asof): asof = d
         if len(cl) < 30:
-            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 부족 | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 부족","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 부족(해석 불가).")}); missing.append(name); continue
+            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 부족 | — | — | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 부족","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 부족(해석 불가).")}); missing.append(name); continue
         c0 = cl[0]
+        m5, m15 = sma(cl,5), sma(cl,15)
         m30, m60, m120 = sma(cl,30), sma(cl,60), sma(cl,120)
         # 배열
         if None not in (m30,m60,m120) and m30>m60>m120: align="🟢 정배열"; align_key="bull"; n_bull+=1
@@ -231,12 +232,12 @@ def main():
             if "이탈" in s: n_lose+=1
         sig_txt = " · ".join(sig) if sig else "—"
         hg, hg_str = high_gap(cl)
-        above_ct = sum(1 for m in (m30,m60,m120) if m is not None and c0 >= m)
+        above_ct = sum(1 for m in (m5,m15,m30,m60,m120) if m is not None and c0 >= m)
         hp = high_phrase(hg)
         interp_full = interpret(c0, m30, m60, m120, align_key, sig) + ((" " + hp + ".") if hp else "")
-        mdrow = f"| {mdlabel} | {c0:,.2f} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {sym7} | {sig_txt} |"
+        mdrow = f"| {mdlabel} | {c0:,.2f} | {arrow(c0,m5)} | {arrow(c0,m15)} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {sym7} | {sig_txt} |"
         records.append({"ak":align_key,"above":above_ct,"hg":hg,"md":mdrow,
-                        "cells":(htmlabel, f"{c0:,.2f}", arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), hg_str, align, sym7, sig_txt),
+                        "cells":(htmlabel, f"{c0:,.2f}", arrow(c0,m5), arrow(c0,m15), arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), hg_str, align, sym7, sig_txt),
                         "il":(mdlabel, htmlabel, momentum_text(cl), interp_full)})
     asof = asof or TO
     md = []
@@ -253,8 +254,8 @@ def main():
         # 그룹 내 우선순위: ①종가>이평선 개수(3>2>1>0) ②52주 신고가 근접(격차 작은 순)
         return sorted([r for r in records if r["ak"] == ak],
                       key=lambda r: (-(r.get("above", -1)), -(r["hg"] if r.get("hg") is not None else -999.0)))
-    HDR = "| 종목 | 종가 | vs 30일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 최근7일 | 오늘 신호 |"
-    SEP = "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"
+    HDR = "| 종목 | 종가 | vs 5일선 | vs 15일선 | vs 30일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 최근7일 | 오늘 신호 |"
+    SEP = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
     for ak, glabel in GROUPS:
         grp = rank_grp(ak)
         if not grp: continue
@@ -266,7 +267,7 @@ def main():
         for mdl, _, mom, txt in [r["il"] for r in grp]:
             md.append(f"- {mdl} — {txt} {mom}.")
         md.append("")
-    md.append("> ▲(적) 상회·상승 / ▼(청) 하회·하락 (괄호=이격도%). 52주高比=최근1년 최고종가 대비 격차. 정배열=30>60>120일선. 최근7일=과거→최근. 그룹 내 정렬=종가상회 이평선수↓ · 52주 신고가 근접순. 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.")
+    md.append("> ▲(적) 상회·상승 / ▼(청) 하회·하락 (괄호=이격도%). 52주高比=최근1년 최고종가 대비 격차. 이평선=5·15·30·60·120일 · 정배열=30>60>120. 최근7일=과거→최근. 그룹 내 정렬=종가상회 이평선수↓ · 52주 신고가 근접순. 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.")
     md.append("")
     text = "\n".join(md) + "\n"
     (OUT/"latest.md").write_text(text, encoding="utf-8")
@@ -284,22 +285,22 @@ def main():
         if g >= -3: return "#dc2626"    # 고점 근접=적
         if g <= -20: return "#2563eb"   # 큰 낙폭=청
         return "#334155"
-    head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","30일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
+    head = "".join(f"<th style='padding:6px 10px;border:1px solid #e2e8f0;background:#f1f5f9;text-align:left'>{h}</th>" for h in ["종목","종가","5일선","15일선","30일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
     def render_body(grp):
         out = ""
         for r in grp:
             tds = ""
             for i, v in enumerate(r["cells"]):
-                if i == 7:  # 최근7일 시퀀스
+                if i == 9:  # 최근7일 시퀀스
                     cell = "".join(("<span style='color:#dc2626'>▲</span>" if c=="▲" else
                                     "<span style='color:#2563eb'>▼</span>" if c=="▼" else
                                     f"<span style='color:#94a3b8'>{esc(c)}</span>") for c in str(v))
                     col = "#0f172a"
-                elif i == 5:  # 52주 고점比
+                elif i == 7:  # 52주 고점比
                     col = highcol(v)
                     cell = esc(v)
                 else:
-                    col = cellcol(v) if i in (2,3,4) else "#0f172a"
+                    col = cellcol(v) if i in (2,3,4,5,6) else "#0f172a"
                     cell = v if i == 0 else esc(v)
                 tds += f"<td style='padding:6px 10px;border:1px solid #e2e8f0;color:{col};white-space:nowrap'>{cell}</td>"
             out += f"<tr>{tds}</tr>"
@@ -318,7 +319,7 @@ def main():
 <p style="margin:0 0 4px;color:#475569">기준일(전일 종가): <b>{esc(asof)}</b> · 종목 {len(items)}개 · 생성 {TODAY.isoformat()}</p>
 <p style="margin:0 0 6px;color:#475569">🟢 정배열 <b>{n_bull}</b> · ⚪ 혼조 <b>{n_flat}</b> · 🔴 역배열 <b>{n_bear}</b> · 30일선 상회 <b>{n_up}</b>/하회 <b>{n_dn}</b> · 상향돌파 <b>{n_break}</b>·이탈 <b>{n_lose}</b></p>
 {sections}
-<p style="margin:12px 0 0;color:#94a3b8;font-size:11px">▲(적) 상회·상승 / ▼(청) 하회·하락 (괄호=이격도%). 52주高比=최근1년 최고종가 대비 격차. 정배열=30&gt;60&gt;120일선. 최근7일=과거→최근. 신호=전일 대비 당일 돌파·이탈·골든/데드크로스.</p>
+<p style="margin:12px 0 0;color:#94a3b8;font-size:11px">▲(적) 상회·상승 / ▼(청) 하회·하락 (괄호=이격도%). 52주高比=최근1년 최고종가 대비 격차. 이평선=5·15·30·60·120일 · 정배열=30&gt;60&gt;120. 최근7일=과거→최근. 신호=전일 대비 당일 돌파·이탈·골든/데드크로스.</p>
 </div>"""
     (OUT/"latest.html").write_text(html, encoding="utf-8")
     (OUT/f"{TODAY.isoformat()}.html").write_text(html, encoding="utf-8")
