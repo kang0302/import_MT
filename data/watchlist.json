@@ -2,39 +2,404 @@
   "updated": "2026-07-12",
   "note": "이동평균선 브리핑 워치리스트 — 데모 샘플. ticker/exchange/country/name 로 구성. KR은 6자리 코드, US는 티커.",
   "items": [
-    { "ticker": "005930", "exchange": "KOSPI",  "country": "KR", "name": "삼성전자" },
-    { "ticker": "000660", "exchange": "KOSPI",  "country": "KR", "name": "SK하이닉스" },
-    { "ticker": "034020", "exchange": "KOSPI",  "country": "KR", "name": "두산에너빌리티" },
-    { "ticker": "042700", "exchange": "KOSDAQ", "country": "KR", "name": "한미반도체" },
-    { "ticker": "267260", "exchange": "KOSPI",  "country": "KR", "name": "HD현대일렉트릭" },
-    { "ticker": "NVDA",   "exchange": "NASDAQ", "country": "US", "name": "엔비디아" },
-    { "ticker": "AAPL",   "exchange": "NASDAQ", "country": "US", "name": "애플" },
-    { "ticker": "MSFT",   "exchange": "NASDAQ", "country": "US", "name": "마이크로소프트" },
-    { "ticker": "TSM",    "exchange": "NYSE",   "country": "US", "name": "TSMC(ADR)" },
-    { "ticker": "SPY",    "exchange": "NYSEARCA","country": "US", "name": "S&P500 ETF" },
-    { "ticker": "TSLA",   "exchange": "NASDAQ", "country": "US", "name": "테슬라" },
-    { "ticker": "069500", "exchange": "KOSPI",  "country": "KR", "name": "KODEX200" },
-    { "ticker": "229200", "exchange": "KOSDAQ", "country": "KR", "name": "KODEX 코스닥150" },
-    { "ticker": "QQQ",    "exchange": "NASDAQ", "country": "US", "name": "인베스코 QQQ" },
-    { "ticker": "IWM",    "exchange": "NYSEARCA","country": "US", "name": "러셀2000 ETF(IWM)" },
-    { "ticker": "DIA",    "exchange": "NYSEARCA","country": "US", "name": "다우존스 ETF(DIA)" },
-    { "ticker": "2800.HK","exchange": "HKEX",   "country": "HK", "name": "항셍지수 ETF(2800.HK)" },
-    { "ticker": "AMZN",   "exchange": "NASDAQ", "country": "US", "name": "아마존" },
-    { "ticker": "AMD",    "exchange": "NASDAQ", "country": "US", "name": "AMD" },
-    { "ticker": "NFLX",   "exchange": "NASDAQ", "country": "US", "name": "넷플릭스" },
-    { "ticker": "AVGO",   "exchange": "NASDAQ", "country": "US", "name": "브로드컴" },
-    { "ticker": "445290", "exchange": "KOSPI",  "country": "KR", "name": "KODEX 로봇액티브" },
-    { "ticker": "005380", "exchange": "KOSPI",  "country": "KR", "name": "현대차" },
-    { "ticker": "009150", "exchange": "KOSPI",  "country": "KR", "name": "삼성전기" },
-    { "ticker": "011070", "exchange": "KOSPI",  "country": "KR", "name": "LG이노텍" },
-    { "ticker": "277810", "exchange": "KOSDAQ", "country": "KR", "name": "레인보우로보틱스" },
-    { "ticker": "012450", "exchange": "KOSPI",  "country": "KR", "name": "한화에어로스페이스" },
-    { "ticker": "010120", "exchange": "KOSPI",  "country": "KR", "name": "LS일렉트릭" },
-    { "ticker": "033780", "exchange": "KOSPI",  "country": "KR", "name": "KT&G" },
-    { "ticker": "105560", "exchange": "KOSPI",  "country": "KR", "name": "KB금융" },
-    { "ticker": "055550", "exchange": "KOSPI",  "country": "KR", "name": "신한지주" },
-    { "ticker": "079550", "exchange": "KOSPI",  "country": "KR", "name": "LIG넥스원(LIG디펜스)" },
-    { "ticker": "SOXX",   "exchange": "NASDAQ", "country": "US", "name": "iShares 반도체 ETF(SOXX)" },
-    { "ticker": "SMH",    "exchange": "NASDAQ", "country": "US", "name": "VanEck 반도체 ETF(SMH)" }
+    {
+      "ticker": "005930",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "삼성전자",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "000660",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "SK하이닉스",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "034020",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "두산에너빌리티",
+      "sector": "전력·원전"
+    },
+    {
+      "ticker": "042700",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "name": "한미반도체",
+      "sector": "반도체장비"
+    },
+    {
+      "ticker": "267260",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "HD현대일렉트릭",
+      "sector": "전력기기"
+    },
+    {
+      "ticker": "NVDA",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "엔비디아",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "AAPL",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "애플",
+      "sector": "빅테크"
+    },
+    {
+      "ticker": "MSFT",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "마이크로소프트",
+      "sector": "빅테크"
+    },
+    {
+      "ticker": "TSM",
+      "exchange": "NYSE",
+      "country": "US",
+      "name": "TSMC(ADR)",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "SPY",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "S&P500 ETF",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "TSLA",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "테슬라",
+      "sector": "전기차"
+    },
+    {
+      "ticker": "069500",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "KODEX200",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "229200",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "name": "KODEX 코스닥150",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "QQQ",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "인베스코 QQQ",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "IWM",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "러셀2000 ETF(IWM)",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "DIA",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "다우존스 ETF(DIA)",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "2800.HK",
+      "exchange": "HKEX",
+      "country": "HK",
+      "name": "항셍지수 ETF(2800.HK)",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "AMZN",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "아마존",
+      "sector": "빅테크"
+    },
+    {
+      "ticker": "AMD",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "AMD",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "NFLX",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "넷플릭스",
+      "sector": "미디어"
+    },
+    {
+      "ticker": "AVGO",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "브로드컴",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "445290",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "KODEX 로봇액티브",
+      "sector": "로봇ETF"
+    },
+    {
+      "ticker": "005380",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "현대차",
+      "sector": "자동차"
+    },
+    {
+      "ticker": "009150",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "삼성전기",
+      "sector": "전자부품"
+    },
+    {
+      "ticker": "011070",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "LG이노텍",
+      "sector": "전자부품"
+    },
+    {
+      "ticker": "277810",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "name": "레인보우로보틱스",
+      "sector": "로봇"
+    },
+    {
+      "ticker": "012450",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "한화에어로스페이스",
+      "sector": "방산"
+    },
+    {
+      "ticker": "010120",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "LS일렉트릭",
+      "sector": "전력기기"
+    },
+    {
+      "ticker": "033780",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "KT&G",
+      "sector": "필수소비재"
+    },
+    {
+      "ticker": "105560",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "KB금융",
+      "sector": "금융"
+    },
+    {
+      "ticker": "055550",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "신한지주",
+      "sector": "금융"
+    },
+    {
+      "ticker": "079550",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "LIG넥스원(LIG디펜스)",
+      "sector": "방산"
+    },
+    {
+      "ticker": "SOXX",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "iShares 반도체 ETF(SOXX)",
+      "sector": "반도체ETF"
+    },
+    {
+      "ticker": "SMH",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "VanEck 반도체 ETF(SMH)",
+      "sector": "반도체ETF"
+    },
+    {
+      "ticker": "GOOGL",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "알파벳",
+      "sector": "빅테크"
+    },
+    {
+      "ticker": "WDC",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "웨스턴디지털",
+      "sector": "반도체·스토리지"
+    },
+    {
+      "ticker": "SNDK",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "샌디스크",
+      "sector": "반도체·스토리지"
+    },
+    {
+      "ticker": "STX",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "씨게이트",
+      "sector": "반도체·스토리지"
+    },
+    {
+      "ticker": "INTC",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "인텔",
+      "sector": "반도체"
+    },
+    {
+      "ticker": "VRT",
+      "exchange": "NYSE",
+      "country": "US",
+      "name": "버티브홀딩스",
+      "sector": "전력·데이터센터"
+    },
+    {
+      "ticker": "GEV",
+      "exchange": "NYSE",
+      "country": "US",
+      "name": "GE버노바",
+      "sector": "전력·에너지"
+    },
+    {
+      "ticker": "META",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "메타",
+      "sector": "빅테크"
+    },
+    {
+      "ticker": "SPCX",
+      "exchange": "NASDAQ",
+      "country": "US",
+      "name": "스페이스X",
+      "sector": "우주·방산"
+    },
+    {
+      "ticker": "465660",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "TIGER 일본반도체FACTSET",
+      "sector": "반도체ETF"
+    },
+    {
+      "ticker": "396520",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "TIGER 차이나반도체FACTSET",
+      "sector": "반도체ETF"
+    },
+    {
+      "ticker": "0048K0",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "KODEX 차이나휴머노이드로봇",
+      "sector": "로봇ETF"
+    },
+    {
+      "ticker": "396510",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "TIGER 차이나클린에너지SOLACTIVE",
+      "sector": "신재생ETF"
+    },
+    {
+      "ticker": "195930",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "TIGER 유로스탁스50(합성 H)",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "241180",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "TIGER 일본니케이225",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "245710",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "ACE 베트남VN30(합성)",
+      "sector": "지수ETF"
+    },
+    {
+      "ticker": "373220",
+      "exchange": "KOSPI",
+      "country": "KR",
+      "name": "LG에너지솔루션",
+      "sector": "2차전지"
+    },
+    {
+      "ticker": "247540",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "name": "에코프로비엠",
+      "sector": "2차전지"
+    },
+    {
+      "ticker": "086520",
+      "exchange": "KOSDAQ",
+      "country": "KR",
+      "name": "에코프로",
+      "sector": "2차전지"
+    },
+    {
+      "ticker": "GLD",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "SPDR 금 ETF(GLD)",
+      "sector": "원자재ETF·금"
+    },
+    {
+      "ticker": "COPX",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "글로벌X 구리광산 ETF(COPX)",
+      "sector": "원자재ETF·구리"
+    },
+    {
+      "ticker": "SLV",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "iShares 은 ETF(SLV)",
+      "sector": "원자재ETF·은"
+    },
+    {
+      "ticker": "USO",
+      "exchange": "NYSEARCA",
+      "country": "US",
+      "name": "US 오일펀드(USO)",
+      "sector": "원자재ETF·원유"
+    }
   ]
 }
