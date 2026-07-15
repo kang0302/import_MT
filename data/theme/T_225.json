@@ -17,7 +17,21 @@
     ],
     "dataAsOf": "2026-05-14T00:00:00+09:00",
     "notes": "미중 관계 개선 및 미국 농산물 수출 확대 관련 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-15",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 6개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-15",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -207,110 +221,360 @@
       "id": "BF_453",
       "type": "BUSINESS_FIELD",
       "name": "농기계"
+    },
+    {
+      "id": "C_3390",
+      "type": "CHARACTER",
+      "name": "칼륨질소비료1위"
+    },
+    {
+      "id": "C_3391",
+      "type": "CHARACTER",
+      "name": "인산칼륨비료"
+    },
+    {
+      "id": "C_3392",
+      "type": "CHARACTER",
+      "name": "농기계(AGCO)"
+    },
+    {
+      "id": "C_3393",
+      "type": "CHARACTER",
+      "name": "농기계1위(존디어)"
+    },
+    {
+      "id": "C_3394",
+      "type": "CHARACTER",
+      "name": "작물보호제(FMC)"
+    },
+    {
+      "id": "C_3395",
+      "type": "CHARACTER",
+      "name": "종자·작물(코르테바)"
     }
   ],
   "edges": [
     {
       "from": "A_1447",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006896"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
     },
     {
       "from": "A_1443",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006897"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_375",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006898"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_378",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006899"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     },
     {
       "from": "A_1476",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006900"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "A_1477",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006901"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "M_221",
       "to": "T_225",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006904"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "M_219",
       "to": "T_225",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006905"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_375",
       "to": "BF_453",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006902"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_378",
       "to": "BF_453",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006903"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1447",
+      "to": "C_3390",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007032"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1443",
+      "to": "C_3391",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007033"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_375",
+      "to": "C_3392",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007034"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_378",
+      "to": "C_3393",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007035"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1476",
+      "to": "C_3394",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007036"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1477",
+      "to": "C_3395",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007037"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1447",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006896"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
     },
     {
       "from": "A_1443",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006897"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_375",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006898"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_378",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006899"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     },
     {
       "from": "A_1476",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006900"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "A_1477",
       "to": "T_225",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006901"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "M_221",
       "to": "T_225",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006904"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "M_219",
       "to": "T_225",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006905"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_375",
       "to": "BF_453",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006902"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_378",
       "to": "BF_453",
-      "type": "OPERATES"
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006903"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1447",
+      "to": "C_3390",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007032"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1443",
+      "to": "C_3391",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007033"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_375",
+      "to": "C_3392",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007034"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_378",
+      "to": "C_3393",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007035"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1476",
+      "to": "C_3394",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007036"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1477",
+      "to": "C_3395",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007037"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
