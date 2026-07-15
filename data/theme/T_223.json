@@ -21,6 +21,12 @@
     "changelog": [
       {
         "date": "2026-07-15",
+        "kind": "변경",
+        "title": "전 자산 1궤도 승격",
+        "detail": "GE버노바 외 전력 밸류체인 자산·ETF를 모두 THEMED_AS(1궤도)로 승격하고 ETF에 CHR을 보강했다."
+      },
+      {
+        "date": "2026-07-15",
         "kind": "보강",
         "title": "자산별 테마관점 CHR 정의",
         "detail": "자산 10개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
@@ -46,7 +52,9 @@
       "exposure": {
         "ticker": "GEV",
         "exchange": "NYSE",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 2.24534816804145,
@@ -74,7 +82,9 @@
       "exposure": {
         "ticker": "034020",
         "exchange": "KOSPI",
-        "country": "KR"
+        "country": "KR",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": null,
@@ -102,7 +112,9 @@
       "exposure": {
         "ticker": "010120",
         "exchange": "KOSPI",
-        "country": "KR"
+        "country": "KR",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": null,
@@ -130,7 +142,9 @@
       "exposure": {
         "ticker": "298040",
         "exchange": "KOSPI",
-        "country": "KR"
+        "country": "KR",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": null,
@@ -158,7 +172,9 @@
       "exposure": {
         "ticker": "ENR",
         "exchange": "XETRA",
-        "country": "DE"
+        "country": "DE",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 2.2829838067427666,
@@ -186,7 +202,9 @@
       "exposure": {
         "ticker": "267260",
         "exchange": "KOSPI",
-        "country": "KR"
+        "country": "KR",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": null,
@@ -214,7 +232,9 @@
       "exposure": {
         "ticker": "",
         "exchange": "",
-        "country": "JP"
+        "country": "JP",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": null,
@@ -242,7 +262,9 @@
       "exposure": {
         "ticker": "VWS",
         "exchange": "CPH",
-        "country": "DK"
+        "country": "DK",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 1.012373453318327,
@@ -270,7 +292,9 @@
       "exposure": {
         "ticker": "FLNC",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 2.968337730870707,
@@ -298,7 +322,9 @@
       "exposure": {
         "ticker": "PAVE",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 0.8536368486573132,
@@ -326,7 +352,9 @@
       "exposure": {
         "ticker": "XLI",
         "exchange": "NYSEARCA",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 0.044353273826014394,
@@ -354,7 +382,9 @@
       "exposure": {
         "ticker": "GRID",
         "exchange": "NASDAQ",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": 1.273428886438821,
@@ -382,7 +412,9 @@
       "exposure": {
         "ticker": "",
         "exchange": "",
-        "country": "US"
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
       },
       "metrics": {
         "return_1d": null,
@@ -502,6 +534,21 @@
       "id": "C_3381",
       "type": "CHARACTER",
       "name": "가스터빈(미츠비시,비)"
+    },
+    {
+      "id": "C_3423",
+      "type": "CHARACTER",
+      "name": "미국인프라ETF"
+    },
+    {
+      "id": "C_3424",
+      "type": "CHARACTER",
+      "name": "미국산업재ETF"
+    },
+    {
+      "id": "C_3425",
+      "type": "CHARACTER",
+      "name": "전력망ETF"
     }
   ],
   "edges": [
@@ -794,6 +841,156 @@
       ],
       "confidence": 0.66,
       "status": "verified"
+    },
+    {
+      "from": "A_161",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007065"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007066"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_753",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007067"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1467",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007068"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_931",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007069"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1468",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007070"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007071"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1470",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007072"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1471",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007073"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_633",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007074"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1473",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007075"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1474",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007076"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1471",
+      "to": "C_3423",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007077"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_633",
+      "to": "C_3424",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007078"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1473",
+      "to": "C_3425",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007079"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1085,6 +1282,156 @@
         "EV_007023"
       ],
       "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_161",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007065"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007066"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_753",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007067"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1467",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007068"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_931",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007069"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1468",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007070"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007071"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1470",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007072"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1471",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007073"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_633",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007074"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1473",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007075"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1474",
+      "to": "T_223",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007076"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1471",
+      "to": "C_3423",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007077"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_633",
+      "to": "C_3424",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007078"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1473",
+      "to": "C_3425",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007079"
+      ],
+      "confidence": 0.68,
       "status": "verified"
     }
   ]
