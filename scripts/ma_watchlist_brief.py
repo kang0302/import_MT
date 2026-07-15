@@ -208,17 +208,16 @@ def main():
                 else f"https://finance.yahoo.com/quote/{tk}")
         sector = it.get("sector", "")
         label = f"{name} ({tk})"
-        mdlabel = (f"`{sector}` " if sector else "") + f"[{label}]({link})"
-        _badge = (f"<span style='display:inline-block;padding:0 5px;margin-right:4px;border-radius:4px;background:#eef2ff;color:#4338ca;font-size:11px;vertical-align:middle'>{sector}</span>" if sector else "")
-        htmlabel_plain = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
-        htmlabel = _badge + htmlabel_plain
+        mdlabel = f"[{label}]({link})"
+        htmlabel = f"<a href=\"{link}\" style=\"color:#2563eb;text-decoration:none\">{label}</a>"
+        htmlabel_plain = htmlabel
         rows = hist_kr(tk) if co == "KR" else (hist_hk(tk) if co == "HK" else hist_us(tk))
         if not rows:
-            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 없음","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
+            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {sector} | {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — | — |","cells":(sector,htmlabel,"데이터 없음","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
         cl, d = closes_desc(rows)
         if d and (asof is None or d > asof): asof = d
         if len(cl) < 30:
-            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {mdlabel} | 데이터 부족 | — | — | — | — | — | — | — | — | — |","cells":(htmlabel,"데이터 부족","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 부족(해석 불가).")}); missing.append(name); continue
+            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {sector} | {mdlabel} | 데이터 부족 | — | — | — | — | — | — | — | — | — |","cells":(sector,htmlabel,"데이터 부족","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 부족(해석 불가).")}); missing.append(name); continue
         c0 = cl[0]
         m5, m15 = sma(cl,5), sma(cl,15)
         m30, m60, m120 = sma(cl,30), sma(cl,60), sma(cl,120)
@@ -238,9 +237,9 @@ def main():
         above_ct = sum(1 for m in (m5,m15,m30,m60,m120) if m is not None and c0 >= m)
         hp = high_phrase(hg)
         interp_full = interpret(c0, m30, m60, m120, align_key, sig) + ((" " + hp + ".") if hp else "")
-        mdrow = f"| {mdlabel} | {c0:,.2f} | {arrow(c0,m5)} | {arrow(c0,m15)} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {sym7} | {sig_txt} |"
+        mdrow = f"| {sector} | {mdlabel} | {c0:,.2f} | {arrow(c0,m5)} | {arrow(c0,m15)} | {arrow(c0,m30)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {sym7} | {sig_txt} |"
         records.append({"ak":align_key,"above":above_ct,"hg":hg,"md":mdrow,
-                        "cells":(htmlabel, f"{c0:,.2f}", arrow(c0,m5), arrow(c0,m15), arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), hg_str, align, sym7, sig_txt),
+                        "cells":(sector, htmlabel, f"{c0:,.2f}", arrow(c0,m5), arrow(c0,m15), arrow(c0,m30), arrow(c0,m60), arrow(c0,m120), hg_str, align, sym7, sig_txt),
                         "il":(mdlabel, htmlabel_plain, momentum_text(cl), interp_full)})
     asof = asof or TO
     md = []
@@ -257,8 +256,8 @@ def main():
         # 그룹 내 우선순위: ①종가>이평선 개수(3>2>1>0) ②52주 신고가 근접(격차 작은 순)
         return sorted([r for r in records if r["ak"] == ak],
                       key=lambda r: (-(r.get("above", -1)), -(r["hg"] if r.get("hg") is not None else -999.0)))
-    HDR = "| 종목 | 종가 | vs 5일선 | vs 15일선 | vs 30일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 최근7일 | 오늘 신호 |"
-    SEP = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
+    HDR = "| 섹터 | 종목 | 종가 | vs 5일선 | vs 15일선 | vs 30일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 최근7일 | 오늘 신호 |"
+    SEP = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
     for ak, glabel in GROUPS:
         grp = rank_grp(ak)
         if not grp: continue
@@ -288,25 +287,27 @@ def main():
         if g >= -3: return "#dc2626"    # 고점 근접=적
         if g <= -20: return "#2563eb"   # 큰 낙폭=청
         return "#334155"
-    head = "".join(f"<th>{h}</th>" for h in ["종목","종가","5일선","15일선","30일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
+    head = "".join(f"<th>{h}</th>" for h in ["섹터","종목","종가","5일선","15일선","30일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
     def render_body(grp):
         out = ""
         for r in grp:
             tds = ""
             for i, v in enumerate(r["cells"]):
-                if i == 9:  # 최근7일 시퀀스
+                if i == 0:  # 섹터
+                    tds += f"<td style='color:#4338ca'>{esc(v)}</td>"; continue
+                if i == 1:  # 종목(링크 html)
+                    tds += f"<td>{v}</td>"; continue
+                if i == 10:  # 최근7일 시퀀스
                     cell = "".join(("<span style='color:#dc2626'>▲</span>" if c=="▲" else
                                     "<span style='color:#2563eb'>▼</span>" if c=="▼" else
                                     f"<span style='color:#94a3b8'>{esc(c)}</span>") for c in str(v))
-                    col = "#0f172a"
-                elif i == 7:  # 52주 고점比
+                    tds += f"<td>{cell}</td>"; continue
+                if i == 8:  # 52주 고점比
                     col = highcol(v)
-                    cell = esc(v)
                 else:
-                    col = cellcol(v) if i in (2,3,4,5,6) else "#0f172a"
-                    cell = v if i == 0 else esc(v)
+                    col = cellcol(v) if i in (3,4,5,6,7) else "#0f172a"
                 st = f" style='color:{col}'" if col in ("#dc2626","#2563eb") else ""
-                tds += f"<td{st}>{cell}</td>"
+                tds += f"<td{st}>{esc(v)}</td>"
             out += f"<tr>{tds}</tr>"
         return out
     sections = ""

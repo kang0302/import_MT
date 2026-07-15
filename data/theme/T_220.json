@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-15",
+        "kind": "변경",
+        "title": "자산별 CHR로 교체",
+        "detail": "공통 CHR(중소형/대형)을 삭제하고 ETF별 세부 특성 CHR을 부여했다."
+      },
+      {
         "date": "2026-07-13",
         "kind": "보강",
         "title": "엣지 근거 구체 백필 + 2026 이벤트",
@@ -230,16 +236,6 @@
       }
     },
     {
-      "id": "C_147",
-      "type": "CHARACTER",
-      "name": "중소형"
-    },
-    {
-      "id": "C_148",
-      "type": "CHARACTER",
-      "name": "대형"
-    },
-    {
       "id": "M_312",
       "type": "MACRO",
       "name": "가치주투자심리확산"
@@ -253,6 +249,41 @@
       "id": "M_173",
       "type": "MACRO",
       "name": "주주환원정책"
+    },
+    {
+      "id": "C_3343",
+      "type": "CHARACTER",
+      "name": "러셀2000가치"
+    },
+    {
+      "id": "C_3344",
+      "type": "CHARACTER",
+      "name": "미국중소형가치"
+    },
+    {
+      "id": "C_3345",
+      "type": "CHARACTER",
+      "name": "S&P600소형가치"
+    },
+    {
+      "id": "C_3346",
+      "type": "CHARACTER",
+      "name": "S&P400중형가치"
+    },
+    {
+      "id": "C_3347",
+      "type": "CHARACTER",
+      "name": "미국대형가치"
+    },
+    {
+      "id": "C_3348",
+      "type": "CHARACTER",
+      "name": "러셀1000대형가치"
+    },
+    {
+      "id": "C_3349",
+      "type": "CHARACTER",
+      "name": "S&P500대형가치"
     }
   ],
   "edges": [
@@ -327,76 +358,6 @@
       "status": "verified"
     },
     {
-      "from": "A_1408",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006668"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1409",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006669"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1410",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006670"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1411",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006671"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1412",
-      "to": "C_148",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006672"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1413",
-      "to": "C_148",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006673"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1414",
-      "to": "C_148",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006674"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
       "from": "M_312",
       "to": "T_220",
       "type": "IMPACTS",
@@ -424,6 +385,76 @@
         "EV_006677"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1408",
+      "to": "C_3343",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006784"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1409",
+      "to": "C_3344",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006785"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1410",
+      "to": "C_3345",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006786"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1411",
+      "to": "C_3346",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006787"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1412",
+      "to": "C_3347",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006788"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1413",
+      "to": "C_3348",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006789"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1414",
+      "to": "C_3349",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006790"
+      ],
+      "confidence": 0.74,
       "status": "verified"
     }
   ],
@@ -499,76 +530,6 @@
       "status": "verified"
     },
     {
-      "from": "A_1408",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006668"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1409",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006669"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1410",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006670"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1411",
-      "to": "C_147",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006671"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1412",
-      "to": "C_148",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006672"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1413",
-      "to": "C_148",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006673"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1414",
-      "to": "C_148",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_006674"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
       "from": "M_312",
       "to": "T_220",
       "type": "IMPACTS",
@@ -596,6 +557,76 @@
         "EV_006677"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1408",
+      "to": "C_3343",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006784"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1409",
+      "to": "C_3344",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006785"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1410",
+      "to": "C_3345",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006786"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1411",
+      "to": "C_3346",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006787"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1412",
+      "to": "C_3347",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006788"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1413",
+      "to": "C_3348",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006789"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1414",
+      "to": "C_3349",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006790"
+      ],
+      "confidence": 0.74,
       "status": "verified"
     }
   ]
