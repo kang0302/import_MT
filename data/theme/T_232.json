@@ -17,7 +17,21 @@
     ],
     "dataAsOf": "2026-05-18T00:00:00+09:00",
     "notes": "g232 누적 import 기반 중국 희토류 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-16",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 6개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-16",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
+      }
+    ]
   },
   "nodes": [
     {
@@ -176,20 +190,20 @@
       },
       "metrics": {
         "return_1d": null,
-        "close": 7905,
+        "close": 7660,
         "marketCap": null,
         "pe_ttm": null,
-        "valuationAsOf": "2026-07-15",
+        "valuationAsOf": "2026-07-16",
         "valuationSource": "EODHD",
-        "return_3d": -3.361858190709044,
-        "return_7d": -10.27241770715096,
+        "return_3d": -2.91508238276299,
+        "return_7d": -11.1368909512761,
         "return_15d": null,
-        "return_1m": -20.71213640922769,
-        "return_ytd": 7.649344536690905,
-        "return_1y": 99.01672395058647,
+        "return_1m": -23.130958354239837,
+        "return_ytd": 4.312963839475326,
+        "return_1y": 93.08995579576013,
         "return_2y": null,
         "return_3y": 20.893882036878743,
-        "returnsAsOf": "2026-07-15",
+        "returnsAsOf": "2026-07-16",
         "returnsSource": "EODHD"
       }
     },
@@ -202,100 +216,340 @@
       "id": "C_168",
       "type": "CHARACTER",
       "name": "중국희토류30퍼센트"
+    },
+    {
+      "id": "C_3430",
+      "type": "CHARACTER",
+      "name": "중국북방경희토류"
+    },
+    {
+      "id": "C_3431",
+      "type": "CHARACTER",
+      "name": "중국희토류자원기술"
+    },
+    {
+      "id": "C_3432",
+      "type": "CHARACTER",
+      "name": "네오디뮴자석"
+    },
+    {
+      "id": "C_3433",
+      "type": "CHARACTER",
+      "name": "중국남방중희토류"
+    },
+    {
+      "id": "C_3434",
+      "type": "CHARACTER",
+      "name": "홍콩상장희토류"
+    },
+    {
+      "id": "C_3435",
+      "type": "CHARACTER",
+      "name": "희토류ETF"
     }
   ],
   "edges": [
     {
       "from": "A_1499",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007096"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
     },
     {
       "from": "A_1500",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007097"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1501",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007098"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_1502",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007099"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_1503",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007100"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "A_1504",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007101"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "T_232",
       "to": "A_1504",
-      "type": "EXPOSED_TO"
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_007102"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "M_223",
       "to": "T_232",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007103"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "T_232",
       "to": "C_168",
-      "type": "HAS_TRAIT"
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007104"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1499",
+      "to": "C_3430",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007279"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1500",
+      "to": "C_3431",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007280"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1501",
+      "to": "C_3432",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007281"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1502",
+      "to": "C_3433",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007282"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1503",
+      "to": "C_3434",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007283"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1504",
+      "to": "C_3435",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007284"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1499",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007096"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
     },
     {
       "from": "A_1500",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007097"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "A_1501",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007098"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_1502",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007099"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
     },
     {
       "from": "A_1503",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007100"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "A_1504",
       "to": "T_232",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007101"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "T_232",
       "to": "A_1504",
-      "type": "EXPOSED_TO"
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_007102"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     },
     {
       "from": "M_223",
       "to": "T_232",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007103"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
     },
     {
       "from": "T_232",
       "to": "C_168",
-      "type": "HAS_TRAIT"
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007104"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1499",
+      "to": "C_3430",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007279"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1500",
+      "to": "C_3431",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007280"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1501",
+      "to": "C_3432",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007281"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1502",
+      "to": "C_3433",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007282"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1503",
+      "to": "C_3434",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007283"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1504",
+      "to": "C_3435",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007284"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
     }
   ]
 }
