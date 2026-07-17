@@ -314,16 +314,6 @@
       "name": "자율주행고도화"
     },
     {
-      "id": "BF_497",
-      "type": "BUSINESS_FIELD",
-      "name": "로봇반도체플랫폼"
-    },
-    {
-      "id": "BF_498",
-      "type": "BUSINESS_FIELD",
-      "name": "차량MCU"
-    },
-    {
       "id": "C_226",
       "type": "CHARACTER",
       "name": "로봇반도체코어IP공급"
@@ -332,6 +322,36 @@
       "id": "C_227",
       "type": "CHARACTER",
       "name": "머신비전특화"
+    },
+    {
+      "id": "C_3532",
+      "type": "CHARACTER",
+      "name": "휴머노이드AI컴퓨팅_Jetson/Isaac"
+    },
+    {
+      "id": "C_3533",
+      "type": "CHARACTER",
+      "name": "임베디드SoC·FPGA_로봇제어"
+    },
+    {
+      "id": "C_3534",
+      "type": "CHARACTER",
+      "name": "로보틱스엣지SoC_RB플랫폼"
+    },
+    {
+      "id": "C_3535",
+      "type": "CHARACTER",
+      "name": "산업·차량MCU_모터제어"
+    },
+    {
+      "id": "C_3536",
+      "type": "CHARACTER",
+      "name": "모터제어·MEMS센서"
+    },
+    {
+      "id": "C_3537",
+      "type": "CHARACTER",
+      "name": "차량·산업MCU선두_액추에이터제어"
     }
   ],
   "edges": [
@@ -436,66 +456,6 @@
       "status": "verified"
     },
     {
-      "from": "A_055",
-      "to": "BF_497",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000470"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_059",
-      "to": "BF_497",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000471"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_056",
-      "to": "BF_497",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000472"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_062",
-      "to": "BF_498",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000473"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_061",
-      "to": "BF_498",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000474"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_060",
-      "to": "BF_498",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000475"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
       "from": "A_058",
       "to": "C_226",
       "type": "HAS_TRAIT",
@@ -514,6 +474,66 @@
       ],
       "confidence": 0.6,
       "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_3532",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007409"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "C_3533",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007410"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "C_3534",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007411"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "C_3535",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007412"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "C_3536",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007413"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_062",
+      "to": "C_3537",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007414"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "meta": {
@@ -521,7 +541,15 @@
     "metricsStatus": "OK",
     "metricsLastError": "",
     "dataAsOf": "2026-02-21T16:00:00+09:00",
-    "provenanceSeed": "T_006 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_006 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-17",
+        "kind": "보강",
+        "title": "BF 삭제·자산별 CHR 정의",
+        "detail": "제네릭 BF(로봇반도체플랫폼·차량MCU)를 제거하고, 8개 자산 각각의 로봇 반도체 밸류체인 포지션을 CHR로 정의했다(엔비디아 휴머노이드컴퓨팅·AMD 임베디드SoC·퀄컴 로보틱스엣지·NXP/ST/르네사스 모터·MCU제어, ARM 코어IP·Ambarella 머신비전 유지)."
+      }
+    ]
   },
   "links": [
     {
@@ -625,66 +653,6 @@
       "status": "verified"
     },
     {
-      "from": "A_055",
-      "to": "BF_497",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000470"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_059",
-      "to": "BF_497",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000471"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_056",
-      "to": "BF_497",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000472"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_062",
-      "to": "BF_498",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000473"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_061",
-      "to": "BF_498",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000474"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_060",
-      "to": "BF_498",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000475"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
       "from": "A_058",
       "to": "C_226",
       "type": "HAS_TRAIT",
@@ -702,6 +670,66 @@
         "EV_000477"
       ],
       "confidence": 0.6,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_3532",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007409"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "C_3533",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007410"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "C_3534",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007411"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "C_3535",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007412"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "C_3536",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007413"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_062",
+      "to": "C_3537",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007414"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]
