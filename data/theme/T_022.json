@@ -18,7 +18,15 @@
     "dataAsOf": "2026-02-21T16:00:00+09:00",
     "notes": "g22 누적 import 기반 T_022 freeze",
     "sources": [],
-    "provenanceSeed": "T_022 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_022 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-17",
+        "kind": "보강",
+        "title": "자산별 CHR 정의",
+        "detail": "5개 자산의 전고체 배터리 포지션을 CHR로 정의했다(도요타 상용화선두·파나소닉 셀제조·퀀텀스케이프 리튬메탈음극·솔리드파워 황화물전해질·TDK 소형전고체)."
+      }
+    ]
   },
   "nodes": [
     {
@@ -202,6 +210,31 @@
       }
     },
     {
+      "id": "C_3579",
+      "type": "CHARACTER",
+      "name": "완성차_전고체상용화선두"
+    },
+    {
+      "id": "C_3580",
+      "type": "CHARACTER",
+      "name": "배터리셀제조_전고체개발"
+    },
+    {
+      "id": "C_3581",
+      "type": "CHARACTER",
+      "name": "전고체순수주_리튬메탈음극"
+    },
+    {
+      "id": "C_3582",
+      "type": "CHARACTER",
+      "name": "전고체순수주_황화물전해질"
+    },
+    {
+      "id": "C_3583",
+      "type": "CHARACTER",
+      "name": "소형전고체·전자부품"
+    },
+    {
       "id": "M_020",
       "type": "MACRO",
       "name": "EV보급확대"
@@ -307,6 +340,56 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_006",
+      "to": "C_3579",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007466"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_202",
+      "to": "C_3580",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007467"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_203",
+      "to": "C_3581",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007468"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_204",
+      "to": "C_3582",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007469"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_205",
+      "to": "C_3583",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007470"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
@@ -398,6 +481,56 @@
         "EV_000785"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_006",
+      "to": "C_3579",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007466"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_202",
+      "to": "C_3580",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007467"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_203",
+      "to": "C_3581",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007468"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_204",
+      "to": "C_3582",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007469"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_205",
+      "to": "C_3583",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007470"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ]
