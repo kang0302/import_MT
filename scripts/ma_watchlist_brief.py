@@ -195,10 +195,31 @@ def high_phrase(g):
     return f"52주 고점比 {g:+.1f}%"
 
 
+def gapnum(c, m):
+    return None if m is None else round((c/m - 1)*100, 2)
+
+BUCKETS = {
+    "b1": "① 진짜주도주", "b2": "② 조정중추세", "b3": "③ 붕괴임박",
+    "b4": "④ 정배열전환후보", "b5": "⑤ 실질하락추세", "b6": "⑥ 바닥반전초기", "na": "—",
+}
+def bucket_of(ak, ac):
+    # 저스틴 프레임: 배열(ak) × 종가위치(ac=5·20·60·120 중 상회 개수)
+    if ak == "bull":
+        if ac == 4: return "b1"   # 정배열 + 전 이평선 상회 → 진짜 주도주
+        if ac == 0: return "b3"   # 정배열 + 전 이평선 하회 → 붕괴 임박
+        return "b2"               # 정배열 + 단기 이탈(조정 중 추세)
+    if ak == "bear":
+        return "b5" if ac == 0 else "b6"  # 역배열: 전하회=실질하락 / 이평선 위=바닥반전초기
+    # flat(혼조)
+    if ac == 0: return "b5"
+    if ac >= 2: return "b4"       # 가격이 과반 이상 위 → 정배열 전환 후보
+    return "b5"
+
+
 def main():
     wl = json.loads((DATA/"watchlist.json").read_text(encoding="utf-8"))
     items = wl.get("items", [])
-    records, asof = [], None
+    records, jrows, asof = [], [], None
     n_up = n_dn = n_bull = n_bear = n_break = n_lose = 0
     missing = []
     for it in items:
@@ -213,11 +234,11 @@ def main():
         htmlabel_plain = htmlabel
         rows = hist_kr(tk) if co == "KR" else (hist_hk(tk) if co == "HK" else hist_us(tk))
         if not rows:
-            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {sector} | {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — |","cells":(sector,htmlabel,"데이터 없음","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); missing.append(name); continue
+            records.append({"ak":"na","above":-1,"hg":None,"bucket":"na","md":f"| {sector} | {mdlabel} | 데이터 없음 | — | — | — | — | — | — | — | — | — |","cells":(sector,htmlabel,"데이터 없음","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 없음(해석 불가).")}); jrows.append({"sector":sector,"name":name,"ticker":tk,"country":co,"link":link,"close":None,"g5":None,"g20":None,"g60":None,"g120":None,"hg":None,"align":"na","above":-1,"bucket":"na","bucketLabel":"—","seq7":"—","signal":"데이터 없음","interp":"데이터 없음(해석 불가)."}); missing.append(name); continue
         cl, d = closes_desc(rows)
         if d and (asof is None or d > asof): asof = d
         if len(cl) < 30:
-            records.append({"ak":"na","above":-1,"hg":None,"md":f"| {sector} | {mdlabel} | 데이터 부족 | — | — | — | — | — | — | — | — |","cells":(sector,htmlabel,"데이터 부족","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 부족(해석 불가).")}); missing.append(name); continue
+            records.append({"ak":"na","above":-1,"hg":None,"bucket":"na","md":f"| {sector} | {mdlabel} | 데이터 부족 | — | — | — | — | — | — | — | — | — |","cells":(sector,htmlabel,"데이터 부족","—","—","—","—","—","—","—","—","—"),"il":(mdlabel,htmlabel,"—","데이터 부족(해석 불가).")}); jrows.append({"sector":sector,"name":name,"ticker":tk,"country":co,"link":link,"close":None,"g5":None,"g20":None,"g60":None,"g120":None,"hg":None,"align":"na","above":-1,"bucket":"na","bucketLabel":"—","seq7":"—","signal":"데이터 부족","interp":"데이터 부족(해석 불가)."}); missing.append(name); continue
         c0 = cl[0]
         m5, m20 = sma(cl,5), sma(cl,20)
         m60, m120 = sma(cl,60), sma(cl,120)
@@ -235,12 +256,19 @@ def main():
         sig_txt = " · ".join(sig) if sig else "—"
         hg, hg_str = high_gap(cl)
         above_ct = sum(1 for m in (m5,m20,m60,m120) if m is not None and c0 >= m)
+        gap5, gap20, gap60, gap120 = gapnum(c0,m5), gapnum(c0,m20), gapnum(c0,m60), gapnum(c0,m120)
+        bkey = bucket_of(align_key, above_ct); blabel = BUCKETS[bkey]
         hp = high_phrase(hg)
+        mom = momentum_text(cl)
         interp_full = interpret(c0, m20, m60, m120, align_key, sig) + ((" " + hp + ".") if hp else "")
-        mdrow = f"| {sector} | {mdlabel} | {c0:,.2f} | {arrow(c0,m5)} | {arrow(c0,m20)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {sym7} | {sig_txt} |"
-        records.append({"ak":align_key,"above":above_ct,"hg":hg,"md":mdrow,
-                        "cells":(sector, htmlabel, f"{c0:,.2f}", arrow(c0,m5), arrow(c0,m20), arrow(c0,m60), arrow(c0,m120), hg_str, align, sym7, sig_txt),
-                        "il":(mdlabel, htmlabel_plain, momentum_text(cl), interp_full)})
+        mdrow = f"| {sector} | {mdlabel} | {c0:,.2f} | {arrow(c0,m5)} | {arrow(c0,m20)} | {arrow(c0,m60)} | {arrow(c0,m120)} | {hg_str} | {align} | {blabel} | {sym7} | {sig_txt} |"
+        records.append({"ak":align_key,"above":above_ct,"hg":hg,"bucket":bkey,"md":mdrow,
+                        "cells":(sector, htmlabel, f"{c0:,.2f}", arrow(c0,m5), arrow(c0,m20), arrow(c0,m60), arrow(c0,m120), hg_str, align, blabel, sym7, sig_txt),
+                        "il":(mdlabel, htmlabel_plain, mom, interp_full)})
+        jrows.append({"sector":sector,"name":name,"ticker":tk,"country":co,"link":link,"close":c0,
+                      "g5":gap5,"g20":gap20,"g60":gap60,"g120":gap120,"hg":hg,
+                      "align":align_key,"above":above_ct,"bucket":bkey,"bucketLabel":blabel,
+                      "seq7":sym7,"signal":sig_txt,"interp":(interp_full+" "+mom+".")})
     asof = asof or TO
     md = []
     md.append(f"# 📈 관심종목 이동평균선 브리핑")
@@ -256,8 +284,8 @@ def main():
         # 그룹 내 우선순위: ①종가>이평선 개수(3>2>1>0) ②52주 신고가 근접(격차 작은 순)
         return sorted([r for r in records if r["ak"] == ak],
                       key=lambda r: (-(r.get("above", -1)), -(r["hg"] if r.get("hg") is not None else -999.0)))
-    HDR = "| 섹터 | 종목 | 종가 | vs 5일선 | vs 20일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 최근7일 | 오늘 신호 |"
-    SEP = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
+    HDR = "| 섹터 | 종목 | 종가 | vs 5일선 | vs 20일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 버킷 | 최근7일 | 오늘 신호 |"
+    SEP = "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"
     for ak, glabel in GROUPS:
         grp = rank_grp(ak)
         if not grp: continue
@@ -275,6 +303,14 @@ def main():
     (OUT/"latest.md").write_text(text, encoding="utf-8")
     (OUT/f"{TODAY.isoformat()}.md").write_text(text, encoding="utf-8")
 
+    # 구조화 JSON (앱 인터랙티브 표: 정렬/필터/버킷용)
+    payload = {"asof": asof, "generated": TODAY.isoformat(), "count": len(items),
+               "summary": {"bull": n_bull, "flat": n_flat, "bear": n_bear,
+                           "up": n_up, "dn": n_dn, "break": n_break, "lose": n_lose},
+               "buckets": BUCKETS, "items": jrows}
+    (OUT/"latest.json").write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+    (OUT/f"{TODAY.isoformat()}.json").write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
     # HTML (이메일 본문용)
     def esc(s): return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
     def cellcol(v):
@@ -287,7 +323,7 @@ def main():
         if g >= -3: return "#dc2626"    # 고점 근접=적
         if g <= -20: return "#2563eb"   # 큰 낙폭=청
         return "#334155"
-    head = "".join(f"<th>{h}</th>" for h in ["섹터","종목","종가","5일선","20일선","60일선","120일선","52주高比","배열","최근7일","오늘 신호"])
+    head = "".join(f"<th>{h}</th>" for h in ["섹터","종목","종가","5일선","20일선","60일선","120일선","52주高比","배열","버킷","최근7일","오늘 신호"])
     def render_body(grp):
         out = ""
         for r in grp:
@@ -297,11 +333,13 @@ def main():
                     tds += f"<td style='color:#4338ca'>{esc(v)}</td>"; continue
                 if i == 1:  # 종목(링크 html)
                     tds += f"<td>{v}</td>"; continue
-                if i == 9:  # 최근7일 시퀀스
+                if i == 10:  # 최근7일 시퀀스
                     cell = "".join(("<span style='color:#dc2626'>▲</span>" if c=="▲" else
                                     "<span style='color:#2563eb'>▼</span>" if c=="▼" else
                                     f"<span style='color:#94a3b8'>{esc(c)}</span>") for c in str(v))
                     tds += f"<td>{cell}</td>"; continue
+                if i == 9:  # 버킷
+                    tds += f"<td style='color:#0f172a;font-weight:600'>{esc(v)}</td>"; continue
                 if i == 7:  # 52주 고점比
                     col = highcol(v)
                 else:
