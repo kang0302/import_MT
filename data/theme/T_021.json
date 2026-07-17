@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_021",
-  "themeName": "글로벌아날로그반도체설계&제조",
+  "themeName": "글로벌아날로그반도체_종합차량산업MCU",
   "meta": {
     "periodDefault": "3d",
     "periodOptions": [
@@ -15,45 +15,87 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
-    "notes": "g21 누적 import 기반 T_021 freeze",
+    "dataAsOf": "2026-07-17T00:00:00+09:00",
+    "notes": "종합·브로드라인 아날로그와 차량·산업용 MCU 중심의 아날로그 반도체 그룹.",
     "sources": [],
-    "provenanceSeed": "T_021 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "changelog": [
+      {
+        "date": "2026-07-17",
+        "kind": "변경",
+        "title": "T_021 아날로그반도체 3분할",
+        "detail": "기존 '글로벌아날로그반도체설계&제조'(T_021, 16종)를 사업특성별 3그룹으로 분리하면서 재편했다. SOXX·XSD ETF와 셈텍(Semtech)은 제외. 자산별 포지션 CHR을 정의했다."
+      }
+    ]
   },
   "nodes": [
     {
       "id": "T_021",
       "type": "THEME",
-      "name": "글로벌아날로그반도체설계&제조"
+      "name": "글로벌아날로그반도체_종합차량산업MCU"
     },
     {
-      "id": "A_057",
+      "id": "A_189",
       "type": "ASSET",
-      "name": "암바렐라",
+      "name": "텍사스인스트루먼트",
       "exposure": {
-        "ticker": "AMBA",
+        "ticker": "TXN",
         "exchange": "NASDAQ",
         "country": "US"
       },
       "metrics": {
-        "return_1d": -8.115563298490125,
+        "return_1d": -3.3102028619808044,
         "asof": "2026-01-31T09:00:00+09:00",
         "currency": "USD",
         "last_price": null,
-        "return_7d": -11.876914508493453,
-        "return_15d": 0.47626607397999177,
+        "return_7d": -0.7091714967609852,
+        "return_15d": -3.922668338227042,
         "return_30d": null,
         "return_90d": null,
         "per": null,
         "market_cap": null,
-        "return_3d": -12.097222222222225,
-        "return_1m": -9.766181921870542,
-        "return_ytd": -15.792974986695052,
-        "return_1y": -4.94142385100631,
-        "return_2y": 3.0278365619404113,
-        "return_3y": -21.56401041021192,
-        "close": 63.29,
-        "marketCap": 2776417429,
+        "return_3d": -2.461734266671123,
+        "return_1m": -7.059424267568759,
+        "return_ytd": 64.04912122577737,
+        "return_1y": 33.36691701776881,
+        "return_2y": 45.61728086404322,
+        "return_3y": 62.85650374678448,
+        "close": 291.22,
+        "marketCap": 265037283460,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_191",
+      "type": "ASSET",
+      "name": "아날로그디바이스",
+      "exposure": {
+        "ticker": "ADI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.66779210149376,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 0.3957470384929884,
+        "return_15d": -7.89766676348147,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -1.4196523406129424,
+        "return_1m": -11.003788764675615,
+        "return_ytd": 39.011470738657096,
+        "return_1y": 58.27718159886863,
+        "return_2y": 62.800547617010324,
+        "return_3y": 99.28253469494632,
+        "close": 380.53,
+        "marketCap": 185351231331,
         "valuationAsOf": "2026-07-16",
         "valuationSource": "FMP",
         "returnsAsOf": "2026-07-16",
@@ -132,41 +174,6 @@
       }
     },
     {
-      "id": "A_189",
-      "type": "ASSET",
-      "name": "텍사스인스트루먼트",
-      "exposure": {
-        "ticker": "TXN",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -3.3102028619808044,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -0.7091714967609852,
-        "return_15d": -3.922668338227042,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -2.461734266671123,
-        "return_1m": -7.059424267568759,
-        "return_ytd": 64.04912122577737,
-        "return_1y": 33.36691701776881,
-        "return_2y": 45.61728086404322,
-        "return_3y": 62.85650374678448,
-        "close": 291.22,
-        "marketCap": 265037283460,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
       "id": "A_190",
       "type": "ASSET",
       "name": "마이크로칩테크놀로지",
@@ -202,414 +209,14 @@
       }
     },
     {
-      "id": "A_191",
-      "type": "ASSET",
-      "name": "아날로그디바이스",
-      "exposure": {
-        "ticker": "ADI",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -2.66779210149376,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": 0.3957470384929884,
-        "return_15d": -7.89766676348147,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -1.4196523406129424,
-        "return_1m": -11.003788764675615,
-        "return_ytd": 39.011470738657096,
-        "return_1y": 58.27718159886863,
-        "return_2y": 62.800547617010324,
-        "return_3y": 99.28253469494632,
-        "close": 380.53,
-        "marketCap": 185351231331,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_192",
-      "type": "ASSET",
-      "name": "마벨테크놀로지",
-      "exposure": {
-        "ticker": "MRVL",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -8.707456608164444,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -18.378846987429554,
-        "return_15d": -31.947958077340076,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -13.437227049142642,
-        "return_1m": -39.03781403781403,
-        "return_ytd": 110.64996084573218,
-        "return_1y": 160.04695484049165,
-        "return_2y": 160.87558880576336,
-        "return_3y": 202.97666934835078,
-        "close": 188.3,
-        "marketCap": 164906737800,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_193",
-      "type": "ASSET",
-      "name": "셈텍",
-      "exposure": {
-        "ticker": "SMTC",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -5.598284277473741,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": 0.9889240506329111,
-        "return_15d": -19.45355880868247,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -3.4052213393870545,
-        "return_1m": -26.764199655765918,
-        "return_ytd": 69.61201169279829,
-        "return_1y": 165.4398003742982,
-        "return_2y": 245.9349593495935,
-        "return_3y": 367.24011713030745,
-        "close": 127.65,
-        "marketCap": 11890746595,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_194",
-      "type": "ASSET",
-      "name": "메이컴테크놀로지솔루션즈",
-      "exposure": {
-        "ticker": "MTSI",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -5.982526789980202,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -9.622072042516894,
-        "return_15d": -26.157928594403334,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -6.372349102773245,
-        "return_1m": -28.40138264417703,
-        "return_ytd": 57.45884773662551,
-        "return_1y": 100.64821558630737,
-        "return_2y": 141.3826338386051,
-        "return_3y": 325.20450686834386,
-        "close": 275.49,
-        "marketCap": 21018722779,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_195",
-      "type": "ASSET",
-      "name": "나비타스반도체",
-      "exposure": {
-        "ticker": "NVTS",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -11.379050489826682,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -15.939957112223023,
-        "return_15d": -35.80786026200874,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -8.62470862470862,
-        "return_1m": -50.442477876106196,
-        "return_ytd": 40.334128878281604,
-        "return_1y": 88.76404494382022,
-        "return_2y": 157.3304157549234,
-        "return_3y": 14.064015518913674,
-        "close": 11.755,
-        "marketCap": 2862990365,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_196",
-      "type": "ASSET",
-      "name": "울프스피드",
-      "exposure": {
-        "ticker": "WOLF",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -11.168091168091177,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -13.388888888888895,
-        "return_15d": -32.02528885982123,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -7.340267459138183,
-        "return_1m": -36.48400896312896,
-        "return_ytd": 64.71209720021132,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "close": 31.19,
-        "marketCap": 1621009799,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_197",
-      "type": "ASSET",
-      "name": "인피니언테크놀로지스",
-      "exposure": {
-        "ticker": "IFNNY",
-        "exchange": "OTC",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -5.3963335915311,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -9.997543601080816,
-        "return_15d": -18.323673651359783,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -7.111167448345801,
-        "return_1m": -22.050845654717588,
-        "return_ytd": 63.57142857142859,
-        "return_1y": 68.07339449541283,
-        "return_2y": 91.83246073298427,
-        "return_3y": 81.07239930812949,
-        "close": 73.28,
-        "marketCap": 95420717341,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_198",
-      "type": "ASSET",
-      "name": "로옴",
-      "exposure": {
-        "ticker": "ROHCY",
-        "exchange": "OTC",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -5.743879472693026,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -8.024502297090342,
-        "return_15d": -9.302325581395344,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -7.228915662650593,
-        "return_1m": -9.220072551390556,
-        "return_ytd": 110.73684210526315,
-        "return_1y": 132.25058004640374,
-        "return_2y": 109.56036287508724,
-        "return_3y": 23.83505154639176,
-        "close": 30.03,
-        "marketCap": 11592632371,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_199",
-      "type": "ASSET",
-      "name": "시에나",
-      "exposure": {
-        "ticker": "CIEN",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -7.085503990823494,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -7.185314267981191,
-        "return_15d": -16.116157148713086,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -12.713272270114938,
-        "return_1m": -16.098055717399284,
-        "return_ytd": 58.01430545395432,
-        "return_1y": 370.6573054109672,
-        "return_2y": 711.373121869783,
-        "return_3y": 782.8564940962762,
-        "close": 388.81,
-        "marketCap": 55037191603,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_200",
-      "type": "ASSET",
-      "name": "SOXX",
-      "exposure": {
-        "ticker": "SOXX",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -4.460892898950053,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -3.8409251572441128,
-        "return_15d": -11.803823773898593,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -4.174418814689041,
-        "return_1m": -15.58596547060228,
-        "return_ytd": 69.11600624820684,
-        "return_1y": 115.42272395029643,
-        "return_2y": 106.61317962299424,
-        "return_3y": 215.36083699916776,
-        "close": 530.5,
-        "marketCap": 42944312398,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
-      "id": "A_201",
-      "type": "ASSET",
-      "name": "XSD",
-      "exposure": {
-        "ticker": "XSD",
-        "exchange": "NYSE_ARCA",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -5.6308654848800765,
-        "asof": "2026-01-31T09:00:00+09:00",
-        "currency": "USD",
-        "last_price": null,
-        "return_7d": -5.283420860821952,
-        "return_15d": -14.098783009593552,
-        "return_30d": null,
-        "return_90d": null,
-        "per": null,
-        "market_cap": null,
-        "return_3d": -5.690572779039038,
-        "return_1m": -19.825349617161294,
-        "return_ytd": 51.121183206106856,
-        "return_1y": 92.9784479476049,
-        "return_2y": 92.70694703220654,
-        "return_3y": 128.07254398991944,
-        "close": 506.8,
-        "marketCap": 2838090643,
-        "valuationAsOf": "2026-07-16",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-07-16",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      }
-    },
-    {
       "id": "BF_047",
       "type": "BUSINESS_FIELD",
       "name": "전력/통합신호"
     },
     {
-      "id": "BF_048",
-      "type": "BUSINESS_FIELD",
-      "name": "DC/네트워킹/인프라"
-    },
-    {
       "id": "BF_049",
       "type": "BUSINESS_FIELD",
       "name": "특정용응용솔루션"
-    },
-    {
-      "id": "C_042",
-      "type": "CHARACTER",
-      "name": "실리콘카바이드기반"
-    },
-    {
-      "id": "C_043",
-      "type": "CHARACTER",
-      "name": "질화갈륨기반"
     },
     {
       "id": "M_018",
@@ -620,39 +227,34 @@
       "id": "M_019",
       "type": "MACRO",
       "name": "AI추론확산"
+    },
+    {
+      "id": "C_3569",
+      "type": "CHARACTER",
+      "name": "아날로그세계1위_브로드라인"
+    },
+    {
+      "id": "C_3570",
+      "type": "CHARACTER",
+      "name": "고성능신호처리_아날로그2위"
+    },
+    {
+      "id": "C_3571",
+      "type": "CHARACTER",
+      "name": "차량·산업아날로그·MCU"
+    },
+    {
+      "id": "C_3572",
+      "type": "CHARACTER",
+      "name": "차량·산업아날로그·센서·MCU"
+    },
+    {
+      "id": "C_3573",
+      "type": "CHARACTER",
+      "name": "MCU·아날로그통합_임베디드"
     }
   ],
   "edges": [
-    {
-      "from": "A_057",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000743"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_060",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000744"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_061",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000745"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
     {
       "from": "A_189",
       "to": "T_021",
@@ -661,126 +263,6 @@
         "EV_000746"
       ],
       "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_190",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000747"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_191",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000748"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_192",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000749"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_193",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000750"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_194",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000751"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_195",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000752"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_196",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000753"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_197",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000754"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_198",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000755"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_199",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000756"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_200",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000757"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_201",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000758"
-      ],
-      "confidence": 0.78,
       "status": "verified"
     },
     {
@@ -794,13 +276,23 @@
       "status": "verified"
     },
     {
-      "from": "A_190",
-      "to": "BF_047",
-      "type": "OPERATES",
+      "from": "A_189",
+      "to": "C_3569",
+      "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000760"
+        "EV_007447"
       ],
-      "confidence": 0.83,
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000748"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -814,33 +306,23 @@
       "status": "verified"
     },
     {
-      "from": "A_196",
-      "to": "BF_047",
-      "type": "OPERATES",
+      "from": "A_191",
+      "to": "C_3570",
+      "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000762"
+        "EV_007448"
       ],
-      "confidence": 0.83,
+      "confidence": 0.84,
       "status": "verified"
     },
     {
-      "from": "A_195",
-      "to": "BF_047",
-      "type": "OPERATES",
+      "from": "A_060",
+      "to": "T_021",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_000763"
+        "EV_000744"
       ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_057",
-      "to": "BF_049",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000764"
-      ],
-      "confidence": 0.83,
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -854,23 +336,23 @@
       "status": "verified"
     },
     {
-      "from": "A_198",
-      "to": "BF_049",
-      "type": "OPERATES",
+      "from": "A_060",
+      "to": "C_3571",
+      "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000766"
+        "EV_007449"
       ],
       "confidence": 0.83,
       "status": "verified"
     },
     {
-      "from": "A_197",
-      "to": "BF_049",
-      "type": "OPERATES",
+      "from": "A_061",
+      "to": "T_021",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_000767"
+        "EV_000745"
       ],
-      "confidence": 0.83,
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -884,63 +366,43 @@
       "status": "verified"
     },
     {
-      "from": "A_192",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000769"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_193",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000770"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_194",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000771"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_199",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000772"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_196",
-      "to": "C_042",
+      "from": "A_061",
+      "to": "C_3572",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000773"
+        "EV_007450"
       ],
-      "confidence": 0.7,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
-      "from": "A_195",
-      "to": "C_043",
+      "from": "A_190",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000747"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000760"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "C_3573",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000774"
+        "EV_007451"
       ],
-      "confidence": 0.7,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -948,7 +410,7 @@
       "to": "T_021",
       "type": "IMPACTS",
       "evidence": [
-        "EV_000775"
+        "EV_007452"
       ],
       "confidence": 0.78,
       "status": "verified"
@@ -958,7 +420,7 @@
       "to": "T_021",
       "type": "IMPACTS",
       "evidence": [
-        "EV_000776"
+        "EV_007453"
       ],
       "confidence": 0.78,
       "status": "verified"
@@ -966,36 +428,6 @@
   ],
   "links": [
     {
-      "from": "A_057",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000743"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_060",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000744"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_061",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000745"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
       "from": "A_189",
       "to": "T_021",
       "type": "THEMED_AS",
@@ -1003,126 +435,6 @@
         "EV_000746"
       ],
       "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_190",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000747"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_191",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000748"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_192",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000749"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_193",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000750"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_194",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000751"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_195",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000752"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_196",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000753"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_197",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000754"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_198",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000755"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_199",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000756"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_200",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000757"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_201",
-      "to": "T_021",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_000758"
-      ],
-      "confidence": 0.78,
       "status": "verified"
     },
     {
@@ -1136,13 +448,23 @@
       "status": "verified"
     },
     {
-      "from": "A_190",
-      "to": "BF_047",
-      "type": "OPERATES",
+      "from": "A_189",
+      "to": "C_3569",
+      "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000760"
+        "EV_007447"
       ],
-      "confidence": 0.83,
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000748"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -1156,33 +478,23 @@
       "status": "verified"
     },
     {
-      "from": "A_196",
-      "to": "BF_047",
-      "type": "OPERATES",
+      "from": "A_191",
+      "to": "C_3570",
+      "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000762"
+        "EV_007448"
       ],
-      "confidence": 0.83,
+      "confidence": 0.84,
       "status": "verified"
     },
     {
-      "from": "A_195",
-      "to": "BF_047",
-      "type": "OPERATES",
+      "from": "A_060",
+      "to": "T_021",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_000763"
+        "EV_000744"
       ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_057",
-      "to": "BF_049",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000764"
-      ],
-      "confidence": 0.83,
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -1196,23 +508,23 @@
       "status": "verified"
     },
     {
-      "from": "A_198",
-      "to": "BF_049",
-      "type": "OPERATES",
+      "from": "A_060",
+      "to": "C_3571",
+      "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000766"
+        "EV_007449"
       ],
       "confidence": 0.83,
       "status": "verified"
     },
     {
-      "from": "A_197",
-      "to": "BF_049",
-      "type": "OPERATES",
+      "from": "A_061",
+      "to": "T_021",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_000767"
+        "EV_000745"
       ],
-      "confidence": 0.83,
+      "confidence": 0.8,
       "status": "verified"
     },
     {
@@ -1226,63 +538,43 @@
       "status": "verified"
     },
     {
-      "from": "A_192",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000769"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_193",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000770"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_194",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000771"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_199",
-      "to": "BF_048",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_000772"
-      ],
-      "confidence": 0.83,
-      "status": "verified"
-    },
-    {
-      "from": "A_196",
-      "to": "C_042",
+      "from": "A_061",
+      "to": "C_3572",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000773"
+        "EV_007450"
       ],
-      "confidence": 0.7,
+      "confidence": 0.83,
       "status": "verified"
     },
     {
-      "from": "A_195",
-      "to": "C_043",
+      "from": "A_190",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000747"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000760"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "C_3573",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_000774"
+        "EV_007451"
       ],
-      "confidence": 0.7,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1290,7 +582,7 @@
       "to": "T_021",
       "type": "IMPACTS",
       "evidence": [
-        "EV_000775"
+        "EV_007452"
       ],
       "confidence": 0.78,
       "status": "verified"
@@ -1300,7 +592,7 @@
       "to": "T_021",
       "type": "IMPACTS",
       "evidence": [
-        "EV_000776"
+        "EV_007453"
       ],
       "confidence": 0.78,
       "status": "verified"
