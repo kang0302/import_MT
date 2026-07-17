@@ -18,7 +18,15 @@
     "dataAsOf": "2026-02-21T16:00:00+09:00",
     "notes": "g19 누적 import 기반 T_019 freeze",
     "sources": [],
-    "provenanceSeed": "T_019 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_019 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-17",
+        "kind": "보강",
+        "title": "CHR 미보유 자산 포지션 정의",
+        "detail": "기존 CHR이 없던 9개 자산(CJ제일제당·우양·동원F&B·농심·오뚜기·SPC삼립·해태제과·빙그레·K푸드ETF)에 K푸드 밸류체인 내 특징/포지션 CHR을 정의·연결했다. 삼양·오리온의 '수출주력·고환율수혜'는 유지."
+      }
+    ]
   },
   "nodes": [
     {
@@ -463,6 +471,51 @@
       "id": "C_1552",
       "type": "CHARACTER",
       "name": "수출주력·고환율수혜"
+    },
+    {
+      "id": "C_3549",
+      "type": "CHARACTER",
+      "name": "글로벌비비고_종합식품바이오"
+    },
+    {
+      "id": "C_3550",
+      "type": "CHARACTER",
+      "name": "냉동HMR_OEM수출"
+    },
+    {
+      "id": "C_3551",
+      "type": "CHARACTER",
+      "name": "참치·수산가공대표"
+    },
+    {
+      "id": "C_3552",
+      "type": "CHARACTER",
+      "name": "K라면1위_신라면글로벌"
+    },
+    {
+      "id": "C_3553",
+      "type": "CHARACTER",
+      "name": "라면·소스·간편식종합"
+    },
+    {
+      "id": "C_3554",
+      "type": "CHARACTER",
+      "name": "K베이커리_양산빵대표"
+    },
+    {
+      "id": "C_3555",
+      "type": "CHARACTER",
+      "name": "제과스낵_허니버터"
+    },
+    {
+      "id": "C_3556",
+      "type": "CHARACTER",
+      "name": "빙과·유가공_메로나수출"
+    },
+    {
+      "id": "C_3557",
+      "type": "CHARACTER",
+      "name": "K푸드테마ETF_바스켓"
     }
   ],
   "edges": [
@@ -625,6 +678,96 @@
       ],
       "confidence": 0.72,
       "status": "verified"
+    },
+    {
+      "from": "A_011",
+      "to": "C_3549",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007427"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_179",
+      "to": "C_3550",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007428"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_180",
+      "to": "C_3551",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007429"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_182",
+      "to": "C_3552",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007430"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_183",
+      "to": "C_3553",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007431"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_185",
+      "to": "C_3554",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007432"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_186",
+      "to": "C_3555",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007433"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_187",
+      "to": "C_3556",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007434"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_188",
+      "to": "C_3557",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007435"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -786,6 +929,96 @@
         "EV_000719"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_011",
+      "to": "C_3549",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007427"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_179",
+      "to": "C_3550",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007428"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_180",
+      "to": "C_3551",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007429"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_182",
+      "to": "C_3552",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007430"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_183",
+      "to": "C_3553",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007431"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_185",
+      "to": "C_3554",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007432"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_186",
+      "to": "C_3555",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007433"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_187",
+      "to": "C_3556",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007434"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_188",
+      "to": "C_3557",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007435"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]
