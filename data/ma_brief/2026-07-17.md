@@ -212,10 +212,10 @@
 | 섹터 | 종목 | 종가 | vs 5일선 | vs 20일선 | vs 60일선 | vs 120일선 | 52주高比 | 배열 | 버킷 | 최근7일 | 오늘 신호 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 우주·방산 | [스페이스X (SPCX)](https://finance.yahoo.com/quote/SPCX) | 데이터 부족 | — | — | — | — | — | — | — | — | — |
-| 종합상사ETN | [한투 일본종합상사TOP5 ETN (570100)](https://finance.naver.com/item/main.naver?code=570100) | 데이터 없음 | — | — | — | — | — | — | — | — | — |
+| 종합상사ETN | [한투 일본종합상사TOP5 ETN (Q570100)](https://finance.naver.com/item/main.naver?code=Q570100) | 데이터 없음 | — | — | — | — | — | — | — | — | — |
 
 - [스페이스X (SPCX)](https://finance.yahoo.com/quote/SPCX) — 데이터 부족(해석 불가). —.
-- [한투 일본종합상사TOP5 ETN (570100)](https://finance.naver.com/item/main.naver?code=570100) — 데이터 없음(해석 불가). —.
+- [한투 일본종합상사TOP5 ETN (Q570100)](https://finance.naver.com/item/main.naver?code=Q570100) — 데이터 없음(해석 불가). —.
 
 > ▲(적) 상회·상승 / ▼(청) 하회·하락 (괄호=이격도%). 52주高比=최근1년 최고종가 대비 격차. 이평선=5·20·60·120일 · 정배열=20>60>120. 최근7일=과거→최근. 그룹 내 정렬=종가상회 이평선수↓ · 52주 신고가 근접순. 신호는 전일 대비 당일 돌파·이탈·골든/데드크로스.
 
