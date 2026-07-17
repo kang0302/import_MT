@@ -1,0 +1,365 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_625",
+  "themeName": "미국2026상장주식",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-17T00:00:00+09:00",
+    "notes": "2026년 미국 증시 상장(IPO) 코호트 — 주목받은 신규 상장주 모음.",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-17",
+        "kind": "신규",
+        "title": "미국2026상장주식 코호트 테마 생성",
+        "detail": "2026년 미국 상장(나스닥·NYSE 무관) 주목 IPO 4종을 THEMED_AS로 묶고, 종목별 상장 특징 CHR과 그 해 IPO시장 환경 매크로를 연결했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_625",
+      "type": "THEME",
+      "name": "미국2026상장주식"
+    },
+    {
+      "id": "M_1135",
+      "type": "MACRO",
+      "name": "미국2026IPO_현재진행"
+    },
+    {
+      "name": "스페이스X",
+      "id": "A_137",
+      "metrics": {
+        "return_1d": -3.075330819841793,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": -12.283401351441746,
+        "return_15d": -15.161123333764703,
+        "return_3d": -5.771165732355876,
+        "return_1m": -31.89090909090908,
+        "return_ytd": -18.539919229574387,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 131.11,
+        "marketCap": 1714376718101,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "FMP"
+      },
+      "exposure": {
+        "country": "US",
+        "ticker": "SPCX",
+        "exchange": "NASDAQ"
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "C_3630",
+      "type": "CHARACTER",
+      "name": "우주발사·스타링크_역대최대IPO"
+    },
+    {
+      "id": "A_2724",
+      "type": "ASSET",
+      "name": "세레브라스",
+      "exposure": {
+        "ticker": "CBRS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3631",
+      "type": "CHARACTER",
+      "name": "웨이퍼스케일AI칩_상장"
+    },
+    {
+      "id": "A_2725",
+      "type": "ASSET",
+      "name": "퀀티넘",
+      "exposure": {
+        "ticker": "QNT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3632",
+      "type": "CHARACTER",
+      "name": "양자컴퓨팅_하니웰계열상장"
+    },
+    {
+      "id": "A_2726",
+      "type": "ASSET",
+      "name": "SK하이닉스",
+      "exposure": {
+        "ticker": "SKHY",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3633",
+      "type": "CHARACTER",
+      "name": "SK하이닉스美상장_HBM메모리"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A_137",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007569"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_3630",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007570"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2724",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007571"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2724",
+      "to": "C_3631",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007572"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2725",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007573"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2725",
+      "to": "C_3632",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007574"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2726",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007575"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2726",
+      "to": "C_3633",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007576"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_1135",
+      "to": "T_625",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007577"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_137",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007569"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_3630",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007570"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2724",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007571"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2724",
+      "to": "C_3631",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007572"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2725",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007573"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2725",
+      "to": "C_3632",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007574"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2726",
+      "to": "T_625",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007575"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2726",
+      "to": "C_3633",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007576"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_1135",
+      "to": "T_625",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007577"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    }
+  ]
+}
