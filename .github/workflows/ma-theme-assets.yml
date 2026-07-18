@@ -1,0 +1,52 @@
+name: MA theme assets (daily)
+
+# 전체 테마 ASSET(중복제거) + 벤치마크(SPY/DIA/QQQ)에 대해 이동평균선 시그널을 계산.
+# ma_watchlist_brief.py 와 동일 로직·데이터소스(FMP 미국 / EODHD 한국). → data/ma_brief/assets.json
+# 테마 브리핑의 "이동평균선 시그널" 뷰가 이 파일을 읽는다.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # KST 07:35 = UTC 22:35 (watchlist brief 이후, auto-merge 전)
+    - cron: "35 22 * * *"
+
+concurrency:
+  group: ma-theme-assets
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Compute theme MA signals
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          EODHD_API_KEY: ${{ secrets.EODHD_API_KEY }}
+        run: python scripts/ma_theme_assets.py
+
+      - name: Commit assets.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ma_brief/assets.json
+          if git diff --cached --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "chore(ma-theme): assets.json $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin main
