@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-11T00:00:00+09:00",
     "description": "K-디지털 헬스·원격진료 — 라이프시맨틱스·메디아이·셀바스AI·휴머스온. AI 의료데이터·음성인식·CRM 마케팅. 인구고령화 + AI생산성 + 원격진료 합법화 단계 사이클.",
     "notes": "T_395 신규 — 한국 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,72 @@
       }
     },
     {
+      "id": "A_2752",
+      "type": "ASSET",
+      "name": "비트컴퓨터",
+      "exposure": {
+        "ticker": "032850",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3747",
+      "type": "CHARACTER",
+      "name": "원격의료·의료정보SW"
+    },
+    {
+      "id": "A_2753",
+      "type": "ASSET",
+      "name": "유비케어",
+      "exposure": {
+        "ticker": "032620",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3748",
+      "type": "CHARACTER",
+      "name": "EMR·의원정보시스템"
+    },
+    {
       "id": "M_058",
       "type": "MACRO",
       "name": "인구고령화"
@@ -199,6 +273,46 @@
       "from": "T_395",
       "to": "C_432",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2752",
+      "to": "T_395",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007852"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2752",
+      "to": "C_3747",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007853"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2753",
+      "to": "T_395",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007854"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2753",
+      "to": "C_3748",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007855"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -241,6 +355,46 @@
       "from": "T_395",
       "to": "C_432",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2752",
+      "to": "T_395",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007852"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2752",
+      "to": "C_3747",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007853"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2753",
+      "to": "T_395",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007854"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2753",
+      "to": "C_3748",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007855"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

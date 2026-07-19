@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "3종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
         "date": "2026-07-17",
         "kind": "신규",
         "title": "T_021 아날로그반도체 3분할",
@@ -172,6 +178,121 @@
         "returnsSource": "FMP",
         "pe_ttm": null
       }
+    },
+    {
+      "id": "A_1759",
+      "type": "ASSET",
+      "name": "스카이웍스",
+      "exposure": {
+        "ticker": "SWKS",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Skyworks Solutions — 스마트폰·IoT RF 솔루션 (Apple 핵심 공급)",
+        "theme_role": "엣지 단말 고주파 RF — Apple·IoT",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 2.9845566545202207,
+        "close": 59.35,
+        "marketCap": 8926596100,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "return_3d": 4.895722870272179,
+        "return_7d": 1.4703368097110703,
+        "return_15d": -15.141549899914208,
+        "return_1m": -16.9000280033604,
+        "return_ytd": -7.841614906832306,
+        "return_1y": -18.55358858240703,
+        "return_2y": -47.164604290928516,
+        "return_3y": -47.408063801506415,
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3761",
+      "type": "CHARACTER",
+      "name": "RF프론트엔드_모바일"
+    },
+    {
+      "id": "A_208",
+      "type": "ASSET",
+      "name": "코보",
+      "exposure": {
+        "ticker": "QRVO",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 2.39520958083832,
+        "asof": "2026-02-11T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 1.9434839632765044,
+        "return_15d": -10.349166404529731,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 3.623803175372675,
+        "return_1m": -11.454018227009112,
+        "return_ytd": -0.8925466558479145,
+        "return_1y": -2.840909090909094,
+        "return_2y": -30.374592833876225,
+        "return_3y": -18.81883782757311,
+        "close": 85.5,
+        "marketCap": 7542639000,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "C_3762",
+      "type": "CHARACTER",
+      "name": "RF솔루션_5G"
+    },
+    {
+      "id": "A_400",
+      "type": "ASSET",
+      "name": "Lumentum Holdings",
+      "display": {
+        "name_ko": "루멘텀홀딩스"
+      },
+      "exposure": {
+        "ticker": "LITE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 3.7650623734477584,
+        "return_3d": -10.061364752086387,
+        "return_7d": 3.63739216518173,
+        "return_15d": -14.983120062183131,
+        "return_1m": -16.28358618168525,
+        "return_ytd": 89.79565408821321,
+        "return_1y": 635.5415035631838,
+        "return_2y": 1137.0357866306551,
+        "return_3y": 1245.1174743024965,
+        "close": 732.82,
+        "marketCap": 57013396000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3763",
+      "type": "CHARACTER",
+      "name": "광통신·레이저부품"
     },
     {
       "id": "BF_048",
@@ -354,6 +475,66 @@
       ],
       "confidence": 0.78,
       "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007880"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "C_3761",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007881"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007882"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "C_3762",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007883"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007884"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "C_3763",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007885"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -495,6 +676,66 @@
         "EV_007465"
       ],
       "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007880"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "C_3761",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007881"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007882"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "C_3762",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007883"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007884"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "C_3763",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007885"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]

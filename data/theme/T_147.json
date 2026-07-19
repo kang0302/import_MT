@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "1종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
         "date": "2026-07-11",
         "kind": "보강",
         "title": "자산별 테마관점 CHR 정의",
@@ -170,6 +176,72 @@
         "returnsAsOf": "2026-07-17",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_2716",
+      "type": "ASSET",
+      "name": "바이킹홀딩스",
+      "exposure": {
+        "ticker": "VIK",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.0502702151524268,
+        "close": 97.04,
+        "marketCap": 43107979249,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "return_3d": -0.624679979518683,
+        "return_7d": -0.9492701847504281,
+        "return_15d": -5.694849368318755,
+        "return_1m": 3.190131858783496,
+        "return_ytd": 34.2742493427425,
+        "return_1y": 70.63478107965537,
+        "return_2y": 177.57437070938215,
+        "return_3y": null,
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2759",
+      "type": "ASSET",
+      "name": "린드블라드익스페디션스",
+      "exposure": {
+        "ticker": "LIND",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3764",
+      "type": "CHARACTER",
+      "name": "익스페디션크루즈_니치"
+    },
+    {
+      "id": "C_3729",
+      "type": "CHARACTER",
+      "name": "리버·오션크루즈_프리미엄"
     },
     {
       "id": "C_2571",
@@ -332,6 +404,46 @@
       ],
       "confidence": 0.74,
       "status": "verified"
+    },
+    {
+      "from": "A_2716",
+      "to": "T_147",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007816"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2716",
+      "to": "C_3729",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007817"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2759",
+      "to": "T_147",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007886"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2759",
+      "to": "C_3764",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007887"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -473,6 +585,46 @@
         "EV_004457"
       ],
       "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_2716",
+      "to": "T_147",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007816"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2716",
+      "to": "C_3729",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007817"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2759",
+      "to": "T_147",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007886"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2759",
+      "to": "C_3764",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007887"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]

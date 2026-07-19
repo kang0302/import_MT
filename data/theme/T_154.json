@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
         "date": "2026-07-12",
         "kind": "보강",
         "title": "자산별 테마관점 CHR 정의",
@@ -150,6 +156,86 @@
         "returnsAsOf": "2026-07-17",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_258",
+      "type": "ASSET",
+      "name": "앤시스",
+      "exposure": {
+        "ticker": "ANSS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "last_price": null,
+        "market_cap": null,
+        "per": null,
+        "return_7d": 2.0168983374216465,
+        "return_15d": 9.543738476396735,
+        "return_30d": null,
+        "return_90d": null,
+        "currency": null,
+        "asof": null,
+        "return_3d": -2.993391214202412,
+        "return_1m": 10.422751275924114,
+        "return_ytd": 11.37892043087545,
+        "return_1y": 14.30403713430648,
+        "return_2y": 7.78356898090824,
+        "return_3y": 56.873428331936296,
+        "close": 374.3,
+        "marketCap": 32906994733,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "C_3736",
+      "type": "CHARACTER",
+      "name": "엔지니어링시뮬레이션CAE"
+    },
+    {
+      "id": "A_257",
+      "type": "ASSET",
+      "name": "벤틀리시스템즈",
+      "exposure": {
+        "ticker": "BSY",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.3255813953488302,
+        "last_price": null,
+        "market_cap": null,
+        "per": null,
+        "return_7d": 2.1800947867298692,
+        "return_15d": 12.643678160919558,
+        "return_30d": null,
+        "return_90d": null,
+        "currency": null,
+        "asof": null,
+        "return_3d": 3.8202247191011285,
+        "return_1m": 7.1925754060324865,
+        "return_ytd": -15.229357798165122,
+        "return_1y": -43.76630151278038,
+        "return_2y": -35.229321049469256,
+        "return_3y": -39.370078740157474,
+        "close": 32.34,
+        "marketCap": 9452385230,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "C_3737",
+      "type": "CHARACTER",
+      "name": "인프라디지털트윈SW"
     },
     {
       "id": "BF_270",
@@ -357,6 +443,46 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_258",
+      "to": "T_154",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007830"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_258",
+      "to": "C_3736",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007831"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_257",
+      "to": "T_154",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007832"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_257",
+      "to": "C_3737",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007833"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -506,6 +632,46 @@
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004814"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_258",
+      "to": "T_154",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007830"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_258",
+      "to": "C_3736",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007831"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_257",
+      "to": "T_154",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007832"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_257",
+      "to": "C_3737",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007833"
       ],
       "confidence": 0.8,
       "status": "verified"

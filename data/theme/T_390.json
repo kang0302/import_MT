@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-11T00:00:00+09:00",
     "description": "K-화장품 ODM (위탁생산) — 한국콜마·코스맥스·코스메카코리아·한국화장품제조. 인디 브랜드 폭발 시 OEM 수요 동반. 중국·미국·인도네시아 ODM 공장 capa ramp.",
     "notes": "T_390 신규 — 한국 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,72 @@
       }
     },
     {
+      "id": "A_2750",
+      "type": "ASSET",
+      "name": "씨앤씨인터내셔널",
+      "exposure": {
+        "ticker": "352480",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3743",
+      "type": "CHARACTER",
+      "name": "색조화장품ODM"
+    },
+    {
+      "id": "A_2751",
+      "type": "ASSET",
+      "name": "잉글우드랩",
+      "exposure": {
+        "ticker": "950140",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3744",
+      "type": "CHARACTER",
+      "name": "미국화장품ODM_백엔드"
+    },
+    {
       "id": "M_039",
       "type": "MACRO",
       "name": "중국내수소비"
@@ -199,6 +273,46 @@
       "from": "T_390",
       "to": "C_427",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2750",
+      "to": "T_390",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007844"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2750",
+      "to": "C_3743",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007845"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2751",
+      "to": "T_390",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007846"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2751",
+      "to": "C_3744",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007847"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -241,6 +355,46 @@
       "from": "T_390",
       "to": "C_427",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2750",
+      "to": "T_390",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007844"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2750",
+      "to": "C_3743",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007845"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2751",
+      "to": "T_390",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007846"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2751",
+      "to": "C_3744",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007847"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

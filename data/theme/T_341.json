@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-10T00:00:00+09:00",
     "description": "Fairholme Capital — Bruce Berkowitz 의 concentrated 가치주 (St. Joe 70%+). 13F: St. Joe·Enstar·Berkshire·Liberty Global. Florida 부동산 거대 베팅.",
     "notes": "T_341 빅머니 시리즈",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "1종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,46 @@
       }
     },
     {
+      "name": "뱅크오브아메리카",
+      "id": "A_113",
+      "metrics": {
+        "return_1d": -0.3577817531305927,
+        "return_30d": null,
+        "market_cap": null,
+        "asof": null,
+        "return_90d": null,
+        "currency": null,
+        "per": null,
+        "last_price": null,
+        "return_7d": 5.094339622641519,
+        "return_15d": 5.293005671077511,
+        "return_3d": 1.0722533817222102,
+        "return_1m": 7.793807178043632,
+        "return_ytd": 9.508489722966939,
+        "return_1y": 33.1088420595264,
+        "return_2y": 47.31906708343352,
+        "return_3y": 108.68528610354224,
+        "close": 61.27,
+        "marketCap": 434808069300,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "exposure": {
+        "country": "US",
+        "ticker": "BAC",
+        "exchange": "NYSE"
+      },
+      "type": "ASSET"
+    },
+    {
+      "id": "C_3738",
+      "type": "CHARACTER",
+      "name": "대형은행_가치보유"
+    },
+    {
       "id": "C_310",
       "type": "CHARACTER",
       "name": "단일거장가치투자"
@@ -199,6 +247,26 @@
       "from": "M_145",
       "to": "T_341",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_113",
+      "to": "T_341",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007834"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_113",
+      "to": "C_3738",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007835"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -241,6 +309,26 @@
       "from": "M_145",
       "to": "T_341",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_113",
+      "to": "T_341",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007834"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_113",
+      "to": "C_3738",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007835"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

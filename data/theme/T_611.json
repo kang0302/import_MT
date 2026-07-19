@@ -21,6 +21,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
         "date": "2026-07-12",
         "kind": "신규",
         "title": "K-홈쇼핑·커머스전환 신설",
@@ -157,6 +163,72 @@
         "returnsAsOf": "2026-07-16",
         "returnsSource": "EODHD"
       }
+    },
+    {
+      "id": "A_019",
+      "type": "ASSET",
+      "name": "쿠팡",
+      "exposure": {
+        "ticker": "CPNG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.4234875444839812,
+        "close": 16.62,
+        "marketCap": 29833967669,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "return_3d": -6.313416009019157,
+        "return_7d": -12.526315789473674,
+        "return_15d": -2.579132473622492,
+        "return_1m": -7.8202995008319505,
+        "return_ytd": -28.883183568677794,
+        "return_1y": -46.764894298526585,
+        "return_2y": -23.831347387717685,
+        "return_3y": -5.353075170842814,
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3757",
+      "type": "CHARACTER",
+      "name": "이커머스_로켓배송"
+    },
+    {
+      "id": "A_1379",
+      "type": "ASSET",
+      "name": "카페24",
+      "exposure": {
+        "ticker": "042000",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 17430,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": -2.462227196418576,
+        "return_7d": 2.228739002932545,
+        "return_15d": null,
+        "return_1m": -9.50155763239875,
+        "return_ytd": -45.36050156739812,
+        "return_1y": -67.05103969754254,
+        "return_2y": null,
+        "return_3y": 114.35793731041457,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3758",
+      "type": "CHARACTER",
+      "name": "이커머스플랫폼_D2C"
     },
     {
       "id": "M_148",
@@ -384,6 +456,46 @@
       ],
       "confidence": 0.68,
       "status": "verified"
+    },
+    {
+      "from": "A_019",
+      "to": "T_611",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007872"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_019",
+      "to": "C_3757",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007873"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1379",
+      "to": "T_611",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007874"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1379",
+      "to": "C_3758",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007875"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -565,6 +677,46 @@
         "EV_005646"
       ],
       "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_019",
+      "to": "T_611",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007872"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_019",
+      "to": "C_3757",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007873"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1379",
+      "to": "T_611",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007874"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1379",
+      "to": "C_3758",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007875"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]

@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-11T00:00:00+09:00",
     "description": "글로벌 카메라·렌즈 4사 — Sony (이미지센서 1위·미러리스 a시리즈)·Canon·Nikon·Fujifilm. Z세대 vintage 카메라 부활 (필름 카메라·즉석사진) + 영화 cinema 카메라 + 자동차/휴머노이드 이미지센서 (Sony IMX). 스마트폰 침투 후 사진 시장 분화.",
     "notes": "T_373 신규",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,72 @@
       }
     },
     {
+      "id": "A_2748",
+      "type": "ASSET",
+      "name": "리코",
+      "exposure": {
+        "ticker": "RICOY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3741",
+      "type": "CHARACTER",
+      "name": "일본광학·이미징"
+    },
+    {
+      "id": "A_2749",
+      "type": "ASSET",
+      "name": "코니카미놀타",
+      "exposure": {
+        "ticker": "KNCAY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3742",
+      "type": "CHARACTER",
+      "name": "일본광학·렌즈"
+    },
+    {
       "id": "M_364",
       "type": "MACRO",
       "name": "GenZ_vintage트렌드"
@@ -214,6 +288,46 @@
       "from": "A_2062",
       "to": "C_395",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2748",
+      "to": "T_373",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007840"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2748",
+      "to": "C_3741",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007841"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2749",
+      "to": "T_373",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007842"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2749",
+      "to": "C_3742",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007843"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -266,6 +380,46 @@
       "from": "A_2062",
       "to": "C_395",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2748",
+      "to": "T_373",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007840"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2748",
+      "to": "C_3741",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007841"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2749",
+      "to": "T_373",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007842"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2749",
+      "to": "C_3742",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007843"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }
