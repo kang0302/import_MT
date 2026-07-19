@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-11T00:00:00+09:00",
     "description": "K-바이오 CDMO (위탁개발생산) — 삼성바이오로직스·셀트리온·SK바이오사이언스·바이오플러스. 미국 BIOSECURE 법 (중국 WuXi 배제) 직접 수혜. 항체·mRNA·세포치료제 캐파 ramp.",
     "notes": "T_393 신규 — 한국 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,72 @@
       }
     },
     {
+      "id": "A_714",
+      "type": "ASSET",
+      "name": "에스티팜",
+      "exposure": {
+        "ticker": "237690",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 124300,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": -1.2708498808578272,
+        "return_7d": -3.4188034188034178,
+        "return_15d": null,
+        "return_1m": -6.541353383458648,
+        "return_ytd": 8.427280716253138,
+        "return_1y": 47.04171325575308,
+        "return_2y": null,
+        "return_3y": 63.73239436619718,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3745",
+      "type": "CHARACTER",
+      "name": "올리고뉴클레오타이드CDMO"
+    },
+    {
+      "id": "A_1508",
+      "type": "ASSET",
+      "name": "차바이오텍",
+      "exposure": {
+        "ticker": "085660",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 9120,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": -5.97938144329897,
+        "return_7d": -12.138728323699421,
+        "return_15d": null,
+        "return_1m": -27.503974562798096,
+        "return_ytd": -38.58585858585859,
+        "return_1y": -20.070113935144608,
+        "return_2y": null,
+        "return_3y": 18.522233366766972,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3746",
+      "type": "CHARACTER",
+      "name": "세포·유전자치료CDMO"
+    },
+    {
       "id": "M_058",
       "type": "MACRO",
       "name": "인구고령화"
@@ -199,6 +273,46 @@
       "from": "T_393",
       "to": "C_430",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_714",
+      "to": "T_393",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007848"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_714",
+      "to": "C_3745",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007849"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1508",
+      "to": "T_393",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007850"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1508",
+      "to": "C_3746",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007851"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -241,6 +355,46 @@
       "from": "T_393",
       "to": "C_430",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_714",
+      "to": "T_393",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007848"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_714",
+      "to": "C_3745",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007849"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1508",
+      "to": "T_393",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007850"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1508",
+      "to": "C_3746",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007851"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-15T00:00:00+09:00",
     "description": "K-바이오 망막·안과 — 삼천당제약·삼양홀딩스·셀트리온·메디톡스. 항VEGF 바이오시밀러 (Eylea·Lucentis) 진출.",
     "notes": "T_419 신규 — 질병중심 바이오",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,72 @@
       }
     },
     {
+      "id": "A_1093",
+      "type": "ASSET",
+      "name": "한올바이오파마",
+      "exposure": {
+        "ticker": "009420",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 52800,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": -4.347826086956519,
+        "return_7d": -11.853088480801333,
+        "return_15d": null,
+        "return_1m": -5.714285714285716,
+        "return_ytd": 25.118483412322277,
+        "return_1y": 107.05882352941178,
+        "return_2y": null,
+        "return_3y": 156.17977528089887,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3749",
+      "type": "CHARACTER",
+      "name": "안구건조증·안과신약"
+    },
+    {
+      "id": "A_2754",
+      "type": "ASSET",
+      "name": "큐라클",
+      "exposure": {
+        "ticker": "365270",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3750",
+      "type": "CHARACTER",
+      "name": "당뇨망막·혈관질환신약"
+    },
+    {
       "id": "M_392",
       "type": "MACRO",
       "name": "항VEGF망막사이클"
@@ -229,6 +303,46 @@
       "from": "A_926",
       "to": "C_584",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1093",
+      "to": "T_419",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007856"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1093",
+      "to": "C_3749",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007857"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2754",
+      "to": "T_419",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007858"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2754",
+      "to": "C_3750",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007859"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -286,6 +400,46 @@
       "from": "A_926",
       "to": "C_584",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1093",
+      "to": "T_419",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007856"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1093",
+      "to": "C_3749",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007857"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2754",
+      "to": "T_419",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007858"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2754",
+      "to": "C_3750",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007859"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

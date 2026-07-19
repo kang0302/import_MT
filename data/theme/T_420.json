@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-15T00:00:00+09:00",
     "description": "K-바이오 신경·CNS — SK바이오팜 Cenobamate·셀트리온·디앤디파마텍·삼진제약. 뇌전증·파킨슨·치매 글로벌 진출.",
     "notes": "T_420 신규 — 질병중심 바이오",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -139,6 +147,72 @@
       }
     },
     {
+      "id": "A_2755",
+      "type": "ASSET",
+      "name": "젬백스",
+      "exposure": {
+        "ticker": "082270",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3751",
+      "type": "CHARACTER",
+      "name": "알츠하이머신약_GV1001"
+    },
+    {
+      "id": "A_2756",
+      "type": "ASSET",
+      "name": "카이노스메드",
+      "exposure": {
+        "ticker": "284620",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3752",
+      "type": "CHARACTER",
+      "name": "파킨슨·CNS신약"
+    },
+    {
       "id": "M_388",
       "type": "MACRO",
       "name": "신경퇴행성신약사이클"
@@ -229,6 +303,46 @@
       "from": "A_2217",
       "to": "C_588",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2755",
+      "to": "T_420",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007860"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2755",
+      "to": "C_3751",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007861"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2756",
+      "to": "T_420",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007862"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2756",
+      "to": "C_3752",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007863"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -286,6 +400,46 @@
       "from": "A_2217",
       "to": "C_588",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2755",
+      "to": "T_420",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007860"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2755",
+      "to": "C_3751",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007861"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2756",
+      "to": "T_420",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007862"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2756",
+      "to": "C_3752",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007863"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

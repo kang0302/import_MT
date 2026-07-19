@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
         "date": "2026-07-11",
         "kind": "보강",
         "title": "자산별 테마관점 CHR 정의",
@@ -150,6 +156,82 @@
         "returnsAsOf": "2026-07-17",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_212",
+      "type": "ASSET",
+      "name": "시스코",
+      "exposure": {
+        "ticker": "CSCO",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 2.0791537479482036,
+        "asof": "2026-02-12T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -1.651730803022311,
+        "return_15d": -5.909052702361938,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -4.3983260739602015,
+        "return_1m": -6.381199297482643,
+        "return_ytd": 47.21199368753286,
+        "return_1y": 66.15704319430012,
+        "return_2y": 136.26002532714224,
+        "return_3y": 120.61489948758376,
+        "close": 111.94,
+        "marketCap": 441204196400,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "C_3732",
+      "type": "CHARACTER",
+      "name": "네트워크장비_엔터프라이즈"
+    },
+    {
+      "id": "A_2743",
+      "type": "ASSET",
+      "name": "주니퍼네트웍스",
+      "exposure": {
+        "ticker": "JNPR",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3733",
+      "type": "CHARACTER",
+      "name": "네트워크라우팅·AI데이터센터"
     },
     {
       "id": "M_112",
@@ -327,6 +409,46 @@
       ],
       "confidence": 0.82,
       "status": "verified"
+    },
+    {
+      "from": "A_212",
+      "to": "T_104",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007822"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_212",
+      "to": "C_3732",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007823"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2743",
+      "to": "T_104",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007824"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2743",
+      "to": "C_3733",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007825"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -458,6 +580,46 @@
         "EV_003247"
       ],
       "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_212",
+      "to": "T_104",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007822"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_212",
+      "to": "C_3732",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007823"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2743",
+      "to": "T_104",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007824"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2743",
+      "to": "C_3733",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007825"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]

@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-11T00:00:00+09:00",
     "description": "K-폐배터리 리사이클 — 성일하이텍·새빗켐·코스모화학. EV 폐배터리 추출·재제련. 글로벌 첫 폐EV 사이클 시작 (2027-30 ramp). 리튬·코발트·니켈 자급 + ESG 압박.",
     "notes": "T_392 신규 — 한국 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "3종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -111,6 +119,111 @@
       }
     },
     {
+      "id": "A_2665",
+      "type": "ASSET",
+      "name": "아이에스동서",
+      "exposure": {
+        "ticker": "010780",
+        "exchange": "KRX",
+        "country": "KR",
+        "business_desc": "아이에스동서는 타일·위생도기(이누스)와 건설을 겸하는 건자재·건설 기업이다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": -4.636785162287483,
+        "return_7d": -15.479452054794518,
+        "return_15d": null,
+        "return_1m": -26.83794466403162,
+        "return_ytd": -20.21551724137931,
+        "return_1y": -12.313549578921002,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 18510,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3726",
+      "type": "CHARACTER",
+      "name": "폐배터리리사이클_습식제련"
+    },
+    {
+      "id": "A_811",
+      "type": "ASSET",
+      "name": "고려아연",
+      "exposure": {
+        "ticker": "010130",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 1029000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": 0.39024390243902474,
+        "return_7d": -5.941499085923219,
+        "return_15d": null,
+        "return_1m": -18.398096748612215,
+        "return_ytd": -19.754606241939854,
+        "return_1y": 31.2950913062372,
+        "return_2y": null,
+        "return_3y": 162.86764705882354,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3727",
+      "type": "CHARACTER",
+      "name": "비철제련_배터리리사이클"
+    },
+    {
+      "id": "A_1743",
+      "type": "ASSET",
+      "name": "영풍",
+      "exposure": {
+        "ticker": "000670",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "Young Poong — 아연괴·유가금속 제련, 영풍그룹 지주",
+        "theme_role": "국내 아연 제련 2위 — 고려아연 경영권 분쟁 당사자",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 36400,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": 2.2471910112359605,
+        "return_7d": -6.185567010309279,
+        "return_15d": null,
+        "return_1m": -24.402907580477674,
+        "return_ytd": -20.350109409190374,
+        "return_1y": -13.233778390417228,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3728",
+      "type": "CHARACTER",
+      "name": "아연제련_리사이클"
+    },
+    {
       "id": "M_062",
       "type": "MACRO",
       "name": "신재생에너지전환"
@@ -166,6 +279,66 @@
       "from": "T_392",
       "to": "C_429",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2665",
+      "to": "T_392",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007810"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2665",
+      "to": "C_3726",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007811"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_811",
+      "to": "T_392",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007812"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_811",
+      "to": "C_3727",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007813"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1743",
+      "to": "T_392",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007814"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1743",
+      "to": "C_3728",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007815"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -203,6 +376,66 @@
       "from": "T_392",
       "to": "C_429",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2665",
+      "to": "T_392",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007810"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2665",
+      "to": "C_3726",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007811"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_811",
+      "to": "T_392",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007812"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_811",
+      "to": "C_3727",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007813"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1743",
+      "to": "T_392",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007814"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1743",
+      "to": "C_3728",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007815"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

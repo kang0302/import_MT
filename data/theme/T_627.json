@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
         "date": "2026-07-18",
         "kind": "보강",
         "title": "공통 매크로 6종 연결",
@@ -150,6 +156,72 @@
         "returnsAsOf": "2026-07-17",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_625",
+      "type": "ASSET",
+      "name": "동진쎄미켐",
+      "exposure": {
+        "ticker": "005290",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 43600,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": -2.67857142857143,
+        "return_7d": -5.525460455037923,
+        "return_15d": null,
+        "return_1m": -32.40310077519379,
+        "return_ytd": 9.962168978562413,
+        "return_1y": 38.828586548332744,
+        "return_2y": null,
+        "return_3y": 92.58114374034004,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3730",
+      "type": "CHARACTER",
+      "name": "반도체소재_포토레지스트"
+    },
+    {
+      "id": "A_1024",
+      "type": "ASSET",
+      "name": "솔브레인",
+      "exposure": {
+        "ticker": "357780",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 291500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-16",
+        "valuationSource": "EODHD",
+        "return_3d": -5.510534846029169,
+        "return_7d": -4.893964110929849,
+        "return_15d": null,
+        "return_1m": -28.37837837837838,
+        "return_ytd": 5.104010023306849,
+        "return_1y": 58.679755431525415,
+        "return_2y": null,
+        "return_3y": 83.15565031982943,
+        "returnsAsOf": "2026-07-16",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3731",
+      "type": "CHARACTER",
+      "name": "반도체소재_식각액·CMP"
     },
     {
       "id": "BF_243",
@@ -367,6 +439,46 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_625",
+      "to": "T_627",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007818"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_625",
+      "to": "C_3730",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007819"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1024",
+      "to": "T_627",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007820"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1024",
+      "to": "C_3731",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007821"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -526,6 +638,46 @@
       "type": "IMPACTS",
       "evidence": [
         "EV_007619"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_625",
+      "to": "T_627",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007818"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_625",
+      "to": "C_3730",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007819"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1024",
+      "to": "T_627",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007820"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1024",
+      "to": "C_3731",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007821"
       ],
       "confidence": 0.8,
       "status": "verified"

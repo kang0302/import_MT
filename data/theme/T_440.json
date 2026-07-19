@@ -18,7 +18,15 @@
     "dataAsOf": "2026-06-16T00:00:00+09:00",
     "description": "미국 셀룰러 타워 REIT — American Tower (글로벌 1위)·Crown Castle (Fiber 분할)·SBA (브라질)·Uniti. 5G/6G 트래픽 + 데이터 수요.",
     "notes": "T_440 신규 — Russell 2000",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "2종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      }
+    ]
   },
   "nodes": [
     {
@@ -154,6 +162,72 @@
       }
     },
     {
+      "id": "A_2757",
+      "type": "ASSET",
+      "name": "디지털브리지",
+      "exposure": {
+        "ticker": "DBRG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3753",
+      "type": "CHARACTER",
+      "name": "디지털인프라자산운용"
+    },
+    {
+      "id": "A_2758",
+      "type": "ASSET",
+      "name": "프론티어커뮤니케이션즈",
+      "exposure": {
+        "ticker": "FYBR",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      }
+    },
+    {
+      "id": "C_3754",
+      "type": "CHARACTER",
+      "name": "미국광파이버통신인프라"
+    },
+    {
       "id": "C_723",
       "type": "CHARACTER",
       "name": "광섬유타워_Uniti_Windstream"
@@ -219,6 +293,46 @@
       "from": "M_145",
       "to": "T_440",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_2757",
+      "to": "T_440",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007864"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2757",
+      "to": "C_3753",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007865"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2758",
+      "to": "T_440",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007866"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2758",
+      "to": "C_3754",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007867"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -271,6 +385,46 @@
       "from": "M_145",
       "to": "T_440",
       "type": "IMPACTS"
+    },
+    {
+      "from": "A_2757",
+      "to": "T_440",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007864"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2757",
+      "to": "C_3753",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007865"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2758",
+      "to": "T_440",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007866"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2758",
+      "to": "C_3754",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007867"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }
