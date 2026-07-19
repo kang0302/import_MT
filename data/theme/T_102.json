@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "헬륨 자산 2종 추가(표본 확보)",
+        "detail": "ASP아이소토프스(렌러겐 인수 헬륨)·차트인더스트리즈(헬륨 액화·극저온 장비)를 추가해 ASSET 4→6으로 확대(바로미터 표본 부족 해소). 자산별 CHR 정의."
+      },
+      {
         "date": "2026-07-11",
         "kind": "보강",
         "title": "자산별 테마관점 CHR 정의",
@@ -150,6 +156,75 @@
         "returnsAsOf": "2026-07-17",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "A_2590",
+      "type": "ASSET",
+      "name": "ASP아이소토프스",
+      "exposure": {
+        "ticker": "ASPI",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "레이저 동위원소 농축(HALEU 진입)",
+        "theme_role": "레이저농축",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": -1.7721518987341867,
+        "return_3d": -17.446808510638302,
+        "return_7d": -21.457489878542525,
+        "return_15d": -38.897637795275585,
+        "return_1m": -39.75155279503107,
+        "return_ytd": -31.08348134991119,
+        "return_1y": -52.50917992656059,
+        "return_2y": 11.815561959654165,
+        "return_3y": 526.8174474959612,
+        "close": 3.875,
+        "marketCap": 322003045,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3662",
+      "type": "CHARACTER",
+      "name": "헬륨·동위원소_렌러겐인수"
+    },
+    {
+      "id": "A_492",
+      "type": "ASSET",
+      "name": "차트인더스트리즈",
+      "exposure": {
+        "ticker": "GTLS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.004763946453234524,
+        "close": 209.9,
+        "marketCap": 10047719052,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-18",
+        "valuationSource": "FMP",
+        "return_3d": 0.014294563301087138,
+        "return_7d": 0.5605327456522868,
+        "return_15d": 0.5268199233716464,
+        "return_1m": 1.5334010545155596,
+        "return_ytd": 1.7795665034185282,
+        "return_1y": 26.14940801730874,
+        "return_2y": 49.512073509509236,
+        "return_3y": 29.272648888341447,
+        "returnsAsOf": "2026-07-17",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3663",
+      "type": "CHARACTER",
+      "name": "헬륨액화·극저온장비"
     },
     {
       "id": "M_105",
@@ -387,6 +462,46 @@
       ],
       "confidence": 0.72,
       "status": "verified"
+    },
+    {
+      "from": "A_2590",
+      "to": "T_102",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007624"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2590",
+      "to": "C_3662",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007625"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_492",
+      "to": "T_102",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007626"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_492",
+      "to": "C_3663",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007627"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
@@ -558,6 +673,46 @@
         "EV_003229"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2590",
+      "to": "T_102",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007624"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2590",
+      "to": "C_3662",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007625"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_492",
+      "to": "T_102",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007626"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_492",
+      "to": "C_3663",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007627"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ]
