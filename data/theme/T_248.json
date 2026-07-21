@@ -17,7 +17,8 @@
     ],
     "dataAsOf": "2026-05-22T00:00:00+09:00",
     "notes": "환율 하락 + 유가 하락 + 한중관계 개선 트리플 호재. FSC·LCC + 지주사 + 비상장 투자자까지 K-항공 밸류체인 망라. 한진칼 지배구조 이슈는 별도 변수.",
-    "sources": []
+    "sources": [],
+    "description": "대한항공(FSC)·제주항공·진에어·티웨이(LCC)·한진칼(지주) 등 K 항공. 환율 하락·유가 하락(비용 개선)과 여객 수요 회복·한중 관계 개선(수요)이 핵심 동인."
   },
   "nodes": [
     {
@@ -230,28 +231,60 @@
       "id": "M_178",
       "type": "MACRO",
       "name": "한중관계개선"
+    },
+    {
+      "id": "C_3917",
+      "type": "CHARACTER",
+      "name": "국적FSC·아시아나통합"
+    },
+    {
+      "id": "C_3918",
+      "type": "CHARACTER",
+      "name": "LCC_대한항공계열"
+    },
+    {
+      "id": "C_3919",
+      "type": "CHARACTER",
+      "name": "LCC_중장거리확장"
+    },
+    {
+      "id": "C_3920",
+      "type": "CHARACTER",
+      "name": "LCC_최대"
     }
   ],
   "edges": [
     {
       "from": "A_1593",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008345"
+      ]
     },
     {
       "from": "A_1594",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008347"
+      ]
     },
     {
       "from": "A_1595",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008349"
+      ]
     },
     {
       "from": "A_1596",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008351"
+      ]
     },
     {
       "from": "A_1597",
@@ -281,39 +314,100 @@
     {
       "from": "M_003",
       "to": "T_248",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008353"
+      ]
     },
     {
       "from": "M_037",
       "to": "T_248",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008354"
+      ]
     },
     {
       "from": "M_178",
       "to": "T_248",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008355"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "C_3917",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008346"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1594",
+      "to": "C_3918",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008348"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1595",
+      "to": "C_3919",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008350"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1596",
+      "to": "C_3920",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008352"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1593",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008345"
+      ]
     },
     {
       "from": "A_1594",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008347"
+      ]
     },
     {
       "from": "A_1595",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008349"
+      ]
     },
     {
       "from": "A_1596",
       "to": "T_248",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008351"
+      ]
     },
     {
       "from": "A_1597",
@@ -343,17 +437,66 @@
     {
       "from": "M_003",
       "to": "T_248",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008353"
+      ]
     },
     {
       "from": "M_037",
       "to": "T_248",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008354"
+      ]
     },
     {
       "from": "M_178",
       "to": "T_248",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008355"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "C_3917",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008346"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1594",
+      "to": "C_3918",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008348"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1595",
+      "to": "C_3919",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008350"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1596",
+      "to": "C_3920",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008352"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }

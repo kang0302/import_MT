@@ -17,7 +17,8 @@
     ],
     "dataAsOf": "2026-05-22T00:00:00+09:00",
     "notes": "반도체 대기업 임직원 역대급 성과급(인당 6~7억) + 자산가격 상승 → 중상층 소비 활성화 수혜. 신세계·현대백화점·롯데쇼핑 두 자릿수 급등. 면세점·수입명품 유통사까지 확산.",
-    "sources": []
+    "sources": [],
+    "description": "신세계·현대백화점·롯데쇼핑(백화점), 호텔신라(면세), 신세계인터내셔날(명품 수입·유통) 등 K 하이엔드 유통. 자산가격 상승·반도체 성과급 등 고소득층 소비 여력과 외국인 관광 인바운드가 핵심 동인."
   },
   "nodes": [
     {
@@ -194,33 +195,73 @@
       "id": "M_259",
       "type": "MACRO",
       "name": "반도체성과급"
+    },
+    {
+      "id": "C_3912",
+      "type": "CHARACTER",
+      "name": "백화점·면세대장"
+    },
+    {
+      "id": "C_3913",
+      "type": "CHARACTER",
+      "name": "백화점·면세"
+    },
+    {
+      "id": "C_3914",
+      "type": "CHARACTER",
+      "name": "백화점·마트·이커머스"
+    },
+    {
+      "id": "C_3915",
+      "type": "CHARACTER",
+      "name": "면세·호텔"
+    },
+    {
+      "id": "C_3916",
+      "type": "CHARACTER",
+      "name": "명품·화장품수입유통"
     }
   ],
   "edges": [
     {
       "from": "A_1506",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008333"
+      ]
     },
     {
       "from": "A_1505",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008335"
+      ]
     },
     {
       "from": "A_1398",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008337"
+      ]
     },
     {
       "from": "A_1144",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008339"
+      ]
     },
     {
       "from": "A_1592",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008341"
+      ]
     },
     {
       "from": "A_1506",
@@ -250,39 +291,110 @@
     {
       "from": "M_258",
       "to": "T_247",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008343"
+      ]
     },
     {
       "from": "M_259",
       "to": "T_247",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008344"
+      ]
+    },
+    {
+      "from": "A_1506",
+      "to": "C_3912",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008334"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1505",
+      "to": "C_3913",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008336"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1398",
+      "to": "C_3914",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008338"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "C_3915",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008340"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1592",
+      "to": "C_3916",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008342"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1506",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008333"
+      ]
     },
     {
       "from": "A_1505",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008335"
+      ]
     },
     {
       "from": "A_1398",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008337"
+      ]
     },
     {
       "from": "A_1144",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008339"
+      ]
     },
     {
       "from": "A_1592",
       "to": "T_247",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008341"
+      ]
     },
     {
       "from": "A_1506",
@@ -312,12 +424,68 @@
     {
       "from": "M_258",
       "to": "T_247",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008343"
+      ]
     },
     {
       "from": "M_259",
       "to": "T_247",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008344"
+      ]
+    },
+    {
+      "from": "A_1506",
+      "to": "C_3912",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008334"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1505",
+      "to": "C_3913",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008336"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1398",
+      "to": "C_3914",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008338"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "C_3915",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008340"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1592",
+      "to": "C_3916",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008342"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ]
 }
