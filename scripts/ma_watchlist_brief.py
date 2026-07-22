@@ -89,8 +89,37 @@ def arrow(close, m):
     gap = (close/m - 1)*100
     return f"{'▲' if close>=m else '▼'} {gap:+.1f}%"
 
+def ma_bandwidth(cl, off=0):
+    """해당 시점(off)의 이평선 밴드폭(%): (max-min of 5·20·60·120일선)/종가×100. 좁을수록 수렴."""
+    m5, m20, m60, m120 = sma(cl,5,off), sma(cl,20,off), sma(cl,60,off), sma(cl,120,off)
+    if None in (m5, m20, m60, m120): return None
+    c = cl[off] if off < len(cl) else None
+    if not c or c <= 0: return None
+    return (max(m5,m20,m60,m120) - min(m5,m20,m60,m120)) / c * 100.0
+
+def band_state(cl, lookback=100):
+    """이평선 수렴/확산 상태. bw(현재 밴드폭%), pct(최근 lookback일 중 백분위), squeeze(수렴), breakout(수렴→확산 전환)."""
+    if len(cl) < 121: return None
+    bwh = []
+    for off in range(min(lookback, len(cl) - 120)):
+        bw = ma_bandwidth(cl, off)
+        if bw is None: break
+        bwh.append(bw)
+    if len(bwh) < 20: return None
+    cur = bwh[0]
+    srt = sorted(bwh)
+    thr20 = srt[max(0, int(len(srt) * 0.20) - 1)]
+    squeeze = cur <= thr20                                  # 현재 밴드폭이 하위 20% → 수렴(변곡 임박)
+    recent_min = min(bwh[:10]) if len(bwh) >= 10 else min(bwh)
+    was_squeeze = recent_min <= thr20                       # 최근 10일 내 수렴 있었나
+    ref = bwh[3] if len(bwh) > 3 else bwh[-1]
+    expanding = ref > 0 and cur >= ref * 1.10               # 최근 대비 밴드폭 10%+ 확산
+    breakout = (was_squeeze and expanding and not squeeze)  # 수렴 후 확산 전환
+    pct = round(sum(1 for x in bwh if x <= cur) / len(bwh) * 100, 0)
+    return {"bw": round(cur, 2), "pct": pct, "squeeze": squeeze, "breakout": breakout}
+
 def signals(cl):
-    """당일 돌파/이탈/골든·데드크로스 감지 (최신순 리스트 cl)"""
+    """당일 돌파/이탈/골든·데드크로스 + 이평선 수렴/확산 전환 감지 (최신순 리스트 cl)"""
     sig = []
     if len(cl) < 121: return sig
     c0, c1 = cl[0], cl[1]
@@ -105,6 +134,11 @@ def signals(cl):
     if None not in (a0,a1,b0,b1):
         if a1 <= b1 and a0 > b0: sig.append("골든크로스(20>60)")
         elif a1 >= b1 and a0 < b0: sig.append("데드크로스(20<60)")
+    # 이평선 수렴(스퀴즈)·수렴→확산 전환
+    bs = band_state(cl)
+    if bs:
+        if bs["squeeze"]: sig.append("이평선 수렴(변곡 임박)")
+        elif bs["breakout"]: sig.append("이평선 수렴→확산 전환")
     return sig
 
 def seq7(cl):
@@ -165,6 +199,8 @@ def interpret(c0, m20, m60, m120, align_key, sig):
         elif "이탈" in x: parts.append(f"금일 {x.replace('일선 이탈','')}일선을 이탈해 단기 약세로 전환")
         elif "골든" in x: parts.append("골든크로스(30>60일선)로 추세 개선 신호")
         elif "데드" in x: parts.append("데드크로스(30<60일선)로 추세 악화 신호")
+        elif "수렴(변곡" in x: parts.append("이평선들이 수렴(밴드폭 축소)해 방향성 변곡이 임박한 스퀴즈 구간(돌파 방향 확인 필요)")
+        elif "수렴→확산" in x: parts.append(f"수렴 후 이평선 간격이 확산되며 {'상승' if align_key=='bull' else '하락' if align_key=='bear' else '추세'} 방향으로 변동성 돌파 진행")
     near = [n for n, g in zip((20,60,120), (g20,g60,g120)) if abs(g) <= 2]
     if near and not sig:
         parts.append(f"{near[0]}일선 부근에서 지지·저항 공방")
