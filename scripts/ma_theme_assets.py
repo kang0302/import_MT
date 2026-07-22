@@ -21,6 +21,9 @@ BENCH = [
     {"ticker": "SPY", "exchange": "NYSEARCA", "country": "US", "name": "SPY", "sector": "벤치마크"},
     {"ticker": "DIA", "exchange": "NYSEARCA", "country": "US", "name": "DIA", "sector": "벤치마크"},
     {"ticker": "QQQ", "exchange": "NASDAQ",   "country": "US", "name": "QQQ", "sector": "벤치마크"},
+    {"ticker": "SOXX", "exchange": "NASDAQ",  "country": "US", "name": "SOXX (필라델피아반도체)", "sector": "벤치마크"},
+    {"ticker": "069500", "exchange": "KRX", "country": "KR", "name": "KODEX200", "sector": "벤치마크"},
+    {"ticker": "229200", "exchange": "KRX", "country": "KR", "name": "KODEX코스닥150", "sector": "벤치마크"},
 ]
 
 # JP FMP 접미사(간이) — 나머지 US는 티커 직접
