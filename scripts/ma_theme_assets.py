@@ -90,6 +90,9 @@ def compute_jrow(a):
     sym7, _ = mb.seq7(cl)
     sig = mb.signals(cl)
     sig_txt = " · ".join(sig) if sig else "—"
+    bs = mb.band_state(cl)
+    bw = bs["bw"] if bs else None
+    bw_state = ("수렴" if bs and bs["squeeze"] else "확산전환" if bs and bs["breakout"] else "")
     hg, _ = mb.high_gap(cl)
     above_ct = sum(1 for m in (m5, m20, m60, m120) if m is not None and c0 >= m)
     gap5, gap20, gap60, gap120 = mb.gapnum(c0, m5), mb.gapnum(c0, m20), mb.gapnum(c0, m60), mb.gapnum(c0, m120)
@@ -99,7 +102,8 @@ def compute_jrow(a):
     interp_full = mb.interpret(c0, m20, m60, m120, align_key, sig) + ((" " + hp + ".") if hp else "")
     return {**base, "close": c0, "g5": gap5, "g20": gap20, "g60": gap60, "g120": gap120, "hg": hg,
             "align": align_key, "above": above_ct, "bucket": bkey, "bucketLabel": mb.BUCKETS[bkey],
-            "seq7": sym7, "signal": sig_txt, "interp": (interp_full + " " + mom + "."), "_asof": dd}
+            "seq7": sym7, "signal": sig_txt, "bw": bw, "bwState": bw_state,
+            "interp": (interp_full + " " + mom + "."), "_asof": dd}
 
 
 def main():
