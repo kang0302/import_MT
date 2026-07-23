@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-04-02T00:00:00+09:00",
+    "dataAsOf": "2026-07-23T00:00:00+09:00",
     "notes": "g101 누적 import 기반 글로벌 MLCC 관련주 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-23",
+        "kind": "수정",
+        "title": "코스모신소재 2궤도 편입(SUPPLIES→삼성전기)",
+        "detail": "코스모신소재(A_2127) 2궤도 추가 — THEMED_AS 없이 SUPPLIES로 삼성전기(A_085)에 연결. CHR 'MLCC용이형필름공동개발/공급' 신규. 근거: 머니투데이(2022-05-19) 삼성전기-코스모신소재 상생, 이형필름 3공장 물량 90% 삼성전기 납품."
+      },
       {
         "date": "2026-07-11",
         "kind": "보강",
@@ -267,6 +273,34 @@
       }
     },
     {
+      "id": "A_2127",
+      "type": "ASSET",
+      "name": "코스모신소재",
+      "exposure": {
+        "ticker": "005070",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": 8.695652173913038,
+        "return_7d": 0.5188067444876765,
+        "return_15d": null,
+        "return_1m": 3.3333333333333437,
+        "return_ytd": -6.962785114045622,
+        "return_1y": 7.938718662952637,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 38750,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-23",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-07-23",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
       "id": "C_2102",
       "type": "CHARACTER",
       "name": "MLCC글로벌2위전장서버"
@@ -300,6 +334,11 @@
       "id": "C_2108",
       "type": "CHARACTER",
       "name": "삼성전기MLCC유통슈퍼커패시터"
+    },
+    {
+      "id": "C_4383",
+      "type": "CHARACTER",
+      "name": "MLCC용이형필름공동개발/공급"
     }
   ],
   "edges": [
@@ -492,6 +531,26 @@
       ],
       "confidence": 0.72,
       "status": "verified"
+    },
+    {
+      "from": "A_2127",
+      "to": "A_085",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_009481"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2127",
+      "to": "C_4383",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009482"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -683,6 +742,26 @@
         "EV_003225"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2127",
+      "to": "A_085",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_009481"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2127",
+      "to": "C_4383",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009482"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]
