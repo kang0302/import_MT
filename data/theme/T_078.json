@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-26T00:00:00+09:00",
+    "dataAsOf": "2026-07-23T00:00:00+09:00",
     "notes": "g78 누적 import 기반 미국 원전 수혜주 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-23",
+        "kind": "수정",
+        "title": "삼성물산 편입 + 미국-사우디 원전협정 수혜 CHR",
+        "detail": "삼성물산(A_384) THEMED_AS 추가, CHR '미국-사우디원전협정수혜' 신규 연결. KB증권 리포트(원전 사업 확대·NAV 할인율 45%→40% 축소, 목표가 49만원 상향) 근거."
+      },
       {
         "date": "2026-07-10",
         "kind": "변경",
@@ -258,6 +264,39 @@
       }
     },
     {
+      "id": "A_384",
+      "type": "ASSET",
+      "name": "삼성물산",
+      "exposure": {
+        "ticker": "028260",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": 360000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-23",
+        "valuationSource": "EODHD",
+        "return_3d": 13.38582677165354,
+        "return_7d": -0.27700831024930483,
+        "return_15d": null,
+        "return_1m": -20.879120879120883,
+        "return_ytd": 46.93877551020409,
+        "return_1y": 104.74459774980569,
+        "return_2y": null,
+        "return_3y": 284.01826484018267,
+        "returnsAsOf": "2026-07-23",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_4382",
+      "type": "CHARACTER",
+      "name": "미국-사우디원전협정수혜"
+    },
+    {
       "id": "BF_146",
       "type": "BUSINESS_FIELD",
       "name": "터빈/발전기기"
@@ -453,6 +492,26 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "T_078",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009479"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "C_4382",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009480"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     }
   ],
   "links": [
@@ -624,6 +683,26 @@
         "EV_002381"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "T_078",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009479"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "C_4382",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009480"
+      ],
+      "confidence": 0.7,
       "status": "verified"
     }
   ]
