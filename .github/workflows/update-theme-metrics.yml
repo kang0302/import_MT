@@ -42,7 +42,7 @@ jobs:
 
       - name: Build master.json (assets + business fields)
         run: |
-          python scripts/build_master_json.py
+          python scripts/update_theme_metrics.py
 
       - name: Commit & push master.json only (rebase-safe)
         env:
