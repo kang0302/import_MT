@@ -15,9 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-25T00:00:00+09:00",
+    "dataAsOf": "2026-07-24T00:00:00+09:00",
     "notes": "g64 누적 import 기반 K-태양광 밸류체인 (셀/모듈-인버터-발전/EPC)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "매크로 정비 + SK이터닉스 CHR + 미국-이란 이벤트",
+        "detail": "유가상승→유가상승반사이익(M_1161) 교체, AI데이터센터전력수요증가(M_035) IMPACTS 추가. SK이터닉스 CHR 'KKR인수·JV(2026.7)'. 2026 이벤트 '미국-이란 MOU 파기' 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -349,14 +357,24 @@
       "name": "인버터/그리드"
     },
     {
-      "id": "M_059",
-      "type": "MACRO",
-      "name": "유가상승"
-    },
-    {
       "id": "M_066",
       "type": "MACRO",
       "name": "우주산업확대"
+    },
+    {
+      "id": "M_1161",
+      "type": "MACRO",
+      "name": "유가상승반사이익"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "C_4396",
+      "type": "CHARACTER",
+      "name": "KKR인수·JV(2026.7)"
     }
   ],
   "edges": [
@@ -581,16 +599,6 @@
       "status": "verified"
     },
     {
-      "from": "M_059",
-      "to": "T_064",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002110"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
       "from": "M_066",
       "to": "T_064",
       "type": "IMPACTS",
@@ -598,6 +606,36 @@
         "EV_002111"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_1161",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009533"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_035",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009534"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "C_4396",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009535"
+      ],
+      "confidence": 0.7,
       "status": "verified"
     }
   ],
@@ -823,16 +861,6 @@
       "status": "verified"
     },
     {
-      "from": "M_059",
-      "to": "T_064",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002110"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
       "from": "M_066",
       "to": "T_064",
       "type": "IMPACTS",
@@ -840,6 +868,36 @@
         "EV_002111"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_1161",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009533"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_035",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009534"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "C_4396",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009535"
+      ],
+      "confidence": 0.7,
       "status": "verified"
     }
   ]
