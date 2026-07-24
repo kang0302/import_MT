@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-24T00:00:00+09:00",
     "description": "Baupost Group — Seth Klarman (Margin of Safety 저자) 의 가치투자 + special situations 포트폴리오. 보수적 가치주 + spin-off + 디스카운트 자산. 핵심: Liberty Global·Ferguson·WESCO·Willis Towers Watson·Restaurant Brands·Theravance Biopharma. 절대수익·낮은 상관성 추구.",
     "notes": "T_318 빅머니 시리즈 — 클라먼 BAUPOST 가치투자",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -213,38 +221,86 @@
       "id": "M_067",
       "type": "MACRO",
       "name": "사모신용리스크"
+    },
+    {
+      "id": "C_4551",
+      "type": "CHARACTER",
+      "name": "유럽케이블통신자산가치"
+    },
+    {
+      "id": "C_4552",
+      "type": "CHARACTER",
+      "name": "북미건설유통배관"
+    },
+    {
+      "id": "C_4553",
+      "type": "CHARACTER",
+      "name": "전기설비유통"
+    },
+    {
+      "id": "C_4554",
+      "type": "CHARACTER",
+      "name": "QSR프랜차이즈버거킹"
+    },
+    {
+      "id": "C_4555",
+      "type": "CHARACTER",
+      "name": "보험중개컨설팅"
+    },
+    {
+      "id": "C_4556",
+      "type": "CHARACTER",
+      "name": "호흡기신약로열티"
     }
   ],
   "edges": [
     {
       "from": "A_1931",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009976"
+      ]
     },
     {
       "from": "A_1932",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009977"
+      ]
     },
     {
       "from": "A_1933",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009978"
+      ]
     },
     {
       "from": "A_1921",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009979"
+      ]
     },
     {
       "from": "A_1934",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009980"
+      ]
     },
     {
       "from": "A_1935",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009981"
+      ]
     },
     {
       "from": "T_318",
@@ -254,49 +310,136 @@
     {
       "from": "M_312",
       "to": "T_318",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009982"
+      ]
     },
     {
       "from": "M_262",
       "to": "T_318",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009983"
+      ]
     },
     {
       "from": "M_067",
       "to": "T_318",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009984"
+      ]
+    },
+    {
+      "from": "A_1931",
+      "to": "C_4551",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009985"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1932",
+      "to": "C_4552",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009986"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1933",
+      "to": "C_4553",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009987"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1921",
+      "to": "C_4554",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009988"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1934",
+      "to": "C_4555",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009989"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1935",
+      "to": "C_4556",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009990"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1931",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009976"
+      ]
     },
     {
       "from": "A_1932",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009977"
+      ]
     },
     {
       "from": "A_1933",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009978"
+      ]
     },
     {
       "from": "A_1921",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009979"
+      ]
     },
     {
       "from": "A_1934",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009980"
+      ]
     },
     {
       "from": "A_1935",
       "to": "T_318",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009981"
+      ]
     },
     {
       "from": "T_318",
@@ -306,17 +449,86 @@
     {
       "from": "M_312",
       "to": "T_318",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009982"
+      ]
     },
     {
       "from": "M_262",
       "to": "T_318",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009983"
+      ]
     },
     {
       "from": "M_067",
       "to": "T_318",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009984"
+      ]
+    },
+    {
+      "from": "A_1931",
+      "to": "C_4551",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009985"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1932",
+      "to": "C_4552",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009986"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1933",
+      "to": "C_4553",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009987"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1921",
+      "to": "C_4554",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009988"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1934",
+      "to": "C_4555",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009989"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1935",
+      "to": "C_4556",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009990"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

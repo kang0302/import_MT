@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-24T00:00:00+09:00",
     "description": "자율주행 트럭/물류 (T_015 K-자율주행·T_207 미국로봇물류와 별개) — Aurora·Kodiak·TuSimple·Plus AI (자율주행 SW) + Daimler Trucks·Volvo Group (트럭 OEM 통합). 레벨4 상용화·드라이버 부족·물류비용 절감이 핵심 동인. 미국 NHTSA·DOT 규제 사이클.",
     "notes": "T_312 신규 — 자율주행 트럭 6사",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -238,58 +246,118 @@
       "id": "C_286",
       "type": "CHARACTER",
       "name": "물류비용절감"
+    },
+    {
+      "id": "C_4519",
+      "type": "CHARACTER",
+      "name": "자율주행트럭상용화선도"
+    },
+    {
+      "id": "C_4520",
+      "type": "CHARACTER",
+      "name": "자율주행트럭Level4"
+    },
+    {
+      "id": "C_4521",
+      "type": "CHARACTER",
+      "name": "자율주행트럭기술"
+    },
+    {
+      "id": "C_4522",
+      "type": "CHARACTER",
+      "name": "자율주행트럭소프트웨어"
+    },
+    {
+      "id": "C_4523",
+      "type": "CHARACTER",
+      "name": "상용트럭1위자율제휴"
+    },
+    {
+      "id": "C_4524",
+      "type": "CHARACTER",
+      "name": "상용트럭자율주행제휴"
     }
   ],
   "edges": [
     {
       "from": "A_138",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009886"
+      ]
     },
     {
       "from": "A_1911",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009887"
+      ]
     },
     {
       "from": "A_1912",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009888"
+      ]
     },
     {
       "from": "A_1913",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009889"
+      ]
     },
     {
       "from": "A_1914",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009890"
+      ]
     },
     {
       "from": "A_1915",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009891"
+      ]
     },
     {
       "from": "M_021",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009892"
+      ]
     },
     {
       "from": "M_028",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009893"
+      ]
     },
     {
       "from": "M_117",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009894"
+      ]
     },
     {
       "from": "M_047",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009895"
+      ]
     },
     {
       "from": "A_138",
@@ -350,58 +418,148 @@
       "from": "T_312",
       "to": "C_286",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_138",
+      "to": "C_4519",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009896"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1911",
+      "to": "C_4520",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009897"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1912",
+      "to": "C_4521",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009898"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1913",
+      "to": "C_4522",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009899"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1914",
+      "to": "C_4523",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009900"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1915",
+      "to": "C_4524",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009901"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_138",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009886"
+      ]
     },
     {
       "from": "A_1911",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009887"
+      ]
     },
     {
       "from": "A_1912",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009888"
+      ]
     },
     {
       "from": "A_1913",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009889"
+      ]
     },
     {
       "from": "A_1914",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009890"
+      ]
     },
     {
       "from": "A_1915",
       "to": "T_312",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009891"
+      ]
     },
     {
       "from": "M_021",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009892"
+      ]
     },
     {
       "from": "M_028",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009893"
+      ]
     },
     {
       "from": "M_117",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009894"
+      ]
     },
     {
       "from": "M_047",
       "to": "T_312",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009895"
+      ]
     },
     {
       "from": "A_138",
@@ -462,6 +620,66 @@
       "from": "T_312",
       "to": "C_286",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_138",
+      "to": "C_4519",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009896"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1911",
+      "to": "C_4520",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009897"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1912",
+      "to": "C_4521",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009898"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1913",
+      "to": "C_4522",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009899"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1914",
+      "to": "C_4523",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009900"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1915",
+      "to": "C_4524",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009901"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
