@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-24T00:00:00+09:00",
     "description": "글로벌 펫 산업 (시장 1500억$+) — 동물의약/진단 (Zoetis·IDEXX) + 펫 e-commerce (Chewy) + 펫 소매 (Petco) + 펫푸드 (Mars Petcare·Nestlé Purina). 인구고령화·1인가구 증가·펫휴머니제이션 메가트렌드. 경기 둔감 + 고마진 segment.",
     "notes": "T_308 신규 — 글로벌 펫 산업 5축",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -233,53 +241,110 @@
       "id": "C_281",
       "type": "CHARACTER",
       "name": "펫휴머니제이션트렌드"
+    },
+    {
+      "id": "C_4494",
+      "type": "CHARACTER",
+      "name": "반려동물의약품1위"
+    },
+    {
+      "id": "C_4495",
+      "type": "CHARACTER",
+      "name": "동물진단장비1위"
+    },
+    {
+      "id": "C_4496",
+      "type": "CHARACTER",
+      "name": "펫이커머스미국1위"
+    },
+    {
+      "id": "C_4497",
+      "type": "CHARACTER",
+      "name": "펫리테일서비스"
+    },
+    {
+      "id": "C_4498",
+      "type": "CHARACTER",
+      "name": "펫푸드병원글로벌1위"
+    },
+    {
+      "id": "C_4499",
+      "type": "CHARACTER",
+      "name": "글로벌펫푸드메이저"
     }
   ],
   "edges": [
     {
       "from": "A_1892",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009825"
+      ]
     },
     {
       "from": "A_1893",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009826"
+      ]
     },
     {
       "from": "A_1894",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009827"
+      ]
     },
     {
       "from": "A_1895",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009828"
+      ]
     },
     {
       "from": "A_1896",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009829"
+      ]
     },
     {
       "from": "A_1897",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009830"
+      ]
     },
     {
       "from": "M_058",
       "to": "T_308",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009831"
+      ]
     },
     {
       "from": "M_195",
       "to": "T_308",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009832"
+      ]
     },
     {
       "from": "M_343",
       "to": "T_308",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009833"
+      ]
     },
     {
       "from": "A_1892",
@@ -330,53 +395,140 @@
       "from": "T_308",
       "to": "C_281",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1892",
+      "to": "C_4494",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009834"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1893",
+      "to": "C_4495",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009835"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1894",
+      "to": "C_4496",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009836"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1895",
+      "to": "C_4497",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009837"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1896",
+      "to": "C_4498",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009838"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1897",
+      "to": "C_4499",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009839"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1892",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009825"
+      ]
     },
     {
       "from": "A_1893",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009826"
+      ]
     },
     {
       "from": "A_1894",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009827"
+      ]
     },
     {
       "from": "A_1895",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009828"
+      ]
     },
     {
       "from": "A_1896",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009829"
+      ]
     },
     {
       "from": "A_1897",
       "to": "T_308",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009830"
+      ]
     },
     {
       "from": "M_058",
       "to": "T_308",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009831"
+      ]
     },
     {
       "from": "M_195",
       "to": "T_308",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009832"
+      ]
     },
     {
       "from": "M_343",
       "to": "T_308",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009833"
+      ]
     },
     {
       "from": "A_1892",
@@ -427,6 +579,66 @@
       "from": "T_308",
       "to": "C_281",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_1892",
+      "to": "C_4494",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009834"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1893",
+      "to": "C_4495",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009835"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1894",
+      "to": "C_4496",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009836"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1895",
+      "to": "C_4497",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009837"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1896",
+      "to": "C_4498",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009838"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1897",
+      "to": "C_4499",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009839"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
