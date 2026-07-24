@@ -22,6 +22,12 @@
       {
         "date": "2026-07-24",
         "kind": "수정",
+        "title": "미국정부 중국산 태양광규제 매크로 추가",
+        "detail": "미국태양광수입규제(M_1159, 미국의 대중국 태양광 관세·AD/CVD·UFLPA) IMPACTS 추가 — 비중국 K-태양광(한화·OCI 등) 반사수혜."
+      },
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
         "title": "매크로 정비 + SK이터닉스 CHR + 미국-이란 이벤트",
         "detail": "유가상승→유가상승반사이익(M_1161) 교체, AI데이터센터전력수요증가(M_035) IMPACTS 추가. SK이터닉스 CHR 'KKR인수·JV(2026.7)'. 2026 이벤트 '미국-이란 MOU 파기' 추가."
       }
@@ -375,6 +381,11 @@
       "id": "C_4396",
       "type": "CHARACTER",
       "name": "KKR인수·JV(2026.7)"
+    },
+    {
+      "id": "M_1159",
+      "type": "MACRO",
+      "name": "미국태양광수입규제"
     }
   ],
   "edges": [
@@ -637,6 +648,16 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "M_1159",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009536"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
@@ -898,6 +919,16 @@
         "EV_009535"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_1159",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009536"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ]
