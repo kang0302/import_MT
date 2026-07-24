@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-09T00:00:00+09:00",
+    "dataAsOf": "2026-07-24T00:00:00+09:00",
     "description": "엔비디아가 현대차그룹(현대차·보스턴다이내믹스·현대모비스·현대오토에버)·LG전자·두산로보틱스와 휴머노이드 로봇 분야 공식 협력 — 피지컬AI 플랫폼(GR00T·Isaac)을 축으로 K-로봇 생태계가 글로벌 휴머노이드 밸류체인에 편입. 레인보우로보틱스·로보티즈는 잠재적 협력사.",
     "notes": "공식 파트너: A_004 현대차, A_079 LG전자, A_149 현대모비스, A_148 현대오토에버, A_285 보스턴다이내믹스, A_1250 두산로보틱스. 잠재: A_091 레인보우, A_082 로보티즈. conf=0.91",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -337,13 +345,21 @@
       "id": "C_274",
       "type": "CHARACTER",
       "name": "K-로봇생태계"
+    },
+    {
+      "id": "C_4478",
+      "type": "CHARACTER",
+      "name": "엔비디아피지컬AI플랫폼주도"
     }
   ],
   "edges": [
     {
       "from": "A_055",
       "to": "T_305",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009781"
+      ]
     },
     {
       "from": "A_004",
@@ -388,22 +404,34 @@
     {
       "from": "M_018",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009782"
+      ]
     },
     {
       "from": "M_023",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009783"
+      ]
     },
     {
       "from": "M_028",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009784"
+      ]
     },
     {
       "from": "M_114",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009785"
+      ]
     },
     {
       "from": "A_055",
@@ -544,13 +572,26 @@
       "from": "A_082",
       "to": "C_273",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_055",
+      "to": "C_4478",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009786"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_055",
       "to": "T_305",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009781"
+      ]
     },
     {
       "from": "A_004",
@@ -595,22 +636,34 @@
     {
       "from": "M_018",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009782"
+      ]
     },
     {
       "from": "M_023",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009783"
+      ]
     },
     {
       "from": "M_028",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009784"
+      ]
     },
     {
       "from": "M_114",
       "to": "T_305",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009785"
+      ]
     },
     {
       "from": "A_055",
@@ -751,6 +804,16 @@
       "from": "A_082",
       "to": "C_273",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_055",
+      "to": "C_4478",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009786"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

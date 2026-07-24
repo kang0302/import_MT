@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-07T00:00:00+09:00",
+    "dataAsOf": "2026-07-24T00:00:00+09:00",
     "description": "글로벌 토큰증권(STO) + 실물자산(RWA) 토큰화 수혜주 — 글로벌 STO 인프라 (Securitize·tZERO·ADDX) + BlackRock + 국내 대형 증권사·금융지주 (미래에셋·한국금융지주·하나금융지주·키움·삼성·SK·대신). 블랙록 BUIDL 토큰화 펀드 발행 파트너 Securitize 가 표준 견인. 국내 토큰증권법 (2027 시행 예정) + 자체 메인넷 구축 경쟁. USDC발행잔액·암호화폐거래량·규제완화·토큰증권법시행 4 매크로 + STO발행유통플랫폼·RWA토큰화 2 BF.",
     "notes": "T_303 글로벌토큰증권STO 수혜주 — Spec 의 한국금융지주·하나금융지주·대신증권 '신규' 라벨이나 SSOT 이미 존재 → 재사용. 신규 = Securitize·tZERO·ADDX 3개만.",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -378,28 +386,80 @@
       "id": "C_269",
       "type": "CHARACTER",
       "name": "조각투자플랫폼보유"
+    },
+    {
+      "id": "C_4458",
+      "type": "CHARACTER",
+      "name": "BUIDL토큰화펀드선도"
+    },
+    {
+      "id": "C_4459",
+      "type": "CHARACTER",
+      "name": "RWA토큰화발행플랫폼1위"
+    },
+    {
+      "id": "C_4460",
+      "type": "CHARACTER",
+      "name": "STO거래플랫폼선도"
+    },
+    {
+      "id": "C_4461",
+      "type": "CHARACTER",
+      "name": "아시아사모RWA토큰화"
+    },
+    {
+      "id": "C_4462",
+      "type": "CHARACTER",
+      "name": "토큰증권인프라구축"
+    },
+    {
+      "id": "C_4463",
+      "type": "CHARACTER",
+      "name": "은행권STO컨소시엄"
+    },
+    {
+      "id": "C_4464",
+      "type": "CHARACTER",
+      "name": "대형증권STO추진"
+    },
+    {
+      "id": "C_4465",
+      "type": "CHARACTER",
+      "name": "STO선제제휴다수"
     }
   ],
   "edges": [
     {
       "from": "A_549",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009733"
+      ]
     },
     {
       "from": "A_1870",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009734"
+      ]
     },
     {
       "from": "A_1871",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009735"
+      ]
     },
     {
       "from": "A_1872",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009736"
+      ]
     },
     {
       "from": "A_110",
@@ -409,12 +469,18 @@
     {
       "from": "A_988",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009737"
+      ]
     },
     {
       "from": "A_1537",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009738"
+      ]
     },
     {
       "from": "A_984",
@@ -429,12 +495,18 @@
     {
       "from": "A_982",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009739"
+      ]
     },
     {
       "from": "A_983",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009740"
+      ]
     },
     {
       "from": "A_1870",
@@ -464,22 +536,34 @@
     {
       "from": "M_042",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009741"
+      ]
     },
     {
       "from": "M_043",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009742"
+      ]
     },
     {
       "from": "M_147",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009743"
+      ]
     },
     {
       "from": "M_334",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009744"
+      ]
     },
     {
       "from": "A_986",
@@ -495,28 +579,120 @@
       "from": "A_984",
       "to": "C_269",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_549",
+      "to": "C_4458",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009745"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1870",
+      "to": "C_4459",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009746"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1871",
+      "to": "C_4460",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009747"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1872",
+      "to": "C_4461",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009748"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_988",
+      "to": "C_4462",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009749"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1537",
+      "to": "C_4463",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009750"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_982",
+      "to": "C_4464",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009751"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_983",
+      "to": "C_4465",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009752"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_549",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009733"
+      ]
     },
     {
       "from": "A_1870",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009734"
+      ]
     },
     {
       "from": "A_1871",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009735"
+      ]
     },
     {
       "from": "A_1872",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009736"
+      ]
     },
     {
       "from": "A_110",
@@ -526,12 +702,18 @@
     {
       "from": "A_988",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009737"
+      ]
     },
     {
       "from": "A_1537",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009738"
+      ]
     },
     {
       "from": "A_984",
@@ -546,12 +728,18 @@
     {
       "from": "A_982",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009739"
+      ]
     },
     {
       "from": "A_983",
       "to": "T_303",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_009740"
+      ]
     },
     {
       "from": "A_1870",
@@ -581,22 +769,34 @@
     {
       "from": "M_042",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009741"
+      ]
     },
     {
       "from": "M_043",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009742"
+      ]
     },
     {
       "from": "M_147",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009743"
+      ]
     },
     {
       "from": "M_334",
       "to": "T_303",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009744"
+      ]
     },
     {
       "from": "A_986",
@@ -612,6 +812,86 @@
       "from": "A_984",
       "to": "C_269",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_549",
+      "to": "C_4458",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009745"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1870",
+      "to": "C_4459",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009746"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1871",
+      "to": "C_4460",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009747"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1872",
+      "to": "C_4461",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009748"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_988",
+      "to": "C_4462",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009749"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1537",
+      "to": "C_4463",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009750"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_982",
+      "to": "C_4464",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009751"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_983",
+      "to": "C_4465",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009752"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
