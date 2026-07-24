@@ -144,6 +144,41 @@ def load_overseas_assets_from_ssot() -> Dict[str, Dict[str, str]]:
     return out
 
 
+def augment_with_theme_assets(out: Dict[str, Dict[str, str]]) -> int:
+    """SSOT에 없는 신규 테마 자산(비-KR)을 data/theme/T_*.json에서 union.
+    신규 테마 자산이 SSOT 미등록이어도 자동으로 수익률 프리즈되도록 한다."""
+    theme_dir = DATA_DIR / "theme"
+    if not theme_dir.exists():
+        return 0
+    added = 0
+    for fp in sorted(theme_dir.glob("T_*.json")):
+        try:
+            d = json.loads(fp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for n in d.get("nodes", []):
+            if n.get("type") != "ASSET":
+                continue
+            aid = (n.get("id") or "").strip()
+            if not aid or aid in out:
+                continue
+            exp = n.get("exposure") or {}
+            country = (exp.get("country") or "").strip().upper()
+            ticker = (exp.get("ticker") or "").strip()
+            exchange = (exp.get("exchange") or "").strip()
+            if country == "KR" or not ticker:
+                continue
+            out[aid] = {
+                "ticker": normalize_symbol(ticker),
+                "country": country,
+                "exchange": exchange,
+            }
+            added += 1
+    if added:
+        print(f"✅ theme-union(FMP): +{added} non-KR assets not in SSOT")
+    return added
+
+
 def parse_hist_payload(payload: Any) -> List[Dict[str, Any]]:
     """
     FMP 응답 형태 두 가지 모두 지원:
@@ -249,6 +284,7 @@ def main() -> None:
     print(f"✅ FMP_API_KEY length={len(api_key)} sha256={sha}...")
 
     assets = load_overseas_assets_from_ssot()
+    augment_with_theme_assets(assets)  # SSOT 미등록 신규 테마 자산 자동 편입
     unique_symbols = len(set(v["ticker"] for v in assets.values()))
     print(f"✅ Overseas assets={len(assets)} uniqueSymbols={unique_symbols} (KR excluded)")
 

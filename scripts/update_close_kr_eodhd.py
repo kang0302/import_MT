@@ -92,6 +92,39 @@ def load_kr_assets_from_ssot() -> Dict[str, str]:
     return out
 
 
+def augment_kr_with_theme_assets(out: Dict[str, str]) -> int:
+    """SSOT에 없는 신규 KR 테마 자산(6자리 숫자 티커)을 data/theme/T_*.json에서 union.
+    신규 테마 자산이 SSOT 미등록이어도 자동으로 종가·수익률 프리즈되도록 한다."""
+    theme_dir = DATA_DIR / "theme"
+    if not theme_dir.exists():
+        return 0
+    added = 0
+    for fp in sorted(theme_dir.glob("T_*.json")):
+        try:
+            d = json.loads(fp.read_text(encoding="utf-8-sig"))
+        except Exception:
+            continue
+        for n in d.get("nodes", []):
+            if n.get("type") != "ASSET":
+                continue
+            aid = (n.get("id") or "").strip()
+            if not aid or aid in out:
+                continue
+            exp = n.get("exposure") or {}
+            if (exp.get("country") or "").strip().upper() != "KR":
+                continue
+            tkr = (exp.get("ticker") or "").strip()
+            if tkr.isdigit():
+                tkr = tkr.zfill(6)
+            if not (tkr.isdigit() and len(tkr) == 6):
+                continue
+            out[aid] = tkr
+            added += 1
+    if added:
+        print(f"✅ theme-union(KR): +{added} KR assets not in SSOT")
+    return added
+
+
 def _eod_fetch(symbol: str, api_key: str, date_from: str, date_to: str) -> Optional[List[dict]]:
     url = f"{EOD_BASE}/{symbol}"
     params = {
@@ -228,7 +261,8 @@ def main() -> None:
         raise SystemExit("❌ No API key and no existing cache to fall back on.")
 
     assets = load_kr_assets_from_ssot()
-    print(f"✅ KR assets from SSOT (6-digit only): {len(assets)}")
+    augment_kr_with_theme_assets(assets)  # SSOT 미등록 신규 KR 테마 자산 자동 편입
+    print(f"✅ KR assets (SSOT + theme-union, 6-digit only): {len(assets)}")
 
     # 기존 valuation_kr.json 로드(있으면 marketCap/pe_ttm 등 보존)
     base_val: Dict[str, Any]
