@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-18T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "양자컴퓨팅 위협(Q-Day)·NIST PQC 표준화·국방/정부 암호 현대화 수혜 포스트퀀텀 보안 클러스터 — IBM·Thales·Palo Alto·Cloudflare·Akamai·Arqit·SandboxAQ + 한국 SK텔레콤(IDQ)·라온시큐어·케이사인. PQC 솔루션·QKD·HSM·네트워크 보안.",
     "notes": "T_451 신규 — 글로벌 PQC/포스트퀀텀 보안 (BF는 자산 OPERATES 경유)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -355,6 +363,56 @@
       "id": "BF_594",
       "type": "BUSINESS_FIELD",
       "name": "네트워크·엣지보안"
+    },
+    {
+      "id": "C_5080",
+      "type": "CHARACTER",
+      "name": "양자컴퓨팅PQC표준"
+    },
+    {
+      "id": "C_5081",
+      "type": "CHARACTER",
+      "name": "암호사이버보안"
+    },
+    {
+      "id": "C_5082",
+      "type": "CHARACTER",
+      "name": "차세대보안플랫폼"
+    },
+    {
+      "id": "C_5083",
+      "type": "CHARACTER",
+      "name": "엣지보안PQC적용"
+    },
+    {
+      "id": "C_5084",
+      "type": "CHARACTER",
+      "name": "CDN엣지보안"
+    },
+    {
+      "id": "C_5085",
+      "type": "CHARACTER",
+      "name": "양자암호순수플레이"
+    },
+    {
+      "id": "C_5086",
+      "type": "CHARACTER",
+      "name": "PQC양자AI"
+    },
+    {
+      "id": "C_5087",
+      "type": "CHARACTER",
+      "name": "양자암호통신QKD"
+    },
+    {
+      "id": "C_5088",
+      "type": "CHARACTER",
+      "name": "인증PQC보안"
+    },
+    {
+      "id": "C_5089",
+      "type": "CHARACTER",
+      "name": "암호데이터보안"
     }
   ],
   "edges": [
@@ -426,17 +484,26 @@
     {
       "from": "M_1061",
       "to": "T_451",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011818"
+      ]
     },
     {
       "from": "M_1062",
       "to": "T_451",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011819"
+      ]
     },
     {
       "from": "M_1063",
       "to": "T_451",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011820"
+      ]
     },
     {
       "from": "A_1495",
@@ -487,6 +554,106 @@
       "from": "A_521",
       "to": "BF_593",
       "type": "OPERATES"
+    },
+    {
+      "from": "A_1495",
+      "to": "C_5080",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011821"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1043",
+      "to": "C_5081",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011822"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_506",
+      "to": "C_5082",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011823"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_278",
+      "to": "C_5083",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011824"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2367",
+      "to": "C_5084",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011825"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1140",
+      "to": "C_5085",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011826"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2368",
+      "to": "C_5086",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011827"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_214",
+      "to": "C_5087",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011828"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1177",
+      "to": "C_5088",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011829"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_521",
+      "to": "C_5089",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011830"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -558,17 +725,26 @@
     {
       "from": "M_1061",
       "to": "T_451",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011818"
+      ]
     },
     {
       "from": "M_1062",
       "to": "T_451",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011819"
+      ]
     },
     {
       "from": "M_1063",
       "to": "T_451",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011820"
+      ]
     },
     {
       "from": "A_1495",
@@ -619,6 +795,106 @@
       "from": "A_521",
       "to": "BF_593",
       "type": "OPERATES"
+    },
+    {
+      "from": "A_1495",
+      "to": "C_5080",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011821"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1043",
+      "to": "C_5081",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011822"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_506",
+      "to": "C_5082",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011823"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_278",
+      "to": "C_5083",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011824"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2367",
+      "to": "C_5084",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011825"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1140",
+      "to": "C_5085",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011826"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2368",
+      "to": "C_5086",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011827"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_214",
+      "to": "C_5087",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011828"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1177",
+      "to": "C_5088",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011829"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_521",
+      "to": "C_5089",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011830"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
