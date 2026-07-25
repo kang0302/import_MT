@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "Hindenburg Research — Nathan Anderson 의 숏 셀러 리포트 target 회사 묶음. 2025년 1월 해체 발표. 대표 target: Icahn Enterprises (2023)·Block (2023)·Super Micro (2024)·Equinix (2024)·Roblox (2024)·Iris Energy (2024)·Tesla (간접). 회계·governance·grey market 의혹 지적.",
     "notes": "T_332 빅머니 시리즈 — Hindenburg short target (2025년 해체)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -241,43 +249,99 @@
       "id": "M_311",
       "type": "MACRO",
       "name": "방어적투자심리확산"
+    },
+    {
+      "id": "C_4744",
+      "type": "CHARACTER",
+      "name": "지주NAV프리미엄숏타깃"
+    },
+    {
+      "id": "C_4745",
+      "type": "CHARACTER",
+      "name": "핀테크회계논란숏타깃"
+    },
+    {
+      "id": "C_4746",
+      "type": "CHARACTER",
+      "name": "회계지연숏타깃"
+    },
+    {
+      "id": "C_4747",
+      "type": "CHARACTER",
+      "name": "DC회계AFFO숏타깃"
+    },
+    {
+      "id": "C_4748",
+      "type": "CHARACTER",
+      "name": "지표안전논란숏타깃"
+    },
+    {
+      "id": "C_4749",
+      "type": "CHARACTER",
+      "name": "채굴자본조달숏타깃"
+    },
+    {
+      "id": "C_4750",
+      "type": "CHARACTER",
+      "name": "밸류거버넌스숏타깃"
     }
   ],
   "edges": [
     {
       "from": "A_1939",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010459"
+      ]
     },
     {
       "from": "A_1032",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010460"
+      ]
     },
     {
       "from": "A_415",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010461"
+      ]
     },
     {
       "from": "A_826",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010462"
+      ]
     },
     {
       "from": "A_1103",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010463"
+      ]
     },
     {
       "from": "A_1865",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010464"
+      ]
     },
     {
       "from": "A_002",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010465"
+      ]
     },
     {
       "from": "T_332",
@@ -287,54 +351,154 @@
     {
       "from": "M_262",
       "to": "T_332",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010466"
+      ]
     },
     {
       "from": "M_180",
       "to": "T_332",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010467"
+      ]
     },
     {
       "from": "M_311",
       "to": "T_332",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010468"
+      ]
+    },
+    {
+      "from": "A_1939",
+      "to": "C_4744",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010469"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1032",
+      "to": "C_4745",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010470"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_415",
+      "to": "C_4746",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010471"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_826",
+      "to": "C_4747",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010472"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1103",
+      "to": "C_4748",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010473"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1865",
+      "to": "C_4749",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010474"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_4750",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010475"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1939",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010459"
+      ]
     },
     {
       "from": "A_1032",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010460"
+      ]
     },
     {
       "from": "A_415",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010461"
+      ]
     },
     {
       "from": "A_826",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010462"
+      ]
     },
     {
       "from": "A_1103",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010463"
+      ]
     },
     {
       "from": "A_1865",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010464"
+      ]
     },
     {
       "from": "A_002",
       "to": "T_332",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010465"
+      ]
     },
     {
       "from": "T_332",
@@ -344,17 +508,96 @@
     {
       "from": "M_262",
       "to": "T_332",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010466"
+      ]
     },
     {
       "from": "M_180",
       "to": "T_332",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010467"
+      ]
     },
     {
       "from": "M_311",
       "to": "T_332",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010468"
+      ]
+    },
+    {
+      "from": "A_1939",
+      "to": "C_4744",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010469"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1032",
+      "to": "C_4745",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010470"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_415",
+      "to": "C_4746",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010471"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_826",
+      "to": "C_4747",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010472"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1103",
+      "to": "C_4748",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010473"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1865",
+      "to": "C_4749",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010474"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_4750",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010475"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

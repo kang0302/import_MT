@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "Omega Family Office — Leon Cooperman (2018 펀드 → 가족오피스 전환) 가치주 + 에너지 베팅. 13F: Energy Transfer·Cheniere·Vertiv·Liberty Global·Berkshire.",
     "notes": "T_339 빅머니 시리즈",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -185,33 +193,73 @@
       "id": "M_145",
       "type": "MACRO",
       "name": "금리인하"
+    },
+    {
+      "id": "C_4786",
+      "type": "CHARACTER",
+      "name": "미드스트림고배당MLP"
+    },
+    {
+      "id": "C_4787",
+      "type": "CHARACTER",
+      "name": "LNG수출현금흐름"
+    },
+    {
+      "id": "C_4788",
+      "type": "CHARACTER",
+      "name": "AI DC전력냉각"
+    },
+    {
+      "id": "C_4789",
+      "type": "CHARACTER",
+      "name": "유럽케이블자산가치"
+    },
+    {
+      "id": "C_4790",
+      "type": "CHARACTER",
+      "name": "보험플로트복합"
     }
   ],
   "edges": [
     {
       "from": "A_1964",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010567"
+      ]
     },
     {
       "from": "A_489",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010568"
+      ]
     },
     {
       "from": "A_099",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010569"
+      ]
     },
     {
       "from": "A_1931",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010570"
+      ]
     },
     {
       "from": "A_1902",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010571"
+      ]
     },
     {
       "from": "T_339",
@@ -221,44 +269,118 @@
     {
       "from": "M_312",
       "to": "T_339",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010572"
+      ]
     },
     {
       "from": "M_173",
       "to": "T_339",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010573"
+      ]
     },
     {
       "from": "M_145",
       "to": "T_339",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010574"
+      ]
+    },
+    {
+      "from": "A_1964",
+      "to": "C_4786",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010575"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_489",
+      "to": "C_4787",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010576"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "C_4788",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010577"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1931",
+      "to": "C_4789",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010578"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1902",
+      "to": "C_4790",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010579"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_1964",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010567"
+      ]
     },
     {
       "from": "A_489",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010568"
+      ]
     },
     {
       "from": "A_099",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010569"
+      ]
     },
     {
       "from": "A_1931",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010570"
+      ]
     },
     {
       "from": "A_1902",
       "to": "T_339",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010571"
+      ]
     },
     {
       "from": "T_339",
@@ -268,17 +390,76 @@
     {
       "from": "M_312",
       "to": "T_339",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010572"
+      ]
     },
     {
       "from": "M_173",
       "to": "T_339",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010573"
+      ]
     },
     {
       "from": "M_145",
       "to": "T_339",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010574"
+      ]
+    },
+    {
+      "from": "A_1964",
+      "to": "C_4786",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010575"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_489",
+      "to": "C_4787",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010576"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "C_4788",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010577"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1931",
+      "to": "C_4789",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010578"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1902",
+      "to": "C_4790",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010579"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

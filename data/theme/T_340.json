@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "Pabrai Investment Funds — Mohnish Pabrai (Buffett 추종자) concentrated 가치주. 13F: Micron·Alpha Metallurgical·Frontier·SK하이닉스·삼성전자. concentrated 5-7 종목.",
     "notes": "T_340 빅머니 시리즈",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -185,33 +193,73 @@
       "id": "M_358",
       "type": "MACRO",
       "name": "신흥국GDP성장"
+    },
+    {
+      "id": "C_4791",
+      "type": "CHARACTER",
+      "name": "메모리사이클저평가"
+    },
+    {
+      "id": "C_4792",
+      "type": "CHARACTER",
+      "name": "원료탄고배당"
+    },
+    {
+      "id": "C_4793",
+      "type": "CHARACTER",
+      "name": "초저가항공턴어라운드"
+    },
+    {
+      "id": "C_4794",
+      "type": "CHARACTER",
+      "name": "HBM메모리저평가"
+    },
+    {
+      "id": "C_4795",
+      "type": "CHARACTER",
+      "name": "메모리파운드리저평가"
     }
   ],
   "edges": [
     {
       "from": "A_218",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010580"
+      ]
     },
     {
       "from": "A_1965",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010581"
+      ]
     },
     {
       "from": "A_1966",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010582"
+      ]
     },
     {
       "from": "A_217",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010583"
+      ]
     },
     {
       "from": "A_088",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010584"
+      ]
     },
     {
       "from": "T_340",
@@ -221,44 +269,118 @@
     {
       "from": "M_312",
       "to": "T_340",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010585"
+      ]
     },
     {
       "from": "M_068",
       "to": "T_340",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010586"
+      ]
     },
     {
       "from": "M_358",
       "to": "T_340",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010587"
+      ]
+    },
+    {
+      "from": "A_218",
+      "to": "C_4791",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010588"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1965",
+      "to": "C_4792",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010589"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1966",
+      "to": "C_4793",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010590"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_4794",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010591"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_4795",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010592"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_218",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010580"
+      ]
     },
     {
       "from": "A_1965",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010581"
+      ]
     },
     {
       "from": "A_1966",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010582"
+      ]
     },
     {
       "from": "A_217",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010583"
+      ]
     },
     {
       "from": "A_088",
       "to": "T_340",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010584"
+      ]
     },
     {
       "from": "T_340",
@@ -268,17 +390,76 @@
     {
       "from": "M_312",
       "to": "T_340",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010585"
+      ]
     },
     {
       "from": "M_068",
       "to": "T_340",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010586"
+      ]
     },
     {
       "from": "M_358",
       "to": "T_340",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010587"
+      ]
+    },
+    {
+      "from": "A_218",
+      "to": "C_4791",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010588"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1965",
+      "to": "C_4792",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010589"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1966",
+      "to": "C_4793",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010590"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_4794",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010591"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_4795",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010592"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
