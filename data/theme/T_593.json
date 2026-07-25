@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-07-06T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "description": "미국 우주항공 중 방산 메이저 세그먼트. 록히드마틴·노스럽그루먼·L3해리스 등 전투기·미사일·우주 방산 대형주.",
     "notes": "T_593 — 미국우주항공 분할(2026-07-06)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -195,6 +203,21 @@
       "id": "M_1071",
       "type": "MACRO",
       "name": "대형방산업체와다년계약증가"
+    },
+    {
+      "id": "C_5125",
+      "type": "CHARACTER",
+      "name": "F35미사일방산최대"
+    },
+    {
+      "id": "C_5126",
+      "type": "CHARACTER",
+      "name": "B21스텔스우주방산"
+    },
+    {
+      "id": "C_5127",
+      "type": "CHARACTER",
+      "name": "전술통신우주센서방산"
     }
   ],
   "edges": [
@@ -253,7 +276,7 @@
       "to": "T_593",
       "type": "IMPACTS",
       "evidence": [
-        "EV_001779"
+        "EV_013297"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -263,7 +286,7 @@
       "to": "T_593",
       "type": "IMPACTS",
       "evidence": [
-        "EV_001780"
+        "EV_013298"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -273,9 +296,39 @@
       "to": "T_593",
       "type": "IMPACTS",
       "evidence": [
-        "EV_001781"
+        "EV_013299"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_421",
+      "to": "C_5125",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_013300"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_206",
+      "to": "C_5126",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_013301"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_272",
+      "to": "C_5127",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_013302"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ],
@@ -335,7 +388,7 @@
       "to": "T_593",
       "type": "IMPACTS",
       "evidence": [
-        "EV_001779"
+        "EV_013297"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -345,7 +398,7 @@
       "to": "T_593",
       "type": "IMPACTS",
       "evidence": [
-        "EV_001780"
+        "EV_013298"
       ],
       "confidence": 0.75,
       "status": "verified"
@@ -355,9 +408,39 @@
       "to": "T_593",
       "type": "IMPACTS",
       "evidence": [
-        "EV_001781"
+        "EV_013299"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_421",
+      "to": "C_5125",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_013300"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_206",
+      "to": "C_5126",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_013301"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_272",
+      "to": "C_5127",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_013302"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]
