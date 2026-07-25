@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "GIC (Government of Singapore Investment Corp) — $1조 SWF. 글로벌 자산운용. 13F 톱: AAPL·BAC·META·TSMC·NVDA·COIN·AMD. 미국 대형 + 신흥국 분산.",
     "notes": "T_344 빅머니 시리즈",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -241,43 +249,99 @@
       "id": "M_358",
       "type": "MACRO",
       "name": "신흥국GDP성장"
+    },
+    {
+      "id": "C_4810",
+      "type": "CHARACTER",
+      "name": "아이폰생태계서비스"
+    },
+    {
+      "id": "C_4811",
+      "type": "CHARACTER",
+      "name": "대형은행금리수혜"
+    },
+    {
+      "id": "C_4812",
+      "type": "CHARACTER",
+      "name": "광고AI패밀리앱"
+    },
+    {
+      "id": "C_4813",
+      "type": "CHARACTER",
+      "name": "AI칩파운드리독점"
+    },
+    {
+      "id": "C_4814",
+      "type": "CHARACTER",
+      "name": "AIGPU생태계"
+    },
+    {
+      "id": "C_4815",
+      "type": "CHARACTER",
+      "name": "미국최대크립토거래소"
+    },
+    {
+      "id": "C_4816",
+      "type": "CHARACTER",
+      "name": "AI가속기CPU도전"
     }
   ],
   "edges": [
     {
       "from": "A_374",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010635"
+      ]
     },
     {
       "from": "A_113",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010636"
+      ]
     },
     {
       "from": "A_373",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010637"
+      ]
     },
     {
       "from": "A_232",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010638"
+      ]
     },
     {
       "from": "A_055",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010639"
+      ]
     },
     {
       "from": "A_347",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010640"
+      ]
     },
     {
       "from": "A_056",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010641"
+      ]
     },
     {
       "from": "T_344",
@@ -287,54 +351,154 @@
     {
       "from": "M_302",
       "to": "T_344",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010642"
+      ]
     },
     {
       "from": "M_401",
       "to": "T_344",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010643"
+      ]
     },
     {
       "from": "M_358",
       "to": "T_344",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010644"
+      ]
+    },
+    {
+      "from": "A_374",
+      "to": "C_4810",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010645"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_113",
+      "to": "C_4811",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010646"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_4812",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010647"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_4813",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010648"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_4814",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010649"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_347",
+      "to": "C_4815",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010650"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "C_4816",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010651"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_374",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010635"
+      ]
     },
     {
       "from": "A_113",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010636"
+      ]
     },
     {
       "from": "A_373",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010637"
+      ]
     },
     {
       "from": "A_232",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010638"
+      ]
     },
     {
       "from": "A_055",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010639"
+      ]
     },
     {
       "from": "A_347",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010640"
+      ]
     },
     {
       "from": "A_056",
       "to": "T_344",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010641"
+      ]
     },
     {
       "from": "T_344",
@@ -344,17 +508,96 @@
     {
       "from": "M_302",
       "to": "T_344",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010642"
+      ]
     },
     {
       "from": "M_401",
       "to": "T_344",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010643"
+      ]
     },
     {
       "from": "M_358",
       "to": "T_344",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010644"
+      ]
+    },
+    {
+      "from": "A_374",
+      "to": "C_4810",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010645"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_113",
+      "to": "C_4811",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010646"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_4812",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010647"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_4813",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010648"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_4814",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010649"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_347",
+      "to": "C_4815",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010650"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_056",
+      "to": "C_4816",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010651"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
