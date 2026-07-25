@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "유럽 반도체 밸류체인 — ASML·STMicroelectronics·Infineon·NXP·BE Semiconductor·Soitec. ASML 노광 독점 + STM/Infineon/NXP 자동차 반도체 + BESI 본딩 + Soitec SOI 웨이퍼. AI수요 + AI생산성 + 중국 반도체자립 대응.",
     "notes": "T_382 신규 — 유럽 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -208,6 +216,36 @@
       "id": "M_141",
       "type": "MACRO",
       "name": "중국반도체자립"
+    },
+    {
+      "id": "C_4982",
+      "type": "CHARACTER",
+      "name": "EUV노광독점"
+    },
+    {
+      "id": "C_4983",
+      "type": "CHARACTER",
+      "name": "차량용MCU유럽반도체"
+    },
+    {
+      "id": "C_4984",
+      "type": "CHARACTER",
+      "name": "전력반도체자동차1위"
+    },
+    {
+      "id": "C_4985",
+      "type": "CHARACTER",
+      "name": "차량용엣지반도체"
+    },
+    {
+      "id": "C_4986",
+      "type": "CHARACTER",
+      "name": "하이브리드본딩장비"
+    },
+    {
+      "id": "C_4987",
+      "type": "CHARACTER",
+      "name": "SOI웨이퍼소재"
     }
   ],
   "edges": [
@@ -244,17 +282,86 @@
     {
       "from": "M_055",
       "to": "T_382",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011193"
+      ]
     },
     {
       "from": "M_204",
       "to": "T_382",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011194"
+      ]
     },
     {
       "from": "M_141",
       "to": "T_382",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011195"
+      ]
+    },
+    {
+      "from": "A_802",
+      "to": "C_4982",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "C_4983",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_197",
+      "to": "C_4984",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "C_4985",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011199"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1170",
+      "to": "C_4986",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011200"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2100",
+      "to": "C_4987",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011201"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -291,17 +398,86 @@
     {
       "from": "M_055",
       "to": "T_382",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011193"
+      ]
     },
     {
       "from": "M_204",
       "to": "T_382",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011194"
+      ]
     },
     {
       "from": "M_141",
       "to": "T_382",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011195"
+      ]
+    },
+    {
+      "from": "A_802",
+      "to": "C_4982",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "C_4983",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_197",
+      "to": "C_4984",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "C_4985",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011199"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1170",
+      "to": "C_4986",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011200"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2100",
+      "to": "C_4987",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011201"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "유럽 SaaS/SW 거장 — SAP·Dassault Systèmes·Adyen·Wise·Capgemini·Atos·Spotify. 엔터프라이즈 SW + 핀테크 + 미디어 SaaS 통합. AI확산 + AI생산성 + ECB금리 (그로스 SaaS 핵심).",
     "notes": "T_385 신규 — 유럽 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -236,6 +244,41 @@
       "id": "M_359",
       "type": "MACRO",
       "name": "ECB금리정책"
+    },
+    {
+      "id": "C_5002",
+      "type": "CHARACTER",
+      "name": "유럽최대ERP클라우드"
+    },
+    {
+      "id": "C_5003",
+      "type": "CHARACTER",
+      "name": "3D설계PLM_SaaS"
+    },
+    {
+      "id": "C_5004",
+      "type": "CHARACTER",
+      "name": "글로벌결제인프라SaaS"
+    },
+    {
+      "id": "C_5005",
+      "type": "CHARACTER",
+      "name": "국경간송금핀테크"
+    },
+    {
+      "id": "C_5006",
+      "type": "CHARACTER",
+      "name": "IT컨설팅AI서비스"
+    },
+    {
+      "id": "C_5007",
+      "type": "CHARACTER",
+      "name": "IT서비스구조조정"
+    },
+    {
+      "id": "C_5008",
+      "type": "CHARACTER",
+      "name": "음악스트리밍1위"
     }
   ],
   "edges": [
@@ -277,17 +320,96 @@
     {
       "from": "M_055",
       "to": "T_385",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011222"
+      ]
     },
     {
       "from": "M_204",
       "to": "T_385",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011223"
+      ]
     },
     {
       "from": "M_359",
       "to": "T_385",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011224"
+      ]
+    },
+    {
+      "from": "A_408",
+      "to": "C_5002",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011225"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_255",
+      "to": "C_5003",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011226"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2105",
+      "to": "C_5004",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011227"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2106",
+      "to": "C_5005",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011228"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2107",
+      "to": "C_5006",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011229"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2108",
+      "to": "C_5007",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011230"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_749",
+      "to": "C_5008",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011231"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -329,17 +451,96 @@
     {
       "from": "M_055",
       "to": "T_385",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011222"
+      ]
     },
     {
       "from": "M_204",
       "to": "T_385",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011223"
+      ]
     },
     {
       "from": "M_359",
       "to": "T_385",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011224"
+      ]
+    },
+    {
+      "from": "A_408",
+      "to": "C_5002",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011225"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_255",
+      "to": "C_5003",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011226"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2105",
+      "to": "C_5004",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011227"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2106",
+      "to": "C_5005",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011228"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2107",
+      "to": "C_5006",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011229"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2108",
+      "to": "C_5007",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011230"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_749",
+      "to": "C_5008",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011231"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
