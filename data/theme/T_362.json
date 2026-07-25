@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "글로벌 음악 라벨 3대장 — Universal Music Group (UMG, 1위)·Warner Music Group (WMG, 3위)·Sony Music (Sony 자회사). Spotify·Apple Music 의 공급사 — 스트리밍 royalty 메가 수혜. AI 음악 (Suno·Udio) 소송 변수.",
     "notes": "T_362 신규",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -185,23 +193,57 @@
       "id": "M_055",
       "type": "MACRO",
       "name": "AI확산"
+    },
+    {
+      "id": "C_4921",
+      "type": "CHARACTER",
+      "name": "글로벌음악라벨1위"
+    },
+    {
+      "id": "C_4922",
+      "type": "CHARACTER",
+      "name": "글로벌음악라벨3위"
+    },
+    {
+      "id": "C_4923",
+      "type": "CHARACTER",
+      "name": "음악라벨게임IP"
+    },
+    {
+      "id": "C_4924",
+      "type": "CHARACTER",
+      "name": "음악스트리밍1위플랫폼"
+    },
+    {
+      "id": "C_4925",
+      "type": "CHARACTER",
+      "name": "중국음악스트리밍1위"
     }
   ],
   "edges": [
     {
       "from": "A_2013",
       "to": "T_362",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010948"
+      ]
     },
     {
       "from": "A_2014",
       "to": "T_362",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010949"
+      ]
     },
     {
       "from": "A_086",
       "to": "T_362",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010950"
+      ]
     },
     {
       "from": "T_362",
@@ -241,34 +283,102 @@
     {
       "from": "M_387",
       "to": "T_362",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010951"
+      ]
     },
     {
       "from": "M_179",
       "to": "T_362",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010952"
+      ]
     },
     {
       "from": "M_055",
       "to": "T_362",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010953"
+      ]
+    },
+    {
+      "from": "A_2013",
+      "to": "C_4921",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010954"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2014",
+      "to": "C_4922",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010955"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_086",
+      "to": "C_4923",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010956"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_749",
+      "to": "C_4924",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010957"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1157",
+      "to": "C_4925",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010958"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_2013",
       "to": "T_362",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010948"
+      ]
     },
     {
       "from": "A_2014",
       "to": "T_362",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010949"
+      ]
     },
     {
       "from": "A_086",
       "to": "T_362",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010950"
+      ]
     },
     {
       "from": "T_362",
@@ -308,17 +418,76 @@
     {
       "from": "M_387",
       "to": "T_362",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010951"
+      ]
     },
     {
       "from": "M_179",
       "to": "T_362",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010952"
+      ]
     },
     {
       "from": "M_055",
       "to": "T_362",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010953"
+      ]
+    },
+    {
+      "from": "A_2013",
+      "to": "C_4921",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010954"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2014",
+      "to": "C_4922",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010955"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_086",
+      "to": "C_4923",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010956"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_749",
+      "to": "C_4924",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010957"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1157",
+      "to": "C_4925",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010958"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
