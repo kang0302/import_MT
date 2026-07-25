@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "유럽 산업 자동화 메이저 — Siemens·ABB·Schneider·Atlas Copco·Sandvik·KION (창고 자동화). 인더스트리얼 4.0 + 로보틱스 + 자동화 트렌드 핵심. 자동화 확산 + 미국 인프라 capex + AI확산 trifecta.",
     "notes": "T_383 신규 — 유럽 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -208,6 +216,36 @@
       "id": "M_055",
       "type": "MACRO",
       "name": "AI확산"
+    },
+    {
+      "id": "C_4988",
+      "type": "CHARACTER",
+      "name": "산업자동화디지털1위"
+    },
+    {
+      "id": "C_4989",
+      "type": "CHARACTER",
+      "name": "로봇전력전자자동화"
+    },
+    {
+      "id": "C_4990",
+      "type": "CHARACTER",
+      "name": "전력관리자동화"
+    },
+    {
+      "id": "C_4991",
+      "type": "CHARACTER",
+      "name": "압축기진공장비"
+    },
+    {
+      "id": "C_4992",
+      "type": "CHARACTER",
+      "name": "절삭공구자동화"
+    },
+    {
+      "id": "C_4993",
+      "type": "CHARACTER",
+      "name": "지게차물류자동화"
     }
   ],
   "edges": [
@@ -244,17 +282,86 @@
     {
       "from": "M_028",
       "to": "T_383",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011202"
+      ]
     },
     {
       "from": "M_363",
       "to": "T_383",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011203"
+      ]
     },
     {
       "from": "M_055",
       "to": "T_383",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011204"
+      ]
+    },
+    {
+      "from": "A_256",
+      "to": "C_4988",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011205"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_4989",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011206"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_100",
+      "to": "C_4990",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011207"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2079",
+      "to": "C_4991",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011208"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2095",
+      "to": "C_4992",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011209"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2101",
+      "to": "C_4993",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011210"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -291,17 +398,86 @@
     {
       "from": "M_028",
       "to": "T_383",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011202"
+      ]
     },
     {
       "from": "M_363",
       "to": "T_383",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011203"
+      ]
     },
     {
       "from": "M_055",
       "to": "T_383",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011204"
+      ]
+    },
+    {
+      "from": "A_256",
+      "to": "C_4988",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011205"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_4989",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011206"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_100",
+      "to": "C_4990",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011207"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2079",
+      "to": "C_4991",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011208"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2095",
+      "to": "C_4992",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011209"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2101",
+      "to": "C_4993",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011210"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

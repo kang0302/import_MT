@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "K-2차전지 양극재 밸류체인 — 에코프로·포스코퓨처엠·엘앤에프·코스모신소재·LG화학. NCM·NCA·LFP 캐소드 분야. 미국 IRA 수혜 + 중국 CATL 견제 + 글로벌 EV 침투 사이클.",
     "notes": "T_391 신규 — 한국 batch",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -185,6 +193,31 @@
       "id": "C_428",
       "type": "CHARACTER",
       "name": "K양극재밸류체인"
+    },
+    {
+      "id": "C_5033",
+      "type": "CHARACTER",
+      "name": "양극재지주하이니켈"
+    },
+    {
+      "id": "C_5034",
+      "type": "CHARACTER",
+      "name": "양극재음극재수직계열"
+    },
+    {
+      "id": "C_5035",
+      "type": "CHARACTER",
+      "name": "하이니켈양극재"
+    },
+    {
+      "id": "C_5036",
+      "type": "CHARACTER",
+      "name": "양극재이형필름"
+    },
+    {
+      "id": "C_5037",
+      "type": "CHARACTER",
+      "name": "양극재종합화학"
     }
   ],
   "edges": [
@@ -216,22 +249,81 @@
     {
       "from": "M_062",
       "to": "T_391",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011277"
+      ]
     },
     {
       "from": "M_111",
       "to": "T_391",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011278"
+      ]
     },
     {
       "from": "M_348",
       "to": "T_391",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011279"
+      ]
     },
     {
       "from": "T_391",
       "to": "C_428",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2126",
+      "to": "C_5033",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011280"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_752",
+      "to": "C_5034",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011281"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_770",
+      "to": "C_5035",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011282"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2127",
+      "to": "C_5036",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011283"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_685",
+      "to": "C_5037",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011284"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -263,22 +355,81 @@
     {
       "from": "M_062",
       "to": "T_391",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011277"
+      ]
     },
     {
       "from": "M_111",
       "to": "T_391",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011278"
+      ]
     },
     {
       "from": "M_348",
       "to": "T_391",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011279"
+      ]
     },
     {
       "from": "T_391",
       "to": "C_428",
       "type": "HAS_TRAIT"
+    },
+    {
+      "from": "A_2126",
+      "to": "C_5033",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011280"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_752",
+      "to": "C_5034",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011281"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_770",
+      "to": "C_5035",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011282"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2127",
+      "to": "C_5036",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011283"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_685",
+      "to": "C_5037",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011284"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
