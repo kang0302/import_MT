@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-15T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "남북경협 수혜주 — 개성공단 재개·접경지 인프라·대북 송전·금강산 관광 4 축. 의류(좋은사람들·인디에프·코데즈컴바인) + 건설/EPC(현대로템·이화공영·부산산업) + 전선/전력(대원·가온·일진·제룡·한전) + 관광(아난티) + 종자(아시아종묘) 통합. 지정학 이벤트 + 한반도 평화 모멘텀 직접 노출.",
     "notes": "T_403 신규 — 남북경협 4축 클러스터",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -472,18 +480,44 @@
       "id": "M_386",
       "type": "MACRO",
       "name": "북미관계개선"
+    },
+    {
+      "id": "C_5048",
+      "type": "CHARACTER",
+      "name": "대북경협SOC수혜"
+    },
+    {
+      "id": "C_5049",
+      "type": "CHARACTER",
+      "name": "대북철도연결수혜"
+    },
+    {
+      "id": "C_5050",
+      "type": "CHARACTER",
+      "name": "금강산리조트재개수혜"
+    },
+    {
+      "id": "C_5051",
+      "type": "CHARACTER",
+      "name": "대북농업종자수혜"
     }
   ],
   "edges": [
     {
       "from": "A_004",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011388"
+      ]
     },
     {
       "from": "A_744",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011389"
+      ]
     },
     {
       "from": "A_655",
@@ -538,12 +572,18 @@
     {
       "from": "A_2171",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011390"
+      ]
     },
     {
       "from": "A_2172",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011391"
+      ]
     },
     {
       "from": "A_744",
@@ -583,12 +623,18 @@
     {
       "from": "M_049",
       "to": "T_403",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011392"
+      ]
     },
     {
       "from": "M_385",
       "to": "T_403",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011393"
+      ]
     },
     {
       "from": "T_403",
@@ -653,19 +699,68 @@
     {
       "from": "M_386",
       "to": "T_403",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011394"
+      ]
+    },
+    {
+      "from": "A_004",
+      "to": "C_5048",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011395"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_744",
+      "to": "C_5049",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011396"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2171",
+      "to": "C_5050",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011397"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2172",
+      "to": "C_5051",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011398"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_004",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011388"
+      ]
     },
     {
       "from": "A_744",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011389"
+      ]
     },
     {
       "from": "A_655",
@@ -720,12 +815,18 @@
     {
       "from": "A_2171",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011390"
+      ]
     },
     {
       "from": "A_2172",
       "to": "T_403",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011391"
+      ]
     },
     {
       "from": "A_744",
@@ -765,12 +866,18 @@
     {
       "from": "M_049",
       "to": "T_403",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011392"
+      ]
     },
     {
       "from": "M_385",
       "to": "T_403",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011393"
+      ]
     },
     {
       "from": "T_403",
@@ -835,7 +942,50 @@
     {
       "from": "M_386",
       "to": "T_403",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011394"
+      ]
+    },
+    {
+      "from": "A_004",
+      "to": "C_5048",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011395"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_744",
+      "to": "C_5049",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011396"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2171",
+      "to": "C_5050",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011397"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2172",
+      "to": "C_5051",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011398"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }

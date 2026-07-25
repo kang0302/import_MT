@@ -31,13 +31,15 @@ FMP_SUFFIX = {"TSE": ".T", "TYO": ".T"}
 
 
 def collect_assets():
-    """전 테마 ASSET 중복제거 → {ticker: {ticker,exchange,country,name}}"""
+    """전 테마 ASSET 중복제거 → {ticker: {ticker,exchange,country,name,themes:[T_xxx,...]}}"""
+    import os as _os
     out = {}
     for f in glob.glob(str(THEME_DIR / "T_*.json")):
         try:
             d = json.load(open(f, encoding="utf-8"))
         except Exception:
             continue
+        tid = _os.path.basename(f)[:-5]  # T_xxx
         for n in d.get("nodes", []):
             if n.get("type") != "ASSET":
                 continue
@@ -47,9 +49,14 @@ def collect_assets():
                 continue
             if tk not in out:
                 out[tk] = {"ticker": tk, "exchange": (ex.get("exchange") or "").strip(),
-                           "country": (ex.get("country") or "US").strip(), "name": n.get("name", tk)}
+                           "country": (ex.get("country") or "US").strip(), "name": n.get("name", tk),
+                           "themes": []}
+            if tid not in out[tk]["themes"]:
+                out[tk]["themes"].append(tid)
+    for tk in out:
+        out[tk]["themes"] = sorted(out[tk]["themes"], key=lambda t: int(t[2:]) if t[2:].isdigit() else 0)
     for b in BENCH:
-        out[b["ticker"]] = {k: b[k] for k in ("ticker", "exchange", "country", "name")}
+        out[b["ticker"]] = {**{k: b[k] for k in ("ticker", "exchange", "country", "name")}, "themes": []}
     return out
 
 
@@ -68,7 +75,8 @@ def compute_jrow(a):
     sector = a.get("sector", "")
     link = (f"https://finance.naver.com/item/main.naver?code={tk}" if co == "KR"
             else f"https://finance.yahoo.com/quote/{tk}")
-    base = {"sector": sector, "name": name, "ticker": tk, "country": co, "link": link}
+    base = {"sector": sector, "name": name, "ticker": tk, "country": co, "link": link,
+            "themes": a.get("themes", [])}
     rows = fetch_rows(tk, co, exch)
     if not rows:
         return {**base, "close": None, "g5": None, "g20": None, "g60": None, "g120": None, "hg": None,
