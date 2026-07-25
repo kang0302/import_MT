@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-11T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "eVTOL (electric Vertical Take-Off and Landing) 도심항공모빌리티 (UAM) — 2027 상업 운항 1차 목표. Joby (Toyota 투자)·Archer (Stellantis·United)·EVE (Embraer 자회사)·Vertical Aerospace (영국)·Lilium (독일, 비상장 회복)·Wisk (Boeing 자회사)·Supernal (현대차 자회사). FAA Type Certification + UAM 인프라 (Vertiport) 가 핵심 동인.",
     "notes": "T_375 신규 — eVTOL 7사 (5 상장·5 자동차OEM 모회사 2궤도)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -406,6 +414,31 @@
       "id": "C_402",
       "type": "CHARACTER",
       "name": "자동차OEM협력eVTOL"
+    },
+    {
+      "id": "C_4937",
+      "type": "CHARACTER",
+      "name": "eVTOL협력OEM조비"
+    },
+    {
+      "id": "C_4938",
+      "type": "CHARACTER",
+      "name": "eVTOL협력OEM아처"
+    },
+    {
+      "id": "C_4939",
+      "type": "CHARACTER",
+      "name": "EVE모회사항공OEM"
+    },
+    {
+      "id": "C_4940",
+      "type": "CHARACTER",
+      "name": "위스크모회사항공OEM"
+    },
+    {
+      "id": "C_4941",
+      "type": "CHARACTER",
+      "name": "슈퍼날UAM자체개발"
     }
   ],
   "edges": [
@@ -447,22 +480,34 @@
     {
       "from": "M_366",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011088"
+      ]
     },
     {
       "from": "M_367",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011089"
+      ]
     },
     {
       "from": "M_021",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011090"
+      ]
     },
     {
       "from": "M_363",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011091"
+      ]
     },
     {
       "from": "A_423",
@@ -533,6 +578,56 @@
       "from": "A_004",
       "to": "A_2072",
       "type": "INVESTS"
+    },
+    {
+      "from": "A_006",
+      "to": "C_4937",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011092"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_010",
+      "to": "C_4938",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011093"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1983",
+      "to": "C_4939",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011094"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1475",
+      "to": "C_4940",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011095"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "C_4941",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011096"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -574,22 +669,34 @@
     {
       "from": "M_366",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011088"
+      ]
     },
     {
       "from": "M_367",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011089"
+      ]
     },
     {
       "from": "M_021",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011090"
+      ]
     },
     {
       "from": "M_363",
       "to": "T_375",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011091"
+      ]
     },
     {
       "from": "A_423",
@@ -660,6 +767,56 @@
       "from": "A_004",
       "to": "A_2072",
       "type": "INVESTS"
+    },
+    {
+      "from": "A_006",
+      "to": "C_4937",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011092"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_010",
+      "to": "C_4938",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011093"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1983",
+      "to": "C_4939",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011094"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1475",
+      "to": "C_4940",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011095"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "C_4941",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011096"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
