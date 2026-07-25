@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "글로벌 송전망 노후화 + AI DC 전력 수요 폭증 수혜주. 미국 전력망 60% 50년+, 송전 capa 2배 필요. 장비: Eaton·Hubbell·ABB·Schneider·Emerson. 건설 EPC: Quanta Services. 유틸리티 IOU: NextEra·Duke·Southern·AEP·Edison. IIJA $73B 송전 자금 + AI capex 사이클.",
     "notes": "T_354 신규 — 글로벌 송전망 노후화 11사",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -368,63 +376,151 @@
       "id": "M_035",
       "type": "MACRO",
       "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "C_4887",
+      "type": "CHARACTER",
+      "name": "전력관리그리드전방위"
+    },
+    {
+      "id": "C_4888",
+      "type": "CHARACTER",
+      "name": "전력송배전기기"
+    },
+    {
+      "id": "C_4889",
+      "type": "CHARACTER",
+      "name": "전력그리드EPC"
+    },
+    {
+      "id": "C_4890",
+      "type": "CHARACTER",
+      "name": "최대재생에너지IPP"
+    },
+    {
+      "id": "C_4891",
+      "type": "CHARACTER",
+      "name": "미국유틸리티송배전투자"
+    },
+    {
+      "id": "C_4892",
+      "type": "CHARACTER",
+      "name": "미국유틸리티원전"
+    },
+    {
+      "id": "C_4893",
+      "type": "CHARACTER",
+      "name": "송전망최대유틸리티"
+    },
+    {
+      "id": "C_4894",
+      "type": "CHARACTER",
+      "name": "캘리포니아유틸리티"
+    },
+    {
+      "id": "C_4895",
+      "type": "CHARACTER",
+      "name": "전력전자그리드자동화"
+    },
+    {
+      "id": "C_4896",
+      "type": "CHARACTER",
+      "name": "전력관리에너지효율"
+    },
+    {
+      "id": "C_4897",
+      "type": "CHARACTER",
+      "name": "산업자동화전력"
     }
   ],
   "edges": [
     {
       "from": "A_955",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010840"
+      ]
     },
     {
       "from": "A_1987",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010841"
+      ]
     },
     {
       "from": "A_1860",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010842"
+      ]
     },
     {
       "from": "A_1062",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010843"
+      ]
     },
     {
       "from": "A_1063",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010844"
+      ]
     },
     {
       "from": "A_1064",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010845"
+      ]
     },
     {
       "from": "A_1065",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010846"
+      ]
     },
     {
       "from": "A_1988",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010847"
+      ]
     },
     {
       "from": "A_286",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010848"
+      ]
     },
     {
       "from": "A_100",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010849"
+      ]
     },
     {
       "from": "A_1989",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010850"
+      ]
     },
     {
       "from": "T_354",
@@ -489,74 +585,226 @@
     {
       "from": "M_098",
       "to": "T_354",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010851"
+      ]
     },
     {
       "from": "M_091",
       "to": "T_354",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010852"
+      ]
     },
     {
       "from": "M_035",
       "to": "T_354",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010853"
+      ]
+    },
+    {
+      "from": "A_955",
+      "to": "C_4887",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010854"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1987",
+      "to": "C_4888",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010855"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1860",
+      "to": "C_4889",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010856"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1062",
+      "to": "C_4890",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010857"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1063",
+      "to": "C_4891",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010858"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1064",
+      "to": "C_4892",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010859"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1065",
+      "to": "C_4893",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010860"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1988",
+      "to": "C_4894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010861"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_4895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010862"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_100",
+      "to": "C_4896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010863"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1989",
+      "to": "C_4897",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010864"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_955",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010840"
+      ]
     },
     {
       "from": "A_1987",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010841"
+      ]
     },
     {
       "from": "A_1860",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010842"
+      ]
     },
     {
       "from": "A_1062",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010843"
+      ]
     },
     {
       "from": "A_1063",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010844"
+      ]
     },
     {
       "from": "A_1064",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010845"
+      ]
     },
     {
       "from": "A_1065",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010846"
+      ]
     },
     {
       "from": "A_1988",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010847"
+      ]
     },
     {
       "from": "A_286",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010848"
+      ]
     },
     {
       "from": "A_100",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010849"
+      ]
     },
     {
       "from": "A_1989",
       "to": "T_354",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010850"
+      ]
     },
     {
       "from": "T_354",
@@ -621,17 +869,136 @@
     {
       "from": "M_098",
       "to": "T_354",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010851"
+      ]
     },
     {
       "from": "M_091",
       "to": "T_354",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010852"
+      ]
     },
     {
       "from": "M_035",
       "to": "T_354",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010853"
+      ]
+    },
+    {
+      "from": "A_955",
+      "to": "C_4887",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010854"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1987",
+      "to": "C_4888",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010855"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1860",
+      "to": "C_4889",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010856"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1062",
+      "to": "C_4890",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010857"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1063",
+      "to": "C_4891",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010858"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1064",
+      "to": "C_4892",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010859"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1065",
+      "to": "C_4893",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010860"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1988",
+      "to": "C_4894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010861"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_4895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010862"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_100",
+      "to": "C_4896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010863"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1989",
+      "to": "C_4897",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010864"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
