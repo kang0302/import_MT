@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-30T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "K호남 반도체 메가클러스터 — 용인·호남 메가팹 전공정 투자(삼성전자·SK하이닉스) 본체 + 팹 시공 EPC(삼성물산·SK에코플랜트)·용수/초순수(삼성E&A)·전력 송배전 HVDC(LS전선·LS·LS일렉트릭)·재생에너지(SK이터닉스)·지역소비(광주신세계) 구조적 수혜 축. 호남 지역건설(T_559)과 연계.",
     "notes": "T_558 신규(2026-06-30) — 호남 반도체 메가클러스터",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 이벤트 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -662,6 +670,41 @@
         "returnsAsOf": "2026-07-24",
         "returnsSource": "EODHD"
       }
+    },
+    {
+      "id": "C_5100",
+      "type": "CHARACTER",
+      "name": "호남연고건설클러스터수혜"
+    },
+    {
+      "id": "C_5101",
+      "type": "CHARACTER",
+      "name": "호남토목건축클러스터수혜"
+    },
+    {
+      "id": "C_5102",
+      "type": "CHARACTER",
+      "name": "호남토목자재클러스터수혜"
+    },
+    {
+      "id": "C_5103",
+      "type": "CHARACTER",
+      "name": "호남토목건축클러스터수혜2"
+    },
+    {
+      "id": "C_5104",
+      "type": "CHARACTER",
+      "name": "클러스터건설자재공급"
+    },
+    {
+      "id": "C_5105",
+      "type": "CHARACTER",
+      "name": "파일구조물자재공급"
+    },
+    {
+      "id": "C_5106",
+      "type": "CHARACTER",
+      "name": "파일구조물자재공급2"
     }
   ],
   "edges": [
@@ -878,32 +921,50 @@
     {
       "from": "M_010",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012949"
+      ]
     },
     {
       "from": "M_044",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012950"
+      ]
     },
     {
       "from": "M_091",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012951"
+      ]
     },
     {
       "from": "M_098",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012952"
+      ]
     },
     {
       "from": "M_033",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012953"
+      ]
     },
     {
       "from": "M_141",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012954"
+      ]
     },
     {
       "from": "A_2579",
@@ -939,6 +1000,76 @@
       "from": "A_2583",
       "to": "T_558",
       "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2579",
+      "to": "C_5100",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012955"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2580",
+      "to": "C_5101",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012956"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2586",
+      "to": "C_5102",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012957"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2581",
+      "to": "C_5103",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012958"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2585",
+      "to": "C_5104",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012959"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2582",
+      "to": "C_5105",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012960"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2583",
+      "to": "C_5106",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012961"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1155,32 +1286,50 @@
     {
       "from": "M_010",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012949"
+      ]
     },
     {
       "from": "M_044",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012950"
+      ]
     },
     {
       "from": "M_091",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012951"
+      ]
     },
     {
       "from": "M_098",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012952"
+      ]
     },
     {
       "from": "M_033",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012953"
+      ]
     },
     {
       "from": "M_141",
       "to": "T_558",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012954"
+      ]
     },
     {
       "from": "A_2579",
@@ -1216,6 +1365,76 @@
       "from": "A_2583",
       "to": "T_558",
       "type": "THEMED_AS"
+    },
+    {
+      "from": "A_2579",
+      "to": "C_5100",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012955"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2580",
+      "to": "C_5101",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012956"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2586",
+      "to": "C_5102",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012957"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2581",
+      "to": "C_5103",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012958"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2585",
+      "to": "C_5104",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012959"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2582",
+      "to": "C_5105",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012960"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2583",
+      "to": "C_5106",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012961"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
