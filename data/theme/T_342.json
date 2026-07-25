@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "CalPERS (California Public Employees Retirement System) — $450B 미국 최대 공적 연금. 빅테크 톱 비중 + 가치주 + PE/RE. 13F: AAPL·MSFT·NVDA·GOOGL·AMZN·META·TSLA·BRK.",
     "notes": "T_342 빅머니 시리즈",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -269,48 +277,112 @@
       "id": "M_302",
       "type": "MACRO",
       "name": "위험자산선호심리"
+    },
+    {
+      "id": "C_4796",
+      "type": "CHARACTER",
+      "name": "아이폰생태계서비스"
+    },
+    {
+      "id": "C_4797",
+      "type": "CHARACTER",
+      "name": "클라우드AI코파일럿"
+    },
+    {
+      "id": "C_4798",
+      "type": "CHARACTER",
+      "name": "AIGPU생태계"
+    },
+    {
+      "id": "C_4799",
+      "type": "CHARACTER",
+      "name": "검색클라우드AI"
+    },
+    {
+      "id": "C_4800",
+      "type": "CHARACTER",
+      "name": "AWS리테일지배"
+    },
+    {
+      "id": "C_4801",
+      "type": "CHARACTER",
+      "name": "광고AI패밀리앱"
+    },
+    {
+      "id": "C_4802",
+      "type": "CHARACTER",
+      "name": "EV자율주행로봇"
+    },
+    {
+      "id": "C_4803",
+      "type": "CHARACTER",
+      "name": "보험플로트복합"
     }
   ],
   "edges": [
     {
       "from": "A_374",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010601"
+      ]
     },
     {
       "from": "A_210",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010602"
+      ]
     },
     {
       "from": "A_055",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010603"
+      ]
     },
     {
       "from": "A_050",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010604"
+      ]
     },
     {
       "from": "A_211",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010605"
+      ]
     },
     {
       "from": "A_373",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010606"
+      ]
     },
     {
       "from": "A_002",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010607"
+      ]
     },
     {
       "from": "A_1902",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010608"
+      ]
     },
     {
       "from": "T_342",
@@ -320,59 +392,172 @@
     {
       "from": "M_063",
       "to": "T_342",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010609"
+      ]
     },
     {
       "from": "M_401",
       "to": "T_342",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010610"
+      ]
     },
     {
       "from": "M_302",
       "to": "T_342",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010611"
+      ]
+    },
+    {
+      "from": "A_374",
+      "to": "C_4796",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010612"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_210",
+      "to": "C_4797",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010613"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_4798",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010614"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_050",
+      "to": "C_4799",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010615"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_211",
+      "to": "C_4800",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010616"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_4801",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010617"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_4802",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010618"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1902",
+      "to": "C_4803",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010619"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_374",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010601"
+      ]
     },
     {
       "from": "A_210",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010602"
+      ]
     },
     {
       "from": "A_055",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010603"
+      ]
     },
     {
       "from": "A_050",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010604"
+      ]
     },
     {
       "from": "A_211",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010605"
+      ]
     },
     {
       "from": "A_373",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010606"
+      ]
     },
     {
       "from": "A_002",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010607"
+      ]
     },
     {
       "from": "A_1902",
       "to": "T_342",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010608"
+      ]
     },
     {
       "from": "T_342",
@@ -382,17 +567,106 @@
     {
       "from": "M_063",
       "to": "T_342",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010609"
+      ]
     },
     {
       "from": "M_401",
       "to": "T_342",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010610"
+      ]
     },
     {
       "from": "M_302",
       "to": "T_342",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010611"
+      ]
+    },
+    {
+      "from": "A_374",
+      "to": "C_4796",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010612"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_210",
+      "to": "C_4797",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010613"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_4798",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010614"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_050",
+      "to": "C_4799",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010615"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_211",
+      "to": "C_4800",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010616"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_4801",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010617"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_4802",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010618"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1902",
+      "to": "C_4803",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010619"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
