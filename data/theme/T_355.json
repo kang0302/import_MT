@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-10T00:00:00+09:00",
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
     "description": "베트남 ETF — 차이나 대체·미국 nearshoring 동남아 hub. VanEck VNM + Global X VNAM ETF + VinFast 자체. 인구학적 보너스 + Samsung·Apple·Intel 공장 이전 수혜 + FDI ramp. 미·중 갈등 시 가장 강한 nearshoring vehicle.",
     "notes": "T_355 신규 — 베트남 ETF 차이나 대체",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -185,23 +193,37 @@
       "id": "M_357",
       "type": "MACRO",
       "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "C_4898",
+      "type": "CHARACTER",
+      "name": "베트남전기차빈그룹"
     }
   ],
   "edges": [
     {
       "from": "A_129",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010865"
+      ]
     },
     {
       "from": "A_1990",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010866"
+      ]
     },
     {
       "from": "A_1991",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010867"
+      ]
     },
     {
       "from": "T_355",
@@ -211,44 +233,78 @@
     {
       "from": "A_1996",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010868"
+      ]
     },
     {
       "from": "A_1997",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010869"
+      ]
     },
     {
       "from": "M_358",
       "to": "T_355",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010870"
+      ]
     },
     {
       "from": "M_138",
       "to": "T_355",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010871"
+      ]
     },
     {
       "from": "M_357",
       "to": "T_355",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010872"
+      ]
+    },
+    {
+      "from": "A_1991",
+      "to": "C_4898",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010873"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
     {
       "from": "A_129",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010865"
+      ]
     },
     {
       "from": "A_1990",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010866"
+      ]
     },
     {
       "from": "A_1991",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010867"
+      ]
     },
     {
       "from": "T_355",
@@ -258,27 +314,52 @@
     {
       "from": "A_1996",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010868"
+      ]
     },
     {
       "from": "A_1997",
       "to": "T_355",
-      "type": "THEMED_AS"
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010869"
+      ]
     },
     {
       "from": "M_358",
       "to": "T_355",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010870"
+      ]
     },
     {
       "from": "M_138",
       "to": "T_355",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010871"
+      ]
     },
     {
       "from": "M_357",
       "to": "T_355",
-      "type": "IMPACTS"
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010872"
+      ]
+    },
+    {
+      "from": "A_1991",
+      "to": "C_4898",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010873"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
