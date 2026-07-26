@@ -44,7 +44,7 @@ WINDOW_DAYS = int(os.environ.get("EODHD_WINDOW_DAYS", str(365 * 3 + 30)))
 # 최신 거래일 판별용(삼성전자)
 SENTINEL = os.environ.get("EODHD_SENTINEL", "005930.KO")
 
-RETURN_KEYS = ["return_3d", "return_7d", "return_1m", "return_ytd", "return_1y", "return_3y"]
+RETURN_KEYS = ["return_1d", "return_3d", "return_7d", "return_15d", "return_1m", "return_ytd", "return_1y", "return_2y", "return_3y"]
 
 
 def read_json(path: Path) -> Any:
@@ -205,8 +205,8 @@ def latest_from_history(rows: List[Dict[str, Any]]) -> Tuple[Optional[str], Opti
 
 def compute_returns_from_history(rows: List[Dict[str, Any]]) -> Dict[str, Optional[float]]:
     """
-    거래일 인덱스 기반으로 3d/7d/1m/1y/3y 계산. ytd는 해당 연도 첫 거래일 close 기준.
-    수익률 계산엔 adj(분할/배당 보정) 사용.
+    거래일 인덱스 기반으로 1d/3d/7d/15d/1m/1y/2y/3y 계산. ytd는 해당 연도 첫 거래일 close 기준.
+    수익률 계산엔 adj(분할/배당 보정) 사용. (FMP 해외 페처와 동일 오프셋)
     """
     out = {k: None for k in RETURN_KEYS}
     if not rows:
@@ -225,10 +225,13 @@ def compute_returns_from_history(rows: List[Dict[str, Any]]) -> Dict[str, Option
             return None
         return (last_adj / base - 1.0) * 100.0
 
+    out["return_1d"] = back(1)
     out["return_3d"] = back(3)
     out["return_7d"] = back(7)
+    out["return_15d"] = back(15)
     out["return_1m"] = back(21)
     out["return_1y"] = back(252)
+    out["return_2y"] = back(504)
     out["return_3y"] = back(756)
 
     # YTD: 해당 연도의 첫 거래일
