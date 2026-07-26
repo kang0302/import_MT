@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-04-17T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g152 누적 import 기반 유럽방산 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "ETF 정리(IN_ETF·CHR 제거)",
+        "detail": "ETF↔개별주 IN_ETF 연결·ETF CHR 제거, ETF는 THEME과 EXPOSED_TO만, 특징은 호버 박스."
+      },
       {
         "date": "2026-07-12",
         "kind": "보강",
@@ -299,7 +305,8 @@
         "return_3y": null,
         "returnsAsOf": null,
         "returnsSource": null
-      }
+      },
+      "coreBiz": "유럽 방산 대표 ETF (iShares) — 라인메탈·에어버스·탈레스 등 유럽 방산주 집중"
     },
     {
       "id": "A_1047",
@@ -327,7 +334,8 @@
         "return_3y": null,
         "returnsAsOf": null,
         "returnsSource": null
-      }
+      },
+      "coreBiz": "글로벌 방산 ETF (VanEck) — 미국·유럽 방산 대형주 광범위 편입"
     },
     {
       "id": "A_504",
@@ -355,7 +363,8 @@
         "return_3y": 120.57231879304689,
         "returnsAsOf": "2026-07-24",
         "returnsSource": "FMP"
-      }
+      },
+      "coreBiz": "미국 항공·방산 동일가중 ETF (SPDR S&P Aerospace & Defense)"
     },
     {
       "id": "M_140",
@@ -406,21 +415,6 @@
       "id": "C_2664",
       "type": "CHARACTER",
       "name": "미사일방공RTX"
-    },
-    {
-      "id": "C_2665",
-      "type": "CHARACTER",
-      "name": "유럽방산ETF_iShares"
-    },
-    {
-      "id": "C_2666",
-      "type": "CHARACTER",
-      "name": "글로벌방산ETF_VanEck"
-    },
-    {
-      "id": "C_2667",
-      "type": "CHARACTER",
-      "name": "항공방산ETF_XAR"
     }
   ],
   "edges": [
@@ -522,66 +516,6 @@
         "EV_004635"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_1041",
-      "to": "A_1046",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004636"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1043",
-      "to": "A_1046",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004637"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1045",
-      "to": "A_1046",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004638"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_207",
-      "to": "A_1047",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004639"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_419",
-      "to": "A_504",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004640"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_162",
-      "to": "A_504",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004641"
-      ],
-      "confidence": 0.7,
       "status": "verified"
     },
     {
@@ -712,36 +646,6 @@
         "EV_004790"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_1046",
-      "to": "C_2665",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004791"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1047",
-      "to": "C_2666",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004792"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_504",
-      "to": "C_2667",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004793"
-      ],
-      "confidence": 0.74,
       "status": "verified"
     }
   ],
@@ -847,66 +751,6 @@
       "status": "verified"
     },
     {
-      "from": "A_1041",
-      "to": "A_1046",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004636"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1043",
-      "to": "A_1046",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004637"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1045",
-      "to": "A_1046",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004638"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_207",
-      "to": "A_1047",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004639"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_419",
-      "to": "A_504",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004640"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_162",
-      "to": "A_504",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004641"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
       "from": "T_152",
       "to": "A_1046",
       "type": "EXPOSED_TO",
@@ -1034,36 +878,6 @@
         "EV_004790"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_1046",
-      "to": "C_2665",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004791"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1047",
-      "to": "C_2666",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004792"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_504",
-      "to": "C_2667",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004793"
-      ],
-      "confidence": 0.74,
       "status": "verified"
     }
   ]
