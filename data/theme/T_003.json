@@ -15,11 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-05-03T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g003 누적 import 기반 소프트뱅크_AI투자 테마",
     "sources": [],
     "provenanceSeed": "T_003 공개사실 시드(2026-06-29) — evidence_ssot 참조",
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "허브형 전환(단일 코어 1궤도)",
+        "detail": "소프트뱅크 코어 1궤도(weight 0.7), 나머지 2궤도(weight 0.3)로 재배치."
+      },
       {
         "date": "2026-07-11",
         "kind": "변경",
@@ -67,7 +73,8 @@
         "return_3y": null,
         "returnsAsOf": "2026-07-24",
         "returnsSource": "FMP"
-      }
+      },
+      "weight": 0.7
     },
     {
       "id": "A_055",
@@ -96,7 +103,8 @@
         "return_3y": 339.3372982158029,
         "returnsAsOf": "2026-07-24",
         "returnsSource": "FMP"
-      }
+      },
+      "weight": 0.3
     },
     {
       "id": "A_586",
@@ -125,7 +133,8 @@
         "return_3y": null,
         "returnsAsOf": null,
         "returnsSource": null
-      }
+      },
+      "weight": 0.3
     },
     {
       "id": "A_242",
@@ -154,7 +163,8 @@
         "return_3y": 167.90481717933835,
         "returnsAsOf": "2026-07-24",
         "returnsSource": "FMP"
-      }
+      },
+      "weight": 0.3
     },
     {
       "id": "A_058",
@@ -183,7 +193,8 @@
         "return_3y": null,
         "returnsAsOf": "2026-07-24",
         "returnsSource": "FMP"
-      }
+      },
+      "weight": 0.3
     },
     {
       "id": "A_286",
@@ -212,7 +223,8 @@
         "return_3y": null,
         "returnsAsOf": "2026-07-24",
         "returnsSource": "FMP"
-      }
+      },
+      "weight": 0.3
     },
     {
       "id": "A_1287",
@@ -241,7 +253,8 @@
         "return_3y": null,
         "returnsAsOf": null,
         "returnsSource": null
-      }
+      },
+      "weight": 0.3
     },
     {
       "id": "M_055",
@@ -392,32 +405,12 @@
     },
     {
       "from": "A_055",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004578"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_055",
       "to": "C_2633",
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004579"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_242",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004580"
-      ],
-      "confidence": 0.76,
       "status": "verified"
     },
     {
@@ -432,32 +425,12 @@
     },
     {
       "from": "A_058",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004582"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_058",
       "to": "C_2635",
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004583"
       ],
       "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_1287",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004584"
-      ],
-      "confidence": 0.78,
       "status": "verified"
     },
     {
@@ -472,16 +445,6 @@
     },
     {
       "from": "A_286",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004586"
-      ],
-      "confidence": 0.76,
-      "status": "verified"
-    },
-    {
-      "from": "A_286",
       "to": "C_2637",
       "type": "HAS_TRAIT",
       "evidence": [
@@ -492,22 +455,72 @@
     },
     {
       "from": "A_586",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004588"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_586",
       "to": "C_2638",
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004589"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_055",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014631"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_586",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014632"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_242",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014633"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_058",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014634"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_286",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014635"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_1287",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014636"
+      ],
+      "confidence": 0.68,
       "status": "verified"
     }
   ],
@@ -594,32 +607,12 @@
     },
     {
       "from": "A_055",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004578"
-      ],
-      "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_055",
       "to": "C_2633",
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004579"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_242",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004580"
-      ],
-      "confidence": 0.76,
       "status": "verified"
     },
     {
@@ -634,32 +627,12 @@
     },
     {
       "from": "A_058",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004582"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_058",
       "to": "C_2635",
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004583"
       ],
       "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_1287",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004584"
-      ],
-      "confidence": 0.78,
       "status": "verified"
     },
     {
@@ -674,16 +647,6 @@
     },
     {
       "from": "A_286",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004586"
-      ],
-      "confidence": 0.76,
-      "status": "verified"
-    },
-    {
-      "from": "A_286",
       "to": "C_2637",
       "type": "HAS_TRAIT",
       "evidence": [
@@ -694,22 +657,72 @@
     },
     {
       "from": "A_586",
-      "to": "T_003",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_004588"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_586",
       "to": "C_2638",
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_004589"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_055",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014631"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_586",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014632"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_242",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014633"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_058",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014634"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_286",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014635"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1258",
+      "to": "A_1287",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014636"
+      ],
+      "confidence": 0.68,
       "status": "verified"
     }
   ]
