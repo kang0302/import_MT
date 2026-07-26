@@ -22,6 +22,12 @@
     "changelog": [
       {
         "date": "2026-07-26",
+        "kind": "수정",
+        "title": "구성종목 변경",
+        "detail": "종목 추가/삭제·관계 조정(허브형 유지)."
+      },
+      {
+        "date": "2026-07-26",
         "kind": "신규",
         "title": "테마 생성",
         "detail": "1궤도(weight 0.7)+2궤도(weight 0.3) 생태계 구성, CHR·이벤트 포함."
@@ -270,43 +276,6 @@
       "name": "알파벳지분전략자산_StrategicAsset"
     },
     {
-      "id": "A_1321",
-      "type": "ASSET",
-      "name": "우버",
-      "exposure": {
-        "ticker": "UBER",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "Uber Technologies — 라이드쉐어·푸드 배달·자율주행 플랫폼",
-        "theme_role": "NVIDIA·WeRide·Rivian PARTNERS — 자율주행 라이드쉐어 핵심",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -4.309969525468005,
-        "close": 65.94,
-        "marketCap": 134227398917,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-25",
-        "valuationSource": "FMP",
-        "return_3d": -7.840670859538779,
-        "return_7d": -9.26104307141875,
-        "return_15d": -11.40669085046353,
-        "return_1m": -10.710900473933648,
-        "return_ytd": -20.41998551774077,
-        "return_1y": -26.684456304202797,
-        "return_2y": -2.0353587876987156,
-        "return_3y": 39.94057724957556,
-        "returnsAsOf": "2026-07-24",
-        "returnsSource": "FMP"
-      },
-      "weight": 0.3
-    },
-    {
-      "id": "C_5656",
-      "type": "CHARACTER",
-      "name": "GV레거시포트폴리오_LegacyPortfolio"
-    },
-    {
       "name": "웨이모(비)",
       "id": "A_053",
       "metrics": {
@@ -361,6 +330,75 @@
       "id": "M_035",
       "type": "MACRO",
       "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "theme_role": "1궤도"
+      },
+      "metrics": {
+        "return_1d": -0.9197164207702557,
+        "close": 206.84,
+        "marketCap": 5009871640000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-25",
+        "valuationSource": "FMP",
+        "return_3d": -0.21708717256017085,
+        "return_7d": -2.663529411764709,
+        "return_15d": 6.164348406302933,
+        "return_1m": 3.939698492462318,
+        "return_ytd": 9.52607889859678,
+        "return_1y": 21.114884646914156,
+        "return_2y": 75.39218180276434,
+        "return_3y": 339.3372982158029,
+        "returnsAsOf": "2026-07-24",
+        "returnsSource": "FMP"
+      },
+      "weight": 0.3
+    },
+    {
+      "id": "C_5669",
+      "type": "CHARACTER",
+      "name": "GPU병행조달_TPU이원체제"
+    },
+    {
+      "id": "A_099",
+      "type": "ASSET",
+      "name": "버티브",
+      "exposure": {
+        "ticker": "VRT",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -4.499407972635183,
+        "close": 290.36,
+        "marketCap": 111529835814,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-25",
+        "valuationSource": "FMP",
+        "return_3d": -4.64367816091954,
+        "return_7d": -4.665594116295102,
+        "return_15d": -3.38402156190728,
+        "return_1m": -8.238788989665958,
+        "return_ytd": 65.34365924491772,
+        "return_1y": 123.02788232583151,
+        "return_2y": 240.3586918297972,
+        "return_3y": 987.8980891719746,
+        "returnsAsOf": "2026-07-24",
+        "returnsSource": "FMP"
+      },
+      "weight": 0.3
+    },
+    {
+      "id": "C_5670",
+      "type": "CHARACTER",
+      "name": "DC냉각인프라"
     }
   ],
   "edges": [
@@ -486,26 +524,6 @@
     },
     {
       "from": "A_050",
-      "to": "A_1321",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_014605"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1321",
-      "to": "C_5656",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014606"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_050",
       "to": "A_053",
       "type": "INVESTS",
       "evidence": [
@@ -552,6 +570,46 @@
         "EV_014611"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "A_050",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_014678"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5669",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014679"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "A_050",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_014680"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "C_5670",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014681"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ],
@@ -678,26 +736,6 @@
     },
     {
       "from": "A_050",
-      "to": "A_1321",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_014605"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_1321",
-      "to": "C_5656",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014606"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_050",
       "to": "A_053",
       "type": "INVESTS",
       "evidence": [
@@ -744,6 +782,46 @@
         "EV_014611"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "A_050",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_014678"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5669",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014679"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "A_050",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_014680"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "C_5670",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014681"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]
