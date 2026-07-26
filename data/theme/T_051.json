@@ -15,9 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-21T10:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g51 누적 import 기반 T_051 freeze",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -261,6 +269,41 @@
       "id": "M_056",
       "type": "MACRO",
       "name": "메모리가격상승"
+    },
+    {
+      "id": "C_5390",
+      "type": "CHARACTER",
+      "name": "AI서버GPU"
+    },
+    {
+      "id": "C_5391",
+      "type": "CHARACTER",
+      "name": "AI서버스위치"
+    },
+    {
+      "id": "C_5392",
+      "type": "CHARACTER",
+      "name": "AI서버인터커넥트"
+    },
+    {
+      "id": "C_5393",
+      "type": "CHARACTER",
+      "name": "AI서버ODM"
+    },
+    {
+      "id": "C_5394",
+      "type": "CHARACTER",
+      "name": "AI서버시스템"
+    },
+    {
+      "id": "C_5395",
+      "type": "CHARACTER",
+      "name": "AI서버워크스테이션"
+    },
+    {
+      "id": "C_5396",
+      "type": "CHARACTER",
+      "name": "AI서버시스템"
     }
   ],
   "edges": [
@@ -433,6 +476,76 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5390",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014333"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_5391",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014334"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5392",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014335"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_415",
+      "to": "C_5393",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014336"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_416",
+      "to": "C_5394",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014337"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_417",
+      "to": "C_5395",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014338"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "C_5396",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014339"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -604,6 +717,76 @@
         "EV_001825"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5390",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014333"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_5391",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014334"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5392",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014335"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_415",
+      "to": "C_5393",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014336"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_416",
+      "to": "C_5394",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014337"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_417",
+      "to": "C_5395",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014338"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "C_5396",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014339"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

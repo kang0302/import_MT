@@ -15,11 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-20T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g48 누적 import 기반 T_048 freeze",
     "sources": [],
     "provenanceSeed": "T_048 공개사실 시드(2026-06-29) — evidence_ssot 참조",
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-10",
         "kind": "보강",
@@ -539,6 +545,21 @@
       "id": "M_1097",
       "type": "MACRO",
       "name": "빅테크자체칩개발가속"
+    },
+    {
+      "id": "C_5387",
+      "type": "CHARACTER",
+      "name": "메타MTIA커스텀칩"
+    },
+    {
+      "id": "C_5388",
+      "type": "CHARACTER",
+      "name": "메타AI칩파운드리"
+    },
+    {
+      "id": "C_5389",
+      "type": "CHARACTER",
+      "name": "메타스토리지NAND"
     }
   ],
   "edges": [
@@ -911,6 +932,36 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_5387",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014330"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_5388",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014331"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "C_5389",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014332"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1282,6 +1333,36 @@
         "EV_002456"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_5387",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014330"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_5388",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014331"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "C_5389",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014332"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

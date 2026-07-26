@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g33 누적 import 기반 T_033 freeze",
     "sources": [],
-    "provenanceSeed": "T_033 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_033 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -330,6 +338,46 @@
         "returnsSource": "FMP",
         "pe_ttm": null
       }
+    },
+    {
+      "id": "C_5318",
+      "type": "CHARACTER",
+      "name": "국방AI데이터"
+    },
+    {
+      "id": "C_5319",
+      "type": "CHARACTER",
+      "name": "국방AI모델"
+    },
+    {
+      "id": "C_5320",
+      "type": "CHARACTER",
+      "name": "국방발사스타실드"
+    },
+    {
+      "id": "C_5321",
+      "type": "CHARACTER",
+      "name": "군용차량"
+    },
+    {
+      "id": "C_5322",
+      "type": "CHARACTER",
+      "name": "방산항공"
+    },
+    {
+      "id": "C_5323",
+      "type": "CHARACTER",
+      "name": "국방드론"
+    },
+    {
+      "id": "C_5324",
+      "type": "CHARACTER",
+      "name": "무인전투기"
+    },
+    {
+      "id": "C_5325",
+      "type": "CHARACTER",
+      "name": "군용드론"
     }
   ],
   "edges": [
@@ -532,6 +580,86 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_266",
+      "to": "C_5318",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014261"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_216",
+      "to": "C_5319",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014262"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5320",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014263"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_267",
+      "to": "C_5321",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014264"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_268",
+      "to": "C_5322",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014265"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_269",
+      "to": "C_5323",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014266"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_270",
+      "to": "C_5324",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014267"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_271",
+      "to": "C_5325",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014268"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -733,6 +861,86 @@
         "EV_000980"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_266",
+      "to": "C_5318",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014261"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_216",
+      "to": "C_5319",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014262"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5320",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014263"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_267",
+      "to": "C_5321",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014264"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_268",
+      "to": "C_5322",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014265"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_269",
+      "to": "C_5323",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014266"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_270",
+      "to": "C_5324",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014267"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_271",
+      "to": "C_5325",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014268"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

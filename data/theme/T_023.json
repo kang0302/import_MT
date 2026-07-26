@@ -15,11 +15,19 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g23 누적 import 기반 T_023 freeze",
     "sources": [],
     "provenanceSeed": "T_023 공개사실 시드(2026-06-29) — evidence_ssot 참조",
-    "augmentNote": "T_023 보강(2026-06-30) — 로켓랩 이리듐 인수 위성통신 수직계열화"
+    "augmentNote": "T_023 보강(2026-06-30) — 로켓랩 이리듐 인수 위성통신 수직계열화",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -328,6 +336,36 @@
       "id": "C_1571",
       "type": "CHARACTER",
       "name": "이리듐인수수직계열화"
+    },
+    {
+      "id": "C_5245",
+      "type": "CHARACTER",
+      "name": "군위성시스템"
+    },
+    {
+      "id": "C_5246",
+      "type": "CHARACTER",
+      "name": "방산위성전자"
+    },
+    {
+      "id": "C_5247",
+      "type": "CHARACTER",
+      "name": "위성RF부품"
+    },
+    {
+      "id": "C_5248",
+      "type": "CHARACTER",
+      "name": "위성신호처리"
+    },
+    {
+      "id": "C_5249",
+      "type": "CHARACTER",
+      "name": "위성정밀구동"
+    },
+    {
+      "id": "C_5250",
+      "type": "CHARACTER",
+      "name": "저궤도위성통신망"
     }
   ],
   "edges": [
@@ -540,6 +578,66 @@
       ],
       "confidence": 0.6,
       "status": "verified"
+    },
+    {
+      "from": "A_206",
+      "to": "C_5245",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014188"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_207",
+      "to": "C_5246",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014189"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "C_5247",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014190"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "C_5248",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014191"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_209",
+      "to": "C_5249",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014192"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2153",
+      "to": "C_5250",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014193"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -751,6 +849,66 @@
         "EV_001388"
       ],
       "confidence": 0.6,
+      "status": "verified"
+    },
+    {
+      "from": "A_206",
+      "to": "C_5245",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014188"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_207",
+      "to": "C_5246",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014189"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "C_5247",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014190"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "C_5248",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014191"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_209",
+      "to": "C_5249",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014192"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2153",
+      "to": "C_5250",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014193"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

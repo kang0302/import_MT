@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g30 누적 import 기반 T_030 freeze",
     "sources": [],
-    "provenanceSeed": "T_030 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_030 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -220,6 +228,31 @@
       "id": "M_345",
       "type": "MACRO",
       "name": "바이오혁신"
+    },
+    {
+      "id": "C_5294",
+      "type": "CHARACTER",
+      "name": "마이크로바이옴사업"
+    },
+    {
+      "id": "C_5295",
+      "type": "CHARACTER",
+      "name": "마이크로바이옴신약"
+    },
+    {
+      "id": "C_5296",
+      "type": "CHARACTER",
+      "name": "마이크로바이옴진단"
+    },
+    {
+      "id": "C_5297",
+      "type": "CHARACTER",
+      "name": "마이크로바이옴항암"
+    },
+    {
+      "id": "C_5298",
+      "type": "CHARACTER",
+      "name": "유전체마이크로바이옴"
     }
   ],
   "edges": [
@@ -302,6 +335,56 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_011",
+      "to": "C_5294",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014237"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_017",
+      "to": "C_5295",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014238"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_252",
+      "to": "C_5296",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014239"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_253",
+      "to": "C_5297",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014240"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_254",
+      "to": "C_5298",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014241"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -383,6 +466,56 @@
         "EV_001393"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_011",
+      "to": "C_5294",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014237"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_017",
+      "to": "C_5295",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014238"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_252",
+      "to": "C_5296",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014239"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_253",
+      "to": "C_5297",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014240"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_254",
+      "to": "C_5298",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014241"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

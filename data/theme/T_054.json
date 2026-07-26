@@ -15,9 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-21T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g54 누적 import 기반 T_054 freeze",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -255,6 +263,31 @@
       "id": "M_058",
       "type": "MACRO",
       "name": "인구고령화"
+    },
+    {
+      "id": "C_5415",
+      "type": "CHARACTER",
+      "name": "시니어리빙리츠"
+    },
+    {
+      "id": "C_5416",
+      "type": "CHARACTER",
+      "name": "의료오피스리츠"
+    },
+    {
+      "id": "C_5417",
+      "type": "CHARACTER",
+      "name": "요양시설리츠"
+    },
+    {
+      "id": "C_5418",
+      "type": "CHARACTER",
+      "name": "시니어요양리츠"
+    },
+    {
+      "id": "C_5419",
+      "type": "CHARACTER",
+      "name": "시니어헬스리츠"
     }
   ],
   "edges": [
@@ -447,6 +480,56 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "C_5415",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014358"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_445",
+      "to": "C_5416",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014359"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_446",
+      "to": "C_5417",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014360"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_447",
+      "to": "C_5418",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014361"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_448",
+      "to": "C_5419",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014362"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -638,6 +721,56 @@
         "EV_001876"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "C_5415",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014358"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_445",
+      "to": "C_5416",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014359"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_446",
+      "to": "C_5417",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014360"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_447",
+      "to": "C_5418",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014361"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_448",
+      "to": "C_5419",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014362"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

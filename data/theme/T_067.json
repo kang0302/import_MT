@@ -15,9 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-25T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g67 누적 import 기반 일본 은행주 테마",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -202,6 +210,26 @@
       "id": "M_072",
       "type": "MACRO",
       "name": "금리인상"
+    },
+    {
+      "id": "C_5520",
+      "type": "CHARACTER",
+      "name": "일본1위메가뱅크"
+    },
+    {
+      "id": "C_5521",
+      "type": "CHARACTER",
+      "name": "메가뱅크"
+    },
+    {
+      "id": "C_5522",
+      "type": "CHARACTER",
+      "name": "메가뱅크"
+    },
+    {
+      "id": "C_5523",
+      "type": "CHARACTER",
+      "name": "리테일은행"
     }
   ],
   "edges": [
@@ -294,6 +322,46 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_564",
+      "to": "C_5520",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014463"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_565",
+      "to": "C_5521",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014464"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_566",
+      "to": "C_5522",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014465"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_567",
+      "to": "C_5523",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014466"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -385,6 +453,46 @@
         "EV_002160"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_564",
+      "to": "C_5520",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014463"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_565",
+      "to": "C_5521",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014464"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_566",
+      "to": "C_5522",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014465"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_567",
+      "to": "C_5523",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014466"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

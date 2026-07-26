@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-05-11T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g221 누적 import 기반 중국 휴머노이드 및 로봇 밸류체인 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-15",
         "kind": "보강",
@@ -627,6 +633,11 @@
       "id": "C_3360",
       "type": "CHARACTER",
       "name": "국유산업로봇"
+    },
+    {
+      "id": "C_5648",
+      "type": "CHARACTER",
+      "name": "옵티머스벤치마크"
     }
   ],
   "edges": [
@@ -1139,6 +1150,16 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_5648",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014591"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1650,6 +1671,16 @@
         "EV_007002"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_5648",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014591"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

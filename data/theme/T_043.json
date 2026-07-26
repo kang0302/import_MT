@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-19T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g43 누적 import 기반 T_043 freeze",
     "sources": [],
-    "provenanceSeed": "T_043 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_043 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -584,6 +592,21 @@
       "id": "C_1765",
       "type": "CHARACTER",
       "name": "당근초기투자VC"
+    },
+    {
+      "id": "C_5384",
+      "type": "CHARACTER",
+      "name": "우주스타트업투자대상"
+    },
+    {
+      "id": "C_5385",
+      "type": "CHARACTER",
+      "name": "크립토VC플랫폼"
+    },
+    {
+      "id": "C_5386",
+      "type": "CHARACTER",
+      "name": "AI반도체스타트업"
     }
   ],
   "edges": [
@@ -916,6 +939,36 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5384",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014327"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_351",
+      "to": "C_5385",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014328"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1742",
+      "to": "C_5386",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014329"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1247,6 +1300,36 @@
         "EV_001513"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5384",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014327"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_351",
+      "to": "C_5385",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014328"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1742",
+      "to": "C_5386",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014329"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

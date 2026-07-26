@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g29 누적 import 기반 T_029 freeze",
     "sources": [],
-    "provenanceSeed": "T_029 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_029 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -225,6 +233,31 @@
       "id": "M_027",
       "type": "MACRO",
       "name": "원전확대"
+    },
+    {
+      "id": "C_5289",
+      "type": "CHARACTER",
+      "name": "항공우주특수합금"
+    },
+    {
+      "id": "C_5290",
+      "type": "CHARACTER",
+      "name": "티타늄특수합금"
+    },
+    {
+      "id": "C_5291",
+      "type": "CHARACTER",
+      "name": "고온합금"
+    },
+    {
+      "id": "C_5292",
+      "type": "CHARACTER",
+      "name": "특수강"
+    },
+    {
+      "id": "C_5293",
+      "type": "CHARACTER",
+      "name": "발사체특수합금수요"
     }
   ],
   "edges": [
@@ -327,6 +360,56 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "A_117",
+      "to": "C_5289",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014232"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_249",
+      "to": "C_5290",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014233"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_250",
+      "to": "C_5291",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014234"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_251",
+      "to": "C_5292",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014235"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5293",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014236"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -428,6 +511,56 @@
         "EV_000924"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_117",
+      "to": "C_5289",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014232"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_249",
+      "to": "C_5290",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014233"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_250",
+      "to": "C_5291",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014234"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_251",
+      "to": "C_5292",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014235"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5293",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014236"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

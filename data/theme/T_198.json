@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-05-04T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g198 누적 import 기반 중국AI클라우드 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-12",
         "kind": "보강",
@@ -264,6 +270,16 @@
       "id": "C_3111",
       "type": "CHARACTER",
       "name": "오피스SW·게임"
+    },
+    {
+      "id": "C_5646",
+      "type": "CHARACTER",
+      "name": "AIoT클라우드"
+    },
+    {
+      "id": "C_5647",
+      "type": "CHARACTER",
+      "name": "중국클라우드"
     }
   ],
   "edges": [
@@ -426,6 +442,26 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "A_153",
+      "to": "C_5646",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014589"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1185",
+      "to": "C_5647",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014590"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -587,6 +623,26 @@
         "EV_006132"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_153",
+      "to": "C_5646",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014589"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1185",
+      "to": "C_5647",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014590"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

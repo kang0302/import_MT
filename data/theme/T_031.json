@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g31 누적 import 기반 T_031 freeze",
     "sources": [],
-    "provenanceSeed": "T_031 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_031 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -250,6 +258,31 @@
       "id": "C_051",
       "type": "CHARACTER",
       "name": "테마선도주식"
+    },
+    {
+      "id": "C_5299",
+      "type": "CHARACTER",
+      "name": "전력디지털트윈"
+    },
+    {
+      "id": "C_5300",
+      "type": "CHARACTER",
+      "name": "산업디지털트윈"
+    },
+    {
+      "id": "C_5301",
+      "type": "CHARACTER",
+      "name": "인프라디지털트윈"
+    },
+    {
+      "id": "C_5302",
+      "type": "CHARACTER",
+      "name": "시뮬레이션디지털트윈"
+    },
+    {
+      "id": "C_5303",
+      "type": "CHARACTER",
+      "name": "제조디지털트윈"
     }
   ],
   "edges": [
@@ -342,6 +375,56 @@
       ],
       "confidence": 0.65,
       "status": "verified"
+    },
+    {
+      "from": "A_167",
+      "to": "C_5299",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014242"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_256",
+      "to": "C_5300",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014243"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_257",
+      "to": "C_5301",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014244"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_258",
+      "to": "C_5302",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014245"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_259",
+      "to": "C_5303",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014246"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -433,6 +516,56 @@
         "EV_000936"
       ],
       "confidence": 0.65,
+      "status": "verified"
+    },
+    {
+      "from": "A_167",
+      "to": "C_5299",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014242"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_256",
+      "to": "C_5300",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014243"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_257",
+      "to": "C_5301",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014244"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_258",
+      "to": "C_5302",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014245"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_259",
+      "to": "C_5303",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014246"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

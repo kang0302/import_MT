@@ -15,7 +15,7 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "T_009 v5 정본(보존형). 기존 metrics(ret3d/ret7d/ret1m/retYtd/ret1y/ret3y/perFwd12m 등)는 절대 삭제하지 않고 그대로 유지한다. v5 표준 키(return_7d/return_30d/return_90d, per)도 함께 둬서 프론트는 표준 키로 읽고, 기존 ret* 값은 원본/호환/실험 필드로 유지한다. 가격/수익률은 스냅샷(일 1회)로 갱신, PER은 저빈도 갱신(주/월).",
     "sources": [
       {
@@ -34,6 +34,12 @@
     "metricsLastError": "Some assets not updated (failed_assets=2).",
     "provenanceSeed": "T_009 공개사실 시드(2026-06-29) — evidence_ssot 참조",
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-17",
         "kind": "수정",
@@ -486,6 +492,46 @@
       "id": "M_018",
       "type": "MACRO",
       "name": "피지컬AI확산"
+    },
+    {
+      "id": "C_5164",
+      "type": "CHARACTER",
+      "name": "로봇사업클로이"
+    },
+    {
+      "id": "C_5165",
+      "type": "CHARACTER",
+      "name": "로봇센서부품"
+    },
+    {
+      "id": "C_5166",
+      "type": "CHARACTER",
+      "name": "서빙로봇LG투자"
+    },
+    {
+      "id": "C_5167",
+      "type": "CHARACTER",
+      "name": "로봇액추에이터모듈"
+    },
+    {
+      "id": "C_5168",
+      "type": "CHARACTER",
+      "name": "LG산업용로봇"
+    },
+    {
+      "id": "C_5169",
+      "type": "CHARACTER",
+      "name": "웨어러블로봇"
+    },
+    {
+      "id": "C_5170",
+      "type": "CHARACTER",
+      "name": "옵티머스휴머노이드"
+    },
+    {
+      "id": "C_5171",
+      "type": "CHARACTER",
+      "name": "로봇AI컴퓨팅"
     }
   ],
   "edges": [
@@ -658,6 +704,86 @@
       ],
       "confidence": 0.78,
       "status": "verified"
+    },
+    {
+      "from": "A_079",
+      "to": "C_5164",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014107"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_080",
+      "to": "C_5165",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014108"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_081",
+      "to": "C_5166",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014109"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_082",
+      "to": "C_5167",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014110"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_083",
+      "to": "C_5168",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014111"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_084",
+      "to": "C_5169",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014112"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_5170",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014113"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5171",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014114"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -829,6 +955,86 @@
         "EV_007425"
       ],
       "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_079",
+      "to": "C_5164",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014107"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_080",
+      "to": "C_5165",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014108"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_081",
+      "to": "C_5166",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014109"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_082",
+      "to": "C_5167",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014110"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_083",
+      "to": "C_5168",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014111"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_084",
+      "to": "C_5169",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014112"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_5170",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014113"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5171",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014114"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

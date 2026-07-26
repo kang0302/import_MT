@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-04-30T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g195 누적 import 기반 두산그룹관련주 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-12",
         "kind": "보강",
@@ -400,6 +406,16 @@
       "id": "C_3088",
       "type": "CHARACTER",
       "name": "반도체웨이퍼"
+    },
+    {
+      "id": "C_5644",
+      "type": "CHARACTER",
+      "name": "두산AI협력"
+    },
+    {
+      "id": "C_5645",
+      "type": "CHARACTER",
+      "name": "두산협력파트너"
     }
   ],
   "edges": [
@@ -712,6 +728,26 @@
       ],
       "confidence": 0.6,
       "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5644",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014587"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1864",
+      "to": "C_5645",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014588"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1023,6 +1059,26 @@
         "EV_006109"
       ],
       "confidence": 0.6,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5644",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014587"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1864",
+      "to": "C_5645",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014588"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

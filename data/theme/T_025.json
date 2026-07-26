@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-02-21T16:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g25 누적 import 기반 T_025 freeze (BF 포함, metrics 포함)",
     "sources": [],
-    "provenanceSeed": "T_025 공개사실 시드(2026-06-29) — evidence_ssot 참조"
+    "provenanceSeed": "T_025 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -560,6 +568,76 @@
       "id": "M_103",
       "type": "MACRO",
       "name": "AI서버"
+    },
+    {
+      "id": "C_5251",
+      "type": "CHARACTER",
+      "name": "HBM·DRAM선두"
+    },
+    {
+      "id": "C_5252",
+      "type": "CHARACTER",
+      "name": "DRAM/NAND종합"
+    },
+    {
+      "id": "C_5253",
+      "type": "CHARACTER",
+      "name": "DRAM/NAND미국"
+    },
+    {
+      "id": "C_5254",
+      "type": "CHARACTER",
+      "name": "SSD컨트롤러"
+    },
+    {
+      "id": "C_5255",
+      "type": "CHARACTER",
+      "name": "NAND플래시"
+    },
+    {
+      "id": "C_5256",
+      "type": "CHARACTER",
+      "name": "HDD/NAND스토리지"
+    },
+    {
+      "id": "C_5257",
+      "type": "CHARACTER",
+      "name": "올플래시어레이"
+    },
+    {
+      "id": "C_5258",
+      "type": "CHARACTER",
+      "name": "HDD스토리지"
+    },
+    {
+      "id": "C_5259",
+      "type": "CHARACTER",
+      "name": "서버스토리지시스템"
+    },
+    {
+      "id": "C_5260",
+      "type": "CHARACTER",
+      "name": "스토리지HDD"
+    },
+    {
+      "id": "C_5261",
+      "type": "CHARACTER",
+      "name": "스토리지컨트롤러"
+    },
+    {
+      "id": "C_5262",
+      "type": "CHARACTER",
+      "name": "중국DRAM"
+    },
+    {
+      "id": "C_5263",
+      "type": "CHARACTER",
+      "name": "중국NAND"
+    },
+    {
+      "id": "C_5264",
+      "type": "CHARACTER",
+      "name": "대만DRAM"
     }
   ],
   "edges": [
@@ -872,6 +950,146 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_5251",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014194"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_5252",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014195"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "C_5253",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "C_5254",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "C_5255",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "C_5256",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014199"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "C_5257",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014200"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "C_5258",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014201"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "C_5259",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014202"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "C_5260",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014203"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5261",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014204"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "C_5262",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014205"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "C_5263",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014206"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1650",
+      "to": "C_5264",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014207"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1183,6 +1401,146 @@
         "EV_000854"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_5251",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014194"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_5252",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014195"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "C_5253",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "C_5254",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "C_5255",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "C_5256",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014199"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "C_5257",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014200"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "C_5258",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014201"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "C_5259",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014202"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "C_5260",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014203"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5261",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014204"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "C_5262",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014205"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "C_5263",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014206"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1650",
+      "to": "C_5264",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014207"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

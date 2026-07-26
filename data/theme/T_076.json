@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-26T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g76 누적 import 기반 AIDC 인프라(랙통합) 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-09",
         "kind": "보강",
@@ -428,6 +434,36 @@
       "id": "C_1922",
       "type": "CHARACTER",
       "name": "인프라서버EMS"
+    },
+    {
+      "id": "C_5586",
+      "type": "CHARACTER",
+      "name": "AI서버랙"
+    },
+    {
+      "id": "C_5587",
+      "type": "CHARACTER",
+      "name": "DC네트워크"
+    },
+    {
+      "id": "C_5588",
+      "type": "CHARACTER",
+      "name": "자체DC랙"
+    },
+    {
+      "id": "C_5589",
+      "type": "CHARACTER",
+      "name": "AWS_DC랙"
+    },
+    {
+      "id": "C_5590",
+      "type": "CHARACTER",
+      "name": "자체DC랙"
+    },
+    {
+      "id": "C_5591",
+      "type": "CHARACTER",
+      "name": "DC네트워크스위치"
     }
   ],
   "edges": [
@@ -690,6 +726,66 @@
       ],
       "confidence": 0.78,
       "status": "verified"
+    },
+    {
+      "from": "A_646",
+      "to": "C_5586",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014529"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_647",
+      "to": "C_5587",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014530"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_050",
+      "to": "C_5588",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014531"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_211",
+      "to": "C_5589",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014532"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_5590",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014533"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_212",
+      "to": "C_5591",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014534"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -951,6 +1047,66 @@
         "EV_002422"
       ],
       "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_646",
+      "to": "C_5586",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014529"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_647",
+      "to": "C_5587",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014530"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_050",
+      "to": "C_5588",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014531"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_211",
+      "to": "C_5589",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014532"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_373",
+      "to": "C_5590",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014533"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_212",
+      "to": "C_5591",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014534"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]
