@@ -22,6 +22,12 @@
     "changelog": [
       {
         "date": "2026-07-26",
+        "kind": "수정",
+        "title": "구성종목 변경",
+        "detail": "종목 추가/삭제·관계 조정(허브형 유지)."
+      },
+      {
+        "date": "2026-07-26",
         "kind": "신규",
         "title": "테마 생성",
         "detail": "1궤도(weight 0.7)+2궤도(weight 0.3) 생태계 구성, CHR·이벤트 포함."
@@ -191,40 +197,6 @@
       "name": "DC액체냉각_ThermalManager"
     },
     {
-      "id": "A_955",
-      "type": "ASSET",
-      "name": "이튼",
-      "exposure": {
-        "ticker": "ETN",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -2.664225664249753,
-        "close": 404.07,
-        "marketCap": 156900381000,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-25",
-        "valuationSource": "FMP",
-        "return_3d": 0.27795011788063206,
-        "return_7d": -2.129051010027616,
-        "return_15d": 1.3926528154170503,
-        "return_1m": -0.12852517363256544,
-        "return_ytd": 23.45177354801258,
-        "return_1y": 6.267094466652634,
-        "return_2y": 29.555291929847073,
-        "return_3y": 92.58853248176922,
-        "returnsAsOf": "2026-07-24",
-        "returnsSource": "FMP"
-      },
-      "weight": 0.3
-    },
-    {
-      "id": "C_5662",
-      "type": "CHARACTER",
-      "name": "DC전력관리_PowerManager"
-    },
-    {
       "id": "A_001",
       "type": "ASSET",
       "name": "리비안",
@@ -353,6 +325,85 @@
       "id": "M_035",
       "type": "MACRO",
       "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "theme_role": "1궤도"
+      },
+      "metrics": {
+        "return_1d": -0.9197164207702557,
+        "close": 206.84,
+        "marketCap": 5009871640000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-25",
+        "valuationSource": "FMP",
+        "return_3d": -0.21708717256017085,
+        "return_7d": -2.663529411764709,
+        "return_15d": 6.164348406302933,
+        "return_1m": 3.939698492462318,
+        "return_ytd": 9.52607889859678,
+        "return_1y": 21.114884646914156,
+        "return_2y": 75.39218180276434,
+        "return_3y": 339.3372982158029,
+        "returnsAsOf": "2026-07-24",
+        "returnsSource": "FMP"
+      },
+      "weight": 0.3
+    },
+    {
+      "id": "C_5671",
+      "type": "CHARACTER",
+      "name": "최대클라우드고객_NVLinkFusion"
+    },
+    {
+      "id": "A_192",
+      "type": "ASSET",
+      "name": "마벨테크놀로지",
+      "exposure": {
+        "ticker": "MRVL",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": -7.209057901777182,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -5.83244448754,
+        "return_15d": -20.816176770353458,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -6.602231198307374,
+        "return_1m": -29.804842790025297,
+        "return_ytd": 117.28381250699181,
+        "return_1y": 165.08803057185753,
+        "return_2y": 192.03127349270784,
+        "return_3y": 195.94697546853573,
+        "close": 194.23,
+        "marketCap": 170100030180,
+        "valuationAsOf": "2026-07-25",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-24",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      },
+      "weight": 0.3
+    },
+    {
+      "id": "C_5672",
+      "type": "CHARACTER",
+      "name": "Trainium2공동설계_ChipCoDesigner"
     }
   ],
   "edges": [
@@ -432,26 +483,6 @@
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_014619"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "A_211",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_014620"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "C_5662",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014621"
       ],
       "confidence": 0.72,
       "status": "verified"
@@ -544,6 +575,46 @@
         "EV_014630"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "A_211",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_014682"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5671",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014683"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "A_211",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_014684"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5672",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014685"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ],
@@ -629,26 +700,6 @@
       "status": "verified"
     },
     {
-      "from": "A_955",
-      "to": "A_211",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_014620"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "C_5662",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014621"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
       "from": "A_211",
       "to": "A_001",
       "type": "INVESTS",
@@ -736,6 +787,46 @@
         "EV_014630"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "A_211",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_014682"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "C_5671",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014683"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "A_211",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_014684"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5672",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014685"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]
