@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-04-28T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g191 누적 import 기반 K-로봇 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "삼성바이오 펩타이드CDMO/KH바텍 폴더블·로봇 보강",
+        "detail": "신규 매크로·CHR·2궤도 관계·2026 이벤트 추가."
+      },
       {
         "date": "2026-07-12",
         "kind": "보강",
@@ -525,6 +531,44 @@
       "id": "C_3065",
       "type": "CHARACTER",
       "name": "검사기반수술로봇"
+    },
+    {
+      "id": "BF_021",
+      "type": "BUSINESS_FIELD",
+      "name": "액추에이터"
+    },
+    {
+      "id": "C_5146",
+      "type": "CHARACTER",
+      "name": "폴더블힌지_로봇부품복합모멘텀"
+    },
+    {
+      "id": "A_2552",
+      "type": "ASSET",
+      "name": "KH바텍",
+      "exposure": {
+        "ticker": "060720",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": 3.8176033934252285,
+        "return_7d": 4.482390608324449,
+        "return_15d": null,
+        "return_1m": -7.5207087960501795,
+        "return_ytd": -13.61021474232773,
+        "return_1y": -13.346630745732435,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 9790,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-24",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-07-24",
+        "returnsSource": "EODHD"
+      }
     }
   ],
   "edges": [
@@ -947,6 +991,36 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "A_2552",
+      "to": "T_191",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014086"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2552",
+      "to": "BF_021",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_014087"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2552",
+      "to": "C_5146",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014088"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1368,6 +1442,36 @@
         "EV_006086"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2552",
+      "to": "T_191",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014086"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2552",
+      "to": "BF_021",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_014087"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_2552",
+      "to": "C_5146",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014088"
+      ],
+      "confidence": 0.78,
       "status": "verified"
     }
   ]

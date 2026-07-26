@@ -15,11 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "description": "폴더블폰(갤럭시 폴드) — 2019 회고 테마.",
     "notes": "T_523 신규 회고((Y19)). 자산별 CHARACTER, MACRO 3(재사용)",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "삼성바이오 펩타이드CDMO/KH바텍 폴더블·로봇 보강",
+        "detail": "신규 매크로·CHR·2궤도 관계·2026 이벤트 추가."
+      },
       {
         "date": "2026-07-25",
         "kind": "수정",
@@ -279,6 +285,16 @@
       "id": "M_275",
       "type": "MACRO",
       "name": "OLED수요확대"
+    },
+    {
+      "id": "C_5147",
+      "type": "CHARACTER",
+      "name": "더블와이드폴드시장확대"
+    },
+    {
+      "id": "M_1188",
+      "type": "MACRO",
+      "name": "더블와이드폴드_폴더블시장변곡점"
     }
   ],
   "edges": [
@@ -396,6 +412,22 @@
       "evidence": [
         "EV_012608"
       ]
+    },
+    {
+      "from": "A_2552",
+      "to": "C_5147",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014089"
+      ]
+    },
+    {
+      "from": "M_1188",
+      "to": "T_523",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014090"
+      ]
     }
   ],
   "links": [
@@ -512,6 +544,22 @@
       "type": "IMPACTS",
       "evidence": [
         "EV_012608"
+      ]
+    },
+    {
+      "from": "A_2552",
+      "to": "C_5147",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014089"
+      ]
+    },
+    {
+      "from": "M_1188",
+      "to": "T_523",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014090"
       ]
     }
   ]

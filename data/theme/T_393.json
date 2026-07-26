@@ -15,11 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "description": "K-바이오 CDMO (위탁개발생산) — 삼성바이오로직스·셀트리온·SK바이오사이언스·바이오플러스. 미국 BIOSECURE 법 (중국 WuXi 배제) 직접 수혜. 항체·mRNA·세포치료제 캐파 ramp.",
     "notes": "T_393 신규 — 한국 batch",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "삼성바이오 펩타이드CDMO/KH바텍 폴더블·로봇 보강",
+        "detail": "신규 매크로·CHR·2궤도 관계·2026 이벤트 추가."
+      },
       {
         "date": "2026-07-25",
         "kind": "수정",
@@ -263,6 +269,16 @@
       "id": "C_3785",
       "type": "CHARACTER",
       "name": "히알루론산필러·바이오소재"
+    },
+    {
+      "id": "M_350",
+      "type": "MACRO",
+      "name": "GLP-1비만약사이클"
+    },
+    {
+      "id": "C_5143",
+      "type": "CHARACTER",
+      "name": "펩타이드CDMO진출선두"
     }
   ],
   "edges": [
@@ -406,6 +422,22 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "M_350",
+      "to": "T_393",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014078"
+      ]
+    },
+    {
+      "from": "A_719",
+      "to": "C_5143",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014079"
+      ]
     }
   ],
   "links": [
@@ -549,6 +581,22 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "M_350",
+      "to": "T_393",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014078"
+      ]
+    },
+    {
+      "from": "A_719",
+      "to": "C_5143",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014079"
+      ]
     }
   ]
 }
