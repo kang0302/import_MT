@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-03-27T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g82 누적 import 기반 글로벌 석탄 발전 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-10",
         "kind": "보강",
@@ -207,6 +213,26 @@
       "id": "C_076",
       "type": "CHARACTER",
       "name": "장기계약+고배당"
+    },
+    {
+      "id": "C_5609",
+      "type": "CHARACTER",
+      "name": "석탄"
+    },
+    {
+      "id": "C_5610",
+      "type": "CHARACTER",
+      "name": "석탄"
+    },
+    {
+      "id": "C_5611",
+      "type": "CHARACTER",
+      "name": "원료탄"
+    },
+    {
+      "id": "C_5612",
+      "type": "CHARACTER",
+      "name": "석탄광산트레이딩"
     }
   ],
   "edges": [
@@ -369,6 +395,46 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_663",
+      "to": "C_5609",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014552"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_664",
+      "to": "C_5610",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014553"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_665",
+      "to": "C_5611",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014554"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_667",
+      "to": "C_5612",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014555"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -530,6 +596,46 @@
         "EV_002597"
       ],
       "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_663",
+      "to": "C_5609",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014552"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_664",
+      "to": "C_5610",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014553"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_665",
+      "to": "C_5611",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014554"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_667",
+      "to": "C_5612",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014555"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

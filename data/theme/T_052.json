@@ -15,10 +15,18 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-07-06T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "description": "미국 우주항공 중 우주탐사·발사체·위성통신 세그먼트. 스페이스X·로켓랩(발사), 인튜이티브머신스(달탐사), AST·이리듐·EchoStar(위성통신), 플래닛랩스(지구관측).",
     "notes": "T_052 — 미국우주항공 분할(2026-07-06)",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      }
+    ]
   },
   "nodes": [
     {
@@ -339,6 +347,36 @@
       "id": "M_066",
       "type": "MACRO",
       "name": "우주산업확대"
+    },
+    {
+      "id": "C_5397",
+      "type": "CHARACTER",
+      "name": "우주발사탐사"
+    },
+    {
+      "id": "C_5398",
+      "type": "CHARACTER",
+      "name": "달착륙선"
+    },
+    {
+      "id": "C_5399",
+      "type": "CHARACTER",
+      "name": "위성직접통신"
+    },
+    {
+      "id": "C_5400",
+      "type": "CHARACTER",
+      "name": "위성통신스펙트럼"
+    },
+    {
+      "id": "C_5401",
+      "type": "CHARACTER",
+      "name": "지구관측위성"
+    },
+    {
+      "id": "C_5402",
+      "type": "CHARACTER",
+      "name": "저궤도위성통신"
     }
   ],
   "edges": [
@@ -521,6 +559,66 @@
       ],
       "confidence": 0.75,
       "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5397",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014340"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_422",
+      "to": "C_5398",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014341"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_425",
+      "to": "C_5399",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014342"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_111",
+      "to": "C_5400",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014343"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_426",
+      "to": "C_5401",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014344"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2153",
+      "to": "C_5402",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014345"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -702,6 +800,66 @@
         "EV_001766"
       ],
       "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5397",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014340"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_422",
+      "to": "C_5398",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014341"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_425",
+      "to": "C_5399",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014342"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_111",
+      "to": "C_5400",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014343"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_426",
+      "to": "C_5401",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014344"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2153",
+      "to": "C_5402",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014345"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

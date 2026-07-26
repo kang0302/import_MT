@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-04-24T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g175 누적 import 기반 K-사이버보안 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-12",
         "kind": "보강",
@@ -522,6 +528,11 @@
       "id": "C_2892",
       "type": "CHARACTER",
       "name": "문서보안·DRM"
+    },
+    {
+      "id": "C_5639",
+      "type": "CHARACTER",
+      "name": "핀테크보안"
     }
   ],
   "edges": [
@@ -954,6 +965,16 @@
       ],
       "confidence": 0.68,
       "status": "verified"
+    },
+    {
+      "from": "A_1184",
+      "to": "C_5639",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014582"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1385,6 +1406,16 @@
         "EV_005394"
       ],
       "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1184",
+      "to": "C_5639",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014582"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

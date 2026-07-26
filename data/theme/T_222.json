@@ -15,11 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-05-12T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "description": "한국 2차전지 밸류체인 全 segment — 셀 3사 (LG에너지솔루션·삼성SDI·SK이노) + 양극재 (에코프로비엠·포스코퓨처엠) + 분리막 (SKIET·더블유씨피) + 전해질 첨가제 (천보) + 리사이클링 (성일하이텍·세빗켐) + 지주 (에코프로). 최대 고객 테슬라 SUPPLIES 관계 포함. IRA AMPC·FEOC 룰·중국 가격 경쟁이 주요 외생변수.",
     "notes": "g222 누적 import 기반 K-2차전지 밸류체인 테마",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-15",
         "kind": "보강",
@@ -465,6 +471,11 @@
       "id": "C_3371",
       "type": "CHARACTER",
       "name": "배터리리사이클"
+    },
+    {
+      "id": "C_5649",
+      "type": "CHARACTER",
+      "name": "배터리수요처"
     }
   ],
   "edges": [
@@ -837,6 +848,16 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_5649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014592"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1208,6 +1229,16 @@
         "EV_007013"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_002",
+      "to": "C_5649",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014592"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]

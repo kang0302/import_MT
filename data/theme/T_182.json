@@ -15,10 +15,16 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-04-26T00:00:00+09:00",
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
     "notes": "g182 SSOT 기반 해상풍력 밸류체인",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
       {
         "date": "2026-07-12",
         "kind": "보강",
@@ -431,6 +437,11 @@
       "id": "C_3004",
       "type": "CHARACTER",
       "name": "해저케이블시공"
+    },
+    {
+      "id": "C_5640",
+      "type": "CHARACTER",
+      "name": "해상풍력인프라투자"
     }
   ],
   "edges": [
@@ -783,6 +794,16 @@
       ],
       "confidence": 0.7,
       "status": "verified"
+    },
+    {
+      "from": "A_547",
+      "to": "C_5640",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014583"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -1134,6 +1155,16 @@
         "EV_005847"
       ],
       "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_547",
+      "to": "C_5640",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014583"
+      ],
+      "confidence": 0.72,
       "status": "verified"
     }
   ]
