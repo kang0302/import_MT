@@ -15,11 +15,17 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "dataAsOf": "2026-07-27T00:00:00+09:00",
     "description": "미국 소형 종이·포장 — International Paper·Smurfit Westrock·Packaging Corp·Greif·Sonoco. e커머스 + 산업 포장.",
     "notes": "T_447 신규 — Russell 2000",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-07-27",
+        "kind": "수정",
+        "title": "매크로 추가·상승배경 이벤트",
+        "detail": "지속가능요구_플라스틱대체수요·기업간합병 매크로 추가, 컨테이너보드 가격인상·실적M&A·과점화 이벤트 반영."
+      },
       {
         "date": "2026-07-25",
         "kind": "수정",
@@ -208,6 +214,16 @@
       "id": "M_363",
       "type": "MACRO",
       "name": "미국인프라capex"
+    },
+    {
+      "id": "M_1191",
+      "type": "MACRO",
+      "name": "지속가능요구_플라스틱대체수요"
+    },
+    {
+      "id": "M_1192",
+      "type": "MACRO",
+      "name": "기업간합병"
     }
   ],
   "edges": [
@@ -291,6 +307,26 @@
       "evidence": [
         "EV_011773"
       ]
+    },
+    {
+      "from": "M_1191",
+      "to": "T_447",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014870"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1192",
+      "to": "T_447",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014871"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ],
   "links": [
@@ -374,6 +410,26 @@
       "evidence": [
         "EV_011773"
       ]
+    },
+    {
+      "from": "M_1191",
+      "to": "T_447",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014870"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1192",
+      "to": "T_447",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014871"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     }
   ]
 }
