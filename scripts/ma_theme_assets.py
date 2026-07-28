@@ -60,13 +60,30 @@ def collect_assets():
     return out
 
 
+def fmp_suffix(exch, co):
+    """FMP 심볼 접미사 — 유럽/일본 등 해외 거래소 대응. EURONEXT는 국가별로 분기."""
+    e = (exch or "").upper()
+    c = (co or "").upper()
+    m = {"TSE": ".T", "TYO": ".T", "XETRA": ".DE", "FRA": ".DE",
+         "OMX": ".ST", "OMXSTO": ".ST", "STO": ".ST",
+         "LSE": ".L", "LON": ".L", "SIX": ".SW", "SWX": ".SW", "BME": ".MC"}
+    if e in m:
+        return m[e]
+    if e == "EURONEXT":
+        return {"FR": ".PA", "NL": ".AS", "BE": ".BR", "PT": ".LS",
+                "IT": ".MI", "IE": ".IR", "EU": ".PA"}.get(c, ".PA")
+    return ""
+
+
 def fetch_rows(tk, co, exch):
     if co == "KR":
         return mb.hist_kr(tk)
     if co == "HK":
         return mb.hist_hk(tk)
-    suf = FMP_SUFFIX.get((exch or "").upper(), "")
-    return mb.hist_us(tk + suf)
+    suf = fmp_suffix(exch, co)
+    # BAE 'BA.'·롤스로이스 'RR.' 등 trailing dot 제거 후 접미사 부착
+    sym = tk.rstrip(".") + suf
+    return mb.hist_us(sym)
 
 
 def compute_jrow(a):
