@@ -20,6 +20,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-29",
+        "kind": "수정",
+        "title": "CRUZ ETF 제외 + 유가 이벤트 추가",
+        "detail": "그래프에 'Airline'으로 오표기되던 CRUZ ETF(Defiance Hotel·Airline·Cruise)가 2025-05 청산·상장폐지된 것으로 확인되어 테마에서 제외(마스터 CSV의 쉼표 파싱 깨짐도 함께 교정). 2026 이벤트 DB에 '미-이란 전쟁종식 기대→유가 하락·실적 개선' 추가."
+      },
+      {
         "date": "2026-07-19",
         "kind": "보강",
         "title": "바로미터 표본 보강(자산 5종 이상 확보)",
@@ -150,34 +156,6 @@
       }
     },
     {
-      "id": "A_1020",
-      "type": "ASSET",
-      "name": "CRUZ",
-      "exposure": {
-        "ticker": "CRUZ",
-        "exchange": "NYSEARCA",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "returnsAsOf": "2026-07-28",
-        "returnsSource": "FMP"
-      }
-    },
-    {
       "id": "A_2716",
       "type": "ASSET",
       "name": "바이킹홀딩스",
@@ -257,11 +235,6 @@
       "id": "C_2573",
       "type": "CHARACTER",
       "name": "미국크루즈노르웨이안"
-    },
-    {
-      "id": "C_2574",
-      "type": "CHARACTER",
-      "name": "크루즈ETF"
     }
   ],
   "edges": [
@@ -337,36 +310,6 @@
     },
     {
       "from": "A_1017",
-      "to": "A_1020",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004330"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1018",
-      "to": "A_1020",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004331"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1019",
-      "to": "A_1020",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004332"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1017",
       "to": "C_2571",
       "type": "HAS_TRAIT",
       "evidence": [
@@ -393,16 +336,6 @@
         "EV_004456"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_1020",
-      "to": "C_2574",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004457"
-      ],
-      "confidence": 0.74,
       "status": "verified"
     },
     {
@@ -519,36 +452,6 @@
     },
     {
       "from": "A_1017",
-      "to": "A_1020",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004330"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1018",
-      "to": "A_1020",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004331"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1019",
-      "to": "A_1020",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_004332"
-      ],
-      "confidence": 0.74,
-      "status": "verified"
-    },
-    {
-      "from": "A_1017",
       "to": "C_2571",
       "type": "HAS_TRAIT",
       "evidence": [
@@ -575,16 +478,6 @@
         "EV_004456"
       ],
       "confidence": 0.78,
-      "status": "verified"
-    },
-    {
-      "from": "A_1020",
-      "to": "C_2574",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_004457"
-      ],
-      "confidence": 0.74,
       "status": "verified"
     },
     {
