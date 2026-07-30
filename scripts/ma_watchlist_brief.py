@@ -23,6 +23,50 @@ BASE = Path(__file__).resolve().parents[1]
 DATA = BASE / "data"
 CACHE = DATA / "cache" / "fmp_historical_eod_full"
 OUT = DATA / "ma_brief"
+
+# ─── 종목 아웃링크: 국내=네이버금융, 해외=구글 파이낸스(거래소코드) ───
+_GF_EXCH = {
+    "NASDAQ": "NASDAQ", "NYSE": "NYSE",
+    "NYSEARCA": "NYSEARCA", "NYSE ARCA": "NYSEARCA", "ARCA": "NYSEARCA",
+    "OTC": "OTCMKTS", "OTCMKTS": "OTCMKTS",
+    "NYSEAMERICAN": "NYSEAMERICAN", "NYSE AMERICAN": "NYSEAMERICAN", "AMEX": "NYSEAMERICAN", "NYSEMKT": "NYSEAMERICAN",
+    "BATS": "BATS", "CBOE": "CBOE",
+    "TSE": "TYO", "TYO": "TYO", "JPX": "TYO",
+    "HKEX": "HKG", "HKG": "HKG", "SEHK": "HKG",
+    "SZSE": "SHE", "SSE": "SHA", "SHSE": "SHA",
+    "TWSE": "TPE", "TPEX": "TPE", "TPE": "TPE",
+    "LSE": "LON", "LON": "LON",
+    "XETRA": "ETR", "ETR": "ETR", "FRA": "FRA",
+    "SIX": "SWX", "SWX": "SWX", "VTX": "VTX",
+    "BME": "BME", "MC": "BME", "BMV": "BMV",
+    "OMX": "STO", "STO": "STO", "OMXSTO": "STO",
+    "CPH": "CPH", "HEL": "HEL", "OSL": "OSL",
+    "AMS": "AMS", "EPA": "EPA", "EBR": "EBR", "ELI": "ELI", "BIT": "BIT",
+    "TSX": "TSE", "TSXV": "CVE", "CSE": "CNSX",
+    "ASX": "ASX", "IDX": "IDX", "NSE": "NSE", "BSE": "BOM", "SGX": "SGX",
+    "TASE": "TLV", "TLV": "TLV",
+    "EURONEXT MILAN": "BIT", "EURONEXT PARIS": "EPA", "EURONEXT AMSTERDAM": "AMS",
+    "EURONEXT BRUSSELS": "EBR", "EURONEXT LISBON": "ELI",
+}
+_EURO_BY_CO = {"FR": "EPA", "NL": "AMS", "BE": "EBR", "PT": "ELI", "IT": "BIT", "IE": "ISE", "EU": "EPA"}
+
+
+def gf_exchange(exch, co):
+    e = (exch or "").upper().replace("_", " ").strip()
+    if e in _GF_EXCH:
+        return _GF_EXCH[e]
+    if e == "EURONEXT":
+        return _EURO_BY_CO.get((co or "").upper(), "EPA")
+    return ""
+
+
+def asset_link(tk, co, exch=""):
+    """국내=네이버, 해외=구글 파이낸스(거래소코드; 미상 시 티커만)."""
+    if (co or "").upper() == "KR":
+        return f"https://finance.naver.com/item/main.naver?code={tk}"
+    t = (tk or "").rstrip(".").strip()
+    gx = gf_exchange(exch, co)
+    return f"https://www.google.com/finance/quote/{t}:{gx}" if gx else f"https://www.google.com/finance/quote/{t}"
 OUT.mkdir(parents=True, exist_ok=True)
 FMP_KEY = (os.environ.get("FMP_API_KEY") or "").strip()
 EODHD_KEY = (os.environ.get("EODHD_API_KEY") or "").strip()
@@ -260,9 +304,8 @@ def main():
     missing = []
     for it in items:
         tk, co, name = it["ticker"], it.get("country","US"), it.get("name", it["ticker"])
-        # 종목명 링크: 국내=네이버금융, 해외=야후파이낸스
-        link = (f"https://finance.naver.com/item/main.naver?code={tk}" if co == "KR"
-                else f"https://finance.yahoo.com/quote/{tk}")
+        # 종목명 링크: 국내=네이버금융, 해외=구글 파이낸스
+        link = asset_link(tk, co, it.get("exchange", ""))
         sector = it.get("sector", "")
         label = f"{name} ({tk})"
         mdlabel = f"[{label}]({link})"

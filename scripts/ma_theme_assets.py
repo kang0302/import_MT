@@ -90,8 +90,7 @@ def compute_jrow(a):
     tk, co, name = a["ticker"], a.get("country", "US"), a.get("name", a["ticker"])
     exch = a.get("exchange", "")
     sector = a.get("sector", "")
-    link = (f"https://finance.naver.com/item/main.naver?code={tk}" if co == "KR"
-            else f"https://finance.yahoo.com/quote/{tk}")
+    link = mb.asset_link(tk, co, exch)  # 국내=네이버, 해외=구글 파이낸스
     base = {"sector": sector, "name": name, "ticker": tk, "country": co, "link": link,
             "themes": a.get("themes", [])}
     rows = fetch_rows(tk, co, exch)
