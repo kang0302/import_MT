@@ -18,7 +18,15 @@
     "dataAsOf": "2026-05-22T00:00:00+09:00",
     "notes": "환율 하락 + 유가 하락 + 한중관계 개선 트리플 호재. FSC·LCC + 지주사 + 비상장 투자자까지 K-항공 밸류체인 망라. 한진칼 지배구조 이슈는 별도 변수.",
     "sources": [],
-    "description": "대한항공(FSC)·제주항공·진에어·티웨이(LCC)·한진칼(지주) 등 K 항공. 환율 하락·유가 하락(비용 개선)과 여객 수요 회복·한중 관계 개선(수요)이 핵심 동인."
+    "description": "대한항공(FSC)·제주항공·진에어·티웨이(LCC)·한진칼(지주) 등 K 항공. 환율 하락·유가 하락(비용 개선)과 여객 수요 회복·한중 관계 개선(수요)이 핵심 동인.",
+    "changelog": [
+      {
+        "date": "2026-07-30",
+        "kind": "보강",
+        "title": "한국공항 신규 편입(대한항공 INVESTS, 2궤도)",
+        "detail": "한진그룹 공항 지상조업 최대사 한국공항(005430)을 신규 자산으로 추가하고, 최대주주 대한항공→한국공항 INVESTS 관계(2궤도)로 배치."
+      }
+    ]
   },
   "nodes": [
     {
@@ -252,6 +260,35 @@
       "id": "C_3920",
       "type": "CHARACTER",
       "name": "LCC_최대"
+    },
+    {
+      "id": "A_2832",
+      "type": "ASSET",
+      "name": "한국공항",
+      "exposure": {
+        "ticker": "005430",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -2.010050251256279,
+        "close": 78000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-29",
+        "valuationSource": "EODHD",
+        "return_3d": -1.2658227848101222,
+        "return_7d": -5.339805825242716,
+        "return_15d": -8.984830805134191,
+        "return_1m": 0.0,
+        "return_ytd": 21.684867394695793,
+        "return_1y": 16.9415292353823,
+        "return_2y": 1.4304291287386306,
+        "return_3y": 106.62251655629137,
+        "returnsAsOf": "2026-07-29",
+        "returnsSource": "EODHD"
+      },
+      "coreBiz": "항공기 지상조업(램프서비스)·수하물 탑재·하역·항공화물 조업·항공기 급유·정비 서비스 제공. 한진그룹 계열의 공항 지상조업 최대 업체로, 최대주주는 대한항공(대한항공이 지분 투자·모회사)."
     }
   ],
   "edges": [
@@ -375,6 +412,16 @@
       ],
       "confidence": 0.8,
       "status": "verified"
+    },
+    {
+      "from": "A_1593",
+      "to": "A_2832",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014941"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -495,6 +542,16 @@
       "type": "HAS_TRAIT",
       "evidence": [
         "EV_008352"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1593",
+      "to": "A_2832",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_014941"
       ],
       "confidence": 0.8,
       "status": "verified"
