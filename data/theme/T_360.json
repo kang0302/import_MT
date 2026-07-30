@@ -21,6 +21,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-07-30",
+        "kind": "보강",
+        "title": "크라운캐슬(CCI) 편입 — 바로미터 표본 확보",
+        "detail": "디지털 인프라 REIT 크라운캐슬(CCI)을 1궤도 편입(자산 4→5종)하여 바로미터 표본(≥5) 확보·수익률 집계 활성화. CHR·브리핑·메트릭 포함."
+      },
+      {
         "date": "2026-07-29",
         "kind": "수정",
         "title": "AI 전력 고평가 폭락 이벤트 추가",
@@ -191,6 +197,40 @@
       "id": "C_4920",
       "type": "CHARACTER",
       "name": "셀타워엣지DC리츠"
+    },
+    {
+      "id": "A_2315",
+      "type": "ASSET",
+      "name": "크라운캐슬",
+      "exposure": {
+        "ticker": "CCI",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 4.409240924092406,
+        "close": 112.45,
+        "marketCap": 34562330000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-29",
+        "valuationSource": "FMP",
+        "return_3d": 5.594125500667557,
+        "return_7d": 1.163980557687383,
+        "return_15d": 2.847854356306878,
+        "return_1m": 0.5850184407986792,
+        "return_ytd": -10.834272829763247,
+        "return_1y": -27.30698529411765,
+        "return_2y": -25.011851711387123,
+        "return_3y": -29.048174396698656,
+        "returnsAsOf": "2026-07-29",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "미국 통신 타워·스몰셀·파이버 REIT — 데이터센터 연결 파이버·5G/엣지 인프라로 AI 데이터 트래픽 수혜."
+    },
+    {
+      "id": "C_5808",
+      "type": "CHARACTER",
+      "name": "통신타워·파이버DC인프라"
     }
   ],
   "edges": [
@@ -294,6 +334,26 @@
       ],
       "confidence": 0.72,
       "status": "verified"
+    },
+    {
+      "from": "A_2315",
+      "to": "T_360",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015004"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2315",
+      "to": "C_5808",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015005"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
     }
   ],
   "links": [
@@ -396,6 +456,26 @@
         "EV_010939"
       ],
       "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2315",
+      "to": "T_360",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015004"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2315",
+      "to": "C_5808",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015005"
+      ],
+      "confidence": 0.8,
       "status": "verified"
     }
   ]
