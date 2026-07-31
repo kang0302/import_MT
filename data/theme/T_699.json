@@ -1,0 +1,708 @@
+{
+  "schemaVersion": "v5",
+  "themeId": "T_699",
+  "themeName": "유로강세_ECB금리인상수혜",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-31T00:00:00+09:00",
+    "description": "유로 강세(달러 약세) 국면 수혜 — 유럽 내수·서비스 기업. 매출이 유로 기반이고 달러 표시 원자재·에너지 수입원가가 하락(유틸·통신), 금리인상기엔 은행 순이자마진↑·유로 자산가치 상승. Enel·Iberdrola·E.ON(유틸), Deutsche Telekom·Orange(통신), BNP·Santander·Intesa(은행).",
+    "notes": "유로 강세(달러 약세) 국면 수혜 — 유럽 내수·서비스 기업. 매출이 유로 기반이고 달러 표시 원자재·에너지 수입원가가 하락(유틸·통신), 금리인상기엔 은행 순이자마진↑·유로 자산가치 상승. Enel·Iberdrola·E.ON(유틸), Deutsche Telekom·Orange(통신), BNP·Santander·Intesa(은행).",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-31",
+        "kind": "신규",
+        "title": "테마 생성",
+        "detail": "유로 강세(달러 약세) 국면 수혜 — 유럽 내수·서비스 기업. 매출이 유로 기반이고 달러 표시 원자재·에너지 수입원가가 하락(유틸·통신), 금리인상기엔 은행 순이자마진↑·유로 자산가치 상승. Enel·Iberdrola·E.ON(유틸), Deutsche Telekom·Orange(통신), BNP·Santander·Intesa(은행)."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_699",
+      "type": "THEME",
+      "name": "유로강세_ECB금리인상수혜"
+    },
+    {
+      "id": "M_1199",
+      "type": "MACRO",
+      "name": "유로강세"
+    },
+    {
+      "id": "M_359",
+      "type": "MACRO",
+      "name": "ECB금리정책"
+    },
+    {
+      "id": "M_357",
+      "type": "MACRO",
+      "name": "미국달러약세EM자금유입"
+    },
+    {
+      "id": "A_2840",
+      "type": "ASSET",
+      "name": "엔엘(Enel)",
+      "exposure": {
+        "ticker": "ENEL",
+        "exchange": "MI",
+        "country": "IT"
+      },
+      "metrics": {
+        "return_1d": 0.44715447154473065,
+        "close": 6.04,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": 0.14184397163121698,
+        "return_7d": -1.5537848605577609,
+        "return_15d": -2.3320158102766664,
+        "return_1m": -2.3320158102766664,
+        "return_ytd": 9.822222222222221,
+        "return_1y": 27.865459249676583,
+        "return_2y": 49.98482549317147,
+        "return_3y": 64.45923460898504,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "이탈리아 최대 전력 유틸 — 유로 매출·규제 요금기반, 유로강세·금리인상기 방어 수혜."
+    },
+    {
+      "id": "C_5845",
+      "type": "CHARACTER",
+      "name": "이탈리아유틸_유로매출·원가↓"
+    },
+    {
+      "id": "A_2841",
+      "type": "ASSET",
+      "name": "이베르드롤라",
+      "exposure": {
+        "ticker": "IBE",
+        "exchange": "MC",
+        "country": "ES"
+      },
+      "metrics": {
+        "return_1d": 1.3645224171540127,
+        "close": 11.83,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": -0.4784688995215225,
+        "return_7d": -2.2096850023507253,
+        "return_15d": -0.4784688995215225,
+        "return_1m": -3.165735567970207,
+        "return_ytd": 11.6478797638218,
+        "return_1y": 34.366925064599485,
+        "return_2y": 72.47097844112768,
+        "return_3y": 91.17647058823528,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "스페인 재생에너지 유틸 글로벌 — 유로 매출·규제기반 안정 현금흐름."
+    },
+    {
+      "id": "C_5846",
+      "type": "CHARACTER",
+      "name": "스페인재생유틸_규제기반"
+    },
+    {
+      "id": "A_2842",
+      "type": "ASSET",
+      "name": "이온(E.ON)",
+      "exposure": {
+        "ticker": "EOAN",
+        "exchange": "XETRA",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 0.797024442082872,
+        "close": 11.37,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": -0.10531858873090716,
+        "return_7d": -3.214285714285725,
+        "return_15d": 0.05274261603374075,
+        "return_1m": 3.2661948829613374,
+        "return_ytd": 15.459525258673157,
+        "return_1y": 18.562499999999993,
+        "return_2y": 50.79491255961843,
+        "return_3y": 70.59352517985612,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "독일 전력망·리테일 유틸 — 유로 내수 규제기반 방어주."
+    },
+    {
+      "id": "C_5847",
+      "type": "CHARACTER",
+      "name": "독일전력망유틸_내수"
+    },
+    {
+      "id": "A_2843",
+      "type": "ASSET",
+      "name": "도이치텔레콤",
+      "exposure": {
+        "ticker": "DTE",
+        "exchange": "XETRA",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -2.1402214022140265,
+        "close": 19.24,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": -3.878216745197538,
+        "return_7d": -2.60741828865223,
+        "return_15d": 1.5313935681469992,
+        "return_1m": 5.657370517928273,
+        "return_ytd": -4.8780487804877986,
+        "return_1y": -14.808866045615165,
+        "return_2y": 9.950248756218905,
+        "return_3y": 42.88793103448276,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "유럽 통신 1위 — 유로 매출 기반 방어·배당(미 T모바일 자회사 보유)."
+    },
+    {
+      "id": "C_5848",
+      "type": "CHARACTER",
+      "name": "유럽통신1위_유로매출"
+    },
+    {
+      "id": "A_2844",
+      "type": "ASSET",
+      "name": "오랑주",
+      "exposure": {
+        "ticker": "ORA",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": -3.6592505854800894,
+        "close": 10.31,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": -4.2200232828870865,
+        "return_7d": 0.1521606816798471,
+        "return_15d": 3.6862003780718355,
+        "return_1m": 3.6862003780718355,
+        "return_ytd": 14.748953974895397,
+        "return_1y": 19.41219158200289,
+        "return_2y": 61.95866141732282,
+        "return_3y": 59.447674418604635,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "프랑스 통신 — 유로 내수 매출 기반 방어·배당주."
+    },
+    {
+      "id": "C_5849",
+      "type": "CHARACTER",
+      "name": "프랑스통신_유로내수"
+    },
+    {
+      "id": "A_2845",
+      "type": "ASSET",
+      "name": "BNP파리바",
+      "exposure": {
+        "ticker": "BNP",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": 0.38588754134509795,
+        "close": 57.04,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": 0.9796672828096042,
+        "return_7d": 2.3225323094212547,
+        "return_15d": 8.500496524329693,
+        "return_1m": 6.78264268960127,
+        "return_ytd": 33.3740234375,
+        "return_1y": 39.39780556264354,
+        "return_2y": 83.8774823291821,
+        "return_3y": 83.07640750670242,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "유럽 최대 은행 — 금리인상기 순이자마진↑·유로 자산가치 상승 수혜."
+    },
+    {
+      "id": "C_5850",
+      "type": "CHARACTER",
+      "name": "유럽최대은행_금리인상수혜"
+    },
+    {
+      "id": "A_2044",
+      "type": "ASSET",
+      "name": "산탄데르",
+      "exposure": {
+        "ticker": "SAN",
+        "exchange": "NYSE",
+        "country": "ES"
+      },
+      "metrics": {
+        "return_1d": 5.455904334828099,
+        "return_3d": 0.8577555396711789,
+        "return_7d": 3.369963369963358,
+        "return_15d": 2.3205221174764423,
+        "return_1m": 2.2463768115941862,
+        "return_ytd": 16.901408450704224,
+        "return_1y": 58.183856502242136,
+        "return_2y": 187.37270875763747,
+        "return_3y": 264.59948320413434,
+        "close": 14.11,
+        "marketCap": 207109722424,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5851",
+      "type": "CHARACTER",
+      "name": "스페인은행_유로자산"
+    },
+    {
+      "id": "A_2846",
+      "type": "ASSET",
+      "name": "인테사산파올로",
+      "exposure": {
+        "ticker": "ISP",
+        "exchange": "MI",
+        "country": "IT"
+      },
+      "metrics": {
+        "return_1d": 1.0599078341013923,
+        "close": 2.41,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-30",
+        "valuationSource": "FMP",
+        "return_3d": 1.5277777777777724,
+        "return_7d": 2.0000000000000018,
+        "return_15d": 5.095846645367419,
+        "return_1m": 7.499999999999996,
+        "return_ytd": 10.385906040268456,
+        "return_1y": 24.132075471698112,
+        "return_2y": 75.44,
+        "return_3y": 158.0,
+        "returnsAsOf": "2026-07-30",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "이탈리아 최대 은행 — 금리인상기 마진↑·유로 자산 기반."
+    },
+    {
+      "id": "C_5852",
+      "type": "CHARACTER",
+      "name": "이탈은행_금리마진"
+    }
+  ],
+  "edges": [
+    {
+      "from": "M_1199",
+      "to": "T_699",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015086"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_359",
+      "to": "T_699",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015087"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_699",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015088"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2840",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015089"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2840",
+      "to": "C_5845",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015090"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2841",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015091"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2841",
+      "to": "C_5846",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015092"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2842",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015093"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2842",
+      "to": "C_5847",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015094"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2843",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015095"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2843",
+      "to": "C_5848",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015096"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2844",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015097"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2844",
+      "to": "C_5849",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015098"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2845",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015099"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2845",
+      "to": "C_5850",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015100"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2044",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015101"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2044",
+      "to": "C_5851",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015102"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2846",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015103"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2846",
+      "to": "C_5852",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015104"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "M_1199",
+      "to": "T_699",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015086"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_359",
+      "to": "T_699",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015087"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_357",
+      "to": "T_699",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015088"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2840",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015089"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2840",
+      "to": "C_5845",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015090"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2841",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015091"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2841",
+      "to": "C_5846",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015092"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2842",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015093"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2842",
+      "to": "C_5847",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015094"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2843",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015095"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2843",
+      "to": "C_5848",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015096"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2844",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015097"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2844",
+      "to": "C_5849",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015098"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2845",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015099"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2845",
+      "to": "C_5850",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015100"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2044",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015101"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2044",
+      "to": "C_5851",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015102"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2846",
+      "to": "T_699",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015103"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2846",
+      "to": "C_5852",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015104"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    }
+  ]
+}
