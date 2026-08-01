@@ -21,6 +21,12 @@
     "sources": [],
     "changelog": [
       {
+        "date": "2026-08-01",
+        "kind": "보강",
+        "title": "중국인터넷 대표 ETF(KWEB) 2궤도 연결",
+        "detail": "KraneShares CSI China Internet ETF(KWEB)를 EXPOSED_TO로 연결 — 테마 순수 바스켓 노출. 엣지 근거 부착."
+      },
+      {
         "date": "2026-07-25",
         "kind": "수정",
         "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
@@ -378,6 +384,35 @@
       "id": "M_378",
       "type": "MACRO",
       "name": "중국정부과열경쟁규제조치(26.6~)"
+    },
+    {
+      "id": "A_2863",
+      "type": "ASSET",
+      "name": "크레인셰어스 CSI 중국인터넷 ETF",
+      "exposure": {
+        "ticker": "KWEB",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.5324305060584464,
+        "close": 28.49,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-07-31",
+        "valuationSource": "FMP",
+        "return_3d": 4.320761625778102,
+        "return_7d": 7.7534039334341776,
+        "return_15d": 7.998483699772563,
+        "return_1m": 13.415605095541384,
+        "return_ytd": -20.039292730844803,
+        "return_1y": -18.901224025049824,
+        "return_2y": 7.671957671957652,
+        "return_3y": -5.537135278514594,
+        "returnsAsOf": "2026-07-31",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "KraneShares CSI China Internet ETF (NYSEARCA:KWEB) — CSI Overseas China Internet Index 추종. 알리바바·텐센트·PDD·징둥·메이퇀·바이두·넷이즈·트립닷컴 등 중국 인터넷/플랫폼 대표주에 집중 투자하는 미국 상장 대표 ETF(테마 순수 바스켓 노출)."
     }
   ],
   "edges": [
@@ -564,6 +599,17 @@
       "evidence": [
         "EV_011380"
       ]
+    },
+    {
+      "from": "T_401",
+      "to": "A_2863",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_017894"
+      ],
+      "confidence": 0.9,
+      "status": "verified",
+      "rationale": "KWEB는 CSI Overseas China Internet Index를 추종하여 알리바바·텐센트·PDD·징둥·메이퇀·바이두·넷이즈·트립닷컴 등 본 테마(중국인터넷플랫폼) 구성 종목을 그대로 상위 편입 — 개별종목 리스크 없이 테마 전체에 노출되는 대표 ETF. 2궤도(EXPOSED_TO) 연결."
     }
   ],
   "links": [
@@ -750,6 +796,17 @@
       "evidence": [
         "EV_011380"
       ]
+    },
+    {
+      "from": "T_401",
+      "to": "A_2863",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_017894"
+      ],
+      "confidence": 0.9,
+      "status": "verified",
+      "rationale": "KWEB는 CSI Overseas China Internet Index를 추종하여 알리바바·텐센트·PDD·징둥·메이퇀·바이두·넷이즈·트립닷컴 등 본 테마(중국인터넷플랫폼) 구성 종목을 그대로 상위 편입 — 개별종목 리스크 없이 테마 전체에 노출되는 대표 ETF. 2궤도(EXPOSED_TO) 연결."
     }
   ]
 }
