@@ -1,9 +1,9 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_285",
-  "themeName": "글로벌동박관련주",
+  "themeName": "글로벌동박_2차전지용",
   "meta": {
-    "periodDefault": "3d",
+    "periodDefault": "7d",
     "periodOptions": [
       "1d",
       "3d",
@@ -15,16 +15,54 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-06-01T00:00:00+09:00",
-    "description": "글로벌동박관련주 — 13 자산 (한국 4: SKC·고려아연·솔루스·롯데에너지머티 + 일본 4: JX금속·미쓰이금속·후루카와·닛폰덴카이 + 중국 5: 자위안·눠더구펀·더푸·중이·퉁관). 3 BF (2차전지박·AI회로박·압연동박) + 5 macro IMPACTS (EV보급·구리가격·AI반도체수요·데이터센터·AIDC전력수요).",
-    "notes": "13 ASSET + 3 BF (신규) + 5 MACRO",
-    "sources": []
+    "dataAsOf": "2026-08-01T00:00:00+09:00",
+    "description": "2차전지(음극집전체)용 전해동박(SKC·롯데에너지머티·솔루스·닛폰덴카이·중국 동박).",
+    "notes": "2차전지(음극집전체)용 전해동박(SKC·롯데에너지머티·솔루스·닛폰덴카이·중국 동박).",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-01",
+        "kind": "수정",
+        "title": "밸류체인 분할",
+        "detail": "과대 테마 T_285를 밸류체인 단계별로 분할."
+      }
+    ]
   },
   "nodes": [
     {
       "id": "T_285",
       "type": "THEME",
-      "name": "글로벌동박관련주"
+      "name": "글로벌동박_2차전지용"
+    },
+    {
+      "id": "M_163",
+      "type": "MACRO",
+      "name": "구리가격상승"
+    },
+    {
+      "id": "M_020",
+      "type": "MACRO",
+      "name": "EV보급확대"
+    },
+    {
+      "id": "M_161",
+      "type": "MACRO",
+      "name": "AI반도체수요증가"
+    },
+    {
+      "id": "M_053",
+      "type": "MACRO",
+      "name": "데이터센터"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "M_110",
+      "type": "MACRO",
+      "name": "ESS확산"
     },
     {
       "id": "A_901",
@@ -58,35 +96,9 @@
       }
     },
     {
-      "id": "A_811",
-      "type": "ASSET",
-      "name": "고려아연",
-      "exposure": {
-        "ticker": "010130",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "Korea Zinc — 아연·연 제련 + 2차전지박 (KZAM)",
-        "theme_role": "한국 동박 — 2차전지박 (KZAM)",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 8.000000000000007,
-        "close": 999000,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "EODHD",
-        "return_3d": 5.157894736842095,
-        "return_7d": 0.5030181086519203,
-        "return_15d": -0.3988035892322994,
-        "return_1m": -8.76712328767123,
-        "return_ytd": -22.094122094944524,
-        "return_1y": 25.891631163733365,
-        "return_2y": 97.8317121549301,
-        "return_3y": 162.86764705882354,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "EODHD"
-      }
+      "id": "C_4224",
+      "type": "CHARACTER",
+      "name": "동박(전지·전자)"
     },
     {
       "id": "A_1136",
@@ -120,6 +132,11 @@
       }
     },
     {
+      "id": "C_243",
+      "type": "CHARACTER",
+      "name": "고마진AI회로박확대"
+    },
+    {
       "id": "A_1135",
       "type": "ASSET",
       "name": "솔루스첨단소재",
@@ -151,97 +168,9 @@
       }
     },
     {
-      "id": "A_1786",
-      "type": "ASSET",
-      "name": "JX금속",
-      "exposure": {
-        "ticker": "5016",
-        "exchange": "TSE",
-        "country": "JP",
-        "business_desc": "JX Advanced Metals — 압연동박 글로벌",
-        "theme_role": "일본 동박 — 압연동박",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 0.27018913239267306,
-        "close": 3340.0,
-        "marketCap": 3093260569460,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
-        "valuationSource": "FMP",
-        "return_3d": -11.826821541710665,
-        "return_7d": -8.867667121418831,
-        "return_15d": -9.263787014398261,
-        "return_1m": -24.05638926784902,
-        "return_ytd": 65.34653465346534,
-        "return_1y": 295.1727401798391,
-        "return_2y": null,
-        "return_3y": null,
-        "returnsAsOf": "2026-07-30",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1787",
-      "type": "ASSET",
-      "name": "미쓰이금속",
-      "exposure": {
-        "ticker": "5706",
-        "exchange": "TSE",
-        "country": "JP",
-        "business_desc": "Mitsui Mining & Smelting — AI회로박·전자소재",
-        "theme_role": "일본 동박 — AI회로박 1위",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 5.571790375998442,
-        "close": 27095.0,
-        "marketCap": 1550167376880,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
-        "valuationSource": "FMP",
-        "return_3d": -13.240473903298112,
-        "return_7d": -13.406839245765422,
-        "return_15d": -19.670916098428705,
-        "return_1m": -36.32197414806111,
-        "return_ytd": 45.71121269158376,
-        "return_1y": 420.25729646697386,
-        "return_2y": 406.8275346053124,
-        "return_3y": null,
-        "returnsAsOf": "2026-07-30",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1788",
-      "type": "ASSET",
-      "name": "후루카와전기",
-      "exposure": {
-        "ticker": "5801",
-        "exchange": "TSE",
-        "country": "JP",
-        "business_desc": "Furukawa Electric — 2차전지박·AI회로박·통신소재",
-        "theme_role": "일본 동박 — 2차전지박+AI회로박",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 0.18034265103696878,
-        "close": 2777.5,
-        "marketCap": 1953965833875,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
-        "valuationSource": "FMP",
-        "return_3d": -15.24259993896857,
-        "return_7d": -18.762796139221994,
-        "return_15d": -21.561705732843826,
-        "return_1m": -41.279069767441854,
-        "return_ytd": 163.51992409867174,
-        "return_1y": 266.86038832386737,
-        "return_2y": 573.8233867054828,
-        "return_3y": null,
-        "returnsAsOf": "2026-07-30",
-        "returnsSource": "FMP"
-      }
+      "id": "C_4226",
+      "type": "CHARACTER",
+      "name": "동박·전지소재"
     },
     {
       "id": "A_1789",
@@ -260,7 +189,7 @@
         "close": 2.0,
         "marketCap": 20180600,
         "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
+        "valuationAsOf": "2026-07-31",
         "valuationSource": "FMP",
         "return_3d": -87.5,
         "return_7d": -94.28571428571428,
@@ -270,9 +199,14 @@
         "return_1y": -99.8015873015873,
         "return_2y": null,
         "return_3y": null,
-        "returnsAsOf": "2026-07-30",
+        "returnsAsOf": "2026-07-31",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "C_4230",
+      "type": "CHARACTER",
+      "name": "전해동박(일본)"
     },
     {
       "id": "A_1790",
@@ -287,23 +221,28 @@
         "theme_status": "Support"
       },
       "metrics": {
-        "return_1d": -5.485232067510548,
-        "close": 22.4,
-        "marketCap": 14781923677,
+        "return_1d": 2.9017857142857206,
+        "close": 23.05,
+        "marketCap": 15210863426,
         "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
+        "valuationAsOf": "2026-07-31",
         "valuationSource": "FMP",
-        "return_3d": -11.671924290220826,
-        "return_7d": -16.104868913857683,
-        "return_15d": -35.945095796396906,
-        "return_1m": -46.46271510516253,
-        "return_ytd": -24.119241192411934,
-        "return_1y": 50.74024226110363,
-        "return_2y": 222.7665706051873,
+        "return_3d": -2.865571007163925,
+        "return_7d": -9.072978303747536,
+        "return_15d": -31.419220470098185,
+        "return_1m": -42.84651624101164,
+        "return_ytd": -21.917344173441734,
+        "return_1y": 50.55519268451991,
+        "return_2y": 228.81597717546364,
         "return_3y": null,
-        "returnsAsOf": "2026-07-30",
+        "returnsAsOf": "2026-07-31",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "C_4231",
+      "type": "CHARACTER",
+      "name": "전해동박(중국)"
     },
     {
       "id": "A_1791",
@@ -318,54 +257,28 @@
         "theme_status": "Support"
       },
       "metrics": {
-        "return_1d": -7.390300230946889,
-        "close": 8.02,
-        "marketCap": 13916151075,
+        "return_1d": 1.7456359102244523,
+        "close": 8.16,
+        "marketCap": 14159076405,
         "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
+        "valuationAsOf": "2026-07-31",
         "valuationSource": "FMP",
-        "return_3d": -14.40768409818569,
-        "return_7d": -14.13276231263384,
-        "return_15d": -40.327380952380956,
-        "return_1m": -47.68427919112851,
-        "return_ytd": 8.086253369272223,
-        "return_1y": 43.214285714285715,
-        "return_2y": 156.23003194888176,
+        "return_3d": -8.211473565804283,
+        "return_7d": -7.796610169491524,
+        "return_15d": -36.34945397815913,
+        "return_1m": -43.84033035099794,
+        "return_ytd": 9.973045822102433,
+        "return_1y": 44.169611307420496,
+        "return_2y": 159.87261146496814,
         "return_3y": null,
-        "returnsAsOf": "2026-07-30",
+        "returnsAsOf": "2026-07-31",
         "returnsSource": "FMP"
       }
     },
     {
-      "id": "A_1792",
-      "type": "ASSET",
-      "name": "더푸과기",
-      "exposure": {
-        "ticker": "301511",
-        "exchange": "SZSE",
-        "country": "CN",
-        "business_desc": "Defu Technology — 2차전지박·AI회로박",
-        "theme_role": "중국 동박 — 2차전지박+AI회로박",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": "FMP",
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "returnsAsOf": "2026-07-30",
-        "returnsSource": "FMP"
-      }
+      "id": "C_4232",
+      "type": "CHARACTER",
+      "name": "전해동박(중국)"
     },
     {
       "id": "A_1793",
@@ -380,447 +293,139 @@
         "theme_status": "Support"
       },
       "metrics": {
-        "return_1d": -8.651109846328964,
-        "close": 32.1,
-        "marketCap": 10397315094,
+        "return_1d": 2.7414330218068494,
+        "close": 32.98,
+        "marketCap": 10682350523,
         "pe_ttm": null,
-        "valuationAsOf": "2026-07-30",
+        "valuationAsOf": "2026-07-31",
         "valuationSource": "FMP",
-        "return_3d": -14.513981358189076,
-        "return_7d": -10.53511705685619,
-        "return_15d": -36.11940298507462,
-        "return_1m": -47.445972495088405,
-        "return_ytd": 0.37523452157599557,
-        "return_1y": 99.37888198757763,
-        "return_2y": 135.16483516483518,
+        "return_3d": -5.9326868225898615,
+        "return_7d": -8.86985355070462,
+        "return_15d": -33.171225937183394,
+        "return_1m": -43.04955966154378,
+        "return_ytd": 3.126954346466526,
+        "return_1y": 102.20723482526056,
+        "return_2y": 132.74523641496114,
         "return_3y": null,
-        "returnsAsOf": "2026-07-30",
+        "returnsAsOf": "2026-07-31",
         "returnsSource": "FMP"
       }
-    },
-    {
-      "id": "A_1794",
-      "type": "ASSET",
-      "name": "퉁관퉁보",
-      "exposure": {
-        "ticker": "301217",
-        "exchange": "SZSE",
-        "country": "CN",
-        "business_desc": "Tongguan Copper Foil — AI회로박",
-        "theme_role": "중국 동박 — AI회로박",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": "FMP",
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "returnsAsOf": "2026-07-30",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "BF_514",
-      "type": "BUSINESS_FIELD",
-      "name": "2차전지박"
-    },
-    {
-      "id": "BF_515",
-      "type": "BUSINESS_FIELD",
-      "name": "AI회로박"
-    },
-    {
-      "id": "BF_516",
-      "type": "BUSINESS_FIELD",
-      "name": "압연동박"
-    },
-    {
-      "id": "M_163",
-      "type": "MACRO",
-      "name": "구리가격상승"
-    },
-    {
-      "id": "M_020",
-      "type": "MACRO",
-      "name": "EV보급확대"
-    },
-    {
-      "id": "M_161",
-      "type": "MACRO",
-      "name": "AI반도체수요증가"
-    },
-    {
-      "id": "M_053",
-      "type": "MACRO",
-      "name": "데이터센터"
-    },
-    {
-      "id": "M_035",
-      "type": "MACRO",
-      "name": "AI데이터센터전력수요증가"
-    },
-    {
-      "id": "M_110",
-      "type": "MACRO",
-      "name": "ESS확산"
-    },
-    {
-      "id": "C_242",
-      "type": "CHARACTER",
-      "name": "엔비디아루빈공급망"
-    },
-    {
-      "id": "C_243",
-      "type": "CHARACTER",
-      "name": "고마진AI회로박확대"
-    },
-    {
-      "id": "C_4224",
-      "type": "CHARACTER",
-      "name": "동박(전지·전자)"
-    },
-    {
-      "id": "C_4225",
-      "type": "CHARACTER",
-      "name": "전해동박·비철제련"
-    },
-    {
-      "id": "C_4226",
-      "type": "CHARACTER",
-      "name": "동박·전지소재"
-    },
-    {
-      "id": "C_4227",
-      "type": "CHARACTER",
-      "name": "반도체·전해동박(일본)"
-    },
-    {
-      "id": "C_4228",
-      "type": "CHARACTER",
-      "name": "동박·전지소재(일본)"
-    },
-    {
-      "id": "C_4229",
-      "type": "CHARACTER",
-      "name": "전선·동박(일본)"
-    },
-    {
-      "id": "C_4230",
-      "type": "CHARACTER",
-      "name": "전해동박(일본)"
-    },
-    {
-      "id": "C_4231",
-      "type": "CHARACTER",
-      "name": "전해동박(중국)"
-    },
-    {
-      "id": "C_4232",
-      "type": "CHARACTER",
-      "name": "전해동박(중국)"
-    },
-    {
-      "id": "C_4233",
-      "type": "CHARACTER",
-      "name": "전자동박(중국)"
     },
     {
       "id": "C_4234",
       "type": "CHARACTER",
       "name": "전해동박(중국)"
-    },
-    {
-      "id": "C_4235",
-      "type": "CHARACTER",
-      "name": "전자동박(중국)"
     }
   ],
   "edges": [
-    {
-      "from": "A_901",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009077"
-      ]
-    },
-    {
-      "from": "A_811",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009079"
-      ]
-    },
-    {
-      "from": "A_1136",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009081"
-      ]
-    },
-    {
-      "from": "A_1135",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009082"
-      ]
-    },
-    {
-      "from": "A_1786",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009084"
-      ]
-    },
-    {
-      "from": "A_1787",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009086"
-      ]
-    },
-    {
-      "from": "A_1788",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009088"
-      ]
-    },
-    {
-      "from": "A_1789",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009090"
-      ]
-    },
-    {
-      "from": "A_1790",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009092"
-      ]
-    },
-    {
-      "from": "A_1791",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009094"
-      ]
-    },
-    {
-      "from": "A_1792",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009096"
-      ]
-    },
-    {
-      "from": "A_1793",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009098"
-      ]
-    },
-    {
-      "from": "A_1794",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009100"
-      ]
-    },
-    {
-      "from": "A_901",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_811",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1136",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1136",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1135",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1135",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1786",
-      "to": "BF_516",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1787",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1788",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1788",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1789",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1789",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1790",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1791",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1791",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1792",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1792",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1793",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1794",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
     {
       "from": "M_163",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009102"
-      ]
+        "EV_015448"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_020",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009103"
-      ]
+        "EV_015449"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_161",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009104"
-      ]
+        "EV_015450"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_053",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009105"
-      ]
+        "EV_015451"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_035",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009106"
-      ]
+        "EV_015452"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_110",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009107"
-      ]
+        "EV_015453"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
-      "from": "A_1136",
-      "to": "C_242",
-      "type": "HAS_TRAIT"
-    },
-    {
-      "from": "A_1136",
-      "to": "C_243",
-      "type": "HAS_TRAIT"
+      "from": "A_901",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015454"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
     },
     {
       "from": "A_901",
       "to": "C_4224",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009078"
+        "EV_015455"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
-      "from": "A_811",
-      "to": "C_4225",
+      "from": "A_1136",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015456"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1136",
+      "to": "C_243",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009080"
+        "EV_015457"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1135",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015458"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -828,39 +433,19 @@
       "to": "C_4226",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009083"
+        "EV_015459"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
-      "from": "A_1786",
-      "to": "C_4227",
-      "type": "HAS_TRAIT",
+      "from": "A_1789",
+      "to": "T_285",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_009085"
+        "EV_015460"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1787",
-      "to": "C_4228",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009087"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1788",
-      "to": "C_4229",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009089"
-      ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -868,9 +453,19 @@
       "to": "C_4230",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009091"
+        "EV_015461"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1790",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015462"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -878,9 +473,19 @@
       "to": "C_4231",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009093"
+        "EV_015463"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1791",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015464"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -888,19 +493,19 @@
       "to": "C_4232",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009095"
+        "EV_015465"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
-      "from": "A_1792",
-      "to": "C_4233",
-      "type": "HAS_TRAIT",
+      "from": "A_1793",
+      "to": "T_285",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_009097"
+        "EV_015466"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -908,298 +513,121 @@
       "to": "C_4234",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009099"
+        "EV_015467"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1794",
-      "to": "C_4235",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009101"
-      ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     }
   ],
   "links": [
     {
-      "from": "A_901",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009077"
-      ]
-    },
-    {
-      "from": "A_811",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009079"
-      ]
-    },
-    {
-      "from": "A_1136",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009081"
-      ]
-    },
-    {
-      "from": "A_1135",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009082"
-      ]
-    },
-    {
-      "from": "A_1786",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009084"
-      ]
-    },
-    {
-      "from": "A_1787",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009086"
-      ]
-    },
-    {
-      "from": "A_1788",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009088"
-      ]
-    },
-    {
-      "from": "A_1789",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009090"
-      ]
-    },
-    {
-      "from": "A_1790",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009092"
-      ]
-    },
-    {
-      "from": "A_1791",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009094"
-      ]
-    },
-    {
-      "from": "A_1792",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009096"
-      ]
-    },
-    {
-      "from": "A_1793",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009098"
-      ]
-    },
-    {
-      "from": "A_1794",
-      "to": "T_285",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009100"
-      ]
-    },
-    {
-      "from": "A_901",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_811",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1136",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1136",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1135",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1135",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1786",
-      "to": "BF_516",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1787",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1788",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1788",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1789",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1789",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1790",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1791",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1791",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1792",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1792",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1793",
-      "to": "BF_514",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1794",
-      "to": "BF_515",
-      "type": "OPERATES"
-    },
-    {
       "from": "M_163",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009102"
-      ]
+        "EV_015448"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_020",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009103"
-      ]
+        "EV_015449"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_161",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009104"
-      ]
+        "EV_015450"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_053",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009105"
-      ]
+        "EV_015451"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_035",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009106"
-      ]
+        "EV_015452"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_110",
       "to": "T_285",
       "type": "IMPACTS",
       "evidence": [
-        "EV_009107"
-      ]
+        "EV_015453"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
-      "from": "A_1136",
-      "to": "C_242",
-      "type": "HAS_TRAIT"
-    },
-    {
-      "from": "A_1136",
-      "to": "C_243",
-      "type": "HAS_TRAIT"
+      "from": "A_901",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015454"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
     },
     {
       "from": "A_901",
       "to": "C_4224",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009078"
+        "EV_015455"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
-      "from": "A_811",
-      "to": "C_4225",
+      "from": "A_1136",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015456"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1136",
+      "to": "C_243",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009080"
+        "EV_015457"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1135",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015458"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1207,39 +635,19 @@
       "to": "C_4226",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009083"
+        "EV_015459"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
-      "from": "A_1786",
-      "to": "C_4227",
-      "type": "HAS_TRAIT",
+      "from": "A_1789",
+      "to": "T_285",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_009085"
+        "EV_015460"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1787",
-      "to": "C_4228",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009087"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1788",
-      "to": "C_4229",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009089"
-      ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1247,9 +655,19 @@
       "to": "C_4230",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009091"
+        "EV_015461"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1790",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015462"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1257,9 +675,19 @@
       "to": "C_4231",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009093"
+        "EV_015463"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1791",
+      "to": "T_285",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015464"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1267,19 +695,19 @@
       "to": "C_4232",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009095"
+        "EV_015465"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
-      "from": "A_1792",
-      "to": "C_4233",
-      "type": "HAS_TRAIT",
+      "from": "A_1793",
+      "to": "T_285",
+      "type": "THEMED_AS",
       "evidence": [
-        "EV_009097"
+        "EV_015466"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1287,19 +715,9 @@
       "to": "C_4234",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_009099"
+        "EV_015467"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1794",
-      "to": "C_4235",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009101"
-      ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     }
   ]
