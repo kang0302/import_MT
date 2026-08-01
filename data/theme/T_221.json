@@ -1,7 +1,7 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_221",
-  "themeName": "중국로봇휴머노이드_완성체",
+  "themeName": "중국로봇휴머노이드",
   "meta": {
     "periodDefault": "7d",
     "periodOptions": [
@@ -16,10 +16,16 @@
       "3y"
     ],
     "dataAsOf": "2026-08-01T00:00:00+09:00",
-    "description": "중국 휴머노이드/서비스/산업 로봇 완성체(사이버원·유비테크 등)와 벤치마크 테슬라. 양산·수요가 동인.",
-    "notes": "중국 휴머노이드/서비스/산업 로봇 완성체(사이버원·유비테크 등)와 벤치마크 테슬라. 양산·수요가 동인.",
+    "description": "중국 휴머노이드/서비스/산업 로봇 완성체(샤오미 사이버원·유비테크·도봇 등)와 벤치마크 테슬라. 구동·부품은 별도 서브테마. 지수 ETF는 EXPOSED_TO로 공통 노출.",
+    "notes": "중국 휴머노이드/서비스/산업 로봇 완성체(샤오미 사이버원·유비테크·도봇 등)와 벤치마크 테슬라. 구동·부품은 별도 서브테마. 지수 ETF는 EXPOSED_TO로 공통 노출.",
     "sources": [],
     "changelog": [
+      {
+        "date": "2026-08-01",
+        "kind": "수정",
+        "title": "완성체 접미사 제거 + 지수 ETF EXPOSED_TO 공통배치",
+        "detail": "'_완성체' 명칭을 제거해 대표 테마로 재구성. 중국 휴머노이드 지수 ETF 2종을 THEMED_AS가 아닌 EXPOSED_TO로 공통 배치."
+      },
       {
         "date": "2026-08-01",
         "kind": "수정",
@@ -312,6 +318,64 @@
       "id": "C_5648",
       "type": "CHARACTER",
       "name": "옵티머스벤치마크"
+    },
+    {
+      "id": "A_782",
+      "type": "ASSET",
+      "name": "KODEX차이나휴머노이드로봇",
+      "exposure": {
+        "ticker": "0048K0",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "KODEX차이나휴머노이드로봇"
+    },
+    {
+      "id": "A_781",
+      "type": "ASSET",
+      "name": "TIGER차이나휴머노이드로봇",
+      "exposure": {
+        "ticker": "0053L0",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "TIGER차이나휴머노이드로봇"
     }
   ],
   "edges": [
@@ -504,6 +568,26 @@
       ],
       "confidence": 0.82,
       "status": "verified"
+    },
+    {
+      "from": "T_221",
+      "to": "A_782",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_015486"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "T_221",
+      "to": "A_781",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_015487"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
     }
   ],
   "links": [
@@ -695,6 +779,26 @@
         "EV_015227"
       ],
       "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "T_221",
+      "to": "A_782",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_015486"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "T_221",
+      "to": "A_781",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_015487"
+      ],
+      "confidence": 0.7,
       "status": "verified"
     }
   ]
