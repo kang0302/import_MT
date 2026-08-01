@@ -1,9 +1,9 @@
 {
   "schemaVersion": "v5",
   "themeId": "T_255",
-  "themeName": "글로벌 농산물/곡물 인플레 수혜",
+  "themeName": "글로벌농산물_농기계정밀농업",
   "meta": {
-    "periodDefault": "3d",
+    "periodDefault": "7d",
     "periodOptions": [
       "1d",
       "3d",
@@ -15,16 +15,44 @@
       "2y",
       "3y"
     ],
-    "dataAsOf": "2026-05-22T00:00:00+09:00",
-    "description": "글로벌 농산물·곡물 가격 인플레이션 수혜 — 농기계 빅3 (Deere·AGCO·CNH·Kubota) + 곡물 가공 ABCD (ADM) + 비료·종자 (Nutrien·Corteva) + 농산물·곡물 ETF (DBA·TAGS·CORN·WEAT·SOYB·MOO·VEGI). 곡물가 상승·수급 악화·농업보조금이 핵심 동인.",
-    "notes": "사용자 의도 T_246 였으나 기존 일본자동차OEM 사용 중이라 T_255 로 등록. A_379 LS Mtron 사용자 미명시 제외. NTR 은 T_081 비료 테마와 교차.",
-    "sources": []
+    "dataAsOf": "2026-08-01T00:00:00+09:00",
+    "description": "글로벌 농기계·정밀농업(디어·AGCO·CNH·쿠보타·대동·TYM).",
+    "notes": "글로벌 농기계·정밀농업(디어·AGCO·CNH·쿠보타·대동·TYM).",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-01",
+        "kind": "수정",
+        "title": "밸류체인 분할",
+        "detail": "과대 테마 T_255를 밸류체인 단계별로 분할."
+      }
+    ]
   },
   "nodes": [
     {
       "id": "T_255",
       "type": "THEME",
-      "name": "글로벌 농산물/곡물 인플레 수혜"
+      "name": "글로벌농산물_농기계정밀농업"
+    },
+    {
+      "id": "M_099",
+      "type": "MACRO",
+      "name": "곡물수급악화"
+    },
+    {
+      "id": "M_075",
+      "type": "MACRO",
+      "name": "기후변화"
+    },
+    {
+      "id": "M_084",
+      "type": "MACRO",
+      "name": "중동전쟁"
+    },
+    {
+      "id": "M_264",
+      "type": "MACRO",
+      "name": "비료가상승"
     },
     {
       "id": "A_375",
@@ -58,6 +86,11 @@
       }
     },
     {
+      "id": "C_3968",
+      "type": "CHARACTER",
+      "name": "농기계_글로벌"
+    },
+    {
       "id": "A_376",
       "type": "ASSET",
       "name": "CNH인더스트리얼",
@@ -87,6 +120,11 @@
         "returnsAsOf": "2026-07-31",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "C_3969",
+      "type": "CHARACTER",
+      "name": "농기계·건설장비"
     },
     {
       "id": "A_377",
@@ -120,6 +158,11 @@
       }
     },
     {
+      "id": "C_3970",
+      "type": "CHARACTER",
+      "name": "농기계·소형장비(일본)"
+    },
+    {
       "id": "A_378",
       "type": "ASSET",
       "name": "디어앤컴퍼니",
@@ -149,6 +192,11 @@
         "returnsAsOf": "2026-07-31",
         "returnsSource": "FMP"
       }
+    },
+    {
+      "id": "C_3971",
+      "type": "CHARACTER",
+      "name": "농기계1위·정밀농업"
     },
     {
       "id": "A_380",
@@ -182,6 +230,11 @@
       }
     },
     {
+      "id": "C_3972",
+      "type": "CHARACTER",
+      "name": "K농기계·스마트농업"
+    },
+    {
       "id": "A_381",
       "type": "ASSET",
       "name": "TYM",
@@ -213,637 +266,80 @@
       }
     },
     {
-      "id": "A_382",
-      "type": "ASSET",
-      "name": "MOO 농업ETF",
-      "exposure": {
-        "ticker": "MOO",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "VanEck Agribusiness ETF — 농업 일반 (씨앗·비료·농기계 종합)",
-        "theme_role": "농업 일반 ETF (광의)",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -2.155172413793105,
-        "close": 81.72,
-        "marketCap": 576939196,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -2.5751072961373356,
-        "return_7d": -1.743417097511124,
-        "return_15d": 0.9262689885142672,
-        "return_1m": 3.4561336878085935,
-        "return_ytd": 10.912052117263826,
-        "return_1y": 12.083390481415446,
-        "return_2y": 13.013414465495776,
-        "return_3y": -6.776180698151945,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "MOO(VanEck Agribusiness)는 글로벌 농업·농기계·비료 ETF다"
-    },
-    {
-      "id": "A_1636",
-      "type": "ASSET",
-      "name": "DBA농산물ETF",
-      "exposure": {
-        "ticker": "DBA",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "Invesco DB Agriculture Fund — 8개 농산물 분산",
-        "theme_role": "광의 농산물 분산, ~$720M",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 0.10917030567685337,
-        "close": 27.51,
-        "marketCap": 759275945,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -1.1853448275861989,
-        "return_7d": -2.5504782146652416,
-        "return_15d": -0.9362621534029447,
-        "return_1m": 2.4199553239017124,
-        "return_ytd": 7.629107981220673,
-        "return_1y": 5.97072419106317,
-        "return_2y": 15.104602510460264,
-        "return_3y": 23.307933662034984,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "DBA(Invesco Agriculture)는 농산물 선물 바스켓 ETF다"
-    },
-    {
-      "id": "A_1637",
-      "type": "ASSET",
-      "name": "TAGS 4대작물ETF",
-      "exposure": {
-        "ticker": "TAGS",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "Teucrium Agricultural Fund — 옥수수·밀·대두·설탕 25% 펀드오브펀드",
-        "theme_role": "4대 작물 묶음, ~$30M",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": -0.8821170809943935,
-        "close": 24.72,
-        "marketCap": 7443686,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -2.3696682464455,
-        "return_7d": -4.9230769230769305,
-        "return_15d": -0.4430124848972983,
-        "return_1m": 2.5300705101617638,
-        "return_ytd": 8.659340659340664,
-        "return_1y": 3.734788082249274,
-        "return_2y": -1.8268467037331204,
-        "return_3y": -24.66882624157781,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "TAGS(Teucrium Ag)는 옥수수·밀·대두·설탕 4대 작물 ETF다"
-    },
-    {
-      "id": "A_1638",
-      "type": "ASSET",
-      "name": "CORN 옥수수ETF",
-      "exposure": {
-        "ticker": "CORN",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "Teucrium Corn Fund — 옥수수 선물 단일",
-        "theme_role": "옥수수 단일 작물 노출",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": -0.6193693693693825,
-        "close": 17.65,
-        "marketCap": 46857202,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -2.378318584070793,
-        "return_7d": -3.446389496717739,
-        "return_15d": 0.97254004576659,
-        "return_1m": 4.129793510324475,
-        "return_ytd": 0.11344299489506326,
-        "return_1y": 2.3188405797101463,
-        "return_2y": -2.0532741398446186,
-        "return_3y": -27.63427634276343,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "CORN(Teucrium Corn)은 옥수수 선물 ETF다"
-    },
-    {
-      "id": "A_1639",
-      "type": "ASSET",
-      "name": "WEAT밀ETF",
-      "exposure": {
-        "ticker": "WEAT",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "Teucrium Wheat Fund — 밀 선물 단일",
-        "theme_role": "밀 단일 작물 (변동성 최대)",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": -3.290008123476862,
-        "close": 23.81,
-        "marketCap": 145372360,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -3.290008123476862,
-        "return_7d": -8.423076923076934,
-        "return_15d": 0.3794266441821348,
-        "return_1m": 6.294642857142851,
-        "return_ytd": 19.04999999999999,
-        "return_1y": 9.22018348623852,
-        "return_2y": -3.2113821138211485,
-        "return_3y": -32.92957746478874,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "WEAT(Teucrium Wheat)는 밀 선물 ETF다"
-    },
-    {
-      "id": "A_1640",
-      "type": "ASSET",
-      "name": "SOYB대두ETF",
-      "exposure": {
-        "ticker": "SOYB",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "Teucrium Soybean Fund — 대두 선물 단일",
-        "theme_role": "대두 단일 작물 노출",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": -0.0794281175536149,
-        "close": 25.16,
-        "marketCap": 48003468,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -2.139245429793857,
-        "return_7d": -3.6384527001148914,
-        "return_15d": -0.03972983710767153,
-        "return_1m": 2.610114192495927,
-        "return_ytd": 15.307057745187901,
-        "return_1y": 17.845433255269306,
-        "return_2y": 11.22900088417329,
-        "return_3y": -13.89459274469541,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "SOYB(Teucrium Soybean)는 대두 선물 ETF다"
-    },
-    {
-      "id": "A_1641",
-      "type": "ASSET",
-      "name": "코르테바",
-      "exposure": {
-        "ticker": "CTVA",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "Corteva — 종자·작물보호제",
-        "theme_role": "종자·농약 글로벌 1티어",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -11.898365793597499,
-        "close": 78.71,
-        "marketCap": 52642822200,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -11.512085441259146,
-        "return_7d": -11.092285101095678,
-        "return_15d": -8.13492063492065,
-        "return_1m": -5.781661479530776,
-        "return_ytd": 16.15997638724909,
-        "return_1y": 9.349819394276171,
-        "return_2y": 42.1014623578263,
-        "return_3y": 41.08263129593117,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1642",
-      "type": "ASSET",
-      "name": "아처대니얼스미들랜드",
-      "exposure": {
-        "ticker": "ADM",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "Archer-Daniels-Midland — 곡물 가공·트레이딩 (ABCD 빅4)",
-        "theme_role": "곡물 유통·가공 사이클 수혜",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -1.662324773601298,
-        "close": 79.27,
-        "marketCap": 38204731390,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -4.700649194517926,
-        "return_7d": -9.218964727439305,
-        "return_15d": -1.417734112672553,
-        "return_1m": 3.4721315755123383,
-        "return_ytd": 34.24216765453005,
-        "return_1y": 43.6050724637681,
-        "return_2y": 23.89809315411067,
-        "return_3y": -8.78020713463753,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1643",
-      "type": "ASSET",
-      "name": "VEGI농업ETF",
-      "exposure": {
-        "ticker": "VEGI",
-        "exchange": "NYSEARCA",
-        "country": "US",
-        "business_desc": "iShares MSCI Agriculture Producers ETF — 농업 생산",
-        "theme_role": "농업 일반 ETF (MOO 보완)",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": -2.472406181015452,
-        "close": 44.18,
-        "marketCap": 145808270,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -4.51696563648153,
-        "return_7d": -3.347188798949907,
-        "return_15d": 0.38627584639854273,
-        "return_1m": 0.4090909090909145,
-        "return_ytd": 13.22398769861608,
-        "return_1y": 9.600595385760347,
-        "return_2y": 20.974808324205906,
-        "return_3y": 4.940617577197148,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "VEGI(iShares Agribusiness)는 글로벌 농업 ETF다"
-    },
-    {
-      "id": "A_1447",
-      "type": "ASSET",
-      "name": "Nutrien",
-      "exposure": {
-        "ticker": "NTR",
-        "exchange": "NYSE",
-        "country": "CA",
-        "business_desc": "Nutrien — 비료(칼륨)·크롭인풋 소매 글로벌 1위",
-        "theme_role": "비료 직접 수혜, T_081 교차",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -2.3331447963800933,
-        "close": 69.07,
-        "marketCap": 33155226460,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-07-31",
-        "valuationSource": "FMP",
-        "return_3d": -0.5614742297725295,
-        "return_7d": 0.8321167883211578,
-        "return_15d": 5.563197310102375,
-        "return_1m": 8.651879817523977,
-        "return_ytd": 9.357188093730207,
-        "return_1y": 16.37742207245154,
-        "return_2y": 34.84966809839904,
-        "return_3y": 2.5842863508094283,
-        "returnsAsOf": "2026-07-31",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "BF_463",
-      "type": "BUSINESS_FIELD",
-      "name": "농작물ETF"
-    },
-    {
-      "id": "BF_464",
-      "type": "BUSINESS_FIELD",
-      "name": "농업일반ETF"
-    },
-    {
-      "id": "M_099",
-      "type": "MACRO",
-      "name": "곡물수급악화"
-    },
-    {
-      "id": "M_075",
-      "type": "MACRO",
-      "name": "기후변화"
-    },
-    {
-      "id": "M_084",
-      "type": "MACRO",
-      "name": "중동전쟁"
-    },
-    {
-      "id": "M_264",
-      "type": "MACRO",
-      "name": "비료가상승"
-    },
-    {
-      "id": "C_3968",
-      "type": "CHARACTER",
-      "name": "농기계_글로벌"
-    },
-    {
-      "id": "C_3969",
-      "type": "CHARACTER",
-      "name": "농기계·건설장비"
-    },
-    {
-      "id": "C_3970",
-      "type": "CHARACTER",
-      "name": "농기계·소형장비(일본)"
-    },
-    {
-      "id": "C_3971",
-      "type": "CHARACTER",
-      "name": "농기계1위·정밀농업"
-    },
-    {
-      "id": "C_3972",
-      "type": "CHARACTER",
-      "name": "K농기계·스마트농업"
-    },
-    {
       "id": "C_3973",
       "type": "CHARACTER",
       "name": "K농기계(트랙터)"
-    },
-    {
-      "id": "C_3974",
-      "type": "CHARACTER",
-      "name": "농업ETF(애그리비즈니스)"
-    },
-    {
-      "id": "C_3975",
-      "type": "CHARACTER",
-      "name": "농산물선물ETF"
-    },
-    {
-      "id": "C_3976",
-      "type": "CHARACTER",
-      "name": "4대작물ETF"
-    },
-    {
-      "id": "C_3977",
-      "type": "CHARACTER",
-      "name": "옥수수ETF"
-    },
-    {
-      "id": "C_3978",
-      "type": "CHARACTER",
-      "name": "밀ETF"
-    },
-    {
-      "id": "C_3979",
-      "type": "CHARACTER",
-      "name": "대두ETF"
-    },
-    {
-      "id": "C_3980",
-      "type": "CHARACTER",
-      "name": "종자·작물보호"
-    },
-    {
-      "id": "C_3981",
-      "type": "CHARACTER",
-      "name": "곡물트레이딩·가공"
-    },
-    {
-      "id": "C_3982",
-      "type": "CHARACTER",
-      "name": "농업ETF"
-    },
-    {
-      "id": "C_3983",
-      "type": "CHARACTER",
-      "name": "비료(칼륨·질소)1위"
     }
   ],
   "edges": [
-    {
-      "from": "A_375",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008465"
-      ]
-    },
-    {
-      "from": "A_376",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008467"
-      ]
-    },
-    {
-      "from": "A_377",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008469"
-      ]
-    },
-    {
-      "from": "A_378",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008471"
-      ]
-    },
-    {
-      "from": "A_380",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008473"
-      ]
-    },
-    {
-      "from": "A_381",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008475"
-      ]
-    },
-    {
-      "from": "A_382",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008477"
-      ]
-    },
-    {
-      "from": "A_1636",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008479"
-      ]
-    },
-    {
-      "from": "A_1637",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008481"
-      ]
-    },
-    {
-      "from": "A_1638",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008483"
-      ]
-    },
-    {
-      "from": "A_1639",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008485"
-      ]
-    },
-    {
-      "from": "A_1640",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008487"
-      ]
-    },
-    {
-      "from": "A_1641",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008489"
-      ]
-    },
-    {
-      "from": "A_1642",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008491"
-      ]
-    },
-    {
-      "from": "A_1643",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008493"
-      ]
-    },
-    {
-      "from": "A_1447",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008495"
-      ]
-    },
-    {
-      "from": "A_1636",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1637",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1638",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1639",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1640",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_382",
-      "to": "BF_464",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1643",
-      "to": "BF_464",
-      "type": "OPERATES"
-    },
     {
       "from": "M_099",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008497"
-      ]
+        "EV_015331"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_075",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008498"
-      ]
+        "EV_015332"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_084",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008499"
-      ]
+        "EV_015333"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_264",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008500"
-      ]
+        "EV_015334"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_375",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015335"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
     },
     {
       "from": "A_375",
       "to": "C_3968",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008466"
+        "EV_015336"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_376",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015337"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -851,9 +347,19 @@
       "to": "C_3969",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008468"
+        "EV_015338"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_377",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015339"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -861,9 +367,19 @@
       "to": "C_3970",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008470"
+        "EV_015340"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_378",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015341"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -871,9 +387,19 @@
       "to": "C_3971",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008472"
+        "EV_015342"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_380",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015343"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -881,9 +407,19 @@
       "to": "C_3972",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008474"
+        "EV_015344"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_381",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015345"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -891,316 +427,81 @@
       "to": "C_3973",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008476"
+        "EV_015346"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_382",
-      "to": "C_3974",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008478"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1636",
-      "to": "C_3975",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008480"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1637",
-      "to": "C_3976",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008482"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1638",
-      "to": "C_3977",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008484"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1639",
-      "to": "C_3978",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008486"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1640",
-      "to": "C_3979",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008488"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1641",
-      "to": "C_3980",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008490"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1642",
-      "to": "C_3981",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008492"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1643",
-      "to": "C_3982",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008494"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1447",
-      "to": "C_3983",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008496"
-      ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     }
   ],
   "links": [
     {
-      "from": "A_375",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008465"
-      ]
-    },
-    {
-      "from": "A_376",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008467"
-      ]
-    },
-    {
-      "from": "A_377",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008469"
-      ]
-    },
-    {
-      "from": "A_378",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008471"
-      ]
-    },
-    {
-      "from": "A_380",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008473"
-      ]
-    },
-    {
-      "from": "A_381",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008475"
-      ]
-    },
-    {
-      "from": "A_382",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008477"
-      ]
-    },
-    {
-      "from": "A_1636",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008479"
-      ]
-    },
-    {
-      "from": "A_1637",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008481"
-      ]
-    },
-    {
-      "from": "A_1638",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008483"
-      ]
-    },
-    {
-      "from": "A_1639",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008485"
-      ]
-    },
-    {
-      "from": "A_1640",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008487"
-      ]
-    },
-    {
-      "from": "A_1641",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008489"
-      ]
-    },
-    {
-      "from": "A_1642",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008491"
-      ]
-    },
-    {
-      "from": "A_1643",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008493"
-      ]
-    },
-    {
-      "from": "A_1447",
-      "to": "T_255",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008495"
-      ]
-    },
-    {
-      "from": "A_1636",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1637",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1638",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1639",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1640",
-      "to": "BF_463",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_382",
-      "to": "BF_464",
-      "type": "OPERATES"
-    },
-    {
-      "from": "A_1643",
-      "to": "BF_464",
-      "type": "OPERATES"
-    },
-    {
       "from": "M_099",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008497"
-      ]
+        "EV_015331"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_075",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008498"
-      ]
+        "EV_015332"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_084",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008499"
-      ]
+        "EV_015333"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
     },
     {
       "from": "M_264",
       "to": "T_255",
       "type": "IMPACTS",
       "evidence": [
-        "EV_008500"
-      ]
+        "EV_015334"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_375",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015335"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
     },
     {
       "from": "A_375",
       "to": "C_3968",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008466"
+        "EV_015336"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_376",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015337"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1208,9 +509,19 @@
       "to": "C_3969",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008468"
+        "EV_015338"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_377",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015339"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1218,9 +529,19 @@
       "to": "C_3970",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008470"
+        "EV_015340"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_378",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015341"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1228,9 +549,19 @@
       "to": "C_3971",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008472"
+        "EV_015342"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_380",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015343"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1238,9 +569,19 @@
       "to": "C_3972",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008474"
+        "EV_015344"
       ],
-      "confidence": 0.8,
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_381",
+      "to": "T_255",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015345"
+      ],
+      "confidence": 0.82,
       "status": "verified"
     },
     {
@@ -1248,109 +589,9 @@
       "to": "C_3973",
       "type": "HAS_TRAIT",
       "evidence": [
-        "EV_008476"
+        "EV_015346"
       ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_382",
-      "to": "C_3974",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008478"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1636",
-      "to": "C_3975",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008480"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1637",
-      "to": "C_3976",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008482"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1638",
-      "to": "C_3977",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008484"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1639",
-      "to": "C_3978",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008486"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1640",
-      "to": "C_3979",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008488"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1641",
-      "to": "C_3980",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008490"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1642",
-      "to": "C_3981",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008492"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1643",
-      "to": "C_3982",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008494"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1447",
-      "to": "C_3983",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008496"
-      ],
-      "confidence": 0.8,
+      "confidence": 0.82,
       "status": "verified"
     }
   ]
