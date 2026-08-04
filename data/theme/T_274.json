@@ -18,7 +18,15 @@
     "dataAsOf": "2026-05-29T00:00:00+09:00",
     "description": "글로벌클라우드DBMS — 6 자산 (Snowflake·MongoDB·Oracle·Amazon + 신규 카우치베이스(비)·Teradata). 3 macro IMPACTS (M_224 클라우드확산·M_055 AI확산·M_280 비정형데이터확산 신규) + 6 HAS_TRAIT (자산별 차별화 포지셔닝). 사용자 명세상 M_034/M_053 라벨 오기 → 의도 우선으로 M_224/M_280 사용.",
     "notes": "6 ASSET + 3 MACRO + 6 CHARACTER",
-    "sources": []
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 13건 백필(리서치 기반)."
+      }
+    ]
   },
   "nodes": [
     {
@@ -379,6 +387,149 @@
       "evidence": [
         "EV_015721"
       ]
+    },
+    {
+      "from": "A_211",
+      "to": "A_895",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018110"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존(AWS)과 오라클은 클라우드 데이터베이스 시장에서 오랜 직접 경쟁 관계다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_274",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018111"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 레드시프트와 스노우플레이크는 클라우드 데이터웨어하우스 직접 경쟁자다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_040",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018112"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 도큐먼트DB는 몽고DB 호환을 내세운 직접 경쟁 서비스다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_1731",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018113"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 레드시프트는 테라데이터의 전통 데이터웨어하우스를 대체하며 경쟁한다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_1730",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018114"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 다이나모DB·도큐먼트DB는 카우치베이스와 NoSQL 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_895",
+      "to": "A_274",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018115"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오라클 자율운영 데이터웨어하우스와 스노우플레이크는 클라우드 DW에서 경쟁한다."
+    },
+    {
+      "from": "A_895",
+      "to": "A_040",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018116"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오라클 데이터베이스와 몽고DB는 관계형 대 도큐먼트 DB로 경쟁한다."
+    },
+    {
+      "from": "A_895",
+      "to": "A_1731",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018117"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오라클과 테라데이터는 엔터프라이즈 데이터웨어하우스 시장의 경쟁자다."
+    },
+    {
+      "from": "A_274",
+      "to": "A_1731",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018118"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스노우플레이크는 테라데이터의 레거시 데이터웨어하우스를 대체하며 직접 경쟁한다."
+    },
+    {
+      "from": "A_040",
+      "to": "A_1730",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018119"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "몽고DB와 카우치베이스는 도큐먼트 기반 NoSQL 데이터베이스 직접 경쟁자다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_274",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018120"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스노우플레이크는 서비스를 AWS 인프라 위에서 운영하며 5년간 12억 달러 사용을 약정한 AWS 고객이다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_040",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018121"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "몽고DB의 매니지드 서비스 아틀라스는 AWS 인프라 위에서 구동돼 AWS가 인프라를 공급한다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_1730",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018122"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "카우치베이스의 매니지드 서비스 카펠라는 AWS 인프라 위에서 구동된다."
     }
   ],
   "links": [
@@ -501,6 +652,149 @@
       "evidence": [
         "EV_015721"
       ]
+    },
+    {
+      "from": "A_211",
+      "to": "A_895",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018110"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존(AWS)과 오라클은 클라우드 데이터베이스 시장에서 오랜 직접 경쟁 관계다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_274",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018111"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 레드시프트와 스노우플레이크는 클라우드 데이터웨어하우스 직접 경쟁자다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_040",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018112"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 도큐먼트DB는 몽고DB 호환을 내세운 직접 경쟁 서비스다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_1731",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018113"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 레드시프트는 테라데이터의 전통 데이터웨어하우스를 대체하며 경쟁한다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_1730",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018114"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아마존 다이나모DB·도큐먼트DB는 카우치베이스와 NoSQL 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_895",
+      "to": "A_274",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018115"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오라클 자율운영 데이터웨어하우스와 스노우플레이크는 클라우드 DW에서 경쟁한다."
+    },
+    {
+      "from": "A_895",
+      "to": "A_040",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018116"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오라클 데이터베이스와 몽고DB는 관계형 대 도큐먼트 DB로 경쟁한다."
+    },
+    {
+      "from": "A_895",
+      "to": "A_1731",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018117"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오라클과 테라데이터는 엔터프라이즈 데이터웨어하우스 시장의 경쟁자다."
+    },
+    {
+      "from": "A_274",
+      "to": "A_1731",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018118"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스노우플레이크는 테라데이터의 레거시 데이터웨어하우스를 대체하며 직접 경쟁한다."
+    },
+    {
+      "from": "A_040",
+      "to": "A_1730",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018119"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "몽고DB와 카우치베이스는 도큐먼트 기반 NoSQL 데이터베이스 직접 경쟁자다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_274",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018120"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스노우플레이크는 서비스를 AWS 인프라 위에서 운영하며 5년간 12억 달러 사용을 약정한 AWS 고객이다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_040",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018121"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "몽고DB의 매니지드 서비스 아틀라스는 AWS 인프라 위에서 구동돼 AWS가 인프라를 공급한다."
+    },
+    {
+      "from": "A_211",
+      "to": "A_1730",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018122"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "카우치베이스의 매니지드 서비스 카펠라는 AWS 인프라 위에서 구동된다."
     }
   ]
 }
