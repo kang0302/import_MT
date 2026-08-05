@@ -158,6 +158,23 @@ def main():
     (OUT / "assets.json").write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
     print(f"✅ assets.json: {len(items)}종목 (ok={ok} miss={miss}) asof={payload['asof']}")
 
+    # ETF 티커 목록(ETF-only 52주 트래킹 페이지 필터용) — asset_ssot asset_type=ETF
+    try:
+        import csv
+        etf = set()
+        ssot = DATA / "ssot" / "asset_ssot.csv"
+        with open(ssot, encoding="utf-8") as fh:
+            for r in csv.reader(fh):
+                if r and r[0].startswith("A_") and len(r) >= 7 and r[6].strip().upper() == "ETF":
+                    tk = (r[3] or "").strip()
+                    if tk:
+                        etf.add(tk)
+        (OUT / "etf_tickers.json").write_text(
+            json.dumps({"count": len(etf), "tickers": sorted(etf)}, ensure_ascii=False), encoding="utf-8")
+        print(f"✅ etf_tickers.json: {len(etf)} ETF")
+    except Exception as e:
+        print("etf_tickers.json 생성 실패:", e)
+
 
 if __name__ == "__main__":
     main()
