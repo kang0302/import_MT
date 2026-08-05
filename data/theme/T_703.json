@@ -1,650 +1,736 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_703",
-  "themeName": "미국데이터센터(DC)건축_전력냉각인프라",
-  "meta": {
-    "periodDefault": "7d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-31T00:00:00+09:00",
-    "description": "미국 데이터센터 건축의 핵심 설비 - 전력관리·액체냉각·인클로저·전력장비. 버티브·슈나이더·이튼·nVent·GE버노바. AI 전력밀도 급증으로 DC당 전력·냉각 투자가 구조적 확대. (DC건축 밸류체인 3분할 중 전력·냉각 편)",
-    "notes": "미국 데이터센터 건축의 핵심 설비 - 전력관리·액체냉각·인클로저·전력장비. 버티브·슈나이더·이튼·nVent·GE버노바. AI 전력밀도 급증으로 DC당 전력·냉각 투자가 구조적 확대. (DC건축 밸류체인 3분할 중 전력·냉각 편)",
-    "sources": [],
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-31",
-        "kind": "신규",
-        "title": "테마 분할 생성",
-        "detail": "미국데이터센터건축(T_005)을 밸류체인 단계별 3개 서브테마로 분할."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_703",
-      "type": "THEME",
-      "name": "미국데이터센터(DC)건축_전력냉각인프라"
-    },
-    {
-      "id": "M_288",
-      "type": "MACRO",
-      "name": "하이퍼스케일러CAPEX"
-    },
-    {
-      "id": "M_055",
-      "type": "MACRO",
-      "name": "AI확산"
-    },
-    {
-      "id": "M_289",
-      "type": "MACRO",
-      "name": "전력수급"
-    },
-    {
-      "id": "A_099",
-      "type": "ASSET",
-      "name": "버티브",
-      "exposure": {
-        "ticker": "VRT",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 2.6154723436609073,
-        "close": 269.93,
-        "marketCap": 103919810840,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 18.65054945054945,
-        "return_7d": -7.036093125774901,
-        "return_15d": -11.084392911258966,
-        "return_1m": -15.241624014820864,
-        "return_ytd": 53.709925402881375,
-        "return_1y": 90.64199449113639,
-        "return_2y": 269.6152266191976,
-        "return_3y": 940.1926782273604,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_5154",
-      "type": "CHARACTER",
-      "name": "DC전력냉각인프라"
-    },
-    {
-      "id": "A_100",
-      "type": "ASSET",
-      "name": "슈나이더일렉트릭",
-      "exposure": {
-        "ticker": "SU",
-        "exchange": "EURONEXT",
-        "country": "FR"
-      },
-      "metrics": {
-        "return_1d": 3.15408479834538,
-        "close": 299.25,
-        "marketCap": 168685517779,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 5.147575544624017,
-        "return_7d": 11.639619473978735,
-        "return_15d": 9.575247162211632,
-        "return_1m": 7.508532423208192,
-        "return_ytd": 26.239190044294446,
-        "return_1y": 35.83749432591918,
-        "return_2y": 41.65680473372782,
-        "return_3y": 88.96817378125787,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_5155",
-      "type": "CHARACTER",
-      "name": "DC전력관리"
-    },
-    {
-      "id": "A_955",
-      "type": "ASSET",
-      "name": "이튼",
-      "exposure": {
-        "ticker": "ETN",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 1.4923670218834673,
-        "close": 444.77,
-        "marketCap": 172704191000,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 14.960324640078571,
-        "return_7d": 10.072512188482197,
-        "return_15d": 7.039372352714679,
-        "return_1m": 7.583087417154455,
-        "return_ytd": 35.886468485533584,
-        "return_1y": 16.648745049699688,
-        "return_2y": 54.842640300793754,
-        "return_3y": 118.77520905066402,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_5156",
-      "type": "CHARACTER",
-      "name": "전력관리전동화"
-    },
-    {
-      "id": "A_1819",
-      "type": "ASSET",
-      "name": "nVent",
-      "exposure": {
-        "ticker": "NVT",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 1.7752964054952747,
-        "return_3d": 12.044198895027613,
-        "return_7d": 6.884511496145995,
-        "return_15d": 0.2843367536160324,
-        "return_1m": 3.4100325068519455,
-        "return_ytd": 51.881670099232366,
-        "return_1y": 80.50734312416556,
-        "return_2y": 133.27102803738322,
-        "return_3y": 204.90509302762638,
-        "close": 162.24,
-        "marketCap": 26237452800,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "전기 보호·엔클로저"
-    },
-    {
-      "id": "C_5162",
-      "type": "CHARACTER",
-      "name": "전기보호엔클로저"
-    },
-    {
-      "name": "GE버노바",
-      "id": "A_167",
-      "metrics": {
-        "return_1d": 1.1690969049227284,
-        "return_30d": null,
-        "market_cap": null,
-        "asof": null,
-        "return_90d": null,
-        "currency": null,
-        "per": null,
-        "last_price": null,
-        "return_7d": 0.37250554323724483,
-        "return_15d": -4.453991988818117,
-        "return_3d": 3.7220717326218455,
-        "return_1m": -11.589007326134503,
-        "return_ytd": 49.883010815981166,
-        "return_1y": 55.145468392993145,
-        "return_2y": 526.0172095881992,
-        "return_3y": null,
-        "close": 1018.53,
-        "marketCap": 271268761608,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP",
-        "pe_ttm": null
-      },
-      "exposure": {
-        "country": "US",
-        "ticker": "GEV",
-        "exchange": "NYSE"
-      },
-      "type": "ASSET"
-    },
-    {
-      "id": "C_5881",
-      "type": "CHARACTER",
-      "name": "DC전력장비_그리드"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_703",
+ "themeName": "미국데이터센터(DC)건축_전력냉각인프라",
+ "meta": {
+  "periodDefault": "7d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "M_288",
-      "to": "T_703",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_015183"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "M_055",
-      "to": "T_703",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_015184"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "M_289",
-      "to": "T_703",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_015185"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_099",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015186"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_099",
-      "to": "C_5154",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015187"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_100",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015188"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_100",
-      "to": "C_5155",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015189"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015190"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "C_5156",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015191"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_1819",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015192"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_1819",
-      "to": "C_5162",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015193"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015194"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "C_5881",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015195"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_099",
-      "to": "A_100",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018283"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버티브와 슈나이더일렉트릭은 모두 데이터센터용 전력·냉각(UPS·CDU·랙 인프라) 풀스택을 공급하는 최상위 직접 경쟁 관계다."
-    },
-    {
-      "from": "A_099",
-      "to": "A_955",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018284"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버티브와 이튼은 데이터센터 전력관리·UPS·배전 인프라 시장에서 직접 경쟁한다."
-    },
-    {
-      "from": "A_100",
-      "to": "A_955",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018285"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "슈나이더일렉트릭과 이튼은 전력관리·배전·스위치기어 등 전기설비 전반에서 글로벌 양대 경쟁사다."
-    },
-    {
-      "from": "A_099",
-      "to": "A_1819",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018286"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버티브와 nVent는 데이터센터 액체냉각·CDU(냉각수분배장치) 시장에서 직접 경쟁하며, 2026년 투자자료에서도 양사가 AI 액체냉각 대표 경쟁주로 비교된다."
-    },
-    {
-      "from": "A_100",
-      "to": "A_1819",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018287"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "슈나이더일렉트릭과 nVent는 데이터센터 엔클로저 및 액체냉각 솔루션에서 글로벌 상위 경쟁사(Rittal 포함 톱3)로 맞붙는다."
-    },
-    {
-      "from": "A_167",
-      "to": "A_100",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018288"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GE버노바 전력화(Electrification) 부문은 스위치기어·변압기·그리드 설비에서 슈나이더일렉트릭과 경쟁한다."
-    },
-    {
-      "from": "A_167",
-      "to": "A_955",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018289"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GE버노바 전력화 부문은 그리드 설비·변압기·스위치기어 시장에서 이튼과 경쟁한다."
-    }
-  ],
-  "links": [
-    {
-      "from": "M_288",
-      "to": "T_703",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_015183"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "M_055",
-      "to": "T_703",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_015184"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "M_289",
-      "to": "T_703",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_015185"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_099",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015186"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_099",
-      "to": "C_5154",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015187"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_100",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015188"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_100",
-      "to": "C_5155",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015189"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015190"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_955",
-      "to": "C_5156",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015191"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_1819",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015192"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_1819",
-      "to": "C_5162",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015193"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "T_703",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_015194"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "C_5881",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_015195"
-      ],
-      "confidence": 0.82,
-      "status": "verified"
-    },
-    {
-      "from": "A_099",
-      "to": "A_100",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018283"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버티브와 슈나이더일렉트릭은 모두 데이터센터용 전력·냉각(UPS·CDU·랙 인프라) 풀스택을 공급하는 최상위 직접 경쟁 관계다."
-    },
-    {
-      "from": "A_099",
-      "to": "A_955",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018284"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버티브와 이튼은 데이터센터 전력관리·UPS·배전 인프라 시장에서 직접 경쟁한다."
-    },
-    {
-      "from": "A_100",
-      "to": "A_955",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018285"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "슈나이더일렉트릭과 이튼은 전력관리·배전·스위치기어 등 전기설비 전반에서 글로벌 양대 경쟁사다."
-    },
-    {
-      "from": "A_099",
-      "to": "A_1819",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018286"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버티브와 nVent는 데이터센터 액체냉각·CDU(냉각수분배장치) 시장에서 직접 경쟁하며, 2026년 투자자료에서도 양사가 AI 액체냉각 대표 경쟁주로 비교된다."
-    },
-    {
-      "from": "A_100",
-      "to": "A_1819",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018287"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "슈나이더일렉트릭과 nVent는 데이터센터 엔클로저 및 액체냉각 솔루션에서 글로벌 상위 경쟁사(Rittal 포함 톱3)로 맞붙는다."
-    },
-    {
-      "from": "A_167",
-      "to": "A_100",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018288"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GE버노바 전력화(Electrification) 부문은 스위치기어·변압기·그리드 설비에서 슈나이더일렉트릭과 경쟁한다."
-    },
-    {
-      "from": "A_167",
-      "to": "A_955",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018289"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GE버노바 전력화 부문은 그리드 설비·변압기·스위치기어 시장에서 이튼과 경쟁한다."
-    }
+  "dataAsOf": "2026-07-31T00:00:00+09:00",
+  "description": "미국 데이터센터 건축의 핵심 설비 - 전력관리·액체냉각·인클로저·전력장비. 버티브·슈나이더·이튼·nVent·GE버노바. AI 전력밀도 급증으로 DC당 전력·냉각 투자가 구조적 확대. (DC건축 밸류체인 3분할 중 전력·냉각 편)",
+  "notes": "미국 데이터센터 건축의 핵심 설비 - 전력관리·액체냉각·인클로저·전력장비. 버티브·슈나이더·이튼·nVent·GE버노바. AI 전력밀도 급증으로 DC당 전력·냉각 투자가 구조적 확대. (DC건축 밸류체인 3분할 중 전력·냉각 편)",
+  "sources": [],
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-31",
+    "kind": "신규",
+    "title": "테마 분할 생성",
+    "detail": "미국데이터센터건축(T_005)을 밸류체인 단계별 3개 서브테마로 분할."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_703",
+   "type": "THEME",
+   "name": "미국데이터센터(DC)건축_전력냉각인프라"
+  },
+  {
+   "id": "M_288",
+   "type": "MACRO",
+   "name": "하이퍼스케일러CAPEX"
+  },
+  {
+   "id": "M_055",
+   "type": "MACRO",
+   "name": "AI확산"
+  },
+  {
+   "id": "M_289",
+   "type": "MACRO",
+   "name": "전력수급"
+  },
+  {
+   "id": "A_099",
+   "type": "ASSET",
+   "name": "버티브",
+   "exposure": {
+    "ticker": "VRT",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 2.6154723436609073,
+    "close": 269.93,
+    "marketCap": 103919810840,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 18.65054945054945,
+    "return_7d": -7.036093125774901,
+    "return_15d": -11.084392911258966,
+    "return_1m": -15.241624014820864,
+    "return_ytd": 53.709925402881375,
+    "return_1y": 90.64199449113639,
+    "return_2y": 269.6152266191976,
+    "return_3y": 940.1926782273604,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_5154",
+   "type": "CHARACTER",
+   "name": "DC전력냉각인프라"
+  },
+  {
+   "id": "A_100",
+   "type": "ASSET",
+   "name": "슈나이더일렉트릭",
+   "exposure": {
+    "ticker": "SU",
+    "exchange": "EURONEXT",
+    "country": "FR"
+   },
+   "metrics": {
+    "return_1d": 3.15408479834538,
+    "close": 299.25,
+    "marketCap": 168685517779,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 5.147575544624017,
+    "return_7d": 11.639619473978735,
+    "return_15d": 9.575247162211632,
+    "return_1m": 7.508532423208192,
+    "return_ytd": 26.239190044294446,
+    "return_1y": 35.83749432591918,
+    "return_2y": 41.65680473372782,
+    "return_3y": 88.96817378125787,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_5155",
+   "type": "CHARACTER",
+   "name": "DC전력관리"
+  },
+  {
+   "id": "A_955",
+   "type": "ASSET",
+   "name": "이튼",
+   "exposure": {
+    "ticker": "ETN",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 1.4923670218834673,
+    "close": 444.77,
+    "marketCap": 172704191000,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 14.960324640078571,
+    "return_7d": 10.072512188482197,
+    "return_15d": 7.039372352714679,
+    "return_1m": 7.583087417154455,
+    "return_ytd": 35.886468485533584,
+    "return_1y": 16.648745049699688,
+    "return_2y": 54.842640300793754,
+    "return_3y": 118.77520905066402,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_5156",
+   "type": "CHARACTER",
+   "name": "전력관리전동화"
+  },
+  {
+   "id": "A_1819",
+   "type": "ASSET",
+   "name": "nVent",
+   "exposure": {
+    "ticker": "NVT",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 1.7752964054952747,
+    "return_3d": 12.044198895027613,
+    "return_7d": 6.884511496145995,
+    "return_15d": 0.2843367536160324,
+    "return_1m": 3.4100325068519455,
+    "return_ytd": 51.881670099232366,
+    "return_1y": 80.50734312416556,
+    "return_2y": 133.27102803738322,
+    "return_3y": 204.90509302762638,
+    "close": 162.24,
+    "marketCap": 26237452800,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   },
+   "coreBiz": "전기 보호·엔클로저"
+  },
+  {
+   "id": "C_5162",
+   "type": "CHARACTER",
+   "name": "전기보호엔클로저"
+  },
+  {
+   "name": "GE버노바",
+   "id": "A_167",
+   "metrics": {
+    "return_1d": 1.1690969049227284,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": 0.37250554323724483,
+    "return_15d": -4.453991988818117,
+    "return_3d": 3.7220717326218455,
+    "return_1m": -11.589007326134503,
+    "return_ytd": 49.883010815981166,
+    "return_1y": 55.145468392993145,
+    "return_2y": 526.0172095881992,
+    "return_3y": null,
+    "close": 1018.53,
+    "marketCap": 271268761608,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP",
+    "pe_ttm": null
+   },
+   "exposure": {
+    "country": "US",
+    "ticker": "GEV",
+    "exchange": "NYSE"
+   },
+   "type": "ASSET"
+  },
+  {
+   "id": "C_5881",
+   "type": "CHARACTER",
+   "name": "DC전력장비_그리드"
+  },
+  {
+   "id": "A_2864",
+   "type": "ASSET",
+   "name": "KODEX 미국AI전력핵심인프라",
+   "exposure": {
+    "ticker": "487230",
+    "exchange": "KRX",
+    "country": "KR"
+   }
+  },
+  {
+   "id": "A_1473",
+   "type": "ASSET",
+   "name": "GRID",
+   "exposure": {
+    "ticker": "GRID",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "theme_role": "1궤도",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 2.6041094385232277,
+    "close": 186.76,
+    "marketCap": 3953819949,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 5.729166666666674,
+    "return_7d": 5.276211950394583,
+    "return_15d": 1.6602253551793567,
+    "return_1m": -0.352150250773664,
+    "return_ytd": 19.856244384546272,
+    "return_1y": 32.313142047467224,
+    "return_2y": 61.04164870225057,
+    "return_3y": 77.41046831955923,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "M_288",
+   "to": "T_703",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_015183"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "M_055",
+   "to": "T_703",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_015184"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "M_289",
+   "to": "T_703",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_015185"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_099",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015186"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_099",
+   "to": "C_5154",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015187"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_100",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015188"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_100",
+   "to": "C_5155",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015189"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_955",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015190"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_955",
+   "to": "C_5156",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015191"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_1819",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015192"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_1819",
+   "to": "C_5162",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015193"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015194"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "C_5881",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015195"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_099",
+   "to": "A_100",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018283"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버티브와 슈나이더일렉트릭은 모두 데이터센터용 전력·냉각(UPS·CDU·랙 인프라) 풀스택을 공급하는 최상위 직접 경쟁 관계다."
+  },
+  {
+   "from": "A_099",
+   "to": "A_955",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018284"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버티브와 이튼은 데이터센터 전력관리·UPS·배전 인프라 시장에서 직접 경쟁한다."
+  },
+  {
+   "from": "A_100",
+   "to": "A_955",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018285"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "슈나이더일렉트릭과 이튼은 전력관리·배전·스위치기어 등 전기설비 전반에서 글로벌 양대 경쟁사다."
+  },
+  {
+   "from": "A_099",
+   "to": "A_1819",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018286"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버티브와 nVent는 데이터센터 액체냉각·CDU(냉각수분배장치) 시장에서 직접 경쟁하며, 2026년 투자자료에서도 양사가 AI 액체냉각 대표 경쟁주로 비교된다."
+  },
+  {
+   "from": "A_100",
+   "to": "A_1819",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018287"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "슈나이더일렉트릭과 nVent는 데이터센터 엔클로저 및 액체냉각 솔루션에서 글로벌 상위 경쟁사(Rittal 포함 톱3)로 맞붙는다."
+  },
+  {
+   "from": "A_167",
+   "to": "A_100",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018288"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GE버노바 전력화(Electrification) 부문은 스위치기어·변압기·그리드 설비에서 슈나이더일렉트릭과 경쟁한다."
+  },
+  {
+   "from": "A_167",
+   "to": "A_955",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018289"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GE버노바 전력화 부문은 그리드 설비·변압기·스위치기어 시장에서 이튼과 경쟁한다."
+  },
+  {
+   "from": "A_2864",
+   "to": "T_703",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020990"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_1473",
+   "to": "T_703",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020991"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "M_288",
+   "to": "T_703",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_015183"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "M_055",
+   "to": "T_703",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_015184"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "M_289",
+   "to": "T_703",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_015185"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_099",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015186"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_099",
+   "to": "C_5154",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015187"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_100",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015188"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_100",
+   "to": "C_5155",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015189"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_955",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015190"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_955",
+   "to": "C_5156",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015191"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_1819",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015192"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_1819",
+   "to": "C_5162",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015193"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "T_703",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_015194"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "C_5881",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_015195"
+   ],
+   "confidence": 0.82,
+   "status": "verified"
+  },
+  {
+   "from": "A_099",
+   "to": "A_100",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018283"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버티브와 슈나이더일렉트릭은 모두 데이터센터용 전력·냉각(UPS·CDU·랙 인프라) 풀스택을 공급하는 최상위 직접 경쟁 관계다."
+  },
+  {
+   "from": "A_099",
+   "to": "A_955",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018284"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버티브와 이튼은 데이터센터 전력관리·UPS·배전 인프라 시장에서 직접 경쟁한다."
+  },
+  {
+   "from": "A_100",
+   "to": "A_955",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018285"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "슈나이더일렉트릭과 이튼은 전력관리·배전·스위치기어 등 전기설비 전반에서 글로벌 양대 경쟁사다."
+  },
+  {
+   "from": "A_099",
+   "to": "A_1819",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018286"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버티브와 nVent는 데이터센터 액체냉각·CDU(냉각수분배장치) 시장에서 직접 경쟁하며, 2026년 투자자료에서도 양사가 AI 액체냉각 대표 경쟁주로 비교된다."
+  },
+  {
+   "from": "A_100",
+   "to": "A_1819",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018287"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "슈나이더일렉트릭과 nVent는 데이터센터 엔클로저 및 액체냉각 솔루션에서 글로벌 상위 경쟁사(Rittal 포함 톱3)로 맞붙는다."
+  },
+  {
+   "from": "A_167",
+   "to": "A_100",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018288"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GE버노바 전력화(Electrification) 부문은 스위치기어·변압기·그리드 설비에서 슈나이더일렉트릭과 경쟁한다."
+  },
+  {
+   "from": "A_167",
+   "to": "A_955",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018289"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GE버노바 전력화 부문은 그리드 설비·변압기·스위치기어 시장에서 이튼과 경쟁한다."
+  },
+  {
+   "from": "A_2864",
+   "to": "T_703",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020990"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_1473",
+   "to": "T_703",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020991"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }

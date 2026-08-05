@@ -1,927 +1,963 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_651",
-  "themeName": "글로벌자동차OEM_미국·유럽·한중",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-26T00:00:00+09:00",
-    "notes": "g004 누적 import 기반 글로벌자동차OEM 테마",
-    "sources": [],
-    "provenanceSeed": "T_004 공개사실 시드(2026-06-29) — evidence_ssot 참조",
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-26",
-        "kind": "수정",
-        "title": "구체적 엣지 백필 + 이벤트",
-        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
-      },
-      {
-        "date": "2026-07-19",
-        "kind": "분리",
-        "title": "글로벌자동차OEM_미국·유럽·한중 분리 생성",
-        "detail": "T_004 분할. 매크로 공동 사용."
-      },
-      {
-        "date": "2026-07-10",
-        "kind": "변경",
-        "title": "매크로는 테마에만 연결",
-        "detail": "개별 자산·BF에 직접 걸려 있던 매크로 IMPACTS 엣지를 테마 레벨로 정리(repoint 1, 중복제거 1)했다."
-      }
-    ],
-    "description": "테슬라·리비안(미 EV), GM·포드·스텔란티스(전통 OEM), 현대차·기아차(한국), BYD(중국) — 미·유·한중 완성차. EV 전환 속도·가격경쟁·관세·자율주행이 핵심 동인."
+ "schemaVersion": "v5",
+ "themeId": "T_651",
+ "themeName": "글로벌자동차OEM_미국·유럽·한중",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
+  ],
+  "dataAsOf": "2026-07-26T00:00:00+09:00",
+  "notes": "g004 누적 import 기반 글로벌자동차OEM 테마",
+  "sources": [],
+  "provenanceSeed": "T_004 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-26",
+    "kind": "수정",
+    "title": "구체적 엣지 백필 + 이벤트",
+    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
+   },
+   {
+    "date": "2026-07-19",
+    "kind": "분리",
+    "title": "글로벌자동차OEM_미국·유럽·한중 분리 생성",
+    "detail": "T_004 분할. 매크로 공동 사용."
+   },
+   {
+    "date": "2026-07-10",
+    "kind": "변경",
+    "title": "매크로는 테마에만 연결",
+    "detail": "개별 자산·BF에 직접 걸려 있던 매크로 IMPACTS 엣지를 테마 레벨로 정리(repoint 1, 중복제거 1)했다."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
+  ],
+  "description": "테슬라·리비안(미 EV), GM·포드·스텔란티스(전통 OEM), 현대차·기아차(한국), BYD(중국) — 미·유·한중 완성차. EV 전환 속도·가격경쟁·관세·자율주행이 핵심 동인."
+ },
+ "nodes": [
+  {
+   "id": "T_651",
+   "type": "THEME",
+   "name": "글로벌자동차OEM_미국·유럽·한중"
   },
-  "nodes": [
-    {
-      "id": "T_651",
-      "type": "THEME",
-      "name": "글로벌자동차OEM_미국·유럽·한중"
-    },
-    {
-      "id": "A_001",
-      "type": "ASSET",
-      "name": "리비안",
-      "exposure": {
-        "ticker": "RIVN",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 2.604166666666674,
-        "close": 15.76,
-        "marketCap": 19130715846,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": -6.357694592988706,
-        "return_7d": -0.5050505050505083,
-        "return_15d": -9.942857142857143,
-        "return_1m": -21.74776564051639,
-        "return_ytd": -18.804739824832563,
-        "return_1y": 27.30210016155088,
-        "return_2y": -2.83600493218249,
-        "return_3y": -41.499628804751296,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_002",
-      "type": "ASSET",
-      "name": "테슬라",
-      "exposure": {
-        "ticker": "TSLA",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 1.636239443616505,
-        "close": 327.35,
-        "marketCap": 1292884339426,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 5.989962765096335,
-        "return_7d": 4.574641408171765,
-        "return_15d": -17.373416123984043,
-        "return_1m": -22.016818734068643,
-        "return_ytd": -25.274499509210845,
-        "return_1y": 8.168390443776241,
-        "return_2y": 47.044290719611894,
-        "return_3y": 22.860681579342447,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_008",
-      "type": "ASSET",
-      "name": "GM",
-      "exposure": {
-        "ticker": "GM",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.7185218978102093,
-        "close": 88.31,
-        "marketCap": 79872115586,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": -0.10180995475113086,
-        "return_7d": 6.8610842207163625,
-        "return_15d": 14.88226876544816,
-        "return_1m": 13.43609505459218,
-        "return_ytd": 9.051617683378609,
-        "return_1y": 68.11345897582335,
-        "return_2y": 99.66086366719422,
-        "return_3y": 132.0893561103811,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_001",
-      "type": "CHARACTER",
-      "name": "주주친화"
-    },
-    {
-      "id": "A_009",
-      "type": "ASSET",
-      "name": "포드",
-      "exposure": {
-        "ticker": "F",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -1.3167013167013186,
-        "close": 14.24,
-        "marketCap": 56783364534,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": -4.172274562584111,
-        "return_7d": -0.9046624913013113,
-        "return_15d": 2.152080344332852,
-        "return_1m": 2.9645697758496015,
-        "return_ytd": 6.746626686656665,
-        "return_1y": 31.608133086876155,
-        "return_2y": 31.36531365313653,
-        "return_3y": 7.390648567119151,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_010",
-      "type": "ASSET",
-      "name": "스텔란티스",
-      "exposure": {
-        "ticker": "STLA",
-        "exchange": "NYSE",
-        "country": "NL"
-      },
-      "metrics": {
-        "return_1d": 3.7168141592920367,
-        "close": 5.86,
-        "marketCap": 16963146848,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 0.0,
-        "return_7d": 2.987697715289972,
-        "return_15d": 2.987697715289972,
-        "return_1m": 1.0344827586207028,
-        "return_ytd": -48.68651488616462,
-        "return_1y": -33.33333333333333,
-        "return_2y": -65.01492537313432,
-        "return_3y": -71.48418491484185,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_004",
-      "type": "ASSET",
-      "name": "현대차",
-      "exposure": {
-        "ticker": "005380",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 3.0573248407643305,
-        "close": 404500,
-        "marketCap": 138006734284000,
-        "pe_ttm": 14.16,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "return_3d": 4.252577319587636,
-        "return_7d": 0.3722084367245637,
-        "return_15d": -4.7114252061248525,
-        "return_1m": -19.422310756972117,
-        "return_ytd": 36.6072506111474,
-        "return_1y": 87.58601627506573,
-        "return_2y": 54.851167221968566,
-        "return_3y": 230.47426841574165,
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_005",
-      "type": "ASSET",
-      "name": "기아차",
-      "exposure": {
-        "ticker": "000270",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 2.6234567901234573,
-        "close": 133000,
-        "marketCap": 80229871089000,
-        "pe_ttm": 8.26,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "return_3d": 0.833965125094771,
-        "return_7d": 1.9938650306748462,
-        "return_15d": -4.727793696275073,
-        "return_1m": -17.23708774113254,
-        "return_ytd": 15.123221850535696,
-        "return_1y": 30.856367131040784,
-        "return_2y": 19.658592694427625,
-        "return_3y": 91.40534262485482,
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_003",
-      "type": "ASSET",
-      "name": "BYD",
-      "exposure": {
-        "ticker": "1211",
-        "exchange": "HKEX",
-        "country": "CN"
-      },
-      "metrics": {
-        "return_1d": -1.5279241306638602,
-        "close": 93.45,
-        "marketCap": 848981045337,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": -1.424050632911389,
-        "return_7d": 5.414551607444995,
-        "return_15d": 8.473592571096923,
-        "return_1m": 11.515513126491662,
-        "return_ytd": -5.367088607594939,
-        "return_1y": -27.893518518518512,
-        "return_2y": 16.914800450394086,
-        "return_3y": 6.836629701611985,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "M_001",
-      "type": "MACRO",
-      "name": "환율상승"
-    },
-    {
-      "id": "M_020",
-      "type": "MACRO",
-      "name": "EV보급확대"
-    },
-    {
-      "id": "M_287",
-      "type": "MACRO",
-      "name": "유가안정화"
-    },
-    {
-      "id": "M_114",
-      "type": "MACRO",
-      "name": "로보틱스확대"
-    },
-    {
-      "id": "M_117",
-      "type": "MACRO",
-      "name": "로보택시확산"
-    },
-    {
-      "id": "C_3832",
-      "type": "CHARACTER",
-      "name": "미국EV_픽업·밴"
-    },
-    {
-      "id": "C_3833",
-      "type": "CHARACTER",
-      "name": "글로벌EV1위_자율주행"
-    },
-    {
-      "id": "C_3834",
-      "type": "CHARACTER",
-      "name": "미국전통OEM_EV전환"
-    },
-    {
-      "id": "C_3835",
-      "type": "CHARACTER",
-      "name": "미국전통OEM_픽업·EV"
-    },
-    {
-      "id": "C_3836",
-      "type": "CHARACTER",
-      "name": "유럽·미국다브랜드OEM"
-    },
-    {
-      "id": "C_3837",
-      "type": "CHARACTER",
-      "name": "한국완성차_E-GMP EV"
-    },
-    {
-      "id": "C_3838",
-      "type": "CHARACTER",
-      "name": "한국완성차_EV·PBV"
-    },
-    {
-      "id": "C_3839",
-      "type": "CHARACTER",
-      "name": "중국EV1위_배터리내재화"
-    }
-  ],
-  "edges": [
-    {
-      "from": "A_001",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013831"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_002",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013832"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_008",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013833"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_008",
-      "to": "C_001",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_000055"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_009",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013834"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_010",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013835"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_004",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013836"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_005",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013837"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_003",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013838"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_001",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013839"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_020",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013840"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_287",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013841"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_114",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013842"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_117",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013843"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_001",
-      "to": "C_3832",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008124"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_002",
-      "to": "C_3833",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008125"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_008",
-      "to": "C_3834",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008126"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_009",
-      "to": "C_3835",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008127"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_010",
-      "to": "C_3836",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008128"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_004",
-      "to": "C_3837",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008129"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_005",
-      "to": "C_3838",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008130"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_003",
-      "to": "C_3839",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008131"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_002",
-      "to": "A_003",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020339"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "테슬라와 BYD는 글로벌 전기차 시장 직접 경쟁"
-    },
-    {
-      "from": "A_004",
-      "to": "A_005",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020340"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "현대차와 기아차는 그룹 내 차종 판매 경쟁"
-    },
-    {
-      "from": "A_008",
-      "to": "A_009",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020341"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GM과 포드는 미국 자동차 시장 양대 경쟁"
-    },
-    {
-      "from": "A_001",
-      "to": "A_002",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020342"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "리비안과 테슬라는 미국 전기 픽업·SUV 시장 경쟁"
-    },
-    {
-      "from": "A_003",
-      "to": "A_004",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020343"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "BYD와 현대차는 글로벌 EV·내연차 시장 경쟁"
-    },
-    {
-      "from": "A_010",
-      "to": "A_008",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020344"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "스텔란티스와 GM은 미국·유럽 자동차 시장 경쟁"
-    }
-  ],
-  "links": [
-    {
-      "from": "A_001",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013831"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_002",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013832"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_008",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013833"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_008",
-      "to": "C_001",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_000055"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_009",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013834"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_010",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013835"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_004",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013836"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_005",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013837"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_003",
-      "to": "T_651",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013838"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_001",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013839"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_020",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013840"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_287",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013841"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_114",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013842"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_117",
-      "to": "T_651",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013843"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_001",
-      "to": "C_3832",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008124"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_002",
-      "to": "C_3833",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008125"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_008",
-      "to": "C_3834",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008126"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_009",
-      "to": "C_3835",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008127"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_010",
-      "to": "C_3836",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008128"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_004",
-      "to": "C_3837",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008129"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_005",
-      "to": "C_3838",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008130"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_003",
-      "to": "C_3839",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008131"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_002",
-      "to": "A_003",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020339"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "테슬라와 BYD는 글로벌 전기차 시장 직접 경쟁"
-    },
-    {
-      "from": "A_004",
-      "to": "A_005",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020340"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "현대차와 기아차는 그룹 내 차종 판매 경쟁"
-    },
-    {
-      "from": "A_008",
-      "to": "A_009",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020341"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GM과 포드는 미국 자동차 시장 양대 경쟁"
-    },
-    {
-      "from": "A_001",
-      "to": "A_002",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020342"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "리비안과 테슬라는 미국 전기 픽업·SUV 시장 경쟁"
-    },
-    {
-      "from": "A_003",
-      "to": "A_004",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020343"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "BYD와 현대차는 글로벌 EV·내연차 시장 경쟁"
-    },
-    {
-      "from": "A_010",
-      "to": "A_008",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_020344"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "스텔란티스와 GM은 미국·유럽 자동차 시장 경쟁"
-    }
-  ]
+  {
+   "id": "A_001",
+   "type": "ASSET",
+   "name": "리비안",
+   "exposure": {
+    "ticker": "RIVN",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 2.604166666666674,
+    "close": 15.76,
+    "marketCap": 19130715846,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": -6.357694592988706,
+    "return_7d": -0.5050505050505083,
+    "return_15d": -9.942857142857143,
+    "return_1m": -21.74776564051639,
+    "return_ytd": -18.804739824832563,
+    "return_1y": 27.30210016155088,
+    "return_2y": -2.83600493218249,
+    "return_3y": -41.499628804751296,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_002",
+   "type": "ASSET",
+   "name": "테슬라",
+   "exposure": {
+    "ticker": "TSLA",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 1.636239443616505,
+    "close": 327.35,
+    "marketCap": 1292884339426,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 5.989962765096335,
+    "return_7d": 4.574641408171765,
+    "return_15d": -17.373416123984043,
+    "return_1m": -22.016818734068643,
+    "return_ytd": -25.274499509210845,
+    "return_1y": 8.168390443776241,
+    "return_2y": 47.044290719611894,
+    "return_3y": 22.860681579342447,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_008",
+   "type": "ASSET",
+   "name": "GM",
+   "exposure": {
+    "ticker": "GM",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.7185218978102093,
+    "close": 88.31,
+    "marketCap": 79872115586,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": -0.10180995475113086,
+    "return_7d": 6.8610842207163625,
+    "return_15d": 14.88226876544816,
+    "return_1m": 13.43609505459218,
+    "return_ytd": 9.051617683378609,
+    "return_1y": 68.11345897582335,
+    "return_2y": 99.66086366719422,
+    "return_3y": 132.0893561103811,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_001",
+   "type": "CHARACTER",
+   "name": "주주친화"
+  },
+  {
+   "id": "A_009",
+   "type": "ASSET",
+   "name": "포드",
+   "exposure": {
+    "ticker": "F",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": -1.3167013167013186,
+    "close": 14.24,
+    "marketCap": 56783364534,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": -4.172274562584111,
+    "return_7d": -0.9046624913013113,
+    "return_15d": 2.152080344332852,
+    "return_1m": 2.9645697758496015,
+    "return_ytd": 6.746626686656665,
+    "return_1y": 31.608133086876155,
+    "return_2y": 31.36531365313653,
+    "return_3y": 7.390648567119151,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_010",
+   "type": "ASSET",
+   "name": "스텔란티스",
+   "exposure": {
+    "ticker": "STLA",
+    "exchange": "NYSE",
+    "country": "NL"
+   },
+   "metrics": {
+    "return_1d": 3.7168141592920367,
+    "close": 5.86,
+    "marketCap": 16963146848,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 0.0,
+    "return_7d": 2.987697715289972,
+    "return_15d": 2.987697715289972,
+    "return_1m": 1.0344827586207028,
+    "return_ytd": -48.68651488616462,
+    "return_1y": -33.33333333333333,
+    "return_2y": -65.01492537313432,
+    "return_3y": -71.48418491484185,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_004",
+   "type": "ASSET",
+   "name": "현대차",
+   "exposure": {
+    "ticker": "005380",
+    "exchange": "KOSPI",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 3.0573248407643305,
+    "close": 404500,
+    "marketCap": 138006734284000,
+    "pe_ttm": 14.16,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "return_3d": 4.252577319587636,
+    "return_7d": 0.3722084367245637,
+    "return_15d": -4.7114252061248525,
+    "return_1m": -19.422310756972117,
+    "return_ytd": 36.6072506111474,
+    "return_1y": 87.58601627506573,
+    "return_2y": 54.851167221968566,
+    "return_3y": 230.47426841574165,
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_005",
+   "type": "ASSET",
+   "name": "기아차",
+   "exposure": {
+    "ticker": "000270",
+    "exchange": "KOSPI",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 2.6234567901234573,
+    "close": 133000,
+    "marketCap": 80229871089000,
+    "pe_ttm": 8.26,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "return_3d": 0.833965125094771,
+    "return_7d": 1.9938650306748462,
+    "return_15d": -4.727793696275073,
+    "return_1m": -17.23708774113254,
+    "return_ytd": 15.123221850535696,
+    "return_1y": 30.856367131040784,
+    "return_2y": 19.658592694427625,
+    "return_3y": 91.40534262485482,
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_003",
+   "type": "ASSET",
+   "name": "BYD",
+   "exposure": {
+    "ticker": "1211",
+    "exchange": "HKEX",
+    "country": "CN"
+   },
+   "metrics": {
+    "return_1d": -1.5279241306638602,
+    "close": 93.45,
+    "marketCap": 848981045337,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": -1.424050632911389,
+    "return_7d": 5.414551607444995,
+    "return_15d": 8.473592571096923,
+    "return_1m": 11.515513126491662,
+    "return_ytd": -5.367088607594939,
+    "return_1y": -27.893518518518512,
+    "return_2y": 16.914800450394086,
+    "return_3y": 6.836629701611985,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "M_001",
+   "type": "MACRO",
+   "name": "환율상승"
+  },
+  {
+   "id": "M_020",
+   "type": "MACRO",
+   "name": "EV보급확대"
+  },
+  {
+   "id": "M_287",
+   "type": "MACRO",
+   "name": "유가안정화"
+  },
+  {
+   "id": "M_114",
+   "type": "MACRO",
+   "name": "로보틱스확대"
+  },
+  {
+   "id": "M_117",
+   "type": "MACRO",
+   "name": "로보택시확산"
+  },
+  {
+   "id": "C_3832",
+   "type": "CHARACTER",
+   "name": "미국EV_픽업·밴"
+  },
+  {
+   "id": "C_3833",
+   "type": "CHARACTER",
+   "name": "글로벌EV1위_자율주행"
+  },
+  {
+   "id": "C_3834",
+   "type": "CHARACTER",
+   "name": "미국전통OEM_EV전환"
+  },
+  {
+   "id": "C_3835",
+   "type": "CHARACTER",
+   "name": "미국전통OEM_픽업·EV"
+  },
+  {
+   "id": "C_3836",
+   "type": "CHARACTER",
+   "name": "유럽·미국다브랜드OEM"
+  },
+  {
+   "id": "C_3837",
+   "type": "CHARACTER",
+   "name": "한국완성차_E-GMP EV"
+  },
+  {
+   "id": "C_3838",
+   "type": "CHARACTER",
+   "name": "한국완성차_EV·PBV"
+  },
+  {
+   "id": "C_3839",
+   "type": "CHARACTER",
+   "name": "중국EV1위_배터리내재화"
+  },
+  {
+   "id": "A_2922",
+   "type": "ASSET",
+   "name": "First Trust S-Network Future Vehicles & Technology ETF",
+   "exposure": {
+    "ticker": "CARZ",
+    "exchange": "NASDAQ",
+    "country": "US"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_001",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013831"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_002",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013832"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_008",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013833"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_008",
+   "to": "C_001",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_000055"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_009",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013834"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_010",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013835"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_004",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013836"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_005",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013837"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_003",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013838"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_001",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013839"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_020",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013840"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_287",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013841"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_114",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013842"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_117",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013843"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_001",
+   "to": "C_3832",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008124"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_002",
+   "to": "C_3833",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008125"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_008",
+   "to": "C_3834",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008126"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_009",
+   "to": "C_3835",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008127"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_010",
+   "to": "C_3836",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008128"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_004",
+   "to": "C_3837",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008129"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_005",
+   "to": "C_3838",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008130"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_003",
+   "to": "C_3839",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008131"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_002",
+   "to": "A_003",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020339"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "테슬라와 BYD는 글로벌 전기차 시장 직접 경쟁"
+  },
+  {
+   "from": "A_004",
+   "to": "A_005",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020340"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "현대차와 기아차는 그룹 내 차종 판매 경쟁"
+  },
+  {
+   "from": "A_008",
+   "to": "A_009",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020341"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GM과 포드는 미국 자동차 시장 양대 경쟁"
+  },
+  {
+   "from": "A_001",
+   "to": "A_002",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020342"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "리비안과 테슬라는 미국 전기 픽업·SUV 시장 경쟁"
+  },
+  {
+   "from": "A_003",
+   "to": "A_004",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020343"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "BYD와 현대차는 글로벌 EV·내연차 시장 경쟁"
+  },
+  {
+   "from": "A_010",
+   "to": "A_008",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020344"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "스텔란티스와 GM은 미국·유럽 자동차 시장 경쟁"
+  },
+  {
+   "from": "A_2922",
+   "to": "T_651",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020944"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_001",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013831"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_002",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013832"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_008",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013833"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_008",
+   "to": "C_001",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_000055"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_009",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013834"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_010",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013835"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_004",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013836"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_005",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013837"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_003",
+   "to": "T_651",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013838"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_001",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013839"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_020",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013840"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_287",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013841"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_114",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013842"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_117",
+   "to": "T_651",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013843"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_001",
+   "to": "C_3832",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008124"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_002",
+   "to": "C_3833",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008125"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_008",
+   "to": "C_3834",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008126"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_009",
+   "to": "C_3835",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008127"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_010",
+   "to": "C_3836",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008128"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_004",
+   "to": "C_3837",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008129"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_005",
+   "to": "C_3838",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008130"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_003",
+   "to": "C_3839",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008131"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_002",
+   "to": "A_003",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020339"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "테슬라와 BYD는 글로벌 전기차 시장 직접 경쟁"
+  },
+  {
+   "from": "A_004",
+   "to": "A_005",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020340"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "현대차와 기아차는 그룹 내 차종 판매 경쟁"
+  },
+  {
+   "from": "A_008",
+   "to": "A_009",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020341"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GM과 포드는 미국 자동차 시장 양대 경쟁"
+  },
+  {
+   "from": "A_001",
+   "to": "A_002",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020342"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "리비안과 테슬라는 미국 전기 픽업·SUV 시장 경쟁"
+  },
+  {
+   "from": "A_003",
+   "to": "A_004",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020343"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "BYD와 현대차는 글로벌 EV·내연차 시장 경쟁"
+  },
+  {
+   "from": "A_010",
+   "to": "A_008",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_020344"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "스텔란티스와 GM은 미국·유럽 자동차 시장 경쟁"
+  },
+  {
+   "from": "A_2922",
+   "to": "T_651",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020944"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }

@@ -1,631 +1,667 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_426",
-  "themeName": "미국소형보험_Specialty",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-25T00:00:00+09:00",
-    "description": "미국 소형 보험 (Specialty) — Kinsale (E&S 1위)·Erie·Cincinnati·Old Republic·RLI·Markel (미니 버크셔). P&C 하드마켓 사이클 + 자연재해 손실 + 금리 인하 (투자수익) 통합.",
-    "notes": "T_426 신규 — Russell 2000",
-    "sources": [],
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 4건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-25",
-        "kind": "수정",
-        "title": "구체적 엣지 백필 + 2026 이벤트",
-        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_426",
-      "type": "THEME",
-      "name": "미국소형보험_Specialty"
-    },
-    {
-      "id": "A_2242",
-      "type": "ASSET",
-      "name": "킨세일캐피탈",
-      "exposure": {
-        "ticker": "KNSL",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.660304072799911,
-        "return_3d": 1.9529603506898585,
-        "return_7d": 3.93010598682324,
-        "return_15d": 7.617013703505959,
-        "return_1m": 4.489819428044806,
-        "return_ytd": -7.5523620241553235,
-        "return_1y": -18.37386667866544,
-        "return_2y": -21.450530417839353,
-        "return_3y": -3.648820905035055,
-        "close": 362.82,
-        "marketCap": 8264468159,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_632",
-      "type": "CHARACTER",
-      "name": "EnS보험1위_급성장"
-    },
-    {
-      "id": "A_2243",
-      "type": "ASSET",
-      "name": "이리인뎀니티",
-      "exposure": {
-        "ticker": "ERIE",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 3.2381997804610263,
-        "return_3d": 4.6475799204005686,
-        "return_7d": 9.384925072690663,
-        "return_15d": 2.541200150962397,
-        "return_1m": -4.900245012250615,
-        "return_ytd": -11.979410388394951,
-        "return_1y": -30.28367783321454,
-        "return_2y": -44.755213157716376,
-        "return_3y": 11.683032655857506,
-        "close": 244.53,
-        "marketCap": 11294620623,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_633",
-      "type": "CHARACTER",
-      "name": "펜실베이니아가족P_C거장"
-    },
-    {
-      "id": "A_2244",
-      "type": "ASSET",
-      "name": "신시내티파이낸셜",
-      "exposure": {
-        "ticker": "CINF",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.7807672864123871,
-        "return_3d": 2.684141246494587,
-        "return_7d": -1.8543843334609789,
-        "return_15d": -0.33883241681942344,
-        "return_1m": -5.364206972941621,
-        "return_ytd": 11.102854665923578,
-        "return_1y": 22.73069293385319,
-        "return_2y": 37.82455062221537,
-        "return_3y": 63.62973096215227,
-        "close": 179.42,
-        "marketCap": 27537030834,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_634",
-      "type": "CHARACTER",
-      "name": "미드웨스트P_C거장_배당"
-    },
-    {
-      "id": "A_2245",
-      "type": "ASSET",
-      "name": "올드리퍼블릭",
-      "exposure": {
-        "ticker": "ORI",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.20770828525271678,
-        "return_3d": 0.09220839096357736,
-        "return_7d": 2.6720264838023144,
-        "return_15d": 4.904566320367243,
-        "return_1m": 4.450324753427948,
-        "return_ytd": 0.3466605038132675,
-        "return_1y": 20.91339459760515,
-        "return_2y": 25.92807424593968,
-        "return_3y": 57.31884057971015,
-        "close": 43.42,
-        "marketCap": 10575114680,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_635",
-      "type": "CHARACTER",
-      "name": "일반_Title보험거장"
-    },
-    {
-      "id": "A_2246",
-      "type": "ASSET",
-      "name": "RLI",
-      "exposure": {
-        "ticker": "RLI",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.8647413933757564,
-        "return_3d": 0.9635799444716708,
-        "return_7d": -0.1614987080103436,
-        "return_15d": 2.793481875623538,
-        "return_1m": 0.06474587245062224,
-        "return_ytd": -1.0563380281690127,
-        "return_1y": -6.176961602671116,
-        "return_2y": -17.759744578954372,
-        "return_3y": -9.261705562894463,
-        "close": 61.82,
-        "marketCap": 5673406860,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_636",
-      "type": "CHARACTER",
-      "name": "특수P_C_니치독점"
-    },
-    {
-      "id": "A_2247",
-      "type": "ASSET",
-      "name": "마클그룹",
-      "exposure": {
-        "ticker": "MKL",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.4555396495112163,
-        "return_3d": 0.07899647961997491,
-        "return_7d": -5.366721812803932,
-        "return_15d": -2.859686499727254,
-        "return_1m": -4.57015747832461,
-        "return_ytd": -11.392910118477628,
-        "return_1y": -2.1877121256872134,
-        "return_2y": 14.702647521708222,
-        "return_3y": 30.409401166164642,
-        "close": 1887.65,
-        "marketCap": 23387983500,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_637",
-      "type": "CHARACTER",
-      "name": "미니버크셔_specialty투자"
-    },
-    {
-      "id": "M_145",
-      "type": "MACRO",
-      "name": "금리인하"
-    },
-    {
-      "id": "M_404",
-      "type": "MACRO",
-      "name": "P_C보험_하드마켓사이클"
-    },
-    {
-      "id": "M_406",
-      "type": "MACRO",
-      "name": "자동차손해율감소"
-    },
-    {
-      "id": "M_072",
-      "type": "MACRO",
-      "name": "금리인상"
-    },
-    {
-      "id": "M_407",
-      "type": "MACRO",
-      "name": "자연재해보험손실"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_426",
+ "themeName": "미국소형보험_Specialty",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "A_2242",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011585"
-      ]
-    },
-    {
-      "from": "A_2242",
-      "to": "C_632",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016606"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011586"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "C_633",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016607"
-      ]
-    },
-    {
-      "from": "A_2244",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011587"
-      ]
-    },
-    {
-      "from": "A_2244",
-      "to": "C_634",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016608"
-      ]
-    },
-    {
-      "from": "A_2245",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011588"
-      ]
-    },
-    {
-      "from": "A_2245",
-      "to": "C_635",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016609"
-      ]
-    },
-    {
-      "from": "A_2246",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011589"
-      ]
-    },
-    {
-      "from": "A_2246",
-      "to": "C_636",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016610"
-      ]
-    },
-    {
-      "from": "A_2247",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011590"
-      ]
-    },
-    {
-      "from": "A_2247",
-      "to": "C_637",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016611"
-      ]
-    },
-    {
-      "from": "M_145",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011591"
-      ]
-    },
-    {
-      "from": "M_404",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011592"
-      ]
-    },
-    {
-      "from": "M_406",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011593"
-      ]
-    },
-    {
-      "from": "M_072",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011594"
-      ]
-    },
-    {
-      "from": "M_407",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011595"
-      ]
-    },
-    {
-      "from": "A_2242",
-      "to": "A_2246",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018563"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "킨세일캐피탈과 RLI는 미국 초과·잉여(E&S) 특종보험 시장에서 언더라이팅 수익성을 겨루는 대표적 직접 경쟁 특종보험사다."
-    },
-    {
-      "from": "A_2242",
-      "to": "A_2247",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018564"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "킨세일캐피탈은 마클그룹을 자사 E&S(초과·잉여) 라인의 주요 직접 경쟁사로 명시하며 같은 특종보험 시장에서 경쟁한다."
-    },
-    {
-      "from": "A_2246",
-      "to": "A_2247",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018565"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "RLI와 마클그룹은 모두 특종·E&S 보험에 특화된 언더라이터로 동일한 초과·잉여 보험 세그먼트에서 경쟁한다."
-    },
-    {
-      "from": "A_2244",
-      "to": "A_2243",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018566"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "신시내티파이낸셜과 이리인뎀니티는 독립대리점 채널을 통한 표준 상업·개인 손해보험 시장에서 중서부·중부대서양 지역을 두고 직접 경쟁한다."
-    }
-  ],
-  "links": [
-    {
-      "from": "A_2242",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011585"
-      ]
-    },
-    {
-      "from": "A_2242",
-      "to": "C_632",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016606"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011586"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "C_633",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016607"
-      ]
-    },
-    {
-      "from": "A_2244",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011587"
-      ]
-    },
-    {
-      "from": "A_2244",
-      "to": "C_634",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016608"
-      ]
-    },
-    {
-      "from": "A_2245",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011588"
-      ]
-    },
-    {
-      "from": "A_2245",
-      "to": "C_635",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016609"
-      ]
-    },
-    {
-      "from": "A_2246",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011589"
-      ]
-    },
-    {
-      "from": "A_2246",
-      "to": "C_636",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016610"
-      ]
-    },
-    {
-      "from": "A_2247",
-      "to": "T_426",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_011590"
-      ]
-    },
-    {
-      "from": "A_2247",
-      "to": "C_637",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_016611"
-      ]
-    },
-    {
-      "from": "M_145",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011591"
-      ]
-    },
-    {
-      "from": "M_404",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011592"
-      ]
-    },
-    {
-      "from": "M_406",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011593"
-      ]
-    },
-    {
-      "from": "M_072",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011594"
-      ]
-    },
-    {
-      "from": "M_407",
-      "to": "T_426",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_011595"
-      ]
-    },
-    {
-      "from": "A_2242",
-      "to": "A_2246",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018563"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "킨세일캐피탈과 RLI는 미국 초과·잉여(E&S) 특종보험 시장에서 언더라이팅 수익성을 겨루는 대표적 직접 경쟁 특종보험사다."
-    },
-    {
-      "from": "A_2242",
-      "to": "A_2247",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018564"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "킨세일캐피탈은 마클그룹을 자사 E&S(초과·잉여) 라인의 주요 직접 경쟁사로 명시하며 같은 특종보험 시장에서 경쟁한다."
-    },
-    {
-      "from": "A_2246",
-      "to": "A_2247",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018565"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "RLI와 마클그룹은 모두 특종·E&S 보험에 특화된 언더라이터로 동일한 초과·잉여 보험 세그먼트에서 경쟁한다."
-    },
-    {
-      "from": "A_2244",
-      "to": "A_2243",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018566"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "신시내티파이낸셜과 이리인뎀니티는 독립대리점 채널을 통한 표준 상업·개인 손해보험 시장에서 중서부·중부대서양 지역을 두고 직접 경쟁한다."
-    }
+  "dataAsOf": "2026-07-25T00:00:00+09:00",
+  "description": "미국 소형 보험 (Specialty) — Kinsale (E&S 1위)·Erie·Cincinnati·Old Republic·RLI·Markel (미니 버크셔). P&C 하드마켓 사이클 + 자연재해 손실 + 금리 인하 (투자수익) 통합.",
+  "notes": "T_426 신규 — Russell 2000",
+  "sources": [],
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 4건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-25",
+    "kind": "수정",
+    "title": "구체적 엣지 백필 + 2026 이벤트",
+    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_426",
+   "type": "THEME",
+   "name": "미국소형보험_Specialty"
+  },
+  {
+   "id": "A_2242",
+   "type": "ASSET",
+   "name": "킨세일캐피탈",
+   "exposure": {
+    "ticker": "KNSL",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.660304072799911,
+    "return_3d": 1.9529603506898585,
+    "return_7d": 3.93010598682324,
+    "return_15d": 7.617013703505959,
+    "return_1m": 4.489819428044806,
+    "return_ytd": -7.5523620241553235,
+    "return_1y": -18.37386667866544,
+    "return_2y": -21.450530417839353,
+    "return_3y": -3.648820905035055,
+    "close": 362.82,
+    "marketCap": 8264468159,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_632",
+   "type": "CHARACTER",
+   "name": "EnS보험1위_급성장"
+  },
+  {
+   "id": "A_2243",
+   "type": "ASSET",
+   "name": "이리인뎀니티",
+   "exposure": {
+    "ticker": "ERIE",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 3.2381997804610263,
+    "return_3d": 4.6475799204005686,
+    "return_7d": 9.384925072690663,
+    "return_15d": 2.541200150962397,
+    "return_1m": -4.900245012250615,
+    "return_ytd": -11.979410388394951,
+    "return_1y": -30.28367783321454,
+    "return_2y": -44.755213157716376,
+    "return_3y": 11.683032655857506,
+    "close": 244.53,
+    "marketCap": 11294620623,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_633",
+   "type": "CHARACTER",
+   "name": "펜실베이니아가족P_C거장"
+  },
+  {
+   "id": "A_2244",
+   "type": "ASSET",
+   "name": "신시내티파이낸셜",
+   "exposure": {
+    "ticker": "CINF",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.7807672864123871,
+    "return_3d": 2.684141246494587,
+    "return_7d": -1.8543843334609789,
+    "return_15d": -0.33883241681942344,
+    "return_1m": -5.364206972941621,
+    "return_ytd": 11.102854665923578,
+    "return_1y": 22.73069293385319,
+    "return_2y": 37.82455062221537,
+    "return_3y": 63.62973096215227,
+    "close": 179.42,
+    "marketCap": 27537030834,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_634",
+   "type": "CHARACTER",
+   "name": "미드웨스트P_C거장_배당"
+  },
+  {
+   "id": "A_2245",
+   "type": "ASSET",
+   "name": "올드리퍼블릭",
+   "exposure": {
+    "ticker": "ORI",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.20770828525271678,
+    "return_3d": 0.09220839096357736,
+    "return_7d": 2.6720264838023144,
+    "return_15d": 4.904566320367243,
+    "return_1m": 4.450324753427948,
+    "return_ytd": 0.3466605038132675,
+    "return_1y": 20.91339459760515,
+    "return_2y": 25.92807424593968,
+    "return_3y": 57.31884057971015,
+    "close": 43.42,
+    "marketCap": 10575114680,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_635",
+   "type": "CHARACTER",
+   "name": "일반_Title보험거장"
+  },
+  {
+   "id": "A_2246",
+   "type": "ASSET",
+   "name": "RLI",
+   "exposure": {
+    "ticker": "RLI",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.8647413933757564,
+    "return_3d": 0.9635799444716708,
+    "return_7d": -0.1614987080103436,
+    "return_15d": 2.793481875623538,
+    "return_1m": 0.06474587245062224,
+    "return_ytd": -1.0563380281690127,
+    "return_1y": -6.176961602671116,
+    "return_2y": -17.759744578954372,
+    "return_3y": -9.261705562894463,
+    "close": 61.82,
+    "marketCap": 5673406860,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_636",
+   "type": "CHARACTER",
+   "name": "특수P_C_니치독점"
+  },
+  {
+   "id": "A_2247",
+   "type": "ASSET",
+   "name": "마클그룹",
+   "exposure": {
+    "ticker": "MKL",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.4555396495112163,
+    "return_3d": 0.07899647961997491,
+    "return_7d": -5.366721812803932,
+    "return_15d": -2.859686499727254,
+    "return_1m": -4.57015747832461,
+    "return_ytd": -11.392910118477628,
+    "return_1y": -2.1877121256872134,
+    "return_2y": 14.702647521708222,
+    "return_3y": 30.409401166164642,
+    "close": 1887.65,
+    "marketCap": 23387983500,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_637",
+   "type": "CHARACTER",
+   "name": "미니버크셔_specialty투자"
+  },
+  {
+   "id": "M_145",
+   "type": "MACRO",
+   "name": "금리인하"
+  },
+  {
+   "id": "M_404",
+   "type": "MACRO",
+   "name": "P_C보험_하드마켓사이클"
+  },
+  {
+   "id": "M_406",
+   "type": "MACRO",
+   "name": "자동차손해율감소"
+  },
+  {
+   "id": "M_072",
+   "type": "MACRO",
+   "name": "금리인상"
+  },
+  {
+   "id": "M_407",
+   "type": "MACRO",
+   "name": "자연재해보험손실"
+  },
+  {
+   "id": "A_2911",
+   "type": "ASSET",
+   "name": "SPDR S&P Insurance ETF",
+   "exposure": {
+    "ticker": "KIE",
+    "exchange": "NYSEARCA",
+    "country": "US"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_2242",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011585"
+   ]
+  },
+  {
+   "from": "A_2242",
+   "to": "C_632",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016606"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011586"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "C_633",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016607"
+   ]
+  },
+  {
+   "from": "A_2244",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011587"
+   ]
+  },
+  {
+   "from": "A_2244",
+   "to": "C_634",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016608"
+   ]
+  },
+  {
+   "from": "A_2245",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011588"
+   ]
+  },
+  {
+   "from": "A_2245",
+   "to": "C_635",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016609"
+   ]
+  },
+  {
+   "from": "A_2246",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011589"
+   ]
+  },
+  {
+   "from": "A_2246",
+   "to": "C_636",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016610"
+   ]
+  },
+  {
+   "from": "A_2247",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011590"
+   ]
+  },
+  {
+   "from": "A_2247",
+   "to": "C_637",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016611"
+   ]
+  },
+  {
+   "from": "M_145",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011591"
+   ]
+  },
+  {
+   "from": "M_404",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011592"
+   ]
+  },
+  {
+   "from": "M_406",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011593"
+   ]
+  },
+  {
+   "from": "M_072",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011594"
+   ]
+  },
+  {
+   "from": "M_407",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011595"
+   ]
+  },
+  {
+   "from": "A_2242",
+   "to": "A_2246",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018563"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "킨세일캐피탈과 RLI는 미국 초과·잉여(E&S) 특종보험 시장에서 언더라이팅 수익성을 겨루는 대표적 직접 경쟁 특종보험사다."
+  },
+  {
+   "from": "A_2242",
+   "to": "A_2247",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018564"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "킨세일캐피탈은 마클그룹을 자사 E&S(초과·잉여) 라인의 주요 직접 경쟁사로 명시하며 같은 특종보험 시장에서 경쟁한다."
+  },
+  {
+   "from": "A_2246",
+   "to": "A_2247",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018565"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "RLI와 마클그룹은 모두 특종·E&S 보험에 특화된 언더라이터로 동일한 초과·잉여 보험 세그먼트에서 경쟁한다."
+  },
+  {
+   "from": "A_2244",
+   "to": "A_2243",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018566"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "신시내티파이낸셜과 이리인뎀니티는 독립대리점 채널을 통한 표준 상업·개인 손해보험 시장에서 중서부·중부대서양 지역을 두고 직접 경쟁한다."
+  },
+  {
+   "from": "A_2911",
+   "to": "T_426",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020783"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_2242",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011585"
+   ]
+  },
+  {
+   "from": "A_2242",
+   "to": "C_632",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016606"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011586"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "C_633",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016607"
+   ]
+  },
+  {
+   "from": "A_2244",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011587"
+   ]
+  },
+  {
+   "from": "A_2244",
+   "to": "C_634",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016608"
+   ]
+  },
+  {
+   "from": "A_2245",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011588"
+   ]
+  },
+  {
+   "from": "A_2245",
+   "to": "C_635",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016609"
+   ]
+  },
+  {
+   "from": "A_2246",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011589"
+   ]
+  },
+  {
+   "from": "A_2246",
+   "to": "C_636",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016610"
+   ]
+  },
+  {
+   "from": "A_2247",
+   "to": "T_426",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_011590"
+   ]
+  },
+  {
+   "from": "A_2247",
+   "to": "C_637",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_016611"
+   ]
+  },
+  {
+   "from": "M_145",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011591"
+   ]
+  },
+  {
+   "from": "M_404",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011592"
+   ]
+  },
+  {
+   "from": "M_406",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011593"
+   ]
+  },
+  {
+   "from": "M_072",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011594"
+   ]
+  },
+  {
+   "from": "M_407",
+   "to": "T_426",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_011595"
+   ]
+  },
+  {
+   "from": "A_2242",
+   "to": "A_2246",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018563"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "킨세일캐피탈과 RLI는 미국 초과·잉여(E&S) 특종보험 시장에서 언더라이팅 수익성을 겨루는 대표적 직접 경쟁 특종보험사다."
+  },
+  {
+   "from": "A_2242",
+   "to": "A_2247",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018564"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "킨세일캐피탈은 마클그룹을 자사 E&S(초과·잉여) 라인의 주요 직접 경쟁사로 명시하며 같은 특종보험 시장에서 경쟁한다."
+  },
+  {
+   "from": "A_2246",
+   "to": "A_2247",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018565"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "RLI와 마클그룹은 모두 특종·E&S 보험에 특화된 언더라이터로 동일한 초과·잉여 보험 세그먼트에서 경쟁한다."
+  },
+  {
+   "from": "A_2244",
+   "to": "A_2243",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018566"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "신시내티파이낸셜과 이리인뎀니티는 독립대리점 채널을 통한 표준 상업·개인 손해보험 시장에서 중서부·중부대서양 지역을 두고 직접 경쟁한다."
+  },
+  {
+   "from": "A_2911",
+   "to": "T_426",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020783"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }

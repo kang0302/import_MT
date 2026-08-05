@@ -1,763 +1,848 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_481",
-  "themeName": "글로벌 탄약·추진제(Energetics)",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-25T00:00:00+09:00",
-    "description": "재무장 2차 — 탄약·화약·추진제(energetics)·소재 병목. 탄약/화약(Olin·Chemring·풍산)·자주포/탄약(한화에어로·Rheinmetall)·OTS 탄약(GD)·로켓모터(Northrop·L3Harris). 전쟁 소모·탄약 증산·추진제 공급난이 동인.",
-    "notes": "T_481 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
-    "sources": [],
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-25",
-        "kind": "수정",
-        "title": "구체적 엣지 백필 + 이벤트",
-        "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_481",
-      "type": "THEME",
-      "name": "글로벌 탄약·추진제(Energetics)"
-    },
-    {
-      "id": "A_2326",
-      "type": "ASSET",
-      "name": "올린",
-      "exposure": {
-        "ticker": "OLN",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 2.309344790547807,
-        "return_3d": -14.073071718538566,
-        "return_7d": -17.88793103448275,
-        "return_15d": -12.04986149584487,
-        "return_1m": -3.544303797468351,
-        "return_ytd": -11.600928074245942,
-        "return_1y": 4.49808008776742,
-        "return_2y": -57.99338478500551,
-        "return_3y": -67.14384270438082,
-        "close": 19.05,
-        "marketCap": 2171357100,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_1005",
-      "type": "CHARACTER",
-      "name": "윈체스터 탄약·화약"
-    },
-    {
-      "id": "A_2488",
-      "type": "ASSET",
-      "name": "케임링",
-      "exposure": {
-        "ticker": "CHG",
-        "exchange": "LSE",
-        "country": "GB"
-      },
-      "metrics": {
-        "return_1d": 1.4888337468982549,
-        "return_3d": 4.603580562659837,
-        "return_7d": 2.849958088851645,
-        "return_15d": 14.352283317800563,
-        "return_1m": 8.48806366047745,
-        "return_ytd": 29.70401691331923,
-        "return_1y": 10.14362657091561,
-        "return_2y": 56.704980842911866,
-        "return_3y": 102.47524752475248,
-        "close": 613.5,
-        "marketCap": 1659834226,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_1006",
-      "type": "CHARACTER",
-      "name": "추진제·EW·카운터IED"
-    },
-    {
-      "id": "A_1045",
-      "type": "ASSET",
-      "name": "라인메탈",
-      "exposure": {
-        "ticker": "RHM",
-        "exchange": "XETRA",
-        "country": "DE"
-      },
-      "metrics": {
-        "return_1d": 2.195744680851064,
-        "return_3d": 5.370305370305384,
-        "return_7d": 15.728604471858132,
-        "return_15d": 22.54311664455557,
-        "return_1m": 6.265486725663716,
-        "return_ytd": -24.996876951905065,
-        "return_1y": -32.11984171848502,
-        "return_2y": 145.16129032258064,
-        "return_3y": 352.2787193973635,
-        "close": 1200.8,
-        "marketCap": 56024159757,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_1007",
-      "type": "CHARACTER",
-      "name": "유럽 탄약·자주포 1위"
-    },
-    {
-      "id": "A_745",
-      "type": "ASSET",
-      "name": "한화에어로스페이스",
-      "exposure": {
-        "ticker": "012450",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 0.29880478087649376,
-        "return_3d": 9.81461286804799,
-        "return_7d": 12.013348164627358,
-        "return_15d": 15.481651376146788,
-        "return_1m": -13.11475409836066,
-        "return_ytd": 6.448202959830862,
-        "return_1y": 11.556925116698036,
-        "return_2y": 341.6360366894221,
-        "return_3y": null,
-        "close": 1007000,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "C_1008",
-      "type": "CHARACTER",
-      "name": "K-자주포·탄약·추진"
-    },
-    {
-      "id": "A_576",
-      "type": "ASSET",
-      "name": "풍산",
-      "exposure": {
-        "ticker": "103140",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 14.468085106382977,
-        "return_3d": 13.34269662921348,
-        "return_7d": 26.093750000000004,
-        "return_15d": 32.9489291598023,
-        "return_1m": 17.296511627906973,
-        "return_ytd": -22.933991157579836,
-        "return_1y": -49.36611365530216,
-        "return_2y": 28.56017208035515,
-        "return_3y": null,
-        "close": 80700,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "C_1009",
-      "type": "CHARACTER",
-      "name": "탄약·동가공 1위"
-    },
-    {
-      "id": "A_418",
-      "type": "ASSET",
-      "name": "제너럴다이내믹스",
-      "exposure": {
-        "ticker": "GD",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.8707475877938409,
-        "return_3d": 0.9314495028780678,
-        "return_7d": -0.2559793148028455,
-        "return_15d": 4.400541271989167,
-        "return_1m": 2.3561876459350373,
-        "return_ytd": 12.335468841001763,
-        "return_1y": 24.142369826864908,
-        "return_2y": 31.654209753933316,
-        "return_3y": 73.26625943226735,
-        "close": 385.76,
-        "marketCap": 104370068320,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_1010",
-      "type": "CHARACTER",
-      "name": "OTS 탄약·지상장비"
-    },
-    {
-      "id": "A_206",
-      "type": "ASSET",
-      "name": "노스럽그루먼",
-      "exposure": {
-        "ticker": "NOC",
-        "exchange": "NYSE",
-        "country": "USA"
-      },
-      "metrics": {
-        "return_1d": 0.5615621638375812,
-        "return_3d": 3.1223707581564897,
-        "return_7d": 1.7169519032162794,
-        "return_15d": 4.3278415646811785,
-        "return_1m": 0.6937471474212531,
-        "return_ytd": -5.824198340333986,
-        "return_1y": -5.949457745037867,
-        "return_2y": 13.317444990035533,
-        "return_3y": 22.65388720868171,
-        "close": 551.55,
-        "marketCap": 78354847650,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_1011",
-      "type": "CHARACTER",
-      "name": "고체 로켓모터·미사일"
-    },
-    {
-      "id": "A_272",
-      "type": "ASSET",
-      "name": "L3해리스테크놀로지스",
-      "exposure": {
-        "ticker": "LHX",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 2.677607428201245,
-        "return_3d": 4.928282456785604,
-        "return_7d": -4.96652343359647,
-        "return_15d": -1.6240819282093644,
-        "return_1m": -5.300892886779296,
-        "return_ytd": -6.299264319495535,
-        "return_1y": 2.5300079062747116,
-        "return_2y": 25.274435760077285,
-        "return_3y": 48.39280141475086,
-        "close": 285.3,
-        "marketCap": 53127139500,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_1012",
-      "type": "CHARACTER",
-      "name": "Aerojet 로켓모터·추진"
-    },
-    {
-      "id": "M_026",
-      "type": "MACRO",
-      "name": "방산수요증가"
-    },
-    {
-      "id": "M_131",
-      "type": "MACRO",
-      "name": "군비증강"
-    },
-    {
-      "id": "M_1069",
-      "type": "MACRO",
-      "name": "전쟁초무기소모량폭증"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_481",
+ "themeName": "글로벌 탄약·추진제(Energetics)",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "A_2326",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012156"
-      ]
-    },
-    {
-      "from": "A_2326",
-      "to": "C_1005",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017089"
-      ]
-    },
-    {
-      "from": "A_2488",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012157"
-      ]
-    },
-    {
-      "from": "A_2488",
-      "to": "C_1006",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017090"
-      ]
-    },
-    {
-      "from": "A_1045",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012158"
-      ]
-    },
-    {
-      "from": "A_1045",
-      "to": "C_1007",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017091"
-      ]
-    },
-    {
-      "from": "A_745",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012159"
-      ]
-    },
-    {
-      "from": "A_745",
-      "to": "C_1008",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017092"
-      ]
-    },
-    {
-      "from": "A_576",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012160"
-      ]
-    },
-    {
-      "from": "A_576",
-      "to": "C_1009",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017093"
-      ]
-    },
-    {
-      "from": "A_418",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012161"
-      ]
-    },
-    {
-      "from": "A_418",
-      "to": "C_1010",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017094"
-      ]
-    },
-    {
-      "from": "A_206",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012162"
-      ]
-    },
-    {
-      "from": "A_206",
-      "to": "C_1011",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017095"
-      ]
-    },
-    {
-      "from": "A_272",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012163"
-      ]
-    },
-    {
-      "from": "A_272",
-      "to": "C_1012",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017096"
-      ]
-    },
-    {
-      "from": "M_026",
-      "to": "T_481",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012164"
-      ]
-    },
-    {
-      "from": "M_131",
-      "to": "T_481",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012165"
-      ]
-    },
-    {
-      "from": "M_1069",
-      "to": "T_481",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012166"
-      ]
-    },
-    {
-      "from": "A_2326",
-      "to": "A_576",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019855"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "올린과 풍산은 글로벌 탄약·소구경 화기탄 시장 경쟁"
-    },
-    {
-      "from": "A_1045",
-      "to": "A_2326",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019856"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "라인메탈과 올린은 탄약·추진제 생산 시장 경쟁"
-    },
-    {
-      "from": "A_745",
-      "to": "A_1045",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019857"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "한화에어로스페이스와 라인메탈은 포탄·탄약 대량생산 수출 경쟁"
-    },
-    {
-      "from": "A_418",
-      "to": "A_206",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019858"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "제너럴다이내믹스와 노스럽그루먼은 미국 탄약·추진체 조달 경쟁"
-    },
-    {
-      "from": "A_2488",
-      "to": "A_2326",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019859"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "케임링과 올린은 방산용 화약·에너제틱스 시장 경쟁"
-    },
-    {
-      "from": "A_576",
-      "to": "A_745",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_019860"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "풍산은 한화에어로스페이스에 탄약용 동합금·탄체 공급"
-    }
-  ],
-  "links": [
-    {
-      "from": "A_2326",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012156"
-      ]
-    },
-    {
-      "from": "A_2326",
-      "to": "C_1005",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017089"
-      ]
-    },
-    {
-      "from": "A_2488",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012157"
-      ]
-    },
-    {
-      "from": "A_2488",
-      "to": "C_1006",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017090"
-      ]
-    },
-    {
-      "from": "A_1045",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012158"
-      ]
-    },
-    {
-      "from": "A_1045",
-      "to": "C_1007",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017091"
-      ]
-    },
-    {
-      "from": "A_745",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012159"
-      ]
-    },
-    {
-      "from": "A_745",
-      "to": "C_1008",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017092"
-      ]
-    },
-    {
-      "from": "A_576",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012160"
-      ]
-    },
-    {
-      "from": "A_576",
-      "to": "C_1009",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017093"
-      ]
-    },
-    {
-      "from": "A_418",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012161"
-      ]
-    },
-    {
-      "from": "A_418",
-      "to": "C_1010",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017094"
-      ]
-    },
-    {
-      "from": "A_206",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012162"
-      ]
-    },
-    {
-      "from": "A_206",
-      "to": "C_1011",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017095"
-      ]
-    },
-    {
-      "from": "A_272",
-      "to": "T_481",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012163"
-      ]
-    },
-    {
-      "from": "A_272",
-      "to": "C_1012",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017096"
-      ]
-    },
-    {
-      "from": "M_026",
-      "to": "T_481",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012164"
-      ]
-    },
-    {
-      "from": "M_131",
-      "to": "T_481",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012165"
-      ]
-    },
-    {
-      "from": "M_1069",
-      "to": "T_481",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012166"
-      ]
-    },
-    {
-      "from": "A_2326",
-      "to": "A_576",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019855"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "올린과 풍산은 글로벌 탄약·소구경 화기탄 시장 경쟁"
-    },
-    {
-      "from": "A_1045",
-      "to": "A_2326",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019856"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "라인메탈과 올린은 탄약·추진제 생산 시장 경쟁"
-    },
-    {
-      "from": "A_745",
-      "to": "A_1045",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019857"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "한화에어로스페이스와 라인메탈은 포탄·탄약 대량생산 수출 경쟁"
-    },
-    {
-      "from": "A_418",
-      "to": "A_206",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019858"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "제너럴다이내믹스와 노스럽그루먼은 미국 탄약·추진체 조달 경쟁"
-    },
-    {
-      "from": "A_2488",
-      "to": "A_2326",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019859"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "케임링과 올린은 방산용 화약·에너제틱스 시장 경쟁"
-    },
-    {
-      "from": "A_576",
-      "to": "A_745",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_019860"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "풍산은 한화에어로스페이스에 탄약용 동합금·탄체 공급"
-    }
+  "dataAsOf": "2026-07-25T00:00:00+09:00",
+  "description": "재무장 2차 — 탄약·화약·추진제(energetics)·소재 병목. 탄약/화약(Olin·Chemring·풍산)·자주포/탄약(한화에어로·Rheinmetall)·OTS 탄약(GD)·로켓모터(Northrop·L3Harris). 전쟁 소모·탄약 증산·추진제 공급난이 동인.",
+  "notes": "T_481 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
+  "sources": [],
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-25",
+    "kind": "수정",
+    "title": "구체적 엣지 백필 + 이벤트",
+    "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_481",
+   "type": "THEME",
+   "name": "글로벌 탄약·추진제(Energetics)"
+  },
+  {
+   "id": "A_2326",
+   "type": "ASSET",
+   "name": "올린",
+   "exposure": {
+    "ticker": "OLN",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 2.309344790547807,
+    "return_3d": -14.073071718538566,
+    "return_7d": -17.88793103448275,
+    "return_15d": -12.04986149584487,
+    "return_1m": -3.544303797468351,
+    "return_ytd": -11.600928074245942,
+    "return_1y": 4.49808008776742,
+    "return_2y": -57.99338478500551,
+    "return_3y": -67.14384270438082,
+    "close": 19.05,
+    "marketCap": 2171357100,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_1005",
+   "type": "CHARACTER",
+   "name": "윈체스터 탄약·화약"
+  },
+  {
+   "id": "A_2488",
+   "type": "ASSET",
+   "name": "케임링",
+   "exposure": {
+    "ticker": "CHG",
+    "exchange": "LSE",
+    "country": "GB"
+   },
+   "metrics": {
+    "return_1d": 1.4888337468982549,
+    "return_3d": 4.603580562659837,
+    "return_7d": 2.849958088851645,
+    "return_15d": 14.352283317800563,
+    "return_1m": 8.48806366047745,
+    "return_ytd": 29.70401691331923,
+    "return_1y": 10.14362657091561,
+    "return_2y": 56.704980842911866,
+    "return_3y": 102.47524752475248,
+    "close": 613.5,
+    "marketCap": 1659834226,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_1006",
+   "type": "CHARACTER",
+   "name": "추진제·EW·카운터IED"
+  },
+  {
+   "id": "A_1045",
+   "type": "ASSET",
+   "name": "라인메탈",
+   "exposure": {
+    "ticker": "RHM",
+    "exchange": "XETRA",
+    "country": "DE"
+   },
+   "metrics": {
+    "return_1d": 2.195744680851064,
+    "return_3d": 5.370305370305384,
+    "return_7d": 15.728604471858132,
+    "return_15d": 22.54311664455557,
+    "return_1m": 6.265486725663716,
+    "return_ytd": -24.996876951905065,
+    "return_1y": -32.11984171848502,
+    "return_2y": 145.16129032258064,
+    "return_3y": 352.2787193973635,
+    "close": 1200.8,
+    "marketCap": 56024159757,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_1007",
+   "type": "CHARACTER",
+   "name": "유럽 탄약·자주포 1위"
+  },
+  {
+   "id": "A_745",
+   "type": "ASSET",
+   "name": "한화에어로스페이스",
+   "exposure": {
+    "ticker": "012450",
+    "exchange": "KOSPI",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 0.29880478087649376,
+    "return_3d": 9.81461286804799,
+    "return_7d": 12.013348164627358,
+    "return_15d": 15.481651376146788,
+    "return_1m": -13.11475409836066,
+    "return_ytd": 6.448202959830862,
+    "return_1y": 11.556925116698036,
+    "return_2y": 341.6360366894221,
+    "return_3y": null,
+    "close": 1007000,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "C_1008",
+   "type": "CHARACTER",
+   "name": "K-자주포·탄약·추진"
+  },
+  {
+   "id": "A_576",
+   "type": "ASSET",
+   "name": "풍산",
+   "exposure": {
+    "ticker": "103140",
+    "exchange": "KOSPI",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 14.468085106382977,
+    "return_3d": 13.34269662921348,
+    "return_7d": 26.093750000000004,
+    "return_15d": 32.9489291598023,
+    "return_1m": 17.296511627906973,
+    "return_ytd": -22.933991157579836,
+    "return_1y": -49.36611365530216,
+    "return_2y": 28.56017208035515,
+    "return_3y": null,
+    "close": 80700,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "C_1009",
+   "type": "CHARACTER",
+   "name": "탄약·동가공 1위"
+  },
+  {
+   "id": "A_418",
+   "type": "ASSET",
+   "name": "제너럴다이내믹스",
+   "exposure": {
+    "ticker": "GD",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.8707475877938409,
+    "return_3d": 0.9314495028780678,
+    "return_7d": -0.2559793148028455,
+    "return_15d": 4.400541271989167,
+    "return_1m": 2.3561876459350373,
+    "return_ytd": 12.335468841001763,
+    "return_1y": 24.142369826864908,
+    "return_2y": 31.654209753933316,
+    "return_3y": 73.26625943226735,
+    "close": 385.76,
+    "marketCap": 104370068320,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_1010",
+   "type": "CHARACTER",
+   "name": "OTS 탄약·지상장비"
+  },
+  {
+   "id": "A_206",
+   "type": "ASSET",
+   "name": "노스럽그루먼",
+   "exposure": {
+    "ticker": "NOC",
+    "exchange": "NYSE",
+    "country": "USA"
+   },
+   "metrics": {
+    "return_1d": 0.5615621638375812,
+    "return_3d": 3.1223707581564897,
+    "return_7d": 1.7169519032162794,
+    "return_15d": 4.3278415646811785,
+    "return_1m": 0.6937471474212531,
+    "return_ytd": -5.824198340333986,
+    "return_1y": -5.949457745037867,
+    "return_2y": 13.317444990035533,
+    "return_3y": 22.65388720868171,
+    "close": 551.55,
+    "marketCap": 78354847650,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_1011",
+   "type": "CHARACTER",
+   "name": "고체 로켓모터·미사일"
+  },
+  {
+   "id": "A_272",
+   "type": "ASSET",
+   "name": "L3해리스테크놀로지스",
+   "exposure": {
+    "ticker": "LHX",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 2.677607428201245,
+    "return_3d": 4.928282456785604,
+    "return_7d": -4.96652343359647,
+    "return_15d": -1.6240819282093644,
+    "return_1m": -5.300892886779296,
+    "return_ytd": -6.299264319495535,
+    "return_1y": 2.5300079062747116,
+    "return_2y": 25.274435760077285,
+    "return_3y": 48.39280141475086,
+    "close": 285.3,
+    "marketCap": 53127139500,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_1012",
+   "type": "CHARACTER",
+   "name": "Aerojet 로켓모터·추진"
+  },
+  {
+   "id": "M_026",
+   "type": "MACRO",
+   "name": "방산수요증가"
+  },
+  {
+   "id": "M_131",
+   "type": "MACRO",
+   "name": "군비증강"
+  },
+  {
+   "id": "M_1069",
+   "type": "MACRO",
+   "name": "전쟁초무기소모량폭증"
+  },
+  {
+   "id": "A_2887",
+   "type": "ASSET",
+   "name": "PLUS K방산",
+   "exposure": {
+    "ticker": "449450",
+    "exchange": "KRX",
+    "country": "KR"
+   }
+  },
+  {
+   "id": "A_1047",
+   "type": "ASSET",
+   "name": "디펜스테크ETF(SHLD)",
+   "exposure": {
+    "ticker": "SHLD",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 4.971259903681813,
+    "close": 67.57,
+    "marketCap": 4669220721,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 7.646965110721671,
+    "return_7d": 7.236946516425946,
+    "return_15d": 12.205247426104272,
+    "return_1m": 4.210363972856235,
+    "return_ytd": 1.7160921270510165,
+    "return_1y": 10.988830486202339,
+    "return_2y": 92.12396929201022,
+    "return_3y": null,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   },
+   "coreBiz": "미국 상장 글로벌 방산·디펜스테크 ETF (Global X Defense Tech) — 방산·사이버·드론·AI 국방기술 및 미·EU 방산 대형주 노출."
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_2326",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012156"
+   ]
+  },
+  {
+   "from": "A_2326",
+   "to": "C_1005",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017089"
+   ]
+  },
+  {
+   "from": "A_2488",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012157"
+   ]
+  },
+  {
+   "from": "A_2488",
+   "to": "C_1006",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017090"
+   ]
+  },
+  {
+   "from": "A_1045",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012158"
+   ]
+  },
+  {
+   "from": "A_1045",
+   "to": "C_1007",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017091"
+   ]
+  },
+  {
+   "from": "A_745",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012159"
+   ]
+  },
+  {
+   "from": "A_745",
+   "to": "C_1008",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017092"
+   ]
+  },
+  {
+   "from": "A_576",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012160"
+   ]
+  },
+  {
+   "from": "A_576",
+   "to": "C_1009",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017093"
+   ]
+  },
+  {
+   "from": "A_418",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012161"
+   ]
+  },
+  {
+   "from": "A_418",
+   "to": "C_1010",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017094"
+   ]
+  },
+  {
+   "from": "A_206",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012162"
+   ]
+  },
+  {
+   "from": "A_206",
+   "to": "C_1011",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017095"
+   ]
+  },
+  {
+   "from": "A_272",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012163"
+   ]
+  },
+  {
+   "from": "A_272",
+   "to": "C_1012",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017096"
+   ]
+  },
+  {
+   "from": "M_026",
+   "to": "T_481",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012164"
+   ]
+  },
+  {
+   "from": "M_131",
+   "to": "T_481",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012165"
+   ]
+  },
+  {
+   "from": "M_1069",
+   "to": "T_481",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012166"
+   ]
+  },
+  {
+   "from": "A_2326",
+   "to": "A_576",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019855"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "올린과 풍산은 글로벌 탄약·소구경 화기탄 시장 경쟁"
+  },
+  {
+   "from": "A_1045",
+   "to": "A_2326",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019856"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "라인메탈과 올린은 탄약·추진제 생산 시장 경쟁"
+  },
+  {
+   "from": "A_745",
+   "to": "A_1045",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019857"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "한화에어로스페이스와 라인메탈은 포탄·탄약 대량생산 수출 경쟁"
+  },
+  {
+   "from": "A_418",
+   "to": "A_206",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019858"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "제너럴다이내믹스와 노스럽그루먼은 미국 탄약·추진체 조달 경쟁"
+  },
+  {
+   "from": "A_2488",
+   "to": "A_2326",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019859"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "케임링과 올린은 방산용 화약·에너제틱스 시장 경쟁"
+  },
+  {
+   "from": "A_576",
+   "to": "A_745",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_019860"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "풍산은 한화에어로스페이스에 탄약용 동합금·탄체 공급"
+  },
+  {
+   "from": "A_2887",
+   "to": "T_481",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020828"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_1047",
+   "to": "T_481",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020829"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_2326",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012156"
+   ]
+  },
+  {
+   "from": "A_2326",
+   "to": "C_1005",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017089"
+   ]
+  },
+  {
+   "from": "A_2488",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012157"
+   ]
+  },
+  {
+   "from": "A_2488",
+   "to": "C_1006",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017090"
+   ]
+  },
+  {
+   "from": "A_1045",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012158"
+   ]
+  },
+  {
+   "from": "A_1045",
+   "to": "C_1007",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017091"
+   ]
+  },
+  {
+   "from": "A_745",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012159"
+   ]
+  },
+  {
+   "from": "A_745",
+   "to": "C_1008",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017092"
+   ]
+  },
+  {
+   "from": "A_576",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012160"
+   ]
+  },
+  {
+   "from": "A_576",
+   "to": "C_1009",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017093"
+   ]
+  },
+  {
+   "from": "A_418",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012161"
+   ]
+  },
+  {
+   "from": "A_418",
+   "to": "C_1010",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017094"
+   ]
+  },
+  {
+   "from": "A_206",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012162"
+   ]
+  },
+  {
+   "from": "A_206",
+   "to": "C_1011",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017095"
+   ]
+  },
+  {
+   "from": "A_272",
+   "to": "T_481",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012163"
+   ]
+  },
+  {
+   "from": "A_272",
+   "to": "C_1012",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017096"
+   ]
+  },
+  {
+   "from": "M_026",
+   "to": "T_481",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012164"
+   ]
+  },
+  {
+   "from": "M_131",
+   "to": "T_481",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012165"
+   ]
+  },
+  {
+   "from": "M_1069",
+   "to": "T_481",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012166"
+   ]
+  },
+  {
+   "from": "A_2326",
+   "to": "A_576",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019855"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "올린과 풍산은 글로벌 탄약·소구경 화기탄 시장 경쟁"
+  },
+  {
+   "from": "A_1045",
+   "to": "A_2326",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019856"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "라인메탈과 올린은 탄약·추진제 생산 시장 경쟁"
+  },
+  {
+   "from": "A_745",
+   "to": "A_1045",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019857"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "한화에어로스페이스와 라인메탈은 포탄·탄약 대량생산 수출 경쟁"
+  },
+  {
+   "from": "A_418",
+   "to": "A_206",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019858"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "제너럴다이내믹스와 노스럽그루먼은 미국 탄약·추진체 조달 경쟁"
+  },
+  {
+   "from": "A_2488",
+   "to": "A_2326",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019859"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "케임링과 올린은 방산용 화약·에너제틱스 시장 경쟁"
+  },
+  {
+   "from": "A_576",
+   "to": "A_745",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_019860"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "풍산은 한화에어로스페이스에 탄약용 동합금·탄체 공급"
+  },
+  {
+   "from": "A_2887",
+   "to": "T_481",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020828"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_1047",
+   "to": "T_481",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020829"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }

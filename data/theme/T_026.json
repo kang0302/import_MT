@@ -31,6 +31,12 @@
     "kind": "변경",
     "title": "핵심 3종 삭제 + CXMT 추가 + 자산별 CHR",
     "detail": "삼성전자·SK하이닉스·엔비디아를 제거하고 CXMT(창신메모리)를 추가했다. 남은 11개 자산(TSMC·알리바바·텐센트·바이두·캠브리콘·모어스레드·메타X·비런·엔플레임·인스퍼·CXMT)에 딥시크 모멘텀 내 포지션 CHR을 정의·연결했다."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
    }
   ]
  },
@@ -520,6 +526,34 @@
    "id": "M_338",
    "type": "MACRO",
    "name": "GPU효율성개선니즈"
+  },
+  {
+   "id": "A_872",
+   "type": "ASSET",
+   "name": "KWEB",
+   "exposure": {
+    "ticker": "KWEB",
+    "exchange": "NYSEARCA",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.5219206680584731,
+    "close": 28.89,
+    "marketCap": 5719248285,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 2.9579472558802555,
+    "return_7d": 9.889691898060104,
+    "return_15d": 10.351413292589772,
+    "return_1m": 12.895662368112548,
+    "return_ytd": -18.9166432781364,
+    "return_1y": -16.260869565217394,
+    "return_2y": 10.817031070195625,
+    "return_3y": -8.979206049149335,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
   }
  ],
  "edges": [
@@ -827,6 +861,16 @@
    "confidence": 0.8,
    "status": "verified",
    "rationale": "캠브리콘과 모어스레드는 중국 AI 가속기 칩 시장 경쟁"
+  },
+  {
+   "from": "A_872",
+   "to": "T_026",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020563"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ],
  "links": [
@@ -1134,6 +1178,16 @@
    "confidence": 0.8,
    "status": "verified",
    "rationale": "캠브리콘과 모어스레드는 중국 AI 가속기 칩 시장 경쟁"
+  },
+  {
+   "from": "A_872",
+   "to": "T_026",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020563"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ]
 }

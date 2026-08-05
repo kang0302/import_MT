@@ -25,6 +25,12 @@
     "kind": "수정",
     "title": "메모리 과점서사 타격 이벤트 추가",
     "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
    }
   ]
  },
@@ -331,6 +337,26 @@
    "id": "C_4155",
    "type": "CHARACTER",
    "name": "증착장비글로벌(경쟁)"
+  },
+  {
+   "id": "A_2876",
+   "type": "ASSET",
+   "name": "SOL AI반도체소부장",
+   "exposure": {
+    "ticker": "455850",
+    "exchange": "KRX",
+    "country": "KR"
+   }
+  },
+  {
+   "id": "A_2869",
+   "type": "ASSET",
+   "name": "TIGER 반도체TOP10",
+   "exposure": {
+    "ticker": "396500",
+    "exchange": "KRX",
+    "country": "KR"
+   }
   }
  ],
  "edges": [
@@ -529,6 +555,26 @@
    ],
    "confidence": 0.8,
    "status": "verified"
+  },
+  {
+   "from": "A_2876",
+   "to": "T_276",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020683"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_2869",
+   "to": "T_276",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020684"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ],
  "links": [
@@ -726,6 +772,26 @@
     "EV_008896"
    ],
    "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_2876",
+   "to": "T_276",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020683"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_2869",
+   "to": "T_276",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020684"
+   ],
+   "confidence": 0.7,
    "status": "verified"
   }
  ]

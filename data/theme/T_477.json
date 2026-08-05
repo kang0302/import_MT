@@ -1,741 +1,777 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_477",
-  "themeName": "글로벌 보험 브로커",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-25T00:00:00+09:00",
-    "description": "비자산·복리성장 compounder — 보험 중개·컨설팅(보험사가 아님). 대형 브로커(Marsh·Aon·Gallagher·Brown&Brown·WTW)·특수보험(Ryan Specialty)·소형 고성장(Goosehead). 보험료(하드마켓)·M&A 통합·자본환원이 동인.",
-    "notes": "T_477 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
-    "sources": [],
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-25",
-        "kind": "수정",
-        "title": "구체적 엣지 백필 + 2026 이벤트",
-        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_477",
-      "type": "THEME",
-      "name": "글로벌 보험 브로커"
-    },
-    {
-      "id": "A_2463",
-      "type": "ASSET",
-      "name": "마쉬맥레넌",
-      "exposure": {
-        "ticker": "MMC",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -7.50689077446901,
-        "return_3d": -9.807641633728592,
-        "return_7d": -8.929331630481052,
-        "return_15d": -6.173245614035094,
-        "return_1m": -8.432316746923496,
-        "return_ytd": -6.209239875047956,
-        "return_1y": -24.27433628318585,
-        "return_2y": -10.975863503953398,
-        "return_3y": null,
-        "close": 182.7,
-        "marketCap": 89819709368,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_974",
-      "type": "CHARACTER",
-      "name": "글로벌 보험 브로커 1위"
-    },
-    {
-      "id": "A_2464",
-      "type": "ASSET",
-      "name": "에이온",
-      "exposure": {
-        "ticker": "AON",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -0.2740262282247108,
-        "return_3d": -2.706167989742758,
-        "return_7d": -1.3961846834393166,
-        "return_15d": -0.6241466744685065,
-        "return_1m": -0.0728474965677739,
-        "return_ytd": 3.596014755860222,
-        "return_1y": 0.9025066485599531,
-        "return_2y": 8.489992091014177,
-        "return_3y": 11.515852667125248,
-        "close": 356.65,
-        "marketCap": 75654536036,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_975",
-      "type": "CHARACTER",
-      "name": "글로벌 보험 브로커 2위"
-    },
-    {
-      "id": "A_2465",
-      "type": "ASSET",
-      "name": "아서J갤러거",
-      "exposure": {
-        "ticker": "AJG",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.10896323499738347,
-        "return_3d": -3.2753645792716113,
-        "return_7d": 0.11704403277232878,
-        "return_15d": -2.2731749596186512,
-        "return_1m": -0.6846298594707201,
-        "return_ytd": -3.101562499999999,
-        "return_1y": -12.70718232044199,
-        "return_2y": -12.96140350877193,
-        "return_3y": 14.725742299509758,
-        "close": 248.06,
-        "marketCap": 63726613752,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_976",
-      "type": "CHARACTER",
-      "name": "M&A 주도 보험 브로커"
-    },
-    {
-      "id": "A_2466",
-      "type": "ASSET",
-      "name": "브라운앤브라운",
-      "exposure": {
-        "ticker": "BRO",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -0.8498188910560089,
-        "return_3d": 0.4233102864399596,
-        "return_7d": 5.1877032219923125,
-        "return_15d": 3.897810218978104,
-        "return_1m": 4.004091772614338,
-        "return_ytd": -8.309713991239375,
-        "return_1y": -22.842584562012135,
-        "return_2y": -28.715945512820518,
-        "return_3y": 0.8216461255135199,
-        "close": 71.17,
-        "marketCap": 23814219108,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_977",
-      "type": "CHARACTER",
-      "name": "고성장 보험 브로커"
-    },
-    {
-      "id": "A_1934",
-      "type": "ASSET",
-      "name": "윌리스타워스왓슨",
-      "exposure": {
-        "ticker": "WTW",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -0.5854286801510455,
-        "return_3d": 1.065317661062326,
-        "return_7d": 15.085900172816903,
-        "return_15d": 17.624852808755275,
-        "return_1m": 18.0664673572968,
-        "return_ytd": 4.0947681368191935,
-        "return_1y": 7.897830161705377,
-        "return_2y": 19.41143379509176,
-        "return_3y": 62.424677187948355,
-        "close": 339.63,
-        "marketCap": 31542096982,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_978",
-      "type": "CHARACTER",
-      "name": "보험·연금 컨설팅 브로커"
-    },
-    {
-      "id": "A_2467",
-      "type": "ASSET",
-      "name": "라이언스페셜티",
-      "exposure": {
-        "ticker": "RYAN",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 2.2232408892963518,
-        "return_3d": 1.156724880925375,
-        "return_7d": 6.826347305389224,
-        "return_15d": 8.305002428363295,
-        "return_1m": 8.226158699344822,
-        "return_ytd": -11.875123493380746,
-        "return_1y": -22.90406222990493,
-        "return_2y": -27.738172391445236,
-        "return_3y": 1.8962759881197222,
-        "close": 44.6,
-        "marketCap": 5774272755,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_979",
-      "type": "CHARACTER",
-      "name": "특수보험(E&S) 도매 브로커"
-    },
-    {
-      "id": "A_2468",
-      "type": "ASSET",
-      "name": "구스헤드",
-      "exposure": {
-        "ticker": "GSHD",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 4.416692049954318,
-        "return_3d": 7.3598496711556605,
-        "return_7d": 16.697872340425548,
-        "return_15d": 36.30218687872764,
-        "return_1m": 29.358490566037744,
-        "return_ytd": -2.2805017103762704,
-        "return_1y": -20.01866542230517,
-        "return_2y": -24.209595401282325,
-        "return_3y": 0.8235294117647118,
-        "close": 68.56,
-        "marketCap": 2562511106,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_980",
-      "type": "CHARACTER",
-      "name": "개인보험 디지털 브로커"
-    },
-    {
-      "id": "A_2243",
-      "type": "ASSET",
-      "name": "이리인뎀니티",
-      "exposure": {
-        "ticker": "ERIE",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 3.2381997804610263,
-        "return_3d": 4.6475799204005686,
-        "return_7d": 9.384925072690663,
-        "return_15d": 2.541200150962397,
-        "return_1m": -4.900245012250615,
-        "return_ytd": -11.979410388394951,
-        "return_1y": -30.28367783321454,
-        "return_2y": -44.755213157716376,
-        "return_3y": 11.683032655857506,
-        "close": 244.53,
-        "marketCap": 11294620623,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "C_981",
-      "type": "CHARACTER",
-      "name": "보험·중개 복합"
-    },
-    {
-      "id": "M_404",
-      "type": "MACRO",
-      "name": "P_C보험_하드마켓사이클"
-    },
-    {
-      "id": "M_173",
-      "type": "MACRO",
-      "name": "주주환원정책"
-    },
-    {
-      "id": "M_262",
-      "type": "MACRO",
-      "name": "금융시장변동성고조"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_477",
+ "themeName": "글로벌 보험 브로커",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "A_2463",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012113"
-      ]
-    },
-    {
-      "from": "A_2463",
-      "to": "C_974",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017058"
-      ]
-    },
-    {
-      "from": "A_2464",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012114"
-      ]
-    },
-    {
-      "from": "A_2464",
-      "to": "C_975",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017059"
-      ]
-    },
-    {
-      "from": "A_2465",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012115"
-      ]
-    },
-    {
-      "from": "A_2465",
-      "to": "C_976",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017060"
-      ]
-    },
-    {
-      "from": "A_2466",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012116"
-      ]
-    },
-    {
-      "from": "A_2466",
-      "to": "C_977",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017061"
-      ]
-    },
-    {
-      "from": "A_1934",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012117"
-      ]
-    },
-    {
-      "from": "A_1934",
-      "to": "C_978",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017062"
-      ]
-    },
-    {
-      "from": "A_2467",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012118"
-      ]
-    },
-    {
-      "from": "A_2467",
-      "to": "C_979",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017063"
-      ]
-    },
-    {
-      "from": "A_2468",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012119"
-      ]
-    },
-    {
-      "from": "A_2468",
-      "to": "C_980",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017064"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012120"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "C_981",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017065"
-      ]
-    },
-    {
-      "from": "M_404",
-      "to": "T_477",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012121"
-      ]
-    },
-    {
-      "from": "M_173",
-      "to": "T_477",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012122"
-      ]
-    },
-    {
-      "from": "M_262",
-      "to": "T_477",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012123"
-      ]
-    },
-    {
-      "from": "A_2463",
-      "to": "A_2464",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019836"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "마쉬맥레넌과 에이온은 글로벌 보험 브로커 시장 양대 경쟁"
-    },
-    {
-      "from": "A_2465",
-      "to": "A_2466",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019837"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "아서J갤러거와 브라운앤브라운은 중형 보험 브로커 시장 경쟁"
-    },
-    {
-      "from": "A_1934",
-      "to": "A_2463",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019838"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "윌리스타워스왓슨과 마쉬맥레넌은 글로벌 보험 브로커 3강 경쟁"
-    },
-    {
-      "from": "A_2467",
-      "to": "A_2468",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019839"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "라이언스페셜티와 구스헤드는 전문·개인 보험 유통 시장 경쟁"
-    },
-    {
-      "from": "A_2465",
-      "to": "A_2464",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019840"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "아서J갤러거와 에이온은 기업 보험 중개 시장 경쟁"
-    }
-  ],
-  "links": [
-    {
-      "from": "A_2463",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012113"
-      ]
-    },
-    {
-      "from": "A_2463",
-      "to": "C_974",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017058"
-      ]
-    },
-    {
-      "from": "A_2464",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012114"
-      ]
-    },
-    {
-      "from": "A_2464",
-      "to": "C_975",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017059"
-      ]
-    },
-    {
-      "from": "A_2465",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012115"
-      ]
-    },
-    {
-      "from": "A_2465",
-      "to": "C_976",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017060"
-      ]
-    },
-    {
-      "from": "A_2466",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012116"
-      ]
-    },
-    {
-      "from": "A_2466",
-      "to": "C_977",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017061"
-      ]
-    },
-    {
-      "from": "A_1934",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012117"
-      ]
-    },
-    {
-      "from": "A_1934",
-      "to": "C_978",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017062"
-      ]
-    },
-    {
-      "from": "A_2467",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012118"
-      ]
-    },
-    {
-      "from": "A_2467",
-      "to": "C_979",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017063"
-      ]
-    },
-    {
-      "from": "A_2468",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012119"
-      ]
-    },
-    {
-      "from": "A_2468",
-      "to": "C_980",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017064"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "T_477",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_012120"
-      ]
-    },
-    {
-      "from": "A_2243",
-      "to": "C_981",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_017065"
-      ]
-    },
-    {
-      "from": "M_404",
-      "to": "T_477",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012121"
-      ]
-    },
-    {
-      "from": "M_173",
-      "to": "T_477",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012122"
-      ]
-    },
-    {
-      "from": "M_262",
-      "to": "T_477",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_012123"
-      ]
-    },
-    {
-      "from": "A_2463",
-      "to": "A_2464",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019836"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "마쉬맥레넌과 에이온은 글로벌 보험 브로커 시장 양대 경쟁"
-    },
-    {
-      "from": "A_2465",
-      "to": "A_2466",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019837"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "아서J갤러거와 브라운앤브라운은 중형 보험 브로커 시장 경쟁"
-    },
-    {
-      "from": "A_1934",
-      "to": "A_2463",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019838"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "윌리스타워스왓슨과 마쉬맥레넌은 글로벌 보험 브로커 3강 경쟁"
-    },
-    {
-      "from": "A_2467",
-      "to": "A_2468",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019839"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "라이언스페셜티와 구스헤드는 전문·개인 보험 유통 시장 경쟁"
-    },
-    {
-      "from": "A_2465",
-      "to": "A_2464",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_019840"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "아서J갤러거와 에이온은 기업 보험 중개 시장 경쟁"
-    }
+  "dataAsOf": "2026-07-25T00:00:00+09:00",
+  "description": "비자산·복리성장 compounder — 보험 중개·컨설팅(보험사가 아님). 대형 브로커(Marsh·Aon·Gallagher·Brown&Brown·WTW)·특수보험(Ryan Specialty)·소형 고성장(Goosehead). 보험료(하드마켓)·M&A 통합·자본환원이 동인.",
+  "notes": "T_477 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
+  "sources": [],
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-25",
+    "kind": "수정",
+    "title": "구체적 엣지 백필 + 2026 이벤트",
+    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_477",
+   "type": "THEME",
+   "name": "글로벌 보험 브로커"
+  },
+  {
+   "id": "A_2463",
+   "type": "ASSET",
+   "name": "마쉬맥레넌",
+   "exposure": {
+    "ticker": "MMC",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": -7.50689077446901,
+    "return_3d": -9.807641633728592,
+    "return_7d": -8.929331630481052,
+    "return_15d": -6.173245614035094,
+    "return_1m": -8.432316746923496,
+    "return_ytd": -6.209239875047956,
+    "return_1y": -24.27433628318585,
+    "return_2y": -10.975863503953398,
+    "return_3y": null,
+    "close": 182.7,
+    "marketCap": 89819709368,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_974",
+   "type": "CHARACTER",
+   "name": "글로벌 보험 브로커 1위"
+  },
+  {
+   "id": "A_2464",
+   "type": "ASSET",
+   "name": "에이온",
+   "exposure": {
+    "ticker": "AON",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": -0.2740262282247108,
+    "return_3d": -2.706167989742758,
+    "return_7d": -1.3961846834393166,
+    "return_15d": -0.6241466744685065,
+    "return_1m": -0.0728474965677739,
+    "return_ytd": 3.596014755860222,
+    "return_1y": 0.9025066485599531,
+    "return_2y": 8.489992091014177,
+    "return_3y": 11.515852667125248,
+    "close": 356.65,
+    "marketCap": 75654536036,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_975",
+   "type": "CHARACTER",
+   "name": "글로벌 보험 브로커 2위"
+  },
+  {
+   "id": "A_2465",
+   "type": "ASSET",
+   "name": "아서J갤러거",
+   "exposure": {
+    "ticker": "AJG",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.10896323499738347,
+    "return_3d": -3.2753645792716113,
+    "return_7d": 0.11704403277232878,
+    "return_15d": -2.2731749596186512,
+    "return_1m": -0.6846298594707201,
+    "return_ytd": -3.101562499999999,
+    "return_1y": -12.70718232044199,
+    "return_2y": -12.96140350877193,
+    "return_3y": 14.725742299509758,
+    "close": 248.06,
+    "marketCap": 63726613752,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_976",
+   "type": "CHARACTER",
+   "name": "M&A 주도 보험 브로커"
+  },
+  {
+   "id": "A_2466",
+   "type": "ASSET",
+   "name": "브라운앤브라운",
+   "exposure": {
+    "ticker": "BRO",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": -0.8498188910560089,
+    "return_3d": 0.4233102864399596,
+    "return_7d": 5.1877032219923125,
+    "return_15d": 3.897810218978104,
+    "return_1m": 4.004091772614338,
+    "return_ytd": -8.309713991239375,
+    "return_1y": -22.842584562012135,
+    "return_2y": -28.715945512820518,
+    "return_3y": 0.8216461255135199,
+    "close": 71.17,
+    "marketCap": 23814219108,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_977",
+   "type": "CHARACTER",
+   "name": "고성장 보험 브로커"
+  },
+  {
+   "id": "A_1934",
+   "type": "ASSET",
+   "name": "윌리스타워스왓슨",
+   "exposure": {
+    "ticker": "WTW",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": -0.5854286801510455,
+    "return_3d": 1.065317661062326,
+    "return_7d": 15.085900172816903,
+    "return_15d": 17.624852808755275,
+    "return_1m": 18.0664673572968,
+    "return_ytd": 4.0947681368191935,
+    "return_1y": 7.897830161705377,
+    "return_2y": 19.41143379509176,
+    "return_3y": 62.424677187948355,
+    "close": 339.63,
+    "marketCap": 31542096982,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_978",
+   "type": "CHARACTER",
+   "name": "보험·연금 컨설팅 브로커"
+  },
+  {
+   "id": "A_2467",
+   "type": "ASSET",
+   "name": "라이언스페셜티",
+   "exposure": {
+    "ticker": "RYAN",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 2.2232408892963518,
+    "return_3d": 1.156724880925375,
+    "return_7d": 6.826347305389224,
+    "return_15d": 8.305002428363295,
+    "return_1m": 8.226158699344822,
+    "return_ytd": -11.875123493380746,
+    "return_1y": -22.90406222990493,
+    "return_2y": -27.738172391445236,
+    "return_3y": 1.8962759881197222,
+    "close": 44.6,
+    "marketCap": 5774272755,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_979",
+   "type": "CHARACTER",
+   "name": "특수보험(E&S) 도매 브로커"
+  },
+  {
+   "id": "A_2468",
+   "type": "ASSET",
+   "name": "구스헤드",
+   "exposure": {
+    "ticker": "GSHD",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 4.416692049954318,
+    "return_3d": 7.3598496711556605,
+    "return_7d": 16.697872340425548,
+    "return_15d": 36.30218687872764,
+    "return_1m": 29.358490566037744,
+    "return_ytd": -2.2805017103762704,
+    "return_1y": -20.01866542230517,
+    "return_2y": -24.209595401282325,
+    "return_3y": 0.8235294117647118,
+    "close": 68.56,
+    "marketCap": 2562511106,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_980",
+   "type": "CHARACTER",
+   "name": "개인보험 디지털 브로커"
+  },
+  {
+   "id": "A_2243",
+   "type": "ASSET",
+   "name": "이리인뎀니티",
+   "exposure": {
+    "ticker": "ERIE",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 3.2381997804610263,
+    "return_3d": 4.6475799204005686,
+    "return_7d": 9.384925072690663,
+    "return_15d": 2.541200150962397,
+    "return_1m": -4.900245012250615,
+    "return_ytd": -11.979410388394951,
+    "return_1y": -30.28367783321454,
+    "return_2y": -44.755213157716376,
+    "return_3y": 11.683032655857506,
+    "close": 244.53,
+    "marketCap": 11294620623,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "C_981",
+   "type": "CHARACTER",
+   "name": "보험·중개 복합"
+  },
+  {
+   "id": "M_404",
+   "type": "MACRO",
+   "name": "P_C보험_하드마켓사이클"
+  },
+  {
+   "id": "M_173",
+   "type": "MACRO",
+   "name": "주주환원정책"
+  },
+  {
+   "id": "M_262",
+   "type": "MACRO",
+   "name": "금융시장변동성고조"
+  },
+  {
+   "id": "A_2911",
+   "type": "ASSET",
+   "name": "SPDR S&P Insurance ETF",
+   "exposure": {
+    "ticker": "KIE",
+    "exchange": "NYSEARCA",
+    "country": "US"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_2463",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012113"
+   ]
+  },
+  {
+   "from": "A_2463",
+   "to": "C_974",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017058"
+   ]
+  },
+  {
+   "from": "A_2464",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012114"
+   ]
+  },
+  {
+   "from": "A_2464",
+   "to": "C_975",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017059"
+   ]
+  },
+  {
+   "from": "A_2465",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012115"
+   ]
+  },
+  {
+   "from": "A_2465",
+   "to": "C_976",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017060"
+   ]
+  },
+  {
+   "from": "A_2466",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012116"
+   ]
+  },
+  {
+   "from": "A_2466",
+   "to": "C_977",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017061"
+   ]
+  },
+  {
+   "from": "A_1934",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012117"
+   ]
+  },
+  {
+   "from": "A_1934",
+   "to": "C_978",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017062"
+   ]
+  },
+  {
+   "from": "A_2467",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012118"
+   ]
+  },
+  {
+   "from": "A_2467",
+   "to": "C_979",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017063"
+   ]
+  },
+  {
+   "from": "A_2468",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012119"
+   ]
+  },
+  {
+   "from": "A_2468",
+   "to": "C_980",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017064"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012120"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "C_981",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017065"
+   ]
+  },
+  {
+   "from": "M_404",
+   "to": "T_477",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012121"
+   ]
+  },
+  {
+   "from": "M_173",
+   "to": "T_477",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012122"
+   ]
+  },
+  {
+   "from": "M_262",
+   "to": "T_477",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012123"
+   ]
+  },
+  {
+   "from": "A_2463",
+   "to": "A_2464",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019836"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "마쉬맥레넌과 에이온은 글로벌 보험 브로커 시장 양대 경쟁"
+  },
+  {
+   "from": "A_2465",
+   "to": "A_2466",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019837"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "아서J갤러거와 브라운앤브라운은 중형 보험 브로커 시장 경쟁"
+  },
+  {
+   "from": "A_1934",
+   "to": "A_2463",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019838"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "윌리스타워스왓슨과 마쉬맥레넌은 글로벌 보험 브로커 3강 경쟁"
+  },
+  {
+   "from": "A_2467",
+   "to": "A_2468",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019839"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "라이언스페셜티와 구스헤드는 전문·개인 보험 유통 시장 경쟁"
+  },
+  {
+   "from": "A_2465",
+   "to": "A_2464",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019840"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "아서J갤러거와 에이온은 기업 보험 중개 시장 경쟁"
+  },
+  {
+   "from": "A_2911",
+   "to": "T_477",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020825"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_2463",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012113"
+   ]
+  },
+  {
+   "from": "A_2463",
+   "to": "C_974",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017058"
+   ]
+  },
+  {
+   "from": "A_2464",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012114"
+   ]
+  },
+  {
+   "from": "A_2464",
+   "to": "C_975",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017059"
+   ]
+  },
+  {
+   "from": "A_2465",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012115"
+   ]
+  },
+  {
+   "from": "A_2465",
+   "to": "C_976",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017060"
+   ]
+  },
+  {
+   "from": "A_2466",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012116"
+   ]
+  },
+  {
+   "from": "A_2466",
+   "to": "C_977",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017061"
+   ]
+  },
+  {
+   "from": "A_1934",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012117"
+   ]
+  },
+  {
+   "from": "A_1934",
+   "to": "C_978",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017062"
+   ]
+  },
+  {
+   "from": "A_2467",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012118"
+   ]
+  },
+  {
+   "from": "A_2467",
+   "to": "C_979",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017063"
+   ]
+  },
+  {
+   "from": "A_2468",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012119"
+   ]
+  },
+  {
+   "from": "A_2468",
+   "to": "C_980",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017064"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "T_477",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_012120"
+   ]
+  },
+  {
+   "from": "A_2243",
+   "to": "C_981",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_017065"
+   ]
+  },
+  {
+   "from": "M_404",
+   "to": "T_477",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012121"
+   ]
+  },
+  {
+   "from": "M_173",
+   "to": "T_477",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012122"
+   ]
+  },
+  {
+   "from": "M_262",
+   "to": "T_477",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_012123"
+   ]
+  },
+  {
+   "from": "A_2463",
+   "to": "A_2464",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019836"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "마쉬맥레넌과 에이온은 글로벌 보험 브로커 시장 양대 경쟁"
+  },
+  {
+   "from": "A_2465",
+   "to": "A_2466",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019837"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "아서J갤러거와 브라운앤브라운은 중형 보험 브로커 시장 경쟁"
+  },
+  {
+   "from": "A_1934",
+   "to": "A_2463",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019838"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "윌리스타워스왓슨과 마쉬맥레넌은 글로벌 보험 브로커 3강 경쟁"
+  },
+  {
+   "from": "A_2467",
+   "to": "A_2468",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019839"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "라이언스페셜티와 구스헤드는 전문·개인 보험 유통 시장 경쟁"
+  },
+  {
+   "from": "A_2465",
+   "to": "A_2464",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_019840"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "아서J갤러거와 에이온은 기업 보험 중개 시장 경쟁"
+  },
+  {
+   "from": "A_2911",
+   "to": "T_477",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020825"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }
