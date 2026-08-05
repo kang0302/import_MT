@@ -36,6 +36,12 @@
     "kind": "관계",
     "title": "클라르나–애플 PARTNERS + CHR 추가",
     "detail": "클라르나가 애플 리스프로그램 독점파트너임을 반영해 애플 관련노드·PARTNERS 관계와 CHR을 추가했다."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
    }
   ]
  },
@@ -367,6 +373,16 @@
    "id": "C_5886",
    "type": "CHARACTER",
    "name": "애플 리스프로그램 독점파트너"
+  },
+  {
+   "id": "A_2889",
+   "type": "ASSET",
+   "name": "Amplify Digital Payments ETF",
+   "exposure": {
+    "ticker": "IPAY",
+    "exchange": "NYSEARCA",
+    "country": "US"
+   }
   }
  ],
  "edges": [
@@ -609,6 +625,16 @@
    ],
    "confidence": 0.72,
    "status": "verified"
+  },
+  {
+   "from": "A_2889",
+   "to": "T_150",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020620"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ],
  "links": [
@@ -850,6 +876,16 @@
     "EV_020542"
    ],
    "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_2889",
+   "to": "T_150",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020620"
+   ],
+   "confidence": 0.7,
    "status": "verified"
   }
  ]

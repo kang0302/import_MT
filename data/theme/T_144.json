@@ -31,6 +31,12 @@
     "kind": "보강",
     "title": "엣지 근거 구체 백필 + 2026 이벤트",
     "detail": "전 엣지 근거(호버 박스)를 종목·관계 사실로 구체화하고 2026 이벤트 2건을 추가했다."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
    }
   ]
  },
@@ -485,6 +491,16 @@
    "id": "C_2542",
    "type": "CHARACTER",
    "name": "중국공급망채용"
+  },
+  {
+   "id": "A_2865",
+   "type": "ASSET",
+   "name": "TIGER 차이나항셍테크",
+   "exposure": {
+    "ticker": "371160",
+    "exchange": "KRX",
+    "country": "KR"
+   }
   }
  ],
  "edges": [
@@ -927,6 +943,16 @@
    ],
    "confidence": 0.7,
    "status": "verified"
+  },
+  {
+   "from": "A_2865",
+   "to": "T_144",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020616"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ],
  "links": [
@@ -1366,6 +1392,16 @@
    "type": "HAS_TRAIT",
    "evidence": [
     "EV_004425"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_2865",
+   "to": "T_144",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020616"
    ],
    "confidence": 0.7,
    "status": "verified"

@@ -1,816 +1,852 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_310",
-  "themeName": "글로벌보험사",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-24T00:00:00+09:00",
-    "description": "글로벌 보험사 (재보험·손해보험·생명보험) — 버크셔해서웨이 (BRK-B) + Allianz + AIG + Prudential + Chubb + Munich Re. 금리 사이클 + 기후 재보험 손실 + 자율주행 손해율 감소가 핵심 변수. 듀레이션 자산·인플레 헷지 성격.",
-    "notes": "T_310 신규 — 글로벌 보험 6사",
-    "sources": [],
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-24",
-        "kind": "수정",
-        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_310",
-      "type": "THEME",
-      "name": "글로벌보험사"
-    },
-    {
-      "id": "A_1902",
-      "type": "ASSET",
-      "name": "버크셔해서웨이",
-      "exposure": {
-        "ticker": "BRK-B",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.7951046498031911,
-        "return_3d": 1.479359598179264,
-        "return_7d": 4.50366718525852,
-        "return_15d": 5.32081695819504,
-        "return_1m": 2.100359271980734,
-        "return_ytd": 4.099828922209925,
-        "return_1y": 9.385838761526099,
-        "return_2y": 17.214340751484404,
-        "return_3y": 47.85740830736687,
-        "close": 517.22,
-        "marketCap": 1115567971055,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1903",
-      "type": "ASSET",
-      "name": "알리안츠",
-      "exposure": {
-        "ticker": "ALIZY",
-        "exchange": "OTC",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.8644953759549656,
-        "return_3d": 0.6419257773319975,
-        "return_7d": 3.5286834502682662,
-        "return_15d": 4.804679339878848,
-        "return_1m": 4.195223260643832,
-        "return_ytd": 10.482272627174648,
-        "return_1y": 29.67174980615148,
-        "return_2y": 77.40452616690241,
-        "return_3y": 108.17427385892118,
-        "close": 50.17,
-        "marketCap": 190767562412,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1904",
-      "type": "ASSET",
-      "name": "AIG",
-      "exposure": {
-        "ticker": "AIG",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.6726741972331363,
-        "return_3d": 0.5450627455951151,
-        "return_7d": 0.3288641538072179,
-        "return_15d": 0.40506329113922934,
-        "return_1m": -1.770897832817342,
-        "return_ytd": -5.873976504093992,
-        "return_1y": 3.0129870129870007,
-        "return_2y": 0.39235539805086983,
-        "return_3y": 31.84840425531914,
-        "close": 79.32,
-        "marketCap": 42055939920,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1905",
-      "type": "ASSET",
-      "name": "프루덴셜파이낸셜",
-      "exposure": {
-        "ticker": "PRU",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.4553585948934735,
-        "return_3d": 0.6271890527001833,
-        "return_7d": 2.9843281093697938,
-        "return_15d": 7.622615210384187,
-        "return_1m": 8.102905145257267,
-        "return_ytd": 8.492140159831397,
-        "return_1y": 22.669049746797754,
-        "return_2y": -1.9212448396316195,
-        "return_3y": 28.31325301204819,
-        "close": 123.54,
-        "marketCap": 42868483279,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1771",
-      "type": "ASSET",
-      "name": "CHUBB",
-      "exposure": {
-        "ticker": "CB",
-        "exchange": "NYSE",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 0.020101656950854974,
-        "return_3d": -0.528344995002128,
-        "return_7d": -3.1827658095899936,
-        "return_15d": 0.6007740742880241,
-        "return_1m": -2.3083611477294985,
-        "return_ytd": 12.333096819970324,
-        "return_1y": 30.254300673148848,
-        "return_2y": 25.894599869876366,
-        "return_3y": 69.09408680454415,
-        "close": 348.3,
-        "marketCap": 134374140000,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1906",
-      "type": "ASSET",
-      "name": "뮌헨재보험",
-      "exposure": {
-        "ticker": "MURGY",
-        "exchange": "OTC",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": -0.7506255212677226,
-        "return_3d": -1.1627906976744096,
-        "return_7d": 2.941176470588225,
-        "return_15d": 1.7094017094017255,
-        "return_1m": 4.385964912280693,
-        "return_ytd": -6.812842599843371,
-        "return_1y": -9.780136467020462,
-        "return_2y": 20.080726538849646,
-        "return_3y": 54.34500648508431,
-        "close": 11.9,
-        "marketCap": 15510579000,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "M_072",
-      "type": "MACRO",
-      "name": "금리인상"
-    },
-    {
-      "id": "M_075",
-      "type": "MACRO",
-      "name": "기후변화"
-    },
-    {
-      "id": "M_021",
-      "type": "MACRO",
-      "name": "자율주행보급확대"
-    },
-    {
-      "id": "BF_555",
-      "type": "BUSINESS_FIELD",
-      "name": "재보험"
-    },
-    {
-      "id": "BF_556",
-      "type": "BUSINESS_FIELD",
-      "name": "손해보험"
-    },
-    {
-      "id": "BF_557",
-      "type": "BUSINESS_FIELD",
-      "name": "생명보험"
-    },
-    {
-      "id": "C_4506",
-      "type": "CHARACTER",
-      "name": "보험플로트복합기업"
-    },
-    {
-      "id": "C_4507",
-      "type": "CHARACTER",
-      "name": "유럽종합보험자산운용"
-    },
-    {
-      "id": "C_4508",
-      "type": "CHARACTER",
-      "name": "글로벌손해보험"
-    },
-    {
-      "id": "C_4509",
-      "type": "CHARACTER",
-      "name": "생명보험연금"
-    },
-    {
-      "id": "C_4510",
-      "type": "CHARACTER",
-      "name": "상업손해보험1위"
-    },
-    {
-      "id": "C_4511",
-      "type": "CHARACTER",
-      "name": "글로벌재보험1위"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_310",
+ "themeName": "글로벌보험사",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "A_1902",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009855"
-      ]
-    },
-    {
-      "from": "A_1903",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009856"
-      ]
-    },
-    {
-      "from": "A_1904",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009857"
-      ]
-    },
-    {
-      "from": "A_1905",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009858"
-      ]
-    },
-    {
-      "from": "A_1771",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009859"
-      ]
-    },
-    {
-      "from": "A_1906",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009860"
-      ]
-    },
-    {
-      "from": "M_072",
-      "to": "T_310",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_009861"
-      ]
-    },
-    {
-      "from": "M_075",
-      "to": "T_310",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_009862"
-      ]
-    },
-    {
-      "from": "M_021",
-      "to": "T_310",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_009863"
-      ]
-    },
-    {
-      "from": "A_1902",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016095"
-      ]
-    },
-    {
-      "from": "A_1902",
-      "to": "BF_555",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016096"
-      ]
-    },
-    {
-      "from": "A_1903",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016097"
-      ]
-    },
-    {
-      "from": "A_1903",
-      "to": "BF_557",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016098"
-      ]
-    },
-    {
-      "from": "A_1904",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016099"
-      ]
-    },
-    {
-      "from": "A_1904",
-      "to": "BF_557",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016100"
-      ]
-    },
-    {
-      "from": "A_1905",
-      "to": "BF_557",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016101"
-      ]
-    },
-    {
-      "from": "A_1771",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016102"
-      ]
-    },
-    {
-      "from": "A_1906",
-      "to": "BF_555",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016103"
-      ]
-    },
-    {
-      "from": "A_1902",
-      "to": "C_4506",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009864"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1903",
-      "to": "C_4507",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009865"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1904",
-      "to": "C_4508",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009866"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1905",
-      "to": "C_4509",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009867"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1771",
-      "to": "C_4510",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009868"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1906",
-      "to": "C_4511",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009869"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1904",
-      "to": "A_1771",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018391"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "AIG와 처브는 글로벌 상업용 손해보험(P&C) 시장의 직접 경쟁사다."
-    },
-    {
-      "from": "A_1904",
-      "to": "A_1903",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018392"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "AIG와 알리안츠는 글로벌 손해·기업보험에서 경쟁한다."
-    },
-    {
-      "from": "A_1771",
-      "to": "A_1903",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018393"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "처브와 알리안츠는 글로벌 상업보험·특종보험에서 경쟁한다."
-    },
-    {
-      "from": "A_1902",
-      "to": "A_1906",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018394"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버크셔해서웨이(재보험)와 뮌헨재보험은 글로벌 재보험 시장에서 경쟁한다."
-    },
-    {
-      "from": "A_1903",
-      "to": "A_1906",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018395"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "알리안츠와 뮌헨재보험은 독일 대형 보험사로 생명·재보험에서 경쟁한다."
-    },
-    {
-      "from": "A_1905",
-      "to": "A_1903",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018396"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "프루덴셜파이낸셜과 알리안츠는 생명보험·연금·자산운용에서 경쟁한다."
-    }
-  ],
-  "links": [
-    {
-      "from": "A_1902",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009855"
-      ]
-    },
-    {
-      "from": "A_1903",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009856"
-      ]
-    },
-    {
-      "from": "A_1904",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009857"
-      ]
-    },
-    {
-      "from": "A_1905",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009858"
-      ]
-    },
-    {
-      "from": "A_1771",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009859"
-      ]
-    },
-    {
-      "from": "A_1906",
-      "to": "T_310",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_009860"
-      ]
-    },
-    {
-      "from": "M_072",
-      "to": "T_310",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_009861"
-      ]
-    },
-    {
-      "from": "M_075",
-      "to": "T_310",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_009862"
-      ]
-    },
-    {
-      "from": "M_021",
-      "to": "T_310",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_009863"
-      ]
-    },
-    {
-      "from": "A_1902",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016095"
-      ]
-    },
-    {
-      "from": "A_1902",
-      "to": "BF_555",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016096"
-      ]
-    },
-    {
-      "from": "A_1903",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016097"
-      ]
-    },
-    {
-      "from": "A_1903",
-      "to": "BF_557",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016098"
-      ]
-    },
-    {
-      "from": "A_1904",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016099"
-      ]
-    },
-    {
-      "from": "A_1904",
-      "to": "BF_557",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016100"
-      ]
-    },
-    {
-      "from": "A_1905",
-      "to": "BF_557",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016101"
-      ]
-    },
-    {
-      "from": "A_1771",
-      "to": "BF_556",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016102"
-      ]
-    },
-    {
-      "from": "A_1906",
-      "to": "BF_555",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_016103"
-      ]
-    },
-    {
-      "from": "A_1902",
-      "to": "C_4506",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009864"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1903",
-      "to": "C_4507",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009865"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1904",
-      "to": "C_4508",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009866"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1905",
-      "to": "C_4509",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009867"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1771",
-      "to": "C_4510",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009868"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1906",
-      "to": "C_4511",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_009869"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1904",
-      "to": "A_1771",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018391"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "AIG와 처브는 글로벌 상업용 손해보험(P&C) 시장의 직접 경쟁사다."
-    },
-    {
-      "from": "A_1904",
-      "to": "A_1903",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018392"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "AIG와 알리안츠는 글로벌 손해·기업보험에서 경쟁한다."
-    },
-    {
-      "from": "A_1771",
-      "to": "A_1903",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018393"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "처브와 알리안츠는 글로벌 상업보험·특종보험에서 경쟁한다."
-    },
-    {
-      "from": "A_1902",
-      "to": "A_1906",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018394"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "버크셔해서웨이(재보험)와 뮌헨재보험은 글로벌 재보험 시장에서 경쟁한다."
-    },
-    {
-      "from": "A_1903",
-      "to": "A_1906",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018395"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "알리안츠와 뮌헨재보험은 독일 대형 보험사로 생명·재보험에서 경쟁한다."
-    },
-    {
-      "from": "A_1905",
-      "to": "A_1903",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018396"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "프루덴셜파이낸셜과 알리안츠는 생명보험·연금·자산운용에서 경쟁한다."
-    }
+  "dataAsOf": "2026-07-24T00:00:00+09:00",
+  "description": "글로벌 보험사 (재보험·손해보험·생명보험) — 버크셔해서웨이 (BRK-B) + Allianz + AIG + Prudential + Chubb + Munich Re. 금리 사이클 + 기후 재보험 손실 + 자율주행 손해율 감소가 핵심 변수. 듀레이션 자산·인플레 헷지 성격.",
+  "notes": "T_310 신규 — 글로벌 보험 6사",
+  "sources": [],
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-24",
+    "kind": "수정",
+    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_310",
+   "type": "THEME",
+   "name": "글로벌보험사"
+  },
+  {
+   "id": "A_1902",
+   "type": "ASSET",
+   "name": "버크셔해서웨이",
+   "exposure": {
+    "ticker": "BRK-B",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.7951046498031911,
+    "return_3d": 1.479359598179264,
+    "return_7d": 4.50366718525852,
+    "return_15d": 5.32081695819504,
+    "return_1m": 2.100359271980734,
+    "return_ytd": 4.099828922209925,
+    "return_1y": 9.385838761526099,
+    "return_2y": 17.214340751484404,
+    "return_3y": 47.85740830736687,
+    "close": 517.22,
+    "marketCap": 1115567971055,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1903",
+   "type": "ASSET",
+   "name": "알리안츠",
+   "exposure": {
+    "ticker": "ALIZY",
+    "exchange": "OTC",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.8644953759549656,
+    "return_3d": 0.6419257773319975,
+    "return_7d": 3.5286834502682662,
+    "return_15d": 4.804679339878848,
+    "return_1m": 4.195223260643832,
+    "return_ytd": 10.482272627174648,
+    "return_1y": 29.67174980615148,
+    "return_2y": 77.40452616690241,
+    "return_3y": 108.17427385892118,
+    "close": 50.17,
+    "marketCap": 190767562412,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1904",
+   "type": "ASSET",
+   "name": "AIG",
+   "exposure": {
+    "ticker": "AIG",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.6726741972331363,
+    "return_3d": 0.5450627455951151,
+    "return_7d": 0.3288641538072179,
+    "return_15d": 0.40506329113922934,
+    "return_1m": -1.770897832817342,
+    "return_ytd": -5.873976504093992,
+    "return_1y": 3.0129870129870007,
+    "return_2y": 0.39235539805086983,
+    "return_3y": 31.84840425531914,
+    "close": 79.32,
+    "marketCap": 42055939920,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1905",
+   "type": "ASSET",
+   "name": "프루덴셜파이낸셜",
+   "exposure": {
+    "ticker": "PRU",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.4553585948934735,
+    "return_3d": 0.6271890527001833,
+    "return_7d": 2.9843281093697938,
+    "return_15d": 7.622615210384187,
+    "return_1m": 8.102905145257267,
+    "return_ytd": 8.492140159831397,
+    "return_1y": 22.669049746797754,
+    "return_2y": -1.9212448396316195,
+    "return_3y": 28.31325301204819,
+    "close": 123.54,
+    "marketCap": 42868483279,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1771",
+   "type": "ASSET",
+   "name": "CHUBB",
+   "exposure": {
+    "ticker": "CB",
+    "exchange": "NYSE",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 0.020101656950854974,
+    "return_3d": -0.528344995002128,
+    "return_7d": -3.1827658095899936,
+    "return_15d": 0.6007740742880241,
+    "return_1m": -2.3083611477294985,
+    "return_ytd": 12.333096819970324,
+    "return_1y": 30.254300673148848,
+    "return_2y": 25.894599869876366,
+    "return_3y": 69.09408680454415,
+    "close": 348.3,
+    "marketCap": 134374140000,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1906",
+   "type": "ASSET",
+   "name": "뮌헨재보험",
+   "exposure": {
+    "ticker": "MURGY",
+    "exchange": "OTC",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": -0.7506255212677226,
+    "return_3d": -1.1627906976744096,
+    "return_7d": 2.941176470588225,
+    "return_15d": 1.7094017094017255,
+    "return_1m": 4.385964912280693,
+    "return_ytd": -6.812842599843371,
+    "return_1y": -9.780136467020462,
+    "return_2y": 20.080726538849646,
+    "return_3y": 54.34500648508431,
+    "close": 11.9,
+    "marketCap": 15510579000,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "M_072",
+   "type": "MACRO",
+   "name": "금리인상"
+  },
+  {
+   "id": "M_075",
+   "type": "MACRO",
+   "name": "기후변화"
+  },
+  {
+   "id": "M_021",
+   "type": "MACRO",
+   "name": "자율주행보급확대"
+  },
+  {
+   "id": "BF_555",
+   "type": "BUSINESS_FIELD",
+   "name": "재보험"
+  },
+  {
+   "id": "BF_556",
+   "type": "BUSINESS_FIELD",
+   "name": "손해보험"
+  },
+  {
+   "id": "BF_557",
+   "type": "BUSINESS_FIELD",
+   "name": "생명보험"
+  },
+  {
+   "id": "C_4506",
+   "type": "CHARACTER",
+   "name": "보험플로트복합기업"
+  },
+  {
+   "id": "C_4507",
+   "type": "CHARACTER",
+   "name": "유럽종합보험자산운용"
+  },
+  {
+   "id": "C_4508",
+   "type": "CHARACTER",
+   "name": "글로벌손해보험"
+  },
+  {
+   "id": "C_4509",
+   "type": "CHARACTER",
+   "name": "생명보험연금"
+  },
+  {
+   "id": "C_4510",
+   "type": "CHARACTER",
+   "name": "상업손해보험1위"
+  },
+  {
+   "id": "C_4511",
+   "type": "CHARACTER",
+   "name": "글로벌재보험1위"
+  },
+  {
+   "id": "A_2911",
+   "type": "ASSET",
+   "name": "SPDR S&P Insurance ETF",
+   "exposure": {
+    "ticker": "KIE",
+    "exchange": "NYSEARCA",
+    "country": "US"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_1902",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009855"
+   ]
+  },
+  {
+   "from": "A_1903",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009856"
+   ]
+  },
+  {
+   "from": "A_1904",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009857"
+   ]
+  },
+  {
+   "from": "A_1905",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009858"
+   ]
+  },
+  {
+   "from": "A_1771",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009859"
+   ]
+  },
+  {
+   "from": "A_1906",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009860"
+   ]
+  },
+  {
+   "from": "M_072",
+   "to": "T_310",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_009861"
+   ]
+  },
+  {
+   "from": "M_075",
+   "to": "T_310",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_009862"
+   ]
+  },
+  {
+   "from": "M_021",
+   "to": "T_310",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_009863"
+   ]
+  },
+  {
+   "from": "A_1902",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016095"
+   ]
+  },
+  {
+   "from": "A_1902",
+   "to": "BF_555",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016096"
+   ]
+  },
+  {
+   "from": "A_1903",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016097"
+   ]
+  },
+  {
+   "from": "A_1903",
+   "to": "BF_557",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016098"
+   ]
+  },
+  {
+   "from": "A_1904",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016099"
+   ]
+  },
+  {
+   "from": "A_1904",
+   "to": "BF_557",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016100"
+   ]
+  },
+  {
+   "from": "A_1905",
+   "to": "BF_557",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016101"
+   ]
+  },
+  {
+   "from": "A_1771",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016102"
+   ]
+  },
+  {
+   "from": "A_1906",
+   "to": "BF_555",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016103"
+   ]
+  },
+  {
+   "from": "A_1902",
+   "to": "C_4506",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009864"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1903",
+   "to": "C_4507",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009865"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1904",
+   "to": "C_4508",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009866"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1905",
+   "to": "C_4509",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009867"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1771",
+   "to": "C_4510",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009868"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1906",
+   "to": "C_4511",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009869"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1904",
+   "to": "A_1771",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018391"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "AIG와 처브는 글로벌 상업용 손해보험(P&C) 시장의 직접 경쟁사다."
+  },
+  {
+   "from": "A_1904",
+   "to": "A_1903",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018392"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "AIG와 알리안츠는 글로벌 손해·기업보험에서 경쟁한다."
+  },
+  {
+   "from": "A_1771",
+   "to": "A_1903",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018393"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "처브와 알리안츠는 글로벌 상업보험·특종보험에서 경쟁한다."
+  },
+  {
+   "from": "A_1902",
+   "to": "A_1906",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018394"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버크셔해서웨이(재보험)와 뮌헨재보험은 글로벌 재보험 시장에서 경쟁한다."
+  },
+  {
+   "from": "A_1903",
+   "to": "A_1906",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018395"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "알리안츠와 뮌헨재보험은 독일 대형 보험사로 생명·재보험에서 경쟁한다."
+  },
+  {
+   "from": "A_1905",
+   "to": "A_1903",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018396"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "프루덴셜파이낸셜과 알리안츠는 생명보험·연금·자산운용에서 경쟁한다."
+  },
+  {
+   "from": "A_2911",
+   "to": "T_310",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020704"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_1902",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009855"
+   ]
+  },
+  {
+   "from": "A_1903",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009856"
+   ]
+  },
+  {
+   "from": "A_1904",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009857"
+   ]
+  },
+  {
+   "from": "A_1905",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009858"
+   ]
+  },
+  {
+   "from": "A_1771",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009859"
+   ]
+  },
+  {
+   "from": "A_1906",
+   "to": "T_310",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_009860"
+   ]
+  },
+  {
+   "from": "M_072",
+   "to": "T_310",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_009861"
+   ]
+  },
+  {
+   "from": "M_075",
+   "to": "T_310",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_009862"
+   ]
+  },
+  {
+   "from": "M_021",
+   "to": "T_310",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_009863"
+   ]
+  },
+  {
+   "from": "A_1902",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016095"
+   ]
+  },
+  {
+   "from": "A_1902",
+   "to": "BF_555",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016096"
+   ]
+  },
+  {
+   "from": "A_1903",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016097"
+   ]
+  },
+  {
+   "from": "A_1903",
+   "to": "BF_557",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016098"
+   ]
+  },
+  {
+   "from": "A_1904",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016099"
+   ]
+  },
+  {
+   "from": "A_1904",
+   "to": "BF_557",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016100"
+   ]
+  },
+  {
+   "from": "A_1905",
+   "to": "BF_557",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016101"
+   ]
+  },
+  {
+   "from": "A_1771",
+   "to": "BF_556",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016102"
+   ]
+  },
+  {
+   "from": "A_1906",
+   "to": "BF_555",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_016103"
+   ]
+  },
+  {
+   "from": "A_1902",
+   "to": "C_4506",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009864"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1903",
+   "to": "C_4507",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009865"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1904",
+   "to": "C_4508",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009866"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1905",
+   "to": "C_4509",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009867"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1771",
+   "to": "C_4510",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009868"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1906",
+   "to": "C_4511",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_009869"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1904",
+   "to": "A_1771",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018391"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "AIG와 처브는 글로벌 상업용 손해보험(P&C) 시장의 직접 경쟁사다."
+  },
+  {
+   "from": "A_1904",
+   "to": "A_1903",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018392"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "AIG와 알리안츠는 글로벌 손해·기업보험에서 경쟁한다."
+  },
+  {
+   "from": "A_1771",
+   "to": "A_1903",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018393"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "처브와 알리안츠는 글로벌 상업보험·특종보험에서 경쟁한다."
+  },
+  {
+   "from": "A_1902",
+   "to": "A_1906",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018394"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "버크셔해서웨이(재보험)와 뮌헨재보험은 글로벌 재보험 시장에서 경쟁한다."
+  },
+  {
+   "from": "A_1903",
+   "to": "A_1906",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018395"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "알리안츠와 뮌헨재보험은 독일 대형 보험사로 생명·재보험에서 경쟁한다."
+  },
+  {
+   "from": "A_1905",
+   "to": "A_1903",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018396"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "프루덴셜파이낸셜과 알리안츠는 생명보험·연금·자산운용에서 경쟁한다."
+  },
+  {
+   "from": "A_2911",
+   "to": "T_310",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020704"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }

@@ -37,6 +37,12 @@
     "kind": "수정",
     "title": "자산 CHR 백필",
     "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
    }
   ]
  },
@@ -654,6 +660,26 @@
    "id": "C_5264",
    "type": "CHARACTER",
    "name": "대만DRAM"
+  },
+  {
+   "id": "A_2869",
+   "type": "ASSET",
+   "name": "TIGER 반도체TOP10",
+   "exposure": {
+    "ticker": "396500",
+    "exchange": "KRX",
+    "country": "KR"
+   }
+  },
+  {
+   "id": "A_200",
+   "type": "ASSET",
+   "name": "iShares Semiconductor ETF",
+   "exposure": {
+    "ticker": "SOXX",
+    "exchange": "NASDAQ",
+    "country": "US"
+   }
   }
  ],
  "edges": [
@@ -1194,6 +1220,26 @@
    "confidence": 0.8,
    "status": "verified",
    "rationale": "퓨어스토리지와 씨게이트는 엔터프라이즈 스토리지 시장 경쟁"
+  },
+  {
+   "from": "A_2869",
+   "to": "T_025",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020561"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_200",
+   "to": "T_025",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020562"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ],
  "links": [
@@ -1734,6 +1780,26 @@
    "confidence": 0.8,
    "status": "verified",
    "rationale": "퓨어스토리지와 씨게이트는 엔터프라이즈 스토리지 시장 경쟁"
+  },
+  {
+   "from": "A_2869",
+   "to": "T_025",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020561"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_200",
+   "to": "T_025",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020562"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
   }
  ]
 }

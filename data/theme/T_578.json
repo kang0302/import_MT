@@ -1,699 +1,735 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_578",
-  "themeName": "글로벌가스발전르네상스",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-29T00:00:00+09:00",
-    "description": "글로벌가스발전르네상스 — 친환경 기조로 외면받던 가스/LNG 발전이 AI 데이터센터·반도체 팹의 24시간 안정 전력을 위한 필수 백업 전원으로 부활. 재생에너지의 간헐성을 즉각 출력조정 가능한 LNG 발전이 보완. 2025년 글로벌 신규 가스발전 개발 1047GW(+31%), 미국 252GW로 중국 제치고 1위. 독일은 2026년 총 10GW 급전가능 설비(가스 8GW) 경매 예정. 가스터빈(GE버노바·두산)·LNG 공급(셰니에르·가스공사)·백업발전(RWE) 수혜.",
-    "notes": "T_578 신규(2026-07-05) — MoneyTree AI Studio 제안 기반",
-    "sources": [],
-    "changelog": [
-      {
-        "date": "2026-08-04",
-        "kind": "보강",
-        "title": "2궤도 관계 엣지 추가",
-        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 2건 백필(리서치 기반)."
-      },
-      {
-        "date": "2026-07-29",
-        "kind": "수정",
-        "title": "AI 전력 고평가 폭락 이벤트 추가",
-        "detail": "AI 전력수요 랠리 장기화·고평가 부담에 따른 되돌림 폭락 반영."
-      },
-      {
-        "date": "2026-07-25",
-        "kind": "수정",
-        "title": "구체적 엣지 백필 + 이벤트",
-        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_578",
-      "type": "THEME",
-      "name": "글로벌가스발전르네상스"
-    },
-    {
-      "id": "A_167",
-      "type": "ASSET",
-      "name": "GE버노바",
-      "exposure": {
-        "ticker": "GEV",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "GE버노바(GEV)는 미국 신규 가스발전 개발 252GW 1위 환경에서 AI 데이터센터 백업용 HA급 중대형 가스터빈을 공급하는 대표 수혜주다.",
-        "theme_role": "가스터빈1위",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 1.1690969049227284,
-        "return_3d": 3.7220717326218455,
-        "return_7d": 0.37250554323724483,
-        "return_15d": -4.453991988818117,
-        "return_1m": -11.589007326134503,
-        "return_ytd": 49.883010815981166,
-        "return_1y": 55.145468392993145,
-        "return_2y": 526.0172095881992,
-        "return_3y": null,
-        "close": 1018.53,
-        "marketCap": 271268761608,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_489",
-      "type": "ASSET",
-      "name": "셰니에르에너지",
-      "exposure": {
-        "ticker": "LNG",
-        "exchange": "NYSE",
-        "country": "US",
-        "business_desc": "셰니에르에너지(LNG)는 사빈패스·코퍼스크리스티 LNG 수출 터미널로 데이터센터 전력용 가스 원료를 공급하는 미 최대 LNG 수출사다.",
-        "theme_role": "LNG수출",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -0.30610663360196577,
-        "return_3d": -0.2983802216538711,
-        "return_7d": -4.608482871125618,
-        "return_15d": -2.920424102931729,
-        "return_1m": 4.551180462432458,
-        "return_ytd": 30.07583417593529,
-        "return_1y": 7.964416096680793,
-        "return_2y": 41.46140312293822,
-        "return_3y": 61.30023196037868,
-        "close": 257.29,
-        "marketCap": 53915634080,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_2563",
-      "type": "ASSET",
-      "name": "한국가스공사",
-      "exposure": {
-        "ticker": "036460",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "한국가스공사(036460)는 국내 LNG 도입·공급 독점 사업자로 데이터센터·반도체 팹 전력용 가스 공급 게이트웨이다.",
-        "theme_role": "국내LNG공급",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -0.4398826979472137,
-        "return_3d": -1.4513788098693747,
-        "return_7d": -3.276353276353272,
-        "return_15d": 4.945904173106652,
-        "return_1m": 2.413273001508287,
-        "return_ytd": -11.588541666666663,
-        "return_1y": -23.626881001027666,
-        "return_2y": -23.420723858897162,
-        "return_3y": null,
-        "close": 33950,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_1328",
-      "type": "ASSET",
-      "name": "SK가스",
-      "exposure": {
-        "ticker": "018670",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "SK가스(018670)는 LPG 유통과 LNG 복합발전 진출로 국내 발전용 가스 밸류체인에 위치한다.",
-        "theme_role": "발전용가스",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 0.0,
-        "return_3d": -4.4742729306487705,
-        "return_7d": -11.158387998086939,
-        "return_15d": 1.8633139883465155,
-        "return_1m": -5.300699321512337,
-        "return_ytd": 1.2441106306773753,
-        "return_1y": -20.351539192347456,
-        "return_2y": 32.44560690316576,
-        "return_3y": null,
-        "close": 213500,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_161",
-      "type": "ASSET",
-      "name": "두산에너빌리티",
-      "exposure": {
-        "ticker": "034020",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "두산에너빌리티(034020)는 270MW급 가스터빈 국산화로 국내 데이터센터·팹 전력 수요 확대 시 가스복합발전 기기를 공급한다.",
-        "theme_role": "국산가스터빈",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 5.47945205479452,
-        "return_3d": 14.754098360655732,
-        "return_7d": 8.60366713681242,
-        "return_15d": 8.60366713681242,
-        "return_1m": -9.941520467836263,
-        "return_ytd": 2.393617021276606,
-        "return_1y": 21.451104100946374,
-        "return_2y": 368.9485761223029,
-        "return_3y": null,
-        "close": 77000,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_2611",
-      "type": "ASSET",
-      "name": "RWE",
-      "exposure": {
-        "ticker": "RWE",
-        "exchange": "XETRA",
-        "country": "DE",
-        "business_desc": "RWE는 게르슈타인베르크 가스블록이 독일 용량예비 설비로 낙찰되고 수소대응 CCGT를 준비하는 독일 백업 가스발전 대표주다.",
-        "theme_role": "독일백업발전",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": -0.7713884992987308,
-        "return_3d": 0.6043370067543519,
-        "return_7d": -3.741496598639449,
-        "return_15d": -1.4623955431754765,
-        "return_1m": -1.5309672929714635,
-        "return_ytd": 20.75954768508641,
-        "return_1y": 55.11098931214031,
-        "return_2y": 82.58064516129033,
-        "return_3y": 46.784232365145215,
-        "close": 56.6,
-        "marketCap": 42433510326,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "BF_084",
-      "type": "BUSINESS_FIELD",
-      "name": "중대형가스터빈"
-    },
-    {
-      "id": "BF_196",
-      "type": "BUSINESS_FIELD",
-      "name": "가스터빈/백업발전"
-    },
-    {
-      "id": "BF_115",
-      "type": "BUSINESS_FIELD",
-      "name": "LNG채굴/수출"
-    },
-    {
-      "id": "C_1732",
-      "type": "CHARACTER",
-      "name": "데이터센터백업터빈세계1위수혜"
-    },
-    {
-      "id": "C_1733",
-      "type": "CHARACTER",
-      "name": "LNG수출터미널데이터센터원료공급"
-    },
-    {
-      "id": "C_1734",
-      "type": "CHARACTER",
-      "name": "LNG데이터센터전력공급게이트웨이"
-    },
-    {
-      "id": "C_1735",
-      "type": "CHARACTER",
-      "name": "국내발전용가스공급밸류체인"
-    },
-    {
-      "id": "C_1736",
-      "type": "CHARACTER",
-      "name": "국내가스터빈국산화발전기기공급"
-    },
-    {
-      "id": "C_1737",
-      "type": "CHARACTER",
-      "name": "독일급전가능백업가스발전수혜"
-    },
-    {
-      "id": "M_035",
-      "type": "MACRO",
-      "name": "AI데이터센터전력수요증가"
-    },
-    {
-      "id": "M_121",
-      "type": "MACRO",
-      "name": "LNG가격"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_578",
+ "themeName": "글로벌가스발전르네상스",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "A_167",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013175"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013176"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_2563",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013177"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_1328",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013178"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_161",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013179"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2611",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013180"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "BF_084",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001474"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_161",
-      "to": "BF_084",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001475"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "BF_115",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001476"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_2611",
-      "to": "BF_196",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001477"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "C_1732",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001478"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "C_1733",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001479"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_2563",
-      "to": "C_1734",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001480"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_1328",
-      "to": "C_1735",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001481"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_161",
-      "to": "C_1736",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001482"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_2611",
-      "to": "C_1737",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001483"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "M_035",
-      "to": "T_578",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013181"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_121",
-      "to": "T_578",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013182"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "A_2563",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_018711"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "셰니에르에너지는 2012년 체결한 20년 SPA에 따라 사빈패스에서 연 약 350만 톤의 LNG를 한국가스공사(KOGAS)에 공급한다."
-    },
-    {
-      "from": "A_167",
-      "to": "A_161",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018712"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GE버노바는 세계 가스터빈 시장의 '빅3' 중 하나이며, 국산 대형 가스터빈을 개발해 이 과점을 파고든 두산에너빌리티와 직접 경쟁한다."
-    }
-  ],
-  "links": [
-    {
-      "from": "A_167",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013175"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013176"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_2563",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013177"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_1328",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013178"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_161",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013179"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_2611",
-      "to": "T_578",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_013180"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "BF_084",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001474"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_161",
-      "to": "BF_084",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001475"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "BF_115",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001476"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_2611",
-      "to": "BF_196",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_001477"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_167",
-      "to": "C_1732",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001478"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "C_1733",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001479"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_2563",
-      "to": "C_1734",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001480"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_1328",
-      "to": "C_1735",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001481"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_161",
-      "to": "C_1736",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001482"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_2611",
-      "to": "C_1737",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_001483"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "M_035",
-      "to": "T_578",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013181"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_121",
-      "to": "T_578",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_013182"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_489",
-      "to": "A_2563",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_018711"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "셰니에르에너지는 2012년 체결한 20년 SPA에 따라 사빈패스에서 연 약 350만 톤의 LNG를 한국가스공사(KOGAS)에 공급한다."
-    },
-    {
-      "from": "A_167",
-      "to": "A_161",
-      "type": "COMPETES",
-      "evidence": [
-        "EV_018712"
-      ],
-      "confidence": 0.8,
-      "status": "verified",
-      "rationale": "GE버노바는 세계 가스터빈 시장의 '빅3' 중 하나이며, 국산 대형 가스터빈을 개발해 이 과점을 파고든 두산에너빌리티와 직접 경쟁한다."
-    }
+  "dataAsOf": "2026-07-29T00:00:00+09:00",
+  "description": "글로벌가스발전르네상스 — 친환경 기조로 외면받던 가스/LNG 발전이 AI 데이터센터·반도체 팹의 24시간 안정 전력을 위한 필수 백업 전원으로 부활. 재생에너지의 간헐성을 즉각 출력조정 가능한 LNG 발전이 보완. 2025년 글로벌 신규 가스발전 개발 1047GW(+31%), 미국 252GW로 중국 제치고 1위. 독일은 2026년 총 10GW 급전가능 설비(가스 8GW) 경매 예정. 가스터빈(GE버노바·두산)·LNG 공급(셰니에르·가스공사)·백업발전(RWE) 수혜.",
+  "notes": "T_578 신규(2026-07-05) — MoneyTree AI Studio 제안 기반",
+  "sources": [],
+  "changelog": [
+   {
+    "date": "2026-08-04",
+    "kind": "보강",
+    "title": "2궤도 관계 엣지 추가",
+    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 2건 백필(리서치 기반)."
+   },
+   {
+    "date": "2026-07-29",
+    "kind": "수정",
+    "title": "AI 전력 고평가 폭락 이벤트 추가",
+    "detail": "AI 전력수요 랠리 장기화·고평가 부담에 따른 되돌림 폭락 반영."
+   },
+   {
+    "date": "2026-07-25",
+    "kind": "수정",
+    "title": "구체적 엣지 백필 + 이벤트",
+    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
+   },
+   {
+    "date": "2026-08-05",
+    "kind": "관계",
+    "title": "EXPOSED_TO ETF 연결",
+    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_578",
+   "type": "THEME",
+   "name": "글로벌가스발전르네상스"
+  },
+  {
+   "id": "A_167",
+   "type": "ASSET",
+   "name": "GE버노바",
+   "exposure": {
+    "ticker": "GEV",
+    "exchange": "NYSE",
+    "country": "US",
+    "business_desc": "GE버노바(GEV)는 미국 신규 가스발전 개발 252GW 1위 환경에서 AI 데이터센터 백업용 HA급 중대형 가스터빈을 공급하는 대표 수혜주다.",
+    "theme_role": "가스터빈1위",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 1.1690969049227284,
+    "return_3d": 3.7220717326218455,
+    "return_7d": 0.37250554323724483,
+    "return_15d": -4.453991988818117,
+    "return_1m": -11.589007326134503,
+    "return_ytd": 49.883010815981166,
+    "return_1y": 55.145468392993145,
+    "return_2y": 526.0172095881992,
+    "return_3y": null,
+    "close": 1018.53,
+    "marketCap": 271268761608,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_489",
+   "type": "ASSET",
+   "name": "셰니에르에너지",
+   "exposure": {
+    "ticker": "LNG",
+    "exchange": "NYSE",
+    "country": "US",
+    "business_desc": "셰니에르에너지(LNG)는 사빈패스·코퍼스크리스티 LNG 수출 터미널로 데이터센터 전력용 가스 원료를 공급하는 미 최대 LNG 수출사다.",
+    "theme_role": "LNG수출",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": -0.30610663360196577,
+    "return_3d": -0.2983802216538711,
+    "return_7d": -4.608482871125618,
+    "return_15d": -2.920424102931729,
+    "return_1m": 4.551180462432458,
+    "return_ytd": 30.07583417593529,
+    "return_1y": 7.964416096680793,
+    "return_2y": 41.46140312293822,
+    "return_3y": 61.30023196037868,
+    "close": 257.29,
+    "marketCap": 53915634080,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_2563",
+   "type": "ASSET",
+   "name": "한국가스공사",
+   "exposure": {
+    "ticker": "036460",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "한국가스공사(036460)는 국내 LNG 도입·공급 독점 사업자로 데이터센터·반도체 팹 전력용 가스 공급 게이트웨이다.",
+    "theme_role": "국내LNG공급",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": -0.4398826979472137,
+    "return_3d": -1.4513788098693747,
+    "return_7d": -3.276353276353272,
+    "return_15d": 4.945904173106652,
+    "return_1m": 2.413273001508287,
+    "return_ytd": -11.588541666666663,
+    "return_1y": -23.626881001027666,
+    "return_2y": -23.420723858897162,
+    "return_3y": null,
+    "close": 33950,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_1328",
+   "type": "ASSET",
+   "name": "SK가스",
+   "exposure": {
+    "ticker": "018670",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "SK가스(018670)는 LPG 유통과 LNG 복합발전 진출로 국내 발전용 가스 밸류체인에 위치한다.",
+    "theme_role": "발전용가스",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 0.0,
+    "return_3d": -4.4742729306487705,
+    "return_7d": -11.158387998086939,
+    "return_15d": 1.8633139883465155,
+    "return_1m": -5.300699321512337,
+    "return_ytd": 1.2441106306773753,
+    "return_1y": -20.351539192347456,
+    "return_2y": 32.44560690316576,
+    "return_3y": null,
+    "close": 213500,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_161",
+   "type": "ASSET",
+   "name": "두산에너빌리티",
+   "exposure": {
+    "ticker": "034020",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "두산에너빌리티(034020)는 270MW급 가스터빈 국산화로 국내 데이터센터·팹 전력 수요 확대 시 가스복합발전 기기를 공급한다.",
+    "theme_role": "국산가스터빈",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 5.47945205479452,
+    "return_3d": 14.754098360655732,
+    "return_7d": 8.60366713681242,
+    "return_15d": 8.60366713681242,
+    "return_1m": -9.941520467836263,
+    "return_ytd": 2.393617021276606,
+    "return_1y": 21.451104100946374,
+    "return_2y": 368.9485761223029,
+    "return_3y": null,
+    "close": 77000,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_2611",
+   "type": "ASSET",
+   "name": "RWE",
+   "exposure": {
+    "ticker": "RWE",
+    "exchange": "XETRA",
+    "country": "DE",
+    "business_desc": "RWE는 게르슈타인베르크 가스블록이 독일 용량예비 설비로 낙찰되고 수소대응 CCGT를 준비하는 독일 백업 가스발전 대표주다.",
+    "theme_role": "독일백업발전",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": -0.7713884992987308,
+    "return_3d": 0.6043370067543519,
+    "return_7d": -3.741496598639449,
+    "return_15d": -1.4623955431754765,
+    "return_1m": -1.5309672929714635,
+    "return_ytd": 20.75954768508641,
+    "return_1y": 55.11098931214031,
+    "return_2y": 82.58064516129033,
+    "return_3y": 46.784232365145215,
+    "close": 56.6,
+    "marketCap": 42433510326,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "BF_084",
+   "type": "BUSINESS_FIELD",
+   "name": "중대형가스터빈"
+  },
+  {
+   "id": "BF_196",
+   "type": "BUSINESS_FIELD",
+   "name": "가스터빈/백업발전"
+  },
+  {
+   "id": "BF_115",
+   "type": "BUSINESS_FIELD",
+   "name": "LNG채굴/수출"
+  },
+  {
+   "id": "C_1732",
+   "type": "CHARACTER",
+   "name": "데이터센터백업터빈세계1위수혜"
+  },
+  {
+   "id": "C_1733",
+   "type": "CHARACTER",
+   "name": "LNG수출터미널데이터센터원료공급"
+  },
+  {
+   "id": "C_1734",
+   "type": "CHARACTER",
+   "name": "LNG데이터센터전력공급게이트웨이"
+  },
+  {
+   "id": "C_1735",
+   "type": "CHARACTER",
+   "name": "국내발전용가스공급밸류체인"
+  },
+  {
+   "id": "C_1736",
+   "type": "CHARACTER",
+   "name": "국내가스터빈국산화발전기기공급"
+  },
+  {
+   "id": "C_1737",
+   "type": "CHARACTER",
+   "name": "독일급전가능백업가스발전수혜"
+  },
+  {
+   "id": "M_035",
+   "type": "MACRO",
+   "name": "AI데이터센터전력수요증가"
+  },
+  {
+   "id": "M_121",
+   "type": "MACRO",
+   "name": "LNG가격"
+  },
+  {
+   "id": "A_2864",
+   "type": "ASSET",
+   "name": "KODEX 미국AI전력핵심인프라",
+   "exposure": {
+    "ticker": "487230",
+    "exchange": "KRX",
+    "country": "KR"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_167",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013175"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013176"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_2563",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013177"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_1328",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013178"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_161",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013179"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_2611",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013180"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "BF_084",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001474"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_161",
+   "to": "BF_084",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001475"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "BF_115",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001476"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_2611",
+   "to": "BF_196",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001477"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "C_1732",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001478"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "C_1733",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001479"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_2563",
+   "to": "C_1734",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001480"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_1328",
+   "to": "C_1735",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001481"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_161",
+   "to": "C_1736",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001482"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_2611",
+   "to": "C_1737",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001483"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "M_035",
+   "to": "T_578",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013181"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_121",
+   "to": "T_578",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013182"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "A_2563",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_018711"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "셰니에르에너지는 2012년 체결한 20년 SPA에 따라 사빈패스에서 연 약 350만 톤의 LNG를 한국가스공사(KOGAS)에 공급한다."
+  },
+  {
+   "from": "A_167",
+   "to": "A_161",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018712"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GE버노바는 세계 가스터빈 시장의 '빅3' 중 하나이며, 국산 대형 가스터빈을 개발해 이 과점을 파고든 두산에너빌리티와 직접 경쟁한다."
+  },
+  {
+   "from": "A_2864",
+   "to": "T_578",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020920"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_167",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013175"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013176"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_2563",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013177"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_1328",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013178"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_161",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013179"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_2611",
+   "to": "T_578",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_013180"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "BF_084",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001474"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_161",
+   "to": "BF_084",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001475"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "BF_115",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001476"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_2611",
+   "to": "BF_196",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_001477"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_167",
+   "to": "C_1732",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001478"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "C_1733",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001479"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_2563",
+   "to": "C_1734",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001480"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_1328",
+   "to": "C_1735",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001481"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_161",
+   "to": "C_1736",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001482"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "A_2611",
+   "to": "C_1737",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_001483"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "M_035",
+   "to": "T_578",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013181"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_121",
+   "to": "T_578",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_013182"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_489",
+   "to": "A_2563",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_018711"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "셰니에르에너지는 2012년 체결한 20년 SPA에 따라 사빈패스에서 연 약 350만 톤의 LNG를 한국가스공사(KOGAS)에 공급한다."
+  },
+  {
+   "from": "A_167",
+   "to": "A_161",
+   "type": "COMPETES",
+   "evidence": [
+    "EV_018712"
+   ],
+   "confidence": 0.8,
+   "status": "verified",
+   "rationale": "GE버노바는 세계 가스터빈 시장의 '빅3' 중 하나이며, 국산 대형 가스터빈을 개발해 이 과점을 파고든 두산에너빌리티와 직접 경쟁한다."
+  },
+  {
+   "from": "A_2864",
+   "to": "T_578",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_020920"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  }
+ ]
 }
