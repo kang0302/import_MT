@@ -1,947 +1,947 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_257",
-  "themeName": "글로벌HBM메모리밸류체인",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-29T00:00:00+09:00",
-    "description": "글로벌 HBM(고대역폭메모리) 밸류체인 — HBM 제조 빅3(SK하이닉스·삼성·마이크론) + 중국 신사업(CXMT) + 대만(Nanya) + 수요처(화웨이 — CXMT 의 HBM SUPPLIES 받음). PLUS HBM ETF 가 EXPOSED_TO 로 테마 연결하며 IN_ETF 로 장비(램리서치·어플라이드·테라다인) + 후공정(한미반도체) 노출.",
-    "notes": "AI 데이터센터 확대(M_212)가 핵심 동인. BF_466 HBM신사업 (Nanya·CXMT OPERATES, CXMT SUPPLIES).",
-    "sources": [],
-    "provenancePilot": "T_257 출처 파일럿(2026-06-25) — evidence_ssot 참조",
-    "changelog": [
-      {
-        "date": "2026-07-29",
-        "kind": "수정",
-        "title": "메모리 과점서사 타격 이벤트 추가",
-        "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_257",
-      "type": "THEME",
-      "name": "글로벌HBM메모리밸류체인"
-    },
-    {
-      "id": "A_088",
-      "type": "ASSET",
-      "name": "삼성전자",
-      "exposure": {
-        "ticker": "005930",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "Samsung Electronics — HBM3E 생산 (HBM 빅3)",
-        "theme_role": "HBM 빅3, K-메모리 1위",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 2.499999999999991,
-        "close": 246000,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "return_3d": -6.285714285714283,
-        "return_7d": -3.149606299212604,
-        "return_15d": -6.4638783269961975,
-        "return_1m": -22.64150943396226,
-        "return_ytd": 92.04441355881055,
-        "return_1y": 275.125085345341,
-        "return_2y": 192.0399521433893,
-        "return_3y": 343.1818181818182,
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_217",
-      "type": "ASSET",
-      "name": "SK하이닉스",
-      "exposure": {
-        "ticker": "000660",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "SK hynix — HBM3E 글로벌 1위, NVIDIA 핵심 공급",
-        "theme_role": "HBM 글로벌 1위, NVIDIA 단독 공급",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 5.770450221940404,
-        "close": 1668000,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "return_3d": -2.9103608847497076,
-        "return_7d": -8.149779735682817,
-        "return_15d": -12.807109252483006,
-        "return_1m": -28.809218950064018,
-        "return_ytd": 146.87700123512815,
-        "return_1y": 522.6654580924242,
-        "return_2y": 624.4750475522314,
-        "return_3y": 2049.501661129568,
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_218",
-      "type": "ASSET",
-      "name": "마이크론",
-      "exposure": {
-        "ticker": "MU",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "Micron Technology — HBM3E 후발 (HBM 빅3)",
-        "theme_role": "HBM 빅3, 미국 메모리 대표",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 7.615430982519578,
-        "close": 892.67,
-        "marketCap": 1008172571300,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 2.059085816202866,
-        "return_7d": -3.0707421684130654,
-        "return_15d": -9.200301082268702,
-        "return_1m": -9.350596598121353,
-        "return_ytd": 183.00995498066067,
-        "return_1y": 751.1346300533944,
-        "return_2y": 770.3880655226209,
-        "return_3y": 1153.75,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_261",
-      "type": "ASSET",
-      "name": "화웨이(비)",
-      "exposure": {
-        "ticker": "",
-        "exchange": "",
-        "country": "CN",
-        "business_desc": "Huawei — HBM 수요자 (Ascend AI 칩셋), CXMT 로부터 SUPPLIES",
-        "theme_role": "중국 AI 칩셋 HBM 수요처",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "returnsAsOf": null,
-        "returnsSource": null
-      },
-      "coreBiz": "화웨이는 중국 HBM·AI 칩 자립을 주도한다(비상장)"
-    },
-    {
-      "id": "A_1571",
-      "type": "ASSET",
-      "name": "CXMT(창신메모리)",
-      "exposure": {
-        "ticker": "",
-        "exchange": "",
-        "country": "CN",
-        "business_desc": "ChangXin Memory Technologies — 중국 HBM2/HBM3 자체 개발 (HBM 신사업)",
-        "theme_role": "중국 HBM 신사업 핵심, 화웨이에 SUPPLIES",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      },
-      "coreBiz": "창신메모리(CXMT)는 중국 D램·HBM 국산화 대표다"
-    },
-    {
-      "id": "A_1650",
-      "type": "ASSET",
-      "name": "난야테크놀로지",
-      "exposure": {
-        "ticker": "2408",
-        "exchange": "TWSE",
-        "country": "TW",
-        "business_desc": "Nanya Technology — 대만 DRAM·HBM 신사업 진입 검토",
-        "theme_role": "대만 HBM 신사업 진출",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": 9.962168978562413,
-        "close": 436.0,
-        "marketCap": 1351001764400,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 32.92682926829269,
-        "return_7d": 8.728179551122196,
-        "return_15d": -2.67857142857143,
-        "return_1m": 6.4713064713064705,
-        "return_ytd": 110.6280193236715,
-        "return_1y": 975.2157829839705,
-        "return_2y": 521.9686162624822,
-        "return_3y": null,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1652",
-      "type": "ASSET",
-      "name": "PLUS글로벌HBM반도체ETF",
-      "exposure": {
-        "ticker": "442580",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "PLUS 글로벌 HBM 반도체 ETF (한국투자운용)",
-        "theme_role": "HBM 밸류체인 분산 노출 ETF",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 5.559665997251884,
-        "close": 99870,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "return_3d": -3.758311650766122,
-        "return_7d": -6.330894766460327,
-        "return_15d": -10.213072012946146,
-        "return_1m": -21.70129361034888,
-        "return_ytd": 127.04433285102952,
-        "return_1y": 401.2615358037107,
-        "return_2y": 345.98925639702645,
-        "return_3y": null,
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_803",
-      "type": "ASSET",
-      "name": "램리서치",
-      "exposure": {
-        "ticker": "LRCX",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "Lam Research — 반도체 식각 장비 (HBM TSV 핵심)",
-        "theme_role": "HBM TSV 식각 장비 공급",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": 7.851057330029532,
-        "close": 317.74,
-        "marketCap": 397356111800,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 6.724439070267363,
-        "return_7d": 4.105370073064463,
-        "return_15d": -8.194163536550136,
-        "return_1m": -9.26898914905767,
-        "return_ytd": 71.69566627039879,
-        "return_1y": 229.70841548199647,
-        "return_2y": 271.66920107614925,
-        "return_3y": 340.51018993483996,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_952",
-      "type": "ASSET",
-      "name": "어플라이드머티리얼즈",
-      "exposure": {
-        "ticker": "AMAT",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "Applied Materials — 반도체 공정 장비 (HBM CVD·CMP)",
-        "theme_role": "HBM 전공정 장비 공급",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": 5.482333416954499,
-        "close": 546.62,
-        "marketCap": 433993868580,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 8.938358211929764,
-        "return_7d": 1.9337995337995295,
-        "return_15d": -8.23904649991607,
-        "return_1m": -7.788592924981863,
-        "return_ytd": 103.30271134749137,
-        "return_1y": 203.69464970276124,
-        "return_2y": 177.83877198332823,
-        "return_3y": 259.7841111037978,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1116",
-      "type": "ASSET",
-      "name": "테라다인",
-      "exposure": {
-        "ticker": "TER",
-        "exchange": "NASDAQ",
-        "country": "US",
-        "business_desc": "Teradyne — 반도체 테스트 장비 (HBM 메모리 테스트)",
-        "theme_role": "HBM 테스트 장비 공급",
-        "theme_status": "Support"
-      },
-      "metrics": {
-        "return_1d": 10.322580645161295,
-        "close": 403.56,
-        "marketCap": 63174089520,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-04",
-        "valuationSource": "FMP",
-        "return_3d": 10.416153656734783,
-        "return_7d": 15.329218106995878,
-        "return_15d": 14.24850663873396,
-        "return_1m": 6.334317032040482,
-        "return_ytd": 94.43052611293119,
-        "return_1y": 287.44239631336404,
-        "return_2y": 232.58612164166803,
-        "return_3y": 259.32686314664767,
-        "returnsAsOf": "2026-08-04",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_1026",
-      "type": "ASSET",
-      "name": "한미반도체",
-      "exposure": {
-        "ticker": "042700",
-        "exchange": "KOSPI",
-        "country": "KR",
-        "business_desc": "Hanmi Semiconductor — HBM 후공정 본더 (TC Bonder) 글로벌 점유 1위",
-        "theme_role": "HBM 본더 점유 1위, K-HBM 핵심",
-        "theme_status": "Core"
-      },
-      "metrics": {
-        "return_1d": 2.9556650246305383,
-        "close": 209000,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-05",
-        "valuationSource": "EODHD",
-        "return_3d": -2.564102564102566,
-        "return_7d": 2.2004889975550057,
-        "return_15d": 0.7228915662650603,
-        "return_1m": -7.726269315673284,
-        "return_ytd": 45.08481658377488,
-        "return_1y": 144.97105628876366,
-        "return_2y": 30.832127209271665,
-        "return_3y": 1474.938574938575,
-        "returnsAsOf": "2026-08-05",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "BF_466",
-      "type": "BUSINESS_FIELD",
-      "name": "HBM신사업"
-    },
-    {
-      "id": "M_212",
-      "type": "MACRO",
-      "name": "AI데이터센터확대"
-    },
-    {
-      "id": "C_3993",
-      "type": "CHARACTER",
-      "name": "HBM·D램·파운드리"
-    },
-    {
-      "id": "C_3994",
-      "type": "CHARACTER",
-      "name": "HBM1위"
-    },
-    {
-      "id": "C_3995",
-      "type": "CHARACTER",
-      "name": "HBM3강·D램"
-    },
-    {
-      "id": "C_3996",
-      "type": "CHARACTER",
-      "name": "중국HBM·AI칩"
-    },
-    {
-      "id": "C_3997",
-      "type": "CHARACTER",
-      "name": "중국D램·HBM국산화"
-    },
-    {
-      "id": "C_3998",
-      "type": "CHARACTER",
-      "name": "대만D램"
-    },
-    {
-      "id": "C_3999",
-      "type": "CHARACTER",
-      "name": "HBM반도체ETF"
-    },
-    {
-      "id": "C_4000",
-      "type": "CHARACTER",
-      "name": "식각·증착장비(HBM)"
-    },
-    {
-      "id": "C_4001",
-      "type": "CHARACTER",
-      "name": "증착·패키징장비"
-    },
-    {
-      "id": "C_4002",
-      "type": "CHARACTER",
-      "name": "메모리테스트"
-    },
-    {
-      "id": "C_4003",
-      "type": "CHARACTER",
-      "name": "HBM TC본더"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_257",
+ "themeName": "글로벌HBM메모리밸류체인",
+ "meta": {
+  "periodDefault": "3d",
+  "periodOptions": [
+   "1d",
+   "3d",
+   "7d",
+   "15d",
+   "1m",
+   "ytd",
+   "1y",
+   "2y",
+   "3y"
   ],
-  "edges": [
-    {
-      "from": "A_088",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008523"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_217",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008525"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_218",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008527"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_261",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008529"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008531"
-      ]
-    },
-    {
-      "from": "A_1650",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008533"
-      ]
-    },
-    {
-      "from": "A_1652",
-      "to": "T_257",
-      "type": "EXPOSED_TO",
-      "evidence": [
-        "EV_015575"
-      ]
-    },
-    {
-      "from": "A_803",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015576"
-      ]
-    },
-    {
-      "from": "A_952",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015577"
-      ]
-    },
-    {
-      "from": "A_1116",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015578"
-      ]
-    },
-    {
-      "from": "A_1026",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015579"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "BF_466",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_015580"
-      ]
-    },
-    {
-      "from": "A_1650",
-      "to": "BF_466",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_015581"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "BF_466",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_015582"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "A_261",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_000003"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "M_212",
-      "to": "T_257",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_008540"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_088",
-      "to": "C_3993",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008524"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_217",
-      "to": "C_3994",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008526"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_218",
-      "to": "C_3995",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008528"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_261",
-      "to": "C_3996",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008530"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1571",
-      "to": "C_3997",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008532"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1650",
-      "to": "C_3998",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008534"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1652",
-      "to": "C_3999",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008535"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_803",
-      "to": "C_4000",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008536"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_952",
-      "to": "C_4001",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008537"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1116",
-      "to": "C_4002",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008538"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1026",
-      "to": "C_4003",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008539"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    }
-  ],
-  "links": [
-    {
-      "from": "A_088",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008523"
-      ],
-      "confidence": 0.85,
-      "status": "verified"
-    },
-    {
-      "from": "A_217",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008525"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_218",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008527"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_261",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008529"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008531"
-      ]
-    },
-    {
-      "from": "A_1650",
-      "to": "T_257",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_008533"
-      ]
-    },
-    {
-      "from": "A_1652",
-      "to": "T_257",
-      "type": "EXPOSED_TO",
-      "evidence": [
-        "EV_015575"
-      ]
-    },
-    {
-      "from": "A_803",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015576"
-      ]
-    },
-    {
-      "from": "A_952",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015577"
-      ]
-    },
-    {
-      "from": "A_1116",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015578"
-      ]
-    },
-    {
-      "from": "A_1026",
-      "to": "A_1652",
-      "type": "IN_ETF",
-      "evidence": [
-        "EV_015579"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "BF_466",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_015580"
-      ]
-    },
-    {
-      "from": "A_1650",
-      "to": "BF_466",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_015581"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "BF_466",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_015582"
-      ]
-    },
-    {
-      "from": "A_1571",
-      "to": "A_261",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_000003"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "M_212",
-      "to": "T_257",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_008540"
-      ],
-      "confidence": 0.9,
-      "status": "verified"
-    },
-    {
-      "from": "A_088",
-      "to": "C_3993",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008524"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_217",
-      "to": "C_3994",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008526"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_218",
-      "to": "C_3995",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008528"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_261",
-      "to": "C_3996",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008530"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1571",
-      "to": "C_3997",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008532"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1650",
-      "to": "C_3998",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008534"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1652",
-      "to": "C_3999",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008535"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_803",
-      "to": "C_4000",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008536"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_952",
-      "to": "C_4001",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008537"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1116",
-      "to": "C_4002",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008538"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1026",
-      "to": "C_4003",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_008539"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    }
+  "dataAsOf": "2026-07-29T00:00:00+09:00",
+  "description": "글로벌 HBM(고대역폭메모리) 밸류체인 — HBM 제조 빅3(SK하이닉스·삼성·마이크론) + 중국 신사업(CXMT) + 대만(Nanya) + 수요처(화웨이 — CXMT 의 HBM SUPPLIES 받음). PLUS HBM ETF 가 EXPOSED_TO 로 테마 연결하며 IN_ETF 로 장비(램리서치·어플라이드·테라다인) + 후공정(한미반도체) 노출.",
+  "notes": "AI 데이터센터 확대(M_212)가 핵심 동인. BF_466 HBM신사업 (Nanya·CXMT OPERATES, CXMT SUPPLIES).",
+  "sources": [],
+  "provenancePilot": "T_257 출처 파일럿(2026-06-25) — evidence_ssot 참조",
+  "changelog": [
+   {
+    "date": "2026-07-29",
+    "kind": "수정",
+    "title": "메모리 과점서사 타격 이벤트 추가",
+    "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_257",
+   "type": "THEME",
+   "name": "글로벌HBM메모리밸류체인"
+  },
+  {
+   "id": "A_088",
+   "type": "ASSET",
+   "name": "삼성전자",
+   "exposure": {
+    "ticker": "005930",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "Samsung Electronics — HBM3E 생산 (HBM 빅3)",
+    "theme_role": "HBM 빅3, K-메모리 1위",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 2.499999999999991,
+    "close": 246000,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "return_3d": -6.285714285714283,
+    "return_7d": -3.149606299212604,
+    "return_15d": -6.4638783269961975,
+    "return_1m": -22.64150943396226,
+    "return_ytd": 92.04441355881055,
+    "return_1y": 275.125085345341,
+    "return_2y": 192.0399521433893,
+    "return_3y": 343.1818181818182,
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_217",
+   "type": "ASSET",
+   "name": "SK하이닉스",
+   "exposure": {
+    "ticker": "000660",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "SK hynix — HBM3E 글로벌 1위, NVIDIA 핵심 공급",
+    "theme_role": "HBM 글로벌 1위, NVIDIA 단독 공급",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 5.770450221940404,
+    "close": 1668000,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "return_3d": -2.9103608847497076,
+    "return_7d": -8.149779735682817,
+    "return_15d": -12.807109252483006,
+    "return_1m": -28.809218950064018,
+    "return_ytd": 146.87700123512815,
+    "return_1y": 522.6654580924242,
+    "return_2y": 624.4750475522314,
+    "return_3y": 2049.501661129568,
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_218",
+   "type": "ASSET",
+   "name": "마이크론",
+   "exposure": {
+    "ticker": "MU",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "business_desc": "Micron Technology — HBM3E 후발 (HBM 빅3)",
+    "theme_role": "HBM 빅3, 미국 메모리 대표",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 7.615430982519578,
+    "close": 892.67,
+    "marketCap": 1008172571300,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 2.059085816202866,
+    "return_7d": -3.0707421684130654,
+    "return_15d": -9.200301082268702,
+    "return_1m": -9.350596598121353,
+    "return_ytd": 183.00995498066067,
+    "return_1y": 751.1346300533944,
+    "return_2y": 770.3880655226209,
+    "return_3y": 1153.75,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_261",
+   "type": "ASSET",
+   "name": "화웨이(비)",
+   "exposure": {
+    "ticker": "",
+    "exchange": "",
+    "country": "CN",
+    "business_desc": "Huawei — HBM 수요자 (Ascend AI 칩셋), CXMT 로부터 SUPPLIES",
+    "theme_role": "중국 AI 칩셋 HBM 수요처",
+    "theme_status": "Support"
+   },
+   "metrics": {
+    "return_1d": null,
+    "close": null,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": null,
+    "valuationSource": null,
+    "return_3d": null,
+    "return_7d": null,
+    "return_15d": null,
+    "return_1m": null,
+    "return_ytd": null,
+    "return_1y": null,
+    "return_2y": null,
+    "return_3y": null,
+    "returnsAsOf": null,
+    "returnsSource": null
+   },
+   "coreBiz": "화웨이는 중국 HBM·AI 칩 자립을 주도한다(비상장)"
+  },
+  {
+   "id": "A_1571",
+   "type": "ASSET",
+   "name": "CXMT(창신메모리)",
+   "exposure": {
+    "ticker": "688825",
+    "exchange": "SSE",
+    "country": "CN",
+    "business_desc": "ChangXin Memory Technologies — 중국 HBM2/HBM3 자체 개발 (HBM 신사업)",
+    "theme_role": "중국 HBM 신사업 핵심, 화웨이에 SUPPLIES",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": null,
+    "close": null,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": null,
+    "valuationSource": null,
+    "return_3d": null,
+    "return_7d": null,
+    "return_15d": null,
+    "return_1m": null,
+    "return_ytd": null,
+    "return_1y": null,
+    "return_2y": null,
+    "return_3y": null,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   },
+   "coreBiz": "창신메모리(CXMT)는 중국 D램·HBM 국산화 대표다"
+  },
+  {
+   "id": "A_1650",
+   "type": "ASSET",
+   "name": "난야테크놀로지",
+   "exposure": {
+    "ticker": "2408",
+    "exchange": "TWSE",
+    "country": "TW",
+    "business_desc": "Nanya Technology — 대만 DRAM·HBM 신사업 진입 검토",
+    "theme_role": "대만 HBM 신사업 진출",
+    "theme_status": "Support"
+   },
+   "metrics": {
+    "return_1d": 9.962168978562413,
+    "close": 436.0,
+    "marketCap": 1351001764400,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 32.92682926829269,
+    "return_7d": 8.728179551122196,
+    "return_15d": -2.67857142857143,
+    "return_1m": 6.4713064713064705,
+    "return_ytd": 110.6280193236715,
+    "return_1y": 975.2157829839705,
+    "return_2y": 521.9686162624822,
+    "return_3y": null,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1652",
+   "type": "ASSET",
+   "name": "PLUS글로벌HBM반도체ETF",
+   "exposure": {
+    "ticker": "442580",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "PLUS 글로벌 HBM 반도체 ETF (한국투자운용)",
+    "theme_role": "HBM 밸류체인 분산 노출 ETF",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 5.559665997251884,
+    "close": 99870,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "return_3d": -3.758311650766122,
+    "return_7d": -6.330894766460327,
+    "return_15d": -10.213072012946146,
+    "return_1m": -21.70129361034888,
+    "return_ytd": 127.04433285102952,
+    "return_1y": 401.2615358037107,
+    "return_2y": 345.98925639702645,
+    "return_3y": null,
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_803",
+   "type": "ASSET",
+   "name": "램리서치",
+   "exposure": {
+    "ticker": "LRCX",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "business_desc": "Lam Research — 반도체 식각 장비 (HBM TSV 핵심)",
+    "theme_role": "HBM TSV 식각 장비 공급",
+    "theme_status": "Support"
+   },
+   "metrics": {
+    "return_1d": 7.851057330029532,
+    "close": 317.74,
+    "marketCap": 397356111800,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 6.724439070267363,
+    "return_7d": 4.105370073064463,
+    "return_15d": -8.194163536550136,
+    "return_1m": -9.26898914905767,
+    "return_ytd": 71.69566627039879,
+    "return_1y": 229.70841548199647,
+    "return_2y": 271.66920107614925,
+    "return_3y": 340.51018993483996,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_952",
+   "type": "ASSET",
+   "name": "어플라이드머티리얼즈",
+   "exposure": {
+    "ticker": "AMAT",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "business_desc": "Applied Materials — 반도체 공정 장비 (HBM CVD·CMP)",
+    "theme_role": "HBM 전공정 장비 공급",
+    "theme_status": "Support"
+   },
+   "metrics": {
+    "return_1d": 5.482333416954499,
+    "close": 546.62,
+    "marketCap": 433993868580,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 8.938358211929764,
+    "return_7d": 1.9337995337995295,
+    "return_15d": -8.23904649991607,
+    "return_1m": -7.788592924981863,
+    "return_ytd": 103.30271134749137,
+    "return_1y": 203.69464970276124,
+    "return_2y": 177.83877198332823,
+    "return_3y": 259.7841111037978,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1116",
+   "type": "ASSET",
+   "name": "테라다인",
+   "exposure": {
+    "ticker": "TER",
+    "exchange": "NASDAQ",
+    "country": "US",
+    "business_desc": "Teradyne — 반도체 테스트 장비 (HBM 메모리 테스트)",
+    "theme_role": "HBM 테스트 장비 공급",
+    "theme_status": "Support"
+   },
+   "metrics": {
+    "return_1d": 10.322580645161295,
+    "close": 403.56,
+    "marketCap": 63174089520,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-04",
+    "valuationSource": "FMP",
+    "return_3d": 10.416153656734783,
+    "return_7d": 15.329218106995878,
+    "return_15d": 14.24850663873396,
+    "return_1m": 6.334317032040482,
+    "return_ytd": 94.43052611293119,
+    "return_1y": 287.44239631336404,
+    "return_2y": 232.58612164166803,
+    "return_3y": 259.32686314664767,
+    "returnsAsOf": "2026-08-04",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_1026",
+   "type": "ASSET",
+   "name": "한미반도체",
+   "exposure": {
+    "ticker": "042700",
+    "exchange": "KOSPI",
+    "country": "KR",
+    "business_desc": "Hanmi Semiconductor — HBM 후공정 본더 (TC Bonder) 글로벌 점유 1위",
+    "theme_role": "HBM 본더 점유 1위, K-HBM 핵심",
+    "theme_status": "Core"
+   },
+   "metrics": {
+    "return_1d": 2.9556650246305383,
+    "close": 209000,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-05",
+    "valuationSource": "EODHD",
+    "return_3d": -2.564102564102566,
+    "return_7d": 2.2004889975550057,
+    "return_15d": 0.7228915662650603,
+    "return_1m": -7.726269315673284,
+    "return_ytd": 45.08481658377488,
+    "return_1y": 144.97105628876366,
+    "return_2y": 30.832127209271665,
+    "return_3y": 1474.938574938575,
+    "returnsAsOf": "2026-08-05",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "BF_466",
+   "type": "BUSINESS_FIELD",
+   "name": "HBM신사업"
+  },
+  {
+   "id": "M_212",
+   "type": "MACRO",
+   "name": "AI데이터센터확대"
+  },
+  {
+   "id": "C_3993",
+   "type": "CHARACTER",
+   "name": "HBM·D램·파운드리"
+  },
+  {
+   "id": "C_3994",
+   "type": "CHARACTER",
+   "name": "HBM1위"
+  },
+  {
+   "id": "C_3995",
+   "type": "CHARACTER",
+   "name": "HBM3강·D램"
+  },
+  {
+   "id": "C_3996",
+   "type": "CHARACTER",
+   "name": "중국HBM·AI칩"
+  },
+  {
+   "id": "C_3997",
+   "type": "CHARACTER",
+   "name": "중국D램·HBM국산화"
+  },
+  {
+   "id": "C_3998",
+   "type": "CHARACTER",
+   "name": "대만D램"
+  },
+  {
+   "id": "C_3999",
+   "type": "CHARACTER",
+   "name": "HBM반도체ETF"
+  },
+  {
+   "id": "C_4000",
+   "type": "CHARACTER",
+   "name": "식각·증착장비(HBM)"
+  },
+  {
+   "id": "C_4001",
+   "type": "CHARACTER",
+   "name": "증착·패키징장비"
+  },
+  {
+   "id": "C_4002",
+   "type": "CHARACTER",
+   "name": "메모리테스트"
+  },
+  {
+   "id": "C_4003",
+   "type": "CHARACTER",
+   "name": "HBM TC본더"
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_088",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008523"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_217",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008525"
+   ],
+   "confidence": 0.9,
+   "status": "verified"
+  },
+  {
+   "from": "A_218",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008527"
+   ],
+   "confidence": 0.9,
+   "status": "verified"
+  },
+  {
+   "from": "A_261",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008529"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008531"
+   ]
+  },
+  {
+   "from": "A_1650",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008533"
+   ]
+  },
+  {
+   "from": "A_1652",
+   "to": "T_257",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_015575"
+   ]
+  },
+  {
+   "from": "A_803",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015576"
+   ]
+  },
+  {
+   "from": "A_952",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015577"
+   ]
+  },
+  {
+   "from": "A_1116",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015578"
+   ]
+  },
+  {
+   "from": "A_1026",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015579"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "BF_466",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_015580"
+   ]
+  },
+  {
+   "from": "A_1650",
+   "to": "BF_466",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_015581"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "BF_466",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_015582"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "A_261",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_000003"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "M_212",
+   "to": "T_257",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_008540"
+   ],
+   "confidence": 0.9,
+   "status": "verified"
+  },
+  {
+   "from": "A_088",
+   "to": "C_3993",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008524"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_217",
+   "to": "C_3994",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008526"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_218",
+   "to": "C_3995",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008528"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_261",
+   "to": "C_3996",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008530"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1571",
+   "to": "C_3997",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008532"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1650",
+   "to": "C_3998",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008534"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1652",
+   "to": "C_3999",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008535"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_803",
+   "to": "C_4000",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008536"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_952",
+   "to": "C_4001",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008537"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1116",
+   "to": "C_4002",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008538"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1026",
+   "to": "C_4003",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008539"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_088",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008523"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "from": "A_217",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008525"
+   ],
+   "confidence": 0.9,
+   "status": "verified"
+  },
+  {
+   "from": "A_218",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008527"
+   ],
+   "confidence": 0.9,
+   "status": "verified"
+  },
+  {
+   "from": "A_261",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008529"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008531"
+   ]
+  },
+  {
+   "from": "A_1650",
+   "to": "T_257",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_008533"
+   ]
+  },
+  {
+   "from": "A_1652",
+   "to": "T_257",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "EV_015575"
+   ]
+  },
+  {
+   "from": "A_803",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015576"
+   ]
+  },
+  {
+   "from": "A_952",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015577"
+   ]
+  },
+  {
+   "from": "A_1116",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015578"
+   ]
+  },
+  {
+   "from": "A_1026",
+   "to": "A_1652",
+   "type": "IN_ETF",
+   "evidence": [
+    "EV_015579"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "BF_466",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_015580"
+   ]
+  },
+  {
+   "from": "A_1650",
+   "to": "BF_466",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_015581"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "BF_466",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_015582"
+   ]
+  },
+  {
+   "from": "A_1571",
+   "to": "A_261",
+   "type": "SUPPLIES",
+   "evidence": [
+    "EV_000003"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "from": "M_212",
+   "to": "T_257",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_008540"
+   ],
+   "confidence": 0.9,
+   "status": "verified"
+  },
+  {
+   "from": "A_088",
+   "to": "C_3993",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008524"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_217",
+   "to": "C_3994",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008526"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_218",
+   "to": "C_3995",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008528"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_261",
+   "to": "C_3996",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008530"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1571",
+   "to": "C_3997",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008532"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1650",
+   "to": "C_3998",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008534"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1652",
+   "to": "C_3999",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008535"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_803",
+   "to": "C_4000",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008536"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_952",
+   "to": "C_4001",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008537"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1116",
+   "to": "C_4002",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008538"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1026",
+   "to": "C_4003",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_008539"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  }
+ ]
 }

@@ -80,6 +80,8 @@ def fetch_rows(tk, co, exch):
         return mb.hist_kr(tk)
     if co == "HK":
         return mb.hist_hk(tk)
+    if co == "CN":
+        return mb.hist_cn(tk, exch)
     suf = fmp_suffix(exch, co)
     # BAE 'BA.'·롤스로이스 'RR.' 등 trailing dot 제거 후 접미사 부착
     sym = tk.rstrip(".") + suf

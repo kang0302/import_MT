@@ -118,6 +118,18 @@ def hist_hk(ticker):
             return d
     return hist_us(ticker)
 
+def hist_cn(ticker, exch=""):
+    # 중국 A주: 상하이(SSE)→.SHG, 선전(SZSE)→.SHE (EODHD). 거래소 불명 시 양쪽 시도.
+    if not EODHD_KEY: return None
+    e = (exch or "").upper()
+    order = (".SHG", ".SHE") if e in ("SSE", "SHG", "SH", "SHH") else \
+            (".SHE", ".SHG") if e in ("SZSE", "SHE", "SZ") else (".SHG", ".SHE")
+    for suf in order:
+        d = _get(f"{EOD_BASE}/{ticker}{suf}", {"api_token": EODHD_KEY, "fmt": "json", "from": FROM, "to": TO})
+        if isinstance(d, list) and len(d) > 30:
+            return d
+    return None
+
 def closes_desc(rows):
     """[{date,close}, ...] → 최신순 종가 리스트 + 최신 날짜"""
     clean = [(r.get("date"), r.get("close")) for r in rows if r.get("date") and r.get("close") is not None]
