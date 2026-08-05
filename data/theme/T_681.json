@@ -1,901 +1,901 @@
 {
- "schemaVersion": 5,
- "themeId": "T_681",
- "themeName": "AI CAPEX 수혜주식",
- "meta": {
-  "periodDefault": "7d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": 5,
+  "themeId": "T_681",
+  "themeName": "AI CAPEX 수혜주식",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-29T00:00:00+09:00",
+    "description": "AI CAPEX 수혜 주식 — GPU·메모리(HBM)·파운드리·ASIC·DC 전력/냉각 등 AI capex 지출의 직접 수혜 공급망(Recipient). (지출주식은 별도 테마, 매크로 공통)",
+    "notes": "AI CAPEX 수혜 주식 — GPU·메모리(HBM)·파운드리·ASIC·DC 전력/냉각 등 AI capex 지출의 직접 수혜 공급망(Recipient). (지출주식은 별도 테마, 매크로 공통)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-29",
+        "kind": "수정",
+        "title": "메모리 과점서사 타격 이벤트 추가",
+        "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "신규",
+        "title": "AI CAPEX 지출/수혜 분리",
+        "detail": "기존 T_560(지출자vs수혜자)을 지출주식·수혜주식 2개로 분리(매크로 공통)."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_681",
+      "type": "THEME",
+      "name": "AI CAPEX 수혜주식"
+    },
+    {
+      "id": "A_232",
+      "type": "ASSET",
+      "name": "TSMC",
+      "exposure": {
+        "ticker": "2330",
+        "exchange": "TWSE",
+        "country": "TW",
+        "business_desc": "파운드리 — 통행세형 수혜, 사이클 무관 길목 독점",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": -2.1097046413502074,
+        "return_3d": 5.215419501133778,
+        "return_7d": -1.276595744680853,
+        "return_15d": -4.1322314049586755,
+        "return_1m": -5.112474437627812,
+        "return_ytd": 46.37223974763407,
+        "return_1y": 105.30973451327435,
+        "return_2y": 114.81481481481484,
+        "return_3y": 302.0797227036395,
+        "close": 2320.0,
+        "marketCap": 60163168000000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "AI 캐팩스 수혜자(파운드리)"
+    },
+    {
+      "id": "A_055",
+      "type": "ASSET",
+      "name": "엔비디아",
+      "exposure": {
+        "ticker": "NVDA",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "AI 가속기/GPU — CAPEX 최대 종착지, 고마진, 비대칭의 정점",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 2.5648470770422094,
+        "return_3d": 8.664889253486475,
+        "return_7d": 2.4656739508799097,
+        "return_15d": 0.06610009442868936,
+        "return_1m": 8.381488110457669,
+        "return_ytd": 12.226634895419641,
+        "return_1y": 22.000921022334797,
+        "return_2y": 104.31890484912753,
+        "return_3y": 353.34759358288767,
+        "close": 211.94,
+        "marketCap": 5133398740000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_099",
+      "type": "ASSET",
+      "name": "버티브",
+      "exposure": {
+        "ticker": "VRT",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "DC 전력·냉각 인프라 — 실리콘 사이클과 디커플된 물리 인프라, 칩 무관 방어형",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 2.6154723436609073,
+        "return_3d": 18.65054945054945,
+        "return_7d": -7.036093125774901,
+        "return_15d": -11.084392911258966,
+        "return_1m": -15.241624014820864,
+        "return_ytd": 53.709925402881375,
+        "return_1y": 90.64199449113639,
+        "return_2y": 269.6152266191976,
+        "return_3y": 940.1926782273604,
+        "close": 269.93,
+        "marketCap": 103919810840,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_413",
+      "type": "ASSET",
+      "name": "브로드컴",
+      "exposure": {
+        "ticker": "AVGO",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "커스텀 ASIC/네트워킹 — 하이퍼스케일러 자체칩·광네트워킹 직접 수혜, 수주잔고 안정형",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 6.61091706396757,
+        "return_3d": 7.817656765676584,
+        "return_7d": 9.488898198575612,
+        "return_15d": 7.465755184909151,
+        "return_1m": 11.837389676384081,
+        "return_ytd": 20.292273171854337,
+        "return_1y": 44.872505543237274,
+        "return_2y": 191.36008918617614,
+        "return_3y": 364.72549455434546,
+        "close": 418.16,
+        "marketCap": 1989429652800,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_217",
+      "type": "ASSET",
+      "name": "SK하이닉스",
+      "exposure": {
+        "ticker": "000660",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "메모리(HBM) — HBM 1위 고마진, 美상장 추진·호남 클러스터 멀티테마 교차",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.638162093171668,
+        "return_3d": 19.28895612708019,
+        "return_7d": -10.346787947697555,
+        "return_15d": -14.525745257452572,
+        "return_1m": -34.96907216494846,
+        "return_ytd": 133.40829193513014,
+        "return_1y": 489.7913667568684,
+        "return_2y": 577.6945000533535,
+        "return_3y": null,
+        "close": 1577000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_218",
+      "type": "ASSET",
+      "name": "마이크론",
+      "exposure": {
+        "ticker": "MU",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "메모리(DRAM·HBM) — 메모리 사이클·HBM 레버리지, 저PER 밸류갭",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 7.615430982519578,
+        "return_3d": 2.059085816202866,
+        "return_7d": -3.0707421684130654,
+        "return_15d": -9.200301082268702,
+        "return_1m": -9.350596598121353,
+        "return_ytd": 183.00995498066067,
+        "return_1y": 751.1346300533944,
+        "return_2y": 770.3880655226209,
+        "return_3y": 1153.75,
+        "close": 892.67,
+        "marketCap": 1008172571300,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_088",
+      "type": "ASSET",
+      "name": "삼성전자",
+      "exposure": {
+        "ticker": "005930",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "메모리 — AI CAPEX 공급망 수혜(Recipient 축)",
+        "theme_role": "Recipient — AI스택 공급(수혜)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.20876826722338038,
+        "return_3d": 15.94202898550725,
+        "return_7d": -3.8076152304609256,
+        "return_15d": -5.697445972495085,
+        "return_1m": -22.45557350565428,
+        "return_ytd": 87.3604034720103,
+        "return_1y": 268.19372724056495,
+        "return_2y": 185.89837091034207,
+        "return_3y": null,
+        "close": 240000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-04",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-04",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_5113",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자GPU독점"
+    },
+    {
+      "id": "C_5114",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자HBM메모리"
+    },
+    {
+      "id": "C_5115",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자파운드리"
+    },
+    {
+      "id": "C_5116",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자ASIC네트워킹"
+    },
+    {
+      "id": "C_5117",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자HBM1위"
+    },
+    {
+      "id": "C_5118",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자DC전력냉각"
+    },
+    {
+      "id": "C_5119",
+      "type": "CHARACTER",
+      "name": "AI캐팩스수혜자메모리"
+    },
+    {
+      "id": "BF_009",
+      "type": "BUSINESS_FIELD",
+      "name": "AI칩"
+    },
+    {
+      "id": "BF_090",
+      "type": "BUSINESS_FIELD",
+      "name": "데이터센터"
+    },
+    {
+      "id": "BF_065",
+      "type": "BUSINESS_FIELD",
+      "name": "냉각"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "M_051",
+      "type": "MACRO",
+      "name": "AI수요확대"
+    },
+    {
+      "id": "M_074",
+      "type": "MACRO",
+      "name": "DC건설확대"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "M_072",
+      "type": "MACRO",
+      "name": "금리인상"
+    },
+    {
+      "id": "M_067",
+      "type": "MACRO",
+      "name": "사모신용리스크"
+    },
+    {
+      "id": "M_161",
+      "type": "MACRO",
+      "name": "AI반도체수요증가"
+    }
   ],
-  "dataAsOf": "2026-07-29T00:00:00+09:00",
-  "description": "AI CAPEX 수혜 주식 — GPU·메모리(HBM)·파운드리·ASIC·DC 전력/냉각 등 AI capex 지출의 직접 수혜 공급망(Recipient). (지출주식은 별도 테마, 매크로 공통)",
-  "notes": "AI CAPEX 수혜 주식 — GPU·메모리(HBM)·파운드리·ASIC·DC 전력/냉각 등 AI capex 지출의 직접 수혜 공급망(Recipient). (지출주식은 별도 테마, 매크로 공통)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-29",
-    "kind": "수정",
-    "title": "메모리 과점서사 타격 이벤트 추가",
-    "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "신규",
-    "title": "AI CAPEX 지출/수혜 분리",
-    "detail": "기존 T_560(지출자vs수혜자)을 지출주식·수혜주식 2개로 분리(매크로 공통)."
-   }
+  "edges": [
+    {
+      "from": "A_055",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017884"
+      ]
+    },
+    {
+      "from": "A_218",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017885"
+      ]
+    },
+    {
+      "from": "A_232",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017886"
+      ]
+    },
+    {
+      "from": "A_413",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017887"
+      ]
+    },
+    {
+      "from": "A_217",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017888"
+      ]
+    },
+    {
+      "from": "A_099",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017889"
+      ]
+    },
+    {
+      "from": "A_088",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017890"
+      ]
+    },
+    {
+      "from": "A_055",
+      "to": "C_5113",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012985"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "C_5114",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012986"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_5115",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012987"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_5116",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012988"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_5117",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012989"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "C_5118",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012990"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_5119",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012991"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "BF_009",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_017891"
+      ]
+    },
+    {
+      "from": "A_099",
+      "to": "BF_090",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_017892"
+      ]
+    },
+    {
+      "from": "A_099",
+      "to": "BF_065",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_017893"
+      ]
+    },
+    {
+      "from": "M_035",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012972"
+      ]
+    },
+    {
+      "from": "M_051",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012973"
+      ]
+    },
+    {
+      "from": "M_074",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012974"
+      ]
+    },
+    {
+      "from": "M_212",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012975"
+      ]
+    },
+    {
+      "from": "M_072",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012976"
+      ]
+    },
+    {
+      "from": "M_067",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012977"
+      ]
+    },
+    {
+      "from": "M_161",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012978"
+      ]
+    },
+    {
+      "from": "A_217",
+      "to": "A_218",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020422"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK하이닉스와 마이크론은 HBM 공급 경쟁"
+    },
+    {
+      "from": "A_217",
+      "to": "A_055",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_020423"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK하이닉스는 엔비디아에 HBM을 공급"
+    },
+    {
+      "from": "A_232",
+      "to": "A_055",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_020424"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "TSMC는 엔비디아 AI GPU를 위탁 생산"
+    },
+    {
+      "from": "A_413",
+      "to": "A_055",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020425"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "브로드컴과 엔비디아는 AI 가속기·네트워킹 시장 경쟁"
+    },
+    {
+      "from": "A_088",
+      "to": "A_217",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020426"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전자와 SK하이닉스는 AI 메모리 공급 경쟁"
+    },
+    {
+      "from": "A_099",
+      "to": "A_055",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_020427"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "버티브는 엔비디아 AI 팩토리에 전력·냉각 인프라를 공급"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_055",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017884"
+      ]
+    },
+    {
+      "from": "A_218",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017885"
+      ]
+    },
+    {
+      "from": "A_232",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017886"
+      ]
+    },
+    {
+      "from": "A_413",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017887"
+      ]
+    },
+    {
+      "from": "A_217",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017888"
+      ]
+    },
+    {
+      "from": "A_099",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017889"
+      ]
+    },
+    {
+      "from": "A_088",
+      "to": "T_681",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_017890"
+      ]
+    },
+    {
+      "from": "A_055",
+      "to": "C_5113",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012985"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "C_5114",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012986"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_232",
+      "to": "C_5115",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012987"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_5116",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012988"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_5117",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012989"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_099",
+      "to": "C_5118",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012990"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_5119",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_012991"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_055",
+      "to": "BF_009",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_017891"
+      ]
+    },
+    {
+      "from": "A_099",
+      "to": "BF_090",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_017892"
+      ]
+    },
+    {
+      "from": "A_099",
+      "to": "BF_065",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_017893"
+      ]
+    },
+    {
+      "from": "M_035",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012972"
+      ]
+    },
+    {
+      "from": "M_051",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012973"
+      ]
+    },
+    {
+      "from": "M_074",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012974"
+      ]
+    },
+    {
+      "from": "M_212",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012975"
+      ]
+    },
+    {
+      "from": "M_072",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012976"
+      ]
+    },
+    {
+      "from": "M_067",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012977"
+      ]
+    },
+    {
+      "from": "M_161",
+      "to": "T_681",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012978"
+      ]
+    },
+    {
+      "from": "A_217",
+      "to": "A_218",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020422"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK하이닉스와 마이크론은 HBM 공급 경쟁"
+    },
+    {
+      "from": "A_217",
+      "to": "A_055",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_020423"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK하이닉스는 엔비디아에 HBM을 공급"
+    },
+    {
+      "from": "A_232",
+      "to": "A_055",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_020424"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "TSMC는 엔비디아 AI GPU를 위탁 생산"
+    },
+    {
+      "from": "A_413",
+      "to": "A_055",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020425"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "브로드컴과 엔비디아는 AI 가속기·네트워킹 시장 경쟁"
+    },
+    {
+      "from": "A_088",
+      "to": "A_217",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020426"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전자와 SK하이닉스는 AI 메모리 공급 경쟁"
+    },
+    {
+      "from": "A_099",
+      "to": "A_055",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_020427"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "버티브는 엔비디아 AI 팩토리에 전력·냉각 인프라를 공급"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_681",
-   "type": "THEME",
-   "name": "AI CAPEX 수혜주식"
-  },
-  {
-   "id": "A_232",
-   "type": "ASSET",
-   "name": "TSMC",
-   "exposure": {
-    "ticker": "2330",
-    "exchange": "TWSE",
-    "country": "TW",
-    "business_desc": "파운드리 — 통행세형 수혜, 사이클 무관 길목 독점",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": -2.268041237113405,
-    "return_3d": 7.727272727272738,
-    "return_7d": -1.4553014553014498,
-    "return_15d": -2.868852459016391,
-    "return_1m": -3.8539553752535483,
-    "return_ytd": 49.526813880126184,
-    "return_1y": 106.08695652173914,
-    "return_2y": 126.79425837320575,
-    "return_3y": 319.46902654867256,
-    "close": 2370.0,
-    "marketCap": 61459788000000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-03",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-03",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "AI 캐팩스 수혜자(파운드리)"
-  },
-  {
-   "id": "A_055",
-   "type": "ASSET",
-   "name": "엔비디아",
-   "exposure": {
-    "ticker": "NVDA",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "AI 가속기/GPU — CAPEX 최대 종착지, 고마진, 비대칭의 정점",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 2.9339975093399584,
-    "return_3d": 8.752170938371663,
-    "return_7d": -1.015520214600496,
-    "return_15d": 1.5280302658084777,
-    "return_1m": 6.0616948108607405,
-    "return_ytd": 9.420174741858611,
-    "return_1y": 16.174734356552523,
-    "return_2y": 85.17788332287837,
-    "return_3y": 350.19607843137254,
-    "close": 206.64,
-    "marketCap": 5005027440000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-03",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-03",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_099",
-   "type": "ASSET",
-   "name": "버티브",
-   "exposure": {
-    "ticker": "VRT",
-    "exchange": "NYSE",
-    "country": "US",
-    "business_desc": "DC 전력·냉각 인프라 — 실리콘 사이클과 디커플된 물리 인프라, 칩 무관 방어형",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 8.891832595107019,
-    "return_3d": 17.938486370157825,
-    "return_7d": -13.481778713327197,
-    "return_15d": -13.999411514695781,
-    "return_1m": -12.471300702092957,
-    "return_ytd": 49.79215306645406,
-    "return_1y": 80.6662087912088,
-    "return_2y": 237.24358974358975,
-    "return_3y": 938.9020537124803,
-    "close": 263.05,
-    "marketCap": 101271093400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-03",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-03",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_413",
-   "type": "ASSET",
-   "name": "브로드컴",
-   "exposure": {
-    "ticker": "AVGO",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "커스텀 ASIC/네트워킹 — 하이퍼스케일러 자체칩·광네트워킹 직접 수혜, 수주잔고 안정형",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 0.7578092889437116,
-    "return_3d": 5.9165046446316705,
-    "return_7d": -0.061151170790130216,
-    "return_15d": 2.129930998567886,
-    "return_1m": 8.816756831738104,
-    "return_ytd": 12.832978539784822,
-    "return_1y": 33.5478379298604,
-    "return_2y": 161.1037145519904,
-    "return_3y": 338.9815332960269,
-    "close": 392.23,
-    "marketCap": 1866065603400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-03",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-03",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_217",
-   "type": "ASSET",
-   "name": "SK하이닉스",
-   "exposure": {
-    "ticker": "000660",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "메모리(HBM) — HBM 1위 고마진, 美상장 추진·호남 클러스터 멀티테마 교차",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 0.638162093171668,
-    "return_3d": 19.28895612708019,
-    "return_7d": -10.346787947697555,
-    "return_15d": -14.525745257452572,
-    "return_1m": -34.96907216494846,
-    "return_ytd": 133.40829193513014,
-    "return_1y": 489.7913667568684,
-    "return_2y": 577.6945000533535,
-    "return_3y": null,
-    "close": 1577000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_218",
-   "type": "ASSET",
-   "name": "마이크론",
-   "exposure": {
-    "ticker": "MU",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "메모리(DRAM·HBM) — 메모리 사이클·HBM 레버리지, 저PER 밸류갭",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 0.7861195825182632,
-    "return_3d": 12.246278755074425,
-    "return_7d": -16.229890629260467,
-    "return_15d": -11.472785485592318,
-    "return_1m": -14.971913567591944,
-    "return_ytd": 162.98268974700397,
-    "return_1y": 660.0329851566795,
-    "return_2y": 669.123783031989,
-    "return_3y": 1067.1591388771635,
-    "close": 829.5,
-    "marketCap": 936829005000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-03",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-03",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_088",
-   "type": "ASSET",
-   "name": "삼성전자",
-   "exposure": {
-    "ticker": "005930",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "메모리 — AI CAPEX 공급망 수혜(Recipient 축)",
-    "theme_role": "Recipient — AI스택 공급(수혜)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 0.20876826722338038,
-    "return_3d": 15.94202898550725,
-    "return_7d": -3.8076152304609256,
-    "return_15d": -5.697445972495085,
-    "return_1m": -22.45557350565428,
-    "return_ytd": 87.3604034720103,
-    "return_1y": 268.19372724056495,
-    "return_2y": 185.89837091034207,
-    "return_3y": null,
-    "close": 240000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_5113",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자GPU독점"
-  },
-  {
-   "id": "C_5114",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자HBM메모리"
-  },
-  {
-   "id": "C_5115",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자파운드리"
-  },
-  {
-   "id": "C_5116",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자ASIC네트워킹"
-  },
-  {
-   "id": "C_5117",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자HBM1위"
-  },
-  {
-   "id": "C_5118",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자DC전력냉각"
-  },
-  {
-   "id": "C_5119",
-   "type": "CHARACTER",
-   "name": "AI캐팩스수혜자메모리"
-  },
-  {
-   "id": "BF_009",
-   "type": "BUSINESS_FIELD",
-   "name": "AI칩"
-  },
-  {
-   "id": "BF_090",
-   "type": "BUSINESS_FIELD",
-   "name": "데이터센터"
-  },
-  {
-   "id": "BF_065",
-   "type": "BUSINESS_FIELD",
-   "name": "냉각"
-  },
-  {
-   "id": "M_035",
-   "type": "MACRO",
-   "name": "AI데이터센터전력수요증가"
-  },
-  {
-   "id": "M_051",
-   "type": "MACRO",
-   "name": "AI수요확대"
-  },
-  {
-   "id": "M_074",
-   "type": "MACRO",
-   "name": "DC건설확대"
-  },
-  {
-   "id": "M_212",
-   "type": "MACRO",
-   "name": "AI데이터센터확대"
-  },
-  {
-   "id": "M_072",
-   "type": "MACRO",
-   "name": "금리인상"
-  },
-  {
-   "id": "M_067",
-   "type": "MACRO",
-   "name": "사모신용리스크"
-  },
-  {
-   "id": "M_161",
-   "type": "MACRO",
-   "name": "AI반도체수요증가"
-  }
- ],
- "edges": [
-  {
-   "from": "A_055",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017884"
-   ]
-  },
-  {
-   "from": "A_218",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017885"
-   ]
-  },
-  {
-   "from": "A_232",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017886"
-   ]
-  },
-  {
-   "from": "A_413",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017887"
-   ]
-  },
-  {
-   "from": "A_217",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017888"
-   ]
-  },
-  {
-   "from": "A_099",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017889"
-   ]
-  },
-  {
-   "from": "A_088",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017890"
-   ]
-  },
-  {
-   "from": "A_055",
-   "to": "C_5113",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012985"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "C_5114",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012986"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_232",
-   "to": "C_5115",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012987"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "C_5116",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012988"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "C_5117",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012989"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_099",
-   "to": "C_5118",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012990"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "C_5119",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012991"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_055",
-   "to": "BF_009",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_017891"
-   ]
-  },
-  {
-   "from": "A_099",
-   "to": "BF_090",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_017892"
-   ]
-  },
-  {
-   "from": "A_099",
-   "to": "BF_065",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_017893"
-   ]
-  },
-  {
-   "from": "M_035",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012972"
-   ]
-  },
-  {
-   "from": "M_051",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012973"
-   ]
-  },
-  {
-   "from": "M_074",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012974"
-   ]
-  },
-  {
-   "from": "M_212",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012975"
-   ]
-  },
-  {
-   "from": "M_072",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012976"
-   ]
-  },
-  {
-   "from": "M_067",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012977"
-   ]
-  },
-  {
-   "from": "M_161",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012978"
-   ]
-  },
-  {
-   "from": "A_217",
-   "to": "A_218",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020422"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK하이닉스와 마이크론은 HBM 공급 경쟁"
-  },
-  {
-   "from": "A_217",
-   "to": "A_055",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_020423"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK하이닉스는 엔비디아에 HBM을 공급"
-  },
-  {
-   "from": "A_232",
-   "to": "A_055",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_020424"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "TSMC는 엔비디아 AI GPU를 위탁 생산"
-  },
-  {
-   "from": "A_413",
-   "to": "A_055",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020425"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "브로드컴과 엔비디아는 AI 가속기·네트워킹 시장 경쟁"
-  },
-  {
-   "from": "A_088",
-   "to": "A_217",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020426"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전자와 SK하이닉스는 AI 메모리 공급 경쟁"
-  },
-  {
-   "from": "A_099",
-   "to": "A_055",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_020427"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "버티브는 엔비디아 AI 팩토리에 전력·냉각 인프라를 공급"
-  }
- ],
- "links": [
-  {
-   "from": "A_055",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017884"
-   ]
-  },
-  {
-   "from": "A_218",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017885"
-   ]
-  },
-  {
-   "from": "A_232",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017886"
-   ]
-  },
-  {
-   "from": "A_413",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017887"
-   ]
-  },
-  {
-   "from": "A_217",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017888"
-   ]
-  },
-  {
-   "from": "A_099",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017889"
-   ]
-  },
-  {
-   "from": "A_088",
-   "to": "T_681",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_017890"
-   ]
-  },
-  {
-   "from": "A_055",
-   "to": "C_5113",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012985"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "C_5114",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012986"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_232",
-   "to": "C_5115",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012987"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "C_5116",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012988"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "C_5117",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012989"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_099",
-   "to": "C_5118",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012990"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "C_5119",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_012991"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_055",
-   "to": "BF_009",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_017891"
-   ]
-  },
-  {
-   "from": "A_099",
-   "to": "BF_090",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_017892"
-   ]
-  },
-  {
-   "from": "A_099",
-   "to": "BF_065",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_017893"
-   ]
-  },
-  {
-   "from": "M_035",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012972"
-   ]
-  },
-  {
-   "from": "M_051",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012973"
-   ]
-  },
-  {
-   "from": "M_074",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012974"
-   ]
-  },
-  {
-   "from": "M_212",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012975"
-   ]
-  },
-  {
-   "from": "M_072",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012976"
-   ]
-  },
-  {
-   "from": "M_067",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012977"
-   ]
-  },
-  {
-   "from": "M_161",
-   "to": "T_681",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012978"
-   ]
-  },
-  {
-   "from": "A_217",
-   "to": "A_218",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020422"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK하이닉스와 마이크론은 HBM 공급 경쟁"
-  },
-  {
-   "from": "A_217",
-   "to": "A_055",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_020423"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK하이닉스는 엔비디아에 HBM을 공급"
-  },
-  {
-   "from": "A_232",
-   "to": "A_055",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_020424"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "TSMC는 엔비디아 AI GPU를 위탁 생산"
-  },
-  {
-   "from": "A_413",
-   "to": "A_055",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020425"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "브로드컴과 엔비디아는 AI 가속기·네트워킹 시장 경쟁"
-  },
-  {
-   "from": "A_088",
-   "to": "A_217",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020426"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전자와 SK하이닉스는 AI 메모리 공급 경쟁"
-  },
-  {
-   "from": "A_099",
-   "to": "A_055",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_020427"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "버티브는 엔비디아 AI 팩토리에 전력·냉각 인프라를 공급"
-  }
- ]
 }
