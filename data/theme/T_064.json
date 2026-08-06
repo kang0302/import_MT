@@ -1,1415 +1,1433 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_064",
- "themeName": "K-태양광",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_064",
+  "themeName": "K-태양광",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "notes": "g64 누적 import 기반 K-태양광 밸류체인 (셀/모듈-인버터-발전/EPC)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 8건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "SK이터닉스 티커·수익률 반영",
+        "detail": "SK이터닉스(A_541) 티커 475150(KOSPI) 설정 및 수익률 주입. (475150=신재생 SK이터닉스, 210980=SK디앤디 구분)"
+      },
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "미국정부 중국산 태양광규제 매크로 추가",
+        "detail": "미국태양광수입규제(M_1159, 미국의 대중국 태양광 관세·AD/CVD·UFLPA) IMPACTS 추가 — 비중국 K-태양광(한화·OCI 등) 반사수혜."
+      },
+      {
+        "date": "2026-07-24",
+        "kind": "수정",
+        "title": "매크로 정비 + SK이터닉스 CHR + 미국-이란 이벤트",
+        "detail": "유가상승→유가상승반사이익(M_1161) 교체, AI데이터센터전력수요증가(M_035) IMPACTS 추가. SK이터닉스 CHR 'KKR인수·JV(2026.7)'. 2026 이벤트 '미국-이란 MOU 파기' 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_064",
+      "type": "THEME",
+      "name": "K-태양광"
+    },
+    {
+      "id": "A_538",
+      "type": "ASSET",
+      "name": "Hanwha Solutions",
+      "exposure": {
+        "ticker": "009830",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 12.5,
+        "close": 30150,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 18.23529411764706,
+        "return_7d": 15.07633587786259,
+        "return_15d": 1.005025125628145,
+        "return_1m": -4.133545310015895,
+        "return_ytd": 18.472672468587128,
+        "return_1y": -16.160211778804513,
+        "return_2y": 19.06667084328064,
+        "return_3y": -15.944881889763785,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_539",
+      "type": "ASSET",
+      "name": "OCI Holdings",
+      "exposure": {
+        "ticker": "010060",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 9.333333333333327,
+        "close": 246000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 29.26957435627955,
+        "return_7d": 19.41747572815533,
+        "return_15d": 33.69565217391304,
+        "return_1m": 23.804730749874192,
+        "return_ytd": 133.17535545023696,
+        "return_1y": 158.20929292159312,
+        "return_2y": 197.95207510151909,
+        "return_3y": 276.92206282433875,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_540",
+      "type": "ASSET",
+      "name": "HD Hyundai Energy Solutions",
+      "exposure": {
+        "ticker": "322000",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 5.348837209302326,
+        "close": 135900,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 21.23104371097235,
+        "return_7d": 0.8160237388723957,
+        "return_15d": 23.88331814038287,
+        "return_1m": 15.659574468085102,
+        "return_ytd": 145.750452079566,
+        "return_1y": 187.92372881355934,
+        "return_2y": 427.7669902912622,
+        "return_3y": 298.03921568627453,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_541",
+      "type": "ASSET",
+      "name": "SK Eternix",
+      "exposure": {
+        "ticker": "475150",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 3.405017921146958,
+        "return_3d": 26.95269526952695,
+        "return_7d": 1.050788091068311,
+        "return_15d": 18.237704918032783,
+        "return_1m": 34.498834498834505,
+        "return_ytd": 182.843137254902,
+        "return_1y": 151.41612200435728,
+        "return_2y": 244.4777435616453,
+        "return_3y": null,
+        "close": 57700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_542",
+      "type": "ASSET",
+      "name": "Daemyung Energy",
+      "exposure": {
+        "ticker": "389260",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -5.0176678445229665,
+        "close": 13440,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -17.037037037037038,
+        "return_7d": -9.250506414584736,
+        "return_15d": -5.551651440618411,
+        "return_1m": -2.749638205499272,
+        "return_ytd": -27.93565683646113,
+        "return_1y": -53.00699300699301,
+        "return_2y": -19.61722488038278,
+        "return_3y": -32.32209737827715,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_543",
+      "type": "ASSET",
+      "name": "Shinsung E&G",
+      "exposure": {
+        "ticker": "011930",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 6.645367412140568,
+        "close": 16690,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 18.368794326241144,
+        "return_7d": 9.156311314584698,
+        "return_15d": 7.262210796915158,
+        "return_1m": -6.024774774774777,
+        "return_ytd": 2.961135101789014,
+        "return_1y": 10.60304837640822,
+        "return_2y": -18.58536585365854,
+        "return_3y": 56.575682382134,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_544",
+      "type": "ASSET",
+      "name": "Hansol Technics",
+      "exposure": {
+        "ticker": "004710",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.9138381201044377,
+        "close": 7730,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 10.586552217453505,
+        "return_7d": 3.6193029490616535,
+        "return_15d": -7.535885167464118,
+        "return_1m": -18.37381203801478,
+        "return_ytd": 41.12399879323463,
+        "return_1y": 32.969159532217596,
+        "return_2y": 50.084786254703296,
+        "return_3y": 137.0474406991261,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_545",
+      "type": "ASSET",
+      "name": "LS Electric",
+      "exposure": {
+        "ticker": "010120",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 7.614213197969533,
+        "close": 241500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 14.71861471861471,
+        "return_7d": 6.000000000000005,
+        "return_15d": 12.94619072988812,
+        "return_1m": -2.9748283752860427,
+        "return_ytd": 116.08933684416805,
+        "return_1y": 271.4624726357439,
+        "return_2y": 432.65883314801243,
+        "return_3y": 2199.509001636661,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_546",
+      "type": "ASSET",
+      "name": "GT Power",
+      "exposure": {
+        "ticker": "388050",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.0191082802547768,
+        "close": 7930,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -0.9987515605493158,
+        "return_7d": 0.12626262626262985,
+        "return_15d": -8.429561200923786,
+        "return_1m": -15.187165775401068,
+        "return_ytd": -2.937576499388006,
+        "return_1y": -28.520088198819792,
+        "return_2y": -20.05629730306945,
+        "return_3y": -12.044609665427508,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_384",
+      "type": "ASSET",
+      "name": "Samsung C&T",
+      "exposure": {
+        "ticker": "028260",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 7.751937984496116,
+        "close": 347500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -1.1379800853485111,
+        "return_7d": 2.356406480117812,
+        "return_15d": -1.836158192090398,
+        "return_1m": -22.69187986651835,
+        "return_ytd": 41.836734693877546,
+        "return_1y": 106.81964416427276,
+        "return_2y": 142.93409663902287,
+        "return_3y": 284.01826484018267,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_390",
+      "type": "ASSET",
+      "name": "Dohwa Engineering",
+      "exposure": {
+        "ticker": "002150",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.1904761904761862,
+        "close": 5100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 4.294478527607359,
+        "return_7d": 2.2044088176352616,
+        "return_15d": 4.722792607802884,
+        "return_1m": -2.857142857142858,
+        "return_ytd": -18.0064308681672,
+        "return_1y": -20.54720851185544,
+        "return_2y": -25.72272228145309,
+        "return_3y": -25.889570552147234,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "BF_122",
+      "type": "BUSINESS_FIELD",
+      "name": "발전소/개발/EPC"
+    },
+    {
+      "id": "BF_123",
+      "type": "BUSINESS_FIELD",
+      "name": "태양광셀/모듈(미국)"
+    },
+    {
+      "id": "BF_124",
+      "type": "BUSINESS_FIELD",
+      "name": "인버터/그리드"
+    },
+    {
+      "id": "M_066",
+      "type": "MACRO",
+      "name": "우주산업확대"
+    },
+    {
+      "id": "M_1161",
+      "type": "MACRO",
+      "name": "유가상승반사이익"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "C_4396",
+      "type": "CHARACTER",
+      "name": "KKR인수·JV(2026.7)"
+    },
+    {
+      "id": "M_1159",
+      "type": "MACRO",
+      "name": "미국태양광수입규제"
+    },
+    {
+      "id": "C_5491",
+      "type": "CHARACTER",
+      "name": "태양광셀모듈큐셀"
+    },
+    {
+      "id": "C_5492",
+      "type": "CHARACTER",
+      "name": "폴리실리콘"
+    },
+    {
+      "id": "C_5493",
+      "type": "CHARACTER",
+      "name": "태양광모듈·셀"
+    },
+    {
+      "id": "C_5494",
+      "type": "CHARACTER",
+      "name": "태양광발전EPC"
+    },
+    {
+      "id": "C_5495",
+      "type": "CHARACTER",
+      "name": "태양광셀·클린룸장비"
+    },
+    {
+      "id": "C_5496",
+      "type": "CHARACTER",
+      "name": "모듈·전력변환기기"
+    },
+    {
+      "id": "C_5497",
+      "type": "CHARACTER",
+      "name": "태양광인버터"
+    },
+    {
+      "id": "C_5498",
+      "type": "CHARACTER",
+      "name": "태양광ESS"
+    },
+    {
+      "id": "C_5499",
+      "type": "CHARACTER",
+      "name": "태양광개발EPC"
+    },
+    {
+      "id": "C_5500",
+      "type": "CHARACTER",
+      "name": "발전소설계·EPC"
+    },
+    {
+      "id": "A_2878",
+      "type": "ASSET",
+      "name": "PLUS 태양광&ESS",
+      "exposure": {
+        "ticker": "457990",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 7.635542168674703,
+        "return_3d": 17.14473037207016,
+        "return_7d": 8.140414586170364,
+        "return_15d": 12.427245556079903,
+        "return_1m": 5.646711012564665,
+        "return_ytd": 69.51141303480577,
+        "return_1y": 111.7391678721213,
+        "return_2y": 241.66856432073982,
+        "return_3y": null,
+        "close": 35735,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "notes": "g64 누적 import 기반 K-태양광 밸류체인 (셀/모듈-인버터-발전/EPC)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 8건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "자산 CHR 백필",
-    "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
-   },
-   {
-    "date": "2026-07-24",
-    "kind": "수정",
-    "title": "SK이터닉스 티커·수익률 반영",
-    "detail": "SK이터닉스(A_541) 티커 475150(KOSPI) 설정 및 수익률 주입. (475150=신재생 SK이터닉스, 210980=SK디앤디 구분)"
-   },
-   {
-    "date": "2026-07-24",
-    "kind": "수정",
-    "title": "미국정부 중국산 태양광규제 매크로 추가",
-    "detail": "미국태양광수입규제(M_1159, 미국의 대중국 태양광 관세·AD/CVD·UFLPA) IMPACTS 추가 — 비중국 K-태양광(한화·OCI 등) 반사수혜."
-   },
-   {
-    "date": "2026-07-24",
-    "kind": "수정",
-    "title": "매크로 정비 + SK이터닉스 CHR + 미국-이란 이벤트",
-    "detail": "유가상승→유가상승반사이익(M_1161) 교체, AI데이터센터전력수요증가(M_035) IMPACTS 추가. SK이터닉스 CHR 'KKR인수·JV(2026.7)'. 2026 이벤트 '미국-이란 MOU 파기' 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_538",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002088"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002089"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_540",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002090"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002091"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_542",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002092"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_543",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002093"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_544",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002094"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002095"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_546",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002096"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002097"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_390",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002098"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_538",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002099"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002100"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_540",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002101"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_543",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002102"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_544",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002103"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_124",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002104"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_546",
+      "to": "BF_124",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002105"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002106"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_390",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002107"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002108"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_542",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002109"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_066",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002111"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_1161",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009533"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_035",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009534"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "C_4396",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009535"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_1159",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009536"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_538",
+      "to": "C_5491",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014434"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "C_5492",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014435"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_540",
+      "to": "C_5493",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014436"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_542",
+      "to": "C_5494",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014437"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_543",
+      "to": "C_5495",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014438"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_544",
+      "to": "C_5496",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014439"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "C_5497",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014440"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_546",
+      "to": "C_5498",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014441"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "C_5499",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014442"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_390",
+      "to": "C_5500",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014443"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "A_538",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018922"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "OCI홀딩스는 말레이시아 자회사 OCIM을 통해 한화솔루션에 10년 12억 달러 규모 폴리실리콘을 장기 공급한다."
+    },
+    {
+      "from": "A_538",
+      "to": "A_540",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018923"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화솔루션(큐셀)과 HD현대에너지솔루션은 한국의 주요 태양광 셀·모듈 제조·수출업체로 직접 경쟁한다."
+    },
+    {
+      "from": "A_538",
+      "to": "A_543",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018924"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화솔루션과 신성이엔지는 국내 태양광 셀·모듈 제조업체로 경쟁하며 미국 반덤핑 제소에도 함께 지목됐다."
+    },
+    {
+      "from": "A_538",
+      "to": "A_544",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018925"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁하는 제조업체다."
+    },
+    {
+      "from": "A_540",
+      "to": "A_543",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018926"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HD현대에너지솔루션과 신성이엔지는 한국 태양광 셀·모듈 제조·수출에서 경쟁한다."
+    },
+    {
+      "from": "A_540",
+      "to": "A_544",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018927"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HD현대에너지솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_543",
+      "to": "A_544",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018928"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "신성이엔지와 한솔테크닉스는 국내 태양광 모듈 제조업체로 경쟁한다."
+    },
+    {
+      "from": "A_541",
+      "to": "A_542",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018929"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK이터닉스와 대명에너지는 국내 태양광 등 신재생에너지 발전 개발·EPC 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_2878",
+      "to": "T_064",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020585"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_538",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002088"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002089"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_540",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002090"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002091"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_542",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002092"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_543",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002093"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_544",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002094"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002095"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_546",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002096"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002097"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_390",
+      "to": "T_064",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002098"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_538",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002099"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002100"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_540",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002101"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_543",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002102"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_544",
+      "to": "BF_123",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002103"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_124",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002104"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_546",
+      "to": "BF_124",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002105"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002106"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_390",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002107"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002108"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_542",
+      "to": "BF_122",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002109"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_066",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002111"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_1161",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009533"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_035",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009534"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_541",
+      "to": "C_4396",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_009535"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_1159",
+      "to": "T_064",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_009536"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_538",
+      "to": "C_5491",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014434"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "C_5492",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014435"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_540",
+      "to": "C_5493",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014436"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_542",
+      "to": "C_5494",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014437"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_543",
+      "to": "C_5495",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014438"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_544",
+      "to": "C_5496",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014439"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "C_5497",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014440"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_546",
+      "to": "C_5498",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014441"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_384",
+      "to": "C_5499",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014442"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_390",
+      "to": "C_5500",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014443"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_539",
+      "to": "A_538",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018922"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "OCI홀딩스는 말레이시아 자회사 OCIM을 통해 한화솔루션에 10년 12억 달러 규모 폴리실리콘을 장기 공급한다."
+    },
+    {
+      "from": "A_538",
+      "to": "A_540",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018923"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화솔루션(큐셀)과 HD현대에너지솔루션은 한국의 주요 태양광 셀·모듈 제조·수출업체로 직접 경쟁한다."
+    },
+    {
+      "from": "A_538",
+      "to": "A_543",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018924"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화솔루션과 신성이엔지는 국내 태양광 셀·모듈 제조업체로 경쟁하며 미국 반덤핑 제소에도 함께 지목됐다."
+    },
+    {
+      "from": "A_538",
+      "to": "A_544",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018925"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁하는 제조업체다."
+    },
+    {
+      "from": "A_540",
+      "to": "A_543",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018926"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HD현대에너지솔루션과 신성이엔지는 한국 태양광 셀·모듈 제조·수출에서 경쟁한다."
+    },
+    {
+      "from": "A_540",
+      "to": "A_544",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018927"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HD현대에너지솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_543",
+      "to": "A_544",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018928"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "신성이엔지와 한솔테크닉스는 국내 태양광 모듈 제조업체로 경쟁한다."
+    },
+    {
+      "from": "A_541",
+      "to": "A_542",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018929"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK이터닉스와 대명에너지는 국내 태양광 등 신재생에너지 발전 개발·EPC 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_2878",
+      "to": "T_064",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020585"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_064",
-   "type": "THEME",
-   "name": "K-태양광"
-  },
-  {
-   "id": "A_538",
-   "type": "ASSET",
-   "name": "Hanwha Solutions",
-   "exposure": {
-    "ticker": "009830",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 12.5,
-    "close": 30150,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 18.23529411764706,
-    "return_7d": 15.07633587786259,
-    "return_15d": 1.005025125628145,
-    "return_1m": -4.133545310015895,
-    "return_ytd": 18.472672468587128,
-    "return_1y": -16.160211778804513,
-    "return_2y": 19.06667084328064,
-    "return_3y": -15.944881889763785,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_539",
-   "type": "ASSET",
-   "name": "OCI Holdings",
-   "exposure": {
-    "ticker": "010060",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 9.333333333333327,
-    "close": 246000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 29.26957435627955,
-    "return_7d": 19.41747572815533,
-    "return_15d": 33.69565217391304,
-    "return_1m": 23.804730749874192,
-    "return_ytd": 133.17535545023696,
-    "return_1y": 158.20929292159312,
-    "return_2y": 197.95207510151909,
-    "return_3y": 276.92206282433875,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_540",
-   "type": "ASSET",
-   "name": "HD Hyundai Energy Solutions",
-   "exposure": {
-    "ticker": "322000",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 5.348837209302326,
-    "close": 135900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 21.23104371097235,
-    "return_7d": 0.8160237388723957,
-    "return_15d": 23.88331814038287,
-    "return_1m": 15.659574468085102,
-    "return_ytd": 145.750452079566,
-    "return_1y": 187.92372881355934,
-    "return_2y": 427.7669902912622,
-    "return_3y": 298.03921568627453,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_541",
-   "type": "ASSET",
-   "name": "SK Eternix",
-   "exposure": {
-    "ticker": "475150",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 3.405017921146958,
-    "return_3d": 26.95269526952695,
-    "return_7d": 1.050788091068311,
-    "return_15d": 18.237704918032783,
-    "return_1m": 34.498834498834505,
-    "return_ytd": 182.843137254902,
-    "return_1y": 151.41612200435728,
-    "return_2y": 244.4777435616453,
-    "return_3y": null,
-    "close": 57700,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_542",
-   "type": "ASSET",
-   "name": "Daemyung Energy",
-   "exposure": {
-    "ticker": "389260",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -5.0176678445229665,
-    "close": 13440,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -17.037037037037038,
-    "return_7d": -9.250506414584736,
-    "return_15d": -5.551651440618411,
-    "return_1m": -2.749638205499272,
-    "return_ytd": -27.93565683646113,
-    "return_1y": -53.00699300699301,
-    "return_2y": -19.61722488038278,
-    "return_3y": -32.32209737827715,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_543",
-   "type": "ASSET",
-   "name": "Shinsung E&G",
-   "exposure": {
-    "ticker": "011930",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 6.645367412140568,
-    "close": 16690,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 18.368794326241144,
-    "return_7d": 9.156311314584698,
-    "return_15d": 7.262210796915158,
-    "return_1m": -6.024774774774777,
-    "return_ytd": 2.961135101789014,
-    "return_1y": 10.60304837640822,
-    "return_2y": -18.58536585365854,
-    "return_3y": 56.575682382134,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_544",
-   "type": "ASSET",
-   "name": "Hansol Technics",
-   "exposure": {
-    "ticker": "004710",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.9138381201044377,
-    "close": 7730,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 10.586552217453505,
-    "return_7d": 3.6193029490616535,
-    "return_15d": -7.535885167464118,
-    "return_1m": -18.37381203801478,
-    "return_ytd": 41.12399879323463,
-    "return_1y": 32.969159532217596,
-    "return_2y": 50.084786254703296,
-    "return_3y": 137.0474406991261,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_545",
-   "type": "ASSET",
-   "name": "LS Electric",
-   "exposure": {
-    "ticker": "010120",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 7.614213197969533,
-    "close": 241500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 14.71861471861471,
-    "return_7d": 6.000000000000005,
-    "return_15d": 12.94619072988812,
-    "return_1m": -2.9748283752860427,
-    "return_ytd": 116.08933684416805,
-    "return_1y": 271.4624726357439,
-    "return_2y": 432.65883314801243,
-    "return_3y": 2199.509001636661,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_546",
-   "type": "ASSET",
-   "name": "GT Power",
-   "exposure": {
-    "ticker": "388050",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.0191082802547768,
-    "close": 7930,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -0.9987515605493158,
-    "return_7d": 0.12626262626262985,
-    "return_15d": -8.429561200923786,
-    "return_1m": -15.187165775401068,
-    "return_ytd": -2.937576499388006,
-    "return_1y": -28.520088198819792,
-    "return_2y": -20.05629730306945,
-    "return_3y": -12.044609665427508,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_384",
-   "type": "ASSET",
-   "name": "Samsung C&T",
-   "exposure": {
-    "ticker": "028260",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 7.751937984496116,
-    "close": 347500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -1.1379800853485111,
-    "return_7d": 2.356406480117812,
-    "return_15d": -1.836158192090398,
-    "return_1m": -22.69187986651835,
-    "return_ytd": 41.836734693877546,
-    "return_1y": 106.81964416427276,
-    "return_2y": 142.93409663902287,
-    "return_3y": 284.01826484018267,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_390",
-   "type": "ASSET",
-   "name": "Dohwa Engineering",
-   "exposure": {
-    "ticker": "002150",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.1904761904761862,
-    "close": 5100,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 4.294478527607359,
-    "return_7d": 2.2044088176352616,
-    "return_15d": 4.722792607802884,
-    "return_1m": -2.857142857142858,
-    "return_ytd": -18.0064308681672,
-    "return_1y": -20.54720851185544,
-    "return_2y": -25.72272228145309,
-    "return_3y": -25.889570552147234,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "BF_122",
-   "type": "BUSINESS_FIELD",
-   "name": "발전소/개발/EPC"
-  },
-  {
-   "id": "BF_123",
-   "type": "BUSINESS_FIELD",
-   "name": "태양광셀/모듈(미국)"
-  },
-  {
-   "id": "BF_124",
-   "type": "BUSINESS_FIELD",
-   "name": "인버터/그리드"
-  },
-  {
-   "id": "M_066",
-   "type": "MACRO",
-   "name": "우주산업확대"
-  },
-  {
-   "id": "M_1161",
-   "type": "MACRO",
-   "name": "유가상승반사이익"
-  },
-  {
-   "id": "M_035",
-   "type": "MACRO",
-   "name": "AI데이터센터전력수요증가"
-  },
-  {
-   "id": "C_4396",
-   "type": "CHARACTER",
-   "name": "KKR인수·JV(2026.7)"
-  },
-  {
-   "id": "M_1159",
-   "type": "MACRO",
-   "name": "미국태양광수입규제"
-  },
-  {
-   "id": "C_5491",
-   "type": "CHARACTER",
-   "name": "태양광셀모듈큐셀"
-  },
-  {
-   "id": "C_5492",
-   "type": "CHARACTER",
-   "name": "폴리실리콘"
-  },
-  {
-   "id": "C_5493",
-   "type": "CHARACTER",
-   "name": "태양광모듈·셀"
-  },
-  {
-   "id": "C_5494",
-   "type": "CHARACTER",
-   "name": "태양광발전EPC"
-  },
-  {
-   "id": "C_5495",
-   "type": "CHARACTER",
-   "name": "태양광셀·클린룸장비"
-  },
-  {
-   "id": "C_5496",
-   "type": "CHARACTER",
-   "name": "모듈·전력변환기기"
-  },
-  {
-   "id": "C_5497",
-   "type": "CHARACTER",
-   "name": "태양광인버터"
-  },
-  {
-   "id": "C_5498",
-   "type": "CHARACTER",
-   "name": "태양광ESS"
-  },
-  {
-   "id": "C_5499",
-   "type": "CHARACTER",
-   "name": "태양광개발EPC"
-  },
-  {
-   "id": "C_5500",
-   "type": "CHARACTER",
-   "name": "발전소설계·EPC"
-  },
-  {
-   "id": "A_2878",
-   "type": "ASSET",
-   "name": "PLUS 태양광&ESS",
-   "exposure": {
-    "ticker": "457990",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_538",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002088"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002089"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_540",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002090"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_541",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002091"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_542",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002092"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_543",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002093"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_544",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002094"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002095"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_546",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002096"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_384",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002097"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_390",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002098"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_538",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002099"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002100"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_540",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002101"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_543",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002102"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_544",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002103"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "BF_124",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002104"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_546",
-   "to": "BF_124",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002105"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_384",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002106"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_390",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002107"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_541",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002108"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_542",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002109"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_066",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002111"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_1161",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_009533"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_035",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_009534"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_541",
-   "to": "C_4396",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_009535"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_1159",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_009536"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_538",
-   "to": "C_5491",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014434"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "C_5492",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014435"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_540",
-   "to": "C_5493",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014436"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_542",
-   "to": "C_5494",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014437"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_543",
-   "to": "C_5495",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014438"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_544",
-   "to": "C_5496",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014439"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "C_5497",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014440"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_546",
-   "to": "C_5498",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014441"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_384",
-   "to": "C_5499",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014442"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_390",
-   "to": "C_5500",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014443"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "A_538",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018922"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "OCI홀딩스는 말레이시아 자회사 OCIM을 통해 한화솔루션에 10년 12억 달러 규모 폴리실리콘을 장기 공급한다."
-  },
-  {
-   "from": "A_538",
-   "to": "A_540",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018923"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화솔루션(큐셀)과 HD현대에너지솔루션은 한국의 주요 태양광 셀·모듈 제조·수출업체로 직접 경쟁한다."
-  },
-  {
-   "from": "A_538",
-   "to": "A_543",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018924"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화솔루션과 신성이엔지는 국내 태양광 셀·모듈 제조업체로 경쟁하며 미국 반덤핑 제소에도 함께 지목됐다."
-  },
-  {
-   "from": "A_538",
-   "to": "A_544",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018925"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁하는 제조업체다."
-  },
-  {
-   "from": "A_540",
-   "to": "A_543",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018926"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HD현대에너지솔루션과 신성이엔지는 한국 태양광 셀·모듈 제조·수출에서 경쟁한다."
-  },
-  {
-   "from": "A_540",
-   "to": "A_544",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018927"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HD현대에너지솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_543",
-   "to": "A_544",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018928"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "신성이엔지와 한솔테크닉스는 국내 태양광 모듈 제조업체로 경쟁한다."
-  },
-  {
-   "from": "A_541",
-   "to": "A_542",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018929"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK이터닉스와 대명에너지는 국내 태양광 등 신재생에너지 발전 개발·EPC 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_2878",
-   "to": "T_064",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020585"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_538",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002088"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002089"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_540",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002090"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_541",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002091"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_542",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002092"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_543",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002093"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_544",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002094"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002095"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_546",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002096"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_384",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002097"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_390",
-   "to": "T_064",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002098"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_538",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002099"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002100"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_540",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002101"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_543",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002102"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_544",
-   "to": "BF_123",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002103"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "BF_124",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002104"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_546",
-   "to": "BF_124",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002105"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_384",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002106"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_390",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002107"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_541",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002108"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_542",
-   "to": "BF_122",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002109"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_066",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002111"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_1161",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_009533"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_035",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_009534"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_541",
-   "to": "C_4396",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_009535"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_1159",
-   "to": "T_064",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_009536"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_538",
-   "to": "C_5491",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014434"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "C_5492",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014435"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_540",
-   "to": "C_5493",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014436"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_542",
-   "to": "C_5494",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014437"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_543",
-   "to": "C_5495",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014438"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_544",
-   "to": "C_5496",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014439"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "C_5497",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014440"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_546",
-   "to": "C_5498",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014441"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_384",
-   "to": "C_5499",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014442"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_390",
-   "to": "C_5500",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014443"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_539",
-   "to": "A_538",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018922"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "OCI홀딩스는 말레이시아 자회사 OCIM을 통해 한화솔루션에 10년 12억 달러 규모 폴리실리콘을 장기 공급한다."
-  },
-  {
-   "from": "A_538",
-   "to": "A_540",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018923"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화솔루션(큐셀)과 HD현대에너지솔루션은 한국의 주요 태양광 셀·모듈 제조·수출업체로 직접 경쟁한다."
-  },
-  {
-   "from": "A_538",
-   "to": "A_543",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018924"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화솔루션과 신성이엔지는 국내 태양광 셀·모듈 제조업체로 경쟁하며 미국 반덤핑 제소에도 함께 지목됐다."
-  },
-  {
-   "from": "A_538",
-   "to": "A_544",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018925"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁하는 제조업체다."
-  },
-  {
-   "from": "A_540",
-   "to": "A_543",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018926"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HD현대에너지솔루션과 신성이엔지는 한국 태양광 셀·모듈 제조·수출에서 경쟁한다."
-  },
-  {
-   "from": "A_540",
-   "to": "A_544",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018927"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HD현대에너지솔루션과 한솔테크닉스는 국내 태양광 모듈 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_543",
-   "to": "A_544",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018928"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "신성이엔지와 한솔테크닉스는 국내 태양광 모듈 제조업체로 경쟁한다."
-  },
-  {
-   "from": "A_541",
-   "to": "A_542",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018929"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK이터닉스와 대명에너지는 국내 태양광 등 신재생에너지 발전 개발·EPC 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_2878",
-   "to": "T_064",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020585"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

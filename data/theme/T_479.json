@@ -1,777 +1,795 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_479",
- "themeName": "글로벌 정유 마진(Refiners)",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_479",
+  "themeName": "글로벌 정유 마진(Refiners)",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "수년 신증설 부재·정제설비 폐쇄 → 크랙스프레드(정제마진) 강세·자본환원. 미국 정유(Valero·Marathon·Phillips66·HF Sinclair·PBF·Par·Delek) + 재생디젤(Neste). 유가·정제마진·가동률이 동인.",
+    "notes": "T_479 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_479",
+      "type": "THEME",
+      "name": "글로벌 정유 마진(Refiners)"
+    },
+    {
+      "id": "A_2475",
+      "type": "ASSET",
+      "name": "발레로",
+      "exposure": {
+        "ticker": "VLO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.0535743206037793,
+        "return_3d": -3.358900607222748,
+        "return_7d": -0.8329780605384918,
+        "return_15d": 3.3246770997061192,
+        "return_1m": 13.5865073998948,
+        "return_ytd": 82.92299316435788,
+        "return_1y": 123.9262440758294,
+        "return_2y": 86.98367548849863,
+        "return_3y": 134.57450934760686,
+        "close": 302.39,
+        "marketCap": 87066385234,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_990",
+      "type": "CHARACTER",
+      "name": "미국 정유 1티어"
+    },
+    {
+      "id": "A_2476",
+      "type": "ASSET",
+      "name": "마라톤페트롤리엄",
+      "exposure": {
+        "ticker": "MPC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -4.753526758580984,
+        "return_3d": -5.915252630581103,
+        "return_7d": -4.674243636945741,
+        "return_15d": -0.4779731265458942,
+        "return_1m": 11.79739421019037,
+        "return_ytd": 80.30156231076664,
+        "return_1y": 77.27435103596095,
+        "return_2y": 68.20133318269122,
+        "return_3y": 123.83852052322956,
+        "close": 297.75,
+        "marketCap": 86924241750,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_991",
+      "type": "CHARACTER",
+      "name": "미국 최대 정유"
+    },
+    {
+      "id": "A_2477",
+      "type": "ASSET",
+      "name": "필립스66",
+      "exposure": {
+        "ticker": "PSX",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.6222254601971797,
+        "return_3d": -4.313114134542706,
+        "return_7d": -2.535848330285817,
+        "return_15d": 3.257544861337691,
+        "return_1m": 13.25766047864012,
+        "return_ytd": 55.127517806540574,
+        "return_1y": 66.76272023711512,
+        "return_2y": 39.228759967005786,
+        "return_3y": 81.57776781712238,
+        "close": 202.55,
+        "marketCap": 81209388301,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_992",
+      "type": "CHARACTER",
+      "name": "정유·화학·미드스트림"
+    },
+    {
+      "id": "A_2478",
+      "type": "ASSET",
+      "name": "HF싱클레어",
+      "exposure": {
+        "ticker": "DINO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -5.971671388101973,
+        "return_3d": -9.281731715316488,
+        "return_7d": -8.592200925313943,
+        "return_15d": -1.1318956273084768,
+        "return_1m": 12.226129294022181,
+        "return_ytd": 77.11846318036287,
+        "return_1y": 89.53860210141617,
+        "return_2y": 61.22012823003693,
+        "return_3y": 59.30120944519102,
+        "close": 82.98,
+        "marketCap": 14752516320,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_993",
+      "type": "CHARACTER",
+      "name": "정유·재생디젤·윤활기유"
+    },
+    {
+      "id": "A_2479",
+      "type": "ASSET",
+      "name": "PBF에너지",
+      "exposure": {
+        "ticker": "PBF",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -7.163454241918343,
+        "return_3d": -15.37078029883785,
+        "return_7d": -2.533460803059273,
+        "return_15d": 4.10142954390742,
+        "return_1m": 26.227816756087496,
+        "return_ytd": 114.40588853838065,
+        "return_1y": 162.87064890416846,
+        "return_2y": 50.11042944785275,
+        "return_3y": 28.941821247892086,
+        "close": 61.17,
+        "marketCap": 7250898380,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_994",
+      "type": "CHARACTER",
+      "name": "미국독립정유(고도화)"
+    },
+    {
+      "id": "A_2480",
+      "type": "ASSET",
+      "name": "네스테",
+      "exposure": {
+        "ticker": "NTOIY",
+        "exchange": "OTC",
+        "country": "FI"
+      },
+      "metrics": {
+        "return_1d": -2.6300059772863205,
+        "return_3d": -7.966101694915251,
+        "return_7d": -2.8622540250447304,
+        "return_15d": -8.585858585858597,
+        "return_1m": 2.7760252365930604,
+        "return_ytd": 39.230769230769226,
+        "return_1y": 108.04597701149423,
+        "return_2y": 60.17699115044246,
+        "return_3y": -10.983606557377056,
+        "close": 16.29,
+        "marketCap": 25030647206,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_995",
+      "type": "CHARACTER",
+      "name": "재생디젤(HVO) 1위"
+    },
+    {
+      "id": "A_2481",
+      "type": "ASSET",
+      "name": "파파시픽",
+      "exposure": {
+        "ticker": "PARR",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -15.759036144578308,
+        "return_3d": -18.726025804951764,
+        "return_7d": -11.088504577822988,
+        "return_15d": -4.493921595410455,
+        "return_1m": 13.765050439310112,
+        "return_ytd": 95.19821328866556,
+        "return_1y": 129.02063544055028,
+        "return_2y": 163.3521657250471,
+        "return_3y": 122.10927573062263,
+        "close": 69.92,
+        "marketCap": 3506087848,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_996",
+      "type": "CHARACTER",
+      "name": "지역 정유·물류"
+    },
+    {
+      "id": "A_2482",
+      "type": "ASSET",
+      "name": "델렉",
+      "exposure": {
+        "ticker": "DK",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -9.743202416918429,
+        "return_3d": -11.964048917047299,
+        "return_7d": -7.278088144009931,
+        "return_15d": 0.2180476350218008,
+        "return_1m": 14.201070336391442,
+        "return_ytd": 100.63801208865009,
+        "return_1y": 179.3361383824217,
+        "return_2y": 151.2615643397813,
+        "return_3y": 116.5639724537876,
+        "close": 59.75,
+        "marketCap": 3661928125,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_997",
+      "type": "CHARACTER",
+      "name": "정유·소매·물류"
+    },
+    {
+      "id": "M_059",
+      "type": "MACRO",
+      "name": "유가상승"
+    },
+    {
+      "id": "M_073",
+      "type": "MACRO",
+      "name": "미국에너지개발확대"
+    },
+    {
+      "id": "M_173",
+      "type": "MACRO",
+      "name": "주주환원정책"
+    },
+    {
+      "id": "A_2948",
+      "type": "ASSET",
+      "name": "VanEck Oil Refiners ETF",
+      "exposure": {
+        "ticker": "CRAK",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.983835415135926,
+        "return_3d": -3.4033309196234707,
+        "return_7d": -0.6331471135940459,
+        "return_15d": 1.3677811550151908,
+        "return_1m": 9.411523477547657,
+        "return_ytd": 40.71729957805908,
+        "return_1y": 60.04799040191959,
+        "return_2y": 48.18106081643989,
+        "return_3y": 59.999999999999986,
+        "close": 53.36,
+        "marketCap": 39568574,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "수년 신증설 부재·정제설비 폐쇄 → 크랙스프레드(정제마진) 강세·자본환원. 미국 정유(Valero·Marathon·Phillips66·HF Sinclair·PBF·Par·Delek) + 재생디젤(Neste). 유가·정제마진·가동률이 동인.",
-  "notes": "T_479 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2475",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012135"
+      ]
+    },
+    {
+      "from": "A_2475",
+      "to": "C_990",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017074"
+      ]
+    },
+    {
+      "from": "A_2476",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012136"
+      ]
+    },
+    {
+      "from": "A_2476",
+      "to": "C_991",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017075"
+      ]
+    },
+    {
+      "from": "A_2477",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012137"
+      ]
+    },
+    {
+      "from": "A_2477",
+      "to": "C_992",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017076"
+      ]
+    },
+    {
+      "from": "A_2478",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012138"
+      ]
+    },
+    {
+      "from": "A_2478",
+      "to": "C_993",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017077"
+      ]
+    },
+    {
+      "from": "A_2479",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012139"
+      ]
+    },
+    {
+      "from": "A_2479",
+      "to": "C_994",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017078"
+      ]
+    },
+    {
+      "from": "A_2480",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012140"
+      ]
+    },
+    {
+      "from": "A_2480",
+      "to": "C_995",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017079"
+      ]
+    },
+    {
+      "from": "A_2481",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012141"
+      ]
+    },
+    {
+      "from": "A_2481",
+      "to": "C_996",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017080"
+      ]
+    },
+    {
+      "from": "A_2482",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012142"
+      ]
+    },
+    {
+      "from": "A_2482",
+      "to": "C_997",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017081"
+      ]
+    },
+    {
+      "from": "M_059",
+      "to": "T_479",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012143"
+      ]
+    },
+    {
+      "from": "M_073",
+      "to": "T_479",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012144"
+      ]
+    },
+    {
+      "from": "M_173",
+      "to": "T_479",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012145"
+      ]
+    },
+    {
+      "from": "A_2475",
+      "to": "A_2476",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019845"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "발레로와 마라톤페트롤리엄은 미국 정유 시장 양대 경쟁"
+    },
+    {
+      "from": "A_2476",
+      "to": "A_2477",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019846"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "마라톤페트롤리엄과 필립스66은 미국 정유·유통 시장 경쟁"
+    },
+    {
+      "from": "A_2478",
+      "to": "A_2479",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019847"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HF싱클레어와 PBF에너지는 독립 정유사 시장 경쟁"
+    },
+    {
+      "from": "A_2480",
+      "to": "A_2475",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019848"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "네스테와 발레로는 재생디젤·바이오연료 시장 경쟁"
+    },
+    {
+      "from": "A_2481",
+      "to": "A_2482",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019849"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "파파시픽과 델렉은 소형 독립 정유사 시장 경쟁"
+    },
+    {
+      "from": "A_2948",
+      "to": "T_479",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020827"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2475",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012135"
+      ]
+    },
+    {
+      "from": "A_2475",
+      "to": "C_990",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017074"
+      ]
+    },
+    {
+      "from": "A_2476",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012136"
+      ]
+    },
+    {
+      "from": "A_2476",
+      "to": "C_991",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017075"
+      ]
+    },
+    {
+      "from": "A_2477",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012137"
+      ]
+    },
+    {
+      "from": "A_2477",
+      "to": "C_992",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017076"
+      ]
+    },
+    {
+      "from": "A_2478",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012138"
+      ]
+    },
+    {
+      "from": "A_2478",
+      "to": "C_993",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017077"
+      ]
+    },
+    {
+      "from": "A_2479",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012139"
+      ]
+    },
+    {
+      "from": "A_2479",
+      "to": "C_994",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017078"
+      ]
+    },
+    {
+      "from": "A_2480",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012140"
+      ]
+    },
+    {
+      "from": "A_2480",
+      "to": "C_995",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017079"
+      ]
+    },
+    {
+      "from": "A_2481",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012141"
+      ]
+    },
+    {
+      "from": "A_2481",
+      "to": "C_996",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017080"
+      ]
+    },
+    {
+      "from": "A_2482",
+      "to": "T_479",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012142"
+      ]
+    },
+    {
+      "from": "A_2482",
+      "to": "C_997",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017081"
+      ]
+    },
+    {
+      "from": "M_059",
+      "to": "T_479",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012143"
+      ]
+    },
+    {
+      "from": "M_073",
+      "to": "T_479",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012144"
+      ]
+    },
+    {
+      "from": "M_173",
+      "to": "T_479",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012145"
+      ]
+    },
+    {
+      "from": "A_2475",
+      "to": "A_2476",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019845"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "발레로와 마라톤페트롤리엄은 미국 정유 시장 양대 경쟁"
+    },
+    {
+      "from": "A_2476",
+      "to": "A_2477",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019846"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "마라톤페트롤리엄과 필립스66은 미국 정유·유통 시장 경쟁"
+    },
+    {
+      "from": "A_2478",
+      "to": "A_2479",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019847"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HF싱클레어와 PBF에너지는 독립 정유사 시장 경쟁"
+    },
+    {
+      "from": "A_2480",
+      "to": "A_2475",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019848"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "네스테와 발레로는 재생디젤·바이오연료 시장 경쟁"
+    },
+    {
+      "from": "A_2481",
+      "to": "A_2482",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019849"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "파파시픽과 델렉은 소형 독립 정유사 시장 경쟁"
+    },
+    {
+      "from": "A_2948",
+      "to": "T_479",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020827"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_479",
-   "type": "THEME",
-   "name": "글로벌 정유 마진(Refiners)"
-  },
-  {
-   "id": "A_2475",
-   "type": "ASSET",
-   "name": "발레로",
-   "exposure": {
-    "ticker": "VLO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.38694153606035897,
-    "return_3d": -0.9560168104969291,
-    "return_7d": 2.0595041322314156,
-    "return_15d": 2.421789470192093,
-    "return_1m": 14.209085528262811,
-    "return_ytd": 86.75821184441352,
-    "return_1y": 131.814086199129,
-    "return_2y": 88.84878884267191,
-    "return_3y": 139.19578523281945,
-    "close": 308.73,
-    "marketCap": 88891845343,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_990",
-   "type": "CHARACTER",
-   "name": "미국 정유 1티어"
-  },
-  {
-   "id": "A_2476",
-   "type": "ASSET",
-   "name": "마라톤페트롤리엄",
-   "exposure": {
-    "ticker": "MPC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.8174119792854215,
-    "return_3d": -0.4680336220071246,
-    "return_7d": 1.0897684646229422,
-    "return_15d": 3.0355965721819533,
-    "return_1m": 16.216216216216228,
-    "return_ytd": 89.29998788906386,
-    "return_1y": 88.85398417205342,
-    "return_2y": 75.33793258174886,
-    "return_3y": 137.13115375862853,
-    "close": 312.61,
-    "marketCap": 91262425570,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_991",
-   "type": "CHARACTER",
-   "name": "미국 최대 정유"
-  },
-  {
-   "id": "A_2477",
-   "type": "ASSET",
-   "name": "필립스66",
-   "exposure": {
-    "ticker": "PSX",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.14549687181726334,
-    "return_3d": -2.2364672364672433,
-    "return_7d": -0.4255936547855166,
-    "return_15d": 2.2040208488458557,
-    "return_1m": 16.10556589409573,
-    "return_ytd": 57.68553266447116,
-    "return_1y": 72.14882943143812,
-    "return_2y": 39.89943602636408,
-    "return_3y": 86.57906660625284,
-    "close": 205.89,
-    "marketCap": 82548511268,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_992",
-   "type": "CHARACTER",
-   "name": "정유·화학·미드스트림"
-  },
-  {
-   "id": "A_2478",
-   "type": "ASSET",
-   "name": "HF싱클레어",
-   "exposure": {
-    "ticker": "DINO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.451212633953757,
-    "return_3d": -4.532669839896142,
-    "return_7d": -0.05662514156284937,
-    "return_15d": 6.184574660089037,
-    "return_1m": 18.535930154466087,
-    "return_ytd": 88.36712913553895,
-    "return_1y": 108.33333333333334,
-    "return_2y": 71.32595612502428,
-    "return_3y": 71.02713178294573,
-    "close": 88.25,
-    "marketCap": 15689438000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_993",
-   "type": "CHARACTER",
-   "name": "정유·재생디젤·윤활기유"
-  },
-  {
-   "id": "A_2479",
-   "type": "ASSET",
-   "name": "PBF에너지",
-   "exposure": {
-    "ticker": "PBF",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -2.9745251067589407,
-    "return_3d": -9.863201094391238,
-    "return_7d": 6.912218075612531,
-    "return_15d": 8.211528986697324,
-    "return_1m": 33.75964271213967,
-    "return_ytd": 130.94987732211706,
-    "return_1y": 203.92066420664204,
-    "return_2y": 61.33692458374143,
-    "return_3y": 39.33178261788961,
-    "close": 65.89,
-    "marketCap": 7810392256,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_994",
-   "type": "CHARACTER",
-   "name": "미국독립정유(고도화)"
-  },
-  {
-   "id": "A_2480",
-   "type": "ASSET",
-   "name": "네스테",
-   "exposure": {
-    "ticker": "NTOIY",
-    "exchange": "OTC",
-    "country": "FI"
-   },
-   "metrics": {
-    "return_1d": -2.5626092020966884,
-    "return_3d": -7.466814159292023,
-    "return_7d": -5.212464589235122,
-    "return_15d": -6.064008983717006,
-    "return_1m": 5.552050473186121,
-    "return_ytd": 42.991452991452995,
-    "return_1y": 113.39285714285717,
-    "return_2y": 68.47935548841895,
-    "return_3y": -8.927599346761028,
-    "close": 16.73,
-    "marketCap": 25706735896,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_995",
-   "type": "CHARACTER",
-   "name": "재생디젤(HVO) 1위"
-  },
-  {
-   "id": "A_2481",
-   "type": "ASSET",
-   "name": "파파시픽",
-   "exposure": {
-    "ticker": "PARR",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.15687220948472635,
-    "return_3d": -3.3872657432196474,
-    "return_7d": 7.24899857862773,
-    "return_15d": 12.848402447314754,
-    "return_1m": 36.6480079025354,
-    "return_ytd": 131.714126186488,
-    "return_1y": 176.85123415610406,
-    "return_2y": 217.15705005731755,
-    "return_3y": 167.1387190215642,
-    "close": 83.0,
-    "marketCap": 4161974991,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_996",
-   "type": "CHARACTER",
-   "name": "지역 정유·물류"
-  },
-  {
-   "id": "A_2482",
-   "type": "ASSET",
-   "name": "델렉",
-   "exposure": {
-    "ticker": "DK",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.2878351764884046,
-    "return_3d": -2.2300989514104086,
-    "return_7d": 4.746835443037978,
-    "return_15d": 8.613617719442157,
-    "return_1m": 24.976401736832177,
-    "return_ytd": 122.29684351914037,
-    "return_1y": 218.72893596533464,
-    "return_2y": 176.87160184023423,
-    "return_3y": 143.92041267501844,
-    "close": 66.05,
-    "marketCap": 4048039375,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_997",
-   "type": "CHARACTER",
-   "name": "정유·소매·물류"
-  },
-  {
-   "id": "M_059",
-   "type": "MACRO",
-   "name": "유가상승"
-  },
-  {
-   "id": "M_073",
-   "type": "MACRO",
-   "name": "미국에너지개발확대"
-  },
-  {
-   "id": "M_173",
-   "type": "MACRO",
-   "name": "주주환원정책"
-  },
-  {
-   "id": "A_2948",
-   "type": "ASSET",
-   "name": "VanEck Oil Refiners ETF",
-   "exposure": {
-    "ticker": "CRAK",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2475",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012135"
-   ]
-  },
-  {
-   "from": "A_2475",
-   "to": "C_990",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017074"
-   ]
-  },
-  {
-   "from": "A_2476",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012136"
-   ]
-  },
-  {
-   "from": "A_2476",
-   "to": "C_991",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017075"
-   ]
-  },
-  {
-   "from": "A_2477",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012137"
-   ]
-  },
-  {
-   "from": "A_2477",
-   "to": "C_992",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017076"
-   ]
-  },
-  {
-   "from": "A_2478",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012138"
-   ]
-  },
-  {
-   "from": "A_2478",
-   "to": "C_993",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017077"
-   ]
-  },
-  {
-   "from": "A_2479",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012139"
-   ]
-  },
-  {
-   "from": "A_2479",
-   "to": "C_994",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017078"
-   ]
-  },
-  {
-   "from": "A_2480",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012140"
-   ]
-  },
-  {
-   "from": "A_2480",
-   "to": "C_995",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017079"
-   ]
-  },
-  {
-   "from": "A_2481",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012141"
-   ]
-  },
-  {
-   "from": "A_2481",
-   "to": "C_996",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017080"
-   ]
-  },
-  {
-   "from": "A_2482",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012142"
-   ]
-  },
-  {
-   "from": "A_2482",
-   "to": "C_997",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017081"
-   ]
-  },
-  {
-   "from": "M_059",
-   "to": "T_479",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012143"
-   ]
-  },
-  {
-   "from": "M_073",
-   "to": "T_479",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012144"
-   ]
-  },
-  {
-   "from": "M_173",
-   "to": "T_479",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012145"
-   ]
-  },
-  {
-   "from": "A_2475",
-   "to": "A_2476",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019845"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "발레로와 마라톤페트롤리엄은 미국 정유 시장 양대 경쟁"
-  },
-  {
-   "from": "A_2476",
-   "to": "A_2477",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019846"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "마라톤페트롤리엄과 필립스66은 미국 정유·유통 시장 경쟁"
-  },
-  {
-   "from": "A_2478",
-   "to": "A_2479",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019847"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HF싱클레어와 PBF에너지는 독립 정유사 시장 경쟁"
-  },
-  {
-   "from": "A_2480",
-   "to": "A_2475",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019848"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "네스테와 발레로는 재생디젤·바이오연료 시장 경쟁"
-  },
-  {
-   "from": "A_2481",
-   "to": "A_2482",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019849"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "파파시픽과 델렉은 소형 독립 정유사 시장 경쟁"
-  },
-  {
-   "from": "A_2948",
-   "to": "T_479",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020827"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2475",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012135"
-   ]
-  },
-  {
-   "from": "A_2475",
-   "to": "C_990",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017074"
-   ]
-  },
-  {
-   "from": "A_2476",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012136"
-   ]
-  },
-  {
-   "from": "A_2476",
-   "to": "C_991",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017075"
-   ]
-  },
-  {
-   "from": "A_2477",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012137"
-   ]
-  },
-  {
-   "from": "A_2477",
-   "to": "C_992",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017076"
-   ]
-  },
-  {
-   "from": "A_2478",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012138"
-   ]
-  },
-  {
-   "from": "A_2478",
-   "to": "C_993",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017077"
-   ]
-  },
-  {
-   "from": "A_2479",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012139"
-   ]
-  },
-  {
-   "from": "A_2479",
-   "to": "C_994",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017078"
-   ]
-  },
-  {
-   "from": "A_2480",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012140"
-   ]
-  },
-  {
-   "from": "A_2480",
-   "to": "C_995",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017079"
-   ]
-  },
-  {
-   "from": "A_2481",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012141"
-   ]
-  },
-  {
-   "from": "A_2481",
-   "to": "C_996",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017080"
-   ]
-  },
-  {
-   "from": "A_2482",
-   "to": "T_479",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012142"
-   ]
-  },
-  {
-   "from": "A_2482",
-   "to": "C_997",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017081"
-   ]
-  },
-  {
-   "from": "M_059",
-   "to": "T_479",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012143"
-   ]
-  },
-  {
-   "from": "M_073",
-   "to": "T_479",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012144"
-   ]
-  },
-  {
-   "from": "M_173",
-   "to": "T_479",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012145"
-   ]
-  },
-  {
-   "from": "A_2475",
-   "to": "A_2476",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019845"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "발레로와 마라톤페트롤리엄은 미국 정유 시장 양대 경쟁"
-  },
-  {
-   "from": "A_2476",
-   "to": "A_2477",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019846"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "마라톤페트롤리엄과 필립스66은 미국 정유·유통 시장 경쟁"
-  },
-  {
-   "from": "A_2478",
-   "to": "A_2479",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019847"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HF싱클레어와 PBF에너지는 독립 정유사 시장 경쟁"
-  },
-  {
-   "from": "A_2480",
-   "to": "A_2475",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019848"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "네스테와 발레로는 재생디젤·바이오연료 시장 경쟁"
-  },
-  {
-   "from": "A_2481",
-   "to": "A_2482",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019849"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "파파시픽과 델렉은 소형 독립 정유사 시장 경쟁"
-  },
-  {
-   "from": "A_2948",
-   "to": "T_479",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020827"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

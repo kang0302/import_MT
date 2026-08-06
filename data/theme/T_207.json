@@ -1,1075 +1,1075 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_207",
- "themeName": "미국로봇산업:물류/배송/서비스",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_207",
+  "themeName": "미국로봇산업:물류/배송/서비스",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-06T00:00:00+09:00",
+    "notes": "g207 누적 import 기반 미국로봇산업:물류/배송/서비스 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 4건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 8개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_207",
+      "type": "THEME",
+      "name": "미국로봇산업:물류/배송/서비스"
+    },
+    {
+      "id": "A_1336",
+      "type": "ASSET",
+      "name": "리치테크로보틱스",
+      "exposure": {
+        "ticker": "RR",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -6.626506024096379,
+        "close": 1.55,
+        "marketCap": 284674747,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 9.154929577464799,
+        "return_7d": 3.3333333333333437,
+        "return_15d": -7.18562874251496,
+        "return_1m": -15.300546448087438,
+        "return_ytd": -55.45977011494252,
+        "return_1y": -18.421052631578938,
+        "return_2y": 4.026845637583887,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1337",
+      "type": "ASSET",
+      "name": "서브로보틱스",
+      "exposure": {
+        "ticker": "SERV",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.5272407732864748,
+        "close": 5.66,
+        "marketCap": 428406402,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 18.410041841004187,
+        "return_7d": 18.410041841004187,
+        "return_15d": -1.565217391304341,
+        "return_1m": -6.446280991735531,
+        "return_ytd": -52.15553677092139,
+        "return_1y": -46.248812915479576,
+        "return_2y": -67.69406392694064,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1338",
+      "type": "ASSET",
+      "name": "심보틱",
+      "exposure": {
+        "ticker": "SYM",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.9806152549515343,
+        "close": 46.52,
+        "marketCap": 29851744068,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 8.060394889663192,
+        "return_7d": 12.123403229693896,
+        "return_15d": 9.099437148217637,
+        "return_1m": 12.584704743465647,
+        "return_ytd": -28.287343918606446,
+        "return_1y": -17.765600141417703,
+        "return_2y": 73.51734427452445,
+        "return_3y": -26.786276361347173,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_789",
+      "type": "ASSET",
+      "name": "어질리티로보틱스(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "어질리티로보틱스는 물류 휴머노이드 미국사(비상장)다"
+    },
+    {
+      "id": "A_1459",
+      "type": "ASSET",
+      "name": "샤크닌자",
+      "exposure": {
+        "ticker": "SN",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 8.276354123312935,
+        "close": 182.11,
+        "marketCap": 25772278223,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 12.57340668850837,
+        "return_7d": 18.878516874469618,
+        "return_15d": 21.36621126291236,
+        "return_1m": 20.65058963826687,
+        "return_ytd": 59.95608256477824,
+        "return_1y": 56.62681689171758,
+        "return_2y": 136.96811971372807,
+        "return_3y": 330.41834081777364,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1114",
+      "type": "ASSET",
+      "name": "아이로봇",
+      "exposure": {
+        "ticker": "IRBT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "close": 0.054,
+        "marketCap": 1718615,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.0,
+        "return_7d": 0.0,
+        "return_15d": 0.0,
+        "return_1m": -71.57894736842105,
+        "return_ytd": -54.96246872393662,
+        "return_1y": -99.42184154175588,
+        "return_2y": -99.61067051189619,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_286",
+      "type": "ASSET",
+      "name": "ABB",
+      "exposure": {
+        "ticker": "ABB",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.0802756243049263,
+        "close": 37.13,
+        "marketCap": 69020585106,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.18781862087469126,
+        "return_7d": 0.7011811919535482,
+        "return_15d": 1.9104803493449785,
+        "return_1m": 3.320420586607642,
+        "return_ytd": 0.0,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_312",
+      "type": "ASSET",
+      "name": "록웰오토메이션",
+      "exposure": {
+        "ticker": "ROK",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.0825865283112135,
+        "close": 450.05,
+        "marketCap": 50078863700,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -6.255207465422419,
+        "return_7d": -3.422746781115882,
+        "return_15d": -2.569709040526502,
+        "return_1m": -4.020046918319464,
+        "return_ytd": 12.921841676075774,
+        "return_1y": 28.52695910440941,
+        "return_2y": 61.51085591243497,
+        "return_3y": 33.82794611793392,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_199",
+      "type": "MACRO",
+      "name": "인건비상승"
+    },
+    {
+      "id": "M_200",
+      "type": "MACRO",
+      "name": "AGI범용인공지능"
+    },
+    {
+      "id": "M_201",
+      "type": "MACRO",
+      "name": "양산비용다운"
+    },
+    {
+      "id": "BF_371",
+      "type": "BUSINESS_FIELD",
+      "name": "리테일서비스"
+    },
+    {
+      "id": "BF_372",
+      "type": "BUSINESS_FIELD",
+      "name": "물류/배송"
+    },
+    {
+      "id": "BF_373",
+      "type": "BUSINESS_FIELD",
+      "name": "가정용"
+    },
+    {
+      "id": "BF_374",
+      "type": "BUSINESS_FIELD",
+      "name": "산업용"
+    },
+    {
+      "id": "C_3203",
+      "type": "CHARACTER",
+      "name": "리테일서비스로봇"
+    },
+    {
+      "id": "C_3204",
+      "type": "CHARACTER",
+      "name": "자율배송로봇"
+    },
+    {
+      "id": "C_3205",
+      "type": "CHARACTER",
+      "name": "물류자동화시스템"
+    },
+    {
+      "id": "C_3206",
+      "type": "CHARACTER",
+      "name": "물류휴머노이드(비)"
+    },
+    {
+      "id": "C_3207",
+      "type": "CHARACTER",
+      "name": "가정용로봇가전"
+    },
+    {
+      "id": "C_3208",
+      "type": "CHARACTER",
+      "name": "룸바로봇청소기"
+    },
+    {
+      "id": "C_3209",
+      "type": "CHARACTER",
+      "name": "산업로봇글로벌"
+    },
+    {
+      "id": "C_3210",
+      "type": "CHARACTER",
+      "name": "산업자동화"
+    },
+    {
+      "id": "A_1111",
+      "type": "ASSET",
+      "name": "ROBO",
+      "exposure": {
+        "ticker": "ROBO",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.035570310647381476,
+        "close": 84.37,
+        "marketCap": 2166865176,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 6.460567823343855,
+        "return_7d": 7.368287095953185,
+        "return_15d": 4.7423960273122345,
+        "return_1m": 2.99072265625,
+        "return_ytd": 19.318342525809662,
+        "return_1y": 33.83565989847717,
+        "return_2y": 50.95723743066738,
+        "return_3y": 42.70974289580516,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-06T00:00:00+09:00",
-  "notes": "g207 누적 import 기반 미국로봇산업:물류/배송/서비스 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 4건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "보강",
-    "title": "자산별 테마관점 CHR 정의",
-    "detail": "자산 8개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필 + 2026 이벤트",
-    "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1336",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006323"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006324"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006325"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_789",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006326"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1459",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006327"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1114",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006328"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006329"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_312",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006330"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_199",
+      "to": "T_207",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006341"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_200",
+      "to": "T_207",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006342"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_201",
+      "to": "T_207",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006343"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1336",
+      "to": "BF_371",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006331"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1336",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006332"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "BF_371",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006333"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006334"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006335"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_789",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006336"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1459",
+      "to": "BF_373",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006337"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1114",
+      "to": "BF_373",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006338"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "BF_374",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006339"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_312",
+      "to": "BF_374",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006340"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1336",
+      "to": "C_3203",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006429"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "C_3204",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006430"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "C_3205",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006431"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_789",
+      "to": "C_3206",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006432"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1459",
+      "to": "C_3207",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006433"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1114",
+      "to": "C_3208",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006434"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_3209",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006435"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_312",
+      "to": "C_3210",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006436"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "A_1337",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019287"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "심보틱와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_286",
+      "to": "A_312",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019288"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "ABB와 록웰오토메이션는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1114",
+      "to": "A_1459",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019289"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아이로봇와 샤크닌자는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1336",
+      "to": "A_1337",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019290"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리치테크로보틱스와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1111",
+      "to": "T_207",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020648"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1336",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006323"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006324"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006325"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_789",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006326"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1459",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006327"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1114",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006328"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006329"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_312",
+      "to": "T_207",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006330"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_199",
+      "to": "T_207",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006341"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_200",
+      "to": "T_207",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006342"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_201",
+      "to": "T_207",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006343"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1336",
+      "to": "BF_371",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006331"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1336",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006332"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "BF_371",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006333"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006334"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006335"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_789",
+      "to": "BF_372",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006336"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1459",
+      "to": "BF_373",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006337"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1114",
+      "to": "BF_373",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006338"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "BF_374",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006339"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_312",
+      "to": "BF_374",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006340"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1336",
+      "to": "C_3203",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006429"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1337",
+      "to": "C_3204",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006430"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "C_3205",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006431"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_789",
+      "to": "C_3206",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006432"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1459",
+      "to": "C_3207",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006433"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1114",
+      "to": "C_3208",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006434"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_3209",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006435"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_312",
+      "to": "C_3210",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006436"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1338",
+      "to": "A_1337",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019287"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "심보틱와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_286",
+      "to": "A_312",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019288"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "ABB와 록웰오토메이션는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1114",
+      "to": "A_1459",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019289"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아이로봇와 샤크닌자는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1336",
+      "to": "A_1337",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019290"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리치테크로보틱스와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1111",
+      "to": "T_207",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020648"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_207",
-   "type": "THEME",
-   "name": "미국로봇산업:물류/배송/서비스"
-  },
-  {
-   "id": "A_1336",
-   "type": "ASSET",
-   "name": "리치테크로보틱스",
-   "exposure": {
-    "ticker": "RR",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 9.210526315789469,
-    "close": 1.66,
-    "marketCap": 304877471,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 15.277777777777768,
-    "return_7d": 7.096774193548372,
-    "return_15d": -0.5988023952095856,
-    "return_1m": -20.574162679425832,
-    "return_ytd": -52.29885057471264,
-    "return_1y": -8.791208791208794,
-    "return_2y": 9.210526315789469,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1337",
-   "type": "ASSET",
-   "name": "서브로보틱스",
-   "exposure": {
-    "ticker": "SERV",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.707964601769917,
-    "close": 5.69,
-    "marketCap": 378968589,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 18.29521829521832,
-    "return_7d": 18.29521829521832,
-    "return_15d": -2.2336769759450203,
-    "return_1m": -11.782945736434103,
-    "return_ytd": -51.90194420963652,
-    "return_1y": -43.15684315684315,
-    "return_2y": -62.06666666666667,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1338",
-   "type": "ASSET",
-   "name": "심보틱",
-   "exposure": {
-    "ticker": "SYM",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.511450381679393,
-    "close": 47.46,
-    "marketCap": 30454939240,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 10.526315789473696,
-    "return_7d": 18.206724782067262,
-    "return_15d": 8.703618873110418,
-    "return_1m": 6.747638326585692,
-    "return_ytd": -26.838291968552497,
-    "return_1y": -6.666666666666665,
-    "return_2y": 74.16513761467891,
-    "return_3y": 12.517780938833578,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_789",
-   "type": "ASSET",
-   "name": "어질리티로보틱스(비)",
-   "exposure": {
-    "ticker": "",
-    "exchange": "",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "어질리티로보틱스는 물류 휴머노이드 미국사(비상장)다"
-  },
-  {
-   "id": "A_1459",
-   "type": "ASSET",
-   "name": "샤크닌자",
-   "exposure": {
-    "ticker": "SN",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.745593822009098,
-    "close": 168.19,
-    "marketCap": 23802314394,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 2.975570930018967,
-    "return_7d": 13.183041722745624,
-    "return_15d": 12.208953232370412,
-    "return_1m": 12.939833467633633,
-    "return_ytd": 47.72946859903382,
-    "return_1y": 49.74180911680912,
-    "return_2y": 118.91188337888848,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1114",
-   "type": "ASSET",
-   "name": "아이로봇",
-   "exposure": {
-    "ticker": "IRBT",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "close": 0.054,
-    "marketCap": 1718615,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.0,
-    "return_7d": 0.0,
-    "return_15d": 0.0,
-    "return_1m": -71.57894736842105,
-    "return_ytd": -54.96246872393662,
-    "return_1y": -99.42184154175588,
-    "return_2y": -99.61067051189619,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_286",
-   "type": "ASSET",
-   "name": "ABB",
-   "exposure": {
-    "ticker": "ABB",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.0802756243049263,
-    "close": 37.13,
-    "marketCap": 69020585106,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.18781862087469126,
-    "return_7d": 0.7011811919535482,
-    "return_15d": 1.9104803493449785,
-    "return_1m": 3.320420586607642,
-    "return_ytd": 0.0,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_312",
-   "type": "ASSET",
-   "name": "록웰오토메이션",
-   "exposure": {
-    "ticker": "ROK",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -7.4327414861324765,
-    "close": 445.23,
-    "marketCap": 49542523020,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -5.473344514978439,
-    "return_7d": -3.6632335122035675,
-    "return_15d": -5.223832939523588,
-    "return_1m": -7.795058711454428,
-    "return_ytd": 11.71245765901392,
-    "return_1y": 29.239477503628454,
-    "return_2y": 61.64905783683694,
-    "return_3y": 33.582358235823584,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_199",
-   "type": "MACRO",
-   "name": "인건비상승"
-  },
-  {
-   "id": "M_200",
-   "type": "MACRO",
-   "name": "AGI범용인공지능"
-  },
-  {
-   "id": "M_201",
-   "type": "MACRO",
-   "name": "양산비용다운"
-  },
-  {
-   "id": "BF_371",
-   "type": "BUSINESS_FIELD",
-   "name": "리테일서비스"
-  },
-  {
-   "id": "BF_372",
-   "type": "BUSINESS_FIELD",
-   "name": "물류/배송"
-  },
-  {
-   "id": "BF_373",
-   "type": "BUSINESS_FIELD",
-   "name": "가정용"
-  },
-  {
-   "id": "BF_374",
-   "type": "BUSINESS_FIELD",
-   "name": "산업용"
-  },
-  {
-   "id": "C_3203",
-   "type": "CHARACTER",
-   "name": "리테일서비스로봇"
-  },
-  {
-   "id": "C_3204",
-   "type": "CHARACTER",
-   "name": "자율배송로봇"
-  },
-  {
-   "id": "C_3205",
-   "type": "CHARACTER",
-   "name": "물류자동화시스템"
-  },
-  {
-   "id": "C_3206",
-   "type": "CHARACTER",
-   "name": "물류휴머노이드(비)"
-  },
-  {
-   "id": "C_3207",
-   "type": "CHARACTER",
-   "name": "가정용로봇가전"
-  },
-  {
-   "id": "C_3208",
-   "type": "CHARACTER",
-   "name": "룸바로봇청소기"
-  },
-  {
-   "id": "C_3209",
-   "type": "CHARACTER",
-   "name": "산업로봇글로벌"
-  },
-  {
-   "id": "C_3210",
-   "type": "CHARACTER",
-   "name": "산업자동화"
-  },
-  {
-   "id": "A_1111",
-   "type": "ASSET",
-   "name": "ROBO",
-   "exposure": {
-    "ticker": "ROBO",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.879788151250163,
-    "close": 84.34,
-    "marketCap": 2166094690,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 7.3301094426062585,
-    "return_7d": 8.364383913657969,
-    "return_15d": 4.407031443426601,
-    "return_1m": -2.1464206984568857,
-    "return_ytd": 19.275915712063373,
-    "return_1y": 36.47249190938513,
-    "return_2y": 53.933199488957854,
-    "return_3y": 43.09467254835426,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1336",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006323"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006324"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006325"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_789",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006326"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1459",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006327"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1114",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006328"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006329"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_312",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006330"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_199",
-   "to": "T_207",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006341"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_200",
-   "to": "T_207",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006342"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_201",
-   "to": "T_207",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006343"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1336",
-   "to": "BF_371",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006331"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1336",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006332"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "BF_371",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006333"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006334"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006335"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_789",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006336"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1459",
-   "to": "BF_373",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006337"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1114",
-   "to": "BF_373",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006338"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "BF_374",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006339"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_312",
-   "to": "BF_374",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006340"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1336",
-   "to": "C_3203",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006429"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "C_3204",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006430"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "C_3205",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006431"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_789",
-   "to": "C_3206",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006432"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1459",
-   "to": "C_3207",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006433"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1114",
-   "to": "C_3208",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006434"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "C_3209",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006435"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_312",
-   "to": "C_3210",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006436"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "A_1337",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019287"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "심보틱와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_286",
-   "to": "A_312",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019288"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "ABB와 록웰오토메이션는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1114",
-   "to": "A_1459",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019289"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아이로봇와 샤크닌자는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1336",
-   "to": "A_1337",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019290"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리치테크로보틱스와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1111",
-   "to": "T_207",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020648"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1336",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006323"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006324"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006325"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_789",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006326"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1459",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006327"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1114",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006328"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006329"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_312",
-   "to": "T_207",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006330"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_199",
-   "to": "T_207",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006341"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_200",
-   "to": "T_207",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006342"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_201",
-   "to": "T_207",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006343"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1336",
-   "to": "BF_371",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006331"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1336",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006332"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "BF_371",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006333"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006334"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006335"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_789",
-   "to": "BF_372",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006336"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1459",
-   "to": "BF_373",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006337"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1114",
-   "to": "BF_373",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006338"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "BF_374",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006339"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_312",
-   "to": "BF_374",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006340"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1336",
-   "to": "C_3203",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006429"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1337",
-   "to": "C_3204",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006430"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "C_3205",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006431"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_789",
-   "to": "C_3206",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006432"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1459",
-   "to": "C_3207",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006433"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1114",
-   "to": "C_3208",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006434"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "C_3209",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006435"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_312",
-   "to": "C_3210",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006436"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1338",
-   "to": "A_1337",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019287"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "심보틱와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_286",
-   "to": "A_312",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019288"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "ABB와 록웰오토메이션는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1114",
-   "to": "A_1459",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019289"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아이로봇와 샤크닌자는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1336",
-   "to": "A_1337",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019290"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리치테크로보틱스와 서브로보틱스는 미국로봇산업:물류/배송/서비스 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1111",
-   "to": "T_207",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020648"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

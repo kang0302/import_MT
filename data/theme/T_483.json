@@ -1,777 +1,795 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_483",
- "themeName": "글로벌 홈케어·재택의료(Home Health)",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_483",
+  "themeName": "글로벌 홈케어·재택의료(Home Health)",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "고령화·노동집약 케어가 병원 밖으로 — 재택의료·홈인퓨전·호스피스. 홈인퓨전(Option Care)·홈헬스/재활(Encompass·Amedisys·Enhabit)·호스피스(Chemed)·홈케어(Addus·Pennant)·투석(DaVita). 고령화·재택 전환·수가가 동인.",
+    "notes": "T_483 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_483",
+      "type": "THEME",
+      "name": "글로벌 홈케어·재택의료(Home Health)"
+    },
+    {
+      "id": "A_2493",
+      "type": "ASSET",
+      "name": "옵션케어",
+      "exposure": {
+        "ticker": "OPCH",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.042211903756861346,
+        "return_3d": 2.909248805905329,
+        "return_7d": 8.665749656121058,
+        "return_15d": 7.288365776369399,
+        "return_1m": 9.874826147426985,
+        "return_ytd": -26.488833746898266,
+        "return_1y": -16.135881104033977,
+        "return_2y": -20.17514314584036,
+        "return_3y": -29.840142095914747,
+        "close": 23.7,
+        "marketCap": 3549910520,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1021",
+      "type": "CHARACTER",
+      "name": "홈인퓨전(재택 정맥주사) 1위"
+    },
+    {
+      "id": "A_2494",
+      "type": "ASSET",
+      "name": "엔컴패스헬스",
+      "exposure": {
+        "ticker": "EHC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.36199095022624306,
+        "return_3d": -0.1530566309534409,
+        "return_7d": -2.616789603090963,
+        "return_15d": 0.928285402257023,
+        "return_1m": 0.16257225433526923,
+        "return_ytd": 4.258719563786784,
+        "return_1y": 1.2785388127853903,
+        "return_2y": 19.324295244243615,
+        "return_3y": 67.9539603210662,
+        "close": 110.9,
+        "marketCap": 11001177972,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1022",
+      "type": "CHARACTER",
+      "name": "입원재활·홈헬스"
+    },
+    {
+      "id": "A_2495",
+      "type": "ASSET",
+      "name": "아메디시스",
+      "exposure": {
+        "ticker": "AMED",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "return_3d": 0.03962357602773636,
+        "return_7d": 1.712156309799573,
+        "return_15d": 3.114151521339603,
+        "return_1m": 3.611367600287263,
+        "return_ytd": 11.100110011001085,
+        "return_1y": 2.98796655109117,
+        "return_2y": 9.355711965349212,
+        "return_3y": null,
+        "close": 100.99,
+        "marketCap": 3321328621,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1023",
+      "type": "CHARACTER",
+      "name": "홈헬스·호스피스"
+    },
+    {
+      "id": "A_2496",
+      "type": "ASSET",
+      "name": "케메드",
+      "exposure": {
+        "ticker": "CHE",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.2580597346772304,
+        "return_3d": 2.67919210897134,
+        "return_7d": 7.297679349746744,
+        "return_15d": 10.93271084948746,
+        "return_1m": 12.596575808146348,
+        "return_ytd": 28.957738502560225,
+        "return_1y": 29.09786691233789,
+        "return_2y": -4.147958467798507,
+        "return_3y": 4.878236005296577,
+        "close": 546.51,
+        "marketCap": 7142885700,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1024",
+      "type": "CHARACTER",
+      "name": "호스피스(VITAS)·서비스"
+    },
+    {
+      "id": "A_2497",
+      "type": "ASSET",
+      "name": "페넌트그룹",
+      "exposure": {
+        "ticker": "PNTG",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.5180005180005276,
+        "return_3d": -3.745039682539675,
+        "return_7d": -6.119980648282541,
+        "return_15d": -3.144497130022461,
+        "return_1m": -2.241813602015119,
+        "return_ytd": 39.45382680560547,
+        "return_1y": 75.13537906137185,
+        "return_2y": 30.191211003019134,
+        "return_3y": 238.06620209059233,
+        "close": 38.81,
+        "marketCap": 1349328887,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1025",
+      "type": "CHARACTER",
+      "name": "홈헬스·시니어리빙"
+    },
+    {
+      "id": "A_2498",
+      "type": "ASSET",
+      "name": "애더스홈케어",
+      "exposure": {
+        "ticker": "ADUS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 2.463487594580327,
+        "return_3d": 0.8486317977138835,
+        "return_7d": 0.7003891050583633,
+        "return_15d": 5.709358264500319,
+        "return_1m": 9.899028026800028,
+        "return_ytd": 9.270031900919484,
+        "return_1y": 8.881824981301412,
+        "return_2y": -4.037574159525381,
+        "return_3y": 27.18139128535546,
+        "close": 116.46,
+        "marketCap": 2173699813,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1026",
+      "type": "CHARACTER",
+      "name": "개인 홈케어 1티어"
+    },
+    {
+      "id": "A_2499",
+      "type": "ASSET",
+      "name": "엔하빗",
+      "exposure": {
+        "ticker": "EHAB",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.07251631617115617,
+        "return_3d": 0.14513788098695635,
+        "return_7d": 0.4366812227074357,
+        "return_15d": 0.4366812227074357,
+        "return_1m": 0.6564551422319376,
+        "return_ytd": 51.81518151815183,
+        "return_1y": 31.805157593123212,
+        "return_2y": 66.4656212303981,
+        "return_3y": null,
+        "close": 13.8,
+        "marketCap": 706913363,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1027",
+      "type": "CHARACTER",
+      "name": "홈헬스·호스피스(분사)"
+    },
+    {
+      "id": "A_1775",
+      "type": "ASSET",
+      "name": "다비타",
+      "exposure": {
+        "ticker": "DVA",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -17.237598140269316,
+        "return_3d": -21.40863842725644,
+        "return_7d": -20.151495916381023,
+        "return_15d": -18.53115150468461,
+        "return_1m": -19.46993299475055,
+        "return_ytd": 64.78036852676621,
+        "return_1y": 35.24225917431192,
+        "return_2y": 38.113014199970706,
+        "return_3y": 85.00833415040691,
+        "close": 188.69,
+        "marketCap": 12111067650,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1028",
+      "type": "CHARACTER",
+      "name": "투석(재택 포함)"
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_106",
+      "type": "MACRO",
+      "name": "의료"
+    },
+    {
+      "id": "M_414",
+      "type": "MACRO",
+      "name": "원격진료_디지털헬스확대"
+    },
+    {
+      "id": "A_2949",
+      "type": "ASSET",
+      "name": "iShares U.S. Healthcare Providers ETF",
+      "exposure": {
+        "ticker": "IHF",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.15940488841656997,
+        "return_3d": 0.30152536360410487,
+        "return_7d": -0.29971791255289926,
+        "return_15d": 0.053078556263264076,
+        "return_1m": -1.6692749087115266,
+        "return_ytd": 16.887143447705654,
+        "return_1y": 37.29060451565913,
+        "return_2y": 0.2837382514630171,
+        "return_3y": 7.652769845802387,
+        "close": 56.55,
+        "marketCap": 931499913,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "고령화·노동집약 케어가 병원 밖으로 — 재택의료·홈인퓨전·호스피스. 홈인퓨전(Option Care)·홈헬스/재활(Encompass·Amedisys·Enhabit)·호스피스(Chemed)·홈케어(Addus·Pennant)·투석(DaVita). 고령화·재택 전환·수가가 동인.",
-  "notes": "T_483 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3(기존 재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2493",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012178"
+      ]
+    },
+    {
+      "from": "A_2493",
+      "to": "C_1021",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017105"
+      ]
+    },
+    {
+      "from": "A_2494",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012179"
+      ]
+    },
+    {
+      "from": "A_2494",
+      "to": "C_1022",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017106"
+      ]
+    },
+    {
+      "from": "A_2495",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012180"
+      ]
+    },
+    {
+      "from": "A_2495",
+      "to": "C_1023",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017107"
+      ]
+    },
+    {
+      "from": "A_2496",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012181"
+      ]
+    },
+    {
+      "from": "A_2496",
+      "to": "C_1024",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017108"
+      ]
+    },
+    {
+      "from": "A_2497",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012182"
+      ]
+    },
+    {
+      "from": "A_2497",
+      "to": "C_1025",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017109"
+      ]
+    },
+    {
+      "from": "A_2498",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012183"
+      ]
+    },
+    {
+      "from": "A_2498",
+      "to": "C_1026",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017110"
+      ]
+    },
+    {
+      "from": "A_2499",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012184"
+      ]
+    },
+    {
+      "from": "A_2499",
+      "to": "C_1027",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017111"
+      ]
+    },
+    {
+      "from": "A_1775",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012185"
+      ]
+    },
+    {
+      "from": "A_1775",
+      "to": "C_1028",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017112"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_483",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012186"
+      ]
+    },
+    {
+      "from": "M_106",
+      "to": "T_483",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012187"
+      ]
+    },
+    {
+      "from": "M_414",
+      "to": "T_483",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012188"
+      ]
+    },
+    {
+      "from": "A_2493",
+      "to": "A_2494",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019866"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "옵션케어와 엔컴패스헬스는 재택 주입·재활 의료 시장 경쟁"
+    },
+    {
+      "from": "A_2495",
+      "to": "A_2498",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019867"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아메디시스와 애더스홈케어는 미국 홈헬스·호스피스 시장 직접 경쟁"
+    },
+    {
+      "from": "A_2496",
+      "to": "A_2497",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019868"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "케메드와 페넌트그룹은 호스피스·홈케어 서비스 시장 경쟁"
+    },
+    {
+      "from": "A_2499",
+      "to": "A_2494",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019869"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "엔하빗과 엔컴패스헬스는 재택 재활·요양 시장 경쟁"
+    },
+    {
+      "from": "A_1775",
+      "to": "A_2493",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019870"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "다비타와 옵션케어는 만성질환 재택·외래 치료 시장 경쟁"
+    },
+    {
+      "from": "A_2949",
+      "to": "T_483",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020832"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2493",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012178"
+      ]
+    },
+    {
+      "from": "A_2493",
+      "to": "C_1021",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017105"
+      ]
+    },
+    {
+      "from": "A_2494",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012179"
+      ]
+    },
+    {
+      "from": "A_2494",
+      "to": "C_1022",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017106"
+      ]
+    },
+    {
+      "from": "A_2495",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012180"
+      ]
+    },
+    {
+      "from": "A_2495",
+      "to": "C_1023",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017107"
+      ]
+    },
+    {
+      "from": "A_2496",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012181"
+      ]
+    },
+    {
+      "from": "A_2496",
+      "to": "C_1024",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017108"
+      ]
+    },
+    {
+      "from": "A_2497",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012182"
+      ]
+    },
+    {
+      "from": "A_2497",
+      "to": "C_1025",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017109"
+      ]
+    },
+    {
+      "from": "A_2498",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012183"
+      ]
+    },
+    {
+      "from": "A_2498",
+      "to": "C_1026",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017110"
+      ]
+    },
+    {
+      "from": "A_2499",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012184"
+      ]
+    },
+    {
+      "from": "A_2499",
+      "to": "C_1027",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017111"
+      ]
+    },
+    {
+      "from": "A_1775",
+      "to": "T_483",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012185"
+      ]
+    },
+    {
+      "from": "A_1775",
+      "to": "C_1028",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017112"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_483",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012186"
+      ]
+    },
+    {
+      "from": "M_106",
+      "to": "T_483",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012187"
+      ]
+    },
+    {
+      "from": "M_414",
+      "to": "T_483",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012188"
+      ]
+    },
+    {
+      "from": "A_2493",
+      "to": "A_2494",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019866"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "옵션케어와 엔컴패스헬스는 재택 주입·재활 의료 시장 경쟁"
+    },
+    {
+      "from": "A_2495",
+      "to": "A_2498",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019867"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아메디시스와 애더스홈케어는 미국 홈헬스·호스피스 시장 직접 경쟁"
+    },
+    {
+      "from": "A_2496",
+      "to": "A_2497",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019868"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "케메드와 페넌트그룹은 호스피스·홈케어 서비스 시장 경쟁"
+    },
+    {
+      "from": "A_2499",
+      "to": "A_2494",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019869"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "엔하빗과 엔컴패스헬스는 재택 재활·요양 시장 경쟁"
+    },
+    {
+      "from": "A_1775",
+      "to": "A_2493",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019870"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "다비타와 옵션케어는 만성질환 재택·외래 치료 시장 경쟁"
+    },
+    {
+      "from": "A_2949",
+      "to": "T_483",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020832"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_483",
-   "type": "THEME",
-   "name": "글로벌 홈케어·재택의료(Home Health)"
-  },
-  {
-   "id": "A_2493",
-   "type": "ASSET",
-   "name": "옵션케어",
-   "exposure": {
-    "ticker": "OPCH",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.04219409282699704,
-    "return_3d": 5.476402493321464,
-    "return_7d": 9.372114496768248,
-    "return_15d": 10.96018735362998,
-    "return_1m": 10.908239700374533,
-    "return_ytd": -26.519851116625315,
-    "return_1y": -16.171266808209484,
-    "return_2y": -24.433811802232853,
-    "return_3y": -30.629575402635425,
-    "close": 23.69,
-    "marketCap": 3719993320,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1021",
-   "type": "CHARACTER",
-   "name": "홈인퓨전(재택 정맥주사) 1위"
-  },
-  {
-   "id": "A_2494",
-   "type": "ASSET",
-   "name": "엔컴패스헬스",
-   "exposure": {
-    "ticker": "EHC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.7515781986307433,
-    "return_3d": -0.3516998827667095,
-    "return_7d": -2.1171051466028934,
-    "return_15d": 1.6278855881541432,
-    "return_1m": 3.280680437424066,
-    "return_ytd": 3.882673686189708,
-    "return_1y": 1.8151663134617246,
-    "return_2y": 19.16316186778819,
-    "return_3y": 67.24685939155444,
-    "close": 110.5,
-    "marketCap": 10961498340,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1022",
-   "type": "CHARACTER",
-   "name": "입원재활·홈헬스"
-  },
-  {
-   "id": "A_2495",
-   "type": "ASSET",
-   "name": "아메디시스",
-   "exposure": {
-    "ticker": "AMED",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "return_3d": 0.03962357602773636,
-    "return_7d": 1.712156309799573,
-    "return_15d": 3.114151521339603,
-    "return_1m": 3.611367600287263,
-    "return_ytd": 11.100110011001085,
-    "return_1y": 2.98796655109117,
-    "return_2y": 9.355711965349212,
-    "return_3y": null,
-    "close": 100.99,
-    "marketCap": 3321328621,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1023",
-   "type": "CHARACTER",
-   "name": "홈헬스·호스피스"
-  },
-  {
-   "id": "A_2496",
-   "type": "ASSET",
-   "name": "케메드",
-   "exposure": {
-    "ticker": "CHE",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.15724143034204774,
-    "return_3d": 0.9218571775837292,
-    "return_7d": 5.593488936278446,
-    "return_15d": 9.723718717599471,
-    "return_1m": 12.324661810613957,
-    "return_ytd": 27.355529861487994,
-    "return_1y": 29.165968649036735,
-    "return_2y": -4.668374105802342,
-    "return_3y": 3.1555207278148423,
-    "close": 539.72,
-    "marketCap": 7164299411,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1024",
-   "type": "CHARACTER",
-   "name": "호스피스(VITAS)·서비스"
-  },
-  {
-   "id": "A_2497",
-   "type": "ASSET",
-   "name": "페넌트그룹",
-   "exposure": {
-    "ticker": "PNTG",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -3.907416625186666,
-    "return_3d": -6.126914660831517,
-    "return_7d": -6.195335276967928,
-    "return_15d": -2.8923541247484863,
-    "return_1m": -3.2573289902280034,
-    "return_ytd": 38.73517786561265,
-    "return_1y": 74.94336202990483,
-    "return_2y": 28.871829105473967,
-    "return_3y": 241.98405668733395,
-    "close": 38.61,
-    "marketCap": 1342375376,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1025",
-   "type": "CHARACTER",
-   "name": "홈헬스·시니어리빙"
-  },
-  {
-   "id": "A_2498",
-   "type": "ASSET",
-   "name": "애더스홈케어",
-   "exposure": {
-    "ticker": "ADUS",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -2.6800239746553767,
-    "return_3d": -2.5882756256427886,
-    "return_7d": -0.7769532955041458,
-    "return_15d": 4.755760368663586,
-    "return_1m": 7.500236451338305,
-    "return_ytd": 6.642897354100197,
-    "return_1y": 8.288871951219523,
-    "return_2y": -6.429571087511321,
-    "return_3y": 25.466387018434688,
-    "close": 113.66,
-    "marketCap": 2121438440,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1026",
-   "type": "CHARACTER",
-   "name": "개인 홈케어 1티어"
-  },
-  {
-   "id": "A_2499",
-   "type": "ASSET",
-   "name": "엔하빗",
-   "exposure": {
-    "ticker": "EHAB",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.07251631617115617,
-    "return_3d": 0.14513788098695635,
-    "return_7d": 0.4366812227074357,
-    "return_15d": 0.4366812227074357,
-    "return_1m": 0.6564551422319376,
-    "return_ytd": 51.81518151815183,
-    "return_1y": 31.805157593123212,
-    "return_2y": 66.4656212303981,
-    "return_3y": null,
-    "close": 13.8,
-    "marketCap": 706913363,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1027",
-   "type": "CHARACTER",
-   "name": "홈헬스·호스피스(분사)"
-  },
-  {
-   "id": "A_1775",
-   "type": "ASSET",
-   "name": "다비타",
-   "exposure": {
-    "ticker": "DVA",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -2.4349537829510437,
-    "return_3d": -4.550782885372184,
-    "return_7d": -3.164288141352356,
-    "return_15d": -1.9018114538961295,
-    "return_1m": -3.275211064443595,
-    "return_ytd": 99.10051523884378,
-    "return_1y": 64.63749277874062,
-    "return_2y": 67.0623580274053,
-    "return_3y": 125.64330958036423,
-    "close": 227.99,
-    "marketCap": 14633538150,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1028",
-   "type": "CHARACTER",
-   "name": "투석(재택 포함)"
-  },
-  {
-   "id": "M_058",
-   "type": "MACRO",
-   "name": "인구고령화"
-  },
-  {
-   "id": "M_106",
-   "type": "MACRO",
-   "name": "의료"
-  },
-  {
-   "id": "M_414",
-   "type": "MACRO",
-   "name": "원격진료_디지털헬스확대"
-  },
-  {
-   "id": "A_2949",
-   "type": "ASSET",
-   "name": "iShares U.S. Healthcare Providers ETF",
-   "exposure": {
-    "ticker": "IHF",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2493",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012178"
-   ]
-  },
-  {
-   "from": "A_2493",
-   "to": "C_1021",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017105"
-   ]
-  },
-  {
-   "from": "A_2494",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012179"
-   ]
-  },
-  {
-   "from": "A_2494",
-   "to": "C_1022",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017106"
-   ]
-  },
-  {
-   "from": "A_2495",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012180"
-   ]
-  },
-  {
-   "from": "A_2495",
-   "to": "C_1023",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017107"
-   ]
-  },
-  {
-   "from": "A_2496",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012181"
-   ]
-  },
-  {
-   "from": "A_2496",
-   "to": "C_1024",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017108"
-   ]
-  },
-  {
-   "from": "A_2497",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012182"
-   ]
-  },
-  {
-   "from": "A_2497",
-   "to": "C_1025",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017109"
-   ]
-  },
-  {
-   "from": "A_2498",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012183"
-   ]
-  },
-  {
-   "from": "A_2498",
-   "to": "C_1026",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017110"
-   ]
-  },
-  {
-   "from": "A_2499",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012184"
-   ]
-  },
-  {
-   "from": "A_2499",
-   "to": "C_1027",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017111"
-   ]
-  },
-  {
-   "from": "A_1775",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012185"
-   ]
-  },
-  {
-   "from": "A_1775",
-   "to": "C_1028",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017112"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_483",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012186"
-   ]
-  },
-  {
-   "from": "M_106",
-   "to": "T_483",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012187"
-   ]
-  },
-  {
-   "from": "M_414",
-   "to": "T_483",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012188"
-   ]
-  },
-  {
-   "from": "A_2493",
-   "to": "A_2494",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019866"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "옵션케어와 엔컴패스헬스는 재택 주입·재활 의료 시장 경쟁"
-  },
-  {
-   "from": "A_2495",
-   "to": "A_2498",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019867"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아메디시스와 애더스홈케어는 미국 홈헬스·호스피스 시장 직접 경쟁"
-  },
-  {
-   "from": "A_2496",
-   "to": "A_2497",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019868"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "케메드와 페넌트그룹은 호스피스·홈케어 서비스 시장 경쟁"
-  },
-  {
-   "from": "A_2499",
-   "to": "A_2494",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019869"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "엔하빗과 엔컴패스헬스는 재택 재활·요양 시장 경쟁"
-  },
-  {
-   "from": "A_1775",
-   "to": "A_2493",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019870"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "다비타와 옵션케어는 만성질환 재택·외래 치료 시장 경쟁"
-  },
-  {
-   "from": "A_2949",
-   "to": "T_483",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020832"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2493",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012178"
-   ]
-  },
-  {
-   "from": "A_2493",
-   "to": "C_1021",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017105"
-   ]
-  },
-  {
-   "from": "A_2494",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012179"
-   ]
-  },
-  {
-   "from": "A_2494",
-   "to": "C_1022",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017106"
-   ]
-  },
-  {
-   "from": "A_2495",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012180"
-   ]
-  },
-  {
-   "from": "A_2495",
-   "to": "C_1023",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017107"
-   ]
-  },
-  {
-   "from": "A_2496",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012181"
-   ]
-  },
-  {
-   "from": "A_2496",
-   "to": "C_1024",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017108"
-   ]
-  },
-  {
-   "from": "A_2497",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012182"
-   ]
-  },
-  {
-   "from": "A_2497",
-   "to": "C_1025",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017109"
-   ]
-  },
-  {
-   "from": "A_2498",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012183"
-   ]
-  },
-  {
-   "from": "A_2498",
-   "to": "C_1026",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017110"
-   ]
-  },
-  {
-   "from": "A_2499",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012184"
-   ]
-  },
-  {
-   "from": "A_2499",
-   "to": "C_1027",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017111"
-   ]
-  },
-  {
-   "from": "A_1775",
-   "to": "T_483",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012185"
-   ]
-  },
-  {
-   "from": "A_1775",
-   "to": "C_1028",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017112"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_483",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012186"
-   ]
-  },
-  {
-   "from": "M_106",
-   "to": "T_483",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012187"
-   ]
-  },
-  {
-   "from": "M_414",
-   "to": "T_483",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012188"
-   ]
-  },
-  {
-   "from": "A_2493",
-   "to": "A_2494",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019866"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "옵션케어와 엔컴패스헬스는 재택 주입·재활 의료 시장 경쟁"
-  },
-  {
-   "from": "A_2495",
-   "to": "A_2498",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019867"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아메디시스와 애더스홈케어는 미국 홈헬스·호스피스 시장 직접 경쟁"
-  },
-  {
-   "from": "A_2496",
-   "to": "A_2497",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019868"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "케메드와 페넌트그룹은 호스피스·홈케어 서비스 시장 경쟁"
-  },
-  {
-   "from": "A_2499",
-   "to": "A_2494",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019869"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "엔하빗과 엔컴패스헬스는 재택 재활·요양 시장 경쟁"
-  },
-  {
-   "from": "A_1775",
-   "to": "A_2493",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019870"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "다비타와 옵션케어는 만성질환 재택·외래 치료 시장 경쟁"
-  },
-  {
-   "from": "A_2949",
-   "to": "T_483",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020832"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

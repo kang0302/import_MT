@@ -1,986 +1,1004 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_233",
- "themeName": "K-외국인관광수혜주_소비·면세·유통·리조트",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_233",
+  "themeName": "K-외국인관광수혜주_소비·면세·유통·리조트",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-19T00:00:00+09:00",
+    "notes": "g233 누적 import 기반 K-외국인관광수혜 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-19",
+        "kind": "분리",
+        "title": "K-외국인관광수혜주_소비·면세·유통·리조트 분리 생성",
+        "detail": "T_233 분할. 매크로 공동 사용."
+      },
+      {
+        "date": "2026-07-16",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 18개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-16",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ],
+    "description": "아모레·LG생건(화장품), 현대백화점·신세계·호텔신라(면세·유통), 글로벌텍스프리(택스리펀), GKL·파라다이스·롯데관광개발(카지노·리조트) — 방한 외국인(특히 중국·동남아) 인바운드 소비·리조트 회복이 핵심 동인."
+  },
+  "nodes": [
+    {
+      "id": "T_233",
+      "type": "THEME",
+      "name": "K-외국인관광수혜주_소비·면세·유통·리조트"
+    },
+    {
+      "id": "A_1154",
+      "type": "ASSET",
+      "name": "아모레퍼시픽",
+      "exposure": {
+        "ticker": "090430",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -0.4548900682335155,
+        "close": 131300,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 1.0000000000000009,
+        "return_7d": 6.315789473684208,
+        "return_15d": 9.416666666666673,
+        "return_1m": 8.154859967051076,
+        "return_ytd": 4.363493293954046,
+        "return_1y": -1.606780827825105,
+        "return_2y": -11.592790278255737,
+        "return_3y": -11.699779249448127,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3436",
+      "type": "CHARACTER",
+      "name": "K화장품대장"
+    },
+    {
+      "id": "A_687",
+      "type": "ASSET",
+      "name": "LG생활건강",
+      "exposure": {
+        "ticker": "051900",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.34305317324185847,
+        "close": 292500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 1.9163763066202044,
+        "return_7d": 14.2578125,
+        "return_15d": 21.62162162162162,
+        "return_1m": 18.181818181818187,
+        "return_ytd": 8.772818323478514,
+        "return_1y": -11.106949261727072,
+        "return_2y": -16.33452994620471,
+        "return_3y": -59.61538461538461,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3437",
+      "type": "CHARACTER",
+      "name": "화장품생활용품"
+    },
+    {
+      "id": "A_1505",
+      "type": "ASSET",
+      "name": "현대백화점",
+      "exposure": {
+        "ticker": "069960",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -7.0101351351351315,
+        "close": 110100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -7.32323232323232,
+        "return_7d": -19.693654266958426,
+        "return_15d": -28.366948601171117,
+        "return_1m": -37.62039660056657,
+        "return_ytd": 32.37179980849323,
+        "return_1y": 49.706039545882376,
+        "return_2y": 142.94026297522205,
+        "return_3y": 109.92366412213741,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3438",
+      "type": "CHARACTER",
+      "name": "면세백화점(현대)"
+    },
+    {
+      "id": "A_1506",
+      "type": "ASSET",
+      "name": "신세계",
+      "exposure": {
+        "ticker": "004170",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.0575793184488758,
+        "close": 430000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 1.6548463356973908,
+        "return_7d": -16.82785299806576,
+        "return_15d": -23.351158645276293,
+        "return_1m": -37.68115942028986,
+        "return_ytd": 89.53203824384343,
+        "return_1y": 138.2040305978861,
+        "return_2y": 189.52839992188365,
+        "return_3y": 152.35849056603774,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3440",
+      "type": "CHARACTER",
+      "name": "면세백화점"
+    },
+    {
+      "id": "A_1144",
+      "type": "ASSET",
+      "name": "호텔신라",
+      "exposure": {
+        "ticker": "008770",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.4457831325301207,
+        "close": 42100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -3.3295063145809434,
+        "return_7d": -11.5546218487395,
+        "return_15d": -10.805084745762716,
+        "return_1m": -17.61252446183953,
+        "return_ytd": -7.574094401756315,
+        "return_1y": -19.656488549618324,
+        "return_2y": -19.656488549618324,
+        "return_3y": -30.924170616113745,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3439",
+      "type": "CHARACTER",
+      "name": "면세·호텔1위(신라)"
+    },
+    {
+      "id": "A_1512",
+      "type": "ASSET",
+      "name": "글로벌텍스프리",
+      "exposure": {
+        "ticker": "204620",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "close": 5070,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 6.962025316455689,
+        "return_7d": 14.835787089467733,
+        "return_15d": 6.066945606694563,
+        "return_1m": 5.405405405405395,
+        "return_ytd": 10.33732317736671,
+        "return_1y": -32.936507936507944,
+        "return_2y": 56.31370959101767,
+        "return_3y": 46.959975557592415,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3452",
+      "type": "CHARACTER",
+      "name": "사후면세(택스리펀드)"
+    },
+    {
+      "id": "A_1507",
+      "type": "ASSET",
+      "name": "인크레더블버즈",
+      "exposure": {
+        "ticker": "064090",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -4.659498207885305,
+        "close": 798,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -14.377682403433479,
+        "return_7d": -27.05667276051188,
+        "return_15d": -41.1070110701107,
+        "return_1m": -40.44776119402985,
+        "return_ytd": -38.94414690130069,
+        "return_1y": -59.899497487437195,
+        "return_2y": -59.899497487437195,
+        "return_3y": -64.53333333333333,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3441",
+      "type": "CHARACTER",
+      "name": "의료관광플랫폼"
+    },
+    {
+      "id": "A_1142",
+      "type": "ASSET",
+      "name": "GKL",
+      "exposure": {
+        "ticker": "114090",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -0.9615384615384581,
+        "close": 9270,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -1.1727078891258014,
+        "return_7d": -4.432989690721644,
+        "return_15d": -9.912536443148689,
+        "return_1m": -10.348162475822054,
+        "return_ytd": -34.89814913752514,
+        "return_1y": -39.67756271220142,
+        "return_2y": -19.781537868916345,
+        "return_3y": -40.75757575757576,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3448",
+      "type": "CHARACTER",
+      "name": "외국인카지노(GKL)"
+    },
+    {
+      "id": "A_1143",
+      "type": "ASSET",
+      "name": "파라다이스",
+      "exposure": {
+        "ticker": "034230",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -2.2977022977022976,
+        "close": 9780,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.8247422680412342,
+        "return_7d": -5.324298160696994,
+        "return_15d": -19.03973509933775,
+        "return_1m": -25.286478227654698,
+        "return_ytd": -41.29651860744298,
+        "return_1y": -49.376255160238,
+        "return_2y": -20.929049709068615,
+        "return_3y": -9.482758620689658,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3449",
+      "type": "CHARACTER",
+      "name": "외국인카지노"
+    },
+    {
+      "id": "A_1511",
+      "type": "ASSET",
+      "name": "롯데관광개발",
+      "exposure": {
+        "ticker": "032350",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.5733005733005836,
+        "close": 12280,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 5.679862306368322,
+        "return_7d": 2.761506276150638,
+        "return_15d": -11.143270622286538,
+        "return_1m": -19.895629484670586,
+        "return_ytd": -45.663716814159294,
+        "return_1y": -28.935185185185187,
+        "return_2y": 24.923702950152602,
+        "return_3y": 58.9975349219392,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_3450",
+      "type": "CHARACTER",
+      "name": "제주카지노관광"
+    },
+    {
+      "id": "M_227",
+      "type": "MACRO",
+      "name": "일중갈등"
+    },
+    {
+      "id": "M_228",
+      "type": "MACRO",
+      "name": "중국인무비자정책"
+    },
+    {
+      "id": "A_2901",
+      "type": "ASSET",
+      "name": "TIGER 여행레저",
+      "exposure": {
+        "ticker": "228800",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.9723865877712132,
+        "return_3d": 4.868154158215021,
+        "return_7d": 1.3725490196078383,
+        "return_15d": -2.083333333333337,
+        "return_1m": -8.170515097690945,
+        "return_ytd": -23.64537818089736,
+        "return_1y": -30.253967294641782,
+        "return_2y": -17.45779458977833,
+        "return_3y": null,
+        "close": 2585,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-19T00:00:00+09:00",
-  "notes": "g233 누적 import 기반 K-외국인관광수혜 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-19",
-    "kind": "분리",
-    "title": "K-외국인관광수혜주_소비·면세·유통·리조트 분리 생성",
-    "detail": "T_233 분할. 매크로 공동 사용."
-   },
-   {
-    "date": "2026-07-16",
-    "kind": "보강",
-    "title": "자산별 테마관점 CHR 정의",
-    "detail": "자산 18개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
-   },
-   {
-    "date": "2026-07-16",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필 + 2026 이벤트",
-    "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1154",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007107"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1154",
+      "to": "C_3436",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007285"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_687",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007108"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_687",
+      "to": "C_3437",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007286"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1505",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007109"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1505",
+      "to": "C_3438",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007287"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1506",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007111"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1506",
+      "to": "C_3440",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007289"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007110"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "C_3439",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007288"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1512",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007123"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1512",
+      "to": "C_3452",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007301"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1507",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008040"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1507",
+      "to": "C_3441",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007290"
+      ],
+      "confidence": 0.64,
+      "status": "verified"
+    },
+    {
+      "from": "A_1142",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007119"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1142",
+      "to": "C_3448",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007297"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007120"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "C_3449",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007298"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007121"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "C_3450",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007299"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_227",
+      "to": "T_233",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007105"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_228",
+      "to": "T_233",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007106"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_1154",
+      "to": "A_687",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019358"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아모레퍼시픽와 LG생활건강는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1505",
+      "to": "A_1506",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019359"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "현대백화점와 신세계는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1142",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019360"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GKL와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1144",
+      "to": "A_1505",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019361"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "호텔신라와 현대백화점는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1511",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019362"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "롯데관광개발와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2901",
+      "to": "T_233",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020663"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ],
-  "description": "아모레·LG생건(화장품), 현대백화점·신세계·호텔신라(면세·유통), 글로벌텍스프리(택스리펀), GKL·파라다이스·롯데관광개발(카지노·리조트) — 방한 외국인(특히 중국·동남아) 인바운드 소비·리조트 회복이 핵심 동인."
- },
- "nodes": [
-  {
-   "id": "T_233",
-   "type": "THEME",
-   "name": "K-외국인관광수혜주_소비·면세·유통·리조트"
-  },
-  {
-   "id": "A_1154",
-   "type": "ASSET",
-   "name": "아모레퍼시픽",
-   "exposure": {
-    "ticker": "090430",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -0.4548900682335155,
-    "close": 131300,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 1.0000000000000009,
-    "return_7d": 6.315789473684208,
-    "return_15d": 9.416666666666673,
-    "return_1m": 8.154859967051076,
-    "return_ytd": 4.363493293954046,
-    "return_1y": -1.606780827825105,
-    "return_2y": -11.592790278255737,
-    "return_3y": -11.699779249448127,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3436",
-   "type": "CHARACTER",
-   "name": "K화장품대장"
-  },
-  {
-   "id": "A_687",
-   "type": "ASSET",
-   "name": "LG생활건강",
-   "exposure": {
-    "ticker": "051900",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.34305317324185847,
-    "close": 292500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 1.9163763066202044,
-    "return_7d": 14.2578125,
-    "return_15d": 21.62162162162162,
-    "return_1m": 18.181818181818187,
-    "return_ytd": 8.772818323478514,
-    "return_1y": -11.106949261727072,
-    "return_2y": -16.33452994620471,
-    "return_3y": -59.61538461538461,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3437",
-   "type": "CHARACTER",
-   "name": "화장품생활용품"
-  },
-  {
-   "id": "A_1505",
-   "type": "ASSET",
-   "name": "현대백화점",
-   "exposure": {
-    "ticker": "069960",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -7.0101351351351315,
-    "close": 110100,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -7.32323232323232,
-    "return_7d": -19.693654266958426,
-    "return_15d": -28.366948601171117,
-    "return_1m": -37.62039660056657,
-    "return_ytd": 32.37179980849323,
-    "return_1y": 49.706039545882376,
-    "return_2y": 142.94026297522205,
-    "return_3y": 109.92366412213741,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3438",
-   "type": "CHARACTER",
-   "name": "면세백화점(현대)"
-  },
-  {
-   "id": "A_1506",
-   "type": "ASSET",
-   "name": "신세계",
-   "exposure": {
-    "ticker": "004170",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.0575793184488758,
-    "close": 430000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 1.6548463356973908,
-    "return_7d": -16.82785299806576,
-    "return_15d": -23.351158645276293,
-    "return_1m": -37.68115942028986,
-    "return_ytd": 89.53203824384343,
-    "return_1y": 138.2040305978861,
-    "return_2y": 189.52839992188365,
-    "return_3y": 152.35849056603774,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3440",
-   "type": "CHARACTER",
-   "name": "면세백화점"
-  },
-  {
-   "id": "A_1144",
-   "type": "ASSET",
-   "name": "호텔신라",
-   "exposure": {
-    "ticker": "008770",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.4457831325301207,
-    "close": 42100,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -3.3295063145809434,
-    "return_7d": -11.5546218487395,
-    "return_15d": -10.805084745762716,
-    "return_1m": -17.61252446183953,
-    "return_ytd": -7.574094401756315,
-    "return_1y": -19.656488549618324,
-    "return_2y": -19.656488549618324,
-    "return_3y": -30.924170616113745,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3439",
-   "type": "CHARACTER",
-   "name": "면세·호텔1위(신라)"
-  },
-  {
-   "id": "A_1512",
-   "type": "ASSET",
-   "name": "글로벌텍스프리",
-   "exposure": {
-    "ticker": "204620",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "close": 5070,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 6.962025316455689,
-    "return_7d": 14.835787089467733,
-    "return_15d": 6.066945606694563,
-    "return_1m": 5.405405405405395,
-    "return_ytd": 10.33732317736671,
-    "return_1y": -32.936507936507944,
-    "return_2y": 56.31370959101767,
-    "return_3y": 46.959975557592415,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3452",
-   "type": "CHARACTER",
-   "name": "사후면세(택스리펀드)"
-  },
-  {
-   "id": "A_1507",
-   "type": "ASSET",
-   "name": "인크레더블버즈",
-   "exposure": {
-    "ticker": "064090",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -4.659498207885305,
-    "close": 798,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -14.377682403433479,
-    "return_7d": -27.05667276051188,
-    "return_15d": -41.1070110701107,
-    "return_1m": -40.44776119402985,
-    "return_ytd": -38.94414690130069,
-    "return_1y": -59.899497487437195,
-    "return_2y": -59.899497487437195,
-    "return_3y": -64.53333333333333,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3441",
-   "type": "CHARACTER",
-   "name": "의료관광플랫폼"
-  },
-  {
-   "id": "A_1142",
-   "type": "ASSET",
-   "name": "GKL",
-   "exposure": {
-    "ticker": "114090",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -0.9615384615384581,
-    "close": 9270,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -1.1727078891258014,
-    "return_7d": -4.432989690721644,
-    "return_15d": -9.912536443148689,
-    "return_1m": -10.348162475822054,
-    "return_ytd": -34.89814913752514,
-    "return_1y": -39.67756271220142,
-    "return_2y": -19.781537868916345,
-    "return_3y": -40.75757575757576,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3448",
-   "type": "CHARACTER",
-   "name": "외국인카지노(GKL)"
-  },
-  {
-   "id": "A_1143",
-   "type": "ASSET",
-   "name": "파라다이스",
-   "exposure": {
-    "ticker": "034230",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -2.2977022977022976,
-    "close": 9780,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.8247422680412342,
-    "return_7d": -5.324298160696994,
-    "return_15d": -19.03973509933775,
-    "return_1m": -25.286478227654698,
-    "return_ytd": -41.29651860744298,
-    "return_1y": -49.376255160238,
-    "return_2y": -20.929049709068615,
-    "return_3y": -9.482758620689658,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3449",
-   "type": "CHARACTER",
-   "name": "외국인카지노"
-  },
-  {
-   "id": "A_1511",
-   "type": "ASSET",
-   "name": "롯데관광개발",
-   "exposure": {
-    "ticker": "032350",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.5733005733005836,
-    "close": 12280,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 5.679862306368322,
-    "return_7d": 2.761506276150638,
-    "return_15d": -11.143270622286538,
-    "return_1m": -19.895629484670586,
-    "return_ytd": -45.663716814159294,
-    "return_1y": -28.935185185185187,
-    "return_2y": 24.923702950152602,
-    "return_3y": 58.9975349219392,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_3450",
-   "type": "CHARACTER",
-   "name": "제주카지노관광"
-  },
-  {
-   "id": "M_227",
-   "type": "MACRO",
-   "name": "일중갈등"
-  },
-  {
-   "id": "M_228",
-   "type": "MACRO",
-   "name": "중국인무비자정책"
-  },
-  {
-   "id": "A_2901",
-   "type": "ASSET",
-   "name": "TIGER 여행레저",
-   "exposure": {
-    "ticker": "228800",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1154",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007107"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1154",
-   "to": "C_3436",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007285"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_687",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007108"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_687",
-   "to": "C_3437",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007286"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1505",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007109"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1505",
-   "to": "C_3438",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007287"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1506",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007111"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1506",
-   "to": "C_3440",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007289"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007110"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "C_3439",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007288"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1512",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007123"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1512",
-   "to": "C_3452",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007301"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1507",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008040"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1507",
-   "to": "C_3441",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007290"
-   ],
-   "confidence": 0.64,
-   "status": "verified"
-  },
-  {
-   "from": "A_1142",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007119"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1142",
-   "to": "C_3448",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007297"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007120"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "C_3449",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007298"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007121"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "C_3450",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007299"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_227",
-   "to": "T_233",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007105"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_228",
-   "to": "T_233",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007106"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_1154",
-   "to": "A_687",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019358"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아모레퍼시픽와 LG생활건강는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1505",
-   "to": "A_1506",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019359"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "현대백화점와 신세계는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1142",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019360"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GKL와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1144",
-   "to": "A_1505",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019361"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "호텔신라와 현대백화점는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1511",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019362"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "롯데관광개발와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2901",
-   "to": "T_233",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020663"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1154",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007107"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1154",
-   "to": "C_3436",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007285"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_687",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007108"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_687",
-   "to": "C_3437",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007286"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1505",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007109"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1505",
-   "to": "C_3438",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007287"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1506",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007111"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1506",
-   "to": "C_3440",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007289"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007110"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "C_3439",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007288"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1512",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007123"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1512",
-   "to": "C_3452",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007301"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1507",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008040"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1507",
-   "to": "C_3441",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007290"
-   ],
-   "confidence": 0.64,
-   "status": "verified"
-  },
-  {
-   "from": "A_1142",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007119"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1142",
-   "to": "C_3448",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007297"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007120"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "C_3449",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007298"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "T_233",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007121"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "C_3450",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007299"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_227",
-   "to": "T_233",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007105"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_228",
-   "to": "T_233",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007106"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_1154",
-   "to": "A_687",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019358"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아모레퍼시픽와 LG생활건강는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1505",
-   "to": "A_1506",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019359"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "현대백화점와 신세계는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1142",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019360"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GKL와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1144",
-   "to": "A_1505",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019361"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "호텔신라와 현대백화점는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1511",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019362"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "롯데관광개발와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2901",
-   "to": "T_233",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020663"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
+  "links": [
+    {
+      "from": "A_1154",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007107"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1154",
+      "to": "C_3436",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007285"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_687",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007108"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_687",
+      "to": "C_3437",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007286"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1505",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007109"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1505",
+      "to": "C_3438",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007287"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1506",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007111"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1506",
+      "to": "C_3440",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007289"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007110"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "C_3439",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007288"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1512",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007123"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1512",
+      "to": "C_3452",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007301"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1507",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008040"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1507",
+      "to": "C_3441",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007290"
+      ],
+      "confidence": 0.64,
+      "status": "verified"
+    },
+    {
+      "from": "A_1142",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007119"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1142",
+      "to": "C_3448",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007297"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007120"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "C_3449",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007298"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "T_233",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007121"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "C_3450",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007299"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_227",
+      "to": "T_233",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007105"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_228",
+      "to": "T_233",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007106"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_1154",
+      "to": "A_687",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019358"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아모레퍼시픽와 LG생활건강는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1505",
+      "to": "A_1506",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019359"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "현대백화점와 신세계는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1142",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019360"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GKL와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1144",
+      "to": "A_1505",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019361"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "호텔신라와 현대백화점는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1511",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019362"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "롯데관광개발와 파라다이스는 K-외국인관광수혜주_소비·면세·유통·리조트 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2901",
+      "to": "T_233",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020663"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ]
 }

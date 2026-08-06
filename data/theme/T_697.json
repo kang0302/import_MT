@@ -1,942 +1,960 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_697",
- "themeName": "한일엔고수혜주_엔화강세",
- "meta": {
-  "periodDefault": "7d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_697",
+  "themeName": "한일엔고수혜주_엔화강세",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-31T00:00:00+09:00",
+    "description": "엔화 강세(엔고) 국면 수혜 — 한국 수출주(엔고 시 일본 경쟁사 대비 가격경쟁력 회복: 자동차·철강) + 엔고로 일본인 구매력↑에 따른 한국 인바운드 관광(카지노·면세) + 일본 내수·수입 수혜(수입원가 하락·해외여행). 일본은행 금리정상화가 핵심 동인.",
+    "notes": "엔화 강세(엔고) 국면 수혜 — 한국 수출주(엔고 시 일본 경쟁사 대비 가격경쟁력 회복: 자동차·철강) + 엔고로 일본인 구매력↑에 따른 한국 인바운드 관광(카지노·면세) + 일본 내수·수입 수혜(수입원가 하락·해외여행). 일본은행 금리정상화가 핵심 동인.",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-31",
+        "kind": "수정",
+        "title": "GKL 제외",
+        "detail": "GKL 제외(인바운드 카지노는 파라다이스·롯데관광개발·호텔신라로 유지)."
+      },
+      {
+        "date": "2026-07-31",
+        "kind": "수정",
+        "title": "인바운드 관광 편입 + 산업재 정리",
+        "detail": "엔고 시 일본인 방한 수요를 반영해 한국 인바운드 관광(파라다이스·GKL·롯데관광개발·호텔신라) 편입, 상대적 관련도 낮은 현대모비스·한온시스템·두산에너빌리티·HD한국조선해양 제외."
+      },
+      {
+        "date": "2026-07-31",
+        "kind": "신규",
+        "title": "테마 생성",
+        "detail": "엔화 강세(엔고) 국면 수혜 — 한국 수출주(엔고 시 일본 경쟁사 대비 가격경쟁력 회복: 자동차·조선·철강·기계) + 일본 내수·수입 수혜(엔고로 수입원가 하락·해외여행 확대). 일본은행 금리정상화가 핵심 동인."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_697",
+      "type": "THEME",
+      "name": "한일엔고수혜주_엔화강세"
+    },
+    {
+      "id": "M_1090",
+      "type": "MACRO",
+      "name": "일본은행금리정상화"
+    },
+    {
+      "id": "M_1198",
+      "type": "MACRO",
+      "name": "엔화강세"
+    },
+    {
+      "id": "M_216",
+      "type": "MACRO",
+      "name": "해외수출확대"
+    },
+    {
+      "id": "A_004",
+      "type": "ASSET",
+      "name": "현대차",
+      "metrics": {
+        "return_1d": 3.0573248407643305,
+        "close": 404500,
+        "marketCap": 138006734284000,
+        "pe_ttm": 14.16,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 4.252577319587636,
+        "return_7d": 0.3722084367245637,
+        "return_15d": -4.7114252061248525,
+        "return_1m": -19.422310756972117,
+        "return_ytd": 36.6072506111474,
+        "return_1y": 87.58601627506573,
+        "return_2y": 54.851167221968566,
+        "return_3y": 230.47426841574165,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      },
+      "exposure": {
+        "ticker": "005380",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "C_5820",
+      "type": "CHARACTER",
+      "name": "대일경쟁_자동차수출"
+    },
+    {
+      "id": "A_005",
+      "type": "ASSET",
+      "name": "기아차",
+      "metrics": {
+        "return_1d": 2.6234567901234573,
+        "close": 133000,
+        "marketCap": 80229871089000,
+        "pe_ttm": 8.26,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.833965125094771,
+        "return_7d": 1.9938650306748462,
+        "return_15d": -4.727793696275073,
+        "return_1m": -17.23708774113254,
+        "return_ytd": 15.123221850535696,
+        "return_1y": 30.856367131040784,
+        "return_2y": 19.658592694427625,
+        "return_3y": 91.40534262485482,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      },
+      "exposure": {
+        "ticker": "000270",
+        "exchange": "KOSPI",
+        "country": "KR"
+      }
+    },
+    {
+      "id": "C_5821",
+      "type": "CHARACTER",
+      "name": "글로벌자동차수출경쟁"
+    },
+    {
+      "id": "A_603",
+      "type": "ASSET",
+      "name": "포스코홀딩스",
+      "exposure": {
+        "ticker": "005490",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.2779552715654896,
+        "close": 317000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 1.4399999999999968,
+        "return_7d": 0.31645569620253333,
+        "return_15d": 4.448105436573302,
+        "return_1m": -1.3996889580093264,
+        "return_ytd": 7.701330842377985,
+        "return_1y": -2.763327583466124,
+        "return_2y": -11.449996573980814,
+        "return_3y": 10.086100861008607,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_5823",
+      "type": "CHARACTER",
+      "name": "철강_대일경쟁"
+    },
+    {
+      "id": "A_2147",
+      "type": "ASSET",
+      "name": "ANA홀딩스",
+      "exposure": {
+        "ticker": "9202",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "return_1d": 1.645161290322572,
+        "return_3d": 1.123234916559701,
+        "return_7d": 2.27198961376176,
+        "return_15d": 3.549129148866248,
+        "return_1m": -0.9119496855345965,
+        "return_ytd": 4.9633577614923485,
+        "return_1y": 6.867898931660177,
+        "return_2y": 4.303210857332007,
+        "return_3y": null,
+        "close": 3151.0,
+        "marketCap": 1372441600574,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5827",
+      "type": "CHARACTER",
+      "name": "항공_엔고연료·해외여행"
+    },
+    {
+      "id": "A_2814",
+      "type": "ASSET",
+      "name": "세븐앤드아이",
+      "exposure": {
+        "ticker": "3382",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "return_1d": -2.066929133858264,
+        "return_3d": -5.642484589853014,
+        "return_7d": -6.7697353010072625,
+        "return_15d": -0.22562045625470484,
+        "return_1m": -4.464714354296683,
+        "return_ytd": -12.43124312431243,
+        "return_1y": 0.9895965490992031,
+        "return_2y": 2.868958387180154,
+        "return_3y": 9.41555,
+        "close": 1990.0,
+        "marketCap": 4600368114290,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5828",
+      "type": "CHARACTER",
+      "name": "일본내수리테일"
+    },
+    {
+      "id": "A_2838",
+      "type": "ASSET",
+      "name": "이온",
+      "exposure": {
+        "ticker": "8267",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "return_1d": -0.6746626686656709,
+        "close": 1325.0,
+        "marketCap": 3665777907700,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -2.859237536656889,
+        "return_7d": -3.8461538461538436,
+        "return_15d": -6.161473087818692,
+        "return_1m": -8.93470790378007,
+        "return_ytd": -46.68008048289738,
+        "return_1y": -16.032953105196444,
+        "return_2y": 18.8340807174888,
+        "return_3y": 39.372822299651574,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "일본 최대 리테일 그룹으로 엔고 시 수입원가 하락·내수 구매력 개선 수혜."
+    },
+    {
+      "id": "C_5829",
+      "type": "CHARACTER",
+      "name": "일본최대리테일_수입원가↓"
+    },
+    {
+      "id": "A_1143",
+      "type": "ASSET",
+      "name": "파라다이스",
+      "exposure": {
+        "ticker": "034230",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -2.2977022977022976,
+        "close": 9780,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.8247422680412342,
+        "return_7d": -5.324298160696994,
+        "return_15d": -19.03973509933775,
+        "return_1m": -25.286478227654698,
+        "return_ytd": -41.29651860744298,
+        "return_1y": -49.376255160238,
+        "return_2y": -20.929049709068615,
+        "return_3y": -9.482758620689658,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      },
+      "coreBiz": "외국인 전용 카지노 최대사(인천·워커힐·제주) — 엔고로 일본인 구매력↑ 방한 관광 수혜."
+    },
+    {
+      "id": "C_5841",
+      "type": "CHARACTER",
+      "name": "외국인카지노_일본관광객"
+    },
+    {
+      "id": "A_1511",
+      "type": "ASSET",
+      "name": "롯데관광개발",
+      "exposure": {
+        "ticker": "032350",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.5733005733005836,
+        "close": 12280,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 5.679862306368322,
+        "return_7d": 2.761506276150638,
+        "return_15d": -11.143270622286538,
+        "return_1m": -19.895629484670586,
+        "return_ytd": -45.663716814159294,
+        "return_1y": -28.935185185185187,
+        "return_2y": 24.923702950152602,
+        "return_3y": 58.9975349219392,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      },
+      "coreBiz": "제주 드림타워 복합리조트·카지노 — 외국인 인바운드 관광 수혜."
+    },
+    {
+      "id": "C_5843",
+      "type": "CHARACTER",
+      "name": "제주드림타워복합리조트"
+    },
+    {
+      "id": "A_1144",
+      "type": "ASSET",
+      "name": "호텔신라",
+      "exposure": {
+        "ticker": "008770",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.4457831325301207,
+        "close": 42100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -3.3295063145809434,
+        "return_7d": -11.5546218487395,
+        "return_15d": -10.805084745762716,
+        "return_1m": -17.61252446183953,
+        "return_ytd": -7.574094401756315,
+        "return_1y": -19.656488549618324,
+        "return_2y": -19.656488549618324,
+        "return_3y": -30.924170616113745,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      },
+      "coreBiz": "면세점·호텔 — 엔고 시 일본인 방한 쇼핑·숙박 수혜 인바운드 대표주."
+    },
+    {
+      "id": "C_5844",
+      "type": "CHARACTER",
+      "name": "면세·호텔_인바운드쇼핑"
+    },
+    {
+      "id": "A_2977",
+      "type": "ASSET",
+      "name": "TIGER 여행레저",
+      "exposure": {
+        "ticker": "232080",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.583210603829155,
+        "return_3d": 12.291412291412286,
+        "return_7d": 4.507575757575766,
+        "return_15d": 0.9882869692533047,
+        "return_1m": -8.063978673775408,
+        "return_ytd": -14.391234392201746,
+        "return_1y": -0.8142428072656638,
+        "return_2y": -5.925586695811669,
+        "return_3y": null,
+        "close": 13795,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-31T00:00:00+09:00",
-  "description": "엔화 강세(엔고) 국면 수혜 — 한국 수출주(엔고 시 일본 경쟁사 대비 가격경쟁력 회복: 자동차·철강) + 엔고로 일본인 구매력↑에 따른 한국 인바운드 관광(카지노·면세) + 일본 내수·수입 수혜(수입원가 하락·해외여행). 일본은행 금리정상화가 핵심 동인.",
-  "notes": "엔화 강세(엔고) 국면 수혜 — 한국 수출주(엔고 시 일본 경쟁사 대비 가격경쟁력 회복: 자동차·철강) + 엔고로 일본인 구매력↑에 따른 한국 인바운드 관광(카지노·면세) + 일본 내수·수입 수혜(수입원가 하락·해외여행). 일본은행 금리정상화가 핵심 동인.",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-31",
-    "kind": "수정",
-    "title": "GKL 제외",
-    "detail": "GKL 제외(인바운드 카지노는 파라다이스·롯데관광개발·호텔신라로 유지)."
-   },
-   {
-    "date": "2026-07-31",
-    "kind": "수정",
-    "title": "인바운드 관광 편입 + 산업재 정리",
-    "detail": "엔고 시 일본인 방한 수요를 반영해 한국 인바운드 관광(파라다이스·GKL·롯데관광개발·호텔신라) 편입, 상대적 관련도 낮은 현대모비스·한온시스템·두산에너빌리티·HD한국조선해양 제외."
-   },
-   {
-    "date": "2026-07-31",
-    "kind": "신규",
-    "title": "테마 생성",
-    "detail": "엔화 강세(엔고) 국면 수혜 — 한국 수출주(엔고 시 일본 경쟁사 대비 가격경쟁력 회복: 자동차·조선·철강·기계) + 일본 내수·수입 수혜(엔고로 수입원가 하락·해외여행 확대). 일본은행 금리정상화가 핵심 동인."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "M_1090",
+      "to": "T_697",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015031"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1198",
+      "to": "T_697",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015032"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_216",
+      "to": "T_697",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015033"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015034"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "C_5820",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015035"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_005",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015036"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_005",
+      "to": "C_5821",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015037"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_603",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015040"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_603",
+      "to": "C_5823",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015041"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2147",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015048"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2147",
+      "to": "C_5827",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015049"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2814",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015050"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2814",
+      "to": "C_5828",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015051"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2838",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015052"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2838",
+      "to": "C_5829",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015053"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015078"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "C_5841",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015079"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015082"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "C_5843",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015083"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015084"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "C_5844",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015085"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "A_005",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020495"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "현대차와 기아차는 일본차 대비 가격경쟁력 수혜 그룹 내 경쟁"
+    },
+    {
+      "from": "A_2814",
+      "to": "A_2838",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020496"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "세븐앤드아이와 이온은 일본 내수 유통 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1143",
+      "to": "A_1144",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020497"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "파라다이스와 호텔신라는 방한 관광 수혜 시장 경쟁"
+    },
+    {
+      "from": "A_1511",
+      "to": "A_1144",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020498"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "롯데관광개발과 호텔신라는 면세·리조트 시장 경쟁"
+    },
+    {
+      "from": "A_2147",
+      "to": "A_2814",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020499"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "ANA홀딩스와 세븐앤드아이는 엔고 국면 일본 내수 수혜주 경쟁"
+    },
+    {
+      "from": "A_2977",
+      "to": "T_697",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020980"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "M_1090",
+      "to": "T_697",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015031"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1198",
+      "to": "T_697",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015032"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_216",
+      "to": "T_697",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015033"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015034"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "C_5820",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015035"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_005",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015036"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_005",
+      "to": "C_5821",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015037"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_603",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015040"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_603",
+      "to": "C_5823",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015041"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2147",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015048"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2147",
+      "to": "C_5827",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015049"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2814",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015050"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2814",
+      "to": "C_5828",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015051"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2838",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015052"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2838",
+      "to": "C_5829",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015053"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015078"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1143",
+      "to": "C_5841",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015079"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015082"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1511",
+      "to": "C_5843",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015083"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "T_697",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015084"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1144",
+      "to": "C_5844",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015085"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_004",
+      "to": "A_005",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020495"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "현대차와 기아차는 일본차 대비 가격경쟁력 수혜 그룹 내 경쟁"
+    },
+    {
+      "from": "A_2814",
+      "to": "A_2838",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020496"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "세븐앤드아이와 이온은 일본 내수 유통 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1143",
+      "to": "A_1144",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020497"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "파라다이스와 호텔신라는 방한 관광 수혜 시장 경쟁"
+    },
+    {
+      "from": "A_1511",
+      "to": "A_1144",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020498"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "롯데관광개발과 호텔신라는 면세·리조트 시장 경쟁"
+    },
+    {
+      "from": "A_2147",
+      "to": "A_2814",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020499"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "ANA홀딩스와 세븐앤드아이는 엔고 국면 일본 내수 수혜주 경쟁"
+    },
+    {
+      "from": "A_2977",
+      "to": "T_697",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020980"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_697",
-   "type": "THEME",
-   "name": "한일엔고수혜주_엔화강세"
-  },
-  {
-   "id": "M_1090",
-   "type": "MACRO",
-   "name": "일본은행금리정상화"
-  },
-  {
-   "id": "M_1198",
-   "type": "MACRO",
-   "name": "엔화강세"
-  },
-  {
-   "id": "M_216",
-   "type": "MACRO",
-   "name": "해외수출확대"
-  },
-  {
-   "id": "A_004",
-   "type": "ASSET",
-   "name": "현대차",
-   "metrics": {
-    "return_1d": 3.0573248407643305,
-    "close": 404500,
-    "marketCap": 138006734284000,
-    "pe_ttm": 14.16,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 4.252577319587636,
-    "return_7d": 0.3722084367245637,
-    "return_15d": -4.7114252061248525,
-    "return_1m": -19.422310756972117,
-    "return_ytd": 36.6072506111474,
-    "return_1y": 87.58601627506573,
-    "return_2y": 54.851167221968566,
-    "return_3y": 230.47426841574165,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   },
-   "exposure": {
-    "ticker": "005380",
-    "exchange": "KOSPI",
-    "country": "KR"
-   }
-  },
-  {
-   "id": "C_5820",
-   "type": "CHARACTER",
-   "name": "대일경쟁_자동차수출"
-  },
-  {
-   "id": "A_005",
-   "type": "ASSET",
-   "name": "기아차",
-   "metrics": {
-    "return_1d": 2.6234567901234573,
-    "close": 133000,
-    "marketCap": 80229871089000,
-    "pe_ttm": 8.26,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.833965125094771,
-    "return_7d": 1.9938650306748462,
-    "return_15d": -4.727793696275073,
-    "return_1m": -17.23708774113254,
-    "return_ytd": 15.123221850535696,
-    "return_1y": 30.856367131040784,
-    "return_2y": 19.658592694427625,
-    "return_3y": 91.40534262485482,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   },
-   "exposure": {
-    "ticker": "000270",
-    "exchange": "KOSPI",
-    "country": "KR"
-   }
-  },
-  {
-   "id": "C_5821",
-   "type": "CHARACTER",
-   "name": "글로벌자동차수출경쟁"
-  },
-  {
-   "id": "A_603",
-   "type": "ASSET",
-   "name": "포스코홀딩스",
-   "exposure": {
-    "ticker": "005490",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.2779552715654896,
-    "close": 317000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 1.4399999999999968,
-    "return_7d": 0.31645569620253333,
-    "return_15d": 4.448105436573302,
-    "return_1m": -1.3996889580093264,
-    "return_ytd": 7.701330842377985,
-    "return_1y": -2.763327583466124,
-    "return_2y": -11.449996573980814,
-    "return_3y": 10.086100861008607,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_5823",
-   "type": "CHARACTER",
-   "name": "철강_대일경쟁"
-  },
-  {
-   "id": "A_2147",
-   "type": "ASSET",
-   "name": "ANA홀딩스",
-   "exposure": {
-    "ticker": "9202",
-    "exchange": "TSE",
-    "country": "JP"
-   },
-   "metrics": {
-    "return_1d": -0.9268136784915337,
-    "return_3d": -1.6809387884554439,
-    "return_7d": 5.049135886140288,
-    "return_15d": 2.819237147595355,
-    "return_1m": -1.273885350318471,
-    "return_ytd": 3.2644903397734737,
-    "return_1y": 6.510908778560376,
-    "return_2y": 3.4885661826072445,
-    "return_3y": null,
-    "close": 3100.0,
-    "marketCap": 1350228169400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5827",
-   "type": "CHARACTER",
-   "name": "항공_엔고연료·해외여행"
-  },
-  {
-   "id": "A_2814",
-   "type": "ASSET",
-   "name": "세븐앤드아이",
-   "exposure": {
-    "ticker": "3382",
-    "exchange": "TSE",
-    "country": "JP"
-   },
-   "metrics": {
-    "return_1d": -1.8594542381067392,
-    "return_3d": -9.001343484102108,
-    "return_7d": -5.312208760484626,
-    "return_15d": 0.9438648782911008,
-    "return_1m": 0.39525691699604515,
-    "return_ytd": -10.583058305830583,
-    "return_1y": 4.63439752832131,
-    "return_2y": 4.018428461735346,
-    "return_3y": 9.41555,
-    "close": 2032.0,
-    "marketCap": 4697461310672,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5828",
-   "type": "CHARACTER",
-   "name": "일본내수리테일"
-  },
-  {
-   "id": "A_2838",
-   "type": "ASSET",
-   "name": "이온",
-   "exposure": {
-    "ticker": "8267",
-    "exchange": "TSE",
-    "country": "JP"
-   },
-   "metrics": {
-    "return_1d": -2.342606149341142,
-    "close": 1334.0,
-    "marketCap": 3690677531224,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -6.2543921293042875,
-    "return_7d": -0.37341299477221535,
-    "return_15d": -4.951905949412183,
-    "return_1m": -5.22202486678508,
-    "return_ytd": -46.317907444668,
-    "return_1y": -15.139949109414763,
-    "return_2y": 15.66507417651497,
-    "return_3y": 39.372822299651574,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "일본 최대 리테일 그룹으로 엔고 시 수입원가 하락·내수 구매력 개선 수혜."
-  },
-  {
-   "id": "C_5829",
-   "type": "CHARACTER",
-   "name": "일본최대리테일_수입원가↓"
-  },
-  {
-   "id": "A_1143",
-   "type": "ASSET",
-   "name": "파라다이스",
-   "exposure": {
-    "ticker": "034230",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -2.2977022977022976,
-    "close": 9780,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.8247422680412342,
-    "return_7d": -5.324298160696994,
-    "return_15d": -19.03973509933775,
-    "return_1m": -25.286478227654698,
-    "return_ytd": -41.29651860744298,
-    "return_1y": -49.376255160238,
-    "return_2y": -20.929049709068615,
-    "return_3y": -9.482758620689658,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   },
-   "coreBiz": "외국인 전용 카지노 최대사(인천·워커힐·제주) — 엔고로 일본인 구매력↑ 방한 관광 수혜."
-  },
-  {
-   "id": "C_5841",
-   "type": "CHARACTER",
-   "name": "외국인카지노_일본관광객"
-  },
-  {
-   "id": "A_1511",
-   "type": "ASSET",
-   "name": "롯데관광개발",
-   "exposure": {
-    "ticker": "032350",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.5733005733005836,
-    "close": 12280,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 5.679862306368322,
-    "return_7d": 2.761506276150638,
-    "return_15d": -11.143270622286538,
-    "return_1m": -19.895629484670586,
-    "return_ytd": -45.663716814159294,
-    "return_1y": -28.935185185185187,
-    "return_2y": 24.923702950152602,
-    "return_3y": 58.9975349219392,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   },
-   "coreBiz": "제주 드림타워 복합리조트·카지노 — 외국인 인바운드 관광 수혜."
-  },
-  {
-   "id": "C_5843",
-   "type": "CHARACTER",
-   "name": "제주드림타워복합리조트"
-  },
-  {
-   "id": "A_1144",
-   "type": "ASSET",
-   "name": "호텔신라",
-   "exposure": {
-    "ticker": "008770",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.4457831325301207,
-    "close": 42100,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -3.3295063145809434,
-    "return_7d": -11.5546218487395,
-    "return_15d": -10.805084745762716,
-    "return_1m": -17.61252446183953,
-    "return_ytd": -7.574094401756315,
-    "return_1y": -19.656488549618324,
-    "return_2y": -19.656488549618324,
-    "return_3y": -30.924170616113745,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   },
-   "coreBiz": "면세점·호텔 — 엔고 시 일본인 방한 쇼핑·숙박 수혜 인바운드 대표주."
-  },
-  {
-   "id": "C_5844",
-   "type": "CHARACTER",
-   "name": "면세·호텔_인바운드쇼핑"
-  },
-  {
-   "id": "A_2977",
-   "type": "ASSET",
-   "name": "TIGER 여행레저",
-   "exposure": {
-    "ticker": "232080",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "M_1090",
-   "to": "T_697",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015031"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_1198",
-   "to": "T_697",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015032"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_216",
-   "to": "T_697",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015033"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_004",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015034"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_004",
-   "to": "C_5820",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015035"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_005",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015036"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_005",
-   "to": "C_5821",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015037"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_603",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015040"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_603",
-   "to": "C_5823",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015041"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2147",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015048"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2147",
-   "to": "C_5827",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015049"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2814",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015050"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2814",
-   "to": "C_5828",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015051"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2838",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015052"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2838",
-   "to": "C_5829",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015053"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015078"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "C_5841",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015079"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015082"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "C_5843",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015083"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015084"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "C_5844",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015085"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_004",
-   "to": "A_005",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020495"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "현대차와 기아차는 일본차 대비 가격경쟁력 수혜 그룹 내 경쟁"
-  },
-  {
-   "from": "A_2814",
-   "to": "A_2838",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020496"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "세븐앤드아이와 이온은 일본 내수 유통 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1143",
-   "to": "A_1144",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020497"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "파라다이스와 호텔신라는 방한 관광 수혜 시장 경쟁"
-  },
-  {
-   "from": "A_1511",
-   "to": "A_1144",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020498"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "롯데관광개발과 호텔신라는 면세·리조트 시장 경쟁"
-  },
-  {
-   "from": "A_2147",
-   "to": "A_2814",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020499"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "ANA홀딩스와 세븐앤드아이는 엔고 국면 일본 내수 수혜주 경쟁"
-  },
-  {
-   "from": "A_2977",
-   "to": "T_697",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020980"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "M_1090",
-   "to": "T_697",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015031"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_1198",
-   "to": "T_697",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015032"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_216",
-   "to": "T_697",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015033"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_004",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015034"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_004",
-   "to": "C_5820",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015035"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_005",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015036"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_005",
-   "to": "C_5821",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015037"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_603",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015040"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_603",
-   "to": "C_5823",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015041"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2147",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015048"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2147",
-   "to": "C_5827",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015049"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2814",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015050"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2814",
-   "to": "C_5828",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015051"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2838",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015052"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2838",
-   "to": "C_5829",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015053"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015078"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1143",
-   "to": "C_5841",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015079"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015082"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1511",
-   "to": "C_5843",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015083"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "T_697",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015084"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1144",
-   "to": "C_5844",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015085"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_004",
-   "to": "A_005",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020495"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "현대차와 기아차는 일본차 대비 가격경쟁력 수혜 그룹 내 경쟁"
-  },
-  {
-   "from": "A_2814",
-   "to": "A_2838",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020496"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "세븐앤드아이와 이온은 일본 내수 유통 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1143",
-   "to": "A_1144",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020497"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "파라다이스와 호텔신라는 방한 관광 수혜 시장 경쟁"
-  },
-  {
-   "from": "A_1511",
-   "to": "A_1144",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020498"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "롯데관광개발과 호텔신라는 면세·리조트 시장 경쟁"
-  },
-  {
-   "from": "A_2147",
-   "to": "A_2814",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020499"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "ANA홀딩스와 세븐앤드아이는 엔고 국면 일본 내수 수혜주 경쟁"
-  },
-  {
-   "from": "A_2977",
-   "to": "T_697",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020980"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

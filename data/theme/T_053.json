@@ -1,1449 +1,1449 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_053",
- "themeName": "미국상업용부동산",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_053",
+  "themeName": "미국상업용부동산",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "notes": "g53 누적 import 기반 T_053 freeze",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_053",
+      "type": "THEME",
+      "name": "미국상업용부동산"
+    },
+    {
+      "id": "A_433",
+      "type": "ASSET",
+      "name": "웰타워",
+      "exposure": {
+        "ticker": "WELL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 2.4528220408515766,
+        "close": 237.25,
+        "marketCap": 170955709610,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.1986009213444726,
+        "return_7d": -4.465651928807279,
+        "return_15d": 1.6974580993613042,
+        "return_1m": -0.1431036659792051,
+        "return_ytd": 26.91237830319888,
+        "return_1y": 40.56760279653988,
+        "return_2y": 113.25842696629213,
+        "return_3y": 188.80097382836274,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_434",
+      "type": "ASSET",
+      "name": "벤타스",
+      "exposure": {
+        "ticker": "VTR",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.8492019812878402,
+        "close": 92.53,
+        "marketCap": 44985310100,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.0480162549460048,
+        "return_7d": -7.571671161722104,
+        "return_15d": 0.260049842886545,
+        "return_1m": -1.6370787711278756,
+        "return_ytd": 19.656019656019662,
+        "return_1y": 35.51552431165788,
+        "return_2y": 69.96693607641443,
+        "return_3y": 90.70486397361913,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_435",
+      "type": "ASSET",
+      "name": "보스턴프로퍼티즈",
+      "exposure": {
+        "ticker": "BXP",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.9339182114051159,
+        "close": 70.01,
+        "marketCap": 11165012144,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.1568739304050215,
+        "return_7d": 1.155902326253444,
+        "return_15d": 1.5520742674789867,
+        "return_1m": 2.0702726344948186,
+        "return_ytd": 3.2291359480979276,
+        "return_1y": 6.495284453909367,
+        "return_2y": -1.8230262235310546,
+        "return_3y": 5.0727900345189925,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_436",
+      "type": "ASSET",
+      "name": "SL그린리얼티",
+      "exposure": {
+        "ticker": "SLG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.7559577136713966,
+        "close": 54.83,
+        "marketCap": 3899755403,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 3.5896467031928836,
+        "return_7d": 1.8387815750371406,
+        "return_15d": 7.954321716873403,
+        "return_1m": 9.071016510841456,
+        "return_ytd": 16.758943781942072,
+        "return_1y": -2.2463897307898106,
+        "return_2y": -17.722088835534223,
+        "return_3y": 45.399098382391934,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_437",
+      "type": "ASSET",
+      "name": "보르나도리얼티트러스트",
+      "exposure": {
+        "ticker": "VNO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.4443901246638977,
+        "close": 39.91,
+        "marketCap": 7506991180,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.320132013201314,
+        "return_7d": 1.037974683544296,
+        "return_15d": 0.15056461731490778,
+        "return_1m": 1.191683569979718,
+        "return_ytd": 19.312406576980546,
+        "return_1y": 3.260025873221206,
+        "return_2y": 33.07769256418807,
+        "return_3y": 77.53558718861208,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_438",
+      "type": "ASSET",
+      "name": "에쿼티레지덴셜",
+      "exposure": {
+        "ticker": "EQR",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.07386615452800172,
+        "close": 67.74,
+        "marketCap": 25398706560,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.9413092550790045,
+        "return_7d": 0.7436049970255709,
+        "return_15d": -0.761793143861722,
+        "return_1m": -3.4354953670705735,
+        "return_ytd": 9.205223279058504,
+        "return_1y": 8.089995213020561,
+        "return_2y": -2.714347264110295,
+        "return_3y": 2.729754322111,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_439",
+      "type": "ASSET",
+      "name": "아발론베이",
+      "exposure": {
+        "ticker": "AVB",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.1902245706737249,
+        "close": 189.61,
+        "marketCap": 27075921764,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 2.15505630084587,
+        "return_7d": 1.0929835785881803,
+        "return_15d": -0.3573493089494839,
+        "return_1m": -2.9581861917191143,
+        "return_ytd": 5.058732269503552,
+        "return_1y": 3.7707968476357268,
+        "return_2y": -7.471208276400532,
+        "return_3y": 0.5088788762258156,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_440",
+      "type": "ASSET",
+      "name": "렉스포드인더스트리얼리얼티",
+      "exposure": {
+        "ticker": "REXR",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.108108108108107,
+        "close": 37.04,
+        "marketCap": 8468655068,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.9327508604712884,
+        "return_7d": -4.31413071557738,
+        "return_15d": 5.557138785978899,
+        "return_1m": 7.862550960978432,
+        "return_ytd": -5.098642070202408,
+        "return_1y": 2.4619640387275155,
+        "return_2y": -26.08261823987228,
+        "return_3y": -32.7645670720639,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_441",
+      "type": "ASSET",
+      "name": "프롤로지스",
+      "exposure": {
+        "ticker": "PLD",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.2297734627831458,
+        "close": 140.76,
+        "marketCap": 131339777760,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -2.662333171979825,
+        "return_7d": -4.413961700393864,
+        "return_15d": -1.8546925115046742,
+        "return_1m": -1.984541466471712,
+        "return_ytd": 9.074002324680341,
+        "return_1y": 33.78956372968349,
+        "return_2y": 11.669972233240777,
+        "return_3y": 12.833667334669329,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_442",
+      "type": "ASSET",
+      "name": "리얼티인컴",
+      "exposure": {
+        "ticker": "O",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.31796502384736636,
+        "close": 62.7,
+        "marketCap": 58467311100,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.8318459370596396,
+        "return_7d": -4.274809160305337,
+        "return_15d": -0.8852355358836439,
+        "return_1m": -2.046555225745983,
+        "return_ytd": 9.404990403071011,
+        "return_1y": 9.138381201044377,
+        "return_2y": 9.176388647048594,
+        "return_3y": 2.8374610464162675,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_443",
+      "type": "ASSET",
+      "name": "킴코리얼티",
+      "exposure": {
+        "ticker": "KIM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.559776089564179,
+        "close": 24.87,
+        "marketCap": 16772079300,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -2.394034536891676,
+        "return_7d": -5.724033358604997,
+        "return_15d": -0.8768433638899897,
+        "return_1m": -1.6607354685646447,
+        "return_ytd": 23.97806580259223,
+        "return_1y": 18.147268408551078,
+        "return_2y": 14.450069028992175,
+        "return_3y": 22.754195459032566,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_444",
+      "type": "ASSET",
+      "name": "사이먼프로퍼티그룹",
+      "exposure": {
+        "ticker": "SPG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.48251438689685955,
+        "close": 224.81,
+        "marketCap": 72901836420,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.988054235514669,
+        "return_7d": -2.961108473259366,
+        "return_15d": 1.2612044502499975,
+        "return_1m": -1.0475813196003325,
+        "return_ytd": 22.199271620372897,
+        "return_1y": 37.12943759912164,
+        "return_2y": 46.51329509906152,
+        "return_3y": 80.42536115569825,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_108",
+      "type": "BUSINESS_FIELD",
+      "name": "시니어/요양"
+    },
+    {
+      "id": "BF_109",
+      "type": "BUSINESS_FIELD",
+      "name": "오피스"
+    },
+    {
+      "id": "BF_110",
+      "type": "BUSINESS_FIELD",
+      "name": "아파트/주거"
+    },
+    {
+      "id": "BF_111",
+      "type": "BUSINESS_FIELD",
+      "name": "물류/산업용"
+    },
+    {
+      "id": "BF_112",
+      "type": "BUSINESS_FIELD",
+      "name": "리얼티"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_069",
+      "type": "MACRO",
+      "name": "유동성확대"
+    },
+    {
+      "id": "M_283",
+      "type": "MACRO",
+      "name": "하이브리드근무정상화"
+    },
+    {
+      "id": "C_5403",
+      "type": "CHARACTER",
+      "name": "시니어헬스리츠"
+    },
+    {
+      "id": "C_5404",
+      "type": "CHARACTER",
+      "name": "헬스케어리츠"
+    },
+    {
+      "id": "C_5405",
+      "type": "CHARACTER",
+      "name": "오피스리츠"
+    },
+    {
+      "id": "C_5406",
+      "type": "CHARACTER",
+      "name": "뉴욕오피스리츠"
+    },
+    {
+      "id": "C_5407",
+      "type": "CHARACTER",
+      "name": "오피스리츠"
+    },
+    {
+      "id": "C_5408",
+      "type": "CHARACTER",
+      "name": "주거리츠"
+    },
+    {
+      "id": "C_5409",
+      "type": "CHARACTER",
+      "name": "주거리츠"
+    },
+    {
+      "id": "C_5410",
+      "type": "CHARACTER",
+      "name": "물류리츠"
+    },
+    {
+      "id": "C_5411",
+      "type": "CHARACTER",
+      "name": "물류리츠1위"
+    },
+    {
+      "id": "C_5412",
+      "type": "CHARACTER",
+      "name": "리테일넷리스리츠"
+    },
+    {
+      "id": "C_5413",
+      "type": "CHARACTER",
+      "name": "리테일리츠"
+    },
+    {
+      "id": "C_5414",
+      "type": "CHARACTER",
+      "name": "몰리츠"
+    },
+    {
+      "id": "A_1926",
+      "type": "ASSET",
+      "name": "VNQ",
+      "exposure": {
+        "ticker": "VNQ",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "return_3d": -0.03031834259726862,
+        "return_7d": -1.6112989854784154,
+        "return_15d": 1.083180053137145,
+        "return_1m": 0.5284552845528312,
+        "return_ytd": 11.748757342973338,
+        "return_1y": 10.119113881776688,
+        "return_2y": 9.412675588983532,
+        "return_3y": 16.021581046211587,
+        "close": 98.92,
+        "marketCap": 71384100864,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "notes": "g53 누적 import 기반 T_053 freeze",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "자산 CHR 백필",
-    "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_433",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001831"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001832"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_435",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001833"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_436",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001834"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_437",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001835"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_438",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001836"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_439",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001837"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_440",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001838"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_441",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001839"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_442",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001840"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001841"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001842"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_433",
+      "to": "BF_108",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001843"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "BF_108",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001844"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_435",
+      "to": "BF_109",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001845"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_436",
+      "to": "BF_109",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001846"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_437",
+      "to": "BF_109",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001847"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_438",
+      "to": "BF_110",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001848"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_439",
+      "to": "BF_110",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001849"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_440",
+      "to": "BF_111",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001850"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_441",
+      "to": "BF_111",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001851"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_442",
+      "to": "BF_112",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001852"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "BF_112",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001853"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "BF_112",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001854"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_145",
+      "to": "T_053",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001855"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_069",
+      "to": "T_053",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001856"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_283",
+      "to": "T_053",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001857"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_433",
+      "to": "C_5403",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014346"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "C_5404",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014347"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_435",
+      "to": "C_5405",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014348"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_436",
+      "to": "C_5406",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014349"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_437",
+      "to": "C_5407",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014350"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_438",
+      "to": "C_5408",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014351"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_439",
+      "to": "C_5409",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014352"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_440",
+      "to": "C_5410",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014353"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_441",
+      "to": "C_5411",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014354"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_442",
+      "to": "C_5412",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014355"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "C_5413",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014356"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "C_5414",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014357"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_433",
+      "to": "A_434",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019009"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웰타워와 벤타스는 미국 시니어 하우징·헬스케어 REIT 양대 경쟁"
+    },
+    {
+      "from": "A_435",
+      "to": "A_436",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019010"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "보스턴프로퍼티즈와 SL그린은 미국 오피스 REIT 직접 경쟁"
+    },
+    {
+      "from": "A_435",
+      "to": "A_437",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019011"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "보스턴프로퍼티즈와 보르나도는 미국 프리미엄 오피스 REIT 경쟁"
+    },
+    {
+      "from": "A_438",
+      "to": "A_439",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019012"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에쿼티레지덴셜과 아발론베이는 미국 아파트 REIT 양대 경쟁"
+    },
+    {
+      "from": "A_441",
+      "to": "A_440",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019013"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "프롤로지스와 렉스포드는 미국 산업용 물류 REIT 경쟁"
+    },
+    {
+      "from": "A_443",
+      "to": "A_444",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019014"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "킴코리얼티와 사이먼프로퍼티는 미국 리테일 REIT 경쟁"
+    },
+    {
+      "from": "A_1926",
+      "to": "T_053",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020578"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_433",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001831"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001832"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_435",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001833"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_436",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001834"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_437",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001835"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_438",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001836"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_439",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001837"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_440",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001838"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_441",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001839"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_442",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001840"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001841"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "T_053",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_001842"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_433",
+      "to": "BF_108",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001843"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "BF_108",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001844"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_435",
+      "to": "BF_109",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001845"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_436",
+      "to": "BF_109",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001846"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_437",
+      "to": "BF_109",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001847"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_438",
+      "to": "BF_110",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001848"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_439",
+      "to": "BF_110",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001849"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_440",
+      "to": "BF_111",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001850"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_441",
+      "to": "BF_111",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001851"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_442",
+      "to": "BF_112",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001852"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "BF_112",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001853"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "BF_112",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_001854"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_145",
+      "to": "T_053",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001855"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_069",
+      "to": "T_053",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001856"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_283",
+      "to": "T_053",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_001857"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_433",
+      "to": "C_5403",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014346"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_434",
+      "to": "C_5404",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014347"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_435",
+      "to": "C_5405",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014348"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_436",
+      "to": "C_5406",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014349"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_437",
+      "to": "C_5407",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014350"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_438",
+      "to": "C_5408",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014351"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_439",
+      "to": "C_5409",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014352"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_440",
+      "to": "C_5410",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014353"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_441",
+      "to": "C_5411",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014354"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_442",
+      "to": "C_5412",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014355"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "C_5413",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014356"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "C_5414",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014357"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_433",
+      "to": "A_434",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019009"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웰타워와 벤타스는 미국 시니어 하우징·헬스케어 REIT 양대 경쟁"
+    },
+    {
+      "from": "A_435",
+      "to": "A_436",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019010"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "보스턴프로퍼티즈와 SL그린은 미국 오피스 REIT 직접 경쟁"
+    },
+    {
+      "from": "A_435",
+      "to": "A_437",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019011"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "보스턴프로퍼티즈와 보르나도는 미국 프리미엄 오피스 REIT 경쟁"
+    },
+    {
+      "from": "A_438",
+      "to": "A_439",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019012"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에쿼티레지덴셜과 아발론베이는 미국 아파트 REIT 양대 경쟁"
+    },
+    {
+      "from": "A_441",
+      "to": "A_440",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019013"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "프롤로지스와 렉스포드는 미국 산업용 물류 REIT 경쟁"
+    },
+    {
+      "from": "A_443",
+      "to": "A_444",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019014"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "킴코리얼티와 사이먼프로퍼티는 미국 리테일 REIT 경쟁"
+    },
+    {
+      "from": "A_1926",
+      "to": "T_053",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020578"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_053",
-   "type": "THEME",
-   "name": "미국상업용부동산"
-  },
-  {
-   "id": "A_433",
-   "type": "ASSET",
-   "name": "웰타워",
-   "exposure": {
-    "ticker": "WELL",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.6563706563706528,
-    "close": 231.57,
-    "marketCap": 166862860587,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.7230403598862631,
-    "return_7d": -8.132661562264454,
-    "return_15d": -1.877118644067799,
-    "return_1m": -0.4813270875413611,
-    "return_ytd": 23.87397025783673,
-    "return_1y": 39.29860442733397,
-    "return_2y": 106.3168210976479,
-    "return_3y": 185.8535983211949,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_434",
-   "type": "ASSET",
-   "name": "벤타스",
-   "exposure": {
-    "ticker": "VTR",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "close": 90.85,
-    "marketCap": 44168544500,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.1640557006092345,
-    "return_7d": -9.628966477668365,
-    "return_15d": -1.6774891774891887,
-    "return_1m": -1.4748942630951056,
-    "return_ytd": 17.483512220354314,
-    "return_1y": 34.592592592592574,
-    "return_2y": 65.60335399197959,
-    "return_3y": 88.75960939123206,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_435",
-   "type": "ASSET",
-   "name": "보스턴프로퍼티즈",
-   "exposure": {
-    "ticker": "BXP",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.36926572929982804,
-    "close": 70.67,
-    "marketCap": 11270267222,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.395283940281844,
-    "return_7d": 2.2572710172189314,
-    "return_15d": 4.356172474896636,
-    "return_1m": 1.0004287551808044,
-    "return_ytd": 4.2023002064287995,
-    "return_1y": 9.36242649334571,
-    "return_2y": -2.6986093900591923,
-    "return_3y": 7.156937073540548,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_436",
-   "type": "ASSET",
-   "name": "SL그린리얼티",
-   "exposure": {
-    "ticker": "SLG",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.0084902177925477,
-    "close": 55.81,
-    "marketCap": 3969457396,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.103711994030967,
-    "return_7d": 2.1973997436367076,
-    "return_15d": 11.910968518147191,
-    "return_1m": 8.284827318587507,
-    "return_ytd": 18.8458262350937,
-    "return_1y": 0.08967001434720956,
-    "return_2y": -16.539554359204434,
-    "return_3y": 50.10758472296934,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_437",
-   "type": "ASSET",
-   "name": "보르나도리얼티트러스트",
-   "exposure": {
-    "ticker": "VNO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.454295016278474,
-    "close": 40.91,
-    "marketCap": 7695089180,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 1.8929016189290104,
-    "return_7d": 2.9959718026183246,
-    "return_15d": 4.548939432660348,
-    "return_1m": 0.5159705159704986,
-    "return_ytd": 22.301943198804164,
-    "return_1y": 8.687566418703497,
-    "return_2y": 38.53708093464272,
-    "return_3y": 84.69525959367945,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_438",
-   "type": "ASSET",
-   "name": "에쿼티레지덴셜",
-   "exposure": {
-    "ticker": "EQR",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.17759360663016643,
-    "close": 67.69,
-    "marketCap": 25379959360,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.8492252681763901,
-    "return_7d": -0.25051576775715345,
-    "return_15d": -1.4988358556460968,
-    "return_1m": -3.20320320320322,
-    "return_ytd": 9.124617120748013,
-    "return_1y": 7.872509960159357,
-    "return_2y": -2.70231421589765,
-    "return_3y": 4.443758679216159,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_439",
-   "type": "ASSET",
-   "name": "아발론베이",
-   "exposure": {
-    "ticker": "AVB",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.24896705159445087,
-    "close": 189.25,
-    "marketCap": 26885612000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.7828309724145166,
-    "return_7d": -0.18986340382891598,
-    "return_15d": -1.3037809647979182,
-    "return_1m": -2.624131721121681,
-    "return_ytd": 4.859264184397172,
-    "return_1y": 2.6078941661244803,
-    "return_2y": -8.193460754826809,
-    "return_3y": 1.6762477838070167,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_440",
-   "type": "ASSET",
-   "name": "렉스포드인더스트리얼리얼티",
-   "exposure": {
-    "ticker": "REXR",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.8307243300610176,
-    "close": 37.0,
-    "marketCap": 8459509652,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -3.595622720166758,
-    "return_7d": -5.128205128205132,
-    "return_15d": 4.196001126443272,
-    "return_1m": 7.9976649153531865,
-    "return_ytd": -5.201127337945177,
-    "return_1y": 3.0066815144766057,
-    "return_2y": -25.26762270248434,
-    "return_3y": -31.97278911564626,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_441",
-   "type": "ASSET",
-   "name": "프롤로지스",
-   "exposure": {
-    "ticker": "PLD",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -3.537981269510926,
-    "close": 139.05,
-    "marketCap": 129744217800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -4.884054996921805,
-    "return_7d": -5.811826864458435,
-    "return_15d": -2.4142045055793426,
-    "return_1m": -0.8202567760342228,
-    "return_ytd": 7.748934521503292,
-    "return_1y": 32.54217901058052,
-    "return_2y": 10.278372591006434,
-    "return_3y": 12.454508693894063,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_442",
-   "type": "ASSET",
-   "name": "리얼티인컴",
-   "exposure": {
-    "ticker": "O",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.9136735979836108,
-    "close": 62.9,
-    "marketCap": 58653809700,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -2.374670184696581,
-    "return_7d": -4.115853658536583,
-    "return_15d": -1.3642778736082883,
-    "return_1m": -0.4589333755340985,
-    "return_ytd": 9.753969638806481,
-    "return_1y": 11.189676506982504,
-    "return_2y": 7.760836045913999,
-    "return_3y": 2.326338051081822,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_443",
-   "type": "ASSET",
-   "name": "킴코리얼티",
-   "exposure": {
-    "ticker": "KIM",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.5741833923652027,
-    "close": 25.01,
-    "marketCap": 16866493900,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.9600156801254376,
-    "return_7d": -4.176245210727969,
-    "return_15d": -0.9504950495049402,
-    "return_1m": -0.159680638722548,
-    "return_ytd": 24.675972083748764,
-    "return_1y": 20.588235294117663,
-    "return_2y": 13.52700862460281,
-    "return_3y": 23.934588701684856,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_444",
-   "type": "ASSET",
-   "name": "사이먼프로퍼티그룹",
-   "exposure": {
-    "ticker": "SPG",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.42258683888985,
-    "close": 225.9,
-    "marketCap": 73255303800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.9701440722096786,
-    "return_7d": -1.6885716772565007,
-    "return_15d": 2.087852494577014,
-    "return_1m": 0.40000000000000036,
-    "return_ytd": 22.79175952600967,
-    "return_1y": 40.589992531740094,
-    "return_2y": 45.920806149473556,
-    "return_3y": 81.47493573264781,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "BF_108",
-   "type": "BUSINESS_FIELD",
-   "name": "시니어/요양"
-  },
-  {
-   "id": "BF_109",
-   "type": "BUSINESS_FIELD",
-   "name": "오피스"
-  },
-  {
-   "id": "BF_110",
-   "type": "BUSINESS_FIELD",
-   "name": "아파트/주거"
-  },
-  {
-   "id": "BF_111",
-   "type": "BUSINESS_FIELD",
-   "name": "물류/산업용"
-  },
-  {
-   "id": "BF_112",
-   "type": "BUSINESS_FIELD",
-   "name": "리얼티"
-  },
-  {
-   "id": "M_145",
-   "type": "MACRO",
-   "name": "금리인하"
-  },
-  {
-   "id": "M_069",
-   "type": "MACRO",
-   "name": "유동성확대"
-  },
-  {
-   "id": "M_283",
-   "type": "MACRO",
-   "name": "하이브리드근무정상화"
-  },
-  {
-   "id": "C_5403",
-   "type": "CHARACTER",
-   "name": "시니어헬스리츠"
-  },
-  {
-   "id": "C_5404",
-   "type": "CHARACTER",
-   "name": "헬스케어리츠"
-  },
-  {
-   "id": "C_5405",
-   "type": "CHARACTER",
-   "name": "오피스리츠"
-  },
-  {
-   "id": "C_5406",
-   "type": "CHARACTER",
-   "name": "뉴욕오피스리츠"
-  },
-  {
-   "id": "C_5407",
-   "type": "CHARACTER",
-   "name": "오피스리츠"
-  },
-  {
-   "id": "C_5408",
-   "type": "CHARACTER",
-   "name": "주거리츠"
-  },
-  {
-   "id": "C_5409",
-   "type": "CHARACTER",
-   "name": "주거리츠"
-  },
-  {
-   "id": "C_5410",
-   "type": "CHARACTER",
-   "name": "물류리츠"
-  },
-  {
-   "id": "C_5411",
-   "type": "CHARACTER",
-   "name": "물류리츠1위"
-  },
-  {
-   "id": "C_5412",
-   "type": "CHARACTER",
-   "name": "리테일넷리스리츠"
-  },
-  {
-   "id": "C_5413",
-   "type": "CHARACTER",
-   "name": "리테일리츠"
-  },
-  {
-   "id": "C_5414",
-   "type": "CHARACTER",
-   "name": "몰리츠"
-  },
-  {
-   "id": "A_1926",
-   "type": "ASSET",
-   "name": "VNQ",
-   "exposure": {
-    "ticker": "VNQ",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.15140809528615407,
-    "return_3d": -0.5729219016986531,
-    "return_7d": -1.8748140065469654,
-    "return_15d": 1.3836220149636258,
-    "return_1m": 1.7276840806252691,
-    "return_ytd": 11.748757342973338,
-    "return_1y": 11.24606387764282,
-    "return_2y": 9.026782762041208,
-    "return_3y": 16.77487899893757,
-    "close": 98.92,
-    "marketCap": 71384100864,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_433",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001831"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_434",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001832"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_435",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001833"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_436",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001834"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_437",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001835"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_438",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001836"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_439",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001837"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_440",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001838"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_441",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001839"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_442",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001840"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001841"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001842"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_433",
-   "to": "BF_108",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001843"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_434",
-   "to": "BF_108",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001844"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_435",
-   "to": "BF_109",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001845"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_436",
-   "to": "BF_109",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001846"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_437",
-   "to": "BF_109",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001847"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_438",
-   "to": "BF_110",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001848"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_439",
-   "to": "BF_110",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001849"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_440",
-   "to": "BF_111",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001850"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_441",
-   "to": "BF_111",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001851"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_442",
-   "to": "BF_112",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001852"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "BF_112",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001853"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "BF_112",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001854"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_145",
-   "to": "T_053",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_001855"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_069",
-   "to": "T_053",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_001856"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_283",
-   "to": "T_053",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_001857"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_433",
-   "to": "C_5403",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014346"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_434",
-   "to": "C_5404",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014347"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_435",
-   "to": "C_5405",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014348"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_436",
-   "to": "C_5406",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014349"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_437",
-   "to": "C_5407",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014350"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_438",
-   "to": "C_5408",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014351"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_439",
-   "to": "C_5409",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014352"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_440",
-   "to": "C_5410",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014353"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_441",
-   "to": "C_5411",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014354"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_442",
-   "to": "C_5412",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014355"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "C_5413",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014356"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "C_5414",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014357"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_433",
-   "to": "A_434",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019009"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웰타워와 벤타스는 미국 시니어 하우징·헬스케어 REIT 양대 경쟁"
-  },
-  {
-   "from": "A_435",
-   "to": "A_436",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019010"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "보스턴프로퍼티즈와 SL그린은 미국 오피스 REIT 직접 경쟁"
-  },
-  {
-   "from": "A_435",
-   "to": "A_437",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019011"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "보스턴프로퍼티즈와 보르나도는 미국 프리미엄 오피스 REIT 경쟁"
-  },
-  {
-   "from": "A_438",
-   "to": "A_439",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019012"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에쿼티레지덴셜과 아발론베이는 미국 아파트 REIT 양대 경쟁"
-  },
-  {
-   "from": "A_441",
-   "to": "A_440",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019013"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "프롤로지스와 렉스포드는 미국 산업용 물류 REIT 경쟁"
-  },
-  {
-   "from": "A_443",
-   "to": "A_444",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019014"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "킴코리얼티와 사이먼프로퍼티는 미국 리테일 REIT 경쟁"
-  },
-  {
-   "from": "A_1926",
-   "to": "T_053",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020578"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_433",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001831"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_434",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001832"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_435",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001833"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_436",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001834"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_437",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001835"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_438",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001836"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_439",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001837"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_440",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001838"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_441",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001839"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_442",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001840"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001841"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "T_053",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_001842"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_433",
-   "to": "BF_108",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001843"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_434",
-   "to": "BF_108",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001844"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_435",
-   "to": "BF_109",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001845"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_436",
-   "to": "BF_109",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001846"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_437",
-   "to": "BF_109",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001847"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_438",
-   "to": "BF_110",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001848"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_439",
-   "to": "BF_110",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001849"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_440",
-   "to": "BF_111",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001850"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_441",
-   "to": "BF_111",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001851"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_442",
-   "to": "BF_112",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001852"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "BF_112",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001853"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "BF_112",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_001854"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_145",
-   "to": "T_053",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_001855"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_069",
-   "to": "T_053",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_001856"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_283",
-   "to": "T_053",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_001857"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_433",
-   "to": "C_5403",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014346"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_434",
-   "to": "C_5404",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014347"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_435",
-   "to": "C_5405",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014348"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_436",
-   "to": "C_5406",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014349"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_437",
-   "to": "C_5407",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014350"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_438",
-   "to": "C_5408",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014351"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_439",
-   "to": "C_5409",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014352"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_440",
-   "to": "C_5410",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014353"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_441",
-   "to": "C_5411",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014354"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_442",
-   "to": "C_5412",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014355"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "C_5413",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014356"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "C_5414",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014357"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_433",
-   "to": "A_434",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019009"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웰타워와 벤타스는 미국 시니어 하우징·헬스케어 REIT 양대 경쟁"
-  },
-  {
-   "from": "A_435",
-   "to": "A_436",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019010"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "보스턴프로퍼티즈와 SL그린은 미국 오피스 REIT 직접 경쟁"
-  },
-  {
-   "from": "A_435",
-   "to": "A_437",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019011"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "보스턴프로퍼티즈와 보르나도는 미국 프리미엄 오피스 REIT 경쟁"
-  },
-  {
-   "from": "A_438",
-   "to": "A_439",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019012"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에쿼티레지덴셜과 아발론베이는 미국 아파트 REIT 양대 경쟁"
-  },
-  {
-   "from": "A_441",
-   "to": "A_440",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019013"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "프롤로지스와 렉스포드는 미국 산업용 물류 REIT 경쟁"
-  },
-  {
-   "from": "A_443",
-   "to": "A_444",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019014"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "킴코리얼티와 사이먼프로퍼티는 미국 리테일 REIT 경쟁"
-  },
-  {
-   "from": "A_1926",
-   "to": "T_053",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020578"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

@@ -1,983 +1,1001 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_213",
- "themeName": "K비만약",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_213",
+  "themeName": "K비만약",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-09T00:00:00+09:00",
+    "notes": "g213 누적 import 기반 K비만약 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-13",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 8개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-13",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_213",
+      "type": "THEME",
+      "name": "K비만약"
+    },
+    {
+      "id": "A_1314",
+      "type": "ASSET",
+      "name": "한미약품",
+      "exposure": {
+        "ticker": "128940",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.5291005291005346,
+        "close": 380000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 13.943028485757125,
+        "return_7d": -2.688860435339313,
+        "return_15d": 6.591865357643756,
+        "return_1m": -10.165484633569744,
+        "return_ytd": -13.907585383478693,
+        "return_1y": 32.657181448254,
+        "return_2y": 36.707617421473394,
+        "return_3y": 44.153068968035484,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1368",
+      "type": "ASSET",
+      "name": "일동제약",
+      "exposure": {
+        "ticker": "249420",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.5582655826558156,
+        "close": 14990,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 9.176984705025482,
+        "return_7d": 6.614509246088196,
+        "return_15d": 9.656181419166066,
+        "return_1m": -10.185739964050333,
+        "return_ytd": -61.00835383143335,
+        "return_1y": -26.748703785572747,
+        "return_2y": 11.941892375076879,
+        "return_3y": 4.2986425339366585,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1369",
+      "type": "ASSET",
+      "name": "디앤디파마텍",
+      "exposure": {
+        "ticker": "347850",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -18.055555555555557,
+        "close": 53100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 5.35714285714286,
+        "return_7d": -9.999999999999998,
+        "return_15d": -25.83798882681564,
+        "return_1m": -30.03952569169961,
+        "return_ytd": -40.269966254218225,
+        "return_1y": 51.06685633001422,
+        "return_2y": 478.74659400544954,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_720",
+      "type": "ASSET",
+      "name": "종근당",
+      "exposure": {
+        "ticker": "185750",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "close": 67500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.8968609865470878,
+        "return_7d": -1.603498542274051,
+        "return_15d": 0.746268656716409,
+        "return_1m": -2.315484804630974,
+        "return_ytd": -18.478260869565222,
+        "return_1y": -20.68100604291815,
+        "return_2y": -27.603068280640606,
+        "return_3y": 1.6841436288528744,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_244",
+      "type": "ASSET",
+      "name": "일라이릴리",
+      "exposure": {
+        "ticker": "LLY",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 4.856231177398529,
+        "close": 1169.86,
+        "marketCap": 1101705126260,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.8296716688137593,
+        "return_7d": -2.3105892963015573,
+        "return_15d": 1.14384029464909,
+        "return_1m": -5.317426915730527,
+        "return_ytd": 8.284275611833092,
+        "return_1y": 52.127438231469434,
+        "return_2y": 45.456127917241716,
+        "return_3y": 157.36662633373663,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1215",
+      "type": "ASSET",
+      "name": "노보노디스크",
+      "exposure": {
+        "ticker": "NVO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.5645889792231351,
+        "close": 44.505,
+        "marketCap": 197663924163,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -5.416312659303313,
+        "return_7d": -10.348298771894504,
+        "return_15d": -11.92642405063291,
+        "return_1m": -10.29411764705882,
+        "return_ytd": -15.002863141820955,
+        "return_1y": -8.768694939561572,
+        "return_2y": -66.42539395310261,
+        "return_3y": -44.71756672873991,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1214",
+      "type": "ASSET",
+      "name": "화이자",
+      "exposure": {
+        "ticker": "PFE",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.5741833923652138,
+        "close": 25.81,
+        "marketCap": 147102546400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 3.198720511795261,
+        "return_7d": 4.6209971625455815,
+        "return_15d": 3.988718775181299,
+        "return_1m": 7.2289156626506035,
+        "return_ytd": 2.501985702938847,
+        "return_1y": 9.689757756056094,
+        "return_2y": -15.487884741322855,
+        "return_3y": -28.424847476428184,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1219",
+      "type": "ASSET",
+      "name": "메트세라",
+      "exposure": {
+        "ticker": "MTSR",
+        "exchange": "PRIVATE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "close": 70.5,
+        "marketCap": 7429021325,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.4237288135593209,
+        "return_7d": -1.232838330064434,
+        "return_15d": 34.260140925537996,
+        "return_1m": 33.371169125993184,
+        "return_ytd": 166.03773584905662,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_443",
+      "type": "BUSINESS_FIELD",
+      "name": "GLP-1기반비만치료제"
+    },
+    {
+      "id": "BF_444",
+      "type": "BUSINESS_FIELD",
+      "name": "경구용치료제"
+    },
+    {
+      "id": "M_191",
+      "type": "MACRO",
+      "name": "신약임상성공"
+    },
+    {
+      "id": "M_209",
+      "type": "MACRO",
+      "name": "빅파마협력"
+    },
+    {
+      "id": "C_3264",
+      "type": "CHARACTER",
+      "name": "K비만신약대장"
+    },
+    {
+      "id": "C_3265",
+      "type": "CHARACTER",
+      "name": "경구비만신약"
+    },
+    {
+      "id": "C_3266",
+      "type": "CHARACTER",
+      "name": "경구GLP1바이오텍"
+    },
+    {
+      "id": "C_3267",
+      "type": "CHARACTER",
+      "name": "비만대사파이프라인"
+    },
+    {
+      "id": "C_3268",
+      "type": "CHARACTER",
+      "name": "젭바운드선두"
+    },
+    {
+      "id": "C_3269",
+      "type": "CHARACTER",
+      "name": "위고비선두"
+    },
+    {
+      "id": "C_3270",
+      "type": "CHARACTER",
+      "name": "경구비만후발"
+    },
+    {
+      "id": "C_3271",
+      "type": "CHARACTER",
+      "name": "비만바이오텍"
+    },
+    {
+      "id": "A_2896",
+      "type": "ASSET",
+      "name": "KODEX 글로벌비만치료제TOP2 Plus",
+      "exposure": {
+        "ticker": "476070",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -1.0680907877169576,
+        "return_3d": -4.796573875803,
+        "return_7d": -5.566014332165404,
+        "return_15d": -6.478606011413857,
+        "return_1m": -12.196876106253196,
+        "return_ytd": -2.22038804932041,
+        "return_1y": 18.248482413977186,
+        "return_2y": -9.185255705396479,
+        "return_3y": null,
+        "close": 11115,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-09T00:00:00+09:00",
-  "notes": "g213 누적 import 기반 K비만약 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-13",
-    "kind": "보강",
-    "title": "자산별 테마관점 CHR 정의",
-    "detail": "자산 8개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
-   },
-   {
-    "date": "2026-07-13",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필 + 2026 이벤트",
-    "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1314",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006534"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1368",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006535"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1369",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006536"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_720",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006537"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006538"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1215",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006539"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1214",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006540"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1219",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006541"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1314",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006542"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1368",
+      "to": "BF_444",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006543"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1369",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006544"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_720",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006545"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006546"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1215",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006547"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1219",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006548"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "M_191",
+      "to": "T_213",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006549"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_209",
+      "to": "T_213",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006550"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1314",
+      "to": "C_3264",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006697"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1368",
+      "to": "C_3265",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006698"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1369",
+      "to": "C_3266",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006699"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_720",
+      "to": "C_3267",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006700"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "C_3268",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006701"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1215",
+      "to": "C_3269",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006702"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1214",
+      "to": "C_3270",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006703"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1219",
+      "to": "C_3271",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006704"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "A_1215",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019314"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "일라이릴리와 노보노디스크는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1314",
+      "to": "A_720",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019315"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한미약품와 종근당는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1368",
+      "to": "A_1314",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019316"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "일동제약와 한미약품는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1219",
+      "to": "A_244",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019317"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메트세라와 일라이릴리는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1214",
+      "to": "A_1215",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019318"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 노보노디스크는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2896",
+      "to": "T_213",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020653"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1314",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006534"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1368",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006535"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1369",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006536"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_720",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006537"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006538"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1215",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006539"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1214",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006540"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1219",
+      "to": "T_213",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_006541"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1314",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006542"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1368",
+      "to": "BF_444",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006543"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1369",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006544"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_720",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006545"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006546"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1215",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006547"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1219",
+      "to": "BF_443",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_006548"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "M_191",
+      "to": "T_213",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006549"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_209",
+      "to": "T_213",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_006550"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1314",
+      "to": "C_3264",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006697"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1368",
+      "to": "C_3265",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006698"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1369",
+      "to": "C_3266",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006699"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_720",
+      "to": "C_3267",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006700"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "C_3268",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006701"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1215",
+      "to": "C_3269",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006702"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1214",
+      "to": "C_3270",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006703"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1219",
+      "to": "C_3271",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006704"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_244",
+      "to": "A_1215",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019314"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "일라이릴리와 노보노디스크는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1314",
+      "to": "A_720",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019315"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한미약품와 종근당는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1368",
+      "to": "A_1314",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019316"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "일동제약와 한미약품는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1219",
+      "to": "A_244",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019317"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메트세라와 일라이릴리는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1214",
+      "to": "A_1215",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019318"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 노보노디스크는 K비만약 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2896",
+      "to": "T_213",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020653"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_213",
-   "type": "THEME",
-   "name": "K비만약"
-  },
-  {
-   "id": "A_1314",
-   "type": "ASSET",
-   "name": "한미약품",
-   "exposure": {
-    "ticker": "128940",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.5291005291005346,
-    "close": 380000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 13.943028485757125,
-    "return_7d": -2.688860435339313,
-    "return_15d": 6.591865357643756,
-    "return_1m": -10.165484633569744,
-    "return_ytd": -13.907585383478693,
-    "return_1y": 32.657181448254,
-    "return_2y": 36.707617421473394,
-    "return_3y": 44.153068968035484,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1368",
-   "type": "ASSET",
-   "name": "일동제약",
-   "exposure": {
-    "ticker": "249420",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.5582655826558156,
-    "close": 14990,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 9.176984705025482,
-    "return_7d": 6.614509246088196,
-    "return_15d": 9.656181419166066,
-    "return_1m": -10.185739964050333,
-    "return_ytd": -61.00835383143335,
-    "return_1y": -26.748703785572747,
-    "return_2y": 11.941892375076879,
-    "return_3y": 4.2986425339366585,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1369",
-   "type": "ASSET",
-   "name": "디앤디파마텍",
-   "exposure": {
-    "ticker": "347850",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -18.055555555555557,
-    "close": 53100,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 5.35714285714286,
-    "return_7d": -9.999999999999998,
-    "return_15d": -25.83798882681564,
-    "return_1m": -30.03952569169961,
-    "return_ytd": -40.269966254218225,
-    "return_1y": 51.06685633001422,
-    "return_2y": 478.74659400544954,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_720",
-   "type": "ASSET",
-   "name": "종근당",
-   "exposure": {
-    "ticker": "185750",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "close": 67500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.8968609865470878,
-    "return_7d": -1.603498542274051,
-    "return_15d": 0.746268656716409,
-    "return_1m": -2.315484804630974,
-    "return_ytd": -18.478260869565222,
-    "return_1y": -20.68100604291815,
-    "return_2y": -27.603068280640606,
-    "return_3y": 1.6841436288528744,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_244",
-   "type": "ASSET",
-   "name": "일라이릴리",
-   "exposure": {
-    "ticker": "LLY",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5065277876863616,
-    "close": 1116.11,
-    "marketCap": 1051086547510,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -3.401819960691621,
-    "return_7d": -6.718058911565761,
-    "return_15d": -3.1981536432574953,
-    "return_1m": -7.031315100911617,
-    "return_ytd": 3.2692806101670024,
-    "return_1y": 46.35131767082497,
-    "return_2y": 41.187785525366685,
-    "return_3y": 143.34322107834586,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1215",
-   "type": "ASSET",
-   "name": "노보노디스크",
-   "exposure": {
-    "ticker": "NVO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -5.96729666595881,
-    "close": 44.28,
-    "marketCap": 196770650975,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -14.202673900406893,
-    "return_7d": -9.206479393069511,
-    "return_15d": -9.761565111065817,
-    "return_1m": -10.109622411693053,
-    "return_ytd": -15.48005344531399,
-    "return_1y": -8.113716538700967,
-    "return_2y": -65.73551033041862,
-    "return_3y": -43.88543910784437,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1214",
-   "type": "ASSET",
-   "name": "화이자",
-   "exposure": {
-    "ticker": "PFE",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.5181781861765886,
-    "close": 25.41,
-    "marketCap": 144822770400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 2.0072260136491327,
-    "return_7d": 3.5452322738386277,
-    "return_15d": 4.783505154639167,
-    "return_1m": 7.1247892074199015,
-    "return_ytd": 0.9134233518665713,
-    "return_1y": 8.17369093231164,
-    "return_2y": -19.050653074227462,
-    "return_3y": -29.55364568893818,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1219",
-   "type": "ASSET",
-   "name": "메트세라",
-   "exposure": {
-    "ticker": "MTSR",
-    "exchange": "PRIVATE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "close": 70.5,
-    "marketCap": 7429021325,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.4237288135593209,
-    "return_7d": -1.232838330064434,
-    "return_15d": 34.260140925537996,
-    "return_1m": 33.371169125993184,
-    "return_ytd": 166.03773584905662,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "BF_443",
-   "type": "BUSINESS_FIELD",
-   "name": "GLP-1기반비만치료제"
-  },
-  {
-   "id": "BF_444",
-   "type": "BUSINESS_FIELD",
-   "name": "경구용치료제"
-  },
-  {
-   "id": "M_191",
-   "type": "MACRO",
-   "name": "신약임상성공"
-  },
-  {
-   "id": "M_209",
-   "type": "MACRO",
-   "name": "빅파마협력"
-  },
-  {
-   "id": "C_3264",
-   "type": "CHARACTER",
-   "name": "K비만신약대장"
-  },
-  {
-   "id": "C_3265",
-   "type": "CHARACTER",
-   "name": "경구비만신약"
-  },
-  {
-   "id": "C_3266",
-   "type": "CHARACTER",
-   "name": "경구GLP1바이오텍"
-  },
-  {
-   "id": "C_3267",
-   "type": "CHARACTER",
-   "name": "비만대사파이프라인"
-  },
-  {
-   "id": "C_3268",
-   "type": "CHARACTER",
-   "name": "젭바운드선두"
-  },
-  {
-   "id": "C_3269",
-   "type": "CHARACTER",
-   "name": "위고비선두"
-  },
-  {
-   "id": "C_3270",
-   "type": "CHARACTER",
-   "name": "경구비만후발"
-  },
-  {
-   "id": "C_3271",
-   "type": "CHARACTER",
-   "name": "비만바이오텍"
-  },
-  {
-   "id": "A_2896",
-   "type": "ASSET",
-   "name": "KODEX 글로벌비만치료제TOP2 Plus",
-   "exposure": {
-    "ticker": "476070",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1314",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006534"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1368",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006535"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1369",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006536"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_720",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006537"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006538"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1215",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006539"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1214",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006540"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1219",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006541"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1314",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006542"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1368",
-   "to": "BF_444",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006543"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1369",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006544"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_720",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006545"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006546"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1215",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006547"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1219",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006548"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "M_191",
-   "to": "T_213",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006549"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_209",
-   "to": "T_213",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006550"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1314",
-   "to": "C_3264",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006697"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1368",
-   "to": "C_3265",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006698"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1369",
-   "to": "C_3266",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006699"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_720",
-   "to": "C_3267",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006700"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "C_3268",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006701"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1215",
-   "to": "C_3269",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006702"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1214",
-   "to": "C_3270",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006703"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1219",
-   "to": "C_3271",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006704"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "A_1215",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019314"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "일라이릴리와 노보노디스크는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1314",
-   "to": "A_720",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019315"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한미약품와 종근당는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1368",
-   "to": "A_1314",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019316"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "일동제약와 한미약품는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1219",
-   "to": "A_244",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019317"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메트세라와 일라이릴리는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1214",
-   "to": "A_1215",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019318"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 노보노디스크는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2896",
-   "to": "T_213",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020653"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1314",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006534"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1368",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006535"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1369",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006536"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_720",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006537"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006538"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1215",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006539"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1214",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006540"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1219",
-   "to": "T_213",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_006541"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1314",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006542"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1368",
-   "to": "BF_444",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006543"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1369",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006544"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_720",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006545"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006546"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1215",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006547"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1219",
-   "to": "BF_443",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_006548"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "M_191",
-   "to": "T_213",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006549"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_209",
-   "to": "T_213",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_006550"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1314",
-   "to": "C_3264",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006697"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1368",
-   "to": "C_3265",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006698"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1369",
-   "to": "C_3266",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006699"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_720",
-   "to": "C_3267",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006700"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "C_3268",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006701"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1215",
-   "to": "C_3269",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006702"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1214",
-   "to": "C_3270",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006703"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1219",
-   "to": "C_3271",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006704"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_244",
-   "to": "A_1215",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019314"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "일라이릴리와 노보노디스크는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1314",
-   "to": "A_720",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019315"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한미약품와 종근당는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1368",
-   "to": "A_1314",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019316"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "일동제약와 한미약품는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1219",
-   "to": "A_244",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019317"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메트세라와 일라이릴리는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1214",
-   "to": "A_1215",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019318"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 노보노디스크는 K비만약 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2896",
-   "to": "T_213",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020653"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

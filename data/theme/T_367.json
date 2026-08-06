@@ -1,692 +1,710 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_367",
- "themeName": "유럽풍력재생에너지",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_367",
+  "themeName": "유럽풍력재생에너지",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "유럽 풍력·재생에너지 5사 — Vestas (덴마크 풍력 터빈 1위)·Ørsted (덴마크 해상풍력 운영 1위)·Iberdrola (스페인 재생에너지 메이저)·EDP (포르투갈 재생)·SSE (영국 풍력). 미국 IRA·트럼프 정책 변동성 + 해상풍력 비용 인플레.",
+    "notes": "T_367 유럽 특화 신규",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 10건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_367",
+      "type": "THEME",
+      "name": "유럽풍력재생에너지"
+    },
+    {
+      "id": "A_560",
+      "type": "ASSET",
+      "name": "베스타스",
+      "exposure": {
+        "ticker": "VWS",
+        "exchange": "CPH",
+        "country": "DK"
+      },
+      "metrics": {
+        "return_1d": -1.826484018264829,
+        "return_3d": -1.4608994557433475,
+        "return_7d": 0.4086398131932123,
+        "return_15d": -3.2892887264548754,
+        "return_1m": -4.444444444444439,
+        "return_ytd": -3.7223621606493174,
+        "return_1y": 42.561127227517616,
+        "return_2y": 6.93192415293753,
+        "return_3y": -9.129332206255281,
+        "close": 172.0,
+        "marketCap": 168548066124,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2031",
+      "type": "ASSET",
+      "name": "오스테드",
+      "exposure": {
+        "ticker": "DNNGY",
+        "exchange": "OTC",
+        "country": "DK"
+      },
+      "metrics": {
+        "return_1d": -3.9617486338797803,
+        "return_3d": -5.000000000000004,
+        "return_7d": -5.256064690026951,
+        "return_15d": -6.887417218543046,
+        "return_1m": -6.266666666666665,
+        "return_ytd": 5.397301349325345,
+        "return_1y": -55.81395348837209,
+        "return_2y": -64.53077699293644,
+        "return_3y": -75.75862068965517,
+        "close": 7.03,
+        "marketCap": 8944560675,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2032",
+      "type": "ASSET",
+      "name": "이베르드롤라",
+      "exposure": {
+        "ticker": "IBDRY",
+        "exchange": "OTC",
+        "country": "ES"
+      },
+      "metrics": {
+        "return_1d": 0.23167649536648405,
+        "return_3d": -0.042007981516478665,
+        "return_7d": -1.744606173221841,
+        "return_15d": -1.9268418341061189,
+        "return_1m": -1.060291060291052,
+        "return_ytd": 8.553832116788328,
+        "return_1y": 32.562674094707546,
+        "return_2y": 80.47023132347364,
+        "return_3y": 90.3980796159232,
+        "close": 95.12,
+        "marketCap": 154339200737,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2033",
+      "type": "ASSET",
+      "name": "EDP",
+      "exposure": {
+        "ticker": "EDPFY",
+        "exchange": "OTC",
+        "country": "PT"
+      },
+      "metrics": {
+        "return_1d": 0.839188134270108,
+        "return_3d": 0.36907536907537786,
+        "return_7d": 0.9574052364204721,
+        "return_15d": -1.9730601403908143,
+        "return_1m": -0.3855793329477497,
+        "return_ytd": 9.726056487576983,
+        "return_1y": 18.781609195402304,
+        "return_2y": 25.382188789128858,
+        "return_3y": 10.547710740265304,
+        "close": 51.665,
+        "marketCap": 21352568745,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2034",
+      "type": "ASSET",
+      "name": "SSE",
+      "exposure": {
+        "ticker": "SSEZY",
+        "exchange": "OTC",
+        "country": "UK"
+      },
+      "metrics": {
+        "return_1d": -0.7568590350047422,
+        "return_3d": 0.031786395422761515,
+        "return_7d": 0.2868068833651982,
+        "return_15d": -6.534006534006542,
+        "return_1m": -5.552220888355341,
+        "return_ytd": 3.3837056504599117,
+        "return_1y": 27.615571776155722,
+        "return_2y": 27.667342799188653,
+        "return_3y": 45.694444444444436,
+        "close": 31.47,
+        "marketCap": 37962225344,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_353",
+      "type": "MACRO",
+      "name": "미국IRA재생에너지"
+    },
+    {
+      "id": "M_070",
+      "type": "MACRO",
+      "name": "트럼프정책리스크"
+    },
+    {
+      "id": "M_354",
+      "type": "MACRO",
+      "name": "해상풍력비용인플레"
+    },
+    {
+      "id": "C_368",
+      "type": "CHARACTER",
+      "name": "풍력터빈1위"
+    },
+    {
+      "id": "C_369",
+      "type": "CHARACTER",
+      "name": "해상풍력운영1위"
+    },
+    {
+      "id": "C_370",
+      "type": "CHARACTER",
+      "name": "스페인재생메이저"
+    },
+    {
+      "id": "C_371",
+      "type": "CHARACTER",
+      "name": "포르투갈재생"
+    },
+    {
+      "id": "C_372",
+      "type": "CHARACTER",
+      "name": "영국풍력"
+    },
+    {
+      "id": "A_2879",
+      "type": "ASSET",
+      "name": "First Trust Global Wind Energy ETF",
+      "exposure": {
+        "ticker": "FAN",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.9648829431438197,
+        "return_3d": -1.179941002949858,
+        "return_7d": -1.9238812212463485,
+        "return_15d": -3.6169338265515827,
+        "return_1m": -3.059115336916085,
+        "return_ytd": 10.404896421845589,
+        "return_1y": 23.097112860892377,
+        "return_2y": 37.21474546518431,
+        "return_3y": 37.295081967213115,
+        "close": 23.45,
+        "marketCap": 300652778,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "유럽 풍력·재생에너지 5사 — Vestas (덴마크 풍력 터빈 1위)·Ørsted (덴마크 해상풍력 운영 1위)·Iberdrola (스페인 재생에너지 메이저)·EDP (포르투갈 재생)·SSE (영국 풍력). 미국 IRA·트럼프 정책 변동성 + 해상풍력 비용 인플레.",
-  "notes": "T_367 유럽 특화 신규",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 10건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_560",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011001"
+      ]
+    },
+    {
+      "from": "A_2031",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011002"
+      ]
+    },
+    {
+      "from": "A_2032",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011003"
+      ]
+    },
+    {
+      "from": "A_2033",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011004"
+      ]
+    },
+    {
+      "from": "A_2034",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011005"
+      ]
+    },
+    {
+      "from": "M_353",
+      "to": "T_367",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011006"
+      ]
+    },
+    {
+      "from": "M_070",
+      "to": "T_367",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011007"
+      ]
+    },
+    {
+      "from": "M_354",
+      "to": "T_367",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011008"
+      ]
+    },
+    {
+      "from": "A_560",
+      "to": "C_368",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016248"
+      ]
+    },
+    {
+      "from": "A_2031",
+      "to": "C_369",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016249"
+      ]
+    },
+    {
+      "from": "A_2032",
+      "to": "C_370",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016250"
+      ]
+    },
+    {
+      "from": "A_2033",
+      "to": "C_371",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016251"
+      ]
+    },
+    {
+      "from": "A_2034",
+      "to": "C_372",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016252"
+      ]
+    },
+    {
+      "from": "A_560",
+      "to": "A_2032",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018144"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스는 이베르드롤라의 발틱이글 해상풍력에 V174-9.5MW 50기를 공급·유지보수하는 계약을 체결했다."
+    },
+    {
+      "from": "A_560",
+      "to": "A_2031",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018145"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스는 오스테드에 육상풍력 터빈을 공급하고 넷제로 풍력단지용 저탄소 소재 협력까지 맺은 터빈 공급사다."
+    },
+    {
+      "from": "A_560",
+      "to": "A_2033",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018146"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스는 EDP재생에너지(EDPR)와 최대 2.1GW 규모 마스터 공급계약을 맺고 다수 프로젝트에 터빈을 공급했다."
+    },
+    {
+      "from": "A_560",
+      "to": "A_2034",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018147"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스(MHI Vestas)는 SSE 재생에너지의 시그린 해상풍력에 V164-10MW 114기를 공급했다."
+    },
+    {
+      "from": "A_2031",
+      "to": "A_2032",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018148"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오스테드와 이베르드롤라는 유럽 해상풍력 개발·입찰에서 직접 경쟁하는 대형 재생에너지 개발사다."
+    },
+    {
+      "from": "A_2031",
+      "to": "A_2033",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018149"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오스테드와 EDP는 해상·육상 재생에너지 발전 개발에서 경쟁한다."
+    },
+    {
+      "from": "A_2031",
+      "to": "A_2034",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018150"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오스테드와 SSE는 영국 등 유럽 해상풍력 개발·운영을 두고 경쟁한다."
+    },
+    {
+      "from": "A_2032",
+      "to": "A_2033",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018151"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이베르드롤라와 EDP는 이베리아 및 유럽 전력·재생에너지 시장에서 직접 경쟁하는 유틸리티다."
+    },
+    {
+      "from": "A_2032",
+      "to": "A_2034",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018152"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이베르드롤라와 SSE는 영국 전력·재생에너지 발전 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2033",
+      "to": "A_2034",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018153"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "EDP와 SSE는 유럽 재생에너지 발전 개발·운영에서 경쟁하는 유틸리티다."
+    },
+    {
+      "from": "A_2879",
+      "to": "T_367",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020737"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_560",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011001"
+      ]
+    },
+    {
+      "from": "A_2031",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011002"
+      ]
+    },
+    {
+      "from": "A_2032",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011003"
+      ]
+    },
+    {
+      "from": "A_2033",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011004"
+      ]
+    },
+    {
+      "from": "A_2034",
+      "to": "T_367",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011005"
+      ]
+    },
+    {
+      "from": "M_353",
+      "to": "T_367",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011006"
+      ]
+    },
+    {
+      "from": "M_070",
+      "to": "T_367",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011007"
+      ]
+    },
+    {
+      "from": "M_354",
+      "to": "T_367",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011008"
+      ]
+    },
+    {
+      "from": "A_560",
+      "to": "C_368",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016248"
+      ]
+    },
+    {
+      "from": "A_2031",
+      "to": "C_369",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016249"
+      ]
+    },
+    {
+      "from": "A_2032",
+      "to": "C_370",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016250"
+      ]
+    },
+    {
+      "from": "A_2033",
+      "to": "C_371",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016251"
+      ]
+    },
+    {
+      "from": "A_2034",
+      "to": "C_372",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016252"
+      ]
+    },
+    {
+      "from": "A_560",
+      "to": "A_2032",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018144"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스는 이베르드롤라의 발틱이글 해상풍력에 V174-9.5MW 50기를 공급·유지보수하는 계약을 체결했다."
+    },
+    {
+      "from": "A_560",
+      "to": "A_2031",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018145"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스는 오스테드에 육상풍력 터빈을 공급하고 넷제로 풍력단지용 저탄소 소재 협력까지 맺은 터빈 공급사다."
+    },
+    {
+      "from": "A_560",
+      "to": "A_2033",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018146"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스는 EDP재생에너지(EDPR)와 최대 2.1GW 규모 마스터 공급계약을 맺고 다수 프로젝트에 터빈을 공급했다."
+    },
+    {
+      "from": "A_560",
+      "to": "A_2034",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_018147"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스(MHI Vestas)는 SSE 재생에너지의 시그린 해상풍력에 V164-10MW 114기를 공급했다."
+    },
+    {
+      "from": "A_2031",
+      "to": "A_2032",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018148"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오스테드와 이베르드롤라는 유럽 해상풍력 개발·입찰에서 직접 경쟁하는 대형 재생에너지 개발사다."
+    },
+    {
+      "from": "A_2031",
+      "to": "A_2033",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018149"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오스테드와 EDP는 해상·육상 재생에너지 발전 개발에서 경쟁한다."
+    },
+    {
+      "from": "A_2031",
+      "to": "A_2034",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018150"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "오스테드와 SSE는 영국 등 유럽 해상풍력 개발·운영을 두고 경쟁한다."
+    },
+    {
+      "from": "A_2032",
+      "to": "A_2033",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018151"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이베르드롤라와 EDP는 이베리아 및 유럽 전력·재생에너지 시장에서 직접 경쟁하는 유틸리티다."
+    },
+    {
+      "from": "A_2032",
+      "to": "A_2034",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018152"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이베르드롤라와 SSE는 영국 전력·재생에너지 발전 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2033",
+      "to": "A_2034",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018153"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "EDP와 SSE는 유럽 재생에너지 발전 개발·운영에서 경쟁하는 유틸리티다."
+    },
+    {
+      "from": "A_2879",
+      "to": "T_367",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020737"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_367",
-   "type": "THEME",
-   "name": "유럽풍력재생에너지"
-  },
-  {
-   "id": "A_560",
-   "type": "ASSET",
-   "name": "베스타스",
-   "exposure": {
-    "ticker": "VWS",
-    "exchange": "CPH",
-    "country": "DK"
-   },
-   "metrics": {
-    "return_1d": -0.08554319931566301,
-    "return_3d": -0.6521122767224274,
-    "return_7d": 0.9507346585998055,
-    "return_15d": -2.4498886414253906,
-    "return_1m": -4.782608695652179,
-    "return_ytd": -1.9311502938707092,
-    "return_1y": 42.55492270138321,
-    "return_2y": 10.327455919395456,
-    "return_3y": -6.4801964342905976,
-    "close": 175.2,
-    "marketCap": 171683850406,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2031",
-   "type": "ASSET",
-   "name": "오스테드",
-   "exposure": {
-    "ticker": "DNNGY",
-    "exchange": "OTC",
-    "country": "DK"
-   },
-   "metrics": {
-    "return_1d": -0.27247956403269047,
-    "return_3d": -0.40816326530611624,
-    "return_7d": -2.659574468085102,
-    "return_15d": -3.430079155672816,
-    "return_1m": -5.9125964010282805,
-    "return_ytd": 9.745127436281864,
-    "return_1y": -54.020100502512555,
-    "return_2y": -62.09218021750388,
-    "return_3y": -75.1696065128901,
-    "close": 7.32,
-    "marketCap": 9313539707,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2032",
-   "type": "ASSET",
-   "name": "이베르드롤라",
-   "exposure": {
-    "ticker": "IBDRY",
-    "exchange": "OTC",
-    "country": "ES"
-   },
-   "metrics": {
-    "return_1d": 0.12650221378873727,
-    "return_3d": 0.03159557661926993,
-    "return_7d": -1.5343147418618974,
-    "return_15d": -2.2437216961712525,
-    "return_1m": -2.853636084688549,
-    "return_ytd": 8.325729927007286,
-    "return_1y": 34.532577903682736,
-    "return_2y": 79.98862990335418,
-    "return_3y": 88.75198728139905,
-    "close": 94.98,
-    "marketCap": 154112040433,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2033",
-   "type": "ASSET",
-   "name": "EDP",
-   "exposure": {
-    "ticker": "EDPFY",
-    "exchange": "OTC",
-    "country": "PT"
-   },
-   "metrics": {
-    "return_1d": -0.8897485493230217,
-    "return_3d": -0.5820721769499326,
-    "return_7d": -2.1390374331550777,
-    "return_15d": -1.5940080660649114,
-    "return_1m": -2.3255813953488302,
-    "return_ytd": 8.812911446166915,
-    "return_1y": 18.14618399815542,
-    "return_2y": 21.999999999999996,
-    "return_3y": 8.306911857958156,
-    "close": 51.24,
-    "marketCap": 21176920981,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2034",
-   "type": "ASSET",
-   "name": "SSE",
-   "exposure": {
-    "ticker": "SSEZY",
-    "exchange": "OTC",
-    "country": "UK"
-   },
-   "metrics": {
-    "return_1d": 0.47543581616480424,
-    "return_3d": 0.06313131313131493,
-    "return_7d": -1.9486545004639644,
-    "return_15d": -5.260011954572629,
-    "return_1m": -5.089820359281438,
-    "return_ytd": 4.139290407358742,
-    "return_1y": 28.809427062169846,
-    "return_2y": 29.918032786885252,
-    "return_3y": 48.26941066417212,
-    "close": 31.7,
-    "marketCap": 38239503379,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_353",
-   "type": "MACRO",
-   "name": "미국IRA재생에너지"
-  },
-  {
-   "id": "M_070",
-   "type": "MACRO",
-   "name": "트럼프정책리스크"
-  },
-  {
-   "id": "M_354",
-   "type": "MACRO",
-   "name": "해상풍력비용인플레"
-  },
-  {
-   "id": "C_368",
-   "type": "CHARACTER",
-   "name": "풍력터빈1위"
-  },
-  {
-   "id": "C_369",
-   "type": "CHARACTER",
-   "name": "해상풍력운영1위"
-  },
-  {
-   "id": "C_370",
-   "type": "CHARACTER",
-   "name": "스페인재생메이저"
-  },
-  {
-   "id": "C_371",
-   "type": "CHARACTER",
-   "name": "포르투갈재생"
-  },
-  {
-   "id": "C_372",
-   "type": "CHARACTER",
-   "name": "영국풍력"
-  },
-  {
-   "id": "A_2879",
-   "type": "ASSET",
-   "name": "First Trust Global Wind Energy ETF",
-   "exposure": {
-    "ticker": "FAN",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_560",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011001"
-   ]
-  },
-  {
-   "from": "A_2031",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011002"
-   ]
-  },
-  {
-   "from": "A_2032",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011003"
-   ]
-  },
-  {
-   "from": "A_2033",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011004"
-   ]
-  },
-  {
-   "from": "A_2034",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011005"
-   ]
-  },
-  {
-   "from": "M_353",
-   "to": "T_367",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011006"
-   ]
-  },
-  {
-   "from": "M_070",
-   "to": "T_367",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011007"
-   ]
-  },
-  {
-   "from": "M_354",
-   "to": "T_367",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011008"
-   ]
-  },
-  {
-   "from": "A_560",
-   "to": "C_368",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016248"
-   ]
-  },
-  {
-   "from": "A_2031",
-   "to": "C_369",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016249"
-   ]
-  },
-  {
-   "from": "A_2032",
-   "to": "C_370",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016250"
-   ]
-  },
-  {
-   "from": "A_2033",
-   "to": "C_371",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016251"
-   ]
-  },
-  {
-   "from": "A_2034",
-   "to": "C_372",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016252"
-   ]
-  },
-  {
-   "from": "A_560",
-   "to": "A_2032",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018144"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스는 이베르드롤라의 발틱이글 해상풍력에 V174-9.5MW 50기를 공급·유지보수하는 계약을 체결했다."
-  },
-  {
-   "from": "A_560",
-   "to": "A_2031",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018145"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스는 오스테드에 육상풍력 터빈을 공급하고 넷제로 풍력단지용 저탄소 소재 협력까지 맺은 터빈 공급사다."
-  },
-  {
-   "from": "A_560",
-   "to": "A_2033",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018146"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스는 EDP재생에너지(EDPR)와 최대 2.1GW 규모 마스터 공급계약을 맺고 다수 프로젝트에 터빈을 공급했다."
-  },
-  {
-   "from": "A_560",
-   "to": "A_2034",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018147"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스(MHI Vestas)는 SSE 재생에너지의 시그린 해상풍력에 V164-10MW 114기를 공급했다."
-  },
-  {
-   "from": "A_2031",
-   "to": "A_2032",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018148"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "오스테드와 이베르드롤라는 유럽 해상풍력 개발·입찰에서 직접 경쟁하는 대형 재생에너지 개발사다."
-  },
-  {
-   "from": "A_2031",
-   "to": "A_2033",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018149"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "오스테드와 EDP는 해상·육상 재생에너지 발전 개발에서 경쟁한다."
-  },
-  {
-   "from": "A_2031",
-   "to": "A_2034",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018150"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "오스테드와 SSE는 영국 등 유럽 해상풍력 개발·운영을 두고 경쟁한다."
-  },
-  {
-   "from": "A_2032",
-   "to": "A_2033",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018151"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이베르드롤라와 EDP는 이베리아 및 유럽 전력·재생에너지 시장에서 직접 경쟁하는 유틸리티다."
-  },
-  {
-   "from": "A_2032",
-   "to": "A_2034",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018152"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이베르드롤라와 SSE는 영국 전력·재생에너지 발전 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2033",
-   "to": "A_2034",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018153"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "EDP와 SSE는 유럽 재생에너지 발전 개발·운영에서 경쟁하는 유틸리티다."
-  },
-  {
-   "from": "A_2879",
-   "to": "T_367",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020737"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_560",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011001"
-   ]
-  },
-  {
-   "from": "A_2031",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011002"
-   ]
-  },
-  {
-   "from": "A_2032",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011003"
-   ]
-  },
-  {
-   "from": "A_2033",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011004"
-   ]
-  },
-  {
-   "from": "A_2034",
-   "to": "T_367",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011005"
-   ]
-  },
-  {
-   "from": "M_353",
-   "to": "T_367",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011006"
-   ]
-  },
-  {
-   "from": "M_070",
-   "to": "T_367",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011007"
-   ]
-  },
-  {
-   "from": "M_354",
-   "to": "T_367",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011008"
-   ]
-  },
-  {
-   "from": "A_560",
-   "to": "C_368",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016248"
-   ]
-  },
-  {
-   "from": "A_2031",
-   "to": "C_369",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016249"
-   ]
-  },
-  {
-   "from": "A_2032",
-   "to": "C_370",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016250"
-   ]
-  },
-  {
-   "from": "A_2033",
-   "to": "C_371",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016251"
-   ]
-  },
-  {
-   "from": "A_2034",
-   "to": "C_372",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016252"
-   ]
-  },
-  {
-   "from": "A_560",
-   "to": "A_2032",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018144"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스는 이베르드롤라의 발틱이글 해상풍력에 V174-9.5MW 50기를 공급·유지보수하는 계약을 체결했다."
-  },
-  {
-   "from": "A_560",
-   "to": "A_2031",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018145"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스는 오스테드에 육상풍력 터빈을 공급하고 넷제로 풍력단지용 저탄소 소재 협력까지 맺은 터빈 공급사다."
-  },
-  {
-   "from": "A_560",
-   "to": "A_2033",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018146"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스는 EDP재생에너지(EDPR)와 최대 2.1GW 규모 마스터 공급계약을 맺고 다수 프로젝트에 터빈을 공급했다."
-  },
-  {
-   "from": "A_560",
-   "to": "A_2034",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_018147"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스(MHI Vestas)는 SSE 재생에너지의 시그린 해상풍력에 V164-10MW 114기를 공급했다."
-  },
-  {
-   "from": "A_2031",
-   "to": "A_2032",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018148"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "오스테드와 이베르드롤라는 유럽 해상풍력 개발·입찰에서 직접 경쟁하는 대형 재생에너지 개발사다."
-  },
-  {
-   "from": "A_2031",
-   "to": "A_2033",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018149"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "오스테드와 EDP는 해상·육상 재생에너지 발전 개발에서 경쟁한다."
-  },
-  {
-   "from": "A_2031",
-   "to": "A_2034",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018150"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "오스테드와 SSE는 영국 등 유럽 해상풍력 개발·운영을 두고 경쟁한다."
-  },
-  {
-   "from": "A_2032",
-   "to": "A_2033",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018151"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이베르드롤라와 EDP는 이베리아 및 유럽 전력·재생에너지 시장에서 직접 경쟁하는 유틸리티다."
-  },
-  {
-   "from": "A_2032",
-   "to": "A_2034",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018152"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이베르드롤라와 SSE는 영국 전력·재생에너지 발전 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2033",
-   "to": "A_2034",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018153"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "EDP와 SSE는 유럽 재생에너지 발전 개발·운영에서 경쟁하는 유틸리티다."
-  },
-  {
-   "from": "A_2879",
-   "to": "T_367",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020737"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

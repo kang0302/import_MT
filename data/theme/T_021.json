@@ -1,863 +1,881 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_021",
- "themeName": "글로벌아날로그반도체_종합차량산업MCU",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_021",
+  "themeName": "글로벌아날로그반도체_종합차량산업MCU",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-17T00:00:00+09:00",
+    "notes": "종합·브로드라인 아날로그와 차량·산업용 MCU 중심의 아날로그 반도체 그룹.",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 10건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-17",
+        "kind": "변경",
+        "title": "T_021 아날로그반도체 3분할",
+        "detail": "기존 '글로벌아날로그반도체설계&제조'(T_021, 16종)를 사업특성별 3그룹으로 분리하면서 재편했다. SOXX·XSD ETF와 셈텍(Semtech)은 제외. 자산별 포지션 CHR을 정의했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_021",
+      "type": "THEME",
+      "name": "글로벌아날로그반도체_종합차량산업MCU"
+    },
+    {
+      "id": "A_189",
+      "type": "ASSET",
+      "name": "텍사스인스트루먼트",
+      "exposure": {
+        "ticker": "TXN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.0837005958466936,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -0.6048459253426897,
+        "return_15d": -7.79242338723064,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 0.7180677449771578,
+        "return_1m": -5.311967269007834,
+        "return_ytd": 56.444344299233904,
+        "return_1y": 51.98380123679749,
+        "return_2y": 36.26416760708504,
+        "return_3y": 54.2888888888889,
+        "close": 277.72,
+        "marketCap": 253627147356,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_191",
+      "type": "ASSET",
+      "name": "아날로그디바이스",
+      "exposure": {
+        "ticker": "ADI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.6836887638381306,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 1.5596009572723224,
+        "return_15d": -3.3942091262533225,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 2.797964127269248,
+        "return_1m": -0.3535340210537363,
+        "return_ytd": 37.9739899174399,
+        "return_1y": 69.82464028776978,
+        "return_2y": 63.23364162848992,
+        "return_3y": 89.28983110309225,
+        "close": 377.69,
+        "marketCap": 183967889030,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_060",
+      "type": "ASSET",
+      "name": "NXP반도체",
+      "exposure": {
+        "ticker": "NXPI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.714646464646464,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -13.643665707774499,
+        "return_15d": -17.15350704275832,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 0.8683888985861365,
+        "return_1m": -15.376166941241065,
+        "return_ytd": 4.460412147505433,
+        "return_1y": 9.038162177461206,
+        "return_2y": -12.163702690378486,
+        "return_3y": 3.664005740425158,
+        "close": 231.15,
+        "marketCap": 58287748820,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_061",
+      "type": "ASSET",
+      "name": "ST마이크로일렉트로닉스",
+      "exposure": {
+        "ticker": "STM",
+        "exchange": "NYSE",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": -2.6742899299151524,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -1.2722170252572496,
+        "return_15d": -22.110701107011067,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 0.7253292613094153,
+        "return_1m": -21.566587395957193,
+        "return_ytd": 92.80233832663501,
+        "return_1y": 110.07165605095541,
+        "return_2y": 56.30924170616116,
+        "return_3y": -1.695230998509678,
+        "close": 52.77,
+        "marketCap": 47099609518,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_190",
+      "type": "ASSET",
+      "name": "마이크로칩테크놀로지",
+      "exposure": {
+        "ticker": "MCHP",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.570100409073995,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -0.1412066752246477,
+        "return_15d": -9.819151402735915,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 4.711266657692814,
+        "return_1m": -7.557932263814616,
+        "return_ytd": 19.621713055512856,
+        "return_1y": 16.819342243580127,
+        "return_2y": -12.378914169858069,
+        "return_3y": -17.191824568873738,
+        "close": 77.79,
+        "marketCap": 42240592320,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "BF_047",
+      "type": "BUSINESS_FIELD",
+      "name": "전력/통합신호"
+    },
+    {
+      "id": "BF_049",
+      "type": "BUSINESS_FIELD",
+      "name": "특정용응용솔루션"
+    },
+    {
+      "id": "M_018",
+      "type": "MACRO",
+      "name": "피지컬AI확산"
+    },
+    {
+      "id": "M_019",
+      "type": "MACRO",
+      "name": "AI추론확산"
+    },
+    {
+      "id": "C_3569",
+      "type": "CHARACTER",
+      "name": "아날로그세계1위_브로드라인"
+    },
+    {
+      "id": "C_3570",
+      "type": "CHARACTER",
+      "name": "고성능신호처리_아날로그2위"
+    },
+    {
+      "id": "C_3571",
+      "type": "CHARACTER",
+      "name": "차량·산업아날로그·MCU"
+    },
+    {
+      "id": "C_3572",
+      "type": "CHARACTER",
+      "name": "차량·산업아날로그·센서·MCU"
+    },
+    {
+      "id": "C_3573",
+      "type": "CHARACTER",
+      "name": "MCU·아날로그통합_임베디드"
+    },
+    {
+      "id": "A_200",
+      "type": "ASSET",
+      "name": "iShares Semiconductor ETF",
+      "exposure": {
+        "ticker": "SOXX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.1227937514984974,
+        "return_3d": 5.1120045950603155,
+        "return_7d": 2.8030141603548886,
+        "return_15d": -4.424874385434096,
+        "return_1m": -3.8046729141365643,
+        "return_ytd": 69.17976346074151,
+        "return_1y": 120.75707154742096,
+        "return_2y": 125.465205200102,
+        "return_3y": 197.42756262960265,
+        "close": 530.7,
+        "marketCap": 47046285935,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-17T00:00:00+09:00",
-  "notes": "종합·브로드라인 아날로그와 차량·산업용 MCU 중심의 아날로그 반도체 그룹.",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 10건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-17",
-    "kind": "변경",
-    "title": "T_021 아날로그반도체 3분할",
-    "detail": "기존 '글로벌아날로그반도체설계&제조'(T_021, 16종)를 사업특성별 3그룹으로 분리하면서 재편했다. SOXX·XSD ETF와 셈텍(Semtech)은 제외. 자산별 포지션 CHR을 정의했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_189",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000746"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_189",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000759"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_189",
+      "to": "C_3569",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007447"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000748"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000761"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "C_3570",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007448"
+      ],
+      "confidence": 0.84,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000744"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "BF_049",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000765"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "C_3571",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007449"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000745"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "BF_049",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000768"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "C_3572",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007450"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000747"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000760"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "C_3573",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007451"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "M_018",
+      "to": "T_021",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007452"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_019",
+      "to": "T_021",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007453"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_189",
+      "to": "A_191",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018006"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 아날로그디바이스는 데이터컨버터·앰프 등 고성능 아날로그 반도체 시장을 양분하는 최대 경쟁사다."
+    },
+    {
+      "from": "A_189",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018007"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 마이크로칩테크놀로지는 MCU와 범용 아날로그 반도체 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_189",
+      "to": "A_060",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018008"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 NXP반도체는 차량용 아날로그·전력관리 반도체 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_189",
+      "to": "A_061",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018009"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 ST마이크로일렉트로닉스는 아날로그·MCU·차량용 반도체 전반에서 경쟁한다."
+    },
+    {
+      "from": "A_191",
+      "to": "A_061",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018010"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아날로그디바이스와 ST마이크로일렉트로닉스는 아날로그·센서·차량용 반도체 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_191",
+      "to": "A_060",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018011"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아날로그디바이스와 NXP반도체는 차량용 아날로그·배터리관리·신호처리 반도체에서 경쟁한다."
+    },
+    {
+      "from": "A_060",
+      "to": "A_061",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018012"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NXP반도체와 ST마이크로일렉트로닉스는 차량용 MCU 및 아날로그 반도체 시장의 핵심 경쟁사다."
+    },
+    {
+      "from": "A_060",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018013"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NXP반도체와 마이크로칩테크놀로지는 차량·산업용 MCU 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_061",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018014"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "ST마이크로일렉트로닉스와 마이크로칩테크놀로지는 범용·차량용 MCU 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_191",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018015"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아날로그디바이스와 마이크로칩테크놀로지는 아날로그·믹스드시그널 반도체 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_200",
+      "to": "T_021",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020558"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_189",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000746"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_189",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000759"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_189",
+      "to": "C_3569",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007447"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000748"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000761"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_191",
+      "to": "C_3570",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007448"
+      ],
+      "confidence": 0.84,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000744"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "BF_049",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000765"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_060",
+      "to": "C_3571",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007449"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000745"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "BF_049",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000768"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_061",
+      "to": "C_3572",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007450"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "T_021",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000747"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "BF_047",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000760"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_190",
+      "to": "C_3573",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007451"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "M_018",
+      "to": "T_021",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007452"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_019",
+      "to": "T_021",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007453"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_189",
+      "to": "A_191",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018006"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 아날로그디바이스는 데이터컨버터·앰프 등 고성능 아날로그 반도체 시장을 양분하는 최대 경쟁사다."
+    },
+    {
+      "from": "A_189",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018007"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 마이크로칩테크놀로지는 MCU와 범용 아날로그 반도체 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_189",
+      "to": "A_060",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018008"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 NXP반도체는 차량용 아날로그·전력관리 반도체 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_189",
+      "to": "A_061",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018009"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "텍사스인스트루먼트와 ST마이크로일렉트로닉스는 아날로그·MCU·차량용 반도체 전반에서 경쟁한다."
+    },
+    {
+      "from": "A_191",
+      "to": "A_061",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018010"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아날로그디바이스와 ST마이크로일렉트로닉스는 아날로그·센서·차량용 반도체 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_191",
+      "to": "A_060",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018011"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아날로그디바이스와 NXP반도체는 차량용 아날로그·배터리관리·신호처리 반도체에서 경쟁한다."
+    },
+    {
+      "from": "A_060",
+      "to": "A_061",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018012"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NXP반도체와 ST마이크로일렉트로닉스는 차량용 MCU 및 아날로그 반도체 시장의 핵심 경쟁사다."
+    },
+    {
+      "from": "A_060",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018013"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NXP반도체와 마이크로칩테크놀로지는 차량·산업용 MCU 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_061",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018014"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "ST마이크로일렉트로닉스와 마이크로칩테크놀로지는 범용·차량용 MCU 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_191",
+      "to": "A_190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018015"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아날로그디바이스와 마이크로칩테크놀로지는 아날로그·믹스드시그널 반도체 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_200",
+      "to": "T_021",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020558"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_021",
-   "type": "THEME",
-   "name": "글로벌아날로그반도체_종합차량산업MCU"
-  },
-  {
-   "id": "A_189",
-   "type": "ASSET",
-   "name": "텍사스인스트루먼트",
-   "exposure": {
-    "ticker": "TXN",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.422985429675875,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 1.448601473639033,
-    "return_15d": -7.173948617247595,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 1.7470225283397811,
-    "return_1m": -6.546952224052715,
-    "return_ytd": 59.773546642631814,
-    "return_1y": 56.822956983302,
-    "return_2y": 41.116473456390864,
-    "return_3y": 59.012165722935464,
-    "close": 283.63,
-    "marketCap": 259024441180,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_191",
-   "type": "ASSET",
-   "name": "아날로그디바이스",
-   "exposure": {
-    "ticker": "ADI",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.0873217641207,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 2.2669821976012416,
-    "return_15d": -3.172501591343091,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 3.7145116862574046,
-    "return_1m": -2.1963325875061,
-    "return_ytd": 38.92379630306131,
-    "return_1y": 71.52586712372018,
-    "return_2y": 69.33386766408407,
-    "return_3y": 91.65910694486445,
-    "close": 380.29,
-    "marketCap": 185234315230,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_060",
-   "type": "ASSET",
-   "name": "NXP반도체",
-   "exposure": {
-    "ticker": "NXPI",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.990988981576484,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": -11.75159708809984,
-    "return_15d": -16.29971465811816,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": -3.083700440528636,
-    "return_1m": -15.29713735695697,
-    "return_ytd": 7.375271149674623,
-    "return_1y": 13.185975609756095,
-    "return_2y": -5.594405594405593,
-    "return_3y": 6.3991760333169,
-    "close": 237.6,
-    "marketCap": 59914207742,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_061",
-   "type": "ASSET",
-   "name": "ST마이크로일렉트로닉스",
-   "exposure": {
-    "ticker": "STM",
-    "exchange": "NYSE",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": 3.8896340295075715,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 5.199844780752816,
-    "return_15d": -22.68643946955653,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 2.1862042970222317,
-    "return_1m": -24.050987533267964,
-    "return_ytd": 98.10010960906101,
-    "return_1y": 116.36073423782922,
-    "return_2y": 66.37005216324023,
-    "return_3y": 1.4405986903648138,
-    "close": 54.22,
-    "marketCap": 48393800039,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_190",
-   "type": "ASSET",
-   "name": "마이크로칩테크놀로지",
-   "exposure": {
-    "ticker": "MCHP",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 7.245413453868665,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 2.2952066954095907,
-    "return_15d": -7.392951440707152,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 7.545660578589519,
-    "return_1m": -7.900445256307798,
-    "return_ytd": 24.05043825926496,
-    "return_1y": 21.564195298372525,
-    "return_2y": -6.782990524612897,
-    "return_3y": -13.351235230934478,
-    "close": 80.67,
-    "marketCap": 43804455360,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "BF_047",
-   "type": "BUSINESS_FIELD",
-   "name": "전력/통합신호"
-  },
-  {
-   "id": "BF_049",
-   "type": "BUSINESS_FIELD",
-   "name": "특정용응용솔루션"
-  },
-  {
-   "id": "M_018",
-   "type": "MACRO",
-   "name": "피지컬AI확산"
-  },
-  {
-   "id": "M_019",
-   "type": "MACRO",
-   "name": "AI추론확산"
-  },
-  {
-   "id": "C_3569",
-   "type": "CHARACTER",
-   "name": "아날로그세계1위_브로드라인"
-  },
-  {
-   "id": "C_3570",
-   "type": "CHARACTER",
-   "name": "고성능신호처리_아날로그2위"
-  },
-  {
-   "id": "C_3571",
-   "type": "CHARACTER",
-   "name": "차량·산업아날로그·MCU"
-  },
-  {
-   "id": "C_3572",
-   "type": "CHARACTER",
-   "name": "차량·산업아날로그·센서·MCU"
-  },
-  {
-   "id": "C_3573",
-   "type": "CHARACTER",
-   "name": "MCU·아날로그통합_임베디드"
-  },
-  {
-   "id": "A_200",
-   "type": "ASSET",
-   "name": "iShares Semiconductor ETF",
-   "exposure": {
-    "ticker": "SOXX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_189",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000746"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_189",
-   "to": "BF_047",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000759"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_189",
-   "to": "C_3569",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007447"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "from": "A_191",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000748"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_191",
-   "to": "BF_047",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000761"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_191",
-   "to": "C_3570",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007448"
-   ],
-   "confidence": 0.84,
-   "status": "verified"
-  },
-  {
-   "from": "A_060",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000744"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_060",
-   "to": "BF_049",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000765"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_060",
-   "to": "C_3571",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007449"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_061",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000745"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_061",
-   "to": "BF_049",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000768"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_061",
-   "to": "C_3572",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007450"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_190",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000747"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_190",
-   "to": "BF_047",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000760"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_190",
-   "to": "C_3573",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007451"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "M_018",
-   "to": "T_021",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007452"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "M_019",
-   "to": "T_021",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007453"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_189",
-   "to": "A_191",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018006"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 아날로그디바이스는 데이터컨버터·앰프 등 고성능 아날로그 반도체 시장을 양분하는 최대 경쟁사다."
-  },
-  {
-   "from": "A_189",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018007"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 마이크로칩테크놀로지는 MCU와 범용 아날로그 반도체 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_189",
-   "to": "A_060",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018008"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 NXP반도체는 차량용 아날로그·전력관리 반도체 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_189",
-   "to": "A_061",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018009"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 ST마이크로일렉트로닉스는 아날로그·MCU·차량용 반도체 전반에서 경쟁한다."
-  },
-  {
-   "from": "A_191",
-   "to": "A_061",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018010"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아날로그디바이스와 ST마이크로일렉트로닉스는 아날로그·센서·차량용 반도체 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_191",
-   "to": "A_060",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018011"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아날로그디바이스와 NXP반도체는 차량용 아날로그·배터리관리·신호처리 반도체에서 경쟁한다."
-  },
-  {
-   "from": "A_060",
-   "to": "A_061",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018012"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NXP반도체와 ST마이크로일렉트로닉스는 차량용 MCU 및 아날로그 반도체 시장의 핵심 경쟁사다."
-  },
-  {
-   "from": "A_060",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018013"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NXP반도체와 마이크로칩테크놀로지는 차량·산업용 MCU 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_061",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018014"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "ST마이크로일렉트로닉스와 마이크로칩테크놀로지는 범용·차량용 MCU 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_191",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018015"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아날로그디바이스와 마이크로칩테크놀로지는 아날로그·믹스드시그널 반도체 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_200",
-   "to": "T_021",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020558"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_189",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000746"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_189",
-   "to": "BF_047",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000759"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_189",
-   "to": "C_3569",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007447"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "from": "A_191",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000748"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_191",
-   "to": "BF_047",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000761"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_191",
-   "to": "C_3570",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007448"
-   ],
-   "confidence": 0.84,
-   "status": "verified"
-  },
-  {
-   "from": "A_060",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000744"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_060",
-   "to": "BF_049",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000765"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_060",
-   "to": "C_3571",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007449"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_061",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000745"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_061",
-   "to": "BF_049",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000768"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_061",
-   "to": "C_3572",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007450"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_190",
-   "to": "T_021",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000747"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_190",
-   "to": "BF_047",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000760"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_190",
-   "to": "C_3573",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007451"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "M_018",
-   "to": "T_021",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007452"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "M_019",
-   "to": "T_021",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007453"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_189",
-   "to": "A_191",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018006"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 아날로그디바이스는 데이터컨버터·앰프 등 고성능 아날로그 반도체 시장을 양분하는 최대 경쟁사다."
-  },
-  {
-   "from": "A_189",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018007"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 마이크로칩테크놀로지는 MCU와 범용 아날로그 반도체 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_189",
-   "to": "A_060",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018008"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 NXP반도체는 차량용 아날로그·전력관리 반도체 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_189",
-   "to": "A_061",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018009"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "텍사스인스트루먼트와 ST마이크로일렉트로닉스는 아날로그·MCU·차량용 반도체 전반에서 경쟁한다."
-  },
-  {
-   "from": "A_191",
-   "to": "A_061",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018010"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아날로그디바이스와 ST마이크로일렉트로닉스는 아날로그·센서·차량용 반도체 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_191",
-   "to": "A_060",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018011"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아날로그디바이스와 NXP반도체는 차량용 아날로그·배터리관리·신호처리 반도체에서 경쟁한다."
-  },
-  {
-   "from": "A_060",
-   "to": "A_061",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018012"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NXP반도체와 ST마이크로일렉트로닉스는 차량용 MCU 및 아날로그 반도체 시장의 핵심 경쟁사다."
-  },
-  {
-   "from": "A_060",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018013"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NXP반도체와 마이크로칩테크놀로지는 차량·산업용 MCU 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_061",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018014"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "ST마이크로일렉트로닉스와 마이크로칩테크놀로지는 범용·차량용 MCU 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_191",
-   "to": "A_190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018015"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아날로그디바이스와 마이크로칩테크놀로지는 아날로그·믹스드시그널 반도체 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_200",
-   "to": "T_021",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020558"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

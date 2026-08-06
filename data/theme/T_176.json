@@ -1,1145 +1,1163 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_176",
- "themeName": "샤오미 밸류체인",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_176",
+  "themeName": "샤오미 밸류체인",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-24T00:00:00+09:00",
+    "notes": "g176 누적 import 기반 샤오미 밸류체인 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 10개에 테마 관점 특성(CHARACTER) 노드와 HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거(호버 박스)를 종목·관계 사실로 구체화하고 2026 이벤트 2건을 추가했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_176",
+      "type": "THEME",
+      "name": "샤오미 밸류체인"
+    },
+    {
+      "id": "A_1427",
+      "type": "ASSET",
+      "name": "샤오미",
+      "exposure": {
+        "ticker": "1810",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": -1.1444921316165924,
+        "close": 27.64,
+        "marketCap": 714739768136,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -3.9610840861709518,
+        "return_7d": -3.6262203626220346,
+        "return_15d": 6.883217324052593,
+        "return_1m": 19.653679653679657,
+        "return_ytd": -31.380337636544187,
+        "return_1y": -51.33802816901408,
+        "return_2y": 64.1330166270784,
+        "return_3y": 155.92592592592592,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_003",
+      "type": "ASSET",
+      "name": "BYD",
+      "exposure": {
+        "ticker": "1211",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 0.3745318352059934,
+        "close": 93.8,
+        "marketCap": 852160749626,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.3717472118959231,
+        "return_7d": 5.928853754940722,
+        "return_15d": 7.878090856814257,
+        "return_1m": 12.402636309167159,
+        "return_ytd": -5.0126582278481,
+        "return_1y": -26.775956284153,
+        "return_2y": 16.478331056749028,
+        "return_3y": 10.521974784965238,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_051",
+      "type": "ASSET",
+      "name": "알리바바",
+      "exposure": {
+        "ticker": "BABA",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.3566167919993868,
+        "close": 128.53,
+        "marketCap": 308069973198,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.137014314928434,
+        "return_7d": 11.76521739130434,
+        "return_15d": 9.210638117087267,
+        "return_1m": 30.965966985938454,
+        "return_ytd": -17.471426736869144,
+        "return_1y": 9.387234042553194,
+        "return_2y": 63.005707038681045,
+        "return_3y": 25.81245105716523,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_052",
+      "type": "ASSET",
+      "name": "텐센트",
+      "exposure": {
+        "ticker": "TCEHY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.9592226823829328,
+        "close": 61.55,
+        "marketCap": 554653355608,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.19534429431873335,
+        "return_7d": 7.680195941217627,
+        "return_15d": 0.4897959183673528,
+        "return_1m": 4.4991511035653575,
+        "return_ytd": -23.58783364369956,
+        "return_1y": -12.33442529554194,
+        "return_2y": 33.659066232356125,
+        "return_3y": 33.979103178058345,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_878",
+      "type": "ASSET",
+      "name": "징동닷컴",
+      "exposure": {
+        "ticker": "JD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.3042159538974807,
+        "close": 32.54,
+        "marketCap": 45681274184,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.4238109663738174,
+        "return_7d": 5.1373182552504115,
+        "return_15d": 11.133879781420752,
+        "return_1m": 22.838807097017757,
+        "return_ytd": 10.193024043345744,
+        "return_1y": 2.909550917141046,
+        "return_2y": 23.304281924971583,
+        "return_3y": -21.22972645848463,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_233",
+      "type": "ASSET",
+      "name": "센스타임",
+      "exposure": {
+        "ticker": "0020",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 1.9480519480519431,
+        "close": 1.57,
+        "marketCap": 62810591738,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 8.275862068965534,
+        "return_7d": 16.296296296296298,
+        "return_15d": 16.296296296296298,
+        "return_1m": 25.6,
+        "return_ytd": -29.27927927927928,
+        "return_1y": -10.285714285714286,
+        "return_2y": 17.164179104477604,
+        "return_3y": -33.4862385321101,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1185",
+      "type": "ASSET",
+      "name": "킹소프트클라우드",
+      "exposure": {
+        "ticker": "KC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -4.357798165137616,
+        "close": 12.51,
+        "marketCap": 3700681967,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 12.197309417040358,
+        "return_7d": 25.981873111782484,
+        "return_15d": 24.72582253240281,
+        "return_1m": 32.521186440677965,
+        "return_ytd": 14.455626715462033,
+        "return_1y": -10.322580645161283,
+        "return_2y": 363.33333333333326,
+        "return_3y": 77.69886363636363,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1186",
+      "type": "ASSET",
+      "name": "써니옵티컬",
+      "exposure": {
+        "ticker": "2382",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 2.8546712802768326,
+        "close": 59.45,
+        "marketCap": 63859691860,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 6.0660124888492595,
+        "return_7d": 1.364023870417741,
+        "return_15d": 7.020702070207041,
+        "return_1m": 6.828391734052119,
+        "return_ytd": -12.50919793966152,
+        "return_1y": -22.540716612377842,
+        "return_2y": 19.738167170191346,
+        "return_3y": -19.878706199460915,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1187",
+      "type": "ASSET",
+      "name": "Q테크놀로지",
+      "exposure": {
+        "ticker": "1478",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 2.3480662983425438,
+        "close": 7.405,
+        "marketCap": 8848165819,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 7.703488372093026,
+        "return_7d": 5.405405405405395,
+        "return_15d": 7.703488372093026,
+        "return_1m": 13.650306748466257,
+        "return_ytd": -14.33526011560694,
+        "return_1y": -36.449399656946824,
+        "return_2y": 49.09456740442657,
+        "return_3y": 119.8083067092652,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1188",
+      "type": "ASSET",
+      "name": "AAC테크놀로지",
+      "exposure": {
+        "ticker": "2018",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 2.1432050657574253,
+        "close": 41.94,
+        "marketCap": 48474713340,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 8.822003113648158,
+        "return_7d": 6.71755725190839,
+        "return_15d": 8.878504672897192,
+        "return_1m": 7.981462409886708,
+        "return_ytd": 3.914767096134786,
+        "return_1y": 4.3283582089552075,
+        "return_2y": 35.29032258064515,
+        "return_3y": 109.00216919739694,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1190",
+      "type": "ASSET",
+      "name": "1Q 샤오미 밸류체인 액티브 ETF",
+      "exposure": {
+        "ticker": "0094X0",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "1Q 샤오미 밸류체인 액티브 ETF"
+    },
+    {
+      "id": "M_104",
+      "type": "MACRO",
+      "name": "스마트폰"
+    },
+    {
+      "id": "M_155",
+      "type": "MACRO",
+      "name": "전기차"
+    },
+    {
+      "id": "M_039",
+      "type": "MACRO",
+      "name": "중국내수소비"
+    },
+    {
+      "id": "C_2893",
+      "type": "CHARACTER",
+      "name": "밸류체인허브·SU7"
+    },
+    {
+      "id": "C_2894",
+      "type": "CHARACTER",
+      "name": "EV·배터리연계"
+    },
+    {
+      "id": "C_2895",
+      "type": "CHARACTER",
+      "name": "유통·클라우드생태계"
+    },
+    {
+      "id": "C_2896",
+      "type": "CHARACTER",
+      "name": "앱·콘텐츠생태계"
+    },
+    {
+      "id": "C_2897",
+      "type": "CHARACTER",
+      "name": "이커머스유통채널"
+    },
+    {
+      "id": "C_2898",
+      "type": "CHARACTER",
+      "name": "AI·자율주행연계"
+    },
+    {
+      "id": "C_2899",
+      "type": "CHARACTER",
+      "name": "샤오미계열클라우드"
+    },
+    {
+      "id": "C_2900",
+      "type": "CHARACTER",
+      "name": "카메라렌즈공급"
+    },
+    {
+      "id": "C_2901",
+      "type": "CHARACTER",
+      "name": "카메라모듈공급"
+    },
+    {
+      "id": "C_2902",
+      "type": "CHARACTER",
+      "name": "음향·햅틱부품"
+    },
+    {
+      "id": "A_2895",
+      "type": "ASSET",
+      "name": "KODEX 차이나항셍테크",
+      "exposure": {
+        "ticker": "372330",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.6574621959237303,
+        "return_3d": 2.271209084836334,
+        "return_7d": 1.7316674648196306,
+        "return_15d": -0.17909604484411812,
+        "return_1m": 1.6645616369526994,
+        "return_ytd": -15.41012580022657,
+        "return_1y": -10.789764174868422,
+        "return_2y": 43.34255207266964,
+        "return_3y": null,
+        "close": 7655,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_872",
+      "type": "ASSET",
+      "name": "KWEB",
+      "exposure": {
+        "ticker": "KWEB",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.2114918656974782,
+        "close": 28.54,
+        "marketCap": 5649960057,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.17550017550018726,
+        "return_7d": 5.7037037037037,
+        "return_15d": 5.7037037037037,
+        "return_1m": 11.877695021560154,
+        "return_ytd": -19.898961549256256,
+        "return_1y": -19.058423142370962,
+        "return_2y": 7.698113207547164,
+        "return_3y": -10.700876095118906,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-04-24T00:00:00+09:00",
-  "notes": "g176 누적 import 기반 샤오미 밸류체인 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "보강",
-    "title": "자산별 테마관점 CHR 정의",
-    "detail": "자산 10개에 테마 관점 특성(CHARACTER) 노드와 HAS_TRAIT를 부여했다."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필 + 2026 이벤트",
-    "detail": "전 엣지 근거(호버 박스)를 종목·관계 사실로 구체화하고 2026 이벤트 2건을 추가했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1427",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005265"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_003",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005266"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_051",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005267"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_052",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005268"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_878",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005269"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_233",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005270"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1185",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005271"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1186",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005272"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1187",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005273"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1188",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005274"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "T_176",
+      "to": "A_1190",
+      "type": "TRACKED_BY",
+      "evidence": [
+        "EV_005275"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "M_104",
+      "to": "T_176",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005276"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_155",
+      "to": "T_176",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005277"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_039",
+      "to": "T_176",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005278"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1427",
+      "to": "C_2893",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005395"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_003",
+      "to": "C_2894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005396"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_051",
+      "to": "C_2895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005397"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_052",
+      "to": "C_2896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005398"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_878",
+      "to": "C_2897",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005399"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_233",
+      "to": "C_2898",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005400"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1185",
+      "to": "C_2899",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005401"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1186",
+      "to": "C_2900",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005402"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1187",
+      "to": "C_2901",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005403"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1188",
+      "to": "C_2902",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005404"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1427",
+      "to": "A_003",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019217"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "샤오미와 BYD는 샤오미 밸류체인 내 제휴·협력 관계"
+    },
+    {
+      "from": "A_051",
+      "to": "A_052",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019218"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "알리바바와 텐센트는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1427",
+      "to": "A_051",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019219"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "샤오미와 알리바바는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1186",
+      "to": "A_1187",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019220"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "써니옵티컬와 Q테크놀로지는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1186",
+      "to": "A_1427",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019221"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "써니옵티컬가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
+    },
+    {
+      "from": "A_1188",
+      "to": "A_1427",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019222"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "AAC테크놀로지가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
+    },
+    {
+      "from": "A_1427",
+      "to": "A_878",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019223"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "샤오미와 징동닷컴는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2895",
+      "to": "T_176",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020632"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_872",
+      "to": "T_176",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020633"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1427",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005265"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_003",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005266"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_051",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005267"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_052",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005268"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_878",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005269"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_233",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005270"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1185",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005271"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1186",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005272"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1187",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005273"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1188",
+      "to": "T_176",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005274"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "T_176",
+      "to": "A_1190",
+      "type": "TRACKED_BY",
+      "evidence": [
+        "EV_005275"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "M_104",
+      "to": "T_176",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005276"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_155",
+      "to": "T_176",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005277"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_039",
+      "to": "T_176",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005278"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1427",
+      "to": "C_2893",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005395"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_003",
+      "to": "C_2894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005396"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_051",
+      "to": "C_2895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005397"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_052",
+      "to": "C_2896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005398"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_878",
+      "to": "C_2897",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005399"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_233",
+      "to": "C_2898",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005400"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1185",
+      "to": "C_2899",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005401"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1186",
+      "to": "C_2900",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005402"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1187",
+      "to": "C_2901",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005403"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1188",
+      "to": "C_2902",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005404"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1427",
+      "to": "A_003",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019217"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "샤오미와 BYD는 샤오미 밸류체인 내 제휴·협력 관계"
+    },
+    {
+      "from": "A_051",
+      "to": "A_052",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019218"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "알리바바와 텐센트는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1427",
+      "to": "A_051",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019219"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "샤오미와 알리바바는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1186",
+      "to": "A_1187",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019220"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "써니옵티컬와 Q테크놀로지는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1186",
+      "to": "A_1427",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019221"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "써니옵티컬가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
+    },
+    {
+      "from": "A_1188",
+      "to": "A_1427",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019222"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "AAC테크놀로지가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
+    },
+    {
+      "from": "A_1427",
+      "to": "A_878",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019223"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "샤오미와 징동닷컴는 샤오미 밸류체인 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2895",
+      "to": "T_176",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020632"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_872",
+      "to": "T_176",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020633"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_176",
-   "type": "THEME",
-   "name": "샤오미 밸류체인"
-  },
-  {
-   "id": "A_1427",
-   "type": "ASSET",
-   "name": "샤오미",
-   "exposure": {
-    "ticker": "1810",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "close": 27.96,
-    "marketCap": 723014613498,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -9.922680412371133,
-    "return_7d": 4.640718562874269,
-    "return_15d": 7.373271889400934,
-    "return_1m": 20.10309278350515,
-    "return_ytd": -30.58589870903674,
-    "return_1y": -51.28919860627177,
-    "return_2y": 66.626936829559,
-    "return_3y": 150.9874326750449,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_003",
-   "type": "ASSET",
-   "name": "BYD",
-   "exposure": {
-    "ticker": "1211",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": -1.5279241306638602,
-    "close": 93.45,
-    "marketCap": 848981045337,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.424050632911389,
-    "return_7d": 5.414551607444995,
-    "return_15d": 8.473592571096923,
-    "return_1m": 11.515513126491662,
-    "return_ytd": -5.367088607594939,
-    "return_1y": -27.893518518518512,
-    "return_2y": 16.914800450394086,
-    "return_3y": 6.836629701611985,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_051",
-   "type": "ASSET",
-   "name": "알리바바",
-   "exposure": {
-    "ticker": "BABA",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.311861743912024,
-    "close": 128.97,
-    "marketCap": 309124596929,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 10.875171939477312,
-    "return_7d": 15.008025682182978,
-    "return_15d": 14.823717948717952,
-    "return_1m": 31.72301092840364,
-    "return_ytd": -17.188904584564025,
-    "return_1y": 10.164858631587936,
-    "return_2y": 65.34615384615385,
-    "return_3y": 28.26454500248632,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_052",
-   "type": "ASSET",
-   "name": "텐센트",
-   "exposure": {
-    "ticker": "TCEHY",
-    "exchange": "OTC",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.3195909236177741,
-    "close": 62.78,
-    "marketCap": 565737411293,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 3.6829066886870487,
-    "return_7d": 12.954300107952509,
-    "return_15d": 7.610558793280764,
-    "return_1m": 8.747618222761133,
-    "return_ytd": -22.060831781502166,
-    "return_1y": -7.5541157414224624,
-    "return_2y": 39.23264581947217,
-    "return_3y": 36.59704090513489,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_878",
-   "type": "ASSET",
-   "name": "징동닷컴",
-   "exposure": {
-    "ticker": "JD",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.15142337976984388,
-    "close": 32.97,
-    "marketCap": 46284929620,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 2.042711234911776,
-    "return_7d": 9.208347134812843,
-    "return_15d": 14.320388349514568,
-    "return_1m": 23.114264376400296,
-    "return_ytd": 11.649170335252279,
-    "return_1y": 6.664509867356849,
-    "return_2y": 25.07587253414263,
-    "return_3y": -18.65284974093264,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_233",
-   "type": "ASSET",
-   "name": "센스타임",
-   "exposure": {
-    "ticker": "0020",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 1.9867549668874274,
-    "close": 1.535,
-    "marketCap": 61410355617,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 9.219858156028371,
-    "return_7d": 16.666666666666675,
-    "return_15d": 16.666666666666675,
-    "return_1m": 14.925373134328357,
-    "return_ytd": -30.63063063063064,
-    "return_1y": -10.982658959537572,
-    "return_2y": 14.925373134328357,
-    "return_3y": -33.4862385321101,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1185",
-   "type": "ASSET",
-   "name": "킹소프트클라우드",
-   "exposure": {
-    "ticker": "KC",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 9.915966386554608,
-    "close": 13.08,
-    "marketCap": 3869298171,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 28.99408284023668,
-    "return_7d": 38.120380147835256,
-    "return_15d": 34.42959917780062,
-    "return_1m": 43.26396495071192,
-    "return_ytd": 19.67063129002744,
-    "return_1y": -2.823179791976227,
-    "return_2y": 403.0769230769231,
-    "return_3y": 82.93706293706293,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1186",
-   "type": "ASSET",
-   "name": "써니옵티컬",
-   "exposure": {
-    "ticker": "2382",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 2.2104332449160102,
-    "close": 57.8,
-    "marketCap": 62087303440,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 1.0489510489510412,
-    "return_7d": -0.9425878320479919,
-    "return_15d": 3.584229390680993,
-    "return_1m": 3.7701974865349985,
-    "return_ytd": -14.937454010301698,
-    "return_1y": -24.59230267449446,
-    "return_2y": 14.342235410484673,
-    "return_3y": -23.6963696369637,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1187",
-   "type": "ASSET",
-   "name": "Q테크놀로지",
-   "exposure": {
-    "ticker": "1478",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 3.1339031339031376,
-    "close": 7.235,
-    "marketCap": 8645034395,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 8.059701492537318,
-    "return_7d": 3.8737446197991465,
-    "return_15d": 6.942392909896622,
-    "return_1m": 9.036144578313255,
-    "return_ytd": -16.30057803468208,
-    "return_1y": -36.379613356766264,
-    "return_2y": 41.40625,
-    "return_3y": 119.8083067092652,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1188",
-   "type": "ASSET",
-   "name": "AAC테크놀로지",
-   "exposure": {
-    "ticker": "2018",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 1.9364448857994043,
-    "close": 41.06,
-    "marketCap": 47457599660,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 8.223510806536648,
-    "return_7d": 5.55269922879178,
-    "return_15d": 8.052631578947377,
-    "return_1m": 3.739262253663478,
-    "return_ytd": 1.7343904856293335,
-    "return_1y": 2.649999999999997,
-    "return_2y": 26.924265842349303,
-    "return_3y": 109.00216919739694,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1190",
-   "type": "ASSET",
-   "name": "1Q 샤오미 밸류체인 액티브 ETF",
-   "exposure": {
-    "ticker": "0094X0",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": null,
-    "returnsSource": null
-   },
-   "coreBiz": "1Q 샤오미 밸류체인 액티브 ETF"
-  },
-  {
-   "id": "M_104",
-   "type": "MACRO",
-   "name": "스마트폰"
-  },
-  {
-   "id": "M_155",
-   "type": "MACRO",
-   "name": "전기차"
-  },
-  {
-   "id": "M_039",
-   "type": "MACRO",
-   "name": "중국내수소비"
-  },
-  {
-   "id": "C_2893",
-   "type": "CHARACTER",
-   "name": "밸류체인허브·SU7"
-  },
-  {
-   "id": "C_2894",
-   "type": "CHARACTER",
-   "name": "EV·배터리연계"
-  },
-  {
-   "id": "C_2895",
-   "type": "CHARACTER",
-   "name": "유통·클라우드생태계"
-  },
-  {
-   "id": "C_2896",
-   "type": "CHARACTER",
-   "name": "앱·콘텐츠생태계"
-  },
-  {
-   "id": "C_2897",
-   "type": "CHARACTER",
-   "name": "이커머스유통채널"
-  },
-  {
-   "id": "C_2898",
-   "type": "CHARACTER",
-   "name": "AI·자율주행연계"
-  },
-  {
-   "id": "C_2899",
-   "type": "CHARACTER",
-   "name": "샤오미계열클라우드"
-  },
-  {
-   "id": "C_2900",
-   "type": "CHARACTER",
-   "name": "카메라렌즈공급"
-  },
-  {
-   "id": "C_2901",
-   "type": "CHARACTER",
-   "name": "카메라모듈공급"
-  },
-  {
-   "id": "C_2902",
-   "type": "CHARACTER",
-   "name": "음향·햅틱부품"
-  },
-  {
-   "id": "A_2895",
-   "type": "ASSET",
-   "name": "KODEX 차이나항셍테크",
-   "exposure": {
-    "ticker": "372330",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  },
-  {
-   "id": "A_872",
-   "type": "ASSET",
-   "name": "KWEB",
-   "exposure": {
-    "ticker": "KWEB",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.5219206680584731,
-    "close": 28.89,
-    "marketCap": 5719248285,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 2.9579472558802555,
-    "return_7d": 9.889691898060104,
-    "return_15d": 10.351413292589772,
-    "return_1m": 12.895662368112548,
-    "return_ytd": -18.9166432781364,
-    "return_1y": -16.260869565217394,
-    "return_2y": 10.817031070195625,
-    "return_3y": -8.979206049149335,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1427",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005265"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_003",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005266"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_051",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005267"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_052",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005268"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_878",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005269"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_233",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005270"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1185",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005271"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1186",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005272"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1187",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005273"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1188",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005274"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "T_176",
-   "to": "A_1190",
-   "type": "TRACKED_BY",
-   "evidence": [
-    "EV_005275"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "M_104",
-   "to": "T_176",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005276"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_155",
-   "to": "T_176",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005277"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_039",
-   "to": "T_176",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005278"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1427",
-   "to": "C_2893",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005395"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_003",
-   "to": "C_2894",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005396"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_051",
-   "to": "C_2895",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005397"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_052",
-   "to": "C_2896",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005398"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_878",
-   "to": "C_2897",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005399"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_233",
-   "to": "C_2898",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005400"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1185",
-   "to": "C_2899",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005401"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1186",
-   "to": "C_2900",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005402"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1187",
-   "to": "C_2901",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005403"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1188",
-   "to": "C_2902",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005404"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1427",
-   "to": "A_003",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019217"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "샤오미와 BYD는 샤오미 밸류체인 내 제휴·협력 관계"
-  },
-  {
-   "from": "A_051",
-   "to": "A_052",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019218"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "알리바바와 텐센트는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1427",
-   "to": "A_051",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019219"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "샤오미와 알리바바는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1186",
-   "to": "A_1187",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019220"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "써니옵티컬와 Q테크놀로지는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1186",
-   "to": "A_1427",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019221"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "써니옵티컬가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
-  },
-  {
-   "from": "A_1188",
-   "to": "A_1427",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019222"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "AAC테크놀로지가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
-  },
-  {
-   "from": "A_1427",
-   "to": "A_878",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019223"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "샤오미와 징동닷컴는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2895",
-   "to": "T_176",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020632"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_872",
-   "to": "T_176",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020633"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1427",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005265"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_003",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005266"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_051",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005267"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_052",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005268"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_878",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005269"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_233",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005270"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1185",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005271"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1186",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005272"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1187",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005273"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1188",
-   "to": "T_176",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005274"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "T_176",
-   "to": "A_1190",
-   "type": "TRACKED_BY",
-   "evidence": [
-    "EV_005275"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "M_104",
-   "to": "T_176",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005276"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_155",
-   "to": "T_176",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005277"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_039",
-   "to": "T_176",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005278"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1427",
-   "to": "C_2893",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005395"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_003",
-   "to": "C_2894",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005396"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_051",
-   "to": "C_2895",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005397"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_052",
-   "to": "C_2896",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005398"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_878",
-   "to": "C_2897",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005399"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_233",
-   "to": "C_2898",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005400"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1185",
-   "to": "C_2899",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005401"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1186",
-   "to": "C_2900",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005402"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1187",
-   "to": "C_2901",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005403"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1188",
-   "to": "C_2902",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005404"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1427",
-   "to": "A_003",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019217"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "샤오미와 BYD는 샤오미 밸류체인 내 제휴·협력 관계"
-  },
-  {
-   "from": "A_051",
-   "to": "A_052",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019218"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "알리바바와 텐센트는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1427",
-   "to": "A_051",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019219"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "샤오미와 알리바바는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1186",
-   "to": "A_1187",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019220"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "써니옵티컬와 Q테크놀로지는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1186",
-   "to": "A_1427",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019221"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "써니옵티컬가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
-  },
-  {
-   "from": "A_1188",
-   "to": "A_1427",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019222"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "AAC테크놀로지가 샤오미에 공급하는 관계 (샤오미 밸류체인)"
-  },
-  {
-   "from": "A_1427",
-   "to": "A_878",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019223"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "샤오미와 징동닷컴는 샤오미 밸류체인 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2895",
-   "to": "T_176",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020632"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_872",
-   "to": "T_176",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020633"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

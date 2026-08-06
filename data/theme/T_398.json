@@ -1,712 +1,730 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_398",
- "themeName": "글로벌인공위성LEO통신",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_398",
+  "themeName": "글로벌인공위성LEO통신",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "글로벌 인공위성 LEO 통신 — SES·Eutelsat·AST SpaceMobile·Globalstar·Iridium·Viasat. Starlink (SpaceX, 비상장) 대신 상장 LEO 통신 vehicle. AT&T·Verizon·Apple 직판 + 정부 위성통신 cycle.",
+    "notes": "T_398 신규",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_398",
+      "type": "THEME",
+      "name": "글로벌인공위성LEO통신"
+    },
+    {
+      "id": "A_2150",
+      "type": "ASSET",
+      "name": "SES위성통신",
+      "exposure": {
+        "ticker": "SESG",
+        "exchange": "OTC",
+        "country": "LU"
+      },
+      "metrics": {
+        "return_1d": 0.0,
+        "return_3d": 0.0,
+        "return_7d": 0.0,
+        "return_15d": 0.0,
+        "return_1m": -1.4664981036662361,
+        "return_ytd": 1.543344181647166,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 38.97,
+        "marketCap": 3975875,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2151",
+      "type": "ASSET",
+      "name": "유텔샛",
+      "exposure": {
+        "ticker": "ETL",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": -1.82648401826484,
+        "return_3d": 4.878048780487809,
+        "return_7d": 2.3809523809523725,
+        "return_15d": -3.1531531531531654,
+        "return_1m": -12.955465587044547,
+        "return_ytd": 20.11173184357542,
+        "return_1y": -30.645161290322587,
+        "return_2y": -48.93111638954869,
+        "return_3y": -61.33093525179856,
+        "close": 2.15,
+        "marketCap": 1120680689,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_425",
+      "type": "ASSET",
+      "name": "AST스페이스모바일",
+      "exposure": {
+        "ticker": "ASTS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.744986488408485,
+        "return_3d": 15.93760596812479,
+        "return_7d": 17.31000171556012,
+        "return_15d": 3.12170110088974,
+        "return_1m": -7.85608408570273,
+        "return_ytd": -18.078351503534208,
+        "return_1y": 33.08680420397041,
+        "return_2y": 230.6576402321083,
+        "return_3y": 1493.9393939393938,
+        "close": 68.38,
+        "marketCap": 27823278516,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2152",
+      "type": "ASSET",
+      "name": "글로벌스타",
+      "exposure": {
+        "ticker": "GSAT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.2867726132154358,
+        "return_3d": 0.08395298632766224,
+        "return_7d": 5.592812855877516,
+        "return_15d": 3.6259778964361056,
+        "return_1m": 4.169267257520914,
+        "return_ytd": 30.411001719018603,
+        "return_1y": 244.1237113402062,
+        "return_2y": 359.7796143250689,
+        "return_3y": 415.1234567901235,
+        "close": 83.45,
+        "marketCap": 10747436292,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2153",
+      "type": "ASSET",
+      "name": "이리듐",
+      "exposure": {
+        "ticker": "IRDM",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.4994960693408674,
+        "return_3d": 2.1757498943810516,
+        "return_7d": 5.24369016536117,
+        "return_15d": -0.6163961372508853,
+        "return_1m": -5.323938148365636,
+        "return_ytd": 172.35360360360357,
+        "return_1y": 96.14760746147606,
+        "return_2y": 68.53658536585365,
+        "return_3y": -7.954329210275923,
+        "close": 48.37,
+        "marketCap": 5125285200,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2154",
+      "type": "ASSET",
+      "name": "비아샛",
+      "exposure": {
+        "ticker": "VSAT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -5.954038997214484,
+        "return_3d": 5.329520343169114,
+        "return_7d": 8.227594497128354,
+        "return_15d": 15.034071550255534,
+        "return_1m": 5.617831074035462,
+        "return_ytd": 115.33351049694392,
+        "return_1y": 299.5562130177515,
+        "return_2y": 300.7418397626113,
+        "return_3y": 161.89398836457661,
+        "close": 81.03,
+        "marketCap": 11162327355,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_066",
+      "type": "MACRO",
+      "name": "우주산업확대"
+    },
+    {
+      "id": "M_374",
+      "type": "MACRO",
+      "name": "LEO위성통신_ramp"
+    },
+    {
+      "id": "M_361",
+      "type": "MACRO",
+      "name": "EU5G6G배포"
+    },
+    {
+      "id": "C_450",
+      "type": "CHARACTER",
+      "name": "LEO위성통신네트워크"
+    },
+    {
+      "id": "C_457",
+      "type": "CHARACTER",
+      "name": "GEO_MEO_O3bmPOWER_Intelsat인수"
+    },
+    {
+      "id": "C_458",
+      "type": "CHARACTER",
+      "name": "OneWebLEO648_영국정부"
+    },
+    {
+      "id": "C_459",
+      "type": "CHARACTER",
+      "name": "D2D스마트폰_ATT_Verizon_Vodafone"
+    },
+    {
+      "id": "C_460",
+      "type": "CHARACTER",
+      "name": "Apple_iPhoneSOS독점"
+    },
+    {
+      "id": "C_461",
+      "type": "CHARACTER",
+      "name": "1세대LEO66_DoD"
+    },
+    {
+      "id": "C_462",
+      "type": "CHARACTER",
+      "name": "항공기IFC_Inmarsat통합"
+    },
+    {
+      "id": "A_431",
+      "type": "ASSET",
+      "name": "Procure Space ETF",
+      "exposure": {
+        "ticker": "UFO",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.060121925583347,
+        "return_3d": 6.394153916419287,
+        "return_7d": 6.151742993848264,
+        "return_15d": 2.689001542869751,
+        "return_1m": -3.9183336770468147,
+        "return_ytd": 15.550595238095255,
+        "return_1y": 54.62993693992699,
+        "return_2y": 158.4026622296173,
+        "return_3y": 134.23831070889895,
+        "close": 46.59,
+        "marketCap": 1211956013,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "글로벌 인공위성 LEO 통신 — SES·Eutelsat·AST SpaceMobile·Globalstar·Iridium·Viasat. Starlink (SpaceX, 비상장) 대신 상장 LEO 통신 vehicle. AT&T·Verizon·Apple 직판 + 정부 위성통신 cycle.",
-  "notes": "T_398 신규",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2150",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011342"
+      ]
+    },
+    {
+      "from": "A_2151",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011343"
+      ]
+    },
+    {
+      "from": "A_425",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011344"
+      ]
+    },
+    {
+      "from": "A_2152",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011345"
+      ]
+    },
+    {
+      "from": "A_2153",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011346"
+      ]
+    },
+    {
+      "from": "A_2154",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011347"
+      ]
+    },
+    {
+      "from": "M_066",
+      "to": "T_398",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011348"
+      ]
+    },
+    {
+      "from": "M_374",
+      "to": "T_398",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011349"
+      ]
+    },
+    {
+      "from": "M_361",
+      "to": "T_398",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011350"
+      ]
+    },
+    {
+      "from": "T_398",
+      "to": "C_450",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016412"
+      ]
+    },
+    {
+      "from": "A_2150",
+      "to": "C_457",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016413"
+      ]
+    },
+    {
+      "from": "A_2151",
+      "to": "C_458",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016414"
+      ]
+    },
+    {
+      "from": "A_425",
+      "to": "C_459",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016415"
+      ]
+    },
+    {
+      "from": "A_2152",
+      "to": "C_460",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016416"
+      ]
+    },
+    {
+      "from": "A_2153",
+      "to": "C_461",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016417"
+      ]
+    },
+    {
+      "from": "A_2154",
+      "to": "C_462",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016418"
+      ]
+    },
+    {
+      "from": "A_2150",
+      "to": "A_2151",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018490"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SES와 유텔샛은 유럽 대표 GEO 위성 사업자로 방송·데이터 서비스에서 직접 경쟁하는 전통적 라이벌이다."
+    },
+    {
+      "from": "A_2150",
+      "to": "A_2154",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018491"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SES와 비아샛(인마샛 인수)은 위성 브로드밴드·멀티오빗 서비스에서 경쟁하며, 업계 분석에서 SES의 주요 경쟁사로 비아샛이 지목된다."
+    },
+    {
+      "from": "A_2151",
+      "to": "A_2154",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018492"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "유텔샛과 비아샛은 GEO 위성 시장에서 유텔샛의 직접 경쟁사로 비아샛이 꼽히는 등 브로드밴드 서비스에서 경쟁한다."
+    },
+    {
+      "from": "A_2153",
+      "to": "A_2152",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018493"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이리듐과 글로벌스타는 대표적인 L밴드 이동위성서비스(MSS) LEO 사업자로 위성전화·IoT 데이터에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2153",
+      "to": "A_2154",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018494"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이리듐은 비아샛이 인수한 인마샛과 함께 L밴드 MSS(해상·항공 통신)의 양대 사업자로 정면 경쟁한다."
+    },
+    {
+      "from": "A_425",
+      "to": "A_2152",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018495"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "AST스페이스모바일과 글로벌스타는 스마트폰 직접연결(direct-to-device) 위성통신 시장에서 경쟁하며, AST 경쟁사 리스트에 글로벌스타가 포함된다."
+    },
+    {
+      "from": "A_425",
+      "to": "A_2153",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018496"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "AST스페이스모바일과 이리듐은 위성-셀룰러 직접연결 서비스 시장에서 경쟁하며, AST 경쟁사 분석에 이리듐이 포함된다."
+    },
+    {
+      "from": "A_431",
+      "to": "T_398",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020759"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2150",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011342"
+      ]
+    },
+    {
+      "from": "A_2151",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011343"
+      ]
+    },
+    {
+      "from": "A_425",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011344"
+      ]
+    },
+    {
+      "from": "A_2152",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011345"
+      ]
+    },
+    {
+      "from": "A_2153",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011346"
+      ]
+    },
+    {
+      "from": "A_2154",
+      "to": "T_398",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011347"
+      ]
+    },
+    {
+      "from": "M_066",
+      "to": "T_398",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011348"
+      ]
+    },
+    {
+      "from": "M_374",
+      "to": "T_398",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011349"
+      ]
+    },
+    {
+      "from": "M_361",
+      "to": "T_398",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011350"
+      ]
+    },
+    {
+      "from": "T_398",
+      "to": "C_450",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016412"
+      ]
+    },
+    {
+      "from": "A_2150",
+      "to": "C_457",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016413"
+      ]
+    },
+    {
+      "from": "A_2151",
+      "to": "C_458",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016414"
+      ]
+    },
+    {
+      "from": "A_425",
+      "to": "C_459",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016415"
+      ]
+    },
+    {
+      "from": "A_2152",
+      "to": "C_460",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016416"
+      ]
+    },
+    {
+      "from": "A_2153",
+      "to": "C_461",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016417"
+      ]
+    },
+    {
+      "from": "A_2154",
+      "to": "C_462",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016418"
+      ]
+    },
+    {
+      "from": "A_2150",
+      "to": "A_2151",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018490"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SES와 유텔샛은 유럽 대표 GEO 위성 사업자로 방송·데이터 서비스에서 직접 경쟁하는 전통적 라이벌이다."
+    },
+    {
+      "from": "A_2150",
+      "to": "A_2154",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018491"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SES와 비아샛(인마샛 인수)은 위성 브로드밴드·멀티오빗 서비스에서 경쟁하며, 업계 분석에서 SES의 주요 경쟁사로 비아샛이 지목된다."
+    },
+    {
+      "from": "A_2151",
+      "to": "A_2154",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018492"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "유텔샛과 비아샛은 GEO 위성 시장에서 유텔샛의 직접 경쟁사로 비아샛이 꼽히는 등 브로드밴드 서비스에서 경쟁한다."
+    },
+    {
+      "from": "A_2153",
+      "to": "A_2152",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018493"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이리듐과 글로벌스타는 대표적인 L밴드 이동위성서비스(MSS) LEO 사업자로 위성전화·IoT 데이터에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2153",
+      "to": "A_2154",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018494"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "이리듐은 비아샛이 인수한 인마샛과 함께 L밴드 MSS(해상·항공 통신)의 양대 사업자로 정면 경쟁한다."
+    },
+    {
+      "from": "A_425",
+      "to": "A_2152",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018495"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "AST스페이스모바일과 글로벌스타는 스마트폰 직접연결(direct-to-device) 위성통신 시장에서 경쟁하며, AST 경쟁사 리스트에 글로벌스타가 포함된다."
+    },
+    {
+      "from": "A_425",
+      "to": "A_2153",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018496"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "AST스페이스모바일과 이리듐은 위성-셀룰러 직접연결 서비스 시장에서 경쟁하며, AST 경쟁사 분석에 이리듐이 포함된다."
+    },
+    {
+      "from": "A_431",
+      "to": "T_398",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020759"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_398",
-   "type": "THEME",
-   "name": "글로벌인공위성LEO통신"
-  },
-  {
-   "id": "A_2150",
-   "type": "ASSET",
-   "name": "SES위성통신",
-   "exposure": {
-    "ticker": "SESG",
-    "exchange": "OTC",
-    "country": "LU"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "return_3d": 0.0,
-    "return_7d": 0.0,
-    "return_15d": 0.0,
-    "return_1m": -1.4664981036662361,
-    "return_ytd": 2.341753702239857,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": 38.97,
-    "marketCap": 3975875,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2151",
-   "type": "ASSET",
-   "name": "유텔샛",
-   "exposure": {
-    "ticker": "ETL",
-    "exchange": "EURONEXT",
-    "country": "FR"
-   },
-   "metrics": {
-    "return_1d": 3.301886792452824,
-    "return_3d": 7.352941176470584,
-    "return_7d": 8.955223880597018,
-    "return_15d": -6.808510638297882,
-    "return_1m": -14.117647058823524,
-    "return_ytd": 22.3463687150838,
-    "return_1y": -29.807692307692314,
-    "return_2y": -48.22695035460993,
-    "return_3y": -60.892857142857146,
-    "close": 2.194,
-    "marketCap": 1143615549,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_425",
-   "type": "ASSET",
-   "name": "AST스페이스모바일",
-   "exposure": {
-    "ticker": "ASTS",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 10.689546599496214,
-    "return_3d": 20.31143052703628,
-    "return_7d": 25.106761565836287,
-    "return_15d": 2.1650682941005694,
-    "return_1m": -12.810019841269838,
-    "return_ytd": -15.766143524619626,
-    "return_1y": 34.02592451391537,
-    "return_2y": 301.31278538812785,
-    "return_3y": 1558.254716981132,
-    "close": 70.31,
-    "marketCap": 28608580176,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2152",
-   "type": "ASSET",
-   "name": "글로벌스타",
-   "exposure": {
-    "ticker": "GSAT",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5820860061772515,
-    "return_3d": 4.494943188912459,
-    "return_7d": 6.030660078550598,
-    "return_15d": 4.416718652526508,
-    "return_1m": 4.351620947630908,
-    "return_ytd": 30.7860603219253,
-    "return_1y": 261.51187904967605,
-    "return_2y": 364.94444444444446,
-    "return_3y": 416.6049382716049,
-    "close": 83.69,
-    "marketCap": 10778345635,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2153",
-   "type": "ASSET",
-   "name": "이리듐",
-   "exposure": {
-    "ticker": "IRDM",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.6697019867549576,
-    "return_3d": 4.135180520570936,
-    "return_7d": 8.366098733071215,
-    "return_15d": 1.5349979533360703,
-    "return_1m": -5.666476516448005,
-    "return_ytd": 179.33558558558556,
-    "return_1y": 105.16956162117452,
-    "return_2y": 73.8262088297127,
-    "return_3y": -8.299445471349355,
-    "close": 49.61,
-    "marketCap": 5256675600,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2154",
-   "type": "ASSET",
-   "name": "비아샛",
-   "exposure": {
-    "ticker": "VSAT",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.990896789272959,
-    "return_3d": 11.030927835051552,
-    "return_7d": 20.1673640167364,
-    "return_15d": 23.367697594501703,
-    "return_1m": 2.8162291169451015,
-    "return_ytd": 128.96625033218174,
-    "return_1y": 419.66224366706876,
-    "return_2y": 335.81183611532623,
-    "return_3y": 187.10429856714427,
-    "close": 86.16,
-    "marketCap": 11869012329,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_066",
-   "type": "MACRO",
-   "name": "우주산업확대"
-  },
-  {
-   "id": "M_374",
-   "type": "MACRO",
-   "name": "LEO위성통신_ramp"
-  },
-  {
-   "id": "M_361",
-   "type": "MACRO",
-   "name": "EU5G6G배포"
-  },
-  {
-   "id": "C_450",
-   "type": "CHARACTER",
-   "name": "LEO위성통신네트워크"
-  },
-  {
-   "id": "C_457",
-   "type": "CHARACTER",
-   "name": "GEO_MEO_O3bmPOWER_Intelsat인수"
-  },
-  {
-   "id": "C_458",
-   "type": "CHARACTER",
-   "name": "OneWebLEO648_영국정부"
-  },
-  {
-   "id": "C_459",
-   "type": "CHARACTER",
-   "name": "D2D스마트폰_ATT_Verizon_Vodafone"
-  },
-  {
-   "id": "C_460",
-   "type": "CHARACTER",
-   "name": "Apple_iPhoneSOS독점"
-  },
-  {
-   "id": "C_461",
-   "type": "CHARACTER",
-   "name": "1세대LEO66_DoD"
-  },
-  {
-   "id": "C_462",
-   "type": "CHARACTER",
-   "name": "항공기IFC_Inmarsat통합"
-  },
-  {
-   "id": "A_431",
-   "type": "ASSET",
-   "name": "Procure Space ETF",
-   "exposure": {
-    "ticker": "UFO",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2150",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011342"
-   ]
-  },
-  {
-   "from": "A_2151",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011343"
-   ]
-  },
-  {
-   "from": "A_425",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011344"
-   ]
-  },
-  {
-   "from": "A_2152",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011345"
-   ]
-  },
-  {
-   "from": "A_2153",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011346"
-   ]
-  },
-  {
-   "from": "A_2154",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011347"
-   ]
-  },
-  {
-   "from": "M_066",
-   "to": "T_398",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011348"
-   ]
-  },
-  {
-   "from": "M_374",
-   "to": "T_398",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011349"
-   ]
-  },
-  {
-   "from": "M_361",
-   "to": "T_398",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011350"
-   ]
-  },
-  {
-   "from": "T_398",
-   "to": "C_450",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016412"
-   ]
-  },
-  {
-   "from": "A_2150",
-   "to": "C_457",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016413"
-   ]
-  },
-  {
-   "from": "A_2151",
-   "to": "C_458",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016414"
-   ]
-  },
-  {
-   "from": "A_425",
-   "to": "C_459",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016415"
-   ]
-  },
-  {
-   "from": "A_2152",
-   "to": "C_460",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016416"
-   ]
-  },
-  {
-   "from": "A_2153",
-   "to": "C_461",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016417"
-   ]
-  },
-  {
-   "from": "A_2154",
-   "to": "C_462",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016418"
-   ]
-  },
-  {
-   "from": "A_2150",
-   "to": "A_2151",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018490"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SES와 유텔샛은 유럽 대표 GEO 위성 사업자로 방송·데이터 서비스에서 직접 경쟁하는 전통적 라이벌이다."
-  },
-  {
-   "from": "A_2150",
-   "to": "A_2154",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018491"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SES와 비아샛(인마샛 인수)은 위성 브로드밴드·멀티오빗 서비스에서 경쟁하며, 업계 분석에서 SES의 주요 경쟁사로 비아샛이 지목된다."
-  },
-  {
-   "from": "A_2151",
-   "to": "A_2154",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018492"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "유텔샛과 비아샛은 GEO 위성 시장에서 유텔샛의 직접 경쟁사로 비아샛이 꼽히는 등 브로드밴드 서비스에서 경쟁한다."
-  },
-  {
-   "from": "A_2153",
-   "to": "A_2152",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018493"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이리듐과 글로벌스타는 대표적인 L밴드 이동위성서비스(MSS) LEO 사업자로 위성전화·IoT 데이터에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2153",
-   "to": "A_2154",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018494"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이리듐은 비아샛이 인수한 인마샛과 함께 L밴드 MSS(해상·항공 통신)의 양대 사업자로 정면 경쟁한다."
-  },
-  {
-   "from": "A_425",
-   "to": "A_2152",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018495"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "AST스페이스모바일과 글로벌스타는 스마트폰 직접연결(direct-to-device) 위성통신 시장에서 경쟁하며, AST 경쟁사 리스트에 글로벌스타가 포함된다."
-  },
-  {
-   "from": "A_425",
-   "to": "A_2153",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018496"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "AST스페이스모바일과 이리듐은 위성-셀룰러 직접연결 서비스 시장에서 경쟁하며, AST 경쟁사 분석에 이리듐이 포함된다."
-  },
-  {
-   "from": "A_431",
-   "to": "T_398",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020759"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2150",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011342"
-   ]
-  },
-  {
-   "from": "A_2151",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011343"
-   ]
-  },
-  {
-   "from": "A_425",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011344"
-   ]
-  },
-  {
-   "from": "A_2152",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011345"
-   ]
-  },
-  {
-   "from": "A_2153",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011346"
-   ]
-  },
-  {
-   "from": "A_2154",
-   "to": "T_398",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011347"
-   ]
-  },
-  {
-   "from": "M_066",
-   "to": "T_398",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011348"
-   ]
-  },
-  {
-   "from": "M_374",
-   "to": "T_398",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011349"
-   ]
-  },
-  {
-   "from": "M_361",
-   "to": "T_398",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011350"
-   ]
-  },
-  {
-   "from": "T_398",
-   "to": "C_450",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016412"
-   ]
-  },
-  {
-   "from": "A_2150",
-   "to": "C_457",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016413"
-   ]
-  },
-  {
-   "from": "A_2151",
-   "to": "C_458",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016414"
-   ]
-  },
-  {
-   "from": "A_425",
-   "to": "C_459",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016415"
-   ]
-  },
-  {
-   "from": "A_2152",
-   "to": "C_460",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016416"
-   ]
-  },
-  {
-   "from": "A_2153",
-   "to": "C_461",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016417"
-   ]
-  },
-  {
-   "from": "A_2154",
-   "to": "C_462",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016418"
-   ]
-  },
-  {
-   "from": "A_2150",
-   "to": "A_2151",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018490"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SES와 유텔샛은 유럽 대표 GEO 위성 사업자로 방송·데이터 서비스에서 직접 경쟁하는 전통적 라이벌이다."
-  },
-  {
-   "from": "A_2150",
-   "to": "A_2154",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018491"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SES와 비아샛(인마샛 인수)은 위성 브로드밴드·멀티오빗 서비스에서 경쟁하며, 업계 분석에서 SES의 주요 경쟁사로 비아샛이 지목된다."
-  },
-  {
-   "from": "A_2151",
-   "to": "A_2154",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018492"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "유텔샛과 비아샛은 GEO 위성 시장에서 유텔샛의 직접 경쟁사로 비아샛이 꼽히는 등 브로드밴드 서비스에서 경쟁한다."
-  },
-  {
-   "from": "A_2153",
-   "to": "A_2152",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018493"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이리듐과 글로벌스타는 대표적인 L밴드 이동위성서비스(MSS) LEO 사업자로 위성전화·IoT 데이터에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2153",
-   "to": "A_2154",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018494"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "이리듐은 비아샛이 인수한 인마샛과 함께 L밴드 MSS(해상·항공 통신)의 양대 사업자로 정면 경쟁한다."
-  },
-  {
-   "from": "A_425",
-   "to": "A_2152",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018495"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "AST스페이스모바일과 글로벌스타는 스마트폰 직접연결(direct-to-device) 위성통신 시장에서 경쟁하며, AST 경쟁사 리스트에 글로벌스타가 포함된다."
-  },
-  {
-   "from": "A_425",
-   "to": "A_2153",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018496"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "AST스페이스모바일과 이리듐은 위성-셀룰러 직접연결 서비스 시장에서 경쟁하며, AST 경쟁사 분석에 이리듐이 포함된다."
-  },
-  {
-   "from": "A_431",
-   "to": "T_398",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020759"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

@@ -1,714 +1,732 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_409",
- "themeName": "글로벌면역질환_자가면역",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_409",
+  "themeName": "글로벌면역질환_자가면역",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "글로벌 면역질환·자가면역 — AbbVie Humira·J&J Stelara·Amgen Otezla·Regeneron Dupixent·Sanofi·BMS. 바이오시밀러 침투 vs 차세대 IL-23·JAK 신약.",
+    "notes": "T_409 신규 — 질병중심 바이오",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 9건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_409",
+      "type": "THEME",
+      "name": "글로벌면역질환_자가면역"
+    },
+    {
+      "id": "A_1006",
+      "type": "ASSET",
+      "name": "애브비",
+      "exposure": {
+        "ticker": "ABBV",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.9844134536505234,
+        "return_3d": -1.8888977444807553,
+        "return_7d": -4.1687750574131215,
+        "return_15d": 0.856171398140182,
+        "return_1m": -3.3182799921460893,
+        "return_ytd": 7.365574985827039,
+        "return_1y": 24.854201531517827,
+        "return_2y": 32.851284265055035,
+        "return_3y": 64.5941970851718,
+        "close": 246.105,
+        "marketCap": 434816547212,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1703",
+      "type": "ASSET",
+      "name": "존슨앤존슨",
+      "exposure": {
+        "ticker": "JNJ",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.043423684933109,
+        "return_3d": 0.48371367271307086,
+        "return_7d": -3.14344801654447,
+        "return_15d": 4.27900574852238,
+        "return_1m": -3.610986379284553,
+        "return_ytd": 24.229563539908348,
+        "return_1y": 50.60219831618333,
+        "return_2y": 63.18656952803294,
+        "return_3y": 53.75753596370798,
+        "close": 257.59,
+        "marketCap": 620765732977,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1004",
+      "type": "ASSET",
+      "name": "암젠",
+      "exposure": {
+        "ticker": "AMGN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 4.566432490641503,
+        "return_3d": 5.885865614290164,
+        "return_7d": 8.390474671769521,
+        "return_15d": 13.817258316588532,
+        "return_1m": 10.793262700353146,
+        "return_ytd": 24.475033573434256,
+        "return_1y": 35.069881433397356,
+        "return_2y": 22.666706770535683,
+        "return_3y": 74.17467435404654,
+        "close": 407.83,
+        "marketCap": 220109113640,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1001",
+      "type": "ASSET",
+      "name": "리제네론",
+      "exposure": {
+        "ticker": "REGN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.0412010622354417,
+        "return_3d": 0.7801948520252289,
+        "return_7d": 15.200023981893684,
+        "return_15d": 15.671608096922274,
+        "return_1m": 13.656596128536158,
+        "return_ytd": -0.9957362393888891,
+        "return_1y": 34.47527732092244,
+        "return_2y": -28.78177151382055,
+        "return_3y": 3.59477564664179,
+        "close": 768.58,
+        "marketCap": 79180648760,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1318",
+      "type": "ASSET",
+      "name": "Sanofi",
+      "exposure": {
+        "ticker": "SNY",
+        "exchange": "NASDAQ",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": 0.23430178069354657,
+        "return_3d": -0.696378830083555,
+        "return_7d": -2.772727272727271,
+        "return_15d": -2.060439560439553,
+        "return_1m": -0.46533271288971,
+        "return_ytd": -11.300020733982985,
+        "return_1y": -10.967741935483865,
+        "return_2y": -17.429067747539083,
+        "return_3y": -19.842608206857783,
+        "close": 42.78,
+        "marketCap": 102723336000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2190",
+      "type": "ASSET",
+      "name": "BMS",
+      "exposure": {
+        "ticker": "BMY",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.429959022613449,
+        "return_3d": -2.5723472668810254,
+        "return_7d": 1.7103580562659815,
+        "return_15d": 8.361716621253423,
+        "return_1m": 9.763670864240126,
+        "return_ytd": 19.02356902356903,
+        "return_1y": 40.15418502202643,
+        "return_2y": 33.78889823380993,
+        "return_3y": 2.315484804630974,
+        "close": 63.63,
+        "marketCap": 129977637300,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_390",
+      "type": "MACRO",
+      "name": "자가면역바이오시밀러"
+    },
+    {
+      "id": "C_522",
+      "type": "CHARACTER",
+      "name": "Humira_LOE_Skyrizi전환"
+    },
+    {
+      "id": "C_523",
+      "type": "CHARACTER",
+      "name": "Stelara_Tremfya_IL23"
+    },
+    {
+      "id": "C_524",
+      "type": "CHARACTER",
+      "name": "Otezla_MariTide_광범위"
+    },
+    {
+      "id": "C_525",
+      "type": "CHARACTER",
+      "name": "Dupixent_Sanofi공동개발"
+    },
+    {
+      "id": "C_526",
+      "type": "CHARACTER",
+      "name": "Dupixent_Beyfortus_공동"
+    },
+    {
+      "id": "C_527",
+      "type": "CHARACTER",
+      "name": "Sotyktu_TYK2_first"
+    },
+    {
+      "id": "A_2923",
+      "type": "ASSET",
+      "name": "VanEck Pharmaceutical ETF",
+      "exposure": {
+        "ticker": "PPH",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.590383726306066,
+        "return_3d": -0.48007246376812196,
+        "return_7d": -1.2936843050938784,
+        "return_15d": 2.1856398809523947,
+        "return_1m": -1.5501792114695268,
+        "return_ytd": 5.929425376012354,
+        "return_1y": 28.27787507297139,
+        "return_2y": 18.0382466695316,
+        "return_3y": 36.62024372046755,
+        "close": 109.87,
+        "marketCap": 648791689,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "글로벌 면역질환·자가면역 — AbbVie Humira·J&J Stelara·Amgen Otezla·Regeneron Dupixent·Sanofi·BMS. 바이오시밀러 침투 vs 차세대 IL-23·JAK 신약.",
-  "notes": "T_409 신규 — 질병중심 바이오",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 9건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1006",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011437"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011438"
+      ]
+    },
+    {
+      "from": "A_1004",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011439"
+      ]
+    },
+    {
+      "from": "A_1001",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011440"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011441"
+      ]
+    },
+    {
+      "from": "A_2190",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011442"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_409",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011443"
+      ]
+    },
+    {
+      "from": "M_390",
+      "to": "T_409",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011444"
+      ]
+    },
+    {
+      "from": "A_1006",
+      "to": "C_522",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016507"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "C_523",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016508"
+      ]
+    },
+    {
+      "from": "A_1004",
+      "to": "C_524",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016509"
+      ]
+    },
+    {
+      "from": "A_1001",
+      "to": "C_525",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016510"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "C_526",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016511"
+      ]
+    },
+    {
+      "from": "A_2190",
+      "to": "C_527",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016512"
+      ]
+    },
+    {
+      "from": "A_1001",
+      "to": "A_1318",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018510"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리제네론과 사노피는 2007년 항체 협약 이래 듀피젠트(dupilumab) 등을 공동개발·공동판매하며 개발비와 이익을 분담하는 제휴 관계다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1703",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018511"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "애브비의 스카이리치와 J&J의 트렘피어·스텔라라는 IL-23 표적 건선·염증성장질환 치료제로 직접 head-to-head 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1004",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018512"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암젠의 암제비타는 애브비 휴미라(아달리무맙)의 바이오시밀러로 2023년 출시돼 애브비 매출을 직접 잠식하며 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_2190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018513"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "BMS의 소틱투(TYK2 억제제)는 애브비의 린버크·스카이리치와 경구/생물학적 건선 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1318",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018514"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "애브비의 린버크(upadacitinib)는 사노피·리제네론의 듀피젠트와 아토피피부염에서 직접 head-to-head 비교 임상으로 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1001",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018515"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "애브비의 린버크는 리제네론·사노피의 듀피젠트와 아토피피부염 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1004",
+      "to": "A_2190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018516"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암젠의 오테즐라(apremilast)는 BMS 소틱투의 POETYK 3상 대조군으로 쓰인 경구 건선 치료제로 직접 경쟁한다."
+    },
+    {
+      "from": "A_1004",
+      "to": "A_1703",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018517"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암젠의 오테즐라·엔브렐과 J&J의 스텔라라는 건선·자가면역 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2190",
+      "to": "A_1703",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018518"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "BMS의 소틱투와 J&J의 트렘피어·스텔라라는 중등도-중증 건선 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2923",
+      "to": "T_409",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020764"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1006",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011437"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011438"
+      ]
+    },
+    {
+      "from": "A_1004",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011439"
+      ]
+    },
+    {
+      "from": "A_1001",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011440"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011441"
+      ]
+    },
+    {
+      "from": "A_2190",
+      "to": "T_409",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011442"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_409",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011443"
+      ]
+    },
+    {
+      "from": "M_390",
+      "to": "T_409",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011444"
+      ]
+    },
+    {
+      "from": "A_1006",
+      "to": "C_522",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016507"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "C_523",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016508"
+      ]
+    },
+    {
+      "from": "A_1004",
+      "to": "C_524",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016509"
+      ]
+    },
+    {
+      "from": "A_1001",
+      "to": "C_525",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016510"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "C_526",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016511"
+      ]
+    },
+    {
+      "from": "A_2190",
+      "to": "C_527",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016512"
+      ]
+    },
+    {
+      "from": "A_1001",
+      "to": "A_1318",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018510"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리제네론과 사노피는 2007년 항체 협약 이래 듀피젠트(dupilumab) 등을 공동개발·공동판매하며 개발비와 이익을 분담하는 제휴 관계다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1703",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018511"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "애브비의 스카이리치와 J&J의 트렘피어·스텔라라는 IL-23 표적 건선·염증성장질환 치료제로 직접 head-to-head 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1004",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018512"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암젠의 암제비타는 애브비 휴미라(아달리무맙)의 바이오시밀러로 2023년 출시돼 애브비 매출을 직접 잠식하며 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_2190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018513"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "BMS의 소틱투(TYK2 억제제)는 애브비의 린버크·스카이리치와 경구/생물학적 건선 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1318",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018514"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "애브비의 린버크(upadacitinib)는 사노피·리제네론의 듀피젠트와 아토피피부염에서 직접 head-to-head 비교 임상으로 경쟁한다."
+    },
+    {
+      "from": "A_1006",
+      "to": "A_1001",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018515"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "애브비의 린버크는 리제네론·사노피의 듀피젠트와 아토피피부염 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1004",
+      "to": "A_2190",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018516"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암젠의 오테즐라(apremilast)는 BMS 소틱투의 POETYK 3상 대조군으로 쓰인 경구 건선 치료제로 직접 경쟁한다."
+    },
+    {
+      "from": "A_1004",
+      "to": "A_1703",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018517"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암젠의 오테즐라·엔브렐과 J&J의 스텔라라는 건선·자가면역 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2190",
+      "to": "A_1703",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018518"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "BMS의 소틱투와 J&J의 트렘피어·스텔라라는 중등도-중증 건선 치료제 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2923",
+      "to": "T_409",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020764"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_409",
-   "type": "THEME",
-   "name": "글로벌면역질환_자가면역"
-  },
-  {
-   "id": "A_1006",
-   "type": "ASSET",
-   "name": "애브비",
-   "exposure": {
-    "ticker": "ABBV",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5303957568339346,
-    "return_3d": -5.28728487626744,
-    "return_7d": -5.999383096853794,
-    "return_15d": -0.4003595064956289,
-    "return_1m": -4.302088239912061,
-    "return_ytd": 6.318956870611836,
-    "return_1y": 24.884745415428753,
-    "return_2y": 30.527893778777184,
-    "return_3y": 61.61750082863773,
-    "close": 243.8,
-    "marketCap": 430744089760,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1703",
-   "type": "ASSET",
-   "name": "존슨앤존슨",
-   "exposure": {
-    "ticker": "JNJ",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.20439448134901284,
-    "return_3d": -0.34790086779766805,
-    "return_7d": -3.2156416097190443,
-    "return_15d": 0.4254480992712306,
-    "return_1m": -1.6966799059113802,
-    "return_ytd": 22.94670846394986,
-    "return_1y": 52.35164047092571,
-    "return_2y": 58.017727639000796,
-    "return_3y": 46.108436497019724,
-    "close": 254.93,
-    "marketCap": 614355403191,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1004",
-   "type": "ASSET",
-   "name": "암젠",
-   "exposure": {
-    "ticker": "AMGN",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.942961965845803,
-    "return_3d": 0.6139717263440314,
-    "return_7d": 3.71768960748855,
-    "return_15d": 9.787473610133702,
-    "return_1m": 6.434887021067559,
-    "return_ytd": 19.039189354169217,
-    "return_1y": 31.3729452977634,
-    "return_2y": 17.024723955832943,
-    "return_3y": 65.00401912256208,
-    "close": 390.02,
-    "marketCap": 210496914160,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1001",
-   "type": "ASSET",
-   "name": "리제네론",
-   "exposure": {
-    "ticker": "REGN",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.18702913439754276,
-    "return_3d": 3.022997535010963,
-    "return_7d": 15.952500724074326,
-    "return_15d": 15.93306102542218,
-    "return_1m": 17.058832581831606,
-    "return_ytd": -2.015947237572613,
-    "return_1y": 36.10678690929912,
-    "return_2y": -29.42475412878085,
-    "return_3y": 1.9514810347138312,
-    "close": 760.66,
-    "marketCap": 78364714520,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1318",
-   "type": "ASSET",
-   "name": "Sanofi",
-   "exposure": {
-    "ticker": "SNY",
-    "exchange": "NASDAQ",
-    "country": "FR"
-   },
-   "metrics": {
-    "return_1d": -0.6286379511059481,
-    "return_3d": -0.48962462112380756,
-    "return_7d": -1.5455594002306894,
-    "return_15d": -1.1579434923575715,
-    "return_1m": 0.16428068528513418,
-    "return_ytd": -11.50736056396433,
-    "return_1y": -8.705882352941174,
-    "return_2y": -17.430837686206225,
-    "return_3y": -18.67378048780487,
-    "close": 42.68,
-    "marketCap": 102483216000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2190",
-   "type": "ASSET",
-   "name": "BMS",
-   "exposure": {
-    "ticker": "BMY",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.6415151978005129,
-    "return_3d": 1.5880357693493607,
-    "return_7d": 6.120148172008366,
-    "return_15d": 15.697980684811231,
-    "return_1m": 16.208112874779545,
-    "return_ytd": 23.25102880658436,
-    "return_1y": 48.971286457155784,
-    "return_2y": 34.332313965341484,
-    "return_3y": 7.2952287900993396,
-    "close": 65.89,
-    "marketCap": 134594161900,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_058",
-   "type": "MACRO",
-   "name": "인구고령화"
-  },
-  {
-   "id": "M_390",
-   "type": "MACRO",
-   "name": "자가면역바이오시밀러"
-  },
-  {
-   "id": "C_522",
-   "type": "CHARACTER",
-   "name": "Humira_LOE_Skyrizi전환"
-  },
-  {
-   "id": "C_523",
-   "type": "CHARACTER",
-   "name": "Stelara_Tremfya_IL23"
-  },
-  {
-   "id": "C_524",
-   "type": "CHARACTER",
-   "name": "Otezla_MariTide_광범위"
-  },
-  {
-   "id": "C_525",
-   "type": "CHARACTER",
-   "name": "Dupixent_Sanofi공동개발"
-  },
-  {
-   "id": "C_526",
-   "type": "CHARACTER",
-   "name": "Dupixent_Beyfortus_공동"
-  },
-  {
-   "id": "C_527",
-   "type": "CHARACTER",
-   "name": "Sotyktu_TYK2_first"
-  },
-  {
-   "id": "A_2923",
-   "type": "ASSET",
-   "name": "VanEck Pharmaceutical ETF",
-   "exposure": {
-    "ticker": "PPH",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1006",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011437"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011438"
-   ]
-  },
-  {
-   "from": "A_1004",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011439"
-   ]
-  },
-  {
-   "from": "A_1001",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011440"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011441"
-   ]
-  },
-  {
-   "from": "A_2190",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011442"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_409",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011443"
-   ]
-  },
-  {
-   "from": "M_390",
-   "to": "T_409",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011444"
-   ]
-  },
-  {
-   "from": "A_1006",
-   "to": "C_522",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016507"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "C_523",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016508"
-   ]
-  },
-  {
-   "from": "A_1004",
-   "to": "C_524",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016509"
-   ]
-  },
-  {
-   "from": "A_1001",
-   "to": "C_525",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016510"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "C_526",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016511"
-   ]
-  },
-  {
-   "from": "A_2190",
-   "to": "C_527",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016512"
-   ]
-  },
-  {
-   "from": "A_1001",
-   "to": "A_1318",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018510"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리제네론과 사노피는 2007년 항체 협약 이래 듀피젠트(dupilumab) 등을 공동개발·공동판매하며 개발비와 이익을 분담하는 제휴 관계다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1703",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018511"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "애브비의 스카이리치와 J&J의 트렘피어·스텔라라는 IL-23 표적 건선·염증성장질환 치료제로 직접 head-to-head 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1004",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018512"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암젠의 암제비타는 애브비 휴미라(아달리무맙)의 바이오시밀러로 2023년 출시돼 애브비 매출을 직접 잠식하며 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_2190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018513"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "BMS의 소틱투(TYK2 억제제)는 애브비의 린버크·스카이리치와 경구/생물학적 건선 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1318",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018514"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "애브비의 린버크(upadacitinib)는 사노피·리제네론의 듀피젠트와 아토피피부염에서 직접 head-to-head 비교 임상으로 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1001",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018515"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "애브비의 린버크는 리제네론·사노피의 듀피젠트와 아토피피부염 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1004",
-   "to": "A_2190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018516"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암젠의 오테즐라(apremilast)는 BMS 소틱투의 POETYK 3상 대조군으로 쓰인 경구 건선 치료제로 직접 경쟁한다."
-  },
-  {
-   "from": "A_1004",
-   "to": "A_1703",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018517"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암젠의 오테즐라·엔브렐과 J&J의 스텔라라는 건선·자가면역 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2190",
-   "to": "A_1703",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018518"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "BMS의 소틱투와 J&J의 트렘피어·스텔라라는 중등도-중증 건선 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2923",
-   "to": "T_409",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020764"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1006",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011437"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011438"
-   ]
-  },
-  {
-   "from": "A_1004",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011439"
-   ]
-  },
-  {
-   "from": "A_1001",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011440"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011441"
-   ]
-  },
-  {
-   "from": "A_2190",
-   "to": "T_409",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011442"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_409",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011443"
-   ]
-  },
-  {
-   "from": "M_390",
-   "to": "T_409",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011444"
-   ]
-  },
-  {
-   "from": "A_1006",
-   "to": "C_522",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016507"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "C_523",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016508"
-   ]
-  },
-  {
-   "from": "A_1004",
-   "to": "C_524",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016509"
-   ]
-  },
-  {
-   "from": "A_1001",
-   "to": "C_525",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016510"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "C_526",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016511"
-   ]
-  },
-  {
-   "from": "A_2190",
-   "to": "C_527",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016512"
-   ]
-  },
-  {
-   "from": "A_1001",
-   "to": "A_1318",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018510"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리제네론과 사노피는 2007년 항체 협약 이래 듀피젠트(dupilumab) 등을 공동개발·공동판매하며 개발비와 이익을 분담하는 제휴 관계다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1703",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018511"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "애브비의 스카이리치와 J&J의 트렘피어·스텔라라는 IL-23 표적 건선·염증성장질환 치료제로 직접 head-to-head 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1004",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018512"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암젠의 암제비타는 애브비 휴미라(아달리무맙)의 바이오시밀러로 2023년 출시돼 애브비 매출을 직접 잠식하며 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_2190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018513"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "BMS의 소틱투(TYK2 억제제)는 애브비의 린버크·스카이리치와 경구/생물학적 건선 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1318",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018514"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "애브비의 린버크(upadacitinib)는 사노피·리제네론의 듀피젠트와 아토피피부염에서 직접 head-to-head 비교 임상으로 경쟁한다."
-  },
-  {
-   "from": "A_1006",
-   "to": "A_1001",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018515"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "애브비의 린버크는 리제네론·사노피의 듀피젠트와 아토피피부염 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1004",
-   "to": "A_2190",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018516"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암젠의 오테즐라(apremilast)는 BMS 소틱투의 POETYK 3상 대조군으로 쓰인 경구 건선 치료제로 직접 경쟁한다."
-  },
-  {
-   "from": "A_1004",
-   "to": "A_1703",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018517"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암젠의 오테즐라·엔브렐과 J&J의 스텔라라는 건선·자가면역 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2190",
-   "to": "A_1703",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018518"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "BMS의 소틱투와 J&J의 트렘피어·스텔라라는 중등도-중증 건선 치료제 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2923",
-   "to": "T_409",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020764"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

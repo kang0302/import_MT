@@ -1,1073 +1,1091 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_240",
- "themeName": "글로벌태양광관련주",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_240",
+  "themeName": "글로벌태양광관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-19T00:00:00+09:00",
+    "description": "중국 셀·모듈 빅3 (LONGi·Jinko·Trina) + 미국 박막·인버터·태양광주 (First Solar·SolarEdge·Enphase·Sunrun) + 독일 SMA Solar (인버터) + Nextracker (트래커) 등 글로벌 태양광 밸류체인 묶음. 중국 인버터 수입 규제·미국 IRA 세액공제·유럽 수요·유틸리티 스케일 vs 가정용 분리가 핵심 동인. EM 수출 확대와 중국 내수 덤핑 양면 노출.",
+    "notes": "g240 누적 import 기반 글로벌 태양광 관련주 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-16",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_240",
+      "type": "THEME",
+      "name": "글로벌태양광관련주"
+    },
+    {
+      "id": "A_1099",
+      "type": "ASSET",
+      "name": "LONGi",
+      "exposure": {
+        "ticker": "601012",
+        "exchange": "SSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": -0.7651109410864554,
+        "close": 12.97,
+        "marketCap": 98025636856,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.15396458814472824,
+        "return_7d": 2.610759493670889,
+        "return_15d": 8.083333333333332,
+        "return_1m": 6.2244062244062315,
+        "return_ytd": -29.85397512168739,
+        "return_1y": -21.726010863005428,
+        "return_2y": -0.9167303284950301,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1554",
+      "type": "ASSET",
+      "name": "Jinko",
+      "exposure": {
+        "ticker": "JKS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.251564455569465,
+        "close": 15.78,
+        "marketCap": 206600392,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 4.227212681638037,
+        "return_7d": 3.4754098360655794,
+        "return_15d": -1.3133208255159512,
+        "return_1m": 0.3816793893129722,
+        "return_ytd": -43.52183249821046,
+        "return_1y": -25.915492957746487,
+        "return_2y": -23.988439306358387,
+        "return_3y": -62.82685512367492,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1555",
+      "type": "ASSET",
+      "name": "Trina",
+      "exposure": {
+        "ticker": "688599",
+        "exchange": "SSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 0.06997900629812648,
+        "close": 14.3,
+        "marketCap": 33498717910,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.37951363301401,
+        "return_7d": 9.91544965411222,
+        "return_15d": 16.639477977161498,
+        "return_1m": 9.494640122511488,
+        "return_ytd": -16.030534351145043,
+        "return_1y": -11.619283065512976,
+        "return_2y": -10.062893081761004,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1556",
+      "type": "ASSET",
+      "name": "SMA Solar",
+      "exposure": {
+        "ticker": "S92",
+        "exchange": "XETRA",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -1.5639374425023056,
+        "close": 53.5,
+        "marketCap": 1856450000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.229895931882674,
+        "return_7d": -4.0358744394618835,
+        "return_15d": -13.779210314262691,
+        "return_1m": 1.229895931882674,
+        "return_ytd": 49.77603583426653,
+        "return_1y": 178.06652806652806,
+        "return_2y": 119.08271908271905,
+        "return_3y": -30.474333983105918,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1138",
+      "type": "ASSET",
+      "name": "SolarEdge",
+      "exposure": {
+        "ticker": "SEDG",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -30.475799835931095,
+        "close": 33.9,
+        "marketCap": 2061737048,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -17.71844660194176,
+        "return_7d": -21.32745416569971,
+        "return_15d": -37.88933675338952,
+        "return_1m": -35.965243672081606,
+        "return_ytd": 8.09948979591837,
+        "return_1y": 32.266874756145135,
+        "return_2y": 17.463617463617464,
+        "return_3y": -85.96040752091444,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1137",
+      "type": "ASSET",
+      "name": "Enphase",
+      "exposure": {
+        "ticker": "ENPH",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -6.751256882930335,
+        "close": 38.95,
+        "marketCap": 5147034040,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 3.7559936068193966,
+        "return_7d": 2.4730334122599507,
+        "return_15d": -11.577752553915987,
+        "return_1m": -9.397534310304723,
+        "return_ytd": 15.407407407407426,
+        "return_1y": 22.90943515304513,
+        "return_2y": -66.16280079923551,
+        "return_3y": -74.34630837120464,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1559",
+      "type": "ASSET",
+      "name": "Sunrun",
+      "exposure": {
+        "ticker": "RUN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -4.89573889392565,
+        "close": 10.49,
+        "marketCap": 2502379010,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 6.931702344546387,
+        "return_7d": 5.110220440881763,
+        "return_15d": -17.85434612372748,
+        "return_1m": -14.016393442622944,
+        "return_ytd": -46.03909465020576,
+        "return_1y": 8.144329896907232,
+        "return_2y": -40.159726183685116,
+        "return_3y": -44.73129610115911,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1560",
+      "type": "ASSET",
+      "name": "First Solar",
+      "exposure": {
+        "ticker": "FSLR",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.8034314329105525,
+        "close": 236.8,
+        "marketCap": 25448845562,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 12.211533905131965,
+        "return_7d": 15.046397512510312,
+        "return_15d": 5.799303011348411,
+        "return_1m": 3.9873528895134402,
+        "return_ytd": -13.683750091127788,
+        "return_1y": 29.102606040780742,
+        "return_2y": 9.634705310431046,
+        "return_3y": 14.175506268080994,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1561",
+      "type": "ASSET",
+      "name": "Nextracker",
+      "exposure": {
+        "ticker": "NXT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.3917106867127327,
+        "close": 99.81,
+        "marketCap": 15136511881,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 11.06042060754422,
+        "return_7d": -3.7790417429865997,
+        "return_15d": -8.540273068817006,
+        "return_1m": -8.305006890215882,
+        "return_ytd": 7.5770640224186225,
+        "return_1y": 77.25093233883857,
+        "return_2y": 103.11355311355311,
+        "return_3y": 135.6788665879575,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_084",
+      "type": "MACRO",
+      "name": "중동전쟁"
+    },
+    {
+      "id": "M_253",
+      "type": "MACRO",
+      "name": "탈탄소"
+    },
+    {
+      "id": "M_061",
+      "type": "MACRO",
+      "name": "러-우전쟁"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "M_256",
+      "type": "MACRO",
+      "name": "보호무역장벽"
+    },
+    {
+      "id": "C_190",
+      "type": "CHARACTER",
+      "name": "유틸리티스케일"
+    },
+    {
+      "id": "C_191",
+      "type": "CHARACTER",
+      "name": "세액공제의존"
+    },
+    {
+      "id": "C_192",
+      "type": "CHARACTER",
+      "name": "미국가정용"
+    },
+    {
+      "id": "C_193",
+      "type": "CHARACTER",
+      "name": "유럽미국수요"
+    },
+    {
+      "id": "C_194",
+      "type": "CHARACTER",
+      "name": "중국인버터수입규제수혜"
+    },
+    {
+      "id": "C_195",
+      "type": "CHARACTER",
+      "name": "EM수출확대중국내수덤핑"
+    },
+    {
+      "id": "M_1056",
+      "type": "MACRO",
+      "name": "중국산덤핑수출"
+    },
+    {
+      "id": "M_1057",
+      "type": "MACRO",
+      "name": "중국공급과잉"
+    },
+    {
+      "id": "A_2903",
+      "type": "ASSET",
+      "name": "Invesco Solar ETF",
+      "exposure": {
+        "ticker": "TAN",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.9347948285553547,
+        "return_3d": 3.932698155280767,
+        "return_7d": -0.5624515128006213,
+        "return_15d": -8.118279569892461,
+        "return_1m": -6.458675424192661,
+        "return_ytd": -0.6395348837209269,
+        "return_1y": 39.73834832379397,
+        "return_2y": 21.694754331830058,
+        "return_3y": -25.196965275751392,
+        "close": 51.27,
+        "marketCap": 852507460,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-19T00:00:00+09:00",
-  "description": "중국 셀·모듈 빅3 (LONGi·Jinko·Trina) + 미국 박막·인버터·태양광주 (First Solar·SolarEdge·Enphase·Sunrun) + 독일 SMA Solar (인버터) + Nextracker (트래커) 등 글로벌 태양광 밸류체인 묶음. 중국 인버터 수입 규제·미국 IRA 세액공제·유럽 수요·유틸리티 스케일 vs 가정용 분리가 핵심 동인. EM 수출 확대와 중국 내수 덤핑 양면 노출.",
-  "notes": "g240 누적 import 기반 글로벌 태양광 관련주 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-16",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필 + 2026 이벤트",
-    "detail": "전 엣지 근거를 종목·관계 사실로 구체화하고 2026 이벤트를 추가했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "M_084",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007248"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_253",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007249"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_061",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007250"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007251"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_256",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007252"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1099",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007253"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1554",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007254"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1555",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007255"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1556",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007256"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1138",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007257"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1137",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007258"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1559",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007259"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1560",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007260"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1561",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007261"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1560",
+      "to": "C_190",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007262"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1561",
+      "to": "C_190",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007263"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1559",
+      "to": "C_191",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007264"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1559",
+      "to": "C_192",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007265"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1137",
+      "to": "C_193",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007266"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1138",
+      "to": "C_193",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007267"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1556",
+      "to": "C_193",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007268"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1099",
+      "to": "C_195",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007269"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1554",
+      "to": "C_195",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007270"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1555",
+      "to": "C_195",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007271"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1556",
+      "to": "C_194",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007272"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "M_1056",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007273"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1057",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007274"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1099",
+      "to": "A_1554",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019369"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "LONGi와 Jinko는 글로벌 태양광 모듈 시장 양대 경쟁"
+    },
+    {
+      "from": "A_1554",
+      "to": "A_1555",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019370"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Jinko와 Trina는 중국·글로벌 태양광 모듈 시장 경쟁"
+    },
+    {
+      "from": "A_1137",
+      "to": "A_1138",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019371"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Enphase와 SolarEdge는 태양광 마이크로인버터·옵티마이저 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1560",
+      "to": "A_1099",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019372"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "First Solar와 LONGi는 글로벌 태양광 패널 시장 경쟁"
+    },
+    {
+      "from": "A_1556",
+      "to": "A_1138",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019373"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SMA Solar와 SolarEdge는 태양광 인버터 시장 경쟁"
+    },
+    {
+      "from": "A_1561",
+      "to": "A_1559",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019374"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Nextracker와 Sunrun은 태양광 설치·트래커 시장 경쟁"
+    },
+    {
+      "from": "A_2903",
+      "to": "T_240",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020666"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "M_084",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007248"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_253",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007249"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_061",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007250"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007251"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_256",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007252"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1099",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007253"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1554",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007254"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1555",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007255"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1556",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007256"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1138",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007257"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1137",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007258"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1559",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007259"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1560",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007260"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1561",
+      "to": "T_240",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_007261"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1560",
+      "to": "C_190",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007262"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1561",
+      "to": "C_190",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007263"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1559",
+      "to": "C_191",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007264"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1559",
+      "to": "C_192",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007265"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1137",
+      "to": "C_193",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007266"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1138",
+      "to": "C_193",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007267"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1556",
+      "to": "C_193",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007268"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1099",
+      "to": "C_195",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007269"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1554",
+      "to": "C_195",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007270"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1555",
+      "to": "C_195",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007271"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1556",
+      "to": "C_194",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007272"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "M_1056",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007273"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1057",
+      "to": "T_240",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_007274"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1099",
+      "to": "A_1554",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019369"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "LONGi와 Jinko는 글로벌 태양광 모듈 시장 양대 경쟁"
+    },
+    {
+      "from": "A_1554",
+      "to": "A_1555",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019370"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Jinko와 Trina는 중국·글로벌 태양광 모듈 시장 경쟁"
+    },
+    {
+      "from": "A_1137",
+      "to": "A_1138",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019371"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Enphase와 SolarEdge는 태양광 마이크로인버터·옵티마이저 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1560",
+      "to": "A_1099",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019372"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "First Solar와 LONGi는 글로벌 태양광 패널 시장 경쟁"
+    },
+    {
+      "from": "A_1556",
+      "to": "A_1138",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019373"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SMA Solar와 SolarEdge는 태양광 인버터 시장 경쟁"
+    },
+    {
+      "from": "A_1561",
+      "to": "A_1559",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019374"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Nextracker와 Sunrun은 태양광 설치·트래커 시장 경쟁"
+    },
+    {
+      "from": "A_2903",
+      "to": "T_240",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020666"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_240",
-   "type": "THEME",
-   "name": "글로벌태양광관련주"
-  },
-  {
-   "id": "A_1099",
-   "type": "ASSET",
-   "name": "LONGi",
-   "exposure": {
-    "ticker": "601012",
-    "exchange": "SSE",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": -1.5813253012048167,
-    "close": 13.07,
-    "marketCap": 98781424342,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.38402457757296116,
-    "return_7d": 5.233494363929148,
-    "return_15d": 11.423699914748497,
-    "return_1m": 5.829959514170047,
-    "return_ytd": -29.31314223904813,
-    "return_1y": -19.865113427345182,
-    "return_2y": -3.2568467801628365,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1554",
-   "type": "ASSET",
-   "name": "Jinko",
-   "exposure": {
-    "ticker": "JKS",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.5247776365946653,
-    "close": 15.98,
-    "marketCap": 209218901,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 7.681940700808632,
-    "return_7d": 7.972972972972969,
-    "return_15d": 2.7652733118971096,
-    "return_1m": 0.06261740763933155,
-    "return_ytd": -42.806012884753045,
-    "return_1y": -25.743494423791812,
-    "return_2y": -21.35826771653543,
-    "return_3y": -62.177514792899416,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1555",
-   "type": "ASSET",
-   "name": "Trina",
-   "exposure": {
-    "ticker": "688599",
-    "exchange": "SSE",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 0.07002801120448154,
-    "close": 14.29,
-    "marketCap": 33475292233,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.2304886943836495,
-    "return_7d": 12.342767295597469,
-    "return_15d": 18.19685690653432,
-    "return_1m": 7.201800450112517,
-    "return_ytd": -16.089254257193197,
-    "return_1y": -7.865892972275956,
-    "return_2y": -13.759806879903447,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1556",
-   "type": "ASSET",
-   "name": "SMA Solar",
-   "exposure": {
-    "ticker": "S92",
-    "exchange": "XETRA",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 4.019138755980856,
-    "close": 54.35,
-    "marketCap": 1885945000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.1818181818181839,
-    "return_7d": -4.3975373790677175,
-    "return_15d": -16.641104294478527,
-    "return_1m": -5.968858131487886,
-    "return_ytd": 52.155655095184784,
-    "return_1y": 183.22042730588848,
-    "return_2y": 127.59631490787271,
-    "return_3y": -29.64401294498382,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1138",
-   "type": "ASSET",
-   "name": "SolarEdge",
-   "exposure": {
-    "ticker": "SEDG",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 8.067375886524818,
-    "close": 48.76,
-    "marketCap": 2965495530,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 16.762452107279692,
-    "return_7d": 14.46009389671361,
-    "return_15d": -12.17579250720462,
-    "return_1m": -14.32085749428923,
-    "return_ytd": 55.48469387755102,
-    "return_1y": 90.84148727984342,
-    "return_2y": 80.52573121066271,
-    "return_3y": -79.40791418556526,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1137",
-   "type": "ASSET",
-   "name": "Enphase",
-   "exposure": {
-    "ticker": "ENPH",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 6.149936467598471,
-    "close": 41.77,
-    "marketCap": 5519681947,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 11.744248261102186,
-    "return_7d": 13.814713896457764,
-    "return_15d": -7.157146032451656,
-    "return_1m": -6.2401795735128935,
-    "return_ytd": 23.762962962962963,
-    "return_1y": 32.898504613426674,
-    "return_2y": -61.80853981896315,
-    "return_3y": -72.9346206181559,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1559",
-   "type": "ASSET",
-   "name": "Sunrun",
-   "exposure": {
-    "ticker": "RUN",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.752636625119845,
-    "close": 11.03,
-    "marketCap": 2631195470,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 15.861344537815114,
-    "return_7d": 10.965794768611659,
-    "return_15d": -13.693270735524255,
-    "return_1m": -14.95759444872784,
-    "return_ytd": -43.26131687242799,
-    "return_1y": 11.97969543147208,
-    "return_2y": -34.10991636798089,
-    "return_3y": -39.82542280414621,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1560",
-   "type": "ASSET",
-   "name": "First Solar",
-   "exposure": {
-    "ticker": "FSLR",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.6835388647789244,
-    "close": 243.63,
-    "marketCap": 26182864207,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 18.26124945391001,
-    "return_7d": 20.12128981362784,
-    "return_15d": 10.449723456342364,
-    "return_1m": 4.535312794988422,
-    "return_ytd": -11.194138660056863,
-    "return_1y": 32.429200413110834,
-    "return_2y": 15.524681113376637,
-    "return_3y": 16.904990403071007,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1561",
-   "type": "ASSET",
-   "name": "Nextracker",
-   "exposure": {
-    "ticker": "NXT",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 8.569537884636592,
-    "close": 98.44,
-    "marketCap": 14928746914,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 1.5892672858617063,
-    "return_7d": -1.589523143057081,
-    "return_15d": -5.94305369768775,
-    "return_1m": -14.42232461097105,
-    "return_ytd": 6.100452683768043,
-    "return_1y": 74.01449531553827,
-    "return_2y": 109.98293515358361,
-    "return_3y": 130.37678446056637,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_084",
-   "type": "MACRO",
-   "name": "중동전쟁"
-  },
-  {
-   "id": "M_253",
-   "type": "MACRO",
-   "name": "탈탄소"
-  },
-  {
-   "id": "M_061",
-   "type": "MACRO",
-   "name": "러-우전쟁"
-  },
-  {
-   "id": "M_212",
-   "type": "MACRO",
-   "name": "AI데이터센터확대"
-  },
-  {
-   "id": "M_256",
-   "type": "MACRO",
-   "name": "보호무역장벽"
-  },
-  {
-   "id": "C_190",
-   "type": "CHARACTER",
-   "name": "유틸리티스케일"
-  },
-  {
-   "id": "C_191",
-   "type": "CHARACTER",
-   "name": "세액공제의존"
-  },
-  {
-   "id": "C_192",
-   "type": "CHARACTER",
-   "name": "미국가정용"
-  },
-  {
-   "id": "C_193",
-   "type": "CHARACTER",
-   "name": "유럽미국수요"
-  },
-  {
-   "id": "C_194",
-   "type": "CHARACTER",
-   "name": "중국인버터수입규제수혜"
-  },
-  {
-   "id": "C_195",
-   "type": "CHARACTER",
-   "name": "EM수출확대중국내수덤핑"
-  },
-  {
-   "id": "M_1056",
-   "type": "MACRO",
-   "name": "중국산덤핑수출"
-  },
-  {
-   "id": "M_1057",
-   "type": "MACRO",
-   "name": "중국공급과잉"
-  },
-  {
-   "id": "A_2903",
-   "type": "ASSET",
-   "name": "Invesco Solar ETF",
-   "exposure": {
-    "ticker": "TAN",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "M_084",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007248"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_253",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007249"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_061",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007250"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_212",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007251"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_256",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007252"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1099",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007253"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1554",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007254"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1555",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007255"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1556",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007256"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1138",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007257"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1137",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007258"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1559",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007259"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1560",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007260"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1561",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007261"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1560",
-   "to": "C_190",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007262"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1561",
-   "to": "C_190",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007263"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1559",
-   "to": "C_191",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007264"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1559",
-   "to": "C_192",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007265"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1137",
-   "to": "C_193",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007266"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1138",
-   "to": "C_193",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007267"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1556",
-   "to": "C_193",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007268"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1099",
-   "to": "C_195",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007269"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1554",
-   "to": "C_195",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007270"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1555",
-   "to": "C_195",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007271"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1556",
-   "to": "C_194",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007272"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "M_1056",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007273"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_1057",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007274"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1099",
-   "to": "A_1554",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019369"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "LONGi와 Jinko는 글로벌 태양광 모듈 시장 양대 경쟁"
-  },
-  {
-   "from": "A_1554",
-   "to": "A_1555",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019370"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Jinko와 Trina는 중국·글로벌 태양광 모듈 시장 경쟁"
-  },
-  {
-   "from": "A_1137",
-   "to": "A_1138",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019371"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Enphase와 SolarEdge는 태양광 마이크로인버터·옵티마이저 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1560",
-   "to": "A_1099",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019372"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "First Solar와 LONGi는 글로벌 태양광 패널 시장 경쟁"
-  },
-  {
-   "from": "A_1556",
-   "to": "A_1138",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019373"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SMA Solar와 SolarEdge는 태양광 인버터 시장 경쟁"
-  },
-  {
-   "from": "A_1561",
-   "to": "A_1559",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019374"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Nextracker와 Sunrun은 태양광 설치·트래커 시장 경쟁"
-  },
-  {
-   "from": "A_2903",
-   "to": "T_240",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020666"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "M_084",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007248"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_253",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007249"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_061",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007250"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_212",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007251"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_256",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007252"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1099",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007253"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1554",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007254"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1555",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007255"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1556",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007256"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1138",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007257"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1137",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007258"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1559",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007259"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1560",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007260"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1561",
-   "to": "T_240",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_007261"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1560",
-   "to": "C_190",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007262"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1561",
-   "to": "C_190",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007263"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1559",
-   "to": "C_191",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007264"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1559",
-   "to": "C_192",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007265"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1137",
-   "to": "C_193",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007266"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1138",
-   "to": "C_193",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007267"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1556",
-   "to": "C_193",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007268"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1099",
-   "to": "C_195",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007269"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1554",
-   "to": "C_195",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007270"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1555",
-   "to": "C_195",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007271"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1556",
-   "to": "C_194",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007272"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "M_1056",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007273"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_1057",
-   "to": "T_240",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_007274"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1099",
-   "to": "A_1554",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019369"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "LONGi와 Jinko는 글로벌 태양광 모듈 시장 양대 경쟁"
-  },
-  {
-   "from": "A_1554",
-   "to": "A_1555",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019370"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Jinko와 Trina는 중국·글로벌 태양광 모듈 시장 경쟁"
-  },
-  {
-   "from": "A_1137",
-   "to": "A_1138",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019371"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Enphase와 SolarEdge는 태양광 마이크로인버터·옵티마이저 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1560",
-   "to": "A_1099",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019372"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "First Solar와 LONGi는 글로벌 태양광 패널 시장 경쟁"
-  },
-  {
-   "from": "A_1556",
-   "to": "A_1138",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019373"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SMA Solar와 SolarEdge는 태양광 인버터 시장 경쟁"
-  },
-  {
-   "from": "A_1561",
-   "to": "A_1559",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019374"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Nextracker와 Sunrun은 태양광 설치·트래커 시장 경쟁"
-  },
-  {
-   "from": "A_2903",
-   "to": "T_240",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020666"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

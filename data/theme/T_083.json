@@ -1,791 +1,809 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_083",
- "themeName": "중국자율주행/라이다_홍콩상장3대주",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_083",
+  "themeName": "중국자율주행/라이다_홍콩상장3대주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-03-27T00:00:00+09:00",
+    "notes": "g83 누적 import 기반 중국 자율주행/라이다 홍콩상장 3대주 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-10",
+        "kind": "변경",
+        "title": "매크로는 테마에만 연결",
+        "detail": "미중패권경쟁 매크로가 개별 자산에 직접 걸려 있던 IMPACTS 엣지를 제거하고, 매크로는 테마 레벨에만 연결하도록 정리했다."
+      },
+      {
+        "date": "2026-07-10",
+        "kind": "보강",
+        "title": "매크로 2종 테마 연결 + 자산 CHR 정의",
+        "detail": "자율주행확산·미중패권경쟁 매크로를 테마에 IMPACTS로 연결하고, 라이다 3대주와 자율주행 고객사(NIO·크루즈·오로라·포니AI·디디) 9개 자산에 역할 CHR을 정의했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_083",
+      "type": "THEME",
+      "name": "중국자율주행/라이다_홍콩상장3대주"
+    },
+    {
+      "id": "A_291",
+      "type": "ASSET",
+      "name": "헤사이테크놀로지",
+      "exposure": {
+        "ticker": "HSAI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.1845985800109102,
+        "close": 17.91,
+        "marketCap": 2602941235,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.976331360946752,
+        "return_7d": 16.072585871678548,
+        "return_15d": 12.99684542586752,
+        "return_1m": 10.897832817337472,
+        "return_ytd": -25.62292358803986,
+        "return_1y": -11.555555555555552,
+        "return_2y": 303.37837837837833,
+        "return_3y": 40.80188679245283,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1422",
+      "type": "ASSET",
+      "name": "로보센스",
+      "exposure": {
+        "ticker": "2498",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 1.0118043844856706,
+        "close": 23.96,
+        "marketCap": 11069677753,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.5877413937867448,
+        "return_7d": 6.964285714285734,
+        "return_15d": 6.205673758865249,
+        "return_1m": 5.923961096374897,
+        "return_ytd": -35.76407506702412,
+        "return_1y": -27.722473604826536,
+        "return_2y": 53.5897435897436,
+        "return_3y": 1156.26423690205,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1449",
+      "type": "ASSET",
+      "name": "세욘드",
+      "exposure": {
+        "ticker": "2665",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 6.41509433962264,
+        "close": 2.815,
+        "marketCap": 3682158383,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 16.528925619834702,
+        "return_7d": 21.55172413793103,
+        "return_15d": 3.676470588235281,
+        "return_1m": -10.759493670886089,
+        "return_ytd": -72.7536231884058,
+        "return_1y": -70.47120418848168,
+        "return_2y": -63.61290322580646,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1446",
+      "type": "ASSET",
+      "name": "헤사이그룹",
+      "exposure": {
+        "ticker": "2525",
+        "exchange": "HKEX",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": 3.157290470723284,
+        "close": 17.97,
+        "marketCap": 22459337514,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 7.219570405727915,
+        "return_7d": 20.12032085561495,
+        "return_15d": 13.950538998097638,
+        "return_1m": 5.705882352941161,
+        "return_ytd": -20.416297608503097,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1204",
+      "type": "ASSET",
+      "name": "NIO",
+      "exposure": {
+        "ticker": "NIO",
+        "exchange": "NYSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": -2.310924369747891,
+        "close": 4.65,
+        "marketCap": 11537166006,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -4.7131147540983465,
+        "return_7d": 0.6493506493506551,
+        "return_15d": -7.554671968190851,
+        "return_1m": -4.7131147540983465,
+        "return_ytd": -9.533073929961077,
+        "return_1y": 1.0869565217391353,
+        "return_2y": 4.729729729729737,
+        "return_3y": -69.6078431372549,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_671",
+      "type": "ASSET",
+      "name": "크루즈",
+      "exposure": {
+        "ticker": "272210",
+        "exchange": "KOSPI",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "크루즈는 헤사이 라이다를 채택해 온 로보택시 개발사다"
+    },
+    {
+      "id": "A_138",
+      "type": "ASSET",
+      "name": "오로라이노베이션",
+      "exposure": {
+        "ticker": "AUR",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -7.468879668049788,
+        "close": 6.69,
+        "marketCap": 13120448478,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 3.7209302325581506,
+        "return_7d": 7.7294685990338285,
+        "return_15d": 11.129568106312316,
+        "return_1m": 6.022187004754365,
+        "return_ytd": 72.86821705426357,
+        "return_1y": 12.248322147651013,
+        "return_2y": 67.25000000000001,
+        "return_3y": 103.96341463414637,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_141",
+      "type": "ASSET",
+      "name": "포니AI",
+      "exposure": {
+        "ticker": "PONY",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.73972602739726,
+        "close": 7.81,
+        "marketCap": 2759467039,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.7623888182973326,
+        "return_7d": 5.826558265582649,
+        "return_15d": 9.23076923076922,
+        "return_1m": 18.693009118541013,
+        "return_ytd": -51.400124455507154,
+        "return_1y": -44.452347083926036,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1450",
+      "type": "ASSET",
+      "name": "디디추싱",
+      "exposure": {
+        "ticker": "DIDIY",
+        "exchange": "OTCMKTS",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": -1.9943019943019946,
+        "close": 3.44,
+        "marketCap": 15505856505,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -2.824858757062154,
+        "return_7d": 0.2915451895043608,
+        "return_15d": -7.5268817204301115,
+        "return_1m": -2.824858757062154,
+        "return_ytd": -38.12949640287769,
+        "return_1y": -33.59073359073359,
+        "return_2y": -6.267029972752047,
+        "return_3y": -8.510638297872342,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_033",
+      "type": "MACRO",
+      "name": "미중패권경쟁"
+    },
+    {
+      "id": "M_246",
+      "type": "MACRO",
+      "name": "자율주행확산"
+    },
+    {
+      "id": "C_1987",
+      "type": "CHARACTER",
+      "name": "차량용라이다출하세계1위"
+    },
+    {
+      "id": "C_1988",
+      "type": "CHARACTER",
+      "name": "ADAS라이다대량양산"
+    },
+    {
+      "id": "C_1989",
+      "type": "CHARACTER",
+      "name": "NIO장거리라이다공급"
+    },
+    {
+      "id": "C_1990",
+      "type": "CHARACTER",
+      "name": "홍콩상장법인"
+    },
+    {
+      "id": "C_1991",
+      "type": "CHARACTER",
+      "name": "중국프리미엄EV라이다탑재"
+    },
+    {
+      "id": "C_1992",
+      "type": "CHARACTER",
+      "name": "로보택시개발사"
+    },
+    {
+      "id": "C_1993",
+      "type": "CHARACTER",
+      "name": "자율주행트럭플랫폼"
+    },
+    {
+      "id": "C_1994",
+      "type": "CHARACTER",
+      "name": "로보택시상용화"
+    },
+    {
+      "id": "C_1995",
+      "type": "CHARACTER",
+      "name": "차량공유로보택시플랫폼"
+    },
+    {
+      "id": "A_2883",
+      "type": "ASSET",
+      "name": "KraneShares Electric Vehicles & Future Mobility Index ETF",
+      "exposure": {
+        "ticker": "KARS",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.5275304978568984,
+        "return_3d": 1.9945909398242145,
+        "return_7d": 3.4991423670668986,
+        "return_15d": -0.2974223397224085,
+        "return_1m": -1.081967213114754,
+        "return_ytd": -3.548593350383633,
+        "return_1y": 25.760733639016276,
+        "return_2y": 54.559426229508205,
+        "return_3y": -12.168850072780202,
+        "close": 30.17,
+        "marketCap": 61492162,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-03-27T00:00:00+09:00",
-  "notes": "g83 누적 import 기반 중국 자율주행/라이다 홍콩상장 3대주 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-07-10",
-    "kind": "변경",
-    "title": "매크로는 테마에만 연결",
-    "detail": "미중패권경쟁 매크로가 개별 자산에 직접 걸려 있던 IMPACTS 엣지를 제거하고, 매크로는 테마 레벨에만 연결하도록 정리했다."
-   },
-   {
-    "date": "2026-07-10",
-    "kind": "보강",
-    "title": "매크로 2종 테마 연결 + 자산 CHR 정의",
-    "detail": "자율주행확산·미중패권경쟁 매크로를 테마에 IMPACTS로 연결하고, 라이다 3대주와 자율주행 고객사(NIO·크루즈·오로라·포니AI·디디) 9개 자산에 역할 CHR을 정의했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_291",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002598"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1422",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002599"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1449",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002600"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1446",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002601"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1449",
+      "to": "A_1204",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002605"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_671",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002606"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_138",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002607"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_141",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002608"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_1450",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002609"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_246",
+      "to": "T_083",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002752"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_033",
+      "to": "T_083",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002753"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "C_1987",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002754"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1422",
+      "to": "C_1988",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002755"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1449",
+      "to": "C_1989",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002756"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1446",
+      "to": "C_1990",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002757"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1204",
+      "to": "C_1991",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002758"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_671",
+      "to": "C_1992",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002759"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_138",
+      "to": "C_1993",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002760"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_141",
+      "to": "C_1994",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002761"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1450",
+      "to": "C_1995",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002762"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2883",
+      "to": "T_083",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020593"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_291",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002598"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1422",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002599"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1449",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002600"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1446",
+      "to": "T_083",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002601"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1449",
+      "to": "A_1204",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002605"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_671",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002606"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_138",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002607"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_141",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002608"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "A_1450",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_002609"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_246",
+      "to": "T_083",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002752"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_033",
+      "to": "T_083",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002753"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_291",
+      "to": "C_1987",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002754"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1422",
+      "to": "C_1988",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002755"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1449",
+      "to": "C_1989",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002756"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1446",
+      "to": "C_1990",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002757"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1204",
+      "to": "C_1991",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002758"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_671",
+      "to": "C_1992",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002759"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_138",
+      "to": "C_1993",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002760"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_141",
+      "to": "C_1994",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002761"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1450",
+      "to": "C_1995",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002762"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2883",
+      "to": "T_083",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020593"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_083",
-   "type": "THEME",
-   "name": "중국자율주행/라이다_홍콩상장3대주"
-  },
-  {
-   "id": "A_291",
-   "type": "ASSET",
-   "name": "헤사이테크놀로지",
-   "exposure": {
-    "ticker": "HSAI",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.922990444069695,
-    "close": 18.31,
-    "marketCap": 2661075043,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 10.63444108761329,
-    "return_7d": 25.41095890410958,
-    "return_15d": 17.296604740550926,
-    "return_1m": 4.808242701774468,
-    "return_ytd": -23.961794019933556,
-    "return_1y": -2.2423918846769975,
-    "return_2y": 321.889400921659,
-    "return_3y": 37.35933983495874,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1422",
-   "type": "ASSET",
-   "name": "로보센스",
-   "exposure": {
-    "ticker": "2498",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 1.5410958904109595,
-    "close": 23.72,
-    "marketCap": 10958796172,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 7.524932003626472,
-    "return_7d": 7.524932003626472,
-    "return_15d": 6.943192064923354,
-    "return_1m": 1.6281062553556103,
-    "return_ytd": -36.40750670241286,
-    "return_1y": -27.90273556231003,
-    "return_2y": 44.10692588092344,
-    "return_3y": 1156.26423690205,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1449",
-   "type": "ASSET",
-   "name": "세욘드",
-   "exposure": {
-    "ticker": "2665",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 9.053497942386812,
-    "close": 2.65,
-    "marketCap": 3466330271,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 15.217391304347828,
-    "return_7d": 15.720524017467241,
-    "return_15d": -1.486988847583648,
-    "return_1m": -13.398692810457524,
-    "return_ytd": -74.39613526570048,
-    "return_1y": -72.25130890052355,
-    "return_2y": -65.80645161290323,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1446",
-   "type": "ASSET",
-   "name": "헤사이그룹",
-   "exposure": {
-    "ticker": "2525",
-    "exchange": "HKEX",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": 4.499100179964,
-    "close": 17.42,
-    "marketCap": 21771934306,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 9.76685570258351,
-    "return_7d": 13.93067364290388,
-    "return_15d": 14.907651715039583,
-    "return_1m": 3.7522334723049555,
-    "return_ytd": -22.852081488042497,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1204",
-   "type": "ASSET",
-   "name": "NIO",
-   "exposure": {
-    "ticker": "NIO",
-    "exchange": "NYSE",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": -1.039501039501034,
-    "close": 4.765,
-    "marketCap": 11822493767,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.6528925619834767,
-    "return_7d": 6.013363028953211,
-    "return_15d": -4.990019960079839,
-    "return_1m": -5.179282868525892,
-    "return_ytd": -7.392996108949412,
-    "return_1y": -4.990019960079839,
-    "return_2y": 7.692307692307687,
-    "return_3y": -67.70691994572591,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_671",
-   "type": "ASSET",
-   "name": "크루즈",
-   "exposure": {
-    "ticker": "272210",
-    "exchange": "KOSPI",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "크루즈는 헤사이 라이다를 채택해 온 로보택시 개발사다"
-  },
-  {
-   "id": "A_138",
-   "type": "ASSET",
-   "name": "오로라이노베이션",
-   "exposure": {
-    "ticker": "AUR",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 6.480117820324005,
-    "close": 7.23,
-    "marketCap": 14179498131,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 15.865384615384626,
-    "return_7d": 21.51260504201682,
-    "return_15d": 17.944535073409472,
-    "return_1m": 6.480117820324005,
-    "return_ytd": 86.82170542635659,
-    "return_1y": 27.96460176991151,
-    "return_2y": 82.57575757575759,
-    "return_3y": 145.08474576271183,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_141",
-   "type": "ASSET",
-   "name": "포니AI",
-   "exposure": {
-    "ticker": "PONY",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.2484472049689601,
-    "close": 8.03,
-    "marketCap": 2837198505,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 1.1335012594458238,
-    "return_7d": 12.622720897615691,
-    "return_15d": 15.53956834532373,
-    "return_1m": 14.714285714285701,
-    "return_ytd": -50.03111387678905,
-    "return_1y": -38.42024539877301,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1450",
-   "type": "ASSET",
-   "name": "디디추싱",
-   "exposure": {
-    "ticker": "DIDIY",
-    "exchange": "OTCMKTS",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": -0.2849002849002802,
-    "close": 3.5,
-    "marketCap": 15776307491,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.6853932584269704,
-    "return_7d": 0.5747126436781658,
-    "return_15d": -3.0470914127423754,
-    "return_1m": -5.1490514905149,
-    "return_ytd": -37.050359712230204,
-    "return_1y": -29.718875502008036,
-    "return_2y": -1.4084507042253502,
-    "return_3y": -9.32642487046632,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_033",
-   "type": "MACRO",
-   "name": "미중패권경쟁"
-  },
-  {
-   "id": "M_246",
-   "type": "MACRO",
-   "name": "자율주행확산"
-  },
-  {
-   "id": "C_1987",
-   "type": "CHARACTER",
-   "name": "차량용라이다출하세계1위"
-  },
-  {
-   "id": "C_1988",
-   "type": "CHARACTER",
-   "name": "ADAS라이다대량양산"
-  },
-  {
-   "id": "C_1989",
-   "type": "CHARACTER",
-   "name": "NIO장거리라이다공급"
-  },
-  {
-   "id": "C_1990",
-   "type": "CHARACTER",
-   "name": "홍콩상장법인"
-  },
-  {
-   "id": "C_1991",
-   "type": "CHARACTER",
-   "name": "중국프리미엄EV라이다탑재"
-  },
-  {
-   "id": "C_1992",
-   "type": "CHARACTER",
-   "name": "로보택시개발사"
-  },
-  {
-   "id": "C_1993",
-   "type": "CHARACTER",
-   "name": "자율주행트럭플랫폼"
-  },
-  {
-   "id": "C_1994",
-   "type": "CHARACTER",
-   "name": "로보택시상용화"
-  },
-  {
-   "id": "C_1995",
-   "type": "CHARACTER",
-   "name": "차량공유로보택시플랫폼"
-  },
-  {
-   "id": "A_2883",
-   "type": "ASSET",
-   "name": "KraneShares Electric Vehicles & Future Mobility Index ETF",
-   "exposure": {
-    "ticker": "KARS",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_291",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002598"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_1422",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002599"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1449",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002600"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1446",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002601"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1449",
-   "to": "A_1204",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002605"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_671",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002606"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_138",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002607"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_141",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002608"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_1450",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002609"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_246",
-   "to": "T_083",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002752"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "M_033",
-   "to": "T_083",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002753"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "C_1987",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002754"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_1422",
-   "to": "C_1988",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002755"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1449",
-   "to": "C_1989",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002756"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1446",
-   "to": "C_1990",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002757"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1204",
-   "to": "C_1991",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002758"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_671",
-   "to": "C_1992",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002759"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_138",
-   "to": "C_1993",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002760"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_141",
-   "to": "C_1994",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002761"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1450",
-   "to": "C_1995",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002762"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2883",
-   "to": "T_083",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020593"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_291",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002598"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_1422",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002599"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1449",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002600"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1446",
-   "to": "T_083",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002601"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1449",
-   "to": "A_1204",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002605"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_671",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002606"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_138",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002607"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_141",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002608"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "A_1450",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_002609"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_246",
-   "to": "T_083",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002752"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "M_033",
-   "to": "T_083",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002753"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_291",
-   "to": "C_1987",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002754"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_1422",
-   "to": "C_1988",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002755"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1449",
-   "to": "C_1989",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002756"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1446",
-   "to": "C_1990",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002757"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1204",
-   "to": "C_1991",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002758"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_671",
-   "to": "C_1992",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002759"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_138",
-   "to": "C_1993",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002760"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_141",
-   "to": "C_1994",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002761"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1450",
-   "to": "C_1995",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002762"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2883",
-   "to": "T_083",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020593"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

@@ -1,939 +1,957 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_186",
- "themeName": "K-손해보험",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_186",
+  "themeName": "K-손해보험",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-04-27T00:00:00+09:00",
+    "notes": "g186 누적 import 기반 K-손해보험 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "자산 4개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필 + 2026 이벤트",
+        "detail": "전 엣지 근거를 종목·관계 사실로 구체화했다. 2026 이벤트 2건을 추가했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_186",
+      "type": "THEME",
+      "name": "K-손해보험"
+    },
+    {
+      "id": "A_1220",
+      "type": "ASSET",
+      "name": "삼성화재",
+      "exposure": {
+        "ticker": "000810",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.741935483870961,
+        "close": 637000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.7911392405063333,
+        "return_7d": -1.2403100775193798,
+        "return_15d": 1.4331210191082855,
+        "return_1m": -5.489614243323437,
+        "return_ytd": 33.48101359755245,
+        "return_1y": 43.28307507850173,
+        "return_2y": 89.47934875851456,
+        "return_3y": 175.54479418886197,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1221",
+      "type": "ASSET",
+      "name": "현대해상",
+      "exposure": {
+        "ticker": "001450",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -0.27173913043477826,
+        "close": 36700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -4.551365409622887,
+        "return_7d": -7.672955974842766,
+        "return_15d": -1.3440860215053752,
+        "return_1m": 0.0,
+        "return_ytd": 20.130932896890343,
+        "return_1y": 35.174953959484355,
+        "return_2y": 8.579881656804744,
+        "return_3y": 15.545590433482804,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1222",
+      "type": "ASSET",
+      "name": "DB손해보험",
+      "exposure": {
+        "ticker": "005830",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.5167958656330685,
+        "close": 155600,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -0.8917197452229297,
+        "return_7d": -4.773561811505511,
+        "return_15d": -3.354037267080745,
+        "return_1m": 6.6483893077450285,
+        "return_ytd": 26.698333552615374,
+        "return_1y": 21.016793960143907,
+        "return_2y": 57.17568911251536,
+        "return_3y": 107.38255033557044,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1223",
+      "type": "ASSET",
+      "name": "KB손해보험",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "KB손해보험은 손해보험 메이저4의 일원이다"
+    },
+    {
+      "id": "A_1224",
+      "type": "ASSET",
+      "name": "메리츠화재",
+      "exposure": {
+        "ticker": "000060",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": 0.0,
+        "return_7d": 0.0,
+        "return_15d": null,
+        "return_1m": -6.690777576853524,
+        "return_ytd": 6.6115702479338845,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-05-22",
+        "returnsSource": "PYKRX"
+      }
+    },
+    {
+      "id": "A_1225",
+      "type": "ASSET",
+      "name": "한화손해보험",
+      "exposure": {
+        "ticker": "000370",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.430555555555558,
+        "close": 5900,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 4.240282685512375,
+        "return_7d": 0.5110732538330387,
+        "return_15d": 2.60869565217392,
+        "return_1m": -0.33783783783783994,
+        "return_ytd": 7.272727272727275,
+        "return_1y": -9.230769230769232,
+        "return_2y": 13.461538461538458,
+        "return_3y": 67.99065420560748,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1226",
+      "type": "ASSET",
+      "name": "롯데손해보험",
+      "exposure": {
+        "ticker": "000400",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.135776974703151,
+        "close": 1959,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 2.942722017866517,
+        "return_7d": -7.811764705882352,
+        "return_15d": -16.638297872340424,
+        "return_1m": -6.043165467625899,
+        "return_ytd": 12.650948821161577,
+        "return_1y": 3.7605932203389925,
+        "return_2y": -27.71217712177122,
+        "return_3y": 45.7516339869281,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1227",
+      "type": "ASSET",
+      "name": "흥국화재",
+      "exposure": {
+        "ticker": "000540",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -0.4672897196261627,
+        "close": 3195,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 1.4285714285714235,
+        "return_7d": -0.31201248049922414,
+        "return_15d": 1.267828843106189,
+        "return_1m": -1.8433179723502335,
+        "return_ytd": -10.378681626928476,
+        "return_1y": -33.298538622129435,
+        "return_2y": -28.84187082405345,
+        "return_3y": 22.39263803680982,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1228",
+      "type": "ASSET",
+      "name": "코리안리",
+      "exposure": {
+        "ticker": "003690",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.6550218340611424,
+        "close": 13830,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.43572984749455923,
+        "return_7d": -0.8602150537634357,
+        "return_15d": 0.5818181818181722,
+        "return_1m": 1.6911764705882293,
+        "return_ytd": 25.310341298887984,
+        "return_1y": 31.228721945922878,
+        "return_2y": 131.59421705723392,
+        "return_3y": 176.46610814927647,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "M_072",
+      "type": "MACRO",
+      "name": "금리인상"
+    },
+    {
+      "id": "M_172",
+      "type": "MACRO",
+      "name": "차량운행감소"
+    },
+    {
+      "id": "M_173",
+      "type": "MACRO",
+      "name": "주주환원정책"
+    },
+    {
+      "id": "C_122",
+      "type": "CHARACTER",
+      "name": "고배당"
+    },
+    {
+      "id": "C_134",
+      "type": "CHARACTER",
+      "name": "메이저4"
+    },
+    {
+      "id": "C_3029",
+      "type": "CHARACTER",
+      "name": "고효율화재"
+    },
+    {
+      "id": "C_3030",
+      "type": "CHARACTER",
+      "name": "한화계열손보"
+    },
+    {
+      "id": "C_3031",
+      "type": "CHARACTER",
+      "name": "사모펀드보유손보"
+    },
+    {
+      "id": "C_3032",
+      "type": "CHARACTER",
+      "name": "중소형손보"
+    },
+    {
+      "id": "A_2897",
+      "type": "ASSET",
+      "name": "KODEX 보험",
+      "exposure": {
+        "ticker": "140700",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.7662517289073207,
+        "return_3d": -1.2755779962795644,
+        "return_7d": -3.4748995562062013,
+        "return_15d": -1.1143762975477367,
+        "return_1m": -6.034929065451788,
+        "return_ytd": 48.45510781477278,
+        "return_1y": 58.961352768215036,
+        "return_2y": 102.21075631895822,
+        "return_3y": null,
+        "close": 18575,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-04-27T00:00:00+09:00",
-  "notes": "g186 누적 import 기반 K-손해보험 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "보강",
-    "title": "자산별 테마관점 CHR 정의",
-    "detail": "자산 4개에 테마 관점 특성(CHARACTER)·HAS_TRAIT를 부여했다."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필 + 2026 이벤트",
-    "detail": "전 엣지 근거를 종목·관계 사실로 구체화했다. 2026 이벤트 2건을 추가했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1220",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005749"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1221",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005750"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1222",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005751"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1223",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005752"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1224",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005753"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1225",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005754"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1226",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005755"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1227",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005756"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1228",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005757"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_072",
+      "to": "T_186",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005758"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_172",
+      "to": "T_186",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005759"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_173",
+      "to": "T_186",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005760"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1228",
+      "to": "C_122",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005761"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1220",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005762"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1221",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005763"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1222",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005764"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1223",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005765"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1224",
+      "to": "C_3029",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005872"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1225",
+      "to": "C_3030",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005873"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1226",
+      "to": "C_3031",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005874"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1227",
+      "to": "C_3032",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005875"
+      ],
+      "confidence": 0.64,
+      "status": "verified"
+    },
+    {
+      "from": "A_1220",
+      "to": "A_1221",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019262"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성화재와 현대해상는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1220",
+      "to": "A_1222",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019263"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성화재와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1221",
+      "to": "A_1222",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019264"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "현대해상와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1224",
+      "to": "A_1220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019265"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메리츠화재와 삼성화재는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1228",
+      "to": "A_1220",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019266"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "코리안리와 삼성화재는 K-손해보험 내 제휴·협력 관계"
+    },
+    {
+      "from": "A_1225",
+      "to": "A_1226",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019267"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화손해보험와 롯데손해보험는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2897",
+      "to": "T_186",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020638"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1220",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005749"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1221",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005750"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1222",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005751"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1223",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005752"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_1224",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005753"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1225",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005754"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1226",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005755"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1227",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005756"
+      ],
+      "confidence": 0.68,
+      "status": "verified"
+    },
+    {
+      "from": "A_1228",
+      "to": "T_186",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_005757"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "M_072",
+      "to": "T_186",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005758"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_172",
+      "to": "T_186",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005759"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_173",
+      "to": "T_186",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_005760"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1228",
+      "to": "C_122",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005761"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1220",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005762"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1221",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005763"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1222",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005764"
+      ],
+      "confidence": 0.74,
+      "status": "verified"
+    },
+    {
+      "from": "A_1223",
+      "to": "C_134",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005765"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1224",
+      "to": "C_3029",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005872"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1225",
+      "to": "C_3030",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005873"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1226",
+      "to": "C_3031",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005874"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_1227",
+      "to": "C_3032",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_005875"
+      ],
+      "confidence": 0.64,
+      "status": "verified"
+    },
+    {
+      "from": "A_1220",
+      "to": "A_1221",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019262"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성화재와 현대해상는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1220",
+      "to": "A_1222",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019263"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성화재와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1221",
+      "to": "A_1222",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019264"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "현대해상와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1224",
+      "to": "A_1220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019265"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메리츠화재와 삼성화재는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_1228",
+      "to": "A_1220",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019266"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "코리안리와 삼성화재는 K-손해보험 내 제휴·협력 관계"
+    },
+    {
+      "from": "A_1225",
+      "to": "A_1226",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019267"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "한화손해보험와 롯데손해보험는 K-손해보험 내 직접 경쟁 관계"
+    },
+    {
+      "from": "A_2897",
+      "to": "T_186",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020638"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_186",
-   "type": "THEME",
-   "name": "K-손해보험"
-  },
-  {
-   "id": "A_1220",
-   "type": "ASSET",
-   "name": "삼성화재",
-   "exposure": {
-    "ticker": "000810",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.741935483870961,
-    "close": 637000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.7911392405063333,
-    "return_7d": -1.2403100775193798,
-    "return_15d": 1.4331210191082855,
-    "return_1m": -5.489614243323437,
-    "return_ytd": 33.48101359755245,
-    "return_1y": 43.28307507850173,
-    "return_2y": 89.47934875851456,
-    "return_3y": 175.54479418886197,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1221",
-   "type": "ASSET",
-   "name": "현대해상",
-   "exposure": {
-    "ticker": "001450",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -0.27173913043477826,
-    "close": 36700,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -4.551365409622887,
-    "return_7d": -7.672955974842766,
-    "return_15d": -1.3440860215053752,
-    "return_1m": 0.0,
-    "return_ytd": 20.130932896890343,
-    "return_1y": 35.174953959484355,
-    "return_2y": 8.579881656804744,
-    "return_3y": 15.545590433482804,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1222",
-   "type": "ASSET",
-   "name": "DB손해보험",
-   "exposure": {
-    "ticker": "005830",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.5167958656330685,
-    "close": 155600,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -0.8917197452229297,
-    "return_7d": -4.773561811505511,
-    "return_15d": -3.354037267080745,
-    "return_1m": 6.6483893077450285,
-    "return_ytd": 26.698333552615374,
-    "return_1y": 21.016793960143907,
-    "return_2y": 57.17568911251536,
-    "return_3y": 107.38255033557044,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1223",
-   "type": "ASSET",
-   "name": "KB손해보험",
-   "exposure": {
-    "ticker": "",
-    "exchange": "",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": null,
-    "returnsSource": null
-   },
-   "coreBiz": "KB손해보험은 손해보험 메이저4의 일원이다"
-  },
-  {
-   "id": "A_1224",
-   "type": "ASSET",
-   "name": "메리츠화재",
-   "exposure": {
-    "ticker": "000060",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": 0.0,
-    "return_7d": 0.0,
-    "return_15d": null,
-    "return_1m": -6.690777576853524,
-    "return_ytd": 6.6115702479338845,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-05-22",
-    "returnsSource": "PYKRX"
-   }
-  },
-  {
-   "id": "A_1225",
-   "type": "ASSET",
-   "name": "한화손해보험",
-   "exposure": {
-    "ticker": "000370",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.430555555555558,
-    "close": 5900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 4.240282685512375,
-    "return_7d": 0.5110732538330387,
-    "return_15d": 2.60869565217392,
-    "return_1m": -0.33783783783783994,
-    "return_ytd": 7.272727272727275,
-    "return_1y": -9.230769230769232,
-    "return_2y": 13.461538461538458,
-    "return_3y": 67.99065420560748,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1226",
-   "type": "ASSET",
-   "name": "롯데손해보험",
-   "exposure": {
-    "ticker": "000400",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.135776974703151,
-    "close": 1959,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 2.942722017866517,
-    "return_7d": -7.811764705882352,
-    "return_15d": -16.638297872340424,
-    "return_1m": -6.043165467625899,
-    "return_ytd": 12.650948821161577,
-    "return_1y": 3.7605932203389925,
-    "return_2y": -27.71217712177122,
-    "return_3y": 45.7516339869281,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1227",
-   "type": "ASSET",
-   "name": "흥국화재",
-   "exposure": {
-    "ticker": "000540",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -0.4672897196261627,
-    "close": 3195,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 1.4285714285714235,
-    "return_7d": -0.31201248049922414,
-    "return_15d": 1.267828843106189,
-    "return_1m": -1.8433179723502335,
-    "return_ytd": -10.378681626928476,
-    "return_1y": -33.298538622129435,
-    "return_2y": -28.84187082405345,
-    "return_3y": 22.39263803680982,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1228",
-   "type": "ASSET",
-   "name": "코리안리",
-   "exposure": {
-    "ticker": "003690",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.6550218340611424,
-    "close": 13830,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.43572984749455923,
-    "return_7d": -0.8602150537634357,
-    "return_15d": 0.5818181818181722,
-    "return_1m": 1.6911764705882293,
-    "return_ytd": 25.310341298887984,
-    "return_1y": 31.228721945922878,
-    "return_2y": 131.59421705723392,
-    "return_3y": 176.46610814927647,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "M_072",
-   "type": "MACRO",
-   "name": "금리인상"
-  },
-  {
-   "id": "M_172",
-   "type": "MACRO",
-   "name": "차량운행감소"
-  },
-  {
-   "id": "M_173",
-   "type": "MACRO",
-   "name": "주주환원정책"
-  },
-  {
-   "id": "C_122",
-   "type": "CHARACTER",
-   "name": "고배당"
-  },
-  {
-   "id": "C_134",
-   "type": "CHARACTER",
-   "name": "메이저4"
-  },
-  {
-   "id": "C_3029",
-   "type": "CHARACTER",
-   "name": "고효율화재"
-  },
-  {
-   "id": "C_3030",
-   "type": "CHARACTER",
-   "name": "한화계열손보"
-  },
-  {
-   "id": "C_3031",
-   "type": "CHARACTER",
-   "name": "사모펀드보유손보"
-  },
-  {
-   "id": "C_3032",
-   "type": "CHARACTER",
-   "name": "중소형손보"
-  },
-  {
-   "id": "A_2897",
-   "type": "ASSET",
-   "name": "KODEX 보험",
-   "exposure": {
-    "ticker": "140700",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1220",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005749"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1221",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005750"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1222",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005751"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1223",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005752"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1224",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005753"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1225",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005754"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1226",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005755"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1227",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005756"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1228",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005757"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_072",
-   "to": "T_186",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005758"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_172",
-   "to": "T_186",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005759"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_173",
-   "to": "T_186",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005760"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1228",
-   "to": "C_122",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005761"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1220",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005762"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1221",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005763"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1222",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005764"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1223",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005765"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1224",
-   "to": "C_3029",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005872"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1225",
-   "to": "C_3030",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005873"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1226",
-   "to": "C_3031",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005874"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1227",
-   "to": "C_3032",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005875"
-   ],
-   "confidence": 0.64,
-   "status": "verified"
-  },
-  {
-   "from": "A_1220",
-   "to": "A_1221",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019262"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성화재와 현대해상는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1220",
-   "to": "A_1222",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019263"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성화재와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1221",
-   "to": "A_1222",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019264"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "현대해상와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1224",
-   "to": "A_1220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019265"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메리츠화재와 삼성화재는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1228",
-   "to": "A_1220",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019266"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "코리안리와 삼성화재는 K-손해보험 내 제휴·협력 관계"
-  },
-  {
-   "from": "A_1225",
-   "to": "A_1226",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019267"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화손해보험와 롯데손해보험는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2897",
-   "to": "T_186",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020638"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1220",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005749"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1221",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005750"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1222",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005751"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1223",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005752"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_1224",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005753"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1225",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005754"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1226",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005755"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1227",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005756"
-   ],
-   "confidence": 0.68,
-   "status": "verified"
-  },
-  {
-   "from": "A_1228",
-   "to": "T_186",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_005757"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "M_072",
-   "to": "T_186",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005758"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_172",
-   "to": "T_186",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005759"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_173",
-   "to": "T_186",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_005760"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1228",
-   "to": "C_122",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005761"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1220",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005762"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1221",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005763"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1222",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005764"
-   ],
-   "confidence": 0.74,
-   "status": "verified"
-  },
-  {
-   "from": "A_1223",
-   "to": "C_134",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005765"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1224",
-   "to": "C_3029",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005872"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1225",
-   "to": "C_3030",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005873"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1226",
-   "to": "C_3031",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005874"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_1227",
-   "to": "C_3032",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_005875"
-   ],
-   "confidence": 0.64,
-   "status": "verified"
-  },
-  {
-   "from": "A_1220",
-   "to": "A_1221",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019262"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성화재와 현대해상는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1220",
-   "to": "A_1222",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019263"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성화재와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1221",
-   "to": "A_1222",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019264"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "현대해상와 DB손해보험는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1224",
-   "to": "A_1220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019265"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메리츠화재와 삼성화재는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_1228",
-   "to": "A_1220",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019266"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "코리안리와 삼성화재는 K-손해보험 내 제휴·협력 관계"
-  },
-  {
-   "from": "A_1225",
-   "to": "A_1226",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019267"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "한화손해보험와 롯데손해보험는 K-손해보험 내 직접 경쟁 관계"
-  },
-  {
-   "from": "A_2897",
-   "to": "T_186",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020638"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

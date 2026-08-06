@@ -1,1805 +1,1841 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_025",
- "themeName": "글로벌 메모리 스토리지 HW",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_025",
+  "themeName": "글로벌 메모리 스토리지 HW",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-29T00:00:00+09:00",
+    "notes": "g25 누적 import 기반 T_025 freeze (BF 포함, metrics 포함)",
+    "sources": [],
+    "provenanceSeed": "T_025 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 8건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-29",
+        "kind": "수정",
+        "title": "메모리 과점서사 타격 이벤트 추가",
+        "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_025",
+      "type": "THEME",
+      "name": "글로벌 메모리 스토리지 HW"
+    },
+    {
+      "id": "BF_053",
+      "type": "BUSINESS_FIELD",
+      "name": "NAND"
+    },
+    {
+      "id": "BF_054",
+      "type": "BUSINESS_FIELD",
+      "name": "SSD"
+    },
+    {
+      "id": "BF_055",
+      "type": "BUSINESS_FIELD",
+      "name": "HDD"
+    },
+    {
+      "id": "A_217",
+      "type": "ASSET",
+      "name": "SK하이닉스",
+      "exposure": {
+        "ticker": "000660",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 5.770450221940404,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": -8.149779735682817,
+        "return_15d": -12.807109252483006,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "close": 1668000,
+        "marketCap": 756177209265000,
+        "pe_ttm": 36.93,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -2.9103608847497076,
+        "return_1m": -28.809218950064018,
+        "return_ytd": 146.87700123512815,
+        "return_1y": 522.6654580924242,
+        "return_2y": 624.4750475522314,
+        "return_3y": 2049.501661129568,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_088",
+      "type": "ASSET",
+      "name": "삼성전자",
+      "exposure": {
+        "ticker": "005930",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 2.499999999999991,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": -3.149606299212604,
+        "return_15d": -6.4638783269961975,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "close": 246000,
+        "marketCap": 1281601610113000,
+        "pe_ttm": 43.74,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -6.285714285714283,
+        "return_1m": -22.64150943396226,
+        "return_ytd": 92.04441355881055,
+        "return_1y": 275.125085345341,
+        "return_2y": 192.0399521433893,
+        "return_3y": 343.1818181818182,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_218",
+      "type": "ASSET",
+      "name": "마이크론",
+      "exposure": {
+        "ticker": "MU",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 0.058252209663156584,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": -0.7787158409242378,
+        "return_15d": -1.2263900561772845,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 8.524598131295335,
+        "return_1m": -4.815746286152722,
+        "return_ytd": 183.17481453300363,
+        "return_1y": 728.792799480375,
+        "return_2y": 713.3217993079585,
+        "return_3y": 1151.1416164728955,
+        "close": 893.19,
+        "marketCap": 1008759854100,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_219",
+      "type": "ASSET",
+      "name": "파두",
+      "exposure": {
+        "ticker": "440110",
+        "exchange": "KOSDAQ",
+        "country": "KR",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 7.431340872374803,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "KRW",
+        "last_price": null,
+        "return_7d": 2.4653312788905923,
+        "return_15d": -6.732117812061711,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "close": 66500,
+        "marketCap": 2965624844100,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 4.889589905362768,
+        "return_1m": -8.402203856749313,
+        "return_ytd": 140.94202898550722,
+        "return_1y": 504.54545454545456,
+        "return_2y": 270.06121313299946,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_220",
+      "type": "ASSET",
+      "name": "샌디스크",
+      "exposure": {
+        "ticker": "SNDK",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": -5.401997730488494,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 5.653912050257004,
+        "return_15d": -16.377708978328176,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 11.167817719351692,
+        "return_1m": -16.51727761636892,
+        "return_ytd": 390.66269437581747,
+        "return_1y": 3076.899553046342,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 1350.5,
+        "marketCap": 199995207375,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_221",
+      "type": "ASSET",
+      "name": "웨스턴디지털",
+      "exposure": {
+        "ticker": "WDC",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": -5.357663701327109,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 4.267753856041123,
+        "return_15d": 1.0372878717110234,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -4.711474928419368,
+        "return_1m": -2.429994361962051,
+        "return_ytd": 176.59563132658496,
+        "return_1y": 571.7169103376891,
+        "return_2y": 924.8124753257008,
+        "return_3y": 1514.334577114428,
+        "close": 519.17,
+        "marketCap": 178948553940,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_222",
+      "type": "ASSET",
+      "name": "퓨어스토리지",
+      "exposure": {
+        "ticker": "PSTG",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 2.6696023118205625,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 6.585714285714284,
+        "return_15d": 2.1495071193866178,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -0.12048192771084709,
+        "return_1m": -1.8676838090227577,
+        "return_ytd": 8.114765975945515,
+        "return_1y": 42.467061294634334,
+        "return_2y": 9.238653001464137,
+        "return_3y": 103.85245901639344,
+        "close": 86.22,
+        "marketCap": 28492341385,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_223",
+      "type": "ASSET",
+      "name": "씨게이트테크놀로지",
+      "exposure": {
+        "ticker": "STX",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": -0.9096823800792686,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 2.530018727279404,
+        "return_15d": 1.1300253531329352,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -2.157382640486849,
+        "return_1m": 1.2106713063650743,
+        "return_ytd": 191.3194685956736,
+        "return_1y": 441.08907693301467,
+        "return_2y": 719.8688460409121,
+        "return_3y": 1219.1496062992126,
+        "close": 837.66,
+        "marketCap": 187827664140,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_224",
+      "type": "ASSET",
+      "name": "레노보",
+      "exposure": {
+        "ticker": "0992",
+        "exchange": "HKEX",
+        "country": "HK",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 4.451510333863284,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "HKD",
+        "last_price": null,
+        "return_7d": 8.059210526315796,
+        "return_15d": 10.142497904442592,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 10.142497904442592,
+        "return_1m": 25.86206896551726,
+        "return_ytd": 175.1832460732984,
+        "return_1y": 149.80988593155894,
+        "return_2y": 165.45454545454547,
+        "return_3y": 206.65110851808635,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "close": 26.28,
+        "marketCap": 325994446457,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP"
+      }
+    },
+    {
+      "id": "A_225",
+      "type": "ASSET",
+      "name": "도시바",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "JP",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": null,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "JPY",
+        "last_price": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "스토리지 HDD"
+    },
+    {
+      "id": "A_192",
+      "type": "ASSET",
+      "name": "마벨테크놀로지",
+      "exposure": {
+        "ticker": "MRVL",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": -3.463104442106224,
+        "asof": "2026-02-13T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 11.550457260665015,
+        "return_15d": 2.3077668961505093,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 12.50799744081894,
+        "return_1m": -8.530559167750319,
+        "return_ytd": 136.06667412462247,
+        "return_1y": 175.73500588004705,
+        "return_2y": 215.04926843833977,
+        "return_3y": 223.9981575310917,
+        "close": 211.02,
+        "marketCap": 184804141320,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_1571",
+      "type": "ASSET",
+      "name": "창신메모리테크놀로지",
+      "exposure": {
+        "ticker": "688825",
+        "exchange": "SSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": -1.272727272727281,
+        "close": 54.3,
+        "marketCap": 244515017700,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.611450806003333,
+        "return_7d": 10.81632653061224,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": 10.81632653061224,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "중국 DRAM"
+    },
+    {
+      "id": "A_1572",
+      "type": "ASSET",
+      "name": "양쯔메모리테크놀로지",
+      "exposure": {
+        "ticker": "TBD_YMTC",
+        "exchange": "SSE",
+        "country": "CN"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "중국 NAND"
+    },
+    {
+      "id": "A_1650",
+      "type": "ASSET",
+      "name": "난야테크놀로지",
+      "exposure": {
+        "ticker": "2408",
+        "exchange": "TWSE",
+        "country": "TW",
+        "business_desc": "Nanya Technology — 대만 DRAM·HBM 신사업 진입 검토",
+        "theme_role": "대만 DRAM 대표주 (HBM 밸류체인 + 메모리 HW)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": 2.064220183486243,
+        "close": 445.0,
+        "marketCap": 1378889415500,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 23.43966712898751,
+        "return_7d": 2.064220183486243,
+        "return_15d": -7.484407484407485,
+        "return_1m": 5.826397146254458,
+        "return_ytd": 114.97584541062804,
+        "return_1y": 933.6817653890826,
+        "return_2y": 549.6350364963504,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "대만 DRAM"
+    },
+    {
+      "id": "M_056",
+      "type": "MACRO",
+      "name": "메모리가격상승"
+    },
+    {
+      "id": "M_186",
+      "type": "MACRO",
+      "name": "DRAMCAPEX"
+    },
+    {
+      "id": "M_103",
+      "type": "MACRO",
+      "name": "AI서버"
+    },
+    {
+      "id": "C_5251",
+      "type": "CHARACTER",
+      "name": "HBM·DRAM선두"
+    },
+    {
+      "id": "C_5252",
+      "type": "CHARACTER",
+      "name": "DRAM/NAND종합"
+    },
+    {
+      "id": "C_5253",
+      "type": "CHARACTER",
+      "name": "DRAM/NAND미국"
+    },
+    {
+      "id": "C_5254",
+      "type": "CHARACTER",
+      "name": "SSD컨트롤러"
+    },
+    {
+      "id": "C_5255",
+      "type": "CHARACTER",
+      "name": "NAND플래시"
+    },
+    {
+      "id": "C_5256",
+      "type": "CHARACTER",
+      "name": "HDD/NAND스토리지"
+    },
+    {
+      "id": "C_5257",
+      "type": "CHARACTER",
+      "name": "올플래시어레이"
+    },
+    {
+      "id": "C_5258",
+      "type": "CHARACTER",
+      "name": "HDD스토리지"
+    },
+    {
+      "id": "C_5259",
+      "type": "CHARACTER",
+      "name": "서버스토리지시스템"
+    },
+    {
+      "id": "C_5260",
+      "type": "CHARACTER",
+      "name": "스토리지HDD"
+    },
+    {
+      "id": "C_5261",
+      "type": "CHARACTER",
+      "name": "스토리지컨트롤러"
+    },
+    {
+      "id": "C_5262",
+      "type": "CHARACTER",
+      "name": "중국DRAM"
+    },
+    {
+      "id": "C_5263",
+      "type": "CHARACTER",
+      "name": "중국NAND"
+    },
+    {
+      "id": "C_5264",
+      "type": "CHARACTER",
+      "name": "대만DRAM"
+    },
+    {
+      "id": "A_2869",
+      "type": "ASSET",
+      "name": "TIGER 반도체TOP10",
+      "exposure": {
+        "ticker": "396500",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 4.630344188918034,
+        "return_3d": -1.3820192027931388,
+        "return_7d": -3.4330484330484357,
+        "return_15d": -9.96148226856156,
+        "return_1m": -23.831460674157302,
+        "return_ytd": 56.82820060782343,
+        "return_1y": 191.61426550316114,
+        "return_2y": 140.10157100451966,
+        "return_3y": null,
+        "close": 33895,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_200",
+      "type": "ASSET",
+      "name": "iShares Semiconductor ETF",
+      "exposure": {
+        "ticker": "SOXX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.1227937514984974,
+        "return_3d": 5.1120045950603155,
+        "return_7d": 2.8030141603548886,
+        "return_15d": -4.424874385434096,
+        "return_1m": -3.8046729141365643,
+        "return_ytd": 69.17976346074151,
+        "return_1y": 120.75707154742096,
+        "return_2y": 125.465205200102,
+        "return_3y": 197.42756262960265,
+        "close": 530.7,
+        "marketCap": 47046285935,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-29T00:00:00+09:00",
-  "notes": "g25 누적 import 기반 T_025 freeze (BF 포함, metrics 포함)",
-  "sources": [],
-  "provenanceSeed": "T_025 공개사실 시드(2026-06-29) — evidence_ssot 참조",
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 8건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-29",
-    "kind": "수정",
-    "title": "메모리 과점서사 타격 이벤트 추가",
-    "detail": "CXMT 홍콩 IPO·DUV 자체생산 돌파구→중국 AI 반도체 자급 가속 우려·시장 폭락 반영."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "자산 CHR 백필",
-    "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_217",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000824"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000825"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000826"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000827"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000828"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000829"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000830"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000831"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000832"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000833"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000834"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "BF_053",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000835"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "BF_053",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000836"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "BF_053",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000837"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000838"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000839"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000840"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000841"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000842"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000843"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000844"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000845"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000846"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000847"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000848"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000849"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000850"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1650",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000851"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_056",
+      "to": "T_025",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_000852"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_186",
+      "to": "T_025",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_000853"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_103",
+      "to": "T_025",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_000854"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_5251",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014194"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_5252",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014195"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "C_5253",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "C_5254",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "C_5255",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "C_5256",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014199"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "C_5257",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014200"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "C_5258",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014201"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "C_5259",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014202"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "C_5260",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014203"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5261",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014204"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "C_5262",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014205"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "C_5263",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014206"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1650",
+      "to": "C_5264",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014207"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "A_218",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018976"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK하이닉스와 마이크론은 DRAM·HBM 시장 직접 경쟁"
+    },
+    {
+      "from": "A_088",
+      "to": "A_218",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018977"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전자와 마이크론은 DRAM·낸드 시장 직접 경쟁"
+    },
+    {
+      "from": "A_088",
+      "to": "A_217",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018978"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전자와 SK하이닉스는 DRAM·HBM·낸드 전 부문 직접 경쟁"
+    },
+    {
+      "from": "A_221",
+      "to": "A_220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018979"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨스턴디지털과 샌디스크는 낸드 플래시 시장 경쟁"
+    },
+    {
+      "from": "A_221",
+      "to": "A_223",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018980"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨스턴디지털과 씨게이트는 HDD 시장 양대 경쟁"
+    },
+    {
+      "from": "A_1571",
+      "to": "A_217",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018981"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "창신메모리(CXMT)는 중국 DRAM 굴기로 SK하이닉스와 경쟁"
+    },
+    {
+      "from": "A_1572",
+      "to": "A_088",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018982"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "양쯔메모리(YMTC)는 낸드 플래시 시장에서 삼성전자와 경쟁"
+    },
+    {
+      "from": "A_222",
+      "to": "A_223",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018983"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "퓨어스토리지와 씨게이트는 엔터프라이즈 스토리지 시장 경쟁"
+    },
+    {
+      "from": "A_2869",
+      "to": "T_025",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020561"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_200",
+      "to": "T_025",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020562"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_217",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000824"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000825"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000826"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000827"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000828"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000829"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000830"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000831"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000832"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000833"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000834"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "BF_053",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000835"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "BF_053",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000836"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "BF_053",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000837"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000838"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000839"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000840"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000841"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000842"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000843"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "BF_054",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000844"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000845"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000846"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000847"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "BF_055",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000848"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000849"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000850"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1650",
+      "to": "T_025",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_000851"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_056",
+      "to": "T_025",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_000852"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_186",
+      "to": "T_025",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_000853"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_103",
+      "to": "T_025",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_000854"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "C_5251",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014194"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_088",
+      "to": "C_5252",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014195"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_218",
+      "to": "C_5253",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_219",
+      "to": "C_5254",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_220",
+      "to": "C_5255",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_221",
+      "to": "C_5256",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014199"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_222",
+      "to": "C_5257",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014200"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_223",
+      "to": "C_5258",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014201"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_224",
+      "to": "C_5259",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014202"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_225",
+      "to": "C_5260",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014203"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_5261",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014204"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1571",
+      "to": "C_5262",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014205"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1572",
+      "to": "C_5263",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014206"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1650",
+      "to": "C_5264",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014207"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_217",
+      "to": "A_218",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018976"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK하이닉스와 마이크론은 DRAM·HBM 시장 직접 경쟁"
+    },
+    {
+      "from": "A_088",
+      "to": "A_218",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018977"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전자와 마이크론은 DRAM·낸드 시장 직접 경쟁"
+    },
+    {
+      "from": "A_088",
+      "to": "A_217",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018978"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전자와 SK하이닉스는 DRAM·HBM·낸드 전 부문 직접 경쟁"
+    },
+    {
+      "from": "A_221",
+      "to": "A_220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018979"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨스턴디지털과 샌디스크는 낸드 플래시 시장 경쟁"
+    },
+    {
+      "from": "A_221",
+      "to": "A_223",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018980"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨스턴디지털과 씨게이트는 HDD 시장 양대 경쟁"
+    },
+    {
+      "from": "A_1571",
+      "to": "A_217",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018981"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "창신메모리(CXMT)는 중국 DRAM 굴기로 SK하이닉스와 경쟁"
+    },
+    {
+      "from": "A_1572",
+      "to": "A_088",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018982"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "양쯔메모리(YMTC)는 낸드 플래시 시장에서 삼성전자와 경쟁"
+    },
+    {
+      "from": "A_222",
+      "to": "A_223",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018983"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "퓨어스토리지와 씨게이트는 엔터프라이즈 스토리지 시장 경쟁"
+    },
+    {
+      "from": "A_2869",
+      "to": "T_025",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020561"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_200",
+      "to": "T_025",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020562"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_025",
-   "type": "THEME",
-   "name": "글로벌 메모리 스토리지 HW"
-  },
-  {
-   "id": "BF_053",
-   "type": "BUSINESS_FIELD",
-   "name": "NAND"
-  },
-  {
-   "id": "BF_054",
-   "type": "BUSINESS_FIELD",
-   "name": "SSD"
-  },
-  {
-   "id": "BF_055",
-   "type": "BUSINESS_FIELD",
-   "name": "HDD"
-  },
-  {
-   "id": "A_217",
-   "type": "ASSET",
-   "name": "SK하이닉스",
-   "exposure": {
-    "ticker": "000660",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 5.770450221940404,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "KRW",
-    "last_price": null,
-    "return_7d": -8.149779735682817,
-    "return_15d": -12.807109252483006,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "close": 1668000,
-    "marketCap": 756177209265000,
-    "pe_ttm": 36.93,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -2.9103608847497076,
-    "return_1m": -28.809218950064018,
-    "return_ytd": 146.87700123512815,
-    "return_1y": 522.6654580924242,
-    "return_2y": 624.4750475522314,
-    "return_3y": 2049.501661129568,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_088",
-   "type": "ASSET",
-   "name": "삼성전자",
-   "exposure": {
-    "ticker": "005930",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 2.499999999999991,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "KRW",
-    "last_price": null,
-    "return_7d": -3.149606299212604,
-    "return_15d": -6.4638783269961975,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "close": 246000,
-    "marketCap": 1281601610113000,
-    "pe_ttm": 43.74,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -6.285714285714283,
-    "return_1m": -22.64150943396226,
-    "return_ytd": 92.04441355881055,
-    "return_1y": 275.125085345341,
-    "return_2y": 192.0399521433893,
-    "return_3y": 343.1818181818182,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_218",
-   "type": "ASSET",
-   "name": "마이크론",
-   "exposure": {
-    "ticker": "MU",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 7.615430982519578,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": -3.0707421684130654,
-    "return_15d": -9.200301082268702,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 2.059085816202866,
-    "return_1m": -9.350596598121353,
-    "return_ytd": 183.00995498066067,
-    "return_1y": 751.1346300533944,
-    "return_2y": 770.3880655226209,
-    "return_3y": 1153.75,
-    "close": 892.67,
-    "marketCap": 1008172571300,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_219",
-   "type": "ASSET",
-   "name": "파두",
-   "exposure": {
-    "ticker": "440110",
-    "exchange": "KOSDAQ",
-    "country": "KR",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 7.431340872374803,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "KRW",
-    "last_price": null,
-    "return_7d": 2.4653312788905923,
-    "return_15d": -6.732117812061711,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "close": 66500,
-    "marketCap": 2965624844100,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 4.889589905362768,
-    "return_1m": -8.402203856749313,
-    "return_ytd": 140.94202898550722,
-    "return_1y": 504.54545454545456,
-    "return_2y": 270.06121313299946,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_220",
-   "type": "ASSET",
-   "name": "샌디스크",
-   "exposure": {
-    "ticker": "SNDK",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 10.837480493466757,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": -0.6223199866347451,
-    "return_15d": -18.784630963352335,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 11.536298009312773,
-    "return_1m": -18.161233182185597,
-    "return_ytd": 418.68187763406473,
-    "return_1y": 3354.197919187031,
-    "return_2y": null,
-    "return_3y": null,
-    "close": 1427.62,
-    "marketCap": 211415888895,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_221",
-   "type": "ASSET",
-   "name": "웨스턴디지털",
-   "exposure": {
-    "ticker": "WDC",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 4.047646143924721,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 5.53289726818007,
-    "return_15d": -2.620180359298463,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 2.91160138075941,
-    "return_1m": -5.004675648529789,
-    "return_ytd": 192.25359616409162,
-    "return_1y": 616.6035271064663,
-    "return_2y": 1049.0573942186843,
-    "return_3y": 1627.2040302267,
-    "close": 548.56,
-    "marketCap": 189078757920,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_222",
-   "type": "ASSET",
-   "name": "퓨어스토리지",
-   "exposure": {
-    "ticker": "PSTG",
-    "exchange": "NYSE",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 2.6696023118205625,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 6.585714285714284,
-    "return_15d": 2.1495071193866178,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": -0.12048192771084709,
-    "return_1m": -1.8676838090227577,
-    "return_ytd": 8.114765975945515,
-    "return_1y": 42.467061294634334,
-    "return_2y": 9.238653001464137,
-    "return_3y": 103.85245901639344,
-    "close": 86.22,
-    "marketCap": 28492341385,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_223",
-   "type": "ASSET",
-   "name": "씨게이트테크놀로지",
-   "exposure": {
-    "ticker": "STX",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 1.7194907708228069,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": -0.7444023060033667,
-    "return_15d": -3.7526613610228687,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": -0.7432368964869318,
-    "return_1m": -2.638610554442211,
-    "return_ytd": 193.9938791124713,
-    "return_1y": 446.05645630127253,
-    "return_2y": 753.027245206862,
-    "return_3y": 1232.30890464933,
-    "close": 845.35,
-    "marketCap": 189551985150,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_224",
-   "type": "ASSET",
-   "name": "레노보",
-   "exposure": {
-    "ticker": "0992",
-    "exchange": "HKEX",
-    "country": "HK",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 1.6976556184316927,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "HKD",
-    "last_price": null,
-    "return_7d": 3.3689400164338634,
-    "return_15d": 8.635578583765113,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 15.731370745170192,
-    "return_1m": 22.97165200391007,
-    "return_ytd": 163.45549738219893,
-    "return_1y": 140.99616858237547,
-    "return_2y": 154.6558704453441,
-    "return_3y": 195.6521739130435,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "close": 25.16,
-    "marketCap": 312101228038,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP"
-   }
-  },
-  {
-   "id": "A_225",
-   "type": "ASSET",
-   "name": "도시바",
-   "exposure": {
-    "ticker": "",
-    "exchange": "",
-    "country": "JP",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": null,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "JPY",
-    "last_price": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "returnsAsOf": null,
-    "returnsSource": null
-   },
-   "coreBiz": "스토리지 HDD"
-  },
-  {
-   "id": "A_192",
-   "type": "ASSET",
-   "name": "마벨테크놀로지",
-   "exposure": {
-    "ticker": "MRVL",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 12.803178862627718,
-    "asof": "2026-02-13T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 12.541831848839013,
-    "return_15d": -1.7308038122639813,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 19.252591380250948,
-    "return_1m": -12.307939182412643,
-    "return_ytd": 144.53518290636538,
-    "return_1y": 193.60644728005374,
-    "return_2y": 248.07324840764332,
-    "return_3y": 236.75858881528274,
-    "close": 218.59,
-    "marketCap": 191433689940,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_1571",
-   "type": "ASSET",
-   "name": "창신메모리테크놀로지",
-   "exposure": {
-    "ticker": "688825",
-    "exchange": "SSE",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "중국 DRAM"
-  },
-  {
-   "id": "A_1572",
-   "type": "ASSET",
-   "name": "양쯔메모리테크놀로지",
-   "exposure": {
-    "ticker": "TBD_YMTC",
-    "exchange": "SSE",
-    "country": "CN"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "중국 NAND"
-  },
-  {
-   "id": "A_1650",
-   "type": "ASSET",
-   "name": "난야테크놀로지",
-   "exposure": {
-    "ticker": "2408",
-    "exchange": "TWSE",
-    "country": "TW",
-    "business_desc": "Nanya Technology — 대만 DRAM·HBM 신사업 진입 검토",
-    "theme_role": "대만 DRAM 대표주 (HBM 밸류체인 + 메모리 HW)",
-    "theme_status": "Support"
-   },
-   "metrics": {
-    "return_1d": 9.962168978562413,
-    "close": 436.0,
-    "marketCap": 1351001764400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 32.92682926829269,
-    "return_7d": 8.728179551122196,
-    "return_15d": -2.67857142857143,
-    "return_1m": 6.4713064713064705,
-    "return_ytd": 110.6280193236715,
-    "return_1y": 975.2157829839705,
-    "return_2y": 521.9686162624822,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "대만 DRAM"
-  },
-  {
-   "id": "M_056",
-   "type": "MACRO",
-   "name": "메모리가격상승"
-  },
-  {
-   "id": "M_186",
-   "type": "MACRO",
-   "name": "DRAMCAPEX"
-  },
-  {
-   "id": "M_103",
-   "type": "MACRO",
-   "name": "AI서버"
-  },
-  {
-   "id": "C_5251",
-   "type": "CHARACTER",
-   "name": "HBM·DRAM선두"
-  },
-  {
-   "id": "C_5252",
-   "type": "CHARACTER",
-   "name": "DRAM/NAND종합"
-  },
-  {
-   "id": "C_5253",
-   "type": "CHARACTER",
-   "name": "DRAM/NAND미국"
-  },
-  {
-   "id": "C_5254",
-   "type": "CHARACTER",
-   "name": "SSD컨트롤러"
-  },
-  {
-   "id": "C_5255",
-   "type": "CHARACTER",
-   "name": "NAND플래시"
-  },
-  {
-   "id": "C_5256",
-   "type": "CHARACTER",
-   "name": "HDD/NAND스토리지"
-  },
-  {
-   "id": "C_5257",
-   "type": "CHARACTER",
-   "name": "올플래시어레이"
-  },
-  {
-   "id": "C_5258",
-   "type": "CHARACTER",
-   "name": "HDD스토리지"
-  },
-  {
-   "id": "C_5259",
-   "type": "CHARACTER",
-   "name": "서버스토리지시스템"
-  },
-  {
-   "id": "C_5260",
-   "type": "CHARACTER",
-   "name": "스토리지HDD"
-  },
-  {
-   "id": "C_5261",
-   "type": "CHARACTER",
-   "name": "스토리지컨트롤러"
-  },
-  {
-   "id": "C_5262",
-   "type": "CHARACTER",
-   "name": "중국DRAM"
-  },
-  {
-   "id": "C_5263",
-   "type": "CHARACTER",
-   "name": "중국NAND"
-  },
-  {
-   "id": "C_5264",
-   "type": "CHARACTER",
-   "name": "대만DRAM"
-  },
-  {
-   "id": "A_2869",
-   "type": "ASSET",
-   "name": "TIGER 반도체TOP10",
-   "exposure": {
-    "ticker": "396500",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  },
-  {
-   "id": "A_200",
-   "type": "ASSET",
-   "name": "iShares Semiconductor ETF",
-   "exposure": {
-    "ticker": "SOXX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_217",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000824"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000825"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000826"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_219",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000827"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_220",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000828"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000829"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_222",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000830"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_223",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000831"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_224",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000832"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_225",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000833"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000834"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "BF_053",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000835"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "BF_053",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000836"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "BF_053",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000837"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000838"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000839"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_219",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000840"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_220",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000841"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000842"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_222",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000843"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000844"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000845"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_223",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000846"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_224",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000847"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_225",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000848"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_1571",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000849"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1572",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000850"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1650",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000851"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_056",
-   "to": "T_025",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_000852"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_186",
-   "to": "T_025",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_000853"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_103",
-   "to": "T_025",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_000854"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "C_5251",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014194"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "C_5252",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014195"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "C_5253",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014196"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_219",
-   "to": "C_5254",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014197"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_220",
-   "to": "C_5255",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014198"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "C_5256",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014199"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_222",
-   "to": "C_5257",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014200"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_223",
-   "to": "C_5258",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014201"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_224",
-   "to": "C_5259",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014202"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_225",
-   "to": "C_5260",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014203"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "C_5261",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014204"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1571",
-   "to": "C_5262",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014205"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1572",
-   "to": "C_5263",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014206"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1650",
-   "to": "C_5264",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014207"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "A_218",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018976"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK하이닉스와 마이크론은 DRAM·HBM 시장 직접 경쟁"
-  },
-  {
-   "from": "A_088",
-   "to": "A_218",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018977"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전자와 마이크론은 DRAM·낸드 시장 직접 경쟁"
-  },
-  {
-   "from": "A_088",
-   "to": "A_217",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018978"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전자와 SK하이닉스는 DRAM·HBM·낸드 전 부문 직접 경쟁"
-  },
-  {
-   "from": "A_221",
-   "to": "A_220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018979"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨스턴디지털과 샌디스크는 낸드 플래시 시장 경쟁"
-  },
-  {
-   "from": "A_221",
-   "to": "A_223",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018980"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨스턴디지털과 씨게이트는 HDD 시장 양대 경쟁"
-  },
-  {
-   "from": "A_1571",
-   "to": "A_217",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018981"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "창신메모리(CXMT)는 중국 DRAM 굴기로 SK하이닉스와 경쟁"
-  },
-  {
-   "from": "A_1572",
-   "to": "A_088",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018982"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "양쯔메모리(YMTC)는 낸드 플래시 시장에서 삼성전자와 경쟁"
-  },
-  {
-   "from": "A_222",
-   "to": "A_223",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018983"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "퓨어스토리지와 씨게이트는 엔터프라이즈 스토리지 시장 경쟁"
-  },
-  {
-   "from": "A_2869",
-   "to": "T_025",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020561"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_200",
-   "to": "T_025",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020562"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_217",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000824"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000825"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000826"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_219",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000827"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_220",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000828"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000829"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_222",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000830"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_223",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000831"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_224",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000832"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_225",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000833"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000834"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "BF_053",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000835"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "BF_053",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000836"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "BF_053",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000837"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000838"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000839"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_219",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000840"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_220",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000841"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000842"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_222",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000843"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "BF_054",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000844"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000845"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_223",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000846"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_224",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000847"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_225",
-   "to": "BF_055",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000848"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_1571",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000849"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1572",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000850"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1650",
-   "to": "T_025",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_000851"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_056",
-   "to": "T_025",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_000852"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_186",
-   "to": "T_025",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_000853"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_103",
-   "to": "T_025",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_000854"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "C_5251",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014194"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_088",
-   "to": "C_5252",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014195"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_218",
-   "to": "C_5253",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014196"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_219",
-   "to": "C_5254",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014197"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_220",
-   "to": "C_5255",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014198"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_221",
-   "to": "C_5256",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014199"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_222",
-   "to": "C_5257",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014200"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_223",
-   "to": "C_5258",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014201"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_224",
-   "to": "C_5259",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014202"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_225",
-   "to": "C_5260",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014203"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "C_5261",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014204"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1571",
-   "to": "C_5262",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014205"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1572",
-   "to": "C_5263",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014206"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1650",
-   "to": "C_5264",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014207"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_217",
-   "to": "A_218",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018976"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK하이닉스와 마이크론은 DRAM·HBM 시장 직접 경쟁"
-  },
-  {
-   "from": "A_088",
-   "to": "A_218",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018977"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전자와 마이크론은 DRAM·낸드 시장 직접 경쟁"
-  },
-  {
-   "from": "A_088",
-   "to": "A_217",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018978"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전자와 SK하이닉스는 DRAM·HBM·낸드 전 부문 직접 경쟁"
-  },
-  {
-   "from": "A_221",
-   "to": "A_220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018979"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨스턴디지털과 샌디스크는 낸드 플래시 시장 경쟁"
-  },
-  {
-   "from": "A_221",
-   "to": "A_223",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018980"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨스턴디지털과 씨게이트는 HDD 시장 양대 경쟁"
-  },
-  {
-   "from": "A_1571",
-   "to": "A_217",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018981"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "창신메모리(CXMT)는 중국 DRAM 굴기로 SK하이닉스와 경쟁"
-  },
-  {
-   "from": "A_1572",
-   "to": "A_088",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018982"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "양쯔메모리(YMTC)는 낸드 플래시 시장에서 삼성전자와 경쟁"
-  },
-  {
-   "from": "A_222",
-   "to": "A_223",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018983"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "퓨어스토리지와 씨게이트는 엔터프라이즈 스토리지 시장 경쟁"
-  },
-  {
-   "from": "A_2869",
-   "to": "T_025",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020561"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_200",
-   "to": "T_025",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020562"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

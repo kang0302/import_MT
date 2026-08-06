@@ -1,597 +1,615 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_029",
- "themeName": "미국특수합금",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_029",
+  "themeName": "미국특수합금",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "notes": "g29 누적 import 기반 T_029 freeze",
+    "sources": [],
+    "provenanceSeed": "T_029 공개사실 시드(2026-06-29) — evidence_ssot 참조",
+    "changelog": [
+      {
+        "date": "2026-08-01",
+        "kind": "수정",
+        "title": "상폐 종목 제거+대체 보충",
+        "detail": "피인수/상폐로 거래/링크가 없는 종목 제거. 특수합금 현행주(메탈러스/머티리온) 보충."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_029",
+      "type": "THEME",
+      "name": "미국특수합금"
+    },
+    {
+      "id": "A_117",
+      "type": "ASSET",
+      "name": "Carpenter Technology",
+      "exposure": {
+        "country": "US",
+        "ticker": "CRS",
+        "exchange": "NYSE"
+      },
+      "metrics": {
+        "return_1d": 0.04560363425885061,
+        "last_price": null,
+        "return_7d": -1.6992675570874693,
+        "return_15d": -1.1627101022353203,
+        "return_30d": null,
+        "return_90d": null,
+        "market_cap": null,
+        "per": null,
+        "currency": null,
+        "asof": null,
+        "return_3d": 9.762152176423044,
+        "return_1m": -3.381045142711958,
+        "return_ytd": 68.58485547082817,
+        "return_1y": 125.44168214695071,
+        "return_2y": 291.02625625557,
+        "return_3y": 852.8733711994654,
+        "close": 570.39,
+        "marketCap": 28340169384,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_249",
+      "type": "ASSET",
+      "name": "ATI",
+      "exposure": {
+        "country": "US",
+        "ticker": "ATI",
+        "exchange": "NYSE"
+      },
+      "metrics": {
+        "return_1d": 2.478141393954547,
+        "last_price": null,
+        "return_7d": 6.473214285714302,
+        "return_15d": 5.950720595072068,
+        "return_30d": null,
+        "return_90d": null,
+        "market_cap": null,
+        "per": null,
+        "currency": null,
+        "asof": null,
+        "return_3d": 9.427016645326503,
+        "return_1m": 11.922950998581271,
+        "return_ytd": 72.07214765100672,
+        "return_1y": 171.16604970914858,
+        "return_2y": 202.92423571112099,
+        "return_3y": 330.1803691275168,
+        "close": 205.11,
+        "marketCap": 27991449282,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_137",
+      "type": "ASSET",
+      "name": "스페이스X",
+      "exposure": {
+        "country": "US",
+        "ticker": "SPCX",
+        "exchange": "NASDAQ"
+      },
+      "metrics": {
+        "return_1d": -13.612064150642311,
+        "last_price": null,
+        "return_7d": -4.607929515418507,
+        "return_15d": -19.960079840319366,
+        "return_30d": null,
+        "return_90d": null,
+        "market_cap": null,
+        "per": null,
+        "currency": null,
+        "asof": null,
+        "return_3d": -0.09227646027498704,
+        "return_1m": -27.564059677527265,
+        "return_ytd": -32.73066169617893,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 108.27,
+        "marketCap": 1415723951405,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_023",
+      "type": "MACRO",
+      "name": "휴머노이드확산"
+    },
+    {
+      "id": "M_024",
+      "type": "MACRO",
+      "name": "가스터빈수요증가"
+    },
+    {
+      "id": "M_025",
+      "type": "MACRO",
+      "name": "항공우주산업확대"
+    },
+    {
+      "id": "M_026",
+      "type": "MACRO",
+      "name": "방산수요증가"
+    },
+    {
+      "id": "M_027",
+      "type": "MACRO",
+      "name": "원전확대"
+    },
+    {
+      "id": "C_5289",
+      "type": "CHARACTER",
+      "name": "항공우주특수합금"
+    },
+    {
+      "id": "C_5290",
+      "type": "CHARACTER",
+      "name": "티타늄특수합금"
+    },
+    {
+      "id": "C_5293",
+      "type": "CHARACTER",
+      "name": "발사체특수합금수요"
+    },
+    {
+      "id": "A_2861",
+      "type": "ASSET",
+      "name": "메탈러스",
+      "exposure": {
+        "ticker": "MTUS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.2782931354360141,
+        "close": 21.62,
+        "marketCap": 899993166,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 7.4552683896620175,
+        "return_7d": 3.5936751317680926,
+        "return_15d": 9.801929913661755,
+        "return_1m": 16.424340333871832,
+        "return_ytd": 21.52894884766725,
+        "return_1y": 42.89491077329808,
+        "return_2y": -3.5682426404995526,
+        "return_3y": -7.210300429184546,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "메탈러스(MTUS) - 항공/방산/에너지용 특수강/합금강 제조(구 TimkenSteel, 티커 변경)."
+    },
+    {
+      "id": "C_5884",
+      "type": "CHARACTER",
+      "name": "특수합금강_구TimkenSteel"
+    },
+    {
+      "id": "A_2862",
+      "type": "ASSET",
+      "name": "머티리온",
+      "exposure": {
+        "ticker": "MTRN",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 30.81461911052399,
+        "close": 297.08,
+        "marketCap": 6179705164,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 40.90305444887117,
+        "return_7d": 22.85170788189561,
+        "return_15d": 18.35856573705179,
+        "return_1m": 20.177993527508086,
+        "return_ytd": 131.13669960320547,
+        "return_1y": 181.24585818422796,
+        "return_2y": 146.6827202524288,
+        "return_3y": 149.35370152761456,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "머티리온(MTRN) - 베릴륨/특수합금 등 첨단 특수소재 제조사."
+    },
+    {
+      "id": "C_5885",
+      "type": "CHARACTER",
+      "name": "베릴륨특수소재"
+    },
+    {
+      "id": "A_2870",
+      "type": "ASSET",
+      "name": "SPDR S&P Metals & Mining ETF",
+      "exposure": {
+        "ticker": "XME",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 3.7641386983126246,
+        "return_3d": 11.197218082463989,
+        "return_7d": 8.54427310639123,
+        "return_15d": 8.449612403100781,
+        "return_1m": 9.22221137894017,
+        "return_ytd": 4.082581605133462,
+        "return_1y": 51.63257011245088,
+        "return_2y": 76.33527650858673,
+        "return_3y": 107.6823158285396,
+        "close": 111.92,
+        "marketCap": 4258427068,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "notes": "g29 누적 import 기반 T_029 freeze",
-  "sources": [],
-  "provenanceSeed": "T_029 공개사실 시드(2026-06-29) — evidence_ssot 참조",
-  "changelog": [
-   {
-    "date": "2026-08-01",
-    "kind": "수정",
-    "title": "상폐 종목 제거+대체 보충",
-    "detail": "피인수/상폐로 거래/링크가 없는 종목 제거. 특수합금 현행주(메탈러스/머티리온) 보충."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "자산 CHR 백필",
-    "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "type": "THEMED_AS",
+      "from": "A_117",
+      "to": "T_029",
+      "evidence": [
+        "EV_000915"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "type": "THEMED_AS",
+      "from": "A_249",
+      "to": "T_029",
+      "evidence": [
+        "EV_000916"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_023",
+      "to": "T_029",
+      "evidence": [
+        "EV_000919"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_024",
+      "to": "T_029",
+      "evidence": [
+        "EV_000920"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_025",
+      "to": "T_029",
+      "evidence": [
+        "EV_000921"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_026",
+      "to": "T_029",
+      "evidence": [
+        "EV_000922"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_027",
+      "to": "T_029",
+      "evidence": [
+        "EV_000923"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "type": "SUPPLIES",
+      "from": "A_117",
+      "to": "A_137",
+      "evidence": [
+        "EV_000924"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_117",
+      "to": "C_5289",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014232"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_249",
+      "to": "C_5290",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014233"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5293",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014236"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2861",
+      "to": "T_029",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015500"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2861",
+      "to": "C_5884",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015501"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2862",
+      "to": "T_029",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015502"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2862",
+      "to": "C_5885",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015503"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2870",
+      "to": "T_029",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020566"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "type": "THEMED_AS",
+      "from": "A_117",
+      "to": "T_029",
+      "evidence": [
+        "EV_000915"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "type": "THEMED_AS",
+      "from": "A_249",
+      "to": "T_029",
+      "evidence": [
+        "EV_000916"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_023",
+      "to": "T_029",
+      "evidence": [
+        "EV_000919"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_024",
+      "to": "T_029",
+      "evidence": [
+        "EV_000920"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_025",
+      "to": "T_029",
+      "evidence": [
+        "EV_000921"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_026",
+      "to": "T_029",
+      "evidence": [
+        "EV_000922"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "type": "IMPACTS",
+      "from": "M_027",
+      "to": "T_029",
+      "evidence": [
+        "EV_000923"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "type": "SUPPLIES",
+      "from": "A_117",
+      "to": "A_137",
+      "evidence": [
+        "EV_000924"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_117",
+      "to": "C_5289",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014232"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_249",
+      "to": "C_5290",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014233"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_137",
+      "to": "C_5293",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014236"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2861",
+      "to": "T_029",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015500"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2861",
+      "to": "C_5884",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015501"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2862",
+      "to": "T_029",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015502"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2862",
+      "to": "C_5885",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015503"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2870",
+      "to": "T_029",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020566"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_029",
-   "type": "THEME",
-   "name": "미국특수합금"
-  },
-  {
-   "id": "A_117",
-   "type": "ASSET",
-   "name": "Carpenter Technology",
-   "exposure": {
-    "country": "US",
-    "ticker": "CRS",
-    "exchange": "NYSE"
-   },
-   "metrics": {
-    "return_1d": 4.901654124270904,
-    "last_price": null,
-    "return_7d": -5.559144594079757,
-    "return_15d": -1.1683741570891248,
-    "return_30d": null,
-    "return_90d": null,
-    "market_cap": null,
-    "per": null,
-    "currency": null,
-    "asof": null,
-    "return_3d": 13.186158702427985,
-    "return_1m": -7.932176019378279,
-    "return_ytd": 68.50800969439025,
-    "return_1y": 121.16921405849949,
-    "return_2y": 303.26071580138637,
-    "return_3y": 871.5916837082482,
-    "close": 570.13,
-    "marketCap": 28327251128,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_249",
-   "type": "ASSET",
-   "name": "ATI",
-   "exposure": {
-    "country": "US",
-    "ticker": "ATI",
-    "exchange": "NYSE"
-   },
-   "metrics": {
-    "return_1d": 3.640223695111855,
-    "last_price": null,
-    "return_7d": 1.1880687563195158,
-    "return_15d": 5.653505067567566,
-    "return_30d": null,
-    "return_90d": null,
-    "market_cap": null,
-    "per": null,
-    "currency": null,
-    "asof": null,
-    "return_3d": 10.032985156679498,
-    "return_1m": 4.212225346245968,
-    "return_ytd": 67.91107382550337,
-    "return_1y": 160.88373305526594,
-    "return_2y": 205.24630166234564,
-    "return_3y": 325.76047649436293,
-    "close": 200.15,
-    "marketCap": 27314555964,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_137",
-   "type": "ASSET",
-   "name": "스페이스X",
-   "exposure": {
-    "country": "US",
-    "ticker": "SPCX",
-    "exchange": "NASDAQ"
-   },
-   "metrics": {
-    "return_1d": 9.42984370907185,
-    "last_price": null,
-    "return_7d": 8.916311810202494,
-    "return_15d": -7.899764844209301,
-    "return_30d": null,
-    "return_90d": null,
-    "market_cap": null,
-    "per": null,
-    "currency": null,
-    "asof": null,
-    "return_3d": 11.702317290552578,
-    "return_1m": -21.873831193118065,
-    "return_ytd": -22.131096613855227,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": 125.33,
-    "marketCap": 1638798215846,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_023",
-   "type": "MACRO",
-   "name": "휴머노이드확산"
-  },
-  {
-   "id": "M_024",
-   "type": "MACRO",
-   "name": "가스터빈수요증가"
-  },
-  {
-   "id": "M_025",
-   "type": "MACRO",
-   "name": "항공우주산업확대"
-  },
-  {
-   "id": "M_026",
-   "type": "MACRO",
-   "name": "방산수요증가"
-  },
-  {
-   "id": "M_027",
-   "type": "MACRO",
-   "name": "원전확대"
-  },
-  {
-   "id": "C_5289",
-   "type": "CHARACTER",
-   "name": "항공우주특수합금"
-  },
-  {
-   "id": "C_5290",
-   "type": "CHARACTER",
-   "name": "티타늄특수합금"
-  },
-  {
-   "id": "C_5293",
-   "type": "CHARACTER",
-   "name": "발사체특수합금수요"
-  },
-  {
-   "id": "A_2861",
-   "type": "ASSET",
-   "name": "메탈러스",
-   "exposure": {
-    "ticker": "MTUS",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.427872860635685,
-    "close": 21.56,
-    "marketCap": 897495497,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 8.669354838709676,
-    "return_7d": 2.8135431568907965,
-    "return_15d": 11.70984455958548,
-    "return_1m": 17.237629146275136,
-    "return_ytd": 21.191680719505346,
-    "return_1y": 43.16069057104912,
-    "return_2y": -0.9646302250803873,
-    "return_3y": -5.974705625817711,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "메탈러스(MTUS) - 항공/방산/에너지용 특수강/합금강 제조(구 TimkenSteel, 티커 변경)."
-  },
-  {
-   "id": "C_5884",
-   "type": "CHARACTER",
-   "name": "특수합금강_구TimkenSteel"
-  },
-  {
-   "id": "A_2862",
-   "type": "ASSET",
-   "name": "머티리온",
-   "exposure": {
-    "ticker": "MTRN",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 6.255556075422275,
-    "close": 227.1,
-    "marketCap": 4724017244,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 9.124981980683277,
-    "return_7d": -5.7754543191436465,
-    "return_15d": -10.332846369487115,
-    "return_1m": -13.254392666157377,
-    "return_ytd": 76.6902668637672,
-    "return_1y": 116.14161987246598,
-    "return_2y": 89.69261610424324,
-    "return_3y": 95.67465104256418,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "머티리온(MTRN) - 베릴륨/특수합금 등 첨단 특수소재 제조사."
-  },
-  {
-   "id": "C_5885",
-   "type": "CHARACTER",
-   "name": "베릴륨특수소재"
-  },
-  {
-   "id": "A_2870",
-   "type": "ASSET",
-   "name": "SPDR S&P Metals & Mining ETF",
-   "exposure": {
-    "ticker": "XME",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "type": "THEMED_AS",
-   "from": "A_117",
-   "to": "T_029",
-   "evidence": [
-    "EV_000915"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "type": "THEMED_AS",
-   "from": "A_249",
-   "to": "T_029",
-   "evidence": [
-    "EV_000916"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_023",
-   "to": "T_029",
-   "evidence": [
-    "EV_000919"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_024",
-   "to": "T_029",
-   "evidence": [
-    "EV_000920"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_025",
-   "to": "T_029",
-   "evidence": [
-    "EV_000921"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_026",
-   "to": "T_029",
-   "evidence": [
-    "EV_000922"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_027",
-   "to": "T_029",
-   "evidence": [
-    "EV_000923"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "type": "SUPPLIES",
-   "from": "A_117",
-   "to": "A_137",
-   "evidence": [
-    "EV_000924"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_117",
-   "to": "C_5289",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014232"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_249",
-   "to": "C_5290",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014233"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_137",
-   "to": "C_5293",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014236"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2861",
-   "to": "T_029",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015500"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2861",
-   "to": "C_5884",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015501"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2862",
-   "to": "T_029",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015502"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2862",
-   "to": "C_5885",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015503"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2870",
-   "to": "T_029",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020566"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "type": "THEMED_AS",
-   "from": "A_117",
-   "to": "T_029",
-   "evidence": [
-    "EV_000915"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "type": "THEMED_AS",
-   "from": "A_249",
-   "to": "T_029",
-   "evidence": [
-    "EV_000916"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_023",
-   "to": "T_029",
-   "evidence": [
-    "EV_000919"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_024",
-   "to": "T_029",
-   "evidence": [
-    "EV_000920"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_025",
-   "to": "T_029",
-   "evidence": [
-    "EV_000921"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_026",
-   "to": "T_029",
-   "evidence": [
-    "EV_000922"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "type": "IMPACTS",
-   "from": "M_027",
-   "to": "T_029",
-   "evidence": [
-    "EV_000923"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "type": "SUPPLIES",
-   "from": "A_117",
-   "to": "A_137",
-   "evidence": [
-    "EV_000924"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_117",
-   "to": "C_5289",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014232"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_249",
-   "to": "C_5290",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014233"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_137",
-   "to": "C_5293",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014236"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2861",
-   "to": "T_029",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015500"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2861",
-   "to": "C_5884",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015501"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2862",
-   "to": "T_029",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015502"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2862",
-   "to": "C_5885",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015503"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2870",
-   "to": "T_029",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020566"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

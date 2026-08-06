@@ -66,7 +66,10 @@ def asset_link(tk, co, exch=""):
         return f"https://finance.naver.com/item/main.naver?code={tk}"
     t = (tk or "").rstrip(".").strip()
     gx = gf_exchange(exch, co)
-    return f"https://www.google.com/finance/quote/{t}:{gx}" if gx else f"https://www.google.com/finance/quote/{t}"
+    if gx:
+        return f"https://www.google.com/finance/quote/{t}:{gx}"
+    # 거래소코드 미상 → 구글은 빈 페이지가 되므로 거래소 불필요한 Yahoo Finance로 폴백
+    return f"https://finance.yahoo.com/quote/{t}"
 OUT.mkdir(parents=True, exist_ok=True)
 FMP_KEY = (os.environ.get("FMP_API_KEY") or "").strip()
 EODHD_KEY = (os.environ.get("EODHD_API_KEY") or "").strip()

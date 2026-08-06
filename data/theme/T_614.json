@@ -1,668 +1,686 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_614",
- "themeName": "애플아이폰공급망_미국",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_614",
+  "themeName": "애플아이폰공급망_미국",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "description": "아이폰 공급망 중 미국(설계·핵심칩) 기업으로 구성한 테마. 애플(설계·자체 실리콘)에 브로드컴(RF·ASIC 2031 장기계약)·퀄컴(5G 모뎀)·ARM(CPU 아키텍처 IP)이 공급하고, 인텔은 미국 제조·파운드리 협력을 진행한다. 온디바이스 AI·리쇼어링에 노출되며 애플이 중심 앵커다.",
+    "notes": "T_614 — 아이폰 공급망 지역 분리(2026-07-12)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
+      },
+      {
+        "date": "2026-07-12",
+        "kind": "신규",
+        "title": "애플아이폰공급망_미국 신설",
+        "detail": "아이폰 공급망 중 미국(설계·핵심칩) 기업으로 구성한 테마. 애플(설계·자체 실리콘)에 브로드컴(RF·ASIC 2031 장기계약)·퀄컴(5G 모뎀)·ARM(CPU 아키텍처 IP)이 공급하고, 인텔은 미국 제조·파운드리 협력을 진행한다. 온디바이스 AI·리쇼어링에 노출되며 애플이 중심 앵커다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_614",
+      "type": "THEME",
+      "name": "애플아이폰공급망_미국"
+    },
+    {
+      "id": "A_374",
+      "type": "ASSET",
+      "name": "애플",
+      "exposure": {
+        "ticker": "AAPL",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "애플은 자체 실리콘(ARM 기반)을 설계하고 아이폰 생태계를 지배하는 중심 기업이다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.5236279009632083,
+        "return_3d": 0.6765724644718363,
+        "return_7d": -7.690481137395755,
+        "return_15d": -5.038167938931293,
+        "return_1m": 0.10944440867828309,
+        "return_ytd": 14.75591306593853,
+        "return_1y": 52.93828374723384,
+        "return_2y": 40.03962536023054,
+        "return_3y": 58.31000254517691,
+        "close": 311.0,
+        "marketCap": 4567767716000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3152",
+      "type": "CHARACTER",
+      "name": "자체칩설계·생태계"
+    },
+    {
+      "id": "A_413",
+      "type": "ASSET",
+      "name": "브로드컴",
+      "exposure": {
+        "ticker": "AVGO",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "브로드컴은 2031년까지 장기계약으로 아이폰 무선(RF) 칩·맞춤형 ASIC을 공급한다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.028697149416467838,
+        "return_3d": 7.449650637073568,
+        "return_7d": 9.148791816711022,
+        "return_15d": 6.087044739778835,
+        "return_1m": 12.81083122066995,
+        "return_ytd": 20.32679362522294,
+        "return_1y": 40.49442429128038,
+        "return_2y": 160.3186457555389,
+        "return_3y": 365.4278402136419,
+        "close": 418.28,
+        "marketCap": 1990000562400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3153",
+      "type": "CHARACTER",
+      "name": "RF·ASIC장기공급"
+    },
+    {
+      "id": "A_059",
+      "type": "ASSET",
+      "name": "퀄컴",
+      "exposure": {
+        "ticker": "QCOM",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "퀄컴은 아이폰에 탑재되는 5G 모뎀 칩을 공급한다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": -3.1597713161615415,
+        "return_3d": 6.720411896212974,
+        "return_7d": -7.357092448835568,
+        "return_15d": -11.490055062366554,
+        "return_1m": -13.90391867519265,
+        "return_ytd": -8.931668400971205,
+        "return_1y": 6.792759812894045,
+        "return_2y": -12.942801878972087,
+        "return_3y": 19.18741015359009,
+        "close": 157.53,
+        "marketCap": 165406500000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3154",
+      "type": "CHARACTER",
+      "name": "5G모뎀공급"
+    },
+    {
+      "id": "A_058",
+      "type": "ASSET",
+      "name": "ARM",
+      "exposure": {
+        "ticker": "ARM",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "ARM은 애플 실리콘의 기반이 되는 CPU 아키텍처(설계 IP)를 제공한다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": -2.1314513829483905,
+        "return_3d": 14.556301889941171,
+        "return_7d": 3.0976607967559078,
+        "return_15d": -0.877224648929642,
+        "return_1m": -8.604333788236874,
+        "return_ytd": 139.32711583718293,
+        "return_1y": 96.05855051767223,
+        "return_2y": 90.4557120066588,
+        "return_3y": null,
+        "close": 274.58,
+        "marketCap": 293251047076,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3155",
+      "type": "CHARACTER",
+      "name": "CPU아키텍처IP"
+    },
+    {
+      "id": "A_242",
+      "type": "ASSET",
+      "name": "인텔",
+      "exposure": {
+        "ticker": "INTC",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "인텔은 미국 내 반도체 제조 확대·파운드리 협력을 애플과 진행 중이다.",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.19829466587348854,
+        "return_3d": 12.039911308203987,
+        "return_7d": 10.243263881313403,
+        "return_15d": -1.8739683464413903,
+        "return_1m": -8.451852522873448,
+        "return_ytd": 156.62772981208732,
+        "return_1y": 418.2564102564102,
+        "return_2y": 228.75731945348085,
+        "return_3y": 182.52725747833378,
+        "close": 101.06,
+        "marketCap": 509746614432,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3156",
+      "type": "CHARACTER",
+      "name": "미국파운드리협력"
+    },
+    {
+      "id": "M_315",
+      "type": "MACRO",
+      "name": "온디바이스AI수요확대"
+    },
+    {
+      "id": "M_197",
+      "type": "MACRO",
+      "name": "미국제조업리쇼어링"
+    },
+    {
+      "id": "M_198",
+      "type": "MACRO",
+      "name": "애플-인텔 공급망 협력"
+    },
+    {
+      "id": "A_2875",
+      "type": "ASSET",
+      "name": "TIGER 미국필라델피아반도체나스닥",
+      "exposure": {
+        "ticker": "381180",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 5.577367205542716,
+        "return_3d": 4.730813287514324,
+        "return_7d": -1.5593904895912614,
+        "return_15d": -6.324269176178731,
+        "return_1m": -11.12628722073714,
+        "return_ytd": 68.94466393905509,
+        "return_1y": 126.03052577479015,
+        "return_2y": 124.08918603528348,
+        "return_3y": null,
+        "close": 45715,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_639",
+      "type": "ASSET",
+      "name": "SMH",
+      "exposure": {
+        "ticker": "SMH",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "VanEck Semiconductor ETF. 엔비디아 최상위 비중에 TSMC·브로드컴·AMD 등 반도체 25종목, AI 가속기 사이클 순수 노출."
+      },
+      "metrics": {
+        "return_1d": -1.04392836671241,
+        "close": 569.7,
+        "marketCap": 71805414136,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.396555232827049,
+        "return_7d": 3.8556193601312794,
+        "return_15d": -3.5665318144116887,
+        "return_1m": -2.0208100438558807,
+        "return_ytd": 52.611840342887774,
+        "return_1y": 96.31965264137293,
+        "return_2y": 130.6571116239524,
+        "return_3y": 254.68808367575647,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "description": "아이폰 공급망 중 미국(설계·핵심칩) 기업으로 구성한 테마. 애플(설계·자체 실리콘)에 브로드컴(RF·ASIC 2031 장기계약)·퀄컴(5G 모뎀)·ARM(CPU 아키텍처 IP)이 공급하고, 인텔은 미국 제조·파운드리 협력을 진행한다. 온디바이스 AI·리쇼어링에 노출되며 애플이 중심 앵커다.",
-  "notes": "T_614 — 아이폰 공급망 지역 분리(2026-07-12)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
-   },
-   {
-    "date": "2026-07-12",
-    "kind": "신규",
-    "title": "애플아이폰공급망_미국 신설",
-    "detail": "아이폰 공급망 중 미국(설계·핵심칩) 기업으로 구성한 테마. 애플(설계·자체 실리콘)에 브로드컴(RF·ASIC 2031 장기계약)·퀄컴(5G 모뎀)·ARM(CPU 아키텍처 IP)이 공급하고, 인텔은 미국 제조·파운드리 협력을 진행한다. 온디바이스 AI·리쇼어링에 노출되며 애플이 중심 앵커다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_374",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013500"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "C_3152",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006222"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013501"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_006224"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_3153",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006225"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013502"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_006227"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "C_3154",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006228"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013503"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_006230"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "C_3155",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006231"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013504"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "A_374",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_006233"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "C_3156",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006234"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "M_315",
+      "to": "T_614",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013505"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_197",
+      "to": "T_614",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013506"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_198",
+      "to": "T_614",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013507"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2875",
+      "to": "T_614",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020927"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_639",
+      "to": "T_614",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020928"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_374",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013500"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_374",
+      "to": "C_3152",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006222"
+      ],
+      "confidence": 0.85,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013501"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_006224"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_413",
+      "to": "C_3153",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006225"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013502"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_006227"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_059",
+      "to": "C_3154",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006228"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013503"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "A_374",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_006230"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_058",
+      "to": "C_3155",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006231"
+      ],
+      "confidence": 0.76,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "T_614",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013504"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "A_374",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_006233"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "A_242",
+      "to": "C_3156",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_006234"
+      ],
+      "confidence": 0.66,
+      "status": "verified"
+    },
+    {
+      "from": "M_315",
+      "to": "T_614",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013505"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_197",
+      "to": "T_614",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013506"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_198",
+      "to": "T_614",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013507"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2875",
+      "to": "T_614",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020927"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_639",
+      "to": "T_614",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020928"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_614",
-   "type": "THEME",
-   "name": "애플아이폰공급망_미국"
-  },
-  {
-   "id": "A_374",
-   "type": "ASSET",
-   "name": "애플",
-   "exposure": {
-    "ticker": "AAPL",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "애플은 자체 실리콘(ARM 기반)을 설계하고 아이폰 생태계를 지배하는 중심 기업이다.",
-    "theme_role": "1궤도",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 1.9642739437083945,
-    "return_3d": -7.212908256605588,
-    "return_7d": -7.098672752387236,
-    "return_15d": -1.7404560757162013,
-    "return_1m": -1.0490628798055512,
-    "return_ytd": 14.158149145787991,
-    "return_1y": 52.87083703923312,
-    "return_2y": 41.39853747714808,
-    "return_3y": 57.98396568452229,
-    "close": 309.38,
-    "marketCap": 4543974199280,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3152",
-   "type": "CHARACTER",
-   "name": "자체칩설계·생태계"
-  },
-  {
-   "id": "A_413",
-   "type": "ASSET",
-   "name": "브로드컴",
-   "exposure": {
-    "ticker": "AVGO",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "브로드컴은 2031년까지 장기계약으로 아이폰 무선(RF) 칩·맞춤형 ASIC을 공급한다.",
-    "theme_role": "1궤도",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 6.61091706396757,
-    "return_3d": 7.817656765676584,
-    "return_7d": 9.488898198575612,
-    "return_15d": 7.465755184909151,
-    "return_1m": 11.837389676384081,
-    "return_ytd": 20.292273171854337,
-    "return_1y": 44.872505543237274,
-    "return_2y": 191.36008918617614,
-    "return_3y": 364.72549455434546,
-    "close": 418.16,
-    "marketCap": 1989429652800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3153",
-   "type": "CHARACTER",
-   "name": "RF·ASIC장기공급"
-  },
-  {
-   "id": "A_059",
-   "type": "ASSET",
-   "name": "퀄컴",
-   "exposure": {
-    "ticker": "QCOM",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "퀄컴은 아이폰에 탑재되는 5G 모뎀 칩을 공급한다.",
-    "theme_role": "1궤도",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 7.323348947680941,
-    "return_3d": 7.3021108179419425,
-    "return_7d": -2.5753129304665556,
-    "return_15d": -8.663672094329034,
-    "return_1m": -12.768125268125274,
-    "return_ytd": -5.96022661579374,
-    "return_1y": 9.771239624805993,
-    "return_2y": -2.5578051994728734,
-    "return_3y": 25.633302440531345,
-    "close": 162.67,
-    "marketCap": 170803500000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3154",
-   "type": "CHARACTER",
-   "name": "5G모뎀공급"
-  },
-  {
-   "id": "A_058",
-   "type": "ASSET",
-   "name": "ARM",
-   "exposure": {
-    "ticker": "ARM",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "ARM은 애플 실리콘의 기반이 되는 CPU 아키텍처(설계 IP)를 제공한다.",
-    "theme_role": "1궤도",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 17.35965866309712,
-    "return_3d": 16.154674174049855,
-    "return_7d": 7.903542171454947,
-    "return_15d": -0.21695059928157345,
-    "return_1m": -12.93445878848064,
-    "return_ytd": 144.53935326418548,
-    "return_1y": 103.92498909725249,
-    "return_2y": 111.01083032490973,
-    "return_3y": null,
-    "close": 280.56,
-    "marketCap": 299637678519,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3155",
-   "type": "CHARACTER",
-   "name": "CPU아키텍처IP"
-  },
-  {
-   "id": "A_242",
-   "type": "ASSET",
-   "name": "인텔",
-   "exposure": {
-    "ticker": "INTC",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "인텔은 미국 내 반도체 제조 확대·파운드리 협력을 애플과 진행 중이다.",
-    "theme_role": "1궤도",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 10.835164835164846,
-    "return_3d": 10.67705475694063,
-    "return_7d": 9.250433275563275,
-    "return_15d": -6.403118040089096,
-    "return_1m": -17.463175122749597,
-    "return_ytd": 156.1198577958354,
-    "return_1y": 422.3200414293113,
-    "return_2y": 234.749419183538,
-    "return_3y": 173.85283736084713,
-    "close": 100.86,
-    "marketCap": 508737807019,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3156",
-   "type": "CHARACTER",
-   "name": "미국파운드리협력"
-  },
-  {
-   "id": "M_315",
-   "type": "MACRO",
-   "name": "온디바이스AI수요확대"
-  },
-  {
-   "id": "M_197",
-   "type": "MACRO",
-   "name": "미국제조업리쇼어링"
-  },
-  {
-   "id": "M_198",
-   "type": "MACRO",
-   "name": "애플-인텔 공급망 협력"
-  },
-  {
-   "id": "A_2875",
-   "type": "ASSET",
-   "name": "TIGER 미국필라델피아반도체나스닥",
-   "exposure": {
-    "ticker": "381180",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  },
-  {
-   "id": "A_639",
-   "type": "ASSET",
-   "name": "SMH",
-   "exposure": {
-    "ticker": "SMH",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "VanEck Semiconductor ETF. 엔비디아 최상위 비중에 TSMC·브로드컴·AMD 등 반도체 25종목, AI 가속기 사이클 순수 노출."
-   },
-   "metrics": {
-    "return_1d": 5.5457778755545695,
-    "close": 575.71,
-    "marketCap": 72562919031,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 6.830580812766751,
-    "return_7d": 2.587359004971579,
-    "return_15d": -4.09788276057369,
-    "return_1m": -4.731093827569078,
-    "return_ytd": 54.22180551834985,
-    "return_1y": 102.75048424018314,
-    "return_2y": 150.8868261646403,
-    "return_3y": 258.6978193146418,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_374",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013500"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "from": "A_374",
-   "to": "C_3152",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006222"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013501"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "A_374",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_006224"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "C_3153",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006225"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_059",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013502"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_059",
-   "to": "A_374",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_006227"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_059",
-   "to": "C_3154",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006228"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_058",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013503"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_058",
-   "to": "A_374",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_006230"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_058",
-   "to": "C_3155",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006231"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_242",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013504"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_242",
-   "to": "A_374",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_006233"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_242",
-   "to": "C_3156",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006234"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "M_315",
-   "to": "T_614",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013505"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_197",
-   "to": "T_614",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013506"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_198",
-   "to": "T_614",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013507"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2875",
-   "to": "T_614",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020927"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_639",
-   "to": "T_614",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020928"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_374",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013500"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "from": "A_374",
-   "to": "C_3152",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006222"
-   ],
-   "confidence": 0.85,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013501"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "A_374",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_006224"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_413",
-   "to": "C_3153",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006225"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_059",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013502"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_059",
-   "to": "A_374",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_006227"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_059",
-   "to": "C_3154",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006228"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_058",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013503"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_058",
-   "to": "A_374",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_006230"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_058",
-   "to": "C_3155",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006231"
-   ],
-   "confidence": 0.76,
-   "status": "verified"
-  },
-  {
-   "from": "A_242",
-   "to": "T_614",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013504"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_242",
-   "to": "A_374",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_006233"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "A_242",
-   "to": "C_3156",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_006234"
-   ],
-   "confidence": 0.66,
-   "status": "verified"
-  },
-  {
-   "from": "M_315",
-   "to": "T_614",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013505"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_197",
-   "to": "T_614",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013506"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_198",
-   "to": "T_614",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013507"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2875",
-   "to": "T_614",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020927"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_639",
-   "to": "T_614",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020928"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

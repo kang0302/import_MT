@@ -1,604 +1,622 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_416",
- "themeName": "글로벌신경통증_수면",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_416",
+  "themeName": "글로벌신경통증_수면",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "글로벌 신경통증·수면 — Vertex Journavx (NaV1.8 비오피오이드)·Lilly·Pfizer·J&J·Pacira·Heron. 오피오이드 대체 사이클.",
+    "notes": "T_416 신규 — 질병중심 바이오",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 4건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_416",
+      "type": "THEME",
+      "name": "글로벌신경통증_수면"
+    },
+    {
+      "id": "A_1003",
+      "type": "ASSET",
+      "name": "버텍스",
+      "exposure": {
+        "ticker": "VRTX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.278435796202304,
+        "return_3d": 1.620205407671338,
+        "return_7d": 1.2171189979123032,
+        "return_15d": 1.6244654984489015,
+        "return_1m": -7.165150789851604,
+        "return_ytd": 7.232433149757811,
+        "return_1y": 2.659495627501207,
+        "return_2y": -2.1968046477850445,
+        "return_3y": 37.60288357836181,
+        "close": 484.83,
+        "marketCap": 123052278150,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_244",
+      "type": "ASSET",
+      "name": "릴리",
+      "exposure": {
+        "ticker": "LLY",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 4.856231177398529,
+        "return_3d": 1.8296716688137593,
+        "return_7d": -2.3105892963015573,
+        "return_15d": 1.14384029464909,
+        "return_1m": -5.317426915730527,
+        "return_ytd": 8.284275611833092,
+        "return_1y": 52.127438231469434,
+        "return_2y": 45.456127917241716,
+        "return_3y": 157.36662633373663,
+        "close": 1169.86,
+        "marketCap": 1101705126260,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1214",
+      "type": "ASSET",
+      "name": "화이자",
+      "exposure": {
+        "ticker": "PFE",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.5741833923652138,
+        "return_3d": 3.198720511795261,
+        "return_7d": 4.6209971625455815,
+        "return_15d": 3.988718775181299,
+        "return_1m": 7.2289156626506035,
+        "return_ytd": 2.501985702938847,
+        "return_1y": 9.689757756056094,
+        "return_2y": -15.487884741322855,
+        "return_3y": -28.424847476428184,
+        "close": 25.81,
+        "marketCap": 147102546400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1703",
+      "type": "ASSET",
+      "name": "존슨앤존슨",
+      "exposure": {
+        "ticker": "JNJ",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.043423684933109,
+        "return_3d": 0.48371367271307086,
+        "return_7d": -3.14344801654447,
+        "return_15d": 4.27900574852238,
+        "return_1m": -3.610986379284553,
+        "return_ytd": 24.229563539908348,
+        "return_1y": 50.60219831618333,
+        "return_2y": 63.18656952803294,
+        "return_3y": 53.75753596370798,
+        "close": 257.59,
+        "marketCap": 620765732977,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2210",
+      "type": "ASSET",
+      "name": "파시라바이오",
+      "exposure": {
+        "ticker": "PCRX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -9.956553222302677,
+        "return_3d": -5.831124574024981,
+        "return_7d": -6.044578768417064,
+        "return_15d": -1.816028424792726,
+        "return_1m": -3.679318357862116,
+        "return_ytd": 1.676206050695006,
+        "return_1y": 8.413251961639068,
+        "return_2y": 20.435835351089594,
+        "return_3y": -31.5818431911967,
+        "close": 24.87,
+        "marketCap": 978261450,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2211",
+      "type": "ASSET",
+      "name": "헤론테라퓨틱스",
+      "exposure": {
+        "ticker": "HRTX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.309872922776134,
+        "return_3d": 1.733172108020975,
+        "return_7d": 9.93031358885017,
+        "return_15d": 14.98861047835991,
+        "return_1m": 18.581160441625567,
+        "return_ytd": -59.93650793650793,
+        "return_1y": -71.15428571428572,
+        "return_2y": -83.003367003367,
+        "return_3y": -69.59036144578312,
+        "close": 0.5048,
+        "marketCap": 95548225,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_395",
+      "type": "MACRO",
+      "name": "비오피오이드통증신약"
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "C_563",
+      "type": "CHARACTER",
+      "name": "Journavx_NaV18_비오피오이드first"
+    },
+    {
+      "id": "C_564",
+      "type": "CHARACTER",
+      "name": "Emgality_편두통_Lyumjev"
+    },
+    {
+      "id": "C_565",
+      "type": "CHARACTER",
+      "name": "Nurtec_편두통_Tafamidis"
+    },
+    {
+      "id": "C_566",
+      "type": "CHARACTER",
+      "name": "Spravato_우울증_MedTech"
+    },
+    {
+      "id": "C_567",
+      "type": "CHARACTER",
+      "name": "Exparel_비오피오이드마취1위"
+    },
+    {
+      "id": "C_568",
+      "type": "CHARACTER",
+      "name": "Zynrelef_수술후통증"
+    },
+    {
+      "id": "A_2923",
+      "type": "ASSET",
+      "name": "VanEck Pharmaceutical ETF",
+      "exposure": {
+        "ticker": "PPH",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.590383726306066,
+        "return_3d": -0.48007246376812196,
+        "return_7d": -1.2936843050938784,
+        "return_15d": 2.1856398809523947,
+        "return_1m": -1.5501792114695268,
+        "return_ytd": 5.929425376012354,
+        "return_1y": 28.27787507297139,
+        "return_2y": 18.0382466695316,
+        "return_3y": 36.62024372046755,
+        "close": 109.87,
+        "marketCap": 648791689,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "글로벌 신경통증·수면 — Vertex Journavx (NaV1.8 비오피오이드)·Lilly·Pfizer·J&J·Pacira·Heron. 오피오이드 대체 사이클.",
-  "notes": "T_416 신규 — 질병중심 바이오",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 4건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1003",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011493"
+      ]
+    },
+    {
+      "from": "A_244",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011494"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011495"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011496"
+      ]
+    },
+    {
+      "from": "A_2210",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011497"
+      ]
+    },
+    {
+      "from": "A_2211",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011498"
+      ]
+    },
+    {
+      "from": "M_395",
+      "to": "T_416",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011499"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_416",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011500"
+      ]
+    },
+    {
+      "from": "A_1003",
+      "to": "C_563",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016548"
+      ]
+    },
+    {
+      "from": "A_244",
+      "to": "C_564",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016549"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "C_565",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016550"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "C_566",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016551"
+      ]
+    },
+    {
+      "from": "A_2210",
+      "to": "C_567",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016552"
+      ]
+    },
+    {
+      "from": "A_2211",
+      "to": "C_568",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016553"
+      ]
+    },
+    {
+      "from": "A_2210",
+      "to": "A_2211",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018555"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "파시라의 엑스파렐과 헤론의 자이늘레프는 모두 비마약성 수술 후 국소 진통제(부피바카인 기반)로 동일한 수술후 통증 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1003",
+      "to": "A_2210",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018556"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "버텍스의 저나빅스(수제트리진, NaV1.8 억제 경구 비마약성 진통제)는 파시라 10-K가 직접 경쟁 위협으로 명시했듯 엑스파렐과 비마약성 급성·수술후 통증 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_1003",
+      "to": "A_2211",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018557"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "버텍스의 저나빅스는 헤론의 자이늘레프와 비마약성 수술후·급성 통증 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_1214",
+      "to": "A_244",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018558"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 릴리는 2013년 통증 신약 타네주맙(NGF 억제 항체)에 대한 전 세계 공동 개발·공동 상업화 계약을 체결해 골관절염·통증 임상을 함께 진행했다."
+    },
+    {
+      "from": "A_2923",
+      "to": "T_416",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020771"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1003",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011493"
+      ]
+    },
+    {
+      "from": "A_244",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011494"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011495"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011496"
+      ]
+    },
+    {
+      "from": "A_2210",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011497"
+      ]
+    },
+    {
+      "from": "A_2211",
+      "to": "T_416",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011498"
+      ]
+    },
+    {
+      "from": "M_395",
+      "to": "T_416",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011499"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_416",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011500"
+      ]
+    },
+    {
+      "from": "A_1003",
+      "to": "C_563",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016548"
+      ]
+    },
+    {
+      "from": "A_244",
+      "to": "C_564",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016549"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "C_565",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016550"
+      ]
+    },
+    {
+      "from": "A_1703",
+      "to": "C_566",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016551"
+      ]
+    },
+    {
+      "from": "A_2210",
+      "to": "C_567",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016552"
+      ]
+    },
+    {
+      "from": "A_2211",
+      "to": "C_568",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016553"
+      ]
+    },
+    {
+      "from": "A_2210",
+      "to": "A_2211",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018555"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "파시라의 엑스파렐과 헤론의 자이늘레프는 모두 비마약성 수술 후 국소 진통제(부피바카인 기반)로 동일한 수술후 통증 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1003",
+      "to": "A_2210",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018556"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "버텍스의 저나빅스(수제트리진, NaV1.8 억제 경구 비마약성 진통제)는 파시라 10-K가 직접 경쟁 위협으로 명시했듯 엑스파렐과 비마약성 급성·수술후 통증 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_1003",
+      "to": "A_2211",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018557"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "버텍스의 저나빅스는 헤론의 자이늘레프와 비마약성 수술후·급성 통증 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_1214",
+      "to": "A_244",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018558"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 릴리는 2013년 통증 신약 타네주맙(NGF 억제 항체)에 대한 전 세계 공동 개발·공동 상업화 계약을 체결해 골관절염·통증 임상을 함께 진행했다."
+    },
+    {
+      "from": "A_2923",
+      "to": "T_416",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020771"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_416",
-   "type": "THEME",
-   "name": "글로벌신경통증_수면"
-  },
-  {
-   "id": "A_1003",
-   "type": "ASSET",
-   "name": "버텍스",
-   "exposure": {
-    "ticker": "VRTX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.697399728076121,
-    "return_3d": -0.6207182893917418,
-    "return_7d": 0.2828054298642524,
-    "return_15d": 0.503873527744525,
-    "return_1m": -9.607432164504626,
-    "return_ytd": 5.878840156592124,
-    "return_1y": 3.5877350529071927,
-    "return_2y": -4.753282928770397,
-    "return_3y": 35.20971614178787,
-    "close": 478.705,
-    "marketCap": 121497922145,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_244",
-   "type": "ASSET",
-   "name": "릴리",
-   "exposure": {
-    "ticker": "LLY",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5065277876863616,
-    "return_3d": -3.401819960691621,
-    "return_7d": -6.718058911565761,
-    "return_15d": -3.1981536432574953,
-    "return_1m": -7.031315100911617,
-    "return_ytd": 3.2692806101670024,
-    "return_1y": 46.35131767082497,
-    "return_2y": 41.187785525366685,
-    "return_3y": 143.34322107834586,
-    "close": 1116.11,
-    "marketCap": 1051086547510,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1214",
-   "type": "ASSET",
-   "name": "화이자",
-   "exposure": {
-    "ticker": "PFE",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.5181781861765886,
-    "return_3d": 2.0072260136491327,
-    "return_7d": 3.5452322738386277,
-    "return_15d": 4.783505154639167,
-    "return_1m": 7.1247892074199015,
-    "return_ytd": 0.9134233518665713,
-    "return_1y": 8.17369093231164,
-    "return_2y": -19.050653074227462,
-    "return_3y": -29.55364568893818,
-    "close": 25.41,
-    "marketCap": 144822770400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1703",
-   "type": "ASSET",
-   "name": "존슨앤존슨",
-   "exposure": {
-    "ticker": "JNJ",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.20439448134901284,
-    "return_3d": -0.34790086779766805,
-    "return_7d": -3.2156416097190443,
-    "return_15d": 0.4254480992712306,
-    "return_1m": -1.6966799059113802,
-    "return_ytd": 22.94670846394986,
-    "return_1y": 52.35164047092571,
-    "return_2y": 58.017727639000796,
-    "return_3y": 46.108436497019724,
-    "close": 254.93,
-    "marketCap": 614355403191,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2210",
-   "type": "ASSET",
-   "name": "파시라바이오",
-   "exposure": {
-    "ticker": "PCRX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.600297176820199,
-    "return_3d": 2.410085279940688,
-    "return_7d": 6.723338485316854,
-    "return_15d": 10.435825669732113,
-    "return_1m": 7.9327862446268105,
-    "return_ytd": 12.919051512673763,
-    "return_1y": 25.14725872224739,
-    "return_2y": 41.35107471852611,
-    "return_3y": -22.8060368921185,
-    "close": 27.62,
-    "marketCap": 1086432700,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2211",
-   "type": "ASSET",
-   "name": "헤론테라퓨틱스",
-   "exposure": {
-    "ticker": "HRTX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.01955416503716112,
-    "return_3d": 2.834740651387202,
-    "return_7d": 12.220272049144354,
-    "return_15d": 18.98115840893231,
-    "return_1m": 17.884305139433042,
-    "return_ytd": -59.40476190476191,
-    "return_1y": -69.73372781065089,
-    "return_2y": -81.79715302491104,
-    "return_3y": -67.21153846153847,
-    "close": 0.5115,
-    "marketCap": 96816397,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_395",
-   "type": "MACRO",
-   "name": "비오피오이드통증신약"
-  },
-  {
-   "id": "M_058",
-   "type": "MACRO",
-   "name": "인구고령화"
-  },
-  {
-   "id": "C_563",
-   "type": "CHARACTER",
-   "name": "Journavx_NaV18_비오피오이드first"
-  },
-  {
-   "id": "C_564",
-   "type": "CHARACTER",
-   "name": "Emgality_편두통_Lyumjev"
-  },
-  {
-   "id": "C_565",
-   "type": "CHARACTER",
-   "name": "Nurtec_편두통_Tafamidis"
-  },
-  {
-   "id": "C_566",
-   "type": "CHARACTER",
-   "name": "Spravato_우울증_MedTech"
-  },
-  {
-   "id": "C_567",
-   "type": "CHARACTER",
-   "name": "Exparel_비오피오이드마취1위"
-  },
-  {
-   "id": "C_568",
-   "type": "CHARACTER",
-   "name": "Zynrelef_수술후통증"
-  },
-  {
-   "id": "A_2923",
-   "type": "ASSET",
-   "name": "VanEck Pharmaceutical ETF",
-   "exposure": {
-    "ticker": "PPH",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1003",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011493"
-   ]
-  },
-  {
-   "from": "A_244",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011494"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011495"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011496"
-   ]
-  },
-  {
-   "from": "A_2210",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011497"
-   ]
-  },
-  {
-   "from": "A_2211",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011498"
-   ]
-  },
-  {
-   "from": "M_395",
-   "to": "T_416",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011499"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_416",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011500"
-   ]
-  },
-  {
-   "from": "A_1003",
-   "to": "C_563",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016548"
-   ]
-  },
-  {
-   "from": "A_244",
-   "to": "C_564",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016549"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "C_565",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016550"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "C_566",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016551"
-   ]
-  },
-  {
-   "from": "A_2210",
-   "to": "C_567",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016552"
-   ]
-  },
-  {
-   "from": "A_2211",
-   "to": "C_568",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016553"
-   ]
-  },
-  {
-   "from": "A_2210",
-   "to": "A_2211",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018555"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "파시라의 엑스파렐과 헤론의 자이늘레프는 모두 비마약성 수술 후 국소 진통제(부피바카인 기반)로 동일한 수술후 통증 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1003",
-   "to": "A_2210",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018556"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "버텍스의 저나빅스(수제트리진, NaV1.8 억제 경구 비마약성 진통제)는 파시라 10-K가 직접 경쟁 위협으로 명시했듯 엑스파렐과 비마약성 급성·수술후 통증 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_1003",
-   "to": "A_2211",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018557"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "버텍스의 저나빅스는 헤론의 자이늘레프와 비마약성 수술후·급성 통증 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_1214",
-   "to": "A_244",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018558"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 릴리는 2013년 통증 신약 타네주맙(NGF 억제 항체)에 대한 전 세계 공동 개발·공동 상업화 계약을 체결해 골관절염·통증 임상을 함께 진행했다."
-  },
-  {
-   "from": "A_2923",
-   "to": "T_416",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020771"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1003",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011493"
-   ]
-  },
-  {
-   "from": "A_244",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011494"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011495"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011496"
-   ]
-  },
-  {
-   "from": "A_2210",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011497"
-   ]
-  },
-  {
-   "from": "A_2211",
-   "to": "T_416",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011498"
-   ]
-  },
-  {
-   "from": "M_395",
-   "to": "T_416",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011499"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_416",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011500"
-   ]
-  },
-  {
-   "from": "A_1003",
-   "to": "C_563",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016548"
-   ]
-  },
-  {
-   "from": "A_244",
-   "to": "C_564",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016549"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "C_565",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016550"
-   ]
-  },
-  {
-   "from": "A_1703",
-   "to": "C_566",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016551"
-   ]
-  },
-  {
-   "from": "A_2210",
-   "to": "C_567",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016552"
-   ]
-  },
-  {
-   "from": "A_2211",
-   "to": "C_568",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016553"
-   ]
-  },
-  {
-   "from": "A_2210",
-   "to": "A_2211",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018555"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "파시라의 엑스파렐과 헤론의 자이늘레프는 모두 비마약성 수술 후 국소 진통제(부피바카인 기반)로 동일한 수술후 통증 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1003",
-   "to": "A_2210",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018556"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "버텍스의 저나빅스(수제트리진, NaV1.8 억제 경구 비마약성 진통제)는 파시라 10-K가 직접 경쟁 위협으로 명시했듯 엑스파렐과 비마약성 급성·수술후 통증 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_1003",
-   "to": "A_2211",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018557"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "버텍스의 저나빅스는 헤론의 자이늘레프와 비마약성 수술후·급성 통증 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_1214",
-   "to": "A_244",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018558"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 릴리는 2013년 통증 신약 타네주맙(NGF 억제 항체)에 대한 전 세계 공동 개발·공동 상업화 계약을 체결해 골관절염·통증 임상을 함께 진행했다."
-  },
-  {
-   "from": "A_2923",
-   "to": "T_416",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020771"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

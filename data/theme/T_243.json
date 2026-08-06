@@ -1,759 +1,777 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_243",
- "themeName": "미국양자컴퓨팅_상무부투자수혜주",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_243",
+  "themeName": "미국양자컴퓨팅_상무부투자수혜주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-21T00:00:00+09:00",
+    "description": "미국 상무부가 자국 양자컴퓨팅 기업 9곳에 총 20억 달러 보조금/지분투자 패키지 발표. IBM 10억 달러 단독 최대, GlobalFoundries 3억 7,500만 달러, 나머지 1억 달러+. D-Wave·Rigetti·Infleqtion·Diraq 등 양자 H/W 기업 + GF 파운드리 수혜. 국가주도 정부 정책 자금 + AGI 기대가 핵심 동인.",
+    "notes": "g243 미국 양자컴퓨팅 상무부 투자 수혜 — IBM/GF 메이저 + 양자 스타트업",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_243",
+      "type": "THEME",
+      "name": "미국양자컴퓨팅_상무부투자수혜주"
+    },
+    {
+      "id": "A_1495",
+      "type": "ASSET",
+      "name": "IBM",
+      "exposure": {
+        "ticker": "IBM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.3274505634701219,
+        "close": 235.92,
+        "marketCap": 222268253280,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.486250838363516,
+        "return_7d": 9.080821157758457,
+        "return_15d": 11.704545454545446,
+        "return_1m": -22.934700944043385,
+        "return_ytd": -19.066895368782166,
+        "return_1y": -6.373521708072072,
+        "return_2y": 22.785468928906006,
+        "return_3y": 63.62879733666249,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "IBM은 초전도 게이트 양자컴퓨터(Heron)와 Qiskit 생태계로 양자 상용화를 선도, 상무부 투자에 수혜한다"
+    },
+    {
+      "id": "A_662",
+      "type": "ASSET",
+      "name": "글로벌파운드리즈",
+      "exposure": {
+        "ticker": "GFS",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -4.921184159938486,
+        "close": 49.46,
+        "marketCap": 27138743200,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.0602120424084815,
+        "return_7d": -6.995110943963889,
+        "return_15d": -19.45937143787656,
+        "return_1m": -24.878493317132445,
+        "return_ytd": 34.14700298345539,
+        "return_1y": 36.70536207849642,
+        "return_2y": -3.0386198784551954,
+        "return_3y": -22.34259695399592,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1139",
+      "type": "ASSET",
+      "name": "디웨이브",
+      "exposure": {
+        "ticker": "QBTS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.0155748969308163,
+        "close": 21.37,
+        "marketCap": 7848540420,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 18.307522123893815,
+        "return_7d": 9.636084059456685,
+        "return_15d": 17.077175697865353,
+        "return_1m": 1.5669515669515688,
+        "return_ytd": -23.96018485602559,
+        "return_1y": 24.505238649592552,
+        "return_2y": 2039.0,
+        "return_3y": 918.5714285714286,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_936",
+      "type": "ASSET",
+      "name": "리게티",
+      "exposure": {
+        "ticker": "RGTI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.839541547277925,
+        "close": 16.78,
+        "marketCap": 5577651981,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 12.240802675585293,
+        "return_7d": 7.289002557544766,
+        "return_15d": 10.032786885245915,
+        "return_1m": 1.3897280966767456,
+        "return_ytd": -28.898305084745758,
+        "return_1y": 6.472081218274117,
+        "return_2y": 1529.1262135922332,
+        "return_3y": 573.8955823293173,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1569",
+      "type": "ASSET",
+      "name": "인플렉션",
+      "exposure": {
+        "ticker": "INFQ",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -5.322862129144856,
+        "close": 10.85,
+        "marketCap": 2367436148,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 10.376398779247209,
+        "return_7d": 11.168032786885252,
+        "return_15d": 9.929078014184412,
+        "return_1m": -6.946826758147518,
+        "return_ytd": -34.79567307692308,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1570",
+      "type": "ASSET",
+      "name": "디라크",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "디라크는 양자 SW·알고리즘 개발사로 양자 밸류체인 소프트웨어 부문에 편입된다"
+    },
+    {
+      "id": "M_010",
+      "type": "MACRO",
+      "name": "국가주도"
+    },
+    {
+      "id": "M_044",
+      "type": "MACRO",
+      "name": "정부정책자금"
+    },
+    {
+      "id": "M_200",
+      "type": "MACRO",
+      "name": "AGI범용인공지능"
+    },
+    {
+      "id": "C_3894",
+      "type": "CHARACTER",
+      "name": "게이트양자·Qiskit생태계"
+    },
+    {
+      "id": "C_3895",
+      "type": "CHARACTER",
+      "name": "양자·특수반도체파운드리"
+    },
+    {
+      "id": "C_3896",
+      "type": "CHARACTER",
+      "name": "양자어닐링·상용서비스"
+    },
+    {
+      "id": "C_3897",
+      "type": "CHARACTER",
+      "name": "초전도게이트양자칩"
+    },
+    {
+      "id": "C_3898",
+      "type": "CHARACTER",
+      "name": "중성원자양자·양자센싱"
+    },
+    {
+      "id": "C_3899",
+      "type": "CHARACTER",
+      "name": "양자SW·알고리즘"
+    },
+    {
+      "id": "A_2904",
+      "type": "ASSET",
+      "name": "KIWOOM 미국양자컴퓨팅",
+      "exposure": {
+        "ticker": "498270",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 4.407894736842111,
+        "return_3d": 9.865005192108,
+        "return_7d": 10.282734689988615,
+        "return_15d": 1.5418870009377805,
+        "return_1m": -7.098080700788866,
+        "return_ytd": 20.446458820604207,
+        "return_1y": 41.97801788434556,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 15870,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_940",
+      "type": "ASSET",
+      "name": "QTUM",
+      "exposure": {
+        "ticker": "QTUM",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.9288609912383903,
+        "close": 149.99,
+        "marketCap": 3949568328,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 6.187610619469042,
+        "return_7d": 6.526988636363629,
+        "return_15d": 1.3994050838291194,
+        "return_1m": -0.9574749075541344,
+        "return_ytd": 33.46680904075458,
+        "return_1y": 62.5731628007804,
+        "return_2y": 142.03646925931906,
+        "return_3y": 183.0,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-21T00:00:00+09:00",
-  "description": "미국 상무부가 자국 양자컴퓨팅 기업 9곳에 총 20억 달러 보조금/지분투자 패키지 발표. IBM 10억 달러 단독 최대, GlobalFoundries 3억 7,500만 달러, 나머지 1억 달러+. D-Wave·Rigetti·Infleqtion·Diraq 등 양자 H/W 기업 + GF 파운드리 수혜. 국가주도 정부 정책 자금 + AGI 기대가 핵심 동인.",
-  "notes": "g243 미국 양자컴퓨팅 상무부 투자 수혜 — IBM/GF 메이저 + 양자 스타트업",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1495",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008289"
+      ]
+    },
+    {
+      "from": "A_662",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008291"
+      ]
+    },
+    {
+      "from": "A_1139",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008293"
+      ]
+    },
+    {
+      "from": "A_936",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008295"
+      ]
+    },
+    {
+      "from": "A_1569",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008297"
+      ]
+    },
+    {
+      "from": "A_1570",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008299"
+      ]
+    },
+    {
+      "from": "M_010",
+      "to": "T_243",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008301"
+      ]
+    },
+    {
+      "from": "M_044",
+      "to": "T_243",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008302"
+      ]
+    },
+    {
+      "from": "M_200",
+      "to": "T_243",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008303"
+      ]
+    },
+    {
+      "from": "A_1495",
+      "to": "C_3894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008290"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_662",
+      "to": "C_3895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008292"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1139",
+      "to": "C_3896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008294"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_936",
+      "to": "C_3897",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008296"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1569",
+      "to": "C_3898",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008298"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1570",
+      "to": "C_3899",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008300"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1495",
+      "to": "A_936",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018091"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "IBM과 리게티는 동일한 초전도 게이트 방식 양자컴퓨터를 개발하는 직접 경쟁사다."
+    },
+    {
+      "from": "A_1495",
+      "to": "A_1139",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018092"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "IBM과 디웨이브는 상무부 CHIPS 투자와 상용 양자컴퓨팅 시장을 놓고 경쟁하는 순수 양자기업이다."
+    },
+    {
+      "from": "A_1495",
+      "to": "A_1569",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018093"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "IBM(초전도)과 인플렉션(중성원자)은 범용 양자컴퓨터 상용화를 두고 경쟁하는 양자기업이다."
+    },
+    {
+      "from": "A_936",
+      "to": "A_1139",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018094"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리게티와 디웨이브는 미국 상무부 양자 투자와 상용 시장에서 경쟁하는 순수 양자컴퓨팅 기업이다."
+    },
+    {
+      "from": "A_936",
+      "to": "A_1569",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018095"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리게티(초전도)와 인플렉션(중성원자)은 게이트형 양자컴퓨터 주도권을 놓고 직접 비교·경쟁된다."
+    },
+    {
+      "from": "A_1139",
+      "to": "A_1569",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018096"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "디웨이브와 인플렉션은 미국 상무부 100M 투자 수혜 및 양자컴퓨팅 시장에서 경쟁하는 상장 양자기업이다."
+    },
+    {
+      "from": "A_662",
+      "to": "A_1570",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018097"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "글로벌파운드리즈는 디라크(Diraq)와 크라이오-CMOS 양자 역량 및 반도체 파운드리 인프라에서 협력한다."
+    },
+    {
+      "from": "A_2904",
+      "to": "T_243",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020668"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_940",
+      "to": "T_243",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020669"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1495",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008289"
+      ]
+    },
+    {
+      "from": "A_662",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008291"
+      ]
+    },
+    {
+      "from": "A_1139",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008293"
+      ]
+    },
+    {
+      "from": "A_936",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008295"
+      ]
+    },
+    {
+      "from": "A_1569",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008297"
+      ]
+    },
+    {
+      "from": "A_1570",
+      "to": "T_243",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008299"
+      ]
+    },
+    {
+      "from": "M_010",
+      "to": "T_243",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008301"
+      ]
+    },
+    {
+      "from": "M_044",
+      "to": "T_243",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008302"
+      ]
+    },
+    {
+      "from": "M_200",
+      "to": "T_243",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008303"
+      ]
+    },
+    {
+      "from": "A_1495",
+      "to": "C_3894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008290"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_662",
+      "to": "C_3895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008292"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1139",
+      "to": "C_3896",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008294"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_936",
+      "to": "C_3897",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008296"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1569",
+      "to": "C_3898",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008298"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1570",
+      "to": "C_3899",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008300"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1495",
+      "to": "A_936",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018091"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "IBM과 리게티는 동일한 초전도 게이트 방식 양자컴퓨터를 개발하는 직접 경쟁사다."
+    },
+    {
+      "from": "A_1495",
+      "to": "A_1139",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018092"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "IBM과 디웨이브는 상무부 CHIPS 투자와 상용 양자컴퓨팅 시장을 놓고 경쟁하는 순수 양자기업이다."
+    },
+    {
+      "from": "A_1495",
+      "to": "A_1569",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018093"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "IBM(초전도)과 인플렉션(중성원자)은 범용 양자컴퓨터 상용화를 두고 경쟁하는 양자기업이다."
+    },
+    {
+      "from": "A_936",
+      "to": "A_1139",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018094"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리게티와 디웨이브는 미국 상무부 양자 투자와 상용 시장에서 경쟁하는 순수 양자컴퓨팅 기업이다."
+    },
+    {
+      "from": "A_936",
+      "to": "A_1569",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018095"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리게티(초전도)와 인플렉션(중성원자)은 게이트형 양자컴퓨터 주도권을 놓고 직접 비교·경쟁된다."
+    },
+    {
+      "from": "A_1139",
+      "to": "A_1569",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018096"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "디웨이브와 인플렉션은 미국 상무부 100M 투자 수혜 및 양자컴퓨팅 시장에서 경쟁하는 상장 양자기업이다."
+    },
+    {
+      "from": "A_662",
+      "to": "A_1570",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018097"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "글로벌파운드리즈는 디라크(Diraq)와 크라이오-CMOS 양자 역량 및 반도체 파운드리 인프라에서 협력한다."
+    },
+    {
+      "from": "A_2904",
+      "to": "T_243",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020668"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_940",
+      "to": "T_243",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020669"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_243",
-   "type": "THEME",
-   "name": "미국양자컴퓨팅_상무부투자수혜주"
-  },
-  {
-   "id": "A_1495",
-   "type": "ASSET",
-   "name": "IBM",
-   "exposure": {
-    "ticker": "IBM",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.906146436304181,
-    "close": 235.15,
-    "marketCap": 221542810100,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 6.047623342653563,
-    "return_7d": 9.785704281245632,
-    "return_15d": 8.329110425208475,
-    "return_1m": -21.491052350427342,
-    "return_ytd": -19.33104631217839,
-    "return_1y": -5.958808238352331,
-    "return_2y": 23.08940536013402,
-    "return_3y": 63.924712443360065,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "IBM은 초전도 게이트 양자컴퓨터(Heron)와 Qiskit 생태계로 양자 상용화를 선도, 상무부 투자에 수혜한다"
-  },
-  {
-   "id": "A_662",
-   "type": "ASSET",
-   "name": "글로벌파운드리즈",
-   "exposure": {
-    "ticker": "GFS",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.019196160767846,
-    "close": 52.02,
-    "marketCap": 28543417333,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.269392663860505,
-    "return_7d": -2.820848122548103,
-    "return_15d": -17.936583057264542,
-    "return_1m": -24.510230735742265,
-    "return_ytd": 41.090317331163575,
-    "return_1y": 42.20885729907054,
-    "return_2y": 5.048465266558955,
-    "return_3y": -17.09960159362549,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1139",
-   "type": "ASSET",
-   "name": "디웨이브",
-   "exposure": {
-    "ticker": "QBTS",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 9.259259259259256,
-    "close": 21.82,
-    "marketCap": 8013811083,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 21.412680756395975,
-    "return_7d": 34.66995681677976,
-    "return_15d": 15.197889182058045,
-    "return_1m": -3.235815602836878,
-    "return_ytd": -22.396018485602564,
-    "return_1y": 33.27228327228327,
-    "return_2y": 2185.86387434555,
-    "return_3y": 939.5238095238094,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_936",
-   "type": "ASSET",
-   "name": "리게티",
-   "exposure": {
-    "ticker": "RGTI",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 8.926342072409476,
-    "close": 17.45,
-    "marketCap": 5800359182,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 17.429340511440117,
-    "return_7d": 23.32155477031801,
-    "return_15d": 8.31781502172564,
-    "return_1m": -2.8396436525612523,
-    "return_ytd": -26.05932203389831,
-    "return_1y": 23.58356940509916,
-    "return_2y": 1661.9143780290792,
-    "return_3y": 693.1818181818181,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1569",
-   "type": "ASSET",
-   "name": "인플렉션",
-   "exposure": {
-    "ticker": "INFQ",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.371584699453557,
-    "close": 11.46,
-    "marketCap": 2500536245,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 14.829659318637267,
-    "return_7d": 27.75919732441472,
-    "return_15d": 9.665071770334954,
-    "return_1m": -7.0559610705596025,
-    "return_ytd": -31.129807692307686,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1570",
-   "type": "ASSET",
-   "name": "디라크",
-   "exposure": {
-    "ticker": "",
-    "exchange": "",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": null,
-    "returnsSource": null
-   },
-   "coreBiz": "디라크는 양자 SW·알고리즘 개발사로 양자 밸류체인 소프트웨어 부문에 편입된다"
-  },
-  {
-   "id": "M_010",
-   "type": "MACRO",
-   "name": "국가주도"
-  },
-  {
-   "id": "M_044",
-   "type": "MACRO",
-   "name": "정부정책자금"
-  },
-  {
-   "id": "M_200",
-   "type": "MACRO",
-   "name": "AGI범용인공지능"
-  },
-  {
-   "id": "C_3894",
-   "type": "CHARACTER",
-   "name": "게이트양자·Qiskit생태계"
-  },
-  {
-   "id": "C_3895",
-   "type": "CHARACTER",
-   "name": "양자·특수반도체파운드리"
-  },
-  {
-   "id": "C_3896",
-   "type": "CHARACTER",
-   "name": "양자어닐링·상용서비스"
-  },
-  {
-   "id": "C_3897",
-   "type": "CHARACTER",
-   "name": "초전도게이트양자칩"
-  },
-  {
-   "id": "C_3898",
-   "type": "CHARACTER",
-   "name": "중성원자양자·양자센싱"
-  },
-  {
-   "id": "C_3899",
-   "type": "CHARACTER",
-   "name": "양자SW·알고리즘"
-  },
-  {
-   "id": "A_2904",
-   "type": "ASSET",
-   "name": "KIWOOM 미국양자컴퓨팅",
-   "exposure": {
-    "ticker": "498270",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  },
-  {
-   "id": "A_940",
-   "type": "ASSET",
-   "name": "QTUM",
-   "exposure": {
-    "ticker": "QTUM",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.760600041098706,
-    "close": 152.94,
-    "marketCap": 4027248350,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 9.001496685909771,
-    "return_7d": 9.58727429062769,
-    "return_15d": 2.0620620620620533,
-    "return_1m": -2.548744743213971,
-    "return_ytd": 36.09183128670583,
-    "return_1y": 69.08789386401327,
-    "return_2y": 154.9,
-    "return_3y": 190.31890660592254,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1495",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008289"
-   ]
-  },
-  {
-   "from": "A_662",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008291"
-   ]
-  },
-  {
-   "from": "A_1139",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008293"
-   ]
-  },
-  {
-   "from": "A_936",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008295"
-   ]
-  },
-  {
-   "from": "A_1569",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008297"
-   ]
-  },
-  {
-   "from": "A_1570",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008299"
-   ]
-  },
-  {
-   "from": "M_010",
-   "to": "T_243",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008301"
-   ]
-  },
-  {
-   "from": "M_044",
-   "to": "T_243",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008302"
-   ]
-  },
-  {
-   "from": "M_200",
-   "to": "T_243",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008303"
-   ]
-  },
-  {
-   "from": "A_1495",
-   "to": "C_3894",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008290"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_662",
-   "to": "C_3895",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008292"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1139",
-   "to": "C_3896",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008294"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_936",
-   "to": "C_3897",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008296"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1569",
-   "to": "C_3898",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008298"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1570",
-   "to": "C_3899",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008300"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1495",
-   "to": "A_936",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018091"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "IBM과 리게티는 동일한 초전도 게이트 방식 양자컴퓨터를 개발하는 직접 경쟁사다."
-  },
-  {
-   "from": "A_1495",
-   "to": "A_1139",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018092"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "IBM과 디웨이브는 상무부 CHIPS 투자와 상용 양자컴퓨팅 시장을 놓고 경쟁하는 순수 양자기업이다."
-  },
-  {
-   "from": "A_1495",
-   "to": "A_1569",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018093"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "IBM(초전도)과 인플렉션(중성원자)은 범용 양자컴퓨터 상용화를 두고 경쟁하는 양자기업이다."
-  },
-  {
-   "from": "A_936",
-   "to": "A_1139",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018094"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리게티와 디웨이브는 미국 상무부 양자 투자와 상용 시장에서 경쟁하는 순수 양자컴퓨팅 기업이다."
-  },
-  {
-   "from": "A_936",
-   "to": "A_1569",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018095"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리게티(초전도)와 인플렉션(중성원자)은 게이트형 양자컴퓨터 주도권을 놓고 직접 비교·경쟁된다."
-  },
-  {
-   "from": "A_1139",
-   "to": "A_1569",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018096"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "디웨이브와 인플렉션은 미국 상무부 100M 투자 수혜 및 양자컴퓨팅 시장에서 경쟁하는 상장 양자기업이다."
-  },
-  {
-   "from": "A_662",
-   "to": "A_1570",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018097"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "글로벌파운드리즈는 디라크(Diraq)와 크라이오-CMOS 양자 역량 및 반도체 파운드리 인프라에서 협력한다."
-  },
-  {
-   "from": "A_2904",
-   "to": "T_243",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020668"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_940",
-   "to": "T_243",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020669"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1495",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008289"
-   ]
-  },
-  {
-   "from": "A_662",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008291"
-   ]
-  },
-  {
-   "from": "A_1139",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008293"
-   ]
-  },
-  {
-   "from": "A_936",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008295"
-   ]
-  },
-  {
-   "from": "A_1569",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008297"
-   ]
-  },
-  {
-   "from": "A_1570",
-   "to": "T_243",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008299"
-   ]
-  },
-  {
-   "from": "M_010",
-   "to": "T_243",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008301"
-   ]
-  },
-  {
-   "from": "M_044",
-   "to": "T_243",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008302"
-   ]
-  },
-  {
-   "from": "M_200",
-   "to": "T_243",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008303"
-   ]
-  },
-  {
-   "from": "A_1495",
-   "to": "C_3894",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008290"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_662",
-   "to": "C_3895",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008292"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1139",
-   "to": "C_3896",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008294"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_936",
-   "to": "C_3897",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008296"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1569",
-   "to": "C_3898",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008298"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1570",
-   "to": "C_3899",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008300"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1495",
-   "to": "A_936",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018091"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "IBM과 리게티는 동일한 초전도 게이트 방식 양자컴퓨터를 개발하는 직접 경쟁사다."
-  },
-  {
-   "from": "A_1495",
-   "to": "A_1139",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018092"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "IBM과 디웨이브는 상무부 CHIPS 투자와 상용 양자컴퓨팅 시장을 놓고 경쟁하는 순수 양자기업이다."
-  },
-  {
-   "from": "A_1495",
-   "to": "A_1569",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018093"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "IBM(초전도)과 인플렉션(중성원자)은 범용 양자컴퓨터 상용화를 두고 경쟁하는 양자기업이다."
-  },
-  {
-   "from": "A_936",
-   "to": "A_1139",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018094"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리게티와 디웨이브는 미국 상무부 양자 투자와 상용 시장에서 경쟁하는 순수 양자컴퓨팅 기업이다."
-  },
-  {
-   "from": "A_936",
-   "to": "A_1569",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018095"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리게티(초전도)와 인플렉션(중성원자)은 게이트형 양자컴퓨터 주도권을 놓고 직접 비교·경쟁된다."
-  },
-  {
-   "from": "A_1139",
-   "to": "A_1569",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018096"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "디웨이브와 인플렉션은 미국 상무부 100M 투자 수혜 및 양자컴퓨팅 시장에서 경쟁하는 상장 양자기업이다."
-  },
-  {
-   "from": "A_662",
-   "to": "A_1570",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018097"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "글로벌파운드리즈는 디라크(Diraq)와 크라이오-CMOS 양자 역량 및 반도체 파운드리 인프라에서 협력한다."
-  },
-  {
-   "from": "A_2904",
-   "to": "T_243",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020668"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_940",
-   "to": "T_243",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020669"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

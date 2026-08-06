@@ -1,803 +1,821 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_467",
- "themeName": "글로벌 우라늄·원자력연료",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_467",
+  "themeName": "글로벌 우라늄·원자력연료",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-29T00:00:00+09:00",
+    "description": "원전 르네상스·SMR·AI 전력수요의 원료 노출 — 우라늄 채굴·농축·연료. Cameco·Kazatomprom(채굴)·NexGen·Denison(개발)·Uranium Energy·Energy Fuels·Centrus(농축)·URA ETF. 우라늄 가격·공급 부족·인허가가 동인.",
+    "notes": "T_467 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3 (기존 재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-29",
+        "kind": "수정",
+        "title": "AI 전력 고평가 폭락 이벤트 추가",
+        "detail": "AI 전력수요 랠리 장기화·고평가 부담에 따른 되돌림 폭락 반영."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_467",
+      "type": "THEME",
+      "name": "글로벌 우라늄·원자력연료"
+    },
+    {
+      "id": "A_165",
+      "type": "ASSET",
+      "name": "Cameco",
+      "exposure": {
+        "ticker": "CCJ",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.2675905038135094,
+        "return_3d": 9.134058809909696,
+        "return_7d": 5.5064353665361,
+        "return_15d": 3.6161793800835174,
+        "return_1m": -0.42252033379106546,
+        "return_ytd": -4.352678571428581,
+        "return_1y": 25.259101780494262,
+        "return_2y": 107.23235876016703,
+        "return_3y": 168.11717861205918,
+        "close": 94.27,
+        "marketCap": 41057695910,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_888",
+      "type": "CHARACTER",
+      "name": "서방 우라늄 채굴 1위"
+    },
+    {
+      "id": "A_2420",
+      "type": "ASSET",
+      "name": "카자톰프롬",
+      "exposure": {
+        "ticker": "KAP",
+        "exchange": "LSE",
+        "country": "KZ"
+      },
+      "metrics": {
+        "return_1d": 1.4641288433382194,
+        "return_3d": 9.478672985782,
+        "return_7d": 3.432835820895508,
+        "return_15d": 2.212389380530966,
+        "return_1m": 0.43478260869564966,
+        "return_ytd": 25.09025270758123,
+        "return_1y": 56.081081081081074,
+        "return_2y": 91.43646408839776,
+        "return_3y": 140.625,
+        "close": 69.3,
+        "marketCap": 17973439546,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_889",
+      "type": "CHARACTER",
+      "name": "세계 우라늄 채굴 1위"
+    },
+    {
+      "id": "A_1343",
+      "type": "ASSET",
+      "name": "넥스젠에너지",
+      "exposure": {
+        "ticker": "NXE",
+        "exchange": "NYSE",
+        "country": "CA"
+      },
+      "metrics": {
+        "return_1d": 2.86885245901638,
+        "return_3d": 9.72677595628415,
+        "return_7d": 7.725321888411996,
+        "return_15d": 8.540540540540542,
+        "return_1m": 10.451045104510449,
+        "return_ytd": -2.048780487804891,
+        "return_1y": 48.52071005917158,
+        "return_2y": 50.524737631184394,
+        "return_3y": 104.48065173116086,
+        "close": 10.04,
+        "marketCap": 6645566360,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_890",
+      "type": "CHARACTER",
+      "name": "캐나다 고품위 개발"
+    },
+    {
+      "id": "A_2421",
+      "type": "ASSET",
+      "name": "데니슨마인스",
+      "exposure": {
+        "ticker": "DNN",
+        "exchange": "NYSEAMERICAN",
+        "country": "CA"
+      },
+      "metrics": {
+        "return_1d": 3.691275167785224,
+        "return_3d": 9.964412811387891,
+        "return_7d": 5.821917808219168,
+        "return_15d": 0.0,
+        "return_1m": -1.904761904761909,
+        "return_ytd": 1.980198019801982,
+        "return_1y": 45.07042253521127,
+        "return_2y": 56.85279187817258,
+        "return_3y": 141.40625,
+        "close": 3.09,
+        "marketCap": 2796502413,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_891",
+      "type": "CHARACTER",
+      "name": "ISR 우라늄 개발"
+    },
+    {
+      "id": "A_1345",
+      "type": "ASSET",
+      "name": "우라늄에너지",
+      "exposure": {
+        "ticker": "UEC",
+        "exchange": "NYSEAMERICAN",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 2.0952380952381056,
+        "return_3d": 11.66666666666667,
+        "return_7d": 8.173562058526752,
+        "return_15d": 6.033630069238383,
+        "return_1m": 8.28282828282829,
+        "return_ytd": -18.230358504958044,
+        "return_1y": 16.39522258414765,
+        "return_2y": 80.77571669477237,
+        "return_3y": 197.77777777777777,
+        "close": 10.72,
+        "marketCap": 5305027840,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_892",
+      "type": "CHARACTER",
+      "name": "미국 ISR"
+    },
+    {
+      "id": "A_1344",
+      "type": "ASSET",
+      "name": "에너지퓨얼스",
+      "exposure": {
+        "ticker": "UUUU",
+        "exchange": "NYSEAMERICAN",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.265940902021769,
+        "return_3d": 8.74125874125875,
+        "return_7d": 6.233988044406469,
+        "return_15d": -1.815311760063143,
+        "return_1m": -3.265940902021769,
+        "return_ytd": -25.41966426858513,
+        "return_1y": 27.98353909465019,
+        "return_2y": 118.62917398945515,
+        "return_3y": 94.98432601880877,
+        "close": 12.44,
+        "marketCap": 3108994102,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_893",
+      "type": "CHARACTER",
+      "name": "미국 우라늄·희토류"
+    },
+    {
+      "id": "A_166",
+      "type": "ASSET",
+      "name": "센트러스에너지",
+      "exposure": {
+        "ticker": "LEU",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.8507715070809607,
+        "return_3d": 6.047589442152268,
+        "return_7d": 6.620070462552574,
+        "return_15d": 19.860738469400797,
+        "return_1m": 13.275778797391947,
+        "return_ytd": -31.14495412844037,
+        "return_1y": -10.673649131159257,
+        "return_2y": 329.45754177157244,
+        "return_3y": 399.0159574468085,
+        "close": 187.63,
+        "marketCap": 3556262842,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_894",
+      "type": "CHARACTER",
+      "name": "미국 농축(HALEU) 1위"
+    },
+    {
+      "id": "A_069",
+      "type": "ASSET",
+      "name": "URA",
+      "exposure": {
+        "ticker": "URA",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.9413979759943514,
+        "return_3d": 9.777322754031225,
+        "return_7d": 6.3740079365079305,
+        "return_15d": 4.86552567237164,
+        "return_1m": 2.7305389221556897,
+        "return_ytd": -6.88232739904473,
+        "return_1y": 8.60977462648771,
+        "return_2y": 51.3408609738885,
+        "return_3y": 88.94273127753306,
+        "close": 42.89,
+        "marketCap": 4281953731,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_895",
+      "type": "CHARACTER",
+      "name": "글로벌 우라늄 ETF"
+    },
+    {
+      "id": "M_027",
+      "type": "MACRO",
+      "name": "원전확대"
+    },
+    {
+      "id": "M_337",
+      "type": "MACRO",
+      "name": "SMR원전수요확대"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "A_2943",
+      "type": "ASSET",
+      "name": "Sprott Uranium Miners ETF",
+      "exposure": {
+        "ticker": "URNM",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.1753371868978846,
+        "return_3d": 8.112003294214531,
+        "return_7d": 4.9780087964814035,
+        "return_15d": 3.203616352201255,
+        "return_1m": 3.6313400434181853,
+        "return_ytd": -13.134822167080241,
+        "return_1y": 13.143719026071965,
+        "return_2y": 11.985497973981651,
+        "return_3y": 51.10791366906475,
+        "close": 52.51,
+        "marketCap": 1217672769,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-29T00:00:00+09:00",
-  "description": "원전 르네상스·SMR·AI 전력수요의 원료 노출 — 우라늄 채굴·농축·연료. Cameco·Kazatomprom(채굴)·NexGen·Denison(개발)·Uranium Energy·Energy Fuels·Centrus(농축)·URA ETF. 우라늄 가격·공급 부족·인허가가 동인.",
-  "notes": "T_467 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3 (기존 재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-29",
-    "kind": "수정",
-    "title": "AI 전력 고평가 폭락 이벤트 추가",
-    "detail": "AI 전력수요 랠리 장기화·고평가 부담에 따른 되돌림 폭락 반영."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_165",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012003"
+      ]
+    },
+    {
+      "from": "A_165",
+      "to": "C_888",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016978"
+      ]
+    },
+    {
+      "from": "A_2420",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012004"
+      ]
+    },
+    {
+      "from": "A_2420",
+      "to": "C_889",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016979"
+      ]
+    },
+    {
+      "from": "A_1343",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012005"
+      ]
+    },
+    {
+      "from": "A_1343",
+      "to": "C_890",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016980"
+      ]
+    },
+    {
+      "from": "A_2421",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012006"
+      ]
+    },
+    {
+      "from": "A_2421",
+      "to": "C_891",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016981"
+      ]
+    },
+    {
+      "from": "A_1345",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012007"
+      ]
+    },
+    {
+      "from": "A_1345",
+      "to": "C_892",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016982"
+      ]
+    },
+    {
+      "from": "A_1344",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012008"
+      ]
+    },
+    {
+      "from": "A_1344",
+      "to": "C_893",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016983"
+      ]
+    },
+    {
+      "from": "A_166",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012009"
+      ]
+    },
+    {
+      "from": "A_166",
+      "to": "C_894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016984"
+      ]
+    },
+    {
+      "from": "A_069",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012010"
+      ]
+    },
+    {
+      "from": "A_069",
+      "to": "C_895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016985"
+      ]
+    },
+    {
+      "from": "M_027",
+      "to": "T_467",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012011"
+      ]
+    },
+    {
+      "from": "M_337",
+      "to": "T_467",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012012"
+      ]
+    },
+    {
+      "from": "M_035",
+      "to": "T_467",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012013"
+      ]
+    },
+    {
+      "from": "A_165",
+      "to": "A_2420",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019784"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Cameco와 카자톰프롬은 글로벌 우라늄 채굴 시장 양대 경쟁"
+    },
+    {
+      "from": "A_1343",
+      "to": "A_2421",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019785"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "넥스젠에너지와 데니슨마인스는 캐나다 우라늄 탐사·개발 경쟁"
+    },
+    {
+      "from": "A_1345",
+      "to": "A_1344",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019786"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "우라늄에너지와 에너지퓨얼스는 미국 우라늄 채굴 경쟁"
+    },
+    {
+      "from": "A_165",
+      "to": "A_166",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019787"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Cameco는 센트러스에너지에 천연우라늄을 공급"
+    },
+    {
+      "from": "A_165",
+      "to": "A_1343",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019788"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Cameco와 넥스젠에너지는 캐나다 애서배스카 분지 개발 경쟁"
+    },
+    {
+      "from": "A_069",
+      "to": "T_467",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020812"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2943",
+      "to": "T_467",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020813"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_165",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012003"
+      ]
+    },
+    {
+      "from": "A_165",
+      "to": "C_888",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016978"
+      ]
+    },
+    {
+      "from": "A_2420",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012004"
+      ]
+    },
+    {
+      "from": "A_2420",
+      "to": "C_889",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016979"
+      ]
+    },
+    {
+      "from": "A_1343",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012005"
+      ]
+    },
+    {
+      "from": "A_1343",
+      "to": "C_890",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016980"
+      ]
+    },
+    {
+      "from": "A_2421",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012006"
+      ]
+    },
+    {
+      "from": "A_2421",
+      "to": "C_891",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016981"
+      ]
+    },
+    {
+      "from": "A_1345",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012007"
+      ]
+    },
+    {
+      "from": "A_1345",
+      "to": "C_892",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016982"
+      ]
+    },
+    {
+      "from": "A_1344",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012008"
+      ]
+    },
+    {
+      "from": "A_1344",
+      "to": "C_893",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016983"
+      ]
+    },
+    {
+      "from": "A_166",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012009"
+      ]
+    },
+    {
+      "from": "A_166",
+      "to": "C_894",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016984"
+      ]
+    },
+    {
+      "from": "A_069",
+      "to": "T_467",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012010"
+      ]
+    },
+    {
+      "from": "A_069",
+      "to": "C_895",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016985"
+      ]
+    },
+    {
+      "from": "M_027",
+      "to": "T_467",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012011"
+      ]
+    },
+    {
+      "from": "M_337",
+      "to": "T_467",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012012"
+      ]
+    },
+    {
+      "from": "M_035",
+      "to": "T_467",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012013"
+      ]
+    },
+    {
+      "from": "A_165",
+      "to": "A_2420",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019784"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Cameco와 카자톰프롬은 글로벌 우라늄 채굴 시장 양대 경쟁"
+    },
+    {
+      "from": "A_1343",
+      "to": "A_2421",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019785"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "넥스젠에너지와 데니슨마인스는 캐나다 우라늄 탐사·개발 경쟁"
+    },
+    {
+      "from": "A_1345",
+      "to": "A_1344",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019786"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "우라늄에너지와 에너지퓨얼스는 미국 우라늄 채굴 경쟁"
+    },
+    {
+      "from": "A_165",
+      "to": "A_166",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019787"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Cameco는 센트러스에너지에 천연우라늄을 공급"
+    },
+    {
+      "from": "A_165",
+      "to": "A_1343",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019788"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Cameco와 넥스젠에너지는 캐나다 애서배스카 분지 개발 경쟁"
+    },
+    {
+      "from": "A_069",
+      "to": "T_467",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020812"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2943",
+      "to": "T_467",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020813"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_467",
-   "type": "THEME",
-   "name": "글로벌 우라늄·원자력연료"
-  },
-  {
-   "id": "A_165",
-   "type": "ASSET",
-   "name": "Cameco",
-   "exposure": {
-    "ticker": "CCJ",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.7561301827909066,
-    "return_3d": 5.508330499829994,
-    "return_7d": 5.952651946278165,
-    "return_15d": 1.6599322922354665,
-    "return_1m": -4.5230769230769186,
-    "return_ytd": -5.5499188311688314,
-    "return_1y": 27.642945290004107,
-    "return_2y": 110.23035230352303,
-    "return_3y": 174.03591404180162,
-    "close": 93.09,
-    "marketCap": 40543766970,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_888",
-   "type": "CHARACTER",
-   "name": "서방 우라늄 채굴 1위"
-  },
-  {
-   "id": "A_2420",
-   "type": "ASSET",
-   "name": "카자톰프롬",
-   "exposure": {
-    "ticker": "KAP",
-    "exchange": "LSE",
-    "country": "KZ"
-   },
-   "metrics": {
-    "return_1d": 1.636904761904745,
-    "return_3d": 6.552262090483629,
-    "return_7d": 5.727554179566563,
-    "return_15d": -0.14619883040937198,
-    "return_1m": -3.394625176803401,
-    "return_ytd": 23.285198555956676,
-    "return_1y": 56.47193585337915,
-    "return_2y": 88.67403314917124,
-    "return_3y": 135.51724137931035,
-    "close": 68.3,
-    "marketCap": 17714082554,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_889",
-   "type": "CHARACTER",
-   "name": "세계 우라늄 채굴 1위"
-  },
-  {
-   "id": "A_1343",
-   "type": "ASSET",
-   "name": "넥스젠에너지",
-   "exposure": {
-    "ticker": "NXE",
-    "exchange": "NYSE",
-    "country": "CA"
-   },
-   "metrics": {
-    "return_1d": 1.9853709508881767,
-    "return_3d": 4.721030042918439,
-    "return_7d": 6.783369803063444,
-    "return_15d": 4.2735042735042805,
-    "return_1m": 0.8264462809917328,
-    "return_ytd": -4.780487804878053,
-    "return_1y": 50.617283950617264,
-    "return_2y": 52.49999999999999,
-    "return_3y": 107.21868365180467,
-    "close": 9.76,
-    "marketCap": 6460231840,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_890",
-   "type": "CHARACTER",
-   "name": "캐나다 고품위 개발"
-  },
-  {
-   "id": "A_2421",
-   "type": "ASSET",
-   "name": "데니슨마인스",
-   "exposure": {
-    "ticker": "DNN",
-    "exchange": "NYSEAMERICAN",
-    "country": "CA"
-   },
-   "metrics": {
-    "return_1d": 3.472222222222232,
-    "return_3d": 2.0547945205479534,
-    "return_7d": 2.405498281786933,
-    "return_15d": -5.993690851735012,
-    "return_1m": -8.024691358024693,
-    "return_ytd": -1.650165016501648,
-    "return_1y": 46.07843137254901,
-    "return_2y": 60.21505376344085,
-    "return_3y": 140.3225806451613,
-    "close": 2.98,
-    "marketCap": 2696950547,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_891",
-   "type": "CHARACTER",
-   "name": "ISR 우라늄 개발"
-  },
-  {
-   "id": "A_1345",
-   "type": "ASSET",
-   "name": "우라늄에너지",
-   "exposure": {
-    "ticker": "UEC",
-    "exchange": "NYSEAMERICAN",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.315947843530577,
-    "return_3d": 7.802874743326482,
-    "return_7d": 10.410094637223978,
-    "return_15d": 1.0587102983637964,
-    "return_1m": -0.8498583569405138,
-    "return_ytd": -19.90846681922196,
-    "return_1y": 21.107266435986148,
-    "return_2y": 84.5342706502636,
-    "return_3y": 216.2650602409639,
-    "close": 10.5,
-    "marketCap": 5196156000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_892",
-   "type": "CHARACTER",
-   "name": "미국 ISR"
-  },
-  {
-   "id": "A_1344",
-   "type": "ASSET",
-   "name": "에너지퓨얼스",
-   "exposure": {
-    "ticker": "UUUU",
-    "exchange": "NYSEAMERICAN",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.843621399176957,
-    "return_3d": 9.820666097352682,
-    "return_7d": 13.80530973451326,
-    "return_15d": -2.7966742252456656,
-    "return_1m": -6.608569353667393,
-    "return_ytd": -22.901678657074342,
-    "return_1y": 45.31073446327682,
-    "return_2y": 130.87971274685816,
-    "return_3y": 114.33333333333331,
-    "close": 12.86,
-    "marketCap": 3213960140,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_893",
-   "type": "CHARACTER",
-   "name": "미국 우라늄·희토류"
-  },
-  {
-   "id": "A_166",
-   "type": "ASSET",
-   "name": "센트러스에너지",
-   "exposure": {
-    "ticker": "LEU",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.424767265641914,
-    "return_3d": 7.066478076379079,
-    "return_7d": 15.467691744462764,
-    "return_15d": 18.735098506713534,
-    "return_1m": 8.615049073064363,
-    "return_ytd": -30.554128440366966,
-    "return_1y": -9.16334661354582,
-    "return_2y": 344.74735605170395,
-    "return_3y": 434.5762711864407,
-    "close": 189.24,
-    "marketCap": 3586778129,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_894",
-   "type": "CHARACTER",
-   "name": "미국 농축(HALEU) 1위"
-  },
-  {
-   "id": "A_069",
-   "type": "ASSET",
-   "name": "URA",
-   "exposure": {
-    "ticker": "URA",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.116638078902235,
-    "return_3d": 6.973816717019132,
-    "return_7d": 6.517924291802468,
-    "return_15d": 2.2623345367027703,
-    "return_1m": -3.1677301731996343,
-    "return_ytd": -7.750759878419455,
-    "return_1y": 11.172161172161177,
-    "return_2y": 55.755131964809394,
-    "return_3y": 93.31210191082803,
-    "close": 42.49,
-    "marketCap": 4242019445,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_895",
-   "type": "CHARACTER",
-   "name": "글로벌 우라늄 ETF"
-  },
-  {
-   "id": "M_027",
-   "type": "MACRO",
-   "name": "원전확대"
-  },
-  {
-   "id": "M_337",
-   "type": "MACRO",
-   "name": "SMR원전수요확대"
-  },
-  {
-   "id": "M_035",
-   "type": "MACRO",
-   "name": "AI데이터센터전력수요증가"
-  },
-  {
-   "id": "A_2943",
-   "type": "ASSET",
-   "name": "Sprott Uranium Miners ETF",
-   "exposure": {
-    "ticker": "URNM",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_165",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012003"
-   ]
-  },
-  {
-   "from": "A_165",
-   "to": "C_888",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016978"
-   ]
-  },
-  {
-   "from": "A_2420",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012004"
-   ]
-  },
-  {
-   "from": "A_2420",
-   "to": "C_889",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016979"
-   ]
-  },
-  {
-   "from": "A_1343",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012005"
-   ]
-  },
-  {
-   "from": "A_1343",
-   "to": "C_890",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016980"
-   ]
-  },
-  {
-   "from": "A_2421",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012006"
-   ]
-  },
-  {
-   "from": "A_2421",
-   "to": "C_891",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016981"
-   ]
-  },
-  {
-   "from": "A_1345",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012007"
-   ]
-  },
-  {
-   "from": "A_1345",
-   "to": "C_892",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016982"
-   ]
-  },
-  {
-   "from": "A_1344",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012008"
-   ]
-  },
-  {
-   "from": "A_1344",
-   "to": "C_893",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016983"
-   ]
-  },
-  {
-   "from": "A_166",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012009"
-   ]
-  },
-  {
-   "from": "A_166",
-   "to": "C_894",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016984"
-   ]
-  },
-  {
-   "from": "A_069",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012010"
-   ]
-  },
-  {
-   "from": "A_069",
-   "to": "C_895",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016985"
-   ]
-  },
-  {
-   "from": "M_027",
-   "to": "T_467",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012011"
-   ]
-  },
-  {
-   "from": "M_337",
-   "to": "T_467",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012012"
-   ]
-  },
-  {
-   "from": "M_035",
-   "to": "T_467",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012013"
-   ]
-  },
-  {
-   "from": "A_165",
-   "to": "A_2420",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019784"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Cameco와 카자톰프롬은 글로벌 우라늄 채굴 시장 양대 경쟁"
-  },
-  {
-   "from": "A_1343",
-   "to": "A_2421",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019785"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "넥스젠에너지와 데니슨마인스는 캐나다 우라늄 탐사·개발 경쟁"
-  },
-  {
-   "from": "A_1345",
-   "to": "A_1344",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019786"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "우라늄에너지와 에너지퓨얼스는 미국 우라늄 채굴 경쟁"
-  },
-  {
-   "from": "A_165",
-   "to": "A_166",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019787"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Cameco는 센트러스에너지에 천연우라늄을 공급"
-  },
-  {
-   "from": "A_165",
-   "to": "A_1343",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019788"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Cameco와 넥스젠에너지는 캐나다 애서배스카 분지 개발 경쟁"
-  },
-  {
-   "from": "A_069",
-   "to": "T_467",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020812"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2943",
-   "to": "T_467",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020813"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_165",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012003"
-   ]
-  },
-  {
-   "from": "A_165",
-   "to": "C_888",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016978"
-   ]
-  },
-  {
-   "from": "A_2420",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012004"
-   ]
-  },
-  {
-   "from": "A_2420",
-   "to": "C_889",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016979"
-   ]
-  },
-  {
-   "from": "A_1343",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012005"
-   ]
-  },
-  {
-   "from": "A_1343",
-   "to": "C_890",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016980"
-   ]
-  },
-  {
-   "from": "A_2421",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012006"
-   ]
-  },
-  {
-   "from": "A_2421",
-   "to": "C_891",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016981"
-   ]
-  },
-  {
-   "from": "A_1345",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012007"
-   ]
-  },
-  {
-   "from": "A_1345",
-   "to": "C_892",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016982"
-   ]
-  },
-  {
-   "from": "A_1344",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012008"
-   ]
-  },
-  {
-   "from": "A_1344",
-   "to": "C_893",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016983"
-   ]
-  },
-  {
-   "from": "A_166",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012009"
-   ]
-  },
-  {
-   "from": "A_166",
-   "to": "C_894",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016984"
-   ]
-  },
-  {
-   "from": "A_069",
-   "to": "T_467",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012010"
-   ]
-  },
-  {
-   "from": "A_069",
-   "to": "C_895",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016985"
-   ]
-  },
-  {
-   "from": "M_027",
-   "to": "T_467",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012011"
-   ]
-  },
-  {
-   "from": "M_337",
-   "to": "T_467",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012012"
-   ]
-  },
-  {
-   "from": "M_035",
-   "to": "T_467",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012013"
-   ]
-  },
-  {
-   "from": "A_165",
-   "to": "A_2420",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019784"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Cameco와 카자톰프롬은 글로벌 우라늄 채굴 시장 양대 경쟁"
-  },
-  {
-   "from": "A_1343",
-   "to": "A_2421",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019785"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "넥스젠에너지와 데니슨마인스는 캐나다 우라늄 탐사·개발 경쟁"
-  },
-  {
-   "from": "A_1345",
-   "to": "A_1344",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019786"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "우라늄에너지와 에너지퓨얼스는 미국 우라늄 채굴 경쟁"
-  },
-  {
-   "from": "A_165",
-   "to": "A_166",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019787"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Cameco는 센트러스에너지에 천연우라늄을 공급"
-  },
-  {
-   "from": "A_165",
-   "to": "A_1343",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019788"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Cameco와 넥스젠에너지는 캐나다 애서배스카 분지 개발 경쟁"
-  },
-  {
-   "from": "A_069",
-   "to": "T_467",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020812"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2943",
-   "to": "T_467",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020813"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

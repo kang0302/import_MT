@@ -1,627 +1,645 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_386",
- "themeName": "유럽화학메이저",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_386",
+  "themeName": "유럽화학메이저",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "유럽 화학 메이저 — BASF·Air Liquide·Linde·Solvay·Akzo Nobel·Covestro. 산업 가스 + 정밀 화학 + 코팅 통합. 미국 인프라 capex + 중국 EV (배터리 화학) + EU 환경규제. BASF 는 천연가스 cost shock 회복.",
+    "notes": "T_386 신규 — 유럽 batch",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 3건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_386",
+      "type": "THEME",
+      "name": "유럽화학메이저"
+    },
+    {
+      "id": "A_2083",
+      "type": "ASSET",
+      "name": "BASF",
+      "exposure": {
+        "ticker": "BASFY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 0.4115226337448652,
+        "return_3d": 0.7570543702684285,
+        "return_7d": 6.783369803063466,
+        "return_15d": 7.0958302852962785,
+        "return_1m": 9.009679821295613,
+        "return_ytd": 11.585365853658548,
+        "return_1y": 21.19205298013245,
+        "return_2y": 25.773195876288657,
+        "return_3y": 9.335324869305461,
+        "close": 14.64,
+        "marketCap": 50493637516,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_768",
+      "type": "ASSET",
+      "name": "Air Liquide",
+      "exposure": {
+        "ticker": "AI",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": 0.883412762989666,
+        "return_3d": 1.6752577319587791,
+        "return_7d": -2.031832035218417,
+        "return_15d": -0.8907159986296542,
+        "return_1m": -2.581658996520364,
+        "return_ytd": 20.083016257350405,
+        "return_1y": 9.874667679453108,
+        "return_2y": 17.33928209288178,
+        "return_3y": 30.69798960921617,
+        "close": 173.58,
+        "marketCap": 110374122968,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_767",
+      "type": "ASSET",
+      "name": "Linde",
+      "exposure": {
+        "ticker": "LIN",
+        "exchange": "NASDAQ",
+        "country": "IE"
+      },
+      "metrics": {
+        "return_1d": 1.3226312314295274,
+        "return_3d": 2.648522095405337,
+        "return_7d": -3.149777129107323,
+        "return_15d": -4.492852280462889,
+        "return_1m": -8.765769280790735,
+        "return_ytd": 14.434527277388076,
+        "return_1y": 5.059905862216518,
+        "return_2y": 8.280044101433305,
+        "return_3y": 25.694320014334338,
+        "close": 491.05,
+        "marketCap": 227159730000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1950",
+      "type": "ASSET",
+      "name": "솔베이",
+      "exposure": {
+        "ticker": "SOLB",
+        "exchange": "EBR",
+        "country": "BE"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2109",
+      "type": "ASSET",
+      "name": "악조노벨",
+      "exposure": {
+        "ticker": "AKZOY",
+        "exchange": "OTC",
+        "country": "NL"
+      },
+      "metrics": {
+        "return_1d": 0.20618556701030855,
+        "return_3d": 4.202401372212705,
+        "return_7d": 9.410175596578107,
+        "return_15d": 10.908261068005487,
+        "return_1m": 6.766256590509667,
+        "return_ytd": 4.381443298969079,
+        "return_1y": 15.935114503816795,
+        "return_2y": 17.846750727449077,
+        "return_3y": -14.67696629213483,
+        "close": 24.3,
+        "marketCap": 37407259450,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2110",
+      "type": "ASSET",
+      "name": "코베스트로",
+      "exposure": {
+        "ticker": "CVVTY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_348",
+      "type": "MACRO",
+      "name": "중국EV침투유럽OEM"
+    },
+    {
+      "id": "M_095",
+      "type": "MACRO",
+      "name": "유럽환경규제"
+    },
+    {
+      "id": "C_5009",
+      "type": "CHARACTER",
+      "name": "글로벌화학거장"
+    },
+    {
+      "id": "C_5010",
+      "type": "CHARACTER",
+      "name": "산업가스글로벌"
+    },
+    {
+      "id": "C_5011",
+      "type": "CHARACTER",
+      "name": "산업가스글로벌1위"
+    },
+    {
+      "id": "C_5012",
+      "type": "CHARACTER",
+      "name": "특수화학소재"
+    },
+    {
+      "id": "C_5013",
+      "type": "CHARACTER",
+      "name": "도료코팅글로벌"
+    },
+    {
+      "id": "C_5014",
+      "type": "CHARACTER",
+      "name": "폴리우레탄폴리카보네이트"
+    },
+    {
+      "id": "A_2928",
+      "type": "ASSET",
+      "name": "iShares Global Materials ETF",
+      "exposure": {
+        "ticker": "MXI",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 2.418689876316993,
+        "return_3d": 5.791615406454054,
+        "return_7d": 5.80162786295666,
+        "return_15d": 5.253742585443955,
+        "return_1m": 5.036174011087091,
+        "return_ytd": 14.187946884576096,
+        "return_1y": 31.178127200187756,
+        "return_2y": 27.71621158459958,
+        "return_3y": 30.170004657661863,
+        "close": 111.79,
+        "marketCap": 243314289,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "유럽 화학 메이저 — BASF·Air Liquide·Linde·Solvay·Akzo Nobel·Covestro. 산업 가스 + 정밀 화학 + 코팅 통합. 미국 인프라 capex + 중국 EV (배터리 화학) + EU 환경규제. BASF 는 천연가스 cost shock 회복.",
-  "notes": "T_386 신규 — 유럽 batch",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 3건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2083",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016350"
+      ]
+    },
+    {
+      "from": "A_768",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016351"
+      ]
+    },
+    {
+      "from": "A_767",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016352"
+      ]
+    },
+    {
+      "from": "A_1950",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016353"
+      ]
+    },
+    {
+      "from": "A_2109",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016354"
+      ]
+    },
+    {
+      "from": "A_2110",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016355"
+      ]
+    },
+    {
+      "from": "M_363",
+      "to": "T_386",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011232"
+      ]
+    },
+    {
+      "from": "M_348",
+      "to": "T_386",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011233"
+      ]
+    },
+    {
+      "from": "M_095",
+      "to": "T_386",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011234"
+      ]
+    },
+    {
+      "from": "A_2083",
+      "to": "C_5009",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011235"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_768",
+      "to": "C_5010",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011236"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_767",
+      "to": "C_5011",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011237"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1950",
+      "to": "C_5012",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011238"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2109",
+      "to": "C_5013",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011239"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2110",
+      "to": "C_5014",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011240"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_768",
+      "to": "A_767",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018466"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "글로벌 산업용 가스 시장을 사실상 양분하는 에어리퀴드와 린데가 최대 라이벌로 직접 경쟁한다."
+    },
+    {
+      "from": "A_2083",
+      "to": "A_2110",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018467"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "MDI/TDI 등 이소시아네이트·폴리우레탄 시장에서 독일계 상위 생산업체인 BASF와 코베스트로가 직접 경쟁한다."
+    },
+    {
+      "from": "A_2083",
+      "to": "A_2109",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018468"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "자동차·산업용 코팅 시장에서 BASF 코팅스 사업과 악조노벨이 경쟁하며, 악조노벨은 BASF를 주요 경쟁사로 명시한다."
+    },
+    {
+      "from": "A_2928",
+      "to": "T_386",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020752"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2083",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016350"
+      ]
+    },
+    {
+      "from": "A_768",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016351"
+      ]
+    },
+    {
+      "from": "A_767",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016352"
+      ]
+    },
+    {
+      "from": "A_1950",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016353"
+      ]
+    },
+    {
+      "from": "A_2109",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016354"
+      ]
+    },
+    {
+      "from": "A_2110",
+      "to": "T_386",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016355"
+      ]
+    },
+    {
+      "from": "M_363",
+      "to": "T_386",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011232"
+      ]
+    },
+    {
+      "from": "M_348",
+      "to": "T_386",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011233"
+      ]
+    },
+    {
+      "from": "M_095",
+      "to": "T_386",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011234"
+      ]
+    },
+    {
+      "from": "A_2083",
+      "to": "C_5009",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011235"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_768",
+      "to": "C_5010",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011236"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_767",
+      "to": "C_5011",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011237"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1950",
+      "to": "C_5012",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011238"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2109",
+      "to": "C_5013",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011239"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2110",
+      "to": "C_5014",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011240"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_768",
+      "to": "A_767",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018466"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "글로벌 산업용 가스 시장을 사실상 양분하는 에어리퀴드와 린데가 최대 라이벌로 직접 경쟁한다."
+    },
+    {
+      "from": "A_2083",
+      "to": "A_2110",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018467"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "MDI/TDI 등 이소시아네이트·폴리우레탄 시장에서 독일계 상위 생산업체인 BASF와 코베스트로가 직접 경쟁한다."
+    },
+    {
+      "from": "A_2083",
+      "to": "A_2109",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018468"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "자동차·산업용 코팅 시장에서 BASF 코팅스 사업과 악조노벨이 경쟁하며, 악조노벨은 BASF를 주요 경쟁사로 명시한다."
+    },
+    {
+      "from": "A_2928",
+      "to": "T_386",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020752"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_386",
-   "type": "THEME",
-   "name": "유럽화학메이저"
-  },
-  {
-   "id": "A_2083",
-   "type": "ASSET",
-   "name": "BASF",
-   "exposure": {
-    "ticker": "BASFY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": -0.9510869565217406,
-    "return_3d": -1.619433198380571,
-    "return_7d": 5.7287889775199385,
-    "return_15d": 3.9942938659058624,
-    "return_1m": 7.52212389380531,
-    "return_ytd": 11.12804878048781,
-    "return_1y": 20.59553349875931,
-    "return_2y": 25.798101811906825,
-    "return_3y": 7.760532150776056,
-    "close": 14.58,
-    "marketCap": 50286696378,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_768",
-   "type": "ASSET",
-   "name": "Air Liquide",
-   "exposure": {
-    "ticker": "AI",
-    "exchange": "EURONEXT",
-    "country": "FR"
-   },
-   "metrics": {
-    "return_1d": 1.021606387975571,
-    "return_3d": 0.18632817049026862,
-    "return_7d": -2.526625878087474,
-    "return_15d": -3.6186421689446635,
-    "return_1m": -3.1193693693693625,
-    "return_ytd": 19.03147699757868,
-    "return_1y": 9.036755386565275,
-    "return_2y": 16.61131819722128,
-    "return_3y": 28.864589574595566,
-    "close": 172.06,
-    "marketCap": 109407602246,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_767",
-   "type": "ASSET",
-   "name": "Linde",
-   "exposure": {
-    "ticker": "LIN",
-    "exchange": "NASDAQ",
-    "country": "IE"
-   },
-   "metrics": {
-    "return_1d": 0.8699995837322616,
-    "return_3d": -4.718464926077381,
-    "return_7d": -5.395486843132657,
-    "return_15d": -7.253033260611619,
-    "return_1m": -10.338192851328355,
-    "return_ytd": 12.940737806156921,
-    "return_1y": 5.4918264730850375,
-    "return_2y": 7.494732172562935,
-    "return_3y": 24.679066656376225,
-    "close": 484.64,
-    "marketCap": 224194464000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1950",
-   "type": "ASSET",
-   "name": "솔베이",
-   "exposure": {
-    "ticker": "SOLB",
-    "exchange": "EBR",
-    "country": "BE"
-   },
-   "metrics": {
-    "return_1d": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2109",
-   "type": "ASSET",
-   "name": "악조노벨",
-   "exposure": {
-    "ticker": "AKZOY",
-    "exchange": "OTC",
-    "country": "NL"
-   },
-   "metrics": {
-    "return_1d": 2.320675105485237,
-    "return_3d": 2.928692699490676,
-    "return_7d": 10.831809872029252,
-    "return_15d": 11.494252873563227,
-    "return_1m": 6.359649122807021,
-    "return_ytd": 4.166666666666652,
-    "return_1y": 16.139846743295028,
-    "return_2y": 17.661329451722473,
-    "return_3y": -15.915395284327328,
-    "close": 24.25,
-    "marketCap": 37330289780,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2110",
-   "type": "ASSET",
-   "name": "코베스트로",
-   "exposure": {
-    "ticker": "CVVTY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_363",
-   "type": "MACRO",
-   "name": "미국인프라capex"
-  },
-  {
-   "id": "M_348",
-   "type": "MACRO",
-   "name": "중국EV침투유럽OEM"
-  },
-  {
-   "id": "M_095",
-   "type": "MACRO",
-   "name": "유럽환경규제"
-  },
-  {
-   "id": "C_5009",
-   "type": "CHARACTER",
-   "name": "글로벌화학거장"
-  },
-  {
-   "id": "C_5010",
-   "type": "CHARACTER",
-   "name": "산업가스글로벌"
-  },
-  {
-   "id": "C_5011",
-   "type": "CHARACTER",
-   "name": "산업가스글로벌1위"
-  },
-  {
-   "id": "C_5012",
-   "type": "CHARACTER",
-   "name": "특수화학소재"
-  },
-  {
-   "id": "C_5013",
-   "type": "CHARACTER",
-   "name": "도료코팅글로벌"
-  },
-  {
-   "id": "C_5014",
-   "type": "CHARACTER",
-   "name": "폴리우레탄폴리카보네이트"
-  },
-  {
-   "id": "A_2928",
-   "type": "ASSET",
-   "name": "iShares Global Materials ETF",
-   "exposure": {
-    "ticker": "MXI",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2083",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016350"
-   ]
-  },
-  {
-   "from": "A_768",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016351"
-   ]
-  },
-  {
-   "from": "A_767",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016352"
-   ]
-  },
-  {
-   "from": "A_1950",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016353"
-   ]
-  },
-  {
-   "from": "A_2109",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016354"
-   ]
-  },
-  {
-   "from": "A_2110",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016355"
-   ]
-  },
-  {
-   "from": "M_363",
-   "to": "T_386",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011232"
-   ]
-  },
-  {
-   "from": "M_348",
-   "to": "T_386",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011233"
-   ]
-  },
-  {
-   "from": "M_095",
-   "to": "T_386",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011234"
-   ]
-  },
-  {
-   "from": "A_2083",
-   "to": "C_5009",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011235"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_768",
-   "to": "C_5010",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011236"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_767",
-   "to": "C_5011",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011237"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1950",
-   "to": "C_5012",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011238"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2109",
-   "to": "C_5013",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011239"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2110",
-   "to": "C_5014",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011240"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_768",
-   "to": "A_767",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018466"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "글로벌 산업용 가스 시장을 사실상 양분하는 에어리퀴드와 린데가 최대 라이벌로 직접 경쟁한다."
-  },
-  {
-   "from": "A_2083",
-   "to": "A_2110",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018467"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "MDI/TDI 등 이소시아네이트·폴리우레탄 시장에서 독일계 상위 생산업체인 BASF와 코베스트로가 직접 경쟁한다."
-  },
-  {
-   "from": "A_2083",
-   "to": "A_2109",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018468"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "자동차·산업용 코팅 시장에서 BASF 코팅스 사업과 악조노벨이 경쟁하며, 악조노벨은 BASF를 주요 경쟁사로 명시한다."
-  },
-  {
-   "from": "A_2928",
-   "to": "T_386",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020752"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2083",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016350"
-   ]
-  },
-  {
-   "from": "A_768",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016351"
-   ]
-  },
-  {
-   "from": "A_767",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016352"
-   ]
-  },
-  {
-   "from": "A_1950",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016353"
-   ]
-  },
-  {
-   "from": "A_2109",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016354"
-   ]
-  },
-  {
-   "from": "A_2110",
-   "to": "T_386",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016355"
-   ]
-  },
-  {
-   "from": "M_363",
-   "to": "T_386",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011232"
-   ]
-  },
-  {
-   "from": "M_348",
-   "to": "T_386",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011233"
-   ]
-  },
-  {
-   "from": "M_095",
-   "to": "T_386",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011234"
-   ]
-  },
-  {
-   "from": "A_2083",
-   "to": "C_5009",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011235"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_768",
-   "to": "C_5010",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011236"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_767",
-   "to": "C_5011",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011237"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1950",
-   "to": "C_5012",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011238"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2109",
-   "to": "C_5013",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011239"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2110",
-   "to": "C_5014",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011240"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_768",
-   "to": "A_767",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018466"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "글로벌 산업용 가스 시장을 사실상 양분하는 에어리퀴드와 린데가 최대 라이벌로 직접 경쟁한다."
-  },
-  {
-   "from": "A_2083",
-   "to": "A_2110",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018467"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "MDI/TDI 등 이소시아네이트·폴리우레탄 시장에서 독일계 상위 생산업체인 BASF와 코베스트로가 직접 경쟁한다."
-  },
-  {
-   "from": "A_2083",
-   "to": "A_2109",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018468"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "자동차·산업용 코팅 시장에서 BASF 코팅스 사업과 악조노벨이 경쟁하며, 악조노벨은 BASF를 주요 경쟁사로 명시한다."
-  },
-  {
-   "from": "A_2928",
-   "to": "T_386",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020752"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

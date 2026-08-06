@@ -1,810 +1,846 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_359",
- "themeName": "미국트럭운송LTL",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_359",
+  "themeName": "미국트럭운송LTL",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "미국 트럭 운송·물류 LTL (Less-than-Truckload) + TL (Truckload) 메이저. Old Dominion (LTL 1위)·Saia·XPO·J.B. Hunt·Knight-Swift·Werner. 미국 화물 수송 사이클 + Yellow Corp 파산 후 capa 흡수.",
+    "notes": "T_359 신규",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 9건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_359",
+      "type": "THEME",
+      "name": "미국트럭운송LTL"
+    },
+    {
+      "id": "A_2002",
+      "type": "ASSET",
+      "name": "올드도미니언",
+      "exposure": {
+        "ticker": "ODFL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.7645449571402572,
+        "return_3d": 1.560290374281137,
+        "return_7d": -4.991841954403153,
+        "return_15d": -4.342227944767574,
+        "return_1m": -0.027840935455436533,
+        "return_ytd": 35.3414159180853,
+        "return_1y": 49.24494319756163,
+        "return_2y": 2.507374631268422,
+        "return_3y": 2.7175208581644794,
+        "close": 215.45,
+        "marketCap": 44806766572,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2004",
+      "type": "ASSET",
+      "name": "사이아",
+      "exposure": {
+        "ticker": "SAIA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -4.68036224721502,
+        "return_3d": 2.6407387164514073,
+        "return_7d": -15.02905315298152,
+        "return_15d": -14.44431123366503,
+        "return_1m": -14.228365384615383,
+        "return_ytd": 5.824954770590507,
+        "return_1y": 18.616402380240025,
+        "return_2y": -14.608112959195886,
+        "return_3y": -15.675662901167463,
+        "close": 356.81,
+        "marketCap": 9517764026,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_409",
+      "type": "ASSET",
+      "name": "XPO",
+      "exposure": {
+        "ticker": "XPO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.5298342269663978,
+        "return_3d": -0.3930934965417632,
+        "return_7d": -3.852065321805942,
+        "return_15d": -2.2654037691631657,
+        "return_1m": -1.2870457123132284,
+        "return_ytd": 44.23229339289576,
+        "return_1y": 67.52866348648423,
+        "return_2y": 74.23622595526156,
+        "return_3y": 189.11034084344314,
+        "close": 200.18,
+        "marketCap": 23438368564,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_410",
+      "type": "ASSET",
+      "name": "J.B.헌트트랜스포트서비스",
+      "exposure": {
+        "ticker": "JBHT",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.6630719906732696,
+        "return_3d": 0.33486660533579293,
+        "return_7d": -2.9541571753986196,
+        "return_15d": -1.3102649486028461,
+        "return_1m": -0.85090909090908,
+        "return_ytd": 38.5608293525765,
+        "return_1y": 91.93298606222724,
+        "return_2y": 57.470401386081434,
+        "return_3y": 33.696185152495836,
+        "close": 272.66,
+        "marketCap": 25606836634,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2003",
+      "type": "ASSET",
+      "name": "나이트스위프트",
+      "exposure": {
+        "ticker": "KNX",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.130969003071769,
+        "return_3d": 1.840931971810722,
+        "return_7d": 0.11310617842499315,
+        "return_15d": -3.7515291559059305,
+        "return_1m": -4.748453053537805,
+        "return_ytd": 35.57342523453955,
+        "return_1y": 68.3947681331748,
+        "return_2y": 30.09369832812787,
+        "return_3y": 16.559670781892997,
+        "close": 70.81,
+        "marketCap": 11524752289,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2005",
+      "type": "ASSET",
+      "name": "워너엔터프라이즈",
+      "exposure": {
+        "ticker": "WERN",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.279039415296268,
+        "return_3d": 1.0689470871191764,
+        "return_7d": -6.455602275537964,
+        "return_15d": -13.276771382710384,
+        "return_1m": -12.696214219759927,
+        "return_ytd": 23.55439398889252,
+        "return_1y": 39.91860895301515,
+        "return_2y": -3.4957897422811857,
+        "return_3y": -19.56614206720545,
+        "close": 37.82,
+        "marketCap": 2267312782,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_330",
+      "type": "CHARACTER",
+      "name": "LTL장거리트럭"
+    },
+    {
+      "id": "M_363",
+      "type": "MACRO",
+      "name": "미국인프라capex"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "M_397",
+      "type": "MACRO",
+      "name": "북미nearshoring화물량"
+    },
+    {
+      "id": "C_4911",
+      "type": "CHARACTER",
+      "name": "LTL운송1위마진"
+    },
+    {
+      "id": "C_4912",
+      "type": "CHARACTER",
+      "name": "LTL고성장확장"
+    },
+    {
+      "id": "C_4913",
+      "type": "CHARACTER",
+      "name": "LTL운송성장"
+    },
+    {
+      "id": "C_4914",
+      "type": "CHARACTER",
+      "name": "인터모달복합운송"
+    },
+    {
+      "id": "C_4915",
+      "type": "CHARACTER",
+      "name": "TL트럭운송최대"
+    },
+    {
+      "id": "C_4916",
+      "type": "CHARACTER",
+      "name": "TL트럭운송"
+    },
+    {
+      "id": "A_2918",
+      "type": "ASSET",
+      "name": "iShares U.S. Transportation ETF",
+      "exposure": {
+        "ticker": "IYT",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.2293682413204277,
+        "return_3d": 2.2146306985510567,
+        "return_7d": -0.47029135122735877,
+        "return_15d": -0.8909194745859494,
+        "return_1m": -0.4588734656418514,
+        "return_ytd": 15.201805629314924,
+        "return_1y": 27.960477805633378,
+        "return_2y": 31.50954834798423,
+        "return_3y": 29.934112009583693,
+        "close": 86.77,
+        "marketCap": 776623865,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2919",
+      "type": "ASSET",
+      "name": "SPDR S&P Transportation ETF",
+      "exposure": {
+        "ticker": "XTN",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.1918324423801585,
+        "return_3d": 3.4688446361383907,
+        "return_7d": -0.19474196689386325,
+        "return_15d": -1.6829438437391042,
+        "return_1m": -1.4767563788884996,
+        "return_ytd": 21.615791176787845,
+        "return_1y": 37.09873540856032,
+        "return_2y": 38.90599975360354,
+        "return_3y": 28.081335908213113,
+        "close": 112.75,
+        "marketCap": 172749349,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "미국 트럭 운송·물류 LTL (Less-than-Truckload) + TL (Truckload) 메이저. Old Dominion (LTL 1위)·Saia·XPO·J.B. Hunt·Knight-Swift·Werner. 미국 화물 수송 사이클 + Yellow Corp 파산 후 capa 흡수.",
-  "notes": "T_359 신규",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 9건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결(ETF 제외), 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2002",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010914"
+      ]
+    },
+    {
+      "from": "A_2004",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010915"
+      ]
+    },
+    {
+      "from": "A_409",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010916"
+      ]
+    },
+    {
+      "from": "A_410",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010917"
+      ]
+    },
+    {
+      "from": "A_2003",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010918"
+      ]
+    },
+    {
+      "from": "A_2005",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010919"
+      ]
+    },
+    {
+      "from": "T_359",
+      "to": "C_330",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016200"
+      ]
+    },
+    {
+      "from": "M_363",
+      "to": "T_359",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010920"
+      ]
+    },
+    {
+      "from": "M_346",
+      "to": "T_359",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010921"
+      ]
+    },
+    {
+      "from": "M_397",
+      "to": "T_359",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010922"
+      ]
+    },
+    {
+      "from": "A_2002",
+      "to": "C_4911",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010923"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2004",
+      "to": "C_4912",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010924"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_409",
+      "to": "C_4913",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010925"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_410",
+      "to": "C_4914",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010926"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2003",
+      "to": "C_4915",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010927"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2005",
+      "to": "C_4916",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010928"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2002",
+      "to": "A_2004",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018401"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "올드도미니언과 사이아는 미국 LTL(소량화물) 시장의 대표적 직접 경쟁 운송사다."
+    },
+    {
+      "from": "A_2002",
+      "to": "A_409",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018402"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "올드도미니언과 XPO는 미국 LTL 시장 점유율을 다투는 직접 경쟁사다."
+    },
+    {
+      "from": "A_2004",
+      "to": "A_409",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018403"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사이아는 XPO의 거점 지역으로 빠르게 확장하며 LTL 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_2002",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018404"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트는 인수를 통해 LTL 사업에 진출하며 올드도미니언 등 기존 LTL 강자와 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_2004",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018405"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트는 LTL 확장으로 사이아와 소량화물 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_409",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018406"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트는 LTL 진출로 XPO와 소량화물 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_2005",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018407"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트와 워너엔터프라이즈는 미국 트럭로드(만재화물) 운송 시장의 직접 경쟁사다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_410",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018408"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트와 J.B.헌트는 트럭로드·운송 용량 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2005",
+      "to": "A_410",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018409"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "워너엔터프라이즈와 J.B.헌트는 미국 트럭로드 운송 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2918",
+      "to": "T_359",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020730"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2919",
+      "to": "T_359",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020731"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2002",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010914"
+      ]
+    },
+    {
+      "from": "A_2004",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010915"
+      ]
+    },
+    {
+      "from": "A_409",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010916"
+      ]
+    },
+    {
+      "from": "A_410",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010917"
+      ]
+    },
+    {
+      "from": "A_2003",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010918"
+      ]
+    },
+    {
+      "from": "A_2005",
+      "to": "T_359",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010919"
+      ]
+    },
+    {
+      "from": "T_359",
+      "to": "C_330",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016200"
+      ]
+    },
+    {
+      "from": "M_363",
+      "to": "T_359",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010920"
+      ]
+    },
+    {
+      "from": "M_346",
+      "to": "T_359",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010921"
+      ]
+    },
+    {
+      "from": "M_397",
+      "to": "T_359",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010922"
+      ]
+    },
+    {
+      "from": "A_2002",
+      "to": "C_4911",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010923"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2004",
+      "to": "C_4912",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010924"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_409",
+      "to": "C_4913",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010925"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_410",
+      "to": "C_4914",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010926"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2003",
+      "to": "C_4915",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010927"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2005",
+      "to": "C_4916",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_010928"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2002",
+      "to": "A_2004",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018401"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "올드도미니언과 사이아는 미국 LTL(소량화물) 시장의 대표적 직접 경쟁 운송사다."
+    },
+    {
+      "from": "A_2002",
+      "to": "A_409",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018402"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "올드도미니언과 XPO는 미국 LTL 시장 점유율을 다투는 직접 경쟁사다."
+    },
+    {
+      "from": "A_2004",
+      "to": "A_409",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018403"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사이아는 XPO의 거점 지역으로 빠르게 확장하며 LTL 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_2002",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018404"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트는 인수를 통해 LTL 사업에 진출하며 올드도미니언 등 기존 LTL 강자와 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_2004",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018405"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트는 LTL 확장으로 사이아와 소량화물 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_409",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018406"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트는 LTL 진출로 XPO와 소량화물 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_2005",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018407"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트와 워너엔터프라이즈는 미국 트럭로드(만재화물) 운송 시장의 직접 경쟁사다."
+    },
+    {
+      "from": "A_2003",
+      "to": "A_410",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018408"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "나이트스위프트와 J.B.헌트는 트럭로드·운송 용량 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2005",
+      "to": "A_410",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018409"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "워너엔터프라이즈와 J.B.헌트는 미국 트럭로드 운송 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2918",
+      "to": "T_359",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020730"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2919",
+      "to": "T_359",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020731"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_359",
-   "type": "THEME",
-   "name": "미국트럭운송LTL"
-  },
-  {
-   "id": "A_2002",
-   "type": "ASSET",
-   "name": "올드도미니언",
-   "exposure": {
-    "ticker": "ODFL",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.687594553706508,
-    "return_3d": 3.2239845625264607,
-    "return_7d": -5.8672046010558425,
-    "return_15d": -4.063689252438662,
-    "return_1m": 1.3306228053964197,
-    "return_ytd": 37.77247314529808,
-    "return_1y": 54.61402890377158,
-    "return_2y": 6.969711749500074,
-    "return_3y": 2.5866504513775146,
-    "close": 219.32,
-    "marketCap": 45611603828,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2004",
-   "type": "ASSET",
-   "name": "사이아",
-   "exposure": {
-    "ticker": "SAIA",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.9516800888641956,
-    "return_3d": 6.759261900008551,
-    "return_7d": -11.64794184290031,
-    "return_15d": -13.495713262311382,
-    "return_1m": -10.423795735719931,
-    "return_ytd": 11.021146602604027,
-    "return_1y": 27.718448258214213,
-    "return_2y": -8.389417782237352,
-    "return_3y": -12.106412453920024,
-    "close": 374.33,
-    "marketCap": 9985103018,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_409",
-   "type": "ASSET",
-   "name": "XPO",
-   "exposure": {
-    "ticker": "XPO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.187655448961979,
-    "return_3d": 2.0224831877948324,
-    "return_7d": -4.563166048542322,
-    "return_15d": -3.1814068676477625,
-    "return_1m": -1.6877841183866926,
-    "return_ytd": 46.47308883925354,
-    "return_1y": 71.1339338328142,
-    "return_2y": 80.81472916481364,
-    "return_3y": 183.9245810055866,
-    "close": 203.29,
-    "marketCap": 23802507470,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_410",
-   "type": "ASSET",
-   "name": "J.B.헌트트랜스포트서비스",
-   "exposure": {
-    "ticker": "JBHT",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.836162002173004,
-    "return_3d": 1.9575795847108335,
-    "return_7d": -4.793617759278524,
-    "return_15d": -2.2750738775946133,
-    "return_1m": -1.1737596313098564,
-    "return_ytd": 39.485720093505435,
-    "return_1y": 96.67526511894526,
-    "return_2y": 59.43308550185875,
-    "return_3y": 33.540916609905636,
-    "close": 274.48,
-    "marketCap": 25777761752,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2003",
-   "type": "ASSET",
-   "name": "나이트스위프트",
-   "exposure": {
-    "ticker": "KNX",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.676995030692788,
-    "return_3d": 2.6074498567335347,
-    "return_7d": -1.2137931034482685,
-    "return_15d": -4.785961180537079,
-    "return_1m": -4.264135810720493,
-    "return_ytd": 37.124258089220774,
-    "return_1y": 73.45604262533303,
-    "return_2y": 31.824038284557354,
-    "return_3y": 18.63508365081996,
-    "close": 71.64,
-    "marketCap": 11659839768,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2005",
-   "type": "ASSET",
-   "name": "워너엔터프라이즈",
-   "exposure": {
-    "ticker": "WERN",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.17802316186373,
-    "return_3d": 3.8774403470715813,
-    "return_7d": -9.688826025459685,
-    "return_15d": -14.486607142857133,
-    "return_1m": -10.88625261688765,
-    "return_ytd": 25.15517804639007,
-    "return_1y": 42.681564245810065,
-    "return_2y": -5.26706231454005,
-    "return_3y": -18.80033912674862,
-    "close": 38.31,
-    "marketCap": 2296688331,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_330",
-   "type": "CHARACTER",
-   "name": "LTL장거리트럭"
-  },
-  {
-   "id": "M_363",
-   "type": "MACRO",
-   "name": "미국인프라capex"
-  },
-  {
-   "id": "M_346",
-   "type": "MACRO",
-   "name": "미국소비강세"
-  },
-  {
-   "id": "M_397",
-   "type": "MACRO",
-   "name": "북미nearshoring화물량"
-  },
-  {
-   "id": "C_4911",
-   "type": "CHARACTER",
-   "name": "LTL운송1위마진"
-  },
-  {
-   "id": "C_4912",
-   "type": "CHARACTER",
-   "name": "LTL고성장확장"
-  },
-  {
-   "id": "C_4913",
-   "type": "CHARACTER",
-   "name": "LTL운송성장"
-  },
-  {
-   "id": "C_4914",
-   "type": "CHARACTER",
-   "name": "인터모달복합운송"
-  },
-  {
-   "id": "C_4915",
-   "type": "CHARACTER",
-   "name": "TL트럭운송최대"
-  },
-  {
-   "id": "C_4916",
-   "type": "CHARACTER",
-   "name": "TL트럭운송"
-  },
-  {
-   "id": "A_2918",
-   "type": "ASSET",
-   "name": "iShares U.S. Transportation ETF",
-   "exposure": {
-    "ticker": "IYT",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  },
-  {
-   "id": "A_2919",
-   "type": "ASSET",
-   "name": "SPDR S&P Transportation ETF",
-   "exposure": {
-    "ticker": "XTN",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2002",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010914"
-   ]
-  },
-  {
-   "from": "A_2004",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010915"
-   ]
-  },
-  {
-   "from": "A_409",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010916"
-   ]
-  },
-  {
-   "from": "A_410",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010917"
-   ]
-  },
-  {
-   "from": "A_2003",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010918"
-   ]
-  },
-  {
-   "from": "A_2005",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010919"
-   ]
-  },
-  {
-   "from": "T_359",
-   "to": "C_330",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016200"
-   ]
-  },
-  {
-   "from": "M_363",
-   "to": "T_359",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010920"
-   ]
-  },
-  {
-   "from": "M_346",
-   "to": "T_359",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010921"
-   ]
-  },
-  {
-   "from": "M_397",
-   "to": "T_359",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010922"
-   ]
-  },
-  {
-   "from": "A_2002",
-   "to": "C_4911",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010923"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2004",
-   "to": "C_4912",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010924"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_409",
-   "to": "C_4913",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010925"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_410",
-   "to": "C_4914",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010926"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2003",
-   "to": "C_4915",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010927"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2005",
-   "to": "C_4916",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010928"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2002",
-   "to": "A_2004",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018401"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "올드도미니언과 사이아는 미국 LTL(소량화물) 시장의 대표적 직접 경쟁 운송사다."
-  },
-  {
-   "from": "A_2002",
-   "to": "A_409",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018402"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "올드도미니언과 XPO는 미국 LTL 시장 점유율을 다투는 직접 경쟁사다."
-  },
-  {
-   "from": "A_2004",
-   "to": "A_409",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018403"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사이아는 XPO의 거점 지역으로 빠르게 확장하며 LTL 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_2002",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018404"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트는 인수를 통해 LTL 사업에 진출하며 올드도미니언 등 기존 LTL 강자와 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_2004",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018405"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트는 LTL 확장으로 사이아와 소량화물 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_409",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018406"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트는 LTL 진출로 XPO와 소량화물 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_2005",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018407"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트와 워너엔터프라이즈는 미국 트럭로드(만재화물) 운송 시장의 직접 경쟁사다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_410",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018408"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트와 J.B.헌트는 트럭로드·운송 용량 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2005",
-   "to": "A_410",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018409"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "워너엔터프라이즈와 J.B.헌트는 미국 트럭로드 운송 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2918",
-   "to": "T_359",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020730"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2919",
-   "to": "T_359",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020731"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2002",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010914"
-   ]
-  },
-  {
-   "from": "A_2004",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010915"
-   ]
-  },
-  {
-   "from": "A_409",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010916"
-   ]
-  },
-  {
-   "from": "A_410",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010917"
-   ]
-  },
-  {
-   "from": "A_2003",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010918"
-   ]
-  },
-  {
-   "from": "A_2005",
-   "to": "T_359",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010919"
-   ]
-  },
-  {
-   "from": "T_359",
-   "to": "C_330",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016200"
-   ]
-  },
-  {
-   "from": "M_363",
-   "to": "T_359",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010920"
-   ]
-  },
-  {
-   "from": "M_346",
-   "to": "T_359",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010921"
-   ]
-  },
-  {
-   "from": "M_397",
-   "to": "T_359",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010922"
-   ]
-  },
-  {
-   "from": "A_2002",
-   "to": "C_4911",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010923"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2004",
-   "to": "C_4912",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010924"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_409",
-   "to": "C_4913",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010925"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_410",
-   "to": "C_4914",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010926"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2003",
-   "to": "C_4915",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010927"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2005",
-   "to": "C_4916",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_010928"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2002",
-   "to": "A_2004",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018401"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "올드도미니언과 사이아는 미국 LTL(소량화물) 시장의 대표적 직접 경쟁 운송사다."
-  },
-  {
-   "from": "A_2002",
-   "to": "A_409",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018402"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "올드도미니언과 XPO는 미국 LTL 시장 점유율을 다투는 직접 경쟁사다."
-  },
-  {
-   "from": "A_2004",
-   "to": "A_409",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018403"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사이아는 XPO의 거점 지역으로 빠르게 확장하며 LTL 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_2002",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018404"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트는 인수를 통해 LTL 사업에 진출하며 올드도미니언 등 기존 LTL 강자와 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_2004",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018405"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트는 LTL 확장으로 사이아와 소량화물 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_409",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018406"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트는 LTL 진출로 XPO와 소량화물 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_2005",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018407"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트와 워너엔터프라이즈는 미국 트럭로드(만재화물) 운송 시장의 직접 경쟁사다."
-  },
-  {
-   "from": "A_2003",
-   "to": "A_410",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018408"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "나이트스위프트와 J.B.헌트는 트럭로드·운송 용량 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2005",
-   "to": "A_410",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018409"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "워너엔터프라이즈와 J.B.헌트는 미국 트럭로드 운송 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2918",
-   "to": "T_359",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020730"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2919",
-   "to": "T_359",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020731"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

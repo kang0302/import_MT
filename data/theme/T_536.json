@@ -1,712 +1,730 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_536",
- "themeName": "(Y21) 리오프닝·여행소비",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_536",
+  "themeName": "(Y21) 리오프닝·여행소비",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "리오프닝·여행소비 — 2021 회고 테마.",
+    "notes": "T_536 신규 회고((Y21)). 자산별 CHARACTER, MACRO 3(재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_536",
+      "type": "THEME",
+      "name": "(Y21) 리오프닝·여행소비"
+    },
+    {
+      "id": "A_1593",
+      "type": "ASSET",
+      "name": "대한항공",
+      "exposure": {
+        "ticker": "003490",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 3.065134099616862,
+        "return_3d": 3.8610038610038533,
+        "return_7d": 1.7013232514177634,
+        "return_15d": 1.5094339622641506,
+        "return_1m": -6.434782608695655,
+        "return_ytd": 24.872938303688507,
+        "return_1y": 9.789276340188113,
+        "return_2y": 26.096047706419313,
+        "return_3y": null,
+        "close": 26900,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1413",
+      "type": "CHARACTER",
+      "name": "국적항공1위"
+    },
+    {
+      "id": "A_1596",
+      "type": "ASSET",
+      "name": "제주항공",
+      "exposure": {
+        "ticker": "089590",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.699530516431925,
+        "return_3d": 4.290822407628125,
+        "return_7d": 3.062426383981154,
+        "return_15d": 4.166666666666674,
+        "return_1m": -4.580152671755721,
+        "return_ytd": -18.981481481481477,
+        "return_1y": -37.230989956958396,
+        "return_2y": -56.25,
+        "return_3y": null,
+        "close": 4375,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1414",
+      "type": "CHARACTER",
+      "name": "LCC 리오프닝"
+    },
+    {
+      "id": "A_1623",
+      "type": "ASSET",
+      "name": "하나투어",
+      "exposure": {
+        "ticker": "039130",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.1069692058346856,
+        "return_3d": 2.7732463295269127,
+        "return_7d": 1.449275362318847,
+        "return_15d": 2.7732463295269127,
+        "return_1m": -4.255319148936165,
+        "return_ytd": -35.18518518518518,
+        "return_1y": -43.0379746835443,
+        "return_2y": -39.62624042920185,
+        "return_3y": null,
+        "close": 31500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1415",
+      "type": "CHARACTER",
+      "name": "여행사1위(패키지)"
+    },
+    {
+      "id": "A_1144",
+      "type": "ASSET",
+      "name": "호텔신라",
+      "exposure": {
+        "ticker": "008770",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.4457831325301207,
+        "return_3d": -3.3295063145809434,
+        "return_7d": -11.5546218487395,
+        "return_15d": -10.805084745762716,
+        "return_1m": -17.61252446183953,
+        "return_ytd": -7.574094401756315,
+        "return_1y": -19.656488549618324,
+        "return_2y": -19.656488549618324,
+        "return_3y": null,
+        "close": 42100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1416",
+      "type": "CHARACTER",
+      "name": "면세·호텔 리오프닝"
+    },
+    {
+      "id": "A_1143",
+      "type": "ASSET",
+      "name": "파라다이스",
+      "exposure": {
+        "ticker": "034230",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -2.2977022977022976,
+        "return_3d": 0.8247422680412342,
+        "return_7d": -5.324298160696994,
+        "return_15d": -19.03973509933775,
+        "return_1m": -25.286478227654698,
+        "return_ytd": -41.29651860744298,
+        "return_1y": -49.376255160238,
+        "return_2y": -20.929049709068615,
+        "return_3y": null,
+        "close": 9780,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1417",
+      "type": "CHARACTER",
+      "name": "카지노 리오프닝"
+    },
+    {
+      "id": "A_2562",
+      "type": "ASSET",
+      "name": "강원랜드",
+      "exposure": {
+        "ticker": "035250",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -2.2068965517241357,
+        "return_3d": -3.5374149659863963,
+        "return_7d": -2.1394064872325758,
+        "return_15d": -2.3415977961432466,
+        "return_1m": -3.8644067796610115,
+        "return_ytd": -18.638306367181954,
+        "return_1y": -24.922007705596382,
+        "return_2y": 15.589083092043854,
+        "return_3y": null,
+        "close": 14180,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1418",
+      "type": "CHARACTER",
+      "name": "내국인 카지노 리오프닝"
+    },
+    {
+      "id": "A_1142",
+      "type": "ASSET",
+      "name": "GKL",
+      "exposure": {
+        "ticker": "114090",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -0.9615384615384581,
+        "return_3d": -1.1727078891258014,
+        "return_7d": -4.432989690721644,
+        "return_15d": -9.912536443148689,
+        "return_1m": -10.348162475822054,
+        "return_ytd": -34.89814913752514,
+        "return_1y": -39.67756271220142,
+        "return_2y": -19.781537868916345,
+        "return_3y": null,
+        "close": 9270,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1419",
+      "type": "CHARACTER",
+      "name": "외국인 카지노"
+    },
+    {
+      "id": "M_036",
+      "type": "MACRO",
+      "name": "글로벌여행수요"
+    },
+    {
+      "id": "M_272",
+      "type": "MACRO",
+      "name": "글로벌소비여행심리"
+    },
+    {
+      "id": "M_039",
+      "type": "MACRO",
+      "name": "중국내수소비"
+    },
+    {
+      "id": "A_2901",
+      "type": "ASSET",
+      "name": "TIGER 여행레저",
+      "exposure": {
+        "ticker": "228800",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.9723865877712132,
+        "return_3d": 4.868154158215021,
+        "return_7d": 1.3725490196078383,
+        "return_15d": -2.083333333333337,
+        "return_1m": -8.170515097690945,
+        "return_ytd": -23.64537818089736,
+        "return_1y": -30.253967294641782,
+        "return_2y": -17.45779458977833,
+        "return_3y": null,
+        "close": 2585,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "리오프닝·여행소비 — 2021 회고 테마.",
-  "notes": "T_536 신규 회고((Y21)). 자산별 CHARACTER, MACRO 3(재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1593",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012729"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "C_1413",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017497"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012730"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "C_1414",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017498"
+      ]
+    },
+    {
+      "from": "A_1623",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012731"
+      ]
+    },
+    {
+      "from": "A_1623",
+      "to": "C_1415",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017499"
+      ]
+    },
+    {
+      "from": "A_1144",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012732"
+      ]
+    },
+    {
+      "from": "A_1144",
+      "to": "C_1416",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017500"
+      ]
+    },
+    {
+      "from": "A_1143",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012733"
+      ]
+    },
+    {
+      "from": "A_1143",
+      "to": "C_1417",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017501"
+      ]
+    },
+    {
+      "from": "A_2562",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012734"
+      ]
+    },
+    {
+      "from": "A_2562",
+      "to": "C_1418",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017502"
+      ]
+    },
+    {
+      "from": "A_1142",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012735"
+      ]
+    },
+    {
+      "from": "A_1142",
+      "to": "C_1419",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017503"
+      ]
+    },
+    {
+      "from": "M_036",
+      "to": "T_536",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012736"
+      ]
+    },
+    {
+      "from": "M_272",
+      "to": "T_536",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012737"
+      ]
+    },
+    {
+      "from": "M_039",
+      "to": "T_536",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012738"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "A_1596",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020091"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "대한항공과 제주항공은 국내외 여객 항공 시장 경쟁"
+    },
+    {
+      "from": "A_1142",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020092"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GKL과 파라다이스는 외국인 카지노 시장 경쟁"
+    },
+    {
+      "from": "A_2562",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020093"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "강원랜드와 파라다이스는 국내 카지노·복합리조트 시장 경쟁"
+    },
+    {
+      "from": "A_1623",
+      "to": "A_1593",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_020094"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "하나투어는 대한항공 등 항공사와 패키지 상품을 연계 판매"
+    },
+    {
+      "from": "A_1144",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020095"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "호텔신라와 파라다이스는 호텔·리조트 시장 경쟁"
+    },
+    {
+      "from": "A_2901",
+      "to": "T_536",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020883"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1593",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012729"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "C_1413",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017497"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012730"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "C_1414",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017498"
+      ]
+    },
+    {
+      "from": "A_1623",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012731"
+      ]
+    },
+    {
+      "from": "A_1623",
+      "to": "C_1415",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017499"
+      ]
+    },
+    {
+      "from": "A_1144",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012732"
+      ]
+    },
+    {
+      "from": "A_1144",
+      "to": "C_1416",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017500"
+      ]
+    },
+    {
+      "from": "A_1143",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012733"
+      ]
+    },
+    {
+      "from": "A_1143",
+      "to": "C_1417",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017501"
+      ]
+    },
+    {
+      "from": "A_2562",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012734"
+      ]
+    },
+    {
+      "from": "A_2562",
+      "to": "C_1418",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017502"
+      ]
+    },
+    {
+      "from": "A_1142",
+      "to": "T_536",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012735"
+      ]
+    },
+    {
+      "from": "A_1142",
+      "to": "C_1419",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017503"
+      ]
+    },
+    {
+      "from": "M_036",
+      "to": "T_536",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012736"
+      ]
+    },
+    {
+      "from": "M_272",
+      "to": "T_536",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012737"
+      ]
+    },
+    {
+      "from": "M_039",
+      "to": "T_536",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012738"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "A_1596",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020091"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "대한항공과 제주항공은 국내외 여객 항공 시장 경쟁"
+    },
+    {
+      "from": "A_1142",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020092"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GKL과 파라다이스는 외국인 카지노 시장 경쟁"
+    },
+    {
+      "from": "A_2562",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020093"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "강원랜드와 파라다이스는 국내 카지노·복합리조트 시장 경쟁"
+    },
+    {
+      "from": "A_1623",
+      "to": "A_1593",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_020094"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "하나투어는 대한항공 등 항공사와 패키지 상품을 연계 판매"
+    },
+    {
+      "from": "A_1144",
+      "to": "A_1143",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020095"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "호텔신라와 파라다이스는 호텔·리조트 시장 경쟁"
+    },
+    {
+      "from": "A_2901",
+      "to": "T_536",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020883"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_536",
-   "type": "THEME",
-   "name": "(Y21) 리오프닝·여행소비"
-  },
-  {
-   "id": "A_1593",
-   "type": "ASSET",
-   "name": "대한항공",
-   "exposure": {
-    "ticker": "003490",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 3.065134099616862,
-    "return_3d": 3.8610038610038533,
-    "return_7d": 1.7013232514177634,
-    "return_15d": 1.5094339622641506,
-    "return_1m": -6.434782608695655,
-    "return_ytd": 24.872938303688507,
-    "return_1y": 9.789276340188113,
-    "return_2y": 26.096047706419313,
-    "return_3y": null,
-    "close": 26900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1413",
-   "type": "CHARACTER",
-   "name": "국적항공1위"
-  },
-  {
-   "id": "A_1596",
-   "type": "ASSET",
-   "name": "제주항공",
-   "exposure": {
-    "ticker": "089590",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.699530516431925,
-    "return_3d": 4.290822407628125,
-    "return_7d": 3.062426383981154,
-    "return_15d": 4.166666666666674,
-    "return_1m": -4.580152671755721,
-    "return_ytd": -18.981481481481477,
-    "return_1y": -37.230989956958396,
-    "return_2y": -56.25,
-    "return_3y": null,
-    "close": 4375,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1414",
-   "type": "CHARACTER",
-   "name": "LCC 리오프닝"
-  },
-  {
-   "id": "A_1623",
-   "type": "ASSET",
-   "name": "하나투어",
-   "exposure": {
-    "ticker": "039130",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.1069692058346856,
-    "return_3d": 2.7732463295269127,
-    "return_7d": 1.449275362318847,
-    "return_15d": 2.7732463295269127,
-    "return_1m": -4.255319148936165,
-    "return_ytd": -35.18518518518518,
-    "return_1y": -43.0379746835443,
-    "return_2y": -39.62624042920185,
-    "return_3y": null,
-    "close": 31500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1415",
-   "type": "CHARACTER",
-   "name": "여행사1위(패키지)"
-  },
-  {
-   "id": "A_1144",
-   "type": "ASSET",
-   "name": "호텔신라",
-   "exposure": {
-    "ticker": "008770",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.4457831325301207,
-    "return_3d": -3.3295063145809434,
-    "return_7d": -11.5546218487395,
-    "return_15d": -10.805084745762716,
-    "return_1m": -17.61252446183953,
-    "return_ytd": -7.574094401756315,
-    "return_1y": -19.656488549618324,
-    "return_2y": -19.656488549618324,
-    "return_3y": null,
-    "close": 42100,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1416",
-   "type": "CHARACTER",
-   "name": "면세·호텔 리오프닝"
-  },
-  {
-   "id": "A_1143",
-   "type": "ASSET",
-   "name": "파라다이스",
-   "exposure": {
-    "ticker": "034230",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -2.2977022977022976,
-    "return_3d": 0.8247422680412342,
-    "return_7d": -5.324298160696994,
-    "return_15d": -19.03973509933775,
-    "return_1m": -25.286478227654698,
-    "return_ytd": -41.29651860744298,
-    "return_1y": -49.376255160238,
-    "return_2y": -20.929049709068615,
-    "return_3y": null,
-    "close": 9780,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1417",
-   "type": "CHARACTER",
-   "name": "카지노 리오프닝"
-  },
-  {
-   "id": "A_2562",
-   "type": "ASSET",
-   "name": "강원랜드",
-   "exposure": {
-    "ticker": "035250",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -2.2068965517241357,
-    "return_3d": -3.5374149659863963,
-    "return_7d": -2.1394064872325758,
-    "return_15d": -2.3415977961432466,
-    "return_1m": -3.8644067796610115,
-    "return_ytd": -18.638306367181954,
-    "return_1y": -24.922007705596382,
-    "return_2y": 15.589083092043854,
-    "return_3y": null,
-    "close": 14180,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1418",
-   "type": "CHARACTER",
-   "name": "내국인 카지노 리오프닝"
-  },
-  {
-   "id": "A_1142",
-   "type": "ASSET",
-   "name": "GKL",
-   "exposure": {
-    "ticker": "114090",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -0.9615384615384581,
-    "return_3d": -1.1727078891258014,
-    "return_7d": -4.432989690721644,
-    "return_15d": -9.912536443148689,
-    "return_1m": -10.348162475822054,
-    "return_ytd": -34.89814913752514,
-    "return_1y": -39.67756271220142,
-    "return_2y": -19.781537868916345,
-    "return_3y": null,
-    "close": 9270,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1419",
-   "type": "CHARACTER",
-   "name": "외국인 카지노"
-  },
-  {
-   "id": "M_036",
-   "type": "MACRO",
-   "name": "글로벌여행수요"
-  },
-  {
-   "id": "M_272",
-   "type": "MACRO",
-   "name": "글로벌소비여행심리"
-  },
-  {
-   "id": "M_039",
-   "type": "MACRO",
-   "name": "중국내수소비"
-  },
-  {
-   "id": "A_2901",
-   "type": "ASSET",
-   "name": "TIGER 여행레저",
-   "exposure": {
-    "ticker": "228800",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1593",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012729"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "C_1413",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017497"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012730"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "C_1414",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017498"
-   ]
-  },
-  {
-   "from": "A_1623",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012731"
-   ]
-  },
-  {
-   "from": "A_1623",
-   "to": "C_1415",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017499"
-   ]
-  },
-  {
-   "from": "A_1144",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012732"
-   ]
-  },
-  {
-   "from": "A_1144",
-   "to": "C_1416",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017500"
-   ]
-  },
-  {
-   "from": "A_1143",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012733"
-   ]
-  },
-  {
-   "from": "A_1143",
-   "to": "C_1417",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017501"
-   ]
-  },
-  {
-   "from": "A_2562",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012734"
-   ]
-  },
-  {
-   "from": "A_2562",
-   "to": "C_1418",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017502"
-   ]
-  },
-  {
-   "from": "A_1142",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012735"
-   ]
-  },
-  {
-   "from": "A_1142",
-   "to": "C_1419",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017503"
-   ]
-  },
-  {
-   "from": "M_036",
-   "to": "T_536",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012736"
-   ]
-  },
-  {
-   "from": "M_272",
-   "to": "T_536",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012737"
-   ]
-  },
-  {
-   "from": "M_039",
-   "to": "T_536",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012738"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "A_1596",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020091"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "대한항공과 제주항공은 국내외 여객 항공 시장 경쟁"
-  },
-  {
-   "from": "A_1142",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020092"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GKL과 파라다이스는 외국인 카지노 시장 경쟁"
-  },
-  {
-   "from": "A_2562",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020093"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "강원랜드와 파라다이스는 국내 카지노·복합리조트 시장 경쟁"
-  },
-  {
-   "from": "A_1623",
-   "to": "A_1593",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_020094"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "하나투어는 대한항공 등 항공사와 패키지 상품을 연계 판매"
-  },
-  {
-   "from": "A_1144",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020095"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "호텔신라와 파라다이스는 호텔·리조트 시장 경쟁"
-  },
-  {
-   "from": "A_2901",
-   "to": "T_536",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020883"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1593",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012729"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "C_1413",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017497"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012730"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "C_1414",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017498"
-   ]
-  },
-  {
-   "from": "A_1623",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012731"
-   ]
-  },
-  {
-   "from": "A_1623",
-   "to": "C_1415",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017499"
-   ]
-  },
-  {
-   "from": "A_1144",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012732"
-   ]
-  },
-  {
-   "from": "A_1144",
-   "to": "C_1416",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017500"
-   ]
-  },
-  {
-   "from": "A_1143",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012733"
-   ]
-  },
-  {
-   "from": "A_1143",
-   "to": "C_1417",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017501"
-   ]
-  },
-  {
-   "from": "A_2562",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012734"
-   ]
-  },
-  {
-   "from": "A_2562",
-   "to": "C_1418",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017502"
-   ]
-  },
-  {
-   "from": "A_1142",
-   "to": "T_536",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012735"
-   ]
-  },
-  {
-   "from": "A_1142",
-   "to": "C_1419",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017503"
-   ]
-  },
-  {
-   "from": "M_036",
-   "to": "T_536",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012736"
-   ]
-  },
-  {
-   "from": "M_272",
-   "to": "T_536",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012737"
-   ]
-  },
-  {
-   "from": "M_039",
-   "to": "T_536",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012738"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "A_1596",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020091"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "대한항공과 제주항공은 국내외 여객 항공 시장 경쟁"
-  },
-  {
-   "from": "A_1142",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020092"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GKL과 파라다이스는 외국인 카지노 시장 경쟁"
-  },
-  {
-   "from": "A_2562",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020093"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "강원랜드와 파라다이스는 국내 카지노·복합리조트 시장 경쟁"
-  },
-  {
-   "from": "A_1623",
-   "to": "A_1593",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_020094"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "하나투어는 대한항공 등 항공사와 패키지 상품을 연계 판매"
-  },
-  {
-   "from": "A_1144",
-   "to": "A_1143",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020095"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "호텔신라와 파라다이스는 호텔·리조트 시장 경쟁"
-  },
-  {
-   "from": "A_2901",
-   "to": "T_536",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020883"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

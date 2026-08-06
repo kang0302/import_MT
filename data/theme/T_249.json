@@ -1,1038 +1,1056 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_249",
- "themeName": "글로벌금융데이터플랫폼",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_249",
+  "themeName": "글로벌금융데이터플랫폼",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-22T00:00:00+09:00",
+    "notes": "Morningstar·MSCI·FactSet·S&P Global·LSEG·Moody's + Bloomberg(비) 7개 핵심 플랫폼. AI확산·ESG도입·금융규제강화·시장변동성 4 매크로 IMPACTS. 고PER·안정적·가격결정력 trait.",
+    "sources": [],
+    "description": "모닝스타·MSCI·팩트셋·S&P글로벌·LSEG·무디스·블룸버그 등 글로벌 금융 데이터·지수·신용평가 플랫폼. 구독 반복매출·전환비용 해자를 바탕으로 AI·ESG·규제·시장 변동성이 핵심 동인.",
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 14건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_249",
+      "type": "THEME",
+      "name": "글로벌금융데이터플랫폼"
+    },
+    {
+      "id": "A_1599",
+      "type": "ASSET",
+      "name": "모닝스타",
+      "exposure": {
+        "ticker": "MORN",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "펀드·ETF·주식 데이터 + 평가 플랫폼 (Morningstar Direct·자문가용)",
+        "theme_role": "리테일·자문가 데이터 강자, 펀드 평가 점유 1위",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": -0.4594257178526795,
+        "close": 199.325,
+        "marketCap": 7477392540,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 3.5104117983071115,
+        "return_7d": 9.2638272214,
+        "return_15d": 17.77252584933531,
+        "return_1m": 16.59452503509593,
+        "return_ytd": -5.270411557836696,
+        "return_1y": -26.283284023668628,
+        "return_2y": -37.248543994963,
+        "return_3y": -13.515272474835117,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1600",
+      "type": "ASSET",
+      "name": "MSCI",
+      "exposure": {
+        "ticker": "MSCI",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "글로벌 인덱스·ESG 평가·리스크 분석 플랫폼",
+        "theme_role": "글로벌 인덱스 1위 (MSCI 지수), ESG 평가 강자, 라이센스 매출 안정적",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.06999492536789997,
+        "close": 571.87,
+        "marketCap": 41574949000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.06465818537676471,
+        "return_7d": 0.14710260406634035,
+        "return_15d": -8.025475658201586,
+        "return_1m": -5.956355144797653,
+        "return_ytd": 1.17116320212296,
+        "return_1y": -0.029718201524364662,
+        "return_2y": 5.753014276203872,
+        "return_3y": 4.340607210626168,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1601",
+      "type": "ASSET",
+      "name": "팩트셋리서치시스템즈",
+      "exposure": {
+        "ticker": "FDS",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "전문가용 금융 데이터 터미널·분석 플랫폼 (Bloomberg 대안)",
+        "theme_role": "기관투자가용 데이터 터미널, 구독형 SaaS 수익",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 1.2896644686509307,
+        "close": 278.03,
+        "marketCap": 9888287920,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.634498480243155,
+        "return_7d": 4.5618653629183825,
+        "return_15d": 10.685138739599488,
+        "return_1m": 7.6384049554781175,
+        "return_ytd": -2.4113724113724144,
+        "return_1y": -29.81876009693054,
+        "return_2y": -32.695054346510446,
+        "return_3y": -36.09093416697316,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1602",
+      "type": "ASSET",
+      "name": "S&P글로벌",
+      "exposure": {
+        "ticker": "SPGI",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "신용평가(S&P Ratings) + 인덱스(S&P 500 등) + 시장 데이터 통합 플랫폼",
+        "theme_role": "신용평가 1위 + S&P 500 인덱스, 가격결정력 압도적",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": -0.6060165321309929,
+        "close": 410.03,
+        "marketCap": 120876844000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.4612434151433531,
+        "return_7d": -6.775345019666689,
+        "return_15d": -7.750629949604038,
+        "return_1m": -7.53844766157038,
+        "return_ytd": -20.019115983302772,
+        "return_1y": -27.17310219885617,
+        "return_2y": -15.410640975388368,
+        "return_3y": 3.9339940685914065,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1603",
+      "type": "ASSET",
+      "name": "LSEG",
+      "exposure": {
+        "ticker": "LSEG",
+        "exchange": "LSE",
+        "country": "GB",
+        "business_desc": "런던증권거래소 + Refinitiv 데이터 통합 플랫폼",
+        "theme_role": "거래소 + 데이터 양손 사업 모델, Refinitiv 인수로 Bloomberg·FactSet 경쟁권 진입",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 1.5058823529411791,
+        "close": 8628.0,
+        "marketCap": 42010590400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 2.7387473207906687,
+        "return_7d": -3.576218149307109,
+        "return_15d": -4.936095196121637,
+        "return_1m": -4.494133274297097,
+        "return_ytd": -1.9990913221263007,
+        "return_1y": -14.574257425742577,
+        "return_2y": -10.941370767960368,
+        "return_3y": 4.27846265409717,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1604",
+      "type": "ASSET",
+      "name": "무디스",
+      "exposure": {
+        "ticker": "MCO",
+        "exchange": "NYSE",
+        "country": "US",
+        "business_desc": "신용평가(Moody's Investors Service) + 분석(Moody's Analytics)",
+        "theme_role": "S&P·Fitch 와 함께 글로벌 신용평가 3대 과점 (안정적 라이센스 수익)",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.06409328674510384,
+        "close": 483.98,
+        "marketCap": 83825336000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.170617500731641,
+        "return_7d": -0.4074409416412794,
+        "return_15d": -4.059786702612689,
+        "return_1m": -3.298767208136022,
+        "return_ytd": -3.006132510321058,
+        "return_1y": -6.90006732711359,
+        "return_2y": 6.024360322467581,
+        "return_3y": 37.201984408221136,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1605",
+      "type": "ASSET",
+      "name": "블룸버그(비)",
+      "exposure": {
+        "ticker": "",
+        "exchange": "",
+        "country": "US",
+        "business_desc": "Bloomberg Terminal + 미디어·데이터 (비상장, 마이클 블룸버그 지배)",
+        "theme_role": "기관 데이터 터미널 사실상 표준 (월 $2k+), 가격결정력 최강",
+        "theme_status": "Peripheral"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": null,
+        "returnsSource": null
+      },
+      "coreBiz": "블룸버그는 금융 단말(터미널)·데이터의 사실상 표준(비상장)이다"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_260",
+      "type": "MACRO",
+      "name": "ESG도입"
+    },
+    {
+      "id": "M_261",
+      "type": "MACRO",
+      "name": "금융권규제강화"
+    },
+    {
+      "id": "M_262",
+      "type": "MACRO",
+      "name": "금융시장변동성고조"
+    },
+    {
+      "id": "C_198",
+      "type": "CHARACTER",
+      "name": "고PER"
+    },
+    {
+      "id": "C_189",
+      "type": "CHARACTER",
+      "name": "안정적"
+    },
+    {
+      "id": "C_199",
+      "type": "CHARACTER",
+      "name": "가격결정력"
+    },
+    {
+      "id": "C_3921",
+      "type": "CHARACTER",
+      "name": "펀드·투자리서치데이터"
+    },
+    {
+      "id": "C_3922",
+      "type": "CHARACTER",
+      "name": "지수·ESG·리스크데이터"
+    },
+    {
+      "id": "C_3923",
+      "type": "CHARACTER",
+      "name": "금융분석단말·데이터"
+    },
+    {
+      "id": "C_3924",
+      "type": "CHARACTER",
+      "name": "신용평가·지수·인텔리전스"
+    },
+    {
+      "id": "C_3925",
+      "type": "CHARACTER",
+      "name": "거래소·데이터(리피니티브)"
+    },
+    {
+      "id": "C_3926",
+      "type": "CHARACTER",
+      "name": "신용평가·애널리틱스"
+    },
+    {
+      "id": "C_3927",
+      "type": "CHARACTER",
+      "name": "금융단말1위(비상장)"
+    },
+    {
+      "id": "A_2905",
+      "type": "ASSET",
+      "name": "iShares U.S. Broker-Dealers & Securities Exchanges ETF",
+      "exposure": {
+        "ticker": "IAI",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.5026455026454935,
+        "return_3d": 1.981101685815534,
+        "return_7d": 0.6891068115557841,
+        "return_15d": -3.2447025264873752,
+        "return_1m": 0.6091101694915224,
+        "return_ytd": 4.477201474066317,
+        "return_1y": 8.56146768017374,
+        "return_2y": 53.07438149730033,
+        "return_3y": 94.163344577328,
+        "close": 189.95,
+        "marketCap": 1352210931,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-22T00:00:00+09:00",
-  "notes": "Morningstar·MSCI·FactSet·S&P Global·LSEG·Moody's + Bloomberg(비) 7개 핵심 플랫폼. AI확산·ESG도입·금융규제강화·시장변동성 4 매크로 IMPACTS. 고PER·안정적·가격결정력 trait.",
-  "sources": [],
-  "description": "모닝스타·MSCI·팩트셋·S&P글로벌·LSEG·무디스·블룸버그 등 글로벌 금융 데이터·지수·신용평가 플랫폼. 구독 반복매출·전환비용 해자를 바탕으로 AI·ESG·규제·시장 변동성이 핵심 동인.",
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 14건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1599",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008356"
+      ]
+    },
+    {
+      "from": "A_1600",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008358"
+      ]
+    },
+    {
+      "from": "A_1601",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008360"
+      ]
+    },
+    {
+      "from": "A_1602",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008362"
+      ]
+    },
+    {
+      "from": "A_1603",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008364"
+      ]
+    },
+    {
+      "from": "A_1604",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008366"
+      ]
+    },
+    {
+      "from": "A_1605",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008368"
+      ]
+    },
+    {
+      "from": "M_055",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008370"
+      ]
+    },
+    {
+      "from": "M_260",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008371"
+      ]
+    },
+    {
+      "from": "M_261",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008372"
+      ]
+    },
+    {
+      "from": "M_262",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008373"
+      ]
+    },
+    {
+      "from": "T_249",
+      "to": "C_198",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015535"
+      ]
+    },
+    {
+      "from": "T_249",
+      "to": "C_189",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015536"
+      ]
+    },
+    {
+      "from": "T_249",
+      "to": "C_199",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015537"
+      ]
+    },
+    {
+      "from": "A_1599",
+      "to": "C_3921",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008357"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1600",
+      "to": "C_3922",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008359"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1601",
+      "to": "C_3923",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008361"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1602",
+      "to": "C_3924",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008363"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1603",
+      "to": "C_3925",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008365"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1604",
+      "to": "C_3926",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008367"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1605",
+      "to": "C_3927",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008369"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1600",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018347"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타(Morningstar Indexes·자회사 Sustainalytics)와 MSCI는 주가지수와 ESG평가에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1601",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018348"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타 Direct와 팩트셋은 자산운용사·자문사 대상 투자리서치 데이터 플랫폼에서 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1602",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018349"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타는 DBRS 신용평가·지수·데이터에서 S&P글로벌과 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018350"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타 인덱스와 LSEG의 FTSE Russell은 지수 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1604",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018351"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타 DBRS(세계 4위 신평사)는 무디스와 신용등급 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_1600",
+      "to": "A_1602",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018352"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "MSCI 지수와 S&P Dow Jones Indices, 그리고 양사 ESG평가가 직접 경쟁한다."
+    },
+    {
+      "from": "A_1600",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018353"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "MSCI 지수와 LSEG의 FTSE Russell은 글로벌 주가지수 벤치마크 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_1601",
+      "to": "A_1602",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018354"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "팩트셋과 S&P글로벌 마켓인텔리전스(Capital IQ)는 금융데이터 플랫폼에서 경쟁한다."
+    },
+    {
+      "from": "A_1601",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018355"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "팩트셋과 LSEG Workspace(구 Refinitiv Eikon)는 금융데이터 단말에서 경쟁한다."
+    },
+    {
+      "from": "A_1601",
+      "to": "A_1605",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018356"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "팩트셋과 블룸버그 터미널은 금융 워크스테이션·데이터 단말 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1602",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018357"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "S&P글로벌과 LSEG는 금융데이터(마켓인텔리전스 vs Refinitiv)와 지수(S&P DJI vs FTSE Russell)에서 경쟁한다."
+    },
+    {
+      "from": "A_1602",
+      "to": "A_1604",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018358"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "S&P글로벌과 무디스는 글로벌 신용평가 빅3로서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1602",
+      "to": "A_1605",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018359"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "S&P글로벌 마켓인텔리전스와 블룸버그는 금융데이터 플랫폼에서 경쟁한다."
+    },
+    {
+      "from": "A_1603",
+      "to": "A_1605",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018360"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "LSEG Workspace(Refinitiv)와 블룸버그 터미널은 금융 단말 시장의 양대 경쟁자다."
+    },
+    {
+      "from": "A_2905",
+      "to": "T_249",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020672"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1599",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008356"
+      ]
+    },
+    {
+      "from": "A_1600",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008358"
+      ]
+    },
+    {
+      "from": "A_1601",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008360"
+      ]
+    },
+    {
+      "from": "A_1602",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008362"
+      ]
+    },
+    {
+      "from": "A_1603",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008364"
+      ]
+    },
+    {
+      "from": "A_1604",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008366"
+      ]
+    },
+    {
+      "from": "A_1605",
+      "to": "T_249",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008368"
+      ]
+    },
+    {
+      "from": "M_055",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008370"
+      ]
+    },
+    {
+      "from": "M_260",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008371"
+      ]
+    },
+    {
+      "from": "M_261",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008372"
+      ]
+    },
+    {
+      "from": "M_262",
+      "to": "T_249",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008373"
+      ]
+    },
+    {
+      "from": "T_249",
+      "to": "C_198",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015535"
+      ]
+    },
+    {
+      "from": "T_249",
+      "to": "C_189",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015536"
+      ]
+    },
+    {
+      "from": "T_249",
+      "to": "C_199",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015537"
+      ]
+    },
+    {
+      "from": "A_1599",
+      "to": "C_3921",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008357"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1600",
+      "to": "C_3922",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008359"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1601",
+      "to": "C_3923",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008361"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1602",
+      "to": "C_3924",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008363"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1603",
+      "to": "C_3925",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008365"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1604",
+      "to": "C_3926",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008367"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1605",
+      "to": "C_3927",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008369"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1600",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018347"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타(Morningstar Indexes·자회사 Sustainalytics)와 MSCI는 주가지수와 ESG평가에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1601",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018348"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타 Direct와 팩트셋은 자산운용사·자문사 대상 투자리서치 데이터 플랫폼에서 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1602",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018349"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타는 DBRS 신용평가·지수·데이터에서 S&P글로벌과 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018350"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타 인덱스와 LSEG의 FTSE Russell은 지수 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_1599",
+      "to": "A_1604",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018351"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모닝스타 DBRS(세계 4위 신평사)는 무디스와 신용등급 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_1600",
+      "to": "A_1602",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018352"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "MSCI 지수와 S&P Dow Jones Indices, 그리고 양사 ESG평가가 직접 경쟁한다."
+    },
+    {
+      "from": "A_1600",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018353"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "MSCI 지수와 LSEG의 FTSE Russell은 글로벌 주가지수 벤치마크 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_1601",
+      "to": "A_1602",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018354"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "팩트셋과 S&P글로벌 마켓인텔리전스(Capital IQ)는 금융데이터 플랫폼에서 경쟁한다."
+    },
+    {
+      "from": "A_1601",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018355"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "팩트셋과 LSEG Workspace(구 Refinitiv Eikon)는 금융데이터 단말에서 경쟁한다."
+    },
+    {
+      "from": "A_1601",
+      "to": "A_1605",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018356"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "팩트셋과 블룸버그 터미널은 금융 워크스테이션·데이터 단말 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1602",
+      "to": "A_1603",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018357"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "S&P글로벌과 LSEG는 금융데이터(마켓인텔리전스 vs Refinitiv)와 지수(S&P DJI vs FTSE Russell)에서 경쟁한다."
+    },
+    {
+      "from": "A_1602",
+      "to": "A_1604",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018358"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "S&P글로벌과 무디스는 글로벌 신용평가 빅3로서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1602",
+      "to": "A_1605",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018359"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "S&P글로벌 마켓인텔리전스와 블룸버그는 금융데이터 플랫폼에서 경쟁한다."
+    },
+    {
+      "from": "A_1603",
+      "to": "A_1605",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018360"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "LSEG Workspace(Refinitiv)와 블룸버그 터미널은 금융 단말 시장의 양대 경쟁자다."
+    },
+    {
+      "from": "A_2905",
+      "to": "T_249",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020672"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_249",
-   "type": "THEME",
-   "name": "글로벌금융데이터플랫폼"
-  },
-  {
-   "id": "A_1599",
-   "type": "ASSET",
-   "name": "모닝스타",
-   "exposure": {
-    "ticker": "MORN",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "펀드·ETF·주식 데이터 + 평가 플랫폼 (Morningstar Direct·자문가용)",
-    "theme_role": "리테일·자문가 데이터 강자, 펀드 평가 점유 1위",
-    "theme_status": "Support"
-   },
-   "metrics": {
-    "return_1d": 0.6635499924596555,
-    "close": 200.25,
-    "marketCap": 7512092593,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 3.6920049710024827,
-    "return_7d": 16.012977231910085,
-    "return_15d": 17.46245893946505,
-    "return_1m": 20.357014064190416,
-    "return_ytd": -4.833190761334471,
-    "return_1y": -26.492181190808317,
-    "return_2y": -38.075947801348256,
-    "return_3y": -14.986202504776058,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1600",
-   "type": "ASSET",
-   "name": "MSCI",
-   "exposure": {
-    "ticker": "MSCI",
-    "exchange": "NYSE",
-    "country": "US",
-    "business_desc": "글로벌 인덱스·ESG 평가·리스크 분석 플랫폼",
-    "theme_role": "글로벌 인덱스 1위 (MSCI 지수), ESG 평가 강자, 라이센스 매출 안정적",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": -0.5152934213045857,
-    "close": 571.47,
-    "marketCap": 41545869000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.741654218918264,
-    "return_7d": 3.754607019009071,
-    "return_15d": -6.535498748834689,
-    "return_1m": -6.9327731092436835,
-    "return_ytd": 1.100398053958429,
-    "return_1y": 2.5242195909580323,
-    "return_2y": 4.615018489364053,
-    "return_3y": 3.8507668823144714,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1601",
-   "type": "ASSET",
-   "name": "팩트셋리서치시스템즈",
-   "exposure": {
-    "ticker": "FDS",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "전문가용 금융 데이터 터미널·분석 플랫폼 (Bloomberg 대안)",
-    "theme_role": "기관투자가용 데이터 터미널, 구독형 SaaS 수익",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 1.7835953722930897,
-    "close": 274.49,
-    "marketCap": 9762385898,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.356917461886489,
-    "return_7d": 7.913980185563774,
-    "return_15d": 8.661573176042126,
-    "return_1m": 8.838223632038078,
-    "return_ytd": -3.653913653913643,
-    "return_1y": -29.857153808805858,
-    "return_2y": -34.14663403867376,
-    "return_3y": -37.11713362809558,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1602",
-   "type": "ASSET",
-   "name": "S&P글로벌",
-   "exposure": {
-    "ticker": "SPGI",
-    "exchange": "NYSE",
-    "country": "US",
-    "business_desc": "신용평가(S&P Ratings) + 인덱스(S&P 500 등) + 시장 데이터 통합 플랫폼",
-    "theme_role": "신용평가 1위 + S&P 500 인덱스, 가격결정력 압도적",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": -0.8936936936936979,
-    "close": 412.53,
-    "marketCap": 121613844000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.5951807228915751,
-    "return_7d": -3.252814258911818,
-    "return_15d": -6.001777291680909,
-    "return_1m": -7.756808729484376,
-    "return_ytd": -19.531463348027934,
-    "return_1y": -24.39797676208628,
-    "return_2y": -15.55341753495323,
-    "return_3y": 5.194308445532414,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1603",
-   "type": "ASSET",
-   "name": "LSEG",
-   "exposure": {
-    "ticker": "LSEG",
-    "exchange": "LSE",
-    "country": "GB",
-    "business_desc": "런던증권거래소 + Refinitiv 데이터 통합 플랫폼",
-    "theme_role": "거래소 + 데이터 양손 사업 모델, Refinitiv 인수로 Bloomberg·FactSet 경쟁권 진입",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 0.11778563015312216,
-    "close": 8500.0,
-    "marketCap": 41387345665,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.231698814780391,
-    "return_7d": -3.122863004330978,
-    "return_15d": -5.2819255627368005,
-    "return_1m": -3.9765024853140485,
-    "return_ytd": -3.4529759200363497,
-    "return_1y": -13.300693594451241,
-    "return_2y": -10.676754939050026,
-    "return_3y": 3.582744333414567,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1604",
-   "type": "ASSET",
-   "name": "무디스",
-   "exposure": {
-    "ticker": "MCO",
-    "exchange": "NYSE",
-    "country": "US",
-    "business_desc": "신용평가(Moody's Investors Service) + 분석(Moody's Analytics)",
-    "theme_role": "S&P·Fitch 와 함께 글로벌 신용평가 3대 과점 (안정적 라이센스 수익)",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 0.06413439258523557,
-    "close": 483.67,
-    "marketCap": 83771644000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.2923734085348295,
-    "return_7d": 2.5811240721102857,
-    "return_15d": -2.235562832251936,
-    "return_1m": -3.0293917157865113,
-    "return_ytd": -3.0682592488676885,
-    "return_1y": -3.5130067028407153,
-    "return_2y": 5.590970615203261,
-    "return_3y": 36.838680473037975,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1605",
-   "type": "ASSET",
-   "name": "블룸버그(비)",
-   "exposure": {
-    "ticker": "",
-    "exchange": "",
-    "country": "US",
-    "business_desc": "Bloomberg Terminal + 미디어·데이터 (비상장, 마이클 블룸버그 지배)",
-    "theme_role": "기관 데이터 터미널 사실상 표준 (월 $2k+), 가격결정력 최강",
-    "theme_status": "Peripheral"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": null,
-    "returnsSource": null
-   },
-   "coreBiz": "블룸버그는 금융 단말(터미널)·데이터의 사실상 표준(비상장)이다"
-  },
-  {
-   "id": "M_055",
-   "type": "MACRO",
-   "name": "AI확산"
-  },
-  {
-   "id": "M_260",
-   "type": "MACRO",
-   "name": "ESG도입"
-  },
-  {
-   "id": "M_261",
-   "type": "MACRO",
-   "name": "금융권규제강화"
-  },
-  {
-   "id": "M_262",
-   "type": "MACRO",
-   "name": "금융시장변동성고조"
-  },
-  {
-   "id": "C_198",
-   "type": "CHARACTER",
-   "name": "고PER"
-  },
-  {
-   "id": "C_189",
-   "type": "CHARACTER",
-   "name": "안정적"
-  },
-  {
-   "id": "C_199",
-   "type": "CHARACTER",
-   "name": "가격결정력"
-  },
-  {
-   "id": "C_3921",
-   "type": "CHARACTER",
-   "name": "펀드·투자리서치데이터"
-  },
-  {
-   "id": "C_3922",
-   "type": "CHARACTER",
-   "name": "지수·ESG·리스크데이터"
-  },
-  {
-   "id": "C_3923",
-   "type": "CHARACTER",
-   "name": "금융분석단말·데이터"
-  },
-  {
-   "id": "C_3924",
-   "type": "CHARACTER",
-   "name": "신용평가·지수·인텔리전스"
-  },
-  {
-   "id": "C_3925",
-   "type": "CHARACTER",
-   "name": "거래소·데이터(리피니티브)"
-  },
-  {
-   "id": "C_3926",
-   "type": "CHARACTER",
-   "name": "신용평가·애널리틱스"
-  },
-  {
-   "id": "C_3927",
-   "type": "CHARACTER",
-   "name": "금융단말1위(비상장)"
-  },
-  {
-   "id": "A_2905",
-   "type": "ASSET",
-   "name": "iShares U.S. Broker-Dealers & Securities Exchanges ETF",
-   "exposure": {
-    "ticker": "IAI",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1599",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008356"
-   ]
-  },
-  {
-   "from": "A_1600",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008358"
-   ]
-  },
-  {
-   "from": "A_1601",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008360"
-   ]
-  },
-  {
-   "from": "A_1602",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008362"
-   ]
-  },
-  {
-   "from": "A_1603",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008364"
-   ]
-  },
-  {
-   "from": "A_1604",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008366"
-   ]
-  },
-  {
-   "from": "A_1605",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008368"
-   ]
-  },
-  {
-   "from": "M_055",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008370"
-   ]
-  },
-  {
-   "from": "M_260",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008371"
-   ]
-  },
-  {
-   "from": "M_261",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008372"
-   ]
-  },
-  {
-   "from": "M_262",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008373"
-   ]
-  },
-  {
-   "from": "T_249",
-   "to": "C_198",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015535"
-   ]
-  },
-  {
-   "from": "T_249",
-   "to": "C_189",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015536"
-   ]
-  },
-  {
-   "from": "T_249",
-   "to": "C_199",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015537"
-   ]
-  },
-  {
-   "from": "A_1599",
-   "to": "C_3921",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008357"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1600",
-   "to": "C_3922",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008359"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1601",
-   "to": "C_3923",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008361"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1602",
-   "to": "C_3924",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008363"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1603",
-   "to": "C_3925",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008365"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1604",
-   "to": "C_3926",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008367"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1605",
-   "to": "C_3927",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008369"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1600",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018347"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타(Morningstar Indexes·자회사 Sustainalytics)와 MSCI는 주가지수와 ESG평가에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1601",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018348"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타 Direct와 팩트셋은 자산운용사·자문사 대상 투자리서치 데이터 플랫폼에서 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1602",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018349"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타는 DBRS 신용평가·지수·데이터에서 S&P글로벌과 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018350"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타 인덱스와 LSEG의 FTSE Russell은 지수 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1604",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018351"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타 DBRS(세계 4위 신평사)는 무디스와 신용등급 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_1600",
-   "to": "A_1602",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018352"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "MSCI 지수와 S&P Dow Jones Indices, 그리고 양사 ESG평가가 직접 경쟁한다."
-  },
-  {
-   "from": "A_1600",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018353"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "MSCI 지수와 LSEG의 FTSE Russell은 글로벌 주가지수 벤치마크 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_1601",
-   "to": "A_1602",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018354"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "팩트셋과 S&P글로벌 마켓인텔리전스(Capital IQ)는 금융데이터 플랫폼에서 경쟁한다."
-  },
-  {
-   "from": "A_1601",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018355"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "팩트셋과 LSEG Workspace(구 Refinitiv Eikon)는 금융데이터 단말에서 경쟁한다."
-  },
-  {
-   "from": "A_1601",
-   "to": "A_1605",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018356"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "팩트셋과 블룸버그 터미널은 금융 워크스테이션·데이터 단말 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1602",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018357"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "S&P글로벌과 LSEG는 금융데이터(마켓인텔리전스 vs Refinitiv)와 지수(S&P DJI vs FTSE Russell)에서 경쟁한다."
-  },
-  {
-   "from": "A_1602",
-   "to": "A_1604",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018358"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "S&P글로벌과 무디스는 글로벌 신용평가 빅3로서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1602",
-   "to": "A_1605",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018359"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "S&P글로벌 마켓인텔리전스와 블룸버그는 금융데이터 플랫폼에서 경쟁한다."
-  },
-  {
-   "from": "A_1603",
-   "to": "A_1605",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018360"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "LSEG Workspace(Refinitiv)와 블룸버그 터미널은 금융 단말 시장의 양대 경쟁자다."
-  },
-  {
-   "from": "A_2905",
-   "to": "T_249",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020672"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1599",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008356"
-   ]
-  },
-  {
-   "from": "A_1600",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008358"
-   ]
-  },
-  {
-   "from": "A_1601",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008360"
-   ]
-  },
-  {
-   "from": "A_1602",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008362"
-   ]
-  },
-  {
-   "from": "A_1603",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008364"
-   ]
-  },
-  {
-   "from": "A_1604",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008366"
-   ]
-  },
-  {
-   "from": "A_1605",
-   "to": "T_249",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008368"
-   ]
-  },
-  {
-   "from": "M_055",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008370"
-   ]
-  },
-  {
-   "from": "M_260",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008371"
-   ]
-  },
-  {
-   "from": "M_261",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008372"
-   ]
-  },
-  {
-   "from": "M_262",
-   "to": "T_249",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008373"
-   ]
-  },
-  {
-   "from": "T_249",
-   "to": "C_198",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015535"
-   ]
-  },
-  {
-   "from": "T_249",
-   "to": "C_189",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015536"
-   ]
-  },
-  {
-   "from": "T_249",
-   "to": "C_199",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015537"
-   ]
-  },
-  {
-   "from": "A_1599",
-   "to": "C_3921",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008357"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1600",
-   "to": "C_3922",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008359"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1601",
-   "to": "C_3923",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008361"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1602",
-   "to": "C_3924",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008363"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1603",
-   "to": "C_3925",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008365"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1604",
-   "to": "C_3926",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008367"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1605",
-   "to": "C_3927",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008369"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1600",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018347"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타(Morningstar Indexes·자회사 Sustainalytics)와 MSCI는 주가지수와 ESG평가에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1601",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018348"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타 Direct와 팩트셋은 자산운용사·자문사 대상 투자리서치 데이터 플랫폼에서 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1602",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018349"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타는 DBRS 신용평가·지수·데이터에서 S&P글로벌과 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018350"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타 인덱스와 LSEG의 FTSE Russell은 지수 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_1599",
-   "to": "A_1604",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018351"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모닝스타 DBRS(세계 4위 신평사)는 무디스와 신용등급 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_1600",
-   "to": "A_1602",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018352"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "MSCI 지수와 S&P Dow Jones Indices, 그리고 양사 ESG평가가 직접 경쟁한다."
-  },
-  {
-   "from": "A_1600",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018353"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "MSCI 지수와 LSEG의 FTSE Russell은 글로벌 주가지수 벤치마크 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_1601",
-   "to": "A_1602",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018354"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "팩트셋과 S&P글로벌 마켓인텔리전스(Capital IQ)는 금융데이터 플랫폼에서 경쟁한다."
-  },
-  {
-   "from": "A_1601",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018355"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "팩트셋과 LSEG Workspace(구 Refinitiv Eikon)는 금융데이터 단말에서 경쟁한다."
-  },
-  {
-   "from": "A_1601",
-   "to": "A_1605",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018356"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "팩트셋과 블룸버그 터미널은 금융 워크스테이션·데이터 단말 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1602",
-   "to": "A_1603",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018357"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "S&P글로벌과 LSEG는 금융데이터(마켓인텔리전스 vs Refinitiv)와 지수(S&P DJI vs FTSE Russell)에서 경쟁한다."
-  },
-  {
-   "from": "A_1602",
-   "to": "A_1604",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018358"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "S&P글로벌과 무디스는 글로벌 신용평가 빅3로서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1602",
-   "to": "A_1605",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018359"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "S&P글로벌 마켓인텔리전스와 블룸버그는 금융데이터 플랫폼에서 경쟁한다."
-  },
-  {
-   "from": "A_1603",
-   "to": "A_1605",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018360"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "LSEG Workspace(Refinitiv)와 블룸버그 터미널은 금융 단말 시장의 양대 경쟁자다."
-  },
-  {
-   "from": "A_2905",
-   "to": "T_249",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020672"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

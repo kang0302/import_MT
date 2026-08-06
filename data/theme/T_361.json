@@ -1,691 +1,709 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_361",
- "themeName": "글로벌폐기물환경메이저",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_361",
+  "themeName": "글로벌폐기물환경메이저",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "글로벌 폐기물·환경 메이저 — Waste Management (US 1위)·Republic Services·GFL Environmental (캐나다)·Veolia (프랑스)·Casella. 안정적 cash flow + 가격 인상 + recycling·재활용 + landfill 가스 등 부산물 수익.",
+    "notes": "T_361 신규",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 9건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_361",
+      "type": "THEME",
+      "name": "글로벌폐기물환경메이저"
+    },
+    {
+      "id": "A_2008",
+      "type": "ASSET",
+      "name": "웨이스트매니지먼트",
+      "exposure": {
+        "ticker": "WM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.4173140954494947,
+        "return_3d": -0.9887442065769192,
+        "return_7d": -5.7124842370744,
+        "return_15d": -3.6469072164948546,
+        "return_1m": -5.438219299355007,
+        "return_ytd": 2.7060439560439464,
+        "return_1y": -2.7023510019953068,
+        "return_2y": 10.682917201223718,
+        "return_3y": 36.94975273215704,
+        "close": 224.31,
+        "marketCap": 89660112923,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2009",
+      "type": "ASSET",
+      "name": "리퍼블릭서비스",
+      "exposure": {
+        "ticker": "RSG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.3081960897621028,
+        "return_3d": -1.6765613868439777,
+        "return_7d": -4.555094513600732,
+        "return_15d": -4.748320603662459,
+        "return_1m": -6.940573586262699,
+        "return_ytd": -1.5128449096098895,
+        "return_1y": -10.655560830348277,
+        "return_2y": 6.535611362700711,
+        "return_3y": 36.9995367612997,
+        "close": 207.02,
+        "marketCap": 63692601280,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2010",
+      "type": "ASSET",
+      "name": "GFL환경",
+      "exposure": {
+        "ticker": "GFL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.0684736091298284,
+        "return_3d": -0.3146176185866434,
+        "return_7d": 5.642472428827894,
+        "return_15d": 5.832476875642323,
+        "return_1m": -0.7708985786557432,
+        "return_ytd": -3.941231343283591,
+        "return_1y": -18.43564356435644,
+        "return_2y": 6.1051004636785144,
+        "return_3y": 20.650263620386646,
+        "close": 41.19,
+        "marketCap": 14378496541,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2011",
+      "type": "ASSET",
+      "name": "베올리아",
+      "exposure": {
+        "ticker": "VEOEY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.8366141732283339,
+        "return_3d": 2.5012506253126565,
+        "return_7d": -0.29197080291971655,
+        "return_15d": -4.564508616674434,
+        "return_1m": -2.9369966840360084,
+        "return_ytd": 16.156462585034003,
+        "return_1y": 19.336051252184028,
+        "return_2y": 30.095238095238088,
+        "return_3y": 25.39779681762544,
+        "close": 20.47,
+        "marketCap": 29976798316,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2012",
+      "type": "ASSET",
+      "name": "카셀라웨이스트",
+      "exposure": {
+        "ticker": "CWST",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.595628415300543,
+        "return_3d": 0.36785196745068305,
+        "return_7d": 0.8286674132139016,
+        "return_15d": -6.510227390717471,
+        "return_1m": -9.059690940309062,
+        "return_ytd": -8.72782564622402,
+        "return_1y": -12.190364735712889,
+        "return_2y": -13.05523368095789,
+        "return_3y": 11.587557318131125,
+        "close": 90.04,
+        "marketCap": 5638457868,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_332",
+      "type": "CHARACTER",
+      "name": "폐기물처리메가"
+    },
+    {
+      "id": "C_334",
+      "type": "CHARACTER",
+      "name": "미국폐기물1위_배당챔피언"
+    },
+    {
+      "id": "C_335",
+      "type": "CHARACTER",
+      "name": "미국폐기물2위_안정성장"
+    },
+    {
+      "id": "C_336",
+      "type": "CHARACTER",
+      "name": "M&A성장모델"
+    },
+    {
+      "id": "C_337",
+      "type": "CHARACTER",
+      "name": "글로벌수자원통합"
+    },
+    {
+      "id": "C_338",
+      "type": "CHARACTER",
+      "name": "동부지역특화소형"
+    },
+    {
+      "id": "M_411",
+      "type": "MACRO",
+      "name": "ESG의무화_폐기물순환경제"
+    },
+    {
+      "id": "M_177",
+      "type": "MACRO",
+      "name": "탄소중립"
+    },
+    {
+      "id": "M_346",
+      "type": "MACRO",
+      "name": "미국소비강세"
+    },
+    {
+      "id": "A_2920",
+      "type": "ASSET",
+      "name": "VanEck Environmental Services ETF",
+      "exposure": {
+        "ticker": "EVX",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.5539499036608997,
+        "return_3d": 2.0261922411662914,
+        "return_7d": 1.1513963743263078,
+        "return_15d": 0.1698204754973398,
+        "return_1m": -0.9357005758157455,
+        "return_ytd": 7.246753246753235,
+        "return_1y": 7.052113041223751,
+        "return_2y": 17.06833002551742,
+        "return_3y": 27.595797280593317,
+        "close": 41.29,
+        "marketCap": 103350935,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "글로벌 폐기물·환경 메이저 — Waste Management (US 1위)·Republic Services·GFL Environmental (캐나다)·Veolia (프랑스)·Casella. 안정적 cash flow + 가격 인상 + recycling·재활용 + landfill 가스 등 부산물 수익.",
-  "notes": "T_361 신규",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 9건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2008",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010940"
+      ]
+    },
+    {
+      "from": "A_2009",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010941"
+      ]
+    },
+    {
+      "from": "A_2010",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010942"
+      ]
+    },
+    {
+      "from": "A_2011",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010943"
+      ]
+    },
+    {
+      "from": "A_2012",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010944"
+      ]
+    },
+    {
+      "from": "T_361",
+      "to": "C_332",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016202"
+      ]
+    },
+    {
+      "from": "A_2008",
+      "to": "C_334",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016203"
+      ]
+    },
+    {
+      "from": "A_2009",
+      "to": "C_335",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016204"
+      ]
+    },
+    {
+      "from": "A_2010",
+      "to": "C_336",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016205"
+      ]
+    },
+    {
+      "from": "A_2011",
+      "to": "C_337",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016206"
+      ]
+    },
+    {
+      "from": "A_2012",
+      "to": "C_338",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016207"
+      ]
+    },
+    {
+      "from": "M_411",
+      "to": "T_361",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010945"
+      ]
+    },
+    {
+      "from": "M_177",
+      "to": "T_361",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010946"
+      ]
+    },
+    {
+      "from": "M_346",
+      "to": "T_361",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010947"
+      ]
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2009",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018135"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨이스트매니지먼트와 리퍼블릭서비스는 미국 고형폐기물 수거·매립 시장 1·2위로 전국에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2010",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018136"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨이스트매니지먼트는 북미 폐기물 수거·매립에서 급성장한 GFL환경과 미국·캐나다 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2012",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018137"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨이스트매니지먼트는 미국 북동부에서 지역 사업자 카셀라웨이스트와 수거·매립 서비스로 경쟁한다."
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2011",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018138"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베올리아 북미의 주요 경쟁사로 웨이스트매니지먼트가 꼽히며 위험폐기물·산업폐기물 처리에서 맞붙는다."
+    },
+    {
+      "from": "A_2009",
+      "to": "A_2010",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018139"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리퍼블릭서비스와 GFL환경은 북미 상업·산업 폐기물 수거 및 매립 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2009",
+      "to": "A_2012",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018140"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리퍼블릭서비스는 미국 북동부 폐기물 수거 시장에서 카셀라웨이스트와 경쟁한다."
+    },
+    {
+      "from": "A_2009",
+      "to": "A_2011",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018141"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베올리아 북미의 핵심 경쟁사로 리퍼블릭서비스가 지목되며 환경서비스 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_2010",
+      "to": "A_2012",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018142"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GFL환경과 카셀라웨이스트는 모두 미국 북동부에서 폐기물 수거·재활용 사업을 운영하며 경쟁한다."
+    },
+    {
+      "from": "A_2010",
+      "to": "A_2011",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018143"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GFL환경과 베올리아는 세계 10대 환경서비스 기업으로 북미 폐기물·환경 처리에서 경쟁한다."
+    },
+    {
+      "from": "A_2920",
+      "to": "T_361",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020732"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2008",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010940"
+      ]
+    },
+    {
+      "from": "A_2009",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010941"
+      ]
+    },
+    {
+      "from": "A_2010",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010942"
+      ]
+    },
+    {
+      "from": "A_2011",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010943"
+      ]
+    },
+    {
+      "from": "A_2012",
+      "to": "T_361",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010944"
+      ]
+    },
+    {
+      "from": "T_361",
+      "to": "C_332",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016202"
+      ]
+    },
+    {
+      "from": "A_2008",
+      "to": "C_334",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016203"
+      ]
+    },
+    {
+      "from": "A_2009",
+      "to": "C_335",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016204"
+      ]
+    },
+    {
+      "from": "A_2010",
+      "to": "C_336",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016205"
+      ]
+    },
+    {
+      "from": "A_2011",
+      "to": "C_337",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016206"
+      ]
+    },
+    {
+      "from": "A_2012",
+      "to": "C_338",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016207"
+      ]
+    },
+    {
+      "from": "M_411",
+      "to": "T_361",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010945"
+      ]
+    },
+    {
+      "from": "M_177",
+      "to": "T_361",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010946"
+      ]
+    },
+    {
+      "from": "M_346",
+      "to": "T_361",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010947"
+      ]
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2009",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018135"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨이스트매니지먼트와 리퍼블릭서비스는 미국 고형폐기물 수거·매립 시장 1·2위로 전국에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2010",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018136"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨이스트매니지먼트는 북미 폐기물 수거·매립에서 급성장한 GFL환경과 미국·캐나다 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2012",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018137"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "웨이스트매니지먼트는 미국 북동부에서 지역 사업자 카셀라웨이스트와 수거·매립 서비스로 경쟁한다."
+    },
+    {
+      "from": "A_2008",
+      "to": "A_2011",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018138"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베올리아 북미의 주요 경쟁사로 웨이스트매니지먼트가 꼽히며 위험폐기물·산업폐기물 처리에서 맞붙는다."
+    },
+    {
+      "from": "A_2009",
+      "to": "A_2010",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018139"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리퍼블릭서비스와 GFL환경은 북미 상업·산업 폐기물 수거 및 매립 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_2009",
+      "to": "A_2012",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018140"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리퍼블릭서비스는 미국 북동부 폐기물 수거 시장에서 카셀라웨이스트와 경쟁한다."
+    },
+    {
+      "from": "A_2009",
+      "to": "A_2011",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018141"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베올리아 북미의 핵심 경쟁사로 리퍼블릭서비스가 지목되며 환경서비스 사업에서 경쟁한다."
+    },
+    {
+      "from": "A_2010",
+      "to": "A_2012",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018142"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GFL환경과 카셀라웨이스트는 모두 미국 북동부에서 폐기물 수거·재활용 사업을 운영하며 경쟁한다."
+    },
+    {
+      "from": "A_2010",
+      "to": "A_2011",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018143"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "GFL환경과 베올리아는 세계 10대 환경서비스 기업으로 북미 폐기물·환경 처리에서 경쟁한다."
+    },
+    {
+      "from": "A_2920",
+      "to": "T_361",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020732"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_361",
-   "type": "THEME",
-   "name": "글로벌폐기물환경메이저"
-  },
-  {
-   "id": "A_2008",
-   "type": "ASSET",
-   "name": "웨이스트매니지먼트",
-   "exposure": {
-    "ticker": "WM",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5211323587863803,
-    "return_3d": -0.47717933990192307,
-    "return_7d": -5.6544502617801085,
-    "return_15d": -3.850258249028904,
-    "return_1m": -1.6289632282295408,
-    "return_ytd": 3.1364468864468753,
-    "return_1y": -1.5859839217056915,
-    "return_2y": 12.00895077076083,
-    "return_3y": 38.241070332637776,
-    "close": 225.25,
-    "marketCap": 90035845196,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2009",
-   "type": "ASSET",
-   "name": "리퍼블릭서비스",
-   "exposure": {
-    "ticker": "RSG",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.9350252838469686,
-    "return_3d": -1.7366204514266848,
-    "return_7d": -4.264441473422154,
-    "return_15d": -5.621960641730672,
-    "return_1m": -3.224904464535383,
-    "return_ytd": -1.208372978116079,
-    "return_1y": -10.185545607888935,
-    "return_2y": 7.953836556456628,
-    "return_3y": 37.06930693069306,
-    "close": 207.66,
-    "marketCap": 63889506240,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2010",
-   "type": "ASSET",
-   "name": "GFL환경",
-   "exposure": {
-    "ticker": "GFL",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.14285714285715567,
-    "return_3d": 1.6678752719361922,
-    "return_7d": 5.997983870967749,
-    "return_15d": 8.794619762027956,
-    "return_1m": 3.8775006174364135,
-    "return_ytd": -1.9123134328358216,
-    "return_1y": -15.508236239453588,
-    "return_2y": 9.788566953797972,
-    "return_3y": 22.16090618646529,
-    "close": 42.06,
-    "marketCap": 14682193846,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2011",
-   "type": "ASSET",
-   "name": "베올리아",
-   "exposure": {
-    "ticker": "VEOEY",
-    "exchange": "OTC",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.62758969176351,
-    "return_3d": -2.5899280575539696,
-    "return_7d": -2.3557692307692446,
-    "return_15d": -4.603100046970409,
-    "return_1m": -4.423529411764715,
-    "return_ytd": 15.136054421768685,
-    "return_1y": 19.89374262101533,
-    "return_2y": 28.952380952380953,
-    "return_3y": 23.841463414634156,
-    "close": 20.31,
-    "marketCap": 29742490171,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2012",
-   "type": "ASSET",
-   "name": "카셀라웨이스트",
-   "exposure": {
-    "ticker": "CWST",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5326665941950193,
-    "return_3d": 2.2346368715083775,
-    "return_7d": 2.3604430025729872,
-    "return_15d": -5.142027783537206,
-    "return_1m": -4.9548145839825475,
-    "return_ytd": -7.247845919918916,
-    "return_1y": -11.147795688483209,
-    "return_2y": -10.853468433359314,
-    "return_3y": 14.2892830377217,
-    "close": 91.5,
-    "marketCap": 5729885550,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_332",
-   "type": "CHARACTER",
-   "name": "폐기물처리메가"
-  },
-  {
-   "id": "C_334",
-   "type": "CHARACTER",
-   "name": "미국폐기물1위_배당챔피언"
-  },
-  {
-   "id": "C_335",
-   "type": "CHARACTER",
-   "name": "미국폐기물2위_안정성장"
-  },
-  {
-   "id": "C_336",
-   "type": "CHARACTER",
-   "name": "M&A성장모델"
-  },
-  {
-   "id": "C_337",
-   "type": "CHARACTER",
-   "name": "글로벌수자원통합"
-  },
-  {
-   "id": "C_338",
-   "type": "CHARACTER",
-   "name": "동부지역특화소형"
-  },
-  {
-   "id": "M_411",
-   "type": "MACRO",
-   "name": "ESG의무화_폐기물순환경제"
-  },
-  {
-   "id": "M_177",
-   "type": "MACRO",
-   "name": "탄소중립"
-  },
-  {
-   "id": "M_346",
-   "type": "MACRO",
-   "name": "미국소비강세"
-  },
-  {
-   "id": "A_2920",
-   "type": "ASSET",
-   "name": "VanEck Environmental Services ETF",
-   "exposure": {
-    "ticker": "EVX",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2008",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010940"
-   ]
-  },
-  {
-   "from": "A_2009",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010941"
-   ]
-  },
-  {
-   "from": "A_2010",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010942"
-   ]
-  },
-  {
-   "from": "A_2011",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010943"
-   ]
-  },
-  {
-   "from": "A_2012",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010944"
-   ]
-  },
-  {
-   "from": "T_361",
-   "to": "C_332",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016202"
-   ]
-  },
-  {
-   "from": "A_2008",
-   "to": "C_334",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016203"
-   ]
-  },
-  {
-   "from": "A_2009",
-   "to": "C_335",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016204"
-   ]
-  },
-  {
-   "from": "A_2010",
-   "to": "C_336",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016205"
-   ]
-  },
-  {
-   "from": "A_2011",
-   "to": "C_337",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016206"
-   ]
-  },
-  {
-   "from": "A_2012",
-   "to": "C_338",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016207"
-   ]
-  },
-  {
-   "from": "M_411",
-   "to": "T_361",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010945"
-   ]
-  },
-  {
-   "from": "M_177",
-   "to": "T_361",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010946"
-   ]
-  },
-  {
-   "from": "M_346",
-   "to": "T_361",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010947"
-   ]
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2009",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018135"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨이스트매니지먼트와 리퍼블릭서비스는 미국 고형폐기물 수거·매립 시장 1·2위로 전국에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2010",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018136"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨이스트매니지먼트는 북미 폐기물 수거·매립에서 급성장한 GFL환경과 미국·캐나다 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2012",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018137"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨이스트매니지먼트는 미국 북동부에서 지역 사업자 카셀라웨이스트와 수거·매립 서비스로 경쟁한다."
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2011",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018138"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베올리아 북미의 주요 경쟁사로 웨이스트매니지먼트가 꼽히며 위험폐기물·산업폐기물 처리에서 맞붙는다."
-  },
-  {
-   "from": "A_2009",
-   "to": "A_2010",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018139"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리퍼블릭서비스와 GFL환경은 북미 상업·산업 폐기물 수거 및 매립 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2009",
-   "to": "A_2012",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018140"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리퍼블릭서비스는 미국 북동부 폐기물 수거 시장에서 카셀라웨이스트와 경쟁한다."
-  },
-  {
-   "from": "A_2009",
-   "to": "A_2011",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018141"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베올리아 북미의 핵심 경쟁사로 리퍼블릭서비스가 지목되며 환경서비스 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_2010",
-   "to": "A_2012",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018142"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GFL환경과 카셀라웨이스트는 모두 미국 북동부에서 폐기물 수거·재활용 사업을 운영하며 경쟁한다."
-  },
-  {
-   "from": "A_2010",
-   "to": "A_2011",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018143"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GFL환경과 베올리아는 세계 10대 환경서비스 기업으로 북미 폐기물·환경 처리에서 경쟁한다."
-  },
-  {
-   "from": "A_2920",
-   "to": "T_361",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020732"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2008",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010940"
-   ]
-  },
-  {
-   "from": "A_2009",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010941"
-   ]
-  },
-  {
-   "from": "A_2010",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010942"
-   ]
-  },
-  {
-   "from": "A_2011",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010943"
-   ]
-  },
-  {
-   "from": "A_2012",
-   "to": "T_361",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010944"
-   ]
-  },
-  {
-   "from": "T_361",
-   "to": "C_332",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016202"
-   ]
-  },
-  {
-   "from": "A_2008",
-   "to": "C_334",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016203"
-   ]
-  },
-  {
-   "from": "A_2009",
-   "to": "C_335",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016204"
-   ]
-  },
-  {
-   "from": "A_2010",
-   "to": "C_336",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016205"
-   ]
-  },
-  {
-   "from": "A_2011",
-   "to": "C_337",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016206"
-   ]
-  },
-  {
-   "from": "A_2012",
-   "to": "C_338",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016207"
-   ]
-  },
-  {
-   "from": "M_411",
-   "to": "T_361",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010945"
-   ]
-  },
-  {
-   "from": "M_177",
-   "to": "T_361",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010946"
-   ]
-  },
-  {
-   "from": "M_346",
-   "to": "T_361",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010947"
-   ]
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2009",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018135"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨이스트매니지먼트와 리퍼블릭서비스는 미국 고형폐기물 수거·매립 시장 1·2위로 전국에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2010",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018136"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨이스트매니지먼트는 북미 폐기물 수거·매립에서 급성장한 GFL환경과 미국·캐나다 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2012",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018137"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "웨이스트매니지먼트는 미국 북동부에서 지역 사업자 카셀라웨이스트와 수거·매립 서비스로 경쟁한다."
-  },
-  {
-   "from": "A_2008",
-   "to": "A_2011",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018138"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베올리아 북미의 주요 경쟁사로 웨이스트매니지먼트가 꼽히며 위험폐기물·산업폐기물 처리에서 맞붙는다."
-  },
-  {
-   "from": "A_2009",
-   "to": "A_2010",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018139"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리퍼블릭서비스와 GFL환경은 북미 상업·산업 폐기물 수거 및 매립 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_2009",
-   "to": "A_2012",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018140"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리퍼블릭서비스는 미국 북동부 폐기물 수거 시장에서 카셀라웨이스트와 경쟁한다."
-  },
-  {
-   "from": "A_2009",
-   "to": "A_2011",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018141"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베올리아 북미의 핵심 경쟁사로 리퍼블릭서비스가 지목되며 환경서비스 사업에서 경쟁한다."
-  },
-  {
-   "from": "A_2010",
-   "to": "A_2012",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018142"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GFL환경과 카셀라웨이스트는 모두 미국 북동부에서 폐기물 수거·재활용 사업을 운영하며 경쟁한다."
-  },
-  {
-   "from": "A_2010",
-   "to": "A_2011",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018143"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "GFL환경과 베올리아는 세계 10대 환경서비스 기업으로 북미 폐기물·환경 처리에서 경쟁한다."
-  },
-  {
-   "from": "A_2920",
-   "to": "T_361",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020732"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

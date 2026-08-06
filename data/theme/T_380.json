@@ -1,696 +1,714 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_380",
- "themeName": "스위스SMI안정거장",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_380",
+  "themeName": "스위스SMI안정거장",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "스위스 SMI 안정 거장 — Nestlé·Roche·Novartis·UBS·ABB·Zurich Insurance·Richemont. 글로벌 매출 비중 95%+ — defensive 안정 거장. 인구고령화 + AI확산 + ECB 금리. CHF 강세 시 환손실 리스크.",
+    "notes": "T_380 신규 — 유럽 batch",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 3건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_380",
+      "type": "THEME",
+      "name": "스위스SMI안정거장"
+    },
+    {
+      "id": "A_2093",
+      "type": "ASSET",
+      "name": "네슬레",
+      "exposure": {
+        "ticker": "NSRGY",
+        "exchange": "OTC",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": 0.6798640271945766,
+        "return_3d": 0.7402961184473922,
+        "return_7d": 3.197376511580252,
+        "return_15d": -3.033220991815111,
+        "return_1m": -3.9305476054187993,
+        "return_ytd": 1.6966269440517046,
+        "return_1y": 14.301929625425668,
+        "return_2y": -0.28715714427169914,
+        "return_3y": -18.063466232709523,
+        "close": 100.7,
+        "marketCap": 259022554000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1634",
+      "type": "ASSET",
+      "name": "로슈",
+      "exposure": {
+        "ticker": "RHHBY",
+        "exchange": "OTC",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": 1.786358715265246,
+        "return_3d": 3.1827327601975375,
+        "return_7d": 2.9943399671352733,
+        "return_15d": 10.218835482610377,
+        "return_1m": 8.106554235339214,
+        "return_ytd": 9.640427599611257,
+        "return_1y": 43.06365711387268,
+        "return_2y": 39.767096134786904,
+        "return_3y": 45.76227390180876,
+        "close": 56.4,
+        "marketCap": 359526901324,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_743",
+      "type": "ASSET",
+      "name": "노바티스",
+      "exposure": {
+        "ticker": "NVS",
+        "exchange": "NYSE",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": 0.7633587786259444,
+        "return_3d": -1.0951008645533222,
+        "return_7d": -1.0697585036192558,
+        "return_15d": 2.4137931034482696,
+        "return_1m": -1.6493663631153344,
+        "return_ytd": 11.476829796448683,
+        "return_1y": 31.07018586098618,
+        "return_2y": 38.536060279870824,
+        "return_3y": 55.59137618375982,
+        "close": 154.44,
+        "marketCap": 293546399890,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2043",
+      "type": "ASSET",
+      "name": "UBS그룹",
+      "exposure": {
+        "ticker": "UBS",
+        "exchange": "NYSE",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": 0.2057613168724215,
+        "return_3d": 1.573758058399699,
+        "return_7d": 1.9604111153406878,
+        "return_15d": -2.723806065008172,
+        "return_1m": 4.140746500777603,
+        "return_ytd": 13.73673036093419,
+        "return_1y": 43.427041499330656,
+        "return_2y": 77.50165672630882,
+        "return_3y": 141.63283716734324,
+        "close": 53.57,
+        "marketCap": 175592009672,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_286",
+      "type": "ASSET",
+      "name": "ABB",
+      "exposure": {
+        "ticker": "ABB",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.0802756243049263,
+        "return_3d": 0.18781862087469126,
+        "return_7d": 0.7011811919535482,
+        "return_15d": 1.9104803493449785,
+        "return_1m": null,
+        "return_ytd": 0.0,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 37.13,
+        "marketCap": 69020585106,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2094",
+      "type": "ASSET",
+      "name": "취리히보험",
+      "exposure": {
+        "ticker": "ZURVY",
+        "exchange": "OTC",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": -0.15923566878981443,
+        "return_3d": -1.000000000000012,
+        "return_7d": -1.3892529488859773,
+        "return_15d": -0.2915451895043719,
+        "return_1m": -0.8172950171368321,
+        "return_ytd": -1.130091984231274,
+        "return_1y": 7.424328954882897,
+        "return_2y": 36.849763550381965,
+        "return_3y": 55.970149253731314,
+        "close": 37.62,
+        "marketCap": 112385437996,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_336",
+      "type": "ASSET",
+      "name": "리치몬트",
+      "exposure": {
+        "ticker": "CFR",
+        "exchange": "SIX",
+        "country": "CH"
+      },
+      "metrics": {
+        "return_1d": 0.6382435537401143,
+        "return_3d": 3.247773703509682,
+        "return_7d": 1.6241299303944245,
+        "return_15d": 0.7668711656441785,
+        "return_1m": 6.425485961123112,
+        "return_ytd": 13.963573287077203,
+        "return_1y": 47.75112443778109,
+        "return_2y": 46.10822831727204,
+        "return_3y": 44.607483492296396,
+        "close": 197.1,
+        "marketCap": 115883034313,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_058",
+      "type": "MACRO",
+      "name": "인구고령화"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_359",
+      "type": "MACRO",
+      "name": "ECB금리정책"
+    },
+    {
+      "id": "C_4967",
+      "type": "CHARACTER",
+      "name": "글로벌식품1위"
+    },
+    {
+      "id": "C_4968",
+      "type": "CHARACTER",
+      "name": "진단종양제약"
+    },
+    {
+      "id": "C_4969",
+      "type": "CHARACTER",
+      "name": "글로벌제약"
+    },
+    {
+      "id": "C_4970",
+      "type": "CHARACTER",
+      "name": "스위스자산관리1위"
+    },
+    {
+      "id": "C_4971",
+      "type": "CHARACTER",
+      "name": "전력전자자동화"
+    },
+    {
+      "id": "C_4972",
+      "type": "CHARACTER",
+      "name": "글로벌손해보험"
+    },
+    {
+      "id": "C_4973",
+      "type": "CHARACTER",
+      "name": "시계보석까르띠에"
+    },
+    {
+      "id": "A_2925",
+      "type": "ASSET",
+      "name": "iShares MSCI Switzerland ETF",
+      "exposure": {
+        "ticker": "EWL",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.6745098039215858,
+        "return_3d": 1.6149461684610733,
+        "return_7d": 2.7866752081998847,
+        "return_15d": 1.3101815311760134,
+        "return_1m": 1.2143195079640678,
+        "return_ytd": 6.363937686443499,
+        "return_1y": 20.39017069968112,
+        "return_2y": 27.290757635858796,
+        "return_3y": 34.52106476629639,
+        "close": 64.18,
+        "marketCap": 1712093277,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "스위스 SMI 안정 거장 — Nestlé·Roche·Novartis·UBS·ABB·Zurich Insurance·Richemont. 글로벌 매출 비중 95%+ — defensive 안정 거장. 인구고령화 + AI확산 + ECB 금리. CHF 강세 시 환손실 리스크.",
-  "notes": "T_380 신규 — 유럽 batch",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 3건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2093",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011165"
+      ]
+    },
+    {
+      "from": "A_1634",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011166"
+      ]
+    },
+    {
+      "from": "A_743",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011167"
+      ]
+    },
+    {
+      "from": "A_2043",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011168"
+      ]
+    },
+    {
+      "from": "A_286",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011169"
+      ]
+    },
+    {
+      "from": "A_2094",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011170"
+      ]
+    },
+    {
+      "from": "A_336",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011171"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_380",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011172"
+      ]
+    },
+    {
+      "from": "M_055",
+      "to": "T_380",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011173"
+      ]
+    },
+    {
+      "from": "M_359",
+      "to": "T_380",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011174"
+      ]
+    },
+    {
+      "from": "A_2093",
+      "to": "C_4967",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011175"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1634",
+      "to": "C_4968",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011176"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_743",
+      "to": "C_4969",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011177"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2043",
+      "to": "C_4970",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011178"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_4971",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011179"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2094",
+      "to": "C_4972",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011180"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_336",
+      "to": "C_4973",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011181"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1634",
+      "to": "A_743",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019578"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "로슈와 노바티스는 스위스 제약 양대 경쟁"
+    },
+    {
+      "from": "A_2043",
+      "to": "A_2094",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019579"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "UBS그룹과 취리히보험은 스위스 금융 서비스 시장 일부 경쟁"
+    },
+    {
+      "from": "A_336",
+      "to": "A_2093",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019580"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리치몬트와 네슬레는 스위스 대표 소비재 기업 경쟁"
+    },
+    {
+      "from": "A_2925",
+      "to": "T_380",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020747"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2093",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011165"
+      ]
+    },
+    {
+      "from": "A_1634",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011166"
+      ]
+    },
+    {
+      "from": "A_743",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011167"
+      ]
+    },
+    {
+      "from": "A_2043",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011168"
+      ]
+    },
+    {
+      "from": "A_286",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011169"
+      ]
+    },
+    {
+      "from": "A_2094",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011170"
+      ]
+    },
+    {
+      "from": "A_336",
+      "to": "T_380",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011171"
+      ]
+    },
+    {
+      "from": "M_058",
+      "to": "T_380",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011172"
+      ]
+    },
+    {
+      "from": "M_055",
+      "to": "T_380",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011173"
+      ]
+    },
+    {
+      "from": "M_359",
+      "to": "T_380",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011174"
+      ]
+    },
+    {
+      "from": "A_2093",
+      "to": "C_4967",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011175"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1634",
+      "to": "C_4968",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011176"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_743",
+      "to": "C_4969",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011177"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2043",
+      "to": "C_4970",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011178"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_286",
+      "to": "C_4971",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011179"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2094",
+      "to": "C_4972",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011180"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_336",
+      "to": "C_4973",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011181"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1634",
+      "to": "A_743",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019578"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "로슈와 노바티스는 스위스 제약 양대 경쟁"
+    },
+    {
+      "from": "A_2043",
+      "to": "A_2094",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019579"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "UBS그룹과 취리히보험은 스위스 금융 서비스 시장 일부 경쟁"
+    },
+    {
+      "from": "A_336",
+      "to": "A_2093",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019580"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "리치몬트와 네슬레는 스위스 대표 소비재 기업 경쟁"
+    },
+    {
+      "from": "A_2925",
+      "to": "T_380",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020747"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_380",
-   "type": "THEME",
-   "name": "스위스SMI안정거장"
-  },
-  {
-   "id": "A_2093",
-   "type": "ASSET",
-   "name": "네슬레",
-   "exposure": {
-    "ticker": "NSRGY",
-    "exchange": "OTC",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": 0.48255755504171827,
-    "return_3d": -2.6397818040132415,
-    "return_7d": 1.5958528156129415,
-    "return_15d": -3.1679906994768414,
-    "return_1m": -3.9773273129023012,
-    "return_ytd": 0.9392042011714841,
-    "return_1y": 14.46404031149795,
-    "return_2y": -0.1797663038050512,
-    "return_3y": -18.871753246753244,
-    "close": 99.95,
-    "marketCap": 257093389000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1634",
-   "type": "ASSET",
-   "name": "로슈",
-   "exposure": {
-    "ticker": "RHHBY",
-    "exchange": "OTC",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": 0.6172839506172867,
-    "return_3d": 0.27139497014654346,
-    "return_7d": 1.3162705667276065,
-    "return_15d": 10.486443381180234,
-    "return_1m": 7.361487795428134,
-    "return_ytd": 7.7162293488824085,
-    "return_1y": 42.68795056642636,
-    "return_2y": 37.48449516249068,
-    "return_3y": 43.50077679958573,
-    "close": 55.42,
-    "marketCap": 353279802684,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_743",
-   "type": "ASSET",
-   "name": "노바티스",
-   "exposure": {
-    "ticker": "NVS",
-    "exchange": "NYSE",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": -0.2602980412572231,
-    "return_3d": -3.263064882605393,
-    "return_7d": -1.1225082252757757,
-    "return_15d": 1.9353551476456454,
-    "return_1m": -1.4277445494887075,
-    "return_ytd": 10.63230835859681,
-    "return_1y": 32.93148308759759,
-    "return_2y": 36.93379790940767,
-    "return_3y": 55.47778454047476,
-    "close": 153.27,
-    "marketCap": 291322563527,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2043",
-   "type": "ASSET",
-   "name": "UBS그룹",
-   "exposure": {
-    "ticker": "UBS",
-    "exchange": "NYSE",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": 1.345971563981041,
-    "return_3d": 0.13111069488669358,
-    "return_7d": 3.3243138770777003,
-    "return_15d": -0.6688963210702337,
-    "return_1m": 2.5119846596356687,
-    "return_ytd": 13.503184713375793,
-    "return_1y": 45.786746659394595,
-    "return_2y": 78.1406197934022,
-    "return_3y": 140.16172506738545,
-    "close": 53.46,
-    "marketCap": 175231464067,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_286",
-   "type": "ASSET",
-   "name": "ABB",
-   "exposure": {
-    "ticker": "ABB",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.0802756243049263,
-    "return_3d": 0.18781862087469126,
-    "return_7d": 0.7011811919535482,
-    "return_15d": 1.9104803493449785,
-    "return_1m": null,
-    "return_ytd": 0.0,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": 37.13,
-    "marketCap": 69020585106,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2094",
-   "type": "ASSET",
-   "name": "취리히보험",
-   "exposure": {
-    "ticker": "ZURVY",
-    "exchange": "OTC",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": -0.6852925672113819,
-    "return_3d": -1.5673981191222652,
-    "return_7d": -1.3095861707700385,
-    "return_15d": -0.5804749340369342,
-    "return_1m": -0.99842354177615,
-    "return_ytd": -0.9724047306176042,
-    "return_1y": 9.69432314410479,
-    "return_2y": 37.618699780861945,
-    "return_3y": 53.67047308319739,
-    "close": 37.68,
-    "marketCap": 112564681118,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_336",
-   "type": "ASSET",
-   "name": "리치몬트",
-   "exposure": {
-    "ticker": "CFR",
-    "exchange": "SIX",
-    "country": "CH"
-   },
-   "metrics": {
-    "return_1d": 0.7458847736625529,
-    "return_3d": 2.4052287581699305,
-    "return_7d": 1.4504014504014506,
-    "return_15d": 6.817562039814562,
-    "return_1m": 7.080371787862205,
-    "return_ytd": 13.240821046545248,
-    "return_1y": 42.956204379562045,
-    "return_2y": 49.27591463414635,
-    "return_3y": 41.56125767979761,
-    "close": 195.85,
-    "marketCap": 115148108930,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_058",
-   "type": "MACRO",
-   "name": "인구고령화"
-  },
-  {
-   "id": "M_055",
-   "type": "MACRO",
-   "name": "AI확산"
-  },
-  {
-   "id": "M_359",
-   "type": "MACRO",
-   "name": "ECB금리정책"
-  },
-  {
-   "id": "C_4967",
-   "type": "CHARACTER",
-   "name": "글로벌식품1위"
-  },
-  {
-   "id": "C_4968",
-   "type": "CHARACTER",
-   "name": "진단종양제약"
-  },
-  {
-   "id": "C_4969",
-   "type": "CHARACTER",
-   "name": "글로벌제약"
-  },
-  {
-   "id": "C_4970",
-   "type": "CHARACTER",
-   "name": "스위스자산관리1위"
-  },
-  {
-   "id": "C_4971",
-   "type": "CHARACTER",
-   "name": "전력전자자동화"
-  },
-  {
-   "id": "C_4972",
-   "type": "CHARACTER",
-   "name": "글로벌손해보험"
-  },
-  {
-   "id": "C_4973",
-   "type": "CHARACTER",
-   "name": "시계보석까르띠에"
-  },
-  {
-   "id": "A_2925",
-   "type": "ASSET",
-   "name": "iShares MSCI Switzerland ETF",
-   "exposure": {
-    "ticker": "EWL",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2093",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011165"
-   ]
-  },
-  {
-   "from": "A_1634",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011166"
-   ]
-  },
-  {
-   "from": "A_743",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011167"
-   ]
-  },
-  {
-   "from": "A_2043",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011168"
-   ]
-  },
-  {
-   "from": "A_286",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011169"
-   ]
-  },
-  {
-   "from": "A_2094",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011170"
-   ]
-  },
-  {
-   "from": "A_336",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011171"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_380",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011172"
-   ]
-  },
-  {
-   "from": "M_055",
-   "to": "T_380",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011173"
-   ]
-  },
-  {
-   "from": "M_359",
-   "to": "T_380",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011174"
-   ]
-  },
-  {
-   "from": "A_2093",
-   "to": "C_4967",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011175"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1634",
-   "to": "C_4968",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011176"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_743",
-   "to": "C_4969",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011177"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2043",
-   "to": "C_4970",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011178"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "C_4971",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011179"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2094",
-   "to": "C_4972",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011180"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_336",
-   "to": "C_4973",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011181"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1634",
-   "to": "A_743",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019578"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "로슈와 노바티스는 스위스 제약 양대 경쟁"
-  },
-  {
-   "from": "A_2043",
-   "to": "A_2094",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019579"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "UBS그룹과 취리히보험은 스위스 금융 서비스 시장 일부 경쟁"
-  },
-  {
-   "from": "A_336",
-   "to": "A_2093",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019580"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리치몬트와 네슬레는 스위스 대표 소비재 기업 경쟁"
-  },
-  {
-   "from": "A_2925",
-   "to": "T_380",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020747"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2093",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011165"
-   ]
-  },
-  {
-   "from": "A_1634",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011166"
-   ]
-  },
-  {
-   "from": "A_743",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011167"
-   ]
-  },
-  {
-   "from": "A_2043",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011168"
-   ]
-  },
-  {
-   "from": "A_286",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011169"
-   ]
-  },
-  {
-   "from": "A_2094",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011170"
-   ]
-  },
-  {
-   "from": "A_336",
-   "to": "T_380",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011171"
-   ]
-  },
-  {
-   "from": "M_058",
-   "to": "T_380",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011172"
-   ]
-  },
-  {
-   "from": "M_055",
-   "to": "T_380",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011173"
-   ]
-  },
-  {
-   "from": "M_359",
-   "to": "T_380",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011174"
-   ]
-  },
-  {
-   "from": "A_2093",
-   "to": "C_4967",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011175"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1634",
-   "to": "C_4968",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011176"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_743",
-   "to": "C_4969",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011177"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2043",
-   "to": "C_4970",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011178"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_286",
-   "to": "C_4971",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011179"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2094",
-   "to": "C_4972",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011180"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_336",
-   "to": "C_4973",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011181"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1634",
-   "to": "A_743",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019578"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "로슈와 노바티스는 스위스 제약 양대 경쟁"
-  },
-  {
-   "from": "A_2043",
-   "to": "A_2094",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019579"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "UBS그룹과 취리히보험은 스위스 금융 서비스 시장 일부 경쟁"
-  },
-  {
-   "from": "A_336",
-   "to": "A_2093",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019580"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "리치몬트와 네슬레는 스위스 대표 소비재 기업 경쟁"
-  },
-  {
-   "from": "A_2925",
-   "to": "T_380",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020747"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

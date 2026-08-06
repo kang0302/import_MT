@@ -1,872 +1,872 @@
 {
- "schemaVersion": 5,
- "themeId": "T_691",
- "themeName": "전력요금 인플레 수혜주",
- "meta": {
-  "periodDefault": "7d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": 5,
+  "themeId": "T_691",
+  "themeName": "전력요금 인플레 수혜주",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-29T00:00:00+09:00",
+    "description": "AI 데이터센터 급전 수요가 소매 전기요금을 밀어올리는 구조 — 요금기반(rate base) 성장 규제 유틸리티 수혜. 써던·듀크·PSEG·NextEra 등 미국 규제 전력 유틸.",
+    "notes": "AI 데이터센터 급전 수요가 소매 전기요금을 밀어올리는 구조 — 요금기반(rate base) 성장 규제 유틸리티 수혜. 써던·듀크·PSEG·NextEra 등 미국 규제 전력 유틸.",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-29",
+        "kind": "신규",
+        "title": "테마 생성",
+        "detail": "AI 전력·물 병목 수혜주·매크로·이벤트·연도 타임라인 포함."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_691",
+      "type": "THEME",
+      "name": "전력요금 인플레 수혜주"
+    },
+    {
+      "id": "A_1064",
+      "type": "ASSET",
+      "name": "써던컴퍼니",
+      "exposure": {
+        "ticker": "SO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.16085790884718953,
+        "close": 93.1,
+        "marketCap": 107098516000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.5231647979691232,
+        "return_7d": -3.5033167495854167,
+        "return_15d": -1.5856236786469302,
+        "return_1m": -4.306711892280823,
+        "return_ytd": 6.790548290892384,
+        "return_1y": -3.0208333333333393,
+        "return_2y": 11.470306513409966,
+        "return_3y": 28.697815869505106,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5767",
+      "type": "CHARACTER",
+      "name": "남동부규제유틸_요금기반성장"
+    },
+    {
+      "id": "A_1063",
+      "type": "ASSET",
+      "name": "듀크에너지",
+      "exposure": {
+        "ticker": "DUK",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.748370483624361,
+        "close": 123.34,
+        "marketCap": 96155370640,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.6662680379494588,
+        "return_7d": -4.261429791197713,
+        "return_15d": -0.8042464211034273,
+        "return_1m": -3.805958508812979,
+        "return_ytd": 5.02384196185286,
+        "return_1y": -0.6684384311830494,
+        "return_2y": 12.876361306854589,
+        "return_3y": 31.745353556932287,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5768",
+      "type": "CHARACTER",
+      "name": "규제유틸_전력인프라"
+    },
+    {
+      "id": "A_1346",
+      "type": "ASSET",
+      "name": "PSEG",
+      "exposure": {
+        "ticker": "PEG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.9571259997377624,
+        "close": 75.54,
+        "marketCap": 37643198707,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.4866979655712043,
+        "return_7d": -4.633253377098834,
+        "return_15d": -5.4331497245868725,
+        "return_1m": -7.641520968333538,
+        "return_ytd": -6.729225830349417,
+        "return_1y": -16.197026847126683,
+        "return_2y": -5.302745393004882,
+        "return_3y": 19.676806083650213,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5769",
+      "type": "CHARACTER",
+      "name": "전력유틸_원전"
+    },
+    {
+      "id": "A_1062",
+      "type": "ASSET",
+      "name": "NextEra Energy",
+      "exposure": {
+        "ticker": "NEE",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.4793577981651485,
+        "close": 85.91,
+        "marketCap": 179206386647,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.1619880349746925,
+        "return_7d": -3.28717775526286,
+        "return_15d": -3.580246913580243,
+        "return_1m": -2.8936362608793953,
+        "return_ytd": 6.153465958235493,
+        "return_1y": 21.806323550262285,
+        "return_2y": 12.462364183793696,
+        "return_3y": 17.203274215552522,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5770",
+      "type": "CHARACTER",
+      "name": "규제유틸+재생1위"
+    },
+    {
+      "id": "A_561",
+      "type": "ASSET",
+      "name": "도미니언에너지",
+      "exposure": {
+        "ticker": "D",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.3724357122219089,
+        "close": 68.27,
+        "marketCap": 60045236538,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.3011421136330914,
+        "return_7d": -2.846164792941508,
+        "return_15d": -3.8044244046780418,
+        "return_1m": -2.2339968494916262,
+        "return_ytd": 15.243079000675209,
+        "return_1y": 11.68002617372812,
+        "return_2y": 27.702955480733248,
+        "return_3y": 27.488328664799244,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5771",
+      "type": "CHARACTER",
+      "name": "동부규제유틸_해상풍력"
+    },
+    {
+      "id": "A_1065",
+      "type": "ASSET",
+      "name": "아메리칸일렉트릭파워",
+      "exposure": {
+        "ticker": "AEP",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.4647448383326767,
+        "close": 126.47,
+        "marketCap": 68849888590,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.079389910050832,
+        "return_7d": -5.329740250018721,
+        "return_15d": -4.5509433962264145,
+        "return_1m": -8.041881771249916,
+        "return_ytd": 9.204731888437955,
+        "return_1y": 9.973913043478255,
+        "return_2y": 28.89319200978393,
+        "return_3y": 49.24474864290773,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5772",
+      "type": "CHARACTER",
+      "name": "송배전규제유틸"
+    },
+    {
+      "id": "A_2738",
+      "type": "ASSET",
+      "name": "엑셀에너지",
+      "exposure": {
+        "ticker": "XEL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.7073954983922826,
+        "close": 77.2,
+        "marketCap": 48221744800,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.2787723785166238,
+        "return_7d": -4.348903481600786,
+        "return_15d": -2.5867507886435326,
+        "return_1m": -4.3014751456551314,
+        "return_ytd": 3.374397429030518,
+        "return_1y": 3.9870689655172598,
+        "return_2y": 32.46396705559369,
+        "return_3y": 23.06711302407143,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5773",
+      "type": "CHARACTER",
+      "name": "규제유틸_재생전환"
+    },
+    {
+      "id": "A_1988",
+      "type": "ASSET",
+      "name": "에디슨인터내셔널",
+      "exposure": {
+        "ticker": "EIX",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.352666572358187,
+        "return_3d": -6.882922175276018,
+        "return_7d": -13.123092573753825,
+        "return_15d": -10.902451747522191,
+        "return_1m": -9.79667282809612,
+        "return_ytd": 12.128672246840623,
+        "return_1y": 23.723288663527708,
+        "return_2y": -14.610673665791785,
+        "return_3y": -5.058365758754868,
+        "close": 68.32,
+        "marketCap": 26289126080,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5774",
+      "type": "CHARACTER",
+      "name": "캘리포니아규제유틸"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "M_339",
+      "type": "MACRO",
+      "name": "전력요금인상"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "A_637",
+      "type": "ASSET",
+      "name": "XLU",
+      "exposure": {
+        "ticker": "XLU",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Utilities Select Sector SPDR. 넥스트에라·서던·듀크·콘스텔레이션 등 전력·유틸, AI 데이터센터 전력수요와 금리(할인율)에 민감."
+      },
+      "metrics": {
+        "return_1d": -1.0201768306506542,
+        "close": 43.66,
+        "marketCap": 22600342628,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.555806087936873,
+        "return_7d": -4.42206654991244,
+        "return_15d": -3.449800973020789,
+        "return_1m": -4.463894967177251,
+        "return_ytd": 1.111625752663259,
+        "return_1y": 0.0,
+        "return_2y": 19.94505494505494,
+        "return_3y": 30.21175067104085,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-29T00:00:00+09:00",
-  "description": "AI 데이터센터 급전 수요가 소매 전기요금을 밀어올리는 구조 — 요금기반(rate base) 성장 규제 유틸리티 수혜. 써던·듀크·PSEG·NextEra 등 미국 규제 전력 유틸.",
-  "notes": "AI 데이터센터 급전 수요가 소매 전기요금을 밀어올리는 구조 — 요금기반(rate base) 성장 규제 유틸리티 수혜. 써던·듀크·PSEG·NextEra 등 미국 규제 전력 유틸.",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-29",
-    "kind": "신규",
-    "title": "테마 생성",
-    "detail": "AI 전력·물 병목 수혜주·매크로·이벤트·연도 타임라인 포함."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1064",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014906"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1064",
+      "to": "C_5767",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014907"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1063",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014908"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1063",
+      "to": "C_5768",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014909"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1346",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014910"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1346",
+      "to": "C_5769",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014911"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1062",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014912"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1062",
+      "to": "C_5770",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014913"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014914"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "C_5771",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014915"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1065",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014916"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1065",
+      "to": "C_5772",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014917"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2738",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014918"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2738",
+      "to": "C_5773",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014919"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1988",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014920"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1988",
+      "to": "C_5774",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014921"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_035",
+      "to": "T_691",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014922"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_339",
+      "to": "T_691",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014923"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_691",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014924"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1064",
+      "to": "A_1063",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020462"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "써던컴퍼니와 듀크에너지는 미국 남동부 전력 유틸리티 경쟁"
+    },
+    {
+      "from": "A_1062",
+      "to": "A_1065",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020463"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NextEra Energy와 아메리칸일렉트릭파워는 미국 전력 유틸리티 경쟁"
+    },
+    {
+      "from": "A_1346",
+      "to": "A_561",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020464"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "PSEG와 도미니언에너지는 미국 동부 전력 시장 경쟁"
+    },
+    {
+      "from": "A_1988",
+      "to": "A_2738",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020465"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에디슨인터내셔널과 엑셀에너지는 미국 서부·중부 전력 유틸리티 경쟁"
+    },
+    {
+      "from": "A_1062",
+      "to": "A_1064",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020466"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NextEra Energy와 써던컴퍼니는 재생에너지·원전 발전 시장 경쟁"
+    },
+    {
+      "from": "A_637",
+      "to": "T_691",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020972"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1064",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014906"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1064",
+      "to": "C_5767",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014907"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1063",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014908"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1063",
+      "to": "C_5768",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014909"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1346",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014910"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1346",
+      "to": "C_5769",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014911"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1062",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014912"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1062",
+      "to": "C_5770",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014913"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014914"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "C_5771",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014915"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1065",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014916"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1065",
+      "to": "C_5772",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014917"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2738",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014918"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2738",
+      "to": "C_5773",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014919"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1988",
+      "to": "T_691",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_014920"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1988",
+      "to": "C_5774",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014921"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_035",
+      "to": "T_691",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014922"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_339",
+      "to": "T_691",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014923"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_691",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_014924"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_1064",
+      "to": "A_1063",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020462"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "써던컴퍼니와 듀크에너지는 미국 남동부 전력 유틸리티 경쟁"
+    },
+    {
+      "from": "A_1062",
+      "to": "A_1065",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020463"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NextEra Energy와 아메리칸일렉트릭파워는 미국 전력 유틸리티 경쟁"
+    },
+    {
+      "from": "A_1346",
+      "to": "A_561",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020464"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "PSEG와 도미니언에너지는 미국 동부 전력 시장 경쟁"
+    },
+    {
+      "from": "A_1988",
+      "to": "A_2738",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020465"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에디슨인터내셔널과 엑셀에너지는 미국 서부·중부 전력 유틸리티 경쟁"
+    },
+    {
+      "from": "A_1062",
+      "to": "A_1064",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020466"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "NextEra Energy와 써던컴퍼니는 재생에너지·원전 발전 시장 경쟁"
+    },
+    {
+      "from": "A_637",
+      "to": "T_691",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020972"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_691",
-   "type": "THEME",
-   "name": "전력요금 인플레 수혜주"
-  },
-  {
-   "id": "A_1064",
-   "type": "ASSET",
-   "name": "써던컴퍼니",
-   "exposure": {
-    "ticker": "SO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.3335485259307047,
-    "close": 93.25,
-    "marketCap": 107271070000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.155395378418489,
-    "return_7d": -4.113110539845755,
-    "return_15d": -2.824093372238423,
-    "return_1m": -2.8544640066673566,
-    "return_ytd": 6.962606102317026,
-    "return_1y": -1.8317717654489862,
-    "return_2y": 11.837371072199577,
-    "return_3y": 28.88735314443678,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5767",
-   "type": "CHARACTER",
-   "name": "남동부규제유틸_요금기반성장"
-  },
-  {
-   "id": "A_1063",
-   "type": "ASSET",
-   "name": "듀크에너지",
-   "exposure": {
-    "ticker": "DUK",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.008046346958490158,
-    "close": 124.27,
-    "marketCap": 96880421887,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.5839074998020064,
-    "return_7d": -4.788538155072031,
-    "return_15d": -1.661786816491262,
-    "return_1m": -1.3495276653171406,
-    "return_ytd": 5.815735694822877,
-    "return_1y": 1.1065006915629283,
-    "return_2y": 13.075523202911722,
-    "return_3y": 33.13691879151488,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5768",
-   "type": "CHARACTER",
-   "name": "규제유틸_전력인프라"
-  },
-  {
-   "id": "A_1346",
-   "type": "ASSET",
-   "name": "PSEG",
-   "exposure": {
-    "ticker": "PEG",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.45679979117725367,
-    "close": 76.27,
-    "marketCap": 38006973331,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.6505480335267553,
-    "return_7d": -4.435534394186202,
-    "return_15d": -5.254658385093169,
-    "return_1m": -5.594751825721023,
-    "return_ytd": -5.82787998518336,
-    "return_1y": -14.274474541980442,
-    "return_2y": -2.2179487179487256,
-    "return_3y": 20.71858182969293,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5769",
-   "type": "CHARACTER",
-   "name": "전력유틸_원전"
-  },
-  {
-   "id": "A_1062",
-   "type": "ASSET",
-   "name": "NextEra Energy",
-   "exposure": {
-    "ticker": "NEE",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.7510109763142703,
-    "close": 87.2,
-    "marketCap": 181897298517,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.8302058455589734,
-    "return_7d": -2.873691245266208,
-    "return_15d": -2.6133571588117133,
-    "return_1m": -0.2744739249771255,
-    "return_ytd": 7.747436055850732,
-    "return_1y": 23.863636363636353,
-    "return_2y": 17.39364566505115,
-    "return_3y": 19.698009608785185,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5770",
-   "type": "CHARACTER",
-   "name": "규제유틸+재생1위"
-  },
-  {
-   "id": "A_561",
-   "type": "ASSET",
-   "name": "도미니언에너지",
-   "exposure": {
-    "ticker": "D",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.6836363636363529,
-    "close": 69.23,
-    "marketCap": 60889581449,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.7313925139825095,
-    "return_7d": -2.6441631504922625,
-    "return_15d": -2.9172510518934103,
-    "return_1m": -0.05775339301185012,
-    "return_ytd": 16.84672518568535,
-    "return_1y": 14.583678198973683,
-    "return_2y": 30.088329261417023,
-    "return_3y": 29.383177570093455,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5771",
-   "type": "CHARACTER",
-   "name": "동부규제유틸_해상풍력"
-  },
-  {
-   "id": "A_1065",
-   "type": "ASSET",
-   "name": "아메리칸일렉트릭파워",
-   "exposure": {
-    "ticker": "AEP",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.023379052369087994,
-    "close": 128.35,
-    "marketCap": 69873354950,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.4460791986226287,
-    "return_7d": -5.304707097535777,
-    "return_15d": -4.883651993478589,
-    "return_1m": -5.61111928224739,
-    "return_ytd": 10.828080476642764,
-    "return_1y": 13.004050008804358,
-    "return_2y": 30.78255553291216,
-    "return_3y": 50.257550924841944,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5772",
-   "type": "CHARACTER",
-   "name": "송배전규제유틸"
-  },
-  {
-   "id": "A_2738",
-   "type": "ASSET",
-   "name": "엑셀에너지",
-   "exposure": {
-    "ticker": "XEL",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.07723001673316521,
-    "close": 77.75,
-    "marketCap": 48565293500,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.6135753547232614,
-    "return_7d": -4.799804089629001,
-    "return_15d": -3.0185855058001754,
-    "return_1m": -3.2599228567873673,
-    "return_ytd": 4.110873058382425,
-    "return_1y": 5.8255070096637995,
-    "return_2y": 32.61129114787651,
-    "return_3y": 23.62855779933217,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5773",
-   "type": "CHARACTER",
-   "name": "규제유틸_재생전환"
-  },
-  {
-   "id": "A_1988",
-   "type": "ASSET",
-   "name": "에디슨인터내셔널",
-   "exposure": {
-    "ticker": "EIX",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.07752588860901,
-    "return_3d": -10.21211736313985,
-    "return_7d": -11.360501567398117,
-    "return_15d": -7.691303212326983,
-    "return_1m": -5.545163014430798,
-    "return_ytd": 16.01838174954866,
-    "return_1y": 33.05100696405043,
-    "return_2y": -10.94734189972285,
-    "return_3y": -3.1112938596491224,
-    "close": 70.69,
-    "marketCap": 27201087860,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5774",
-   "type": "CHARACTER",
-   "name": "캘리포니아규제유틸"
-  },
-  {
-   "id": "M_035",
-   "type": "MACRO",
-   "name": "AI데이터센터전력수요증가"
-  },
-  {
-   "id": "M_339",
-   "type": "MACRO",
-   "name": "전력요금인상"
-  },
-  {
-   "id": "M_212",
-   "type": "MACRO",
-   "name": "AI데이터센터확대"
-  },
-  {
-   "id": "A_637",
-   "type": "ASSET",
-   "name": "XLU",
-   "exposure": {
-    "ticker": "XLU",
-    "exchange": "NYSEARCA",
-    "country": "US",
-    "business_desc": "Utilities Select Sector SPDR. 넥스트에라·서던·듀크·콘스텔레이션 등 전력·유틸, AI 데이터센터 전력수요와 금리(할인율)에 민감."
-   },
-   "metrics": {
-    "return_1d": -0.5635707844905302,
-    "close": 44.11,
-    "marketCap": 22833282486,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.231527093596052,
-    "return_7d": -4.709440483905814,
-    "return_15d": -3.458087108776531,
-    "return_1m": -2.626931567328916,
-    "return_ytd": 2.1537748957850766,
-    "return_1y": 2.8205128205128327,
-    "return_2y": 22.766490397996098,
-    "return_3y": 31.59307875894988,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1064",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014906"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1064",
-   "to": "C_5767",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014907"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1063",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014908"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1063",
-   "to": "C_5768",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014909"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1346",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014910"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1346",
-   "to": "C_5769",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014911"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1062",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014912"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1062",
-   "to": "C_5770",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014913"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014914"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "C_5771",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014915"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1065",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014916"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1065",
-   "to": "C_5772",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014917"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2738",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014918"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2738",
-   "to": "C_5773",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014919"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1988",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014920"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1988",
-   "to": "C_5774",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014921"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_035",
-   "to": "T_691",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_014922"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_339",
-   "to": "T_691",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_014923"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_212",
-   "to": "T_691",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_014924"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1064",
-   "to": "A_1063",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020462"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "써던컴퍼니와 듀크에너지는 미국 남동부 전력 유틸리티 경쟁"
-  },
-  {
-   "from": "A_1062",
-   "to": "A_1065",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020463"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NextEra Energy와 아메리칸일렉트릭파워는 미국 전력 유틸리티 경쟁"
-  },
-  {
-   "from": "A_1346",
-   "to": "A_561",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020464"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "PSEG와 도미니언에너지는 미국 동부 전력 시장 경쟁"
-  },
-  {
-   "from": "A_1988",
-   "to": "A_2738",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020465"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에디슨인터내셔널과 엑셀에너지는 미국 서부·중부 전력 유틸리티 경쟁"
-  },
-  {
-   "from": "A_1062",
-   "to": "A_1064",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020466"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NextEra Energy와 써던컴퍼니는 재생에너지·원전 발전 시장 경쟁"
-  },
-  {
-   "from": "A_637",
-   "to": "T_691",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020972"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1064",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014906"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1064",
-   "to": "C_5767",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014907"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1063",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014908"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1063",
-   "to": "C_5768",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014909"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1346",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014910"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1346",
-   "to": "C_5769",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014911"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1062",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014912"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1062",
-   "to": "C_5770",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014913"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014914"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "C_5771",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014915"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1065",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014916"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1065",
-   "to": "C_5772",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014917"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2738",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014918"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2738",
-   "to": "C_5773",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014919"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1988",
-   "to": "T_691",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_014920"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1988",
-   "to": "C_5774",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014921"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_035",
-   "to": "T_691",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_014922"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_339",
-   "to": "T_691",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_014923"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "M_212",
-   "to": "T_691",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_014924"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_1064",
-   "to": "A_1063",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020462"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "써던컴퍼니와 듀크에너지는 미국 남동부 전력 유틸리티 경쟁"
-  },
-  {
-   "from": "A_1062",
-   "to": "A_1065",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020463"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NextEra Energy와 아메리칸일렉트릭파워는 미국 전력 유틸리티 경쟁"
-  },
-  {
-   "from": "A_1346",
-   "to": "A_561",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020464"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "PSEG와 도미니언에너지는 미국 동부 전력 시장 경쟁"
-  },
-  {
-   "from": "A_1988",
-   "to": "A_2738",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020465"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에디슨인터내셔널과 엑셀에너지는 미국 서부·중부 전력 유틸리티 경쟁"
-  },
-  {
-   "from": "A_1062",
-   "to": "A_1064",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020466"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "NextEra Energy와 써던컴퍼니는 재생에너지·원전 발전 시장 경쟁"
-  },
-  {
-   "from": "A_637",
-   "to": "T_691",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020972"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

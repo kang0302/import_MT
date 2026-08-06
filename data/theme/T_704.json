@@ -1,588 +1,588 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_704",
- "themeName": "미국데이터센터(DC)건축_건자재소재",
- "meta": {
-  "periodDefault": "7d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_704",
+  "themeName": "미국데이터센터(DC)건축_건자재소재",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-31T00:00:00+09:00",
+    "description": "미국 데이터센터 착공에 투입되는 건자재·소재 - 골재·시멘트·철강·광섬유·케이블. 벌컨머티리얼즈·마틴마리에타·스틸다이내믹스·코닝·벨덴. DC 착공 급증의 '숨은 병목' 원재료 수혜. (DC건축 밸류체인 3분할 중 건자재·소재 편)",
+    "notes": "미국 데이터센터 착공에 투입되는 건자재·소재 - 골재·시멘트·철강·광섬유·케이블. 벌컨머티리얼즈·마틴마리에타·스틸다이내믹스·코닝·벨덴. DC 착공 급증의 '숨은 병목' 원재료 수혜. (DC건축 밸류체인 3분할 중 건자재·소재 편)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 2건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-31",
+        "kind": "신규",
+        "title": "테마 분할 생성",
+        "detail": "미국데이터센터건축(T_005)을 밸류체인 단계별 3개 서브테마로 분할."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_704",
+      "type": "THEME",
+      "name": "미국데이터센터(DC)건축_건자재소재"
+    },
+    {
+      "id": "M_288",
+      "type": "MACRO",
+      "name": "하이퍼스케일러CAPEX"
+    },
+    {
+      "id": "M_055",
+      "type": "MACRO",
+      "name": "AI확산"
+    },
+    {
+      "id": "M_277",
+      "type": "MACRO",
+      "name": "지역정부규제리스크"
+    },
+    {
+      "id": "A_1293",
+      "type": "ASSET",
+      "name": "벌컨머티리얼즈",
+      "exposure": {
+        "ticker": "VMC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.5857593826727348,
+        "close": 286.77,
+        "marketCap": 37159369830,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 6.776631790594623,
+        "return_7d": 0.8014341453126628,
+        "return_15d": -0.8093805126076714,
+        "return_1m": -4.378126042014008,
+        "return_ytd": -2.009226037929268,
+        "return_1y": 1.7456093666843975,
+        "return_2y": 4.466139667043101,
+        "return_3y": 30.054421768707474,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5159",
+      "type": "CHARACTER",
+      "name": "골재건자재_지역독점"
+    },
+    {
+      "id": "A_1294",
+      "type": "ASSET",
+      "name": "마틴마리에타",
+      "exposure": {
+        "ticker": "MLM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.4407901838724859,
+        "close": 553.37,
+        "marketCap": 33238611746,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.375709334653611,
+        "return_7d": -3.2620666748247373,
+        "return_15d": -2.8015878592004606,
+        "return_1m": -6.86672164532035,
+        "return_ytd": -12.778198095958649,
+        "return_1y": -8.12690928410148,
+        "return_2y": -6.7380129771635655,
+        "return_3y": 23.946154190744974,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5160",
+      "type": "CHARACTER",
+      "name": "골재시멘트"
+    },
+    {
+      "id": "A_1295",
+      "type": "ASSET",
+      "name": "스틸다이내믹스",
+      "exposure": {
+        "ticker": "STLD",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.3244058845718323,
+        "close": 265.96,
+        "marketCap": 38119540678,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.850513412401481,
+        "return_7d": 6.269229232428963,
+        "return_15d": 12.905416878926811,
+        "return_1m": 15.826147548122972,
+        "return_ytd": 51.062137907531515,
+        "return_1y": 119.14963744232034,
+        "return_2y": 99.63969373967872,
+        "return_3y": 149.54025145430663,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5161",
+      "type": "CHARACTER",
+      "name": "전기로철강"
+    },
+    {
+      "id": "A_900",
+      "type": "ASSET",
+      "name": "코닝",
+      "exposure": {
+        "ticker": "GLW",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.9951216461317145,
+        "close": 156.7,
+        "marketCap": 134979499600,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 13.34538878842675,
+        "return_7d": 9.305245535714256,
+        "return_15d": -10.154234275557595,
+        "return_1m": -15.470924587334133,
+        "return_ytd": 72.82452850998125,
+        "return_1y": 146.8105213419436,
+        "return_2y": 291.6520869782554,
+        "return_3y": 361.6971125515616,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5157",
+      "type": "CHARACTER",
+      "name": "광섬유DC소재"
+    },
+    {
+      "id": "A_1292",
+      "type": "ASSET",
+      "name": "벨덴",
+      "exposure": {
+        "ticker": "BDC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.58855842423291,
+        "close": 128.18,
+        "marketCap": 5009042522,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 3.329302700523984,
+        "return_7d": 21.130221130221138,
+        "return_15d": 26.248399487836103,
+        "return_1m": 19.337119448840888,
+        "return_ytd": 8.802308802308811,
+        "return_1y": 7.83208547152352,
+        "return_2y": 38.288920056100984,
+        "return_3y": 32.63658940397352,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5158",
+      "type": "CHARACTER",
+      "name": "DC네트워크케이블"
+    },
+    {
+      "id": "A_1471",
+      "type": "ASSET",
+      "name": "PAVE",
+      "exposure": {
+        "ticker": "PAVE",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "theme_role": "1궤도",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.11949470809149432,
+        "close": 58.65,
+        "marketCap": 15172494066,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 4.0631653655074595,
+        "return_7d": 2.035490605427981,
+        "return_15d": 3.548728813559321,
+        "return_1m": 3.915662650602414,
+        "return_ytd": 20.061412487205722,
+        "return_1y": 29.185022026431717,
+        "return_2y": 46.77177177177177,
+        "return_3y": 81.07440568076566,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-31T00:00:00+09:00",
-  "description": "미국 데이터센터 착공에 투입되는 건자재·소재 - 골재·시멘트·철강·광섬유·케이블. 벌컨머티리얼즈·마틴마리에타·스틸다이내믹스·코닝·벨덴. DC 착공 급증의 '숨은 병목' 원재료 수혜. (DC건축 밸류체인 3분할 중 건자재·소재 편)",
-  "notes": "미국 데이터센터 착공에 투입되는 건자재·소재 - 골재·시멘트·철강·광섬유·케이블. 벌컨머티리얼즈·마틴마리에타·스틸다이내믹스·코닝·벨덴. DC 착공 급증의 '숨은 병목' 원재료 수혜. (DC건축 밸류체인 3분할 중 건자재·소재 편)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 2건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-31",
-    "kind": "신규",
-    "title": "테마 분할 생성",
-    "detail": "미국데이터센터건축(T_005)을 밸류체인 단계별 3개 서브테마로 분할."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "M_288",
+      "to": "T_704",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_055",
+      "to": "T_704",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_277",
+      "to": "T_704",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1293",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015199"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1293",
+      "to": "C_5159",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015200"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1294",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015201"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1294",
+      "to": "C_5160",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015202"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1295",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015203"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1295",
+      "to": "C_5161",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015204"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_900",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015205"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_900",
+      "to": "C_5157",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015206"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1292",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015207"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1292",
+      "to": "C_5158",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015208"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1293",
+      "to": "A_1294",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018290"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "벌컨머티리얼즈와 마틴마리에타는 미국 최대 골재(쇄석·모래·자갈) 생산업체로 시장을 양분하는 직접 경쟁 관계다."
+    },
+    {
+      "from": "A_900",
+      "to": "A_1292",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018291"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "코닝과 벨덴은 데이터센터용 광섬유·네트워크 커넥티비티(케이블·구조화배선) 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1471",
+      "to": "T_704",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020992"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "M_288",
+      "to": "T_704",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015196"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_055",
+      "to": "T_704",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015197"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_277",
+      "to": "T_704",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015198"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1293",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015199"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1293",
+      "to": "C_5159",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015200"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1294",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015201"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1294",
+      "to": "C_5160",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015202"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1295",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015203"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1295",
+      "to": "C_5161",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015204"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_900",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015205"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_900",
+      "to": "C_5157",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015206"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1292",
+      "to": "T_704",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015207"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1292",
+      "to": "C_5158",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015208"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_1293",
+      "to": "A_1294",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018290"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "벌컨머티리얼즈와 마틴마리에타는 미국 최대 골재(쇄석·모래·자갈) 생산업체로 시장을 양분하는 직접 경쟁 관계다."
+    },
+    {
+      "from": "A_900",
+      "to": "A_1292",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018291"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "코닝과 벨덴은 데이터센터용 광섬유·네트워크 커넥티비티(케이블·구조화배선) 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_1471",
+      "to": "T_704",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020992"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_704",
-   "type": "THEME",
-   "name": "미국데이터센터(DC)건축_건자재소재"
-  },
-  {
-   "id": "M_288",
-   "type": "MACRO",
-   "name": "하이퍼스케일러CAPEX"
-  },
-  {
-   "id": "M_055",
-   "type": "MACRO",
-   "name": "AI확산"
-  },
-  {
-   "id": "M_277",
-   "type": "MACRO",
-   "name": "지역정부규제리스크"
-  },
-  {
-   "id": "A_1293",
-   "type": "ASSET",
-   "name": "벌컨머티리얼즈",
-   "exposure": {
-    "ticker": "VMC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.532458831411553,
-    "close": 285.1,
-    "marketCap": 36993150500,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 5.10986580150421,
-    "return_7d": 1.9306399713979294,
-    "return_15d": -2.32621878104764,
-    "return_1m": -6.47552814591259,
-    "return_ytd": -2.5798735691098473,
-    "return_1y": 3.695351713101047,
-    "return_2y": 5.5925925925925934,
-    "return_3y": 29.47908624369864,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5159",
-   "type": "CHARACTER",
-   "name": "골재건자재_지역독점"
-  },
-  {
-   "id": "A_1294",
-   "type": "ASSET",
-   "name": "마틴마리에타",
-   "exposure": {
-    "ticker": "MLM",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.4987552326332096,
-    "close": 555.82,
-    "marketCap": 33385772956,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 2.9296296296296376,
-    "return_7d": -0.6754824874910637,
-    "return_15d": -3.1250544662309254,
-    "return_1m": -8.17445894597718,
-    "return_ytd": -12.39203076729084,
-    "return_1y": -3.8140726127435687,
-    "return_2y": -4.99128234932138,
-    "return_3y": 23.865130479352835,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5160",
-   "type": "CHARACTER",
-   "name": "골재시멘트"
-  },
-  {
-   "id": "A_1295",
-   "type": "ASSET",
-   "name": "스틸다이내믹스",
-   "exposure": {
-    "ticker": "STLD",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.600820496942502,
-    "close": 265.1,
-    "marketCap": 37996278515,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.9900990099009945,
-    "return_7d": 7.280158633806799,
-    "return_15d": 13.606170987786603,
-    "return_1m": 16.74813934029156,
-    "return_ytd": 50.573668067704205,
-    "return_1y": 116.63806488518426,
-    "return_2y": 105.74311214590612,
-    "return_3y": 155.37038820922842,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5161",
-   "type": "CHARACTER",
-   "name": "전기로철강"
-  },
-  {
-   "id": "A_900",
-   "type": "ASSET",
-   "name": "코닝",
-   "exposure": {
-    "ticker": "GLW",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 9.035733769776332,
-    "close": 159.905,
-    "marketCap": 137740248140,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 18.24434255287679,
-    "return_7d": 9.028298670303435,
-    "return_15d": -14.78895757834151,
-    "return_1m": -17.92094455852157,
-    "return_ytd": 76.34278151538545,
-    "return_1y": 157.67929089443996,
-    "return_2y": 302.3402113739305,
-    "return_3y": 373.6078199052133,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5157",
-   "type": "CHARACTER",
-   "name": "광섬유DC소재"
-  },
-  {
-   "id": "A_1292",
-   "type": "ASSET",
-   "name": "벨덴",
-   "exposure": {
-    "ticker": "BDC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.8295445286401053,
-    "close": 127.43,
-    "marketCap": 4979733879,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 8.81222781999831,
-    "return_7d": 24.0073958738809,
-    "return_15d": 21.63993890798015,
-    "return_1m": 12.530907806428825,
-    "return_ytd": 8.165690518631695,
-    "return_1y": 8.33120802516365,
-    "return_2y": 42.31628322537413,
-    "return_3y": 34.59019856358259,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5158",
-   "type": "CHARACTER",
-   "name": "DC네트워크케이블"
-  },
-  {
-   "id": "A_1471",
-   "type": "ASSET",
-   "name": "PAVE",
-   "exposure": {
-    "ticker": "PAVE",
-    "exchange": "NYSEARCA",
-    "country": "US",
-    "theme_role": "1궤도",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 1.8074383037886665,
-    "close": 58.58,
-    "marketCap": 15154385378,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.420677361853831,
-    "return_7d": 1.542728375801694,
-    "return_15d": 3.297478398871445,
-    "return_1m": 1.296904720733183,
-    "return_ytd": 19.91811668372567,
-    "return_1y": 30.148855809820052,
-    "return_2y": 48.98270600203458,
-    "return_3y": 82.54908071050168,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "M_288",
-   "to": "T_704",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015196"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_055",
-   "to": "T_704",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015197"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_277",
-   "to": "T_704",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015198"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1293",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015199"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1293",
-   "to": "C_5159",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015200"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1294",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015201"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1294",
-   "to": "C_5160",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015202"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1295",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015203"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1295",
-   "to": "C_5161",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015204"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_900",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015205"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_900",
-   "to": "C_5157",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015206"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1292",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015207"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1292",
-   "to": "C_5158",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015208"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1293",
-   "to": "A_1294",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018290"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "벌컨머티리얼즈와 마틴마리에타는 미국 최대 골재(쇄석·모래·자갈) 생산업체로 시장을 양분하는 직접 경쟁 관계다."
-  },
-  {
-   "from": "A_900",
-   "to": "A_1292",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018291"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "코닝과 벨덴은 데이터센터용 광섬유·네트워크 커넥티비티(케이블·구조화배선) 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1471",
-   "to": "T_704",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020992"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "M_288",
-   "to": "T_704",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015196"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_055",
-   "to": "T_704",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015197"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_277",
-   "to": "T_704",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015198"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1293",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015199"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1293",
-   "to": "C_5159",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015200"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1294",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015201"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1294",
-   "to": "C_5160",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015202"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1295",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015203"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1295",
-   "to": "C_5161",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015204"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_900",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015205"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_900",
-   "to": "C_5157",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015206"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1292",
-   "to": "T_704",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015207"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1292",
-   "to": "C_5158",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015208"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_1293",
-   "to": "A_1294",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018290"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "벌컨머티리얼즈와 마틴마리에타는 미국 최대 골재(쇄석·모래·자갈) 생산업체로 시장을 양분하는 직접 경쟁 관계다."
-  },
-  {
-   "from": "A_900",
-   "to": "A_1292",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018291"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "코닝과 벨덴은 데이터센터용 광섬유·네트워크 커넥티비티(케이블·구조화배선) 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_1471",
-   "to": "T_704",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020992"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

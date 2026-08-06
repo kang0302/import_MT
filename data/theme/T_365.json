@@ -1,816 +1,834 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_365",
- "themeName": "유럽자동차OEM",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_365",
+  "themeName": "유럽자동차OEM",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "유럽 자동차 OEM 8사 — VW (1위)·Mercedes-Benz·BMW·Stellantis·Porsche AG·Ferrari·Renault·Volvo Cars. 중국 BYD·테슬라 EV 침투 + 미국 관세 + EU CO2 규제. Ferrari·Porsche 럭셔리 우위 vs VW/Stellantis 매스 어려움.",
+    "notes": "T_365 유럽 특화 신규",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_365",
+      "type": "THEME",
+      "name": "유럽자동차OEM"
+    },
+    {
+      "id": "A_2023",
+      "type": "ASSET",
+      "name": "폭스바겐",
+      "exposure": {
+        "ticker": "VWAGY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -1.2359550561797938,
+        "return_3d": 0.45714285714284486,
+        "return_7d": 6.934306569343041,
+        "return_15d": 1.1507479861910141,
+        "return_1m": 0.1138952164009055,
+        "return_ytd": -29.904306220095698,
+        "return_1y": -15.96558317399619,
+        "return_2y": -25.57154953429298,
+        "return_3y": -45.028142589118204,
+        "close": 8.79,
+        "marketCap": 44063853011,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1329",
+      "type": "ASSET",
+      "name": "메르세데스벤츠",
+      "exposure": {
+        "ticker": "MBG",
+        "exchange": "XETRA",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -1.9705455299730446,
+        "return_3d": 1.1341750481489443,
+        "return_7d": 4.2806707855251425,
+        "return_15d": 2.095484985958085,
+        "return_1m": 2.8061779421361788,
+        "return_ytd": -23.391149294861403,
+        "return_1y": -5.328525641025649,
+        "return_2y": -18.291839557399737,
+        "return_3y": -31.616263927072787,
+        "close": 47.26,
+        "marketCap": 45243439335,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2024",
+      "type": "ASSET",
+      "name": "BMW",
+      "exposure": {
+        "ticker": "BMWYY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -1.1293260473588251,
+        "return_3d": -0.0368324125230135,
+        "return_7d": -0.6224826071036138,
+        "return_15d": -4.738504738504734,
+        "return_1m": -7.054794520547936,
+        "return_ytd": -26.727861771058315,
+        "return_1y": -15.818858560794046,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 29.21,
+        "marketCap": 18662627670,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_010",
+      "type": "ASSET",
+      "name": "스텔란티스",
+      "exposure": {
+        "ticker": "STLA",
+        "exchange": "NYSE",
+        "country": "NL"
+      },
+      "metrics": {
+        "return_1d": -3.924914675767921,
+        "return_3d": -2.256944444444442,
+        "return_7d": -1.2280701754386003,
+        "return_15d": -4.5762711864406835,
+        "return_1m": -0.3539823008849585,
+        "return_ytd": -50.700525394045535,
+        "return_1y": -35.58352402745996,
+        "return_2y": -66.26722588376273,
+        "return_3y": -72.60340632603406,
+        "close": 5.63,
+        "marketCap": 16297357808,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2025",
+      "type": "ASSET",
+      "name": "포르쉐AG",
+      "exposure": {
+        "ticker": "P911",
+        "exchange": "XETRA",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 0.18428933425478355,
+        "return_3d": 2.474081055607935,
+        "return_7d": -0.6850879196163451,
+        "return_15d": -2.1377137713771255,
+        "return_1m": -7.996615189337852,
+        "return_ytd": -8.78775167785234,
+        "return_1y": -2.663384064458363,
+        "return_2y": -35.378900445765225,
+        "return_3y": -58.46227316141357,
+        "close": 43.49,
+        "marketCap": 39619390087,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2026",
+      "type": "ASSET",
+      "name": "페라리",
+      "exposure": {
+        "ticker": "RACE",
+        "exchange": "NYSE",
+        "country": "IT"
+      },
+      "metrics": {
+        "return_1d": 0.9955559969214711,
+        "return_3d": 3.282809048670887,
+        "return_7d": 7.049814478566363,
+        "return_15d": 8.266354393995856,
+        "return_1m": 5.118995322876563,
+        "return_ytd": 9.387184382478697,
+        "return_1y": -7.19109326519437,
+        "return_2y": -1.503595554587056,
+        "return_3y": 26.97025500171666,
+        "close": 406.8,
+        "marketCap": 71562641411,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2027",
+      "type": "ASSET",
+      "name": "르노",
+      "exposure": {
+        "ticker": "RNLSY",
+        "exchange": "OTC",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": -1.5290519877675823,
+        "return_3d": 2.384737678855342,
+        "return_7d": 7.872696817420444,
+        "return_15d": 5.92105263157896,
+        "return_1m": 8.053691275167797,
+        "return_ytd": -24.146054181389864,
+        "return_1y": -10.555555555555552,
+        "return_2y": -33.60824742268041,
+        "return_3y": -26.146788990825687,
+        "close": 6.44,
+        "marketCap": 9317814625,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2028",
+      "type": "ASSET",
+      "name": "볼보카스",
+      "exposure": {
+        "ticker": "VLVOY",
+        "exchange": "OTC",
+        "country": "SE"
+      },
+      "metrics": {
+        "return_1d": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_348",
+      "type": "MACRO",
+      "name": "중국EV침투유럽OEM"
+    },
+    {
+      "id": "M_349",
+      "type": "MACRO",
+      "name": "미국관세자동차"
+    },
+    {
+      "id": "M_095",
+      "type": "MACRO",
+      "name": "유럽환경규제"
+    },
+    {
+      "id": "C_354",
+      "type": "CHARACTER",
+      "name": "그룹규모1위"
+    },
+    {
+      "id": "C_355",
+      "type": "CHARACTER",
+      "name": "럭셔리세단포지셔닝"
+    },
+    {
+      "id": "C_356",
+      "type": "CHARACTER",
+      "name": "Stellantis통합비효율"
+    },
+    {
+      "id": "C_357",
+      "type": "CHARACTER",
+      "name": "럭셔리스포츠1위"
+    },
+    {
+      "id": "C_358",
+      "type": "CHARACTER",
+      "name": "슈퍼카가격결정력"
+    },
+    {
+      "id": "C_359",
+      "type": "CHARACTER",
+      "name": "프랑스+신흥국"
+    },
+    {
+      "id": "C_360",
+      "type": "CHARACTER",
+      "name": "Geely소유EV전환"
+    },
+    {
+      "id": "A_2922",
+      "type": "ASSET",
+      "name": "First Trust NASDAQ Global Auto Index Fund",
+      "exposure": {
+        "ticker": "CARZ",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.0875627440044666,
+        "return_3d": 4.180536518504008,
+        "return_7d": 5.387738932356134,
+        "return_15d": -1.2527839643652672,
+        "return_1m": -2.025596169781796,
+        "return_ytd": 32.73044779842833,
+        "return_1y": 67.62759924385632,
+        "return_2y": 85.38327526132403,
+        "return_3y": 80.69281711665816,
+        "close": 106.4132,
+        "marketCap": 55092242,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "유럽 자동차 OEM 8사 — VW (1위)·Mercedes-Benz·BMW·Stellantis·Porsche AG·Ferrari·Renault·Volvo Cars. 중국 BYD·테슬라 EV 침투 + 미국 관세 + EU CO2 규제. Ferrari·Porsche 럭셔리 우위 vs VW/Stellantis 매스 어려움.",
-  "notes": "T_365 유럽 특화 신규",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 7건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2023",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010980"
+      ]
+    },
+    {
+      "from": "A_1329",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010981"
+      ]
+    },
+    {
+      "from": "A_2024",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010982"
+      ]
+    },
+    {
+      "from": "A_010",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010983"
+      ]
+    },
+    {
+      "from": "A_2025",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010984"
+      ]
+    },
+    {
+      "from": "A_2026",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010985"
+      ]
+    },
+    {
+      "from": "A_2027",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010986"
+      ]
+    },
+    {
+      "from": "A_2028",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010987"
+      ]
+    },
+    {
+      "from": "M_348",
+      "to": "T_365",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010988"
+      ]
+    },
+    {
+      "from": "M_349",
+      "to": "T_365",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010989"
+      ]
+    },
+    {
+      "from": "M_095",
+      "to": "T_365",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010990"
+      ]
+    },
+    {
+      "from": "A_2023",
+      "to": "C_354",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016233"
+      ]
+    },
+    {
+      "from": "A_1329",
+      "to": "C_355",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016234"
+      ]
+    },
+    {
+      "from": "A_2024",
+      "to": "C_355",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016235"
+      ]
+    },
+    {
+      "from": "A_010",
+      "to": "C_356",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016236"
+      ]
+    },
+    {
+      "from": "A_2025",
+      "to": "C_357",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016237"
+      ]
+    },
+    {
+      "from": "A_2026",
+      "to": "C_358",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016238"
+      ]
+    },
+    {
+      "from": "A_2027",
+      "to": "C_359",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016239"
+      ]
+    },
+    {
+      "from": "A_2028",
+      "to": "C_360",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016240"
+      ]
+    },
+    {
+      "from": "A_2023",
+      "to": "A_1329",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019545"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "폭스바겐과 메르세데스벤츠는 유럽·글로벌 자동차 시장 경쟁"
+    },
+    {
+      "from": "A_2024",
+      "to": "A_1329",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019546"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "BMW와 메르세데스벤츠는 프리미엄 자동차 시장 양대 경쟁"
+    },
+    {
+      "from": "A_010",
+      "to": "A_2023",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019547"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스텔란티스와 폭스바겐은 유럽 대중차 시장 경쟁"
+    },
+    {
+      "from": "A_2027",
+      "to": "A_010",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019548"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "르노와 스텔란티스는 유럽 소형차·EV 시장 경쟁"
+    },
+    {
+      "from": "A_2026",
+      "to": "A_2025",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019549"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "페라리와 포르쉐AG는 유럽 스포츠카 시장 경쟁"
+    },
+    {
+      "from": "A_2023",
+      "to": "A_2025",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_019550"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "폭스바겐그룹은 포르쉐AG 지분을 보유한 지배주주"
+    },
+    {
+      "from": "A_2028",
+      "to": "A_2024",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019551"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "볼보카스와 BMW는 프리미엄 세단·SUV 시장 경쟁"
+    },
+    {
+      "from": "A_2922",
+      "to": "T_365",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020735"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2023",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010980"
+      ]
+    },
+    {
+      "from": "A_1329",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010981"
+      ]
+    },
+    {
+      "from": "A_2024",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010982"
+      ]
+    },
+    {
+      "from": "A_010",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010983"
+      ]
+    },
+    {
+      "from": "A_2025",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010984"
+      ]
+    },
+    {
+      "from": "A_2026",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010985"
+      ]
+    },
+    {
+      "from": "A_2027",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010986"
+      ]
+    },
+    {
+      "from": "A_2028",
+      "to": "T_365",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_010987"
+      ]
+    },
+    {
+      "from": "M_348",
+      "to": "T_365",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010988"
+      ]
+    },
+    {
+      "from": "M_349",
+      "to": "T_365",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010989"
+      ]
+    },
+    {
+      "from": "M_095",
+      "to": "T_365",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_010990"
+      ]
+    },
+    {
+      "from": "A_2023",
+      "to": "C_354",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016233"
+      ]
+    },
+    {
+      "from": "A_1329",
+      "to": "C_355",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016234"
+      ]
+    },
+    {
+      "from": "A_2024",
+      "to": "C_355",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016235"
+      ]
+    },
+    {
+      "from": "A_010",
+      "to": "C_356",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016236"
+      ]
+    },
+    {
+      "from": "A_2025",
+      "to": "C_357",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016237"
+      ]
+    },
+    {
+      "from": "A_2026",
+      "to": "C_358",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016238"
+      ]
+    },
+    {
+      "from": "A_2027",
+      "to": "C_359",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016239"
+      ]
+    },
+    {
+      "from": "A_2028",
+      "to": "C_360",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016240"
+      ]
+    },
+    {
+      "from": "A_2023",
+      "to": "A_1329",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019545"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "폭스바겐과 메르세데스벤츠는 유럽·글로벌 자동차 시장 경쟁"
+    },
+    {
+      "from": "A_2024",
+      "to": "A_1329",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019546"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "BMW와 메르세데스벤츠는 프리미엄 자동차 시장 양대 경쟁"
+    },
+    {
+      "from": "A_010",
+      "to": "A_2023",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019547"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스텔란티스와 폭스바겐은 유럽 대중차 시장 경쟁"
+    },
+    {
+      "from": "A_2027",
+      "to": "A_010",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019548"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "르노와 스텔란티스는 유럽 소형차·EV 시장 경쟁"
+    },
+    {
+      "from": "A_2026",
+      "to": "A_2025",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019549"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "페라리와 포르쉐AG는 유럽 스포츠카 시장 경쟁"
+    },
+    {
+      "from": "A_2023",
+      "to": "A_2025",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_019550"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "폭스바겐그룹은 포르쉐AG 지분을 보유한 지배주주"
+    },
+    {
+      "from": "A_2028",
+      "to": "A_2024",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019551"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "볼보카스와 BMW는 프리미엄 세단·SUV 시장 경쟁"
+    },
+    {
+      "from": "A_2922",
+      "to": "T_365",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020735"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_365",
-   "type": "THEME",
-   "name": "유럽자동차OEM"
-  },
-  {
-   "id": "A_2023",
-   "type": "ASSET",
-   "name": "폭스바겐",
-   "exposure": {
-    "ticker": "VWAGY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 0.9070294784580435,
-    "return_3d": 0.7927519818799578,
-    "return_7d": 7.748184019370474,
-    "return_15d": 6.842737094837936,
-    "return_1m": 1.2514220705347023,
-    "return_ytd": -29.027113237639547,
-    "return_1y": -15.238095238095239,
-    "return_2y": -24.894514767932485,
-    "return_3y": -44.44444444444444,
-    "close": 8.9,
-    "marketCap": 44615277793,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1329",
-   "type": "ASSET",
-   "name": "메르세데스벤츠",
-   "exposure": {
-    "ticker": "MBG",
-    "exchange": "XETRA",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 0.5422314911365911,
-    "return_3d": 2.3566878980891603,
-    "return_7d": 7.659669495310406,
-    "return_15d": 6.872090445577483,
-    "return_1m": 6.1660427218674485,
-    "return_ytd": -21.851191441076345,
-    "return_1y": -2.4286581663630735,
-    "return_2y": -14.7932131495228,
-    "return_3y": -31.45172757002701,
-    "close": 48.21,
-    "marketCap": 46152903309,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2024",
-   "type": "ASSET",
-   "name": "BMW",
-   "exposure": {
-    "ticker": "BMWYY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": -1.1293260473588251,
-    "return_3d": -0.0368324125230135,
-    "return_7d": -0.6224826071036138,
-    "return_15d": -4.738504738504734,
-    "return_1m": -7.054794520547936,
-    "return_ytd": -26.727861771058315,
-    "return_1y": -15.818858560794046,
-    "return_2y": null,
-    "return_3y": null,
-    "close": 29.21,
-    "marketCap": 18662627670,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_010",
-   "type": "ASSET",
-   "name": "스텔란티스",
-   "exposure": {
-    "ticker": "STLA",
-    "exchange": "NYSE",
-    "country": "NL"
-   },
-   "metrics": {
-    "return_1d": 3.7168141592920367,
-    "return_3d": 0.0,
-    "return_7d": 2.987697715289972,
-    "return_15d": 2.987697715289972,
-    "return_1m": 1.0344827586207028,
-    "return_ytd": -48.68651488616462,
-    "return_1y": -33.33333333333333,
-    "return_2y": -65.01492537313432,
-    "return_3y": -71.48418491484185,
-    "close": 5.86,
-    "marketCap": 16963146848,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2025",
-   "type": "ASSET",
-   "name": "포르쉐AG",
-   "exposure": {
-    "ticker": "P911",
-    "exchange": "XETRA",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 0.3003696857670768,
-    "return_3d": -1.3409090909091037,
-    "return_7d": -0.7544581618655788,
-    "return_15d": -0.206896551724145,
-    "return_1m": -7.716836734693889,
-    "return_ytd": -8.955536912751683,
-    "return_1y": -0.8677780315140549,
-    "return_2y": -34.74143114852676,
-    "return_3y": -58.79449454200285,
-    "close": 43.41,
-    "marketCap": 39546510304,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2026",
-   "type": "ASSET",
-   "name": "페라리",
-   "exposure": {
-    "ticker": "RACE",
-    "exchange": "NYSE",
-    "country": "IT"
-   },
-   "metrics": {
-    "return_1d": 0.3762958532695482,
-    "return_3d": 1.2722198476353253,
-    "return_7d": 11.84261676014884,
-    "return_15d": 9.109871058619557,
-    "return_1m": 2.7892614709335017,
-    "return_ytd": 8.308908548226634,
-    "return_1y": -7.667797542637079,
-    "return_2y": -1.8231896068442666,
-    "return_3y": 25.160027344478287,
-    "close": 402.79,
-    "marketCap": 70857218126,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2027",
-   "type": "ASSET",
-   "name": "르노",
-   "exposure": {
-    "ticker": "RNLSY",
-    "exchange": "OTC",
-    "country": "FR"
-   },
-   "metrics": {
-    "return_1d": 0.4608294930875667,
-    "return_3d": 2.028081123244929,
-    "return_7d": 10.84745762711863,
-    "return_15d": 11.986301369863007,
-    "return_1m": 10.472972972972983,
-    "return_ytd": -22.968197879858653,
-    "return_1y": -11.5020297699594,
-    "return_2y": -30.866807610993664,
-    "return_3y": -26.35135135135136,
-    "close": 6.54,
-    "marketCap": 9462501188,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2028",
-   "type": "ASSET",
-   "name": "볼보카스",
-   "exposure": {
-    "ticker": "VLVOY",
-    "exchange": "OTC",
-    "country": "SE"
-   },
-   "metrics": {
-    "return_1d": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_348",
-   "type": "MACRO",
-   "name": "중국EV침투유럽OEM"
-  },
-  {
-   "id": "M_349",
-   "type": "MACRO",
-   "name": "미국관세자동차"
-  },
-  {
-   "id": "M_095",
-   "type": "MACRO",
-   "name": "유럽환경규제"
-  },
-  {
-   "id": "C_354",
-   "type": "CHARACTER",
-   "name": "그룹규모1위"
-  },
-  {
-   "id": "C_355",
-   "type": "CHARACTER",
-   "name": "럭셔리세단포지셔닝"
-  },
-  {
-   "id": "C_356",
-   "type": "CHARACTER",
-   "name": "Stellantis통합비효율"
-  },
-  {
-   "id": "C_357",
-   "type": "CHARACTER",
-   "name": "럭셔리스포츠1위"
-  },
-  {
-   "id": "C_358",
-   "type": "CHARACTER",
-   "name": "슈퍼카가격결정력"
-  },
-  {
-   "id": "C_359",
-   "type": "CHARACTER",
-   "name": "프랑스+신흥국"
-  },
-  {
-   "id": "C_360",
-   "type": "CHARACTER",
-   "name": "Geely소유EV전환"
-  },
-  {
-   "id": "A_2922",
-   "type": "ASSET",
-   "name": "First Trust NASDAQ Global Auto Index Fund",
-   "exposure": {
-    "ticker": "CARZ",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2023",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010980"
-   ]
-  },
-  {
-   "from": "A_1329",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010981"
-   ]
-  },
-  {
-   "from": "A_2024",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010982"
-   ]
-  },
-  {
-   "from": "A_010",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010983"
-   ]
-  },
-  {
-   "from": "A_2025",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010984"
-   ]
-  },
-  {
-   "from": "A_2026",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010985"
-   ]
-  },
-  {
-   "from": "A_2027",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010986"
-   ]
-  },
-  {
-   "from": "A_2028",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010987"
-   ]
-  },
-  {
-   "from": "M_348",
-   "to": "T_365",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010988"
-   ]
-  },
-  {
-   "from": "M_349",
-   "to": "T_365",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010989"
-   ]
-  },
-  {
-   "from": "M_095",
-   "to": "T_365",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010990"
-   ]
-  },
-  {
-   "from": "A_2023",
-   "to": "C_354",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016233"
-   ]
-  },
-  {
-   "from": "A_1329",
-   "to": "C_355",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016234"
-   ]
-  },
-  {
-   "from": "A_2024",
-   "to": "C_355",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016235"
-   ]
-  },
-  {
-   "from": "A_010",
-   "to": "C_356",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016236"
-   ]
-  },
-  {
-   "from": "A_2025",
-   "to": "C_357",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016237"
-   ]
-  },
-  {
-   "from": "A_2026",
-   "to": "C_358",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016238"
-   ]
-  },
-  {
-   "from": "A_2027",
-   "to": "C_359",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016239"
-   ]
-  },
-  {
-   "from": "A_2028",
-   "to": "C_360",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016240"
-   ]
-  },
-  {
-   "from": "A_2023",
-   "to": "A_1329",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019545"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "폭스바겐과 메르세데스벤츠는 유럽·글로벌 자동차 시장 경쟁"
-  },
-  {
-   "from": "A_2024",
-   "to": "A_1329",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019546"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "BMW와 메르세데스벤츠는 프리미엄 자동차 시장 양대 경쟁"
-  },
-  {
-   "from": "A_010",
-   "to": "A_2023",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019547"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "스텔란티스와 폭스바겐은 유럽 대중차 시장 경쟁"
-  },
-  {
-   "from": "A_2027",
-   "to": "A_010",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019548"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "르노와 스텔란티스는 유럽 소형차·EV 시장 경쟁"
-  },
-  {
-   "from": "A_2026",
-   "to": "A_2025",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019549"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "페라리와 포르쉐AG는 유럽 스포츠카 시장 경쟁"
-  },
-  {
-   "from": "A_2023",
-   "to": "A_2025",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_019550"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "폭스바겐그룹은 포르쉐AG 지분을 보유한 지배주주"
-  },
-  {
-   "from": "A_2028",
-   "to": "A_2024",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019551"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "볼보카스와 BMW는 프리미엄 세단·SUV 시장 경쟁"
-  },
-  {
-   "from": "A_2922",
-   "to": "T_365",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020735"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2023",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010980"
-   ]
-  },
-  {
-   "from": "A_1329",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010981"
-   ]
-  },
-  {
-   "from": "A_2024",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010982"
-   ]
-  },
-  {
-   "from": "A_010",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010983"
-   ]
-  },
-  {
-   "from": "A_2025",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010984"
-   ]
-  },
-  {
-   "from": "A_2026",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010985"
-   ]
-  },
-  {
-   "from": "A_2027",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010986"
-   ]
-  },
-  {
-   "from": "A_2028",
-   "to": "T_365",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_010987"
-   ]
-  },
-  {
-   "from": "M_348",
-   "to": "T_365",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010988"
-   ]
-  },
-  {
-   "from": "M_349",
-   "to": "T_365",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010989"
-   ]
-  },
-  {
-   "from": "M_095",
-   "to": "T_365",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_010990"
-   ]
-  },
-  {
-   "from": "A_2023",
-   "to": "C_354",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016233"
-   ]
-  },
-  {
-   "from": "A_1329",
-   "to": "C_355",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016234"
-   ]
-  },
-  {
-   "from": "A_2024",
-   "to": "C_355",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016235"
-   ]
-  },
-  {
-   "from": "A_010",
-   "to": "C_356",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016236"
-   ]
-  },
-  {
-   "from": "A_2025",
-   "to": "C_357",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016237"
-   ]
-  },
-  {
-   "from": "A_2026",
-   "to": "C_358",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016238"
-   ]
-  },
-  {
-   "from": "A_2027",
-   "to": "C_359",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016239"
-   ]
-  },
-  {
-   "from": "A_2028",
-   "to": "C_360",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016240"
-   ]
-  },
-  {
-   "from": "A_2023",
-   "to": "A_1329",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019545"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "폭스바겐과 메르세데스벤츠는 유럽·글로벌 자동차 시장 경쟁"
-  },
-  {
-   "from": "A_2024",
-   "to": "A_1329",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019546"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "BMW와 메르세데스벤츠는 프리미엄 자동차 시장 양대 경쟁"
-  },
-  {
-   "from": "A_010",
-   "to": "A_2023",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019547"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "스텔란티스와 폭스바겐은 유럽 대중차 시장 경쟁"
-  },
-  {
-   "from": "A_2027",
-   "to": "A_010",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019548"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "르노와 스텔란티스는 유럽 소형차·EV 시장 경쟁"
-  },
-  {
-   "from": "A_2026",
-   "to": "A_2025",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019549"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "페라리와 포르쉐AG는 유럽 스포츠카 시장 경쟁"
-  },
-  {
-   "from": "A_2023",
-   "to": "A_2025",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_019550"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "폭스바겐그룹은 포르쉐AG 지분을 보유한 지배주주"
-  },
-  {
-   "from": "A_2028",
-   "to": "A_2024",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019551"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "볼보카스와 BMW는 프리미엄 세단·SUV 시장 경쟁"
-  },
-  {
-   "from": "A_2922",
-   "to": "T_365",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020735"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

@@ -1,723 +1,723 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_496",
- "themeName": "(Y16) 브렉시트",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_496",
+  "themeName": "(Y16) 브렉시트",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "2016.6 브렉시트 국민투표 가결 회고 — 파운드 폭락·변동성·안전자산(금) 급등. 금(GLD)·파운드(FXB)·영국 ETF(EWU)·FTSE 수출주(HSBC·Shell·BP·AstraZeneca·Diageo). 정치 이벤트·통화 변동성의 교훈.",
+    "notes": "T_496 신규 — 2016 회고 테마(Y16). 자산별 CHARACTER, MACRO 3(기존 재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 3건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_496",
+      "type": "THEME",
+      "name": "(Y16) 브렉시트"
+    },
+    {
+      "id": "A_063",
+      "type": "ASSET",
+      "name": "GLD",
+      "exposure": {
+        "ticker": "GLD",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 4.137267479153284,
+        "return_3d": 4.871615438445387,
+        "return_7d": 4.006619864933403,
+        "return_15d": 4.643480596213223,
+        "return_1m": 3.2186283080346545,
+        "return_ytd": -2.169328110876767,
+        "return_1y": 25.322440577659112,
+        "return_2y": 71.98852350474507,
+        "return_3y": 113.67699479023857,
+        "close": 389.64,
+        "marketCap": 137463230438,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1120",
+      "type": "CHARACTER",
+      "name": "금 — 안전자산 수혜"
+    },
+    {
+      "id": "A_1606",
+      "type": "ASSET",
+      "name": "인베스코영국파운드ETF",
+      "exposure": {
+        "ticker": "FXB",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.13152804642164728,
+        "return_3d": -0.20049352251697572,
+        "return_7d": 1.212168608743247,
+        "return_15d": -0.5456082379159399,
+        "return_1m": 0.8336579664978583,
+        "return_ytd": 0.12378152560730271,
+        "return_1y": 1.4820042342978068,
+        "return_2y": 4.480503753935561,
+        "return_3y": 4.674862504043986,
+        "close": 129.385,
+        "marketCap": 76636935,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1121",
+      "type": "CHARACTER",
+      "name": "파운드 ETF — 변동성"
+    },
+    {
+      "id": "A_127",
+      "type": "ASSET",
+      "name": "EWU(영국)",
+      "exposure": {
+        "ticker": "EWU",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.06206040546130609,
+        "return_3d": -0.08262755629001584,
+        "return_7d": 2.1110407430863454,
+        "return_15d": 3.4209963651913533,
+        "return_1m": 2.6310205813706578,
+        "return_ytd": 8.794421952316679,
+        "return_1y": 20.293459338472996,
+        "return_2y": 33.39768339768341,
+        "return_3y": 45.255255255255264,
+        "close": 48.37,
+        "marketCap": 3681079328,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1122",
+      "type": "CHARACTER",
+      "name": "영국 증시 ETF"
+    },
+    {
+      "id": "A_2041",
+      "type": "ASSET",
+      "name": "HSBC홀딩스",
+      "exposure": {
+        "ticker": "HSBC",
+        "exchange": "NYSE",
+        "country": "UK"
+      },
+      "metrics": {
+        "return_1d": -3.1686156167483936,
+        "return_3d": -3.514376996805102,
+        "return_7d": -1.2407425218812995,
+        "return_15d": 2.209834760103546,
+        "return_1m": 5.4209445585215565,
+        "return_ytd": 27.632069608452458,
+        "return_1y": 66.17575659491828,
+        "return_2y": 127.41971207087488,
+        "return_3y": 145.7635232168502,
+        "close": 102.68,
+        "marketCap": 352882409600,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1123",
+      "type": "CHARACTER",
+      "name": "글로벌 은행 — 파운드 약세 수혜"
+    },
+    {
+      "id": "A_2088",
+      "type": "ASSET",
+      "name": "쉘",
+      "exposure": {
+        "ticker": "SHEL",
+        "exchange": "NYSE",
+        "country": "GB"
+      },
+      "metrics": {
+        "return_1d": -2.315227070347281,
+        "return_3d": -4.58795390302239,
+        "return_7d": 1.6093551001505224,
+        "return_15d": 3.6862003780718355,
+        "return_1m": 7.037443590681813,
+        "return_ytd": 16.33085896076354,
+        "return_1y": 22.14335421016007,
+        "return_2y": 19.85796230538106,
+        "return_3y": 42.39818270322895,
+        "close": 87.76,
+        "marketCap": 244683217200,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1124",
+      "type": "CHARACTER",
+      "name": "에너지 — 달러매출·수출주"
+    },
+    {
+      "id": "A_1315",
+      "type": "ASSET",
+      "name": "AstraZeneca",
+      "exposure": {
+        "ticker": "AZN",
+        "exchange": "NASDAQ",
+        "country": "UK"
+      },
+      "metrics": {
+        "return_1d": 3.77843464850276,
+        "return_3d": -4.798396604574384,
+        "return_7d": -4.798396604574384,
+        "return_15d": -4.080299340737659,
+        "return_1m": -16.373239436619723,
+        "return_ytd": -11.594044230348155,
+        "return_1y": 7.437466737626397,
+        "return_2y": 1.2539184952978122,
+        "return_3y": 11.517746167656394,
+        "close": 161.5,
+        "marketCap": 250465901160,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1125",
+      "type": "CHARACTER",
+      "name": "제약 — 글로벌 매출 수출주"
+    },
+    {
+      "id": "A_2089",
+      "type": "ASSET",
+      "name": "BP",
+      "exposure": {
+        "ticker": "BP",
+        "exchange": "NYSE",
+        "country": "GB"
+      },
+      "metrics": {
+        "return_1d": -2.8982092365692713,
+        "return_3d": -8.867757629367535,
+        "return_7d": -2.5998581895533057,
+        "return_15d": -0.2903459956448029,
+        "return_1m": 6.734006734006748,
+        "return_ytd": 15.01535026514096,
+        "return_1y": 26.839027393044002,
+        "return_2y": 16.445323537722523,
+        "return_3y": 10.482573726541556,
+        "close": 41.21,
+        "marketCap": 108073431050,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1126",
+      "type": "CHARACTER",
+      "name": "에너지 — 달러매출"
+    },
+    {
+      "id": "A_2090",
+      "type": "ASSET",
+      "name": "디아지오",
+      "exposure": {
+        "ticker": "DEO",
+        "exchange": "NYSE",
+        "country": "GB"
+      },
+      "metrics": {
+        "return_1d": 0.6831378799954546,
+        "return_3d": 0.42016806722688926,
+        "return_7d": 3.839830906528907,
+        "return_15d": 7.565989538985551,
+        "return_1m": 6.74794785127959,
+        "return_ytd": 1.5386381903777835,
+        "return_1y": -9.921564632779866,
+        "return_2y": -29.11422845691383,
+        "return_3y": -49.73854723201091,
+        "close": 88.43,
+        "marketCap": 49157794850,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_1127",
+      "type": "CHARACTER",
+      "name": "주류 — 글로벌 수출주"
+    },
+    {
+      "id": "M_113",
+      "type": "MACRO",
+      "name": "지정학리스크"
+    },
+    {
+      "id": "M_263",
+      "type": "MACRO",
+      "name": "통화가치변동"
+    },
+    {
+      "id": "M_262",
+      "type": "MACRO",
+      "name": "금융시장변동성고조"
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "2016.6 브렉시트 국민투표 가결 회고 — 파운드 폭락·변동성·안전자산(금) 급등. 금(GLD)·파운드(FXB)·영국 ETF(EWU)·FTSE 수출주(HSBC·Shell·BP·AstraZeneca·Diageo). 정치 이벤트·통화 변동성의 교훈.",
-  "notes": "T_496 신규 — 2016 회고 테마(Y16). 자산별 CHARACTER, MACRO 3(기존 재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 3건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_063",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012316"
+      ]
+    },
+    {
+      "from": "A_063",
+      "to": "C_1120",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017204"
+      ]
+    },
+    {
+      "from": "A_1606",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012317"
+      ]
+    },
+    {
+      "from": "A_1606",
+      "to": "C_1121",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017205"
+      ]
+    },
+    {
+      "from": "A_127",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012318"
+      ]
+    },
+    {
+      "from": "A_127",
+      "to": "C_1122",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017206"
+      ]
+    },
+    {
+      "from": "A_2041",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012319"
+      ]
+    },
+    {
+      "from": "A_2041",
+      "to": "C_1123",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017207"
+      ]
+    },
+    {
+      "from": "A_2088",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012320"
+      ]
+    },
+    {
+      "from": "A_2088",
+      "to": "C_1124",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017208"
+      ]
+    },
+    {
+      "from": "A_1315",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012321"
+      ]
+    },
+    {
+      "from": "A_1315",
+      "to": "C_1125",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017209"
+      ]
+    },
+    {
+      "from": "A_2089",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012322"
+      ]
+    },
+    {
+      "from": "A_2089",
+      "to": "C_1126",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017210"
+      ]
+    },
+    {
+      "from": "A_2090",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012323"
+      ]
+    },
+    {
+      "from": "A_2090",
+      "to": "C_1127",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017211"
+      ]
+    },
+    {
+      "from": "M_113",
+      "to": "T_496",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012324"
+      ]
+    },
+    {
+      "from": "M_263",
+      "to": "T_496",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012325"
+      ]
+    },
+    {
+      "from": "M_262",
+      "to": "T_496",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012326"
+      ]
+    },
+    {
+      "from": "A_2088",
+      "to": "A_2089",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019925"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "쉘과 BP는 영국 석유·가스 메이저 경쟁"
+    },
+    {
+      "from": "A_1315",
+      "to": "A_2090",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019926"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아스트라제네카와 디아지오는 영국 대표 수출주 경쟁"
+    },
+    {
+      "from": "A_2041",
+      "to": "A_2088",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019927"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HSBC홀딩스는 쉘 등 영국 대기업의 금융 파트너"
+    },
+    {
+      "from": "A_127",
+      "to": "T_496",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020845"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_063",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012316"
+      ]
+    },
+    {
+      "from": "A_063",
+      "to": "C_1120",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017204"
+      ]
+    },
+    {
+      "from": "A_1606",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012317"
+      ]
+    },
+    {
+      "from": "A_1606",
+      "to": "C_1121",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017205"
+      ]
+    },
+    {
+      "from": "A_127",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012318"
+      ]
+    },
+    {
+      "from": "A_127",
+      "to": "C_1122",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017206"
+      ]
+    },
+    {
+      "from": "A_2041",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012319"
+      ]
+    },
+    {
+      "from": "A_2041",
+      "to": "C_1123",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017207"
+      ]
+    },
+    {
+      "from": "A_2088",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012320"
+      ]
+    },
+    {
+      "from": "A_2088",
+      "to": "C_1124",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017208"
+      ]
+    },
+    {
+      "from": "A_1315",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012321"
+      ]
+    },
+    {
+      "from": "A_1315",
+      "to": "C_1125",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017209"
+      ]
+    },
+    {
+      "from": "A_2089",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012322"
+      ]
+    },
+    {
+      "from": "A_2089",
+      "to": "C_1126",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017210"
+      ]
+    },
+    {
+      "from": "A_2090",
+      "to": "T_496",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012323"
+      ]
+    },
+    {
+      "from": "A_2090",
+      "to": "C_1127",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017211"
+      ]
+    },
+    {
+      "from": "M_113",
+      "to": "T_496",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012324"
+      ]
+    },
+    {
+      "from": "M_263",
+      "to": "T_496",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012325"
+      ]
+    },
+    {
+      "from": "M_262",
+      "to": "T_496",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012326"
+      ]
+    },
+    {
+      "from": "A_2088",
+      "to": "A_2089",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019925"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "쉘과 BP는 영국 석유·가스 메이저 경쟁"
+    },
+    {
+      "from": "A_1315",
+      "to": "A_2090",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019926"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아스트라제네카와 디아지오는 영국 대표 수출주 경쟁"
+    },
+    {
+      "from": "A_2041",
+      "to": "A_2088",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019927"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HSBC홀딩스는 쉘 등 영국 대기업의 금융 파트너"
+    },
+    {
+      "from": "A_127",
+      "to": "T_496",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020845"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_496",
-   "type": "THEME",
-   "name": "(Y16) 브렉시트"
-  },
-  {
-   "id": "A_063",
-   "type": "ASSET",
-   "name": "GLD",
-   "exposure": {
-    "ticker": "GLD",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.6591159775093614,
-    "return_3d": -0.795418390073177,
-    "return_7d": 0.6076902393116645,
-    "return_15d": 0.5401047964530559,
-    "return_1m": -2.085677648967621,
-    "return_ytd": -6.056040976197641,
-    "return_1y": 21.044288441008053,
-    "return_2y": 68.1466834441848,
-    "return_3y": 105.74067964368194,
-    "close": 374.16,
-    "marketCap": 132001956423,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1120",
-   "type": "CHARACTER",
-   "name": "금 — 안전자산 수혜"
-  },
-  {
-   "id": "A_1606",
-   "type": "ASSET",
-   "name": "인베스코영국파운드ETF",
-   "exposure": {
-    "ticker": "FXB",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.15497869043006318,
-    "return_3d": -0.26236592329654806,
-    "return_7d": 0.8977361436377951,
-    "return_15d": 0.4351542466392022,
-    "return_1m": 0.9686743223185745,
-    "return_ytd": -0.007736345350450868,
-    "return_1y": 1.4123185562965768,
-    "return_2y": 4.554279242840953,
-    "return_3y": 4.360113039967706,
-    "close": 129.246,
-    "marketCap": 76495279,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1121",
-   "type": "CHARACTER",
-   "name": "파운드 ETF — 변동성"
-  },
-  {
-   "id": "A_127",
-   "type": "ASSET",
-   "name": "EWU(영국)",
-   "exposure": {
-    "ticker": "EWU",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.22807381297949014,
-    "return_3d": -0.698438783894817,
-    "return_7d": 2.350201143341102,
-    "return_15d": 4.383502483264956,
-    "return_1m": 2.371876323591704,
-    "return_ytd": 8.726945569050848,
-    "return_1y": 21.031547320981492,
-    "return_2y": 34.76442709785337,
-    "return_3y": 45.252403846153854,
-    "close": 48.34,
-    "marketCap": 3638992999,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1122",
-   "type": "CHARACTER",
-   "name": "영국 증시 ETF"
-  },
-  {
-   "id": "A_2041",
-   "type": "ASSET",
-   "name": "HSBC홀딩스",
-   "exposure": {
-    "ticker": "HSBC",
-    "exchange": "NYSE",
-    "country": "UK"
-   },
-   "metrics": {
-    "return_1d": -1.687372519933239,
-    "return_3d": -0.9804837052946103,
-    "return_7d": 2.553191489361706,
-    "return_15d": 6.841309823677588,
-    "return_1m": 7.39315373708731,
-    "return_ytd": 31.80857675574891,
-    "return_1y": 72.78800716962688,
-    "return_2y": 143.6021134849529,
-    "return_3y": 154.10975317517378,
-    "close": 106.04,
-    "marketCap": 364429788800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1123",
-   "type": "CHARACTER",
-   "name": "글로벌 은행 — 파운드 약세 수혜"
-  },
-  {
-   "id": "A_2088",
-   "type": "ASSET",
-   "name": "쉘",
-   "exposure": {
-    "ticker": "SHEL",
-    "exchange": "NYSE",
-    "country": "GB"
-   },
-   "metrics": {
-    "return_1d": -1.3614404918752654,
-    "return_3d": -0.7402496961661731,
-    "return_7d": 1.6519574564381134,
-    "return_15d": 6.432887098684992,
-    "return_1m": 14.973125159969292,
-    "return_ytd": 19.088016967126208,
-    "return_1y": 24.777777777777786,
-    "return_2y": 24.829790190357095,
-    "return_3y": 47.423695438135894,
-    "close": 89.84,
-    "marketCap": 250482454800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1124",
-   "type": "CHARACTER",
-   "name": "에너지 — 달러매출·수출주"
-  },
-  {
-   "id": "A_1315",
-   "type": "ASSET",
-   "name": "AstraZeneca",
-   "exposure": {
-    "ticker": "AZN",
-    "exchange": "NASDAQ",
-    "country": "UK"
-   },
-   "metrics": {
-    "return_1d": -1.4876242324491917,
-    "return_3d": -9.174740282479277,
-    "return_7d": -8.058608058608051,
-    "return_15d": -5.398176291793311,
-    "return_1m": -18.163651661758518,
-    "return_ytd": -14.812787387781912,
-    "return_1y": 5.505084745762723,
-    "return_2y": -0.11553273427471478,
-    "return_3y": 10.49417779040045,
-    "close": 155.62,
-    "marketCap": 241346771136,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1125",
-   "type": "CHARACTER",
-   "name": "제약 — 글로벌 매출 수출주"
-  },
-  {
-   "id": "A_2089",
-   "type": "ASSET",
-   "name": "BP",
-   "exposure": {
-    "ticker": "BP",
-    "exchange": "NYSE",
-    "country": "GB"
-   },
-   "metrics": {
-    "return_1d": -4.112065070040671,
-    "return_3d": -4.025327905924925,
-    "return_7d": -3.1492469192149763,
-    "return_15d": 2.512077294685988,
-    "return_1m": 13.506285102968697,
-    "return_ytd": 18.44822774211554,
-    "return_1y": 33.669291338582674,
-    "return_2y": 21.91898879632288,
-    "return_3y": 15.608825932988267,
-    "close": 42.44,
-    "marketCap": 111299112200,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1126",
-   "type": "CHARACTER",
-   "name": "에너지 — 달러매출"
-  },
-  {
-   "id": "A_2090",
-   "type": "ASSET",
-   "name": "디아지오",
-   "exposure": {
-    "ticker": "DEO",
-    "exchange": "NYSE",
-    "country": "GB"
-   },
-   "metrics": {
-    "return_1d": -0.7682747712122961,
-    "return_3d": -1.3810913990568219,
-    "return_7d": 5.717380837746755,
-    "return_15d": 8.512478379046208,
-    "return_1m": 7.542549283702704,
-    "return_ytd": 0.8496957170742947,
-    "return_1y": -9.880976810999375,
-    "return_2y": -29.954541829491987,
-    "return_3y": -50.39254447896076,
-    "close": 87.83,
-    "marketCap": 48824257850,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_1127",
-   "type": "CHARACTER",
-   "name": "주류 — 글로벌 수출주"
-  },
-  {
-   "id": "M_113",
-   "type": "MACRO",
-   "name": "지정학리스크"
-  },
-  {
-   "id": "M_263",
-   "type": "MACRO",
-   "name": "통화가치변동"
-  },
-  {
-   "id": "M_262",
-   "type": "MACRO",
-   "name": "금융시장변동성고조"
-  }
- ],
- "edges": [
-  {
-   "from": "A_063",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012316"
-   ]
-  },
-  {
-   "from": "A_063",
-   "to": "C_1120",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017204"
-   ]
-  },
-  {
-   "from": "A_1606",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012317"
-   ]
-  },
-  {
-   "from": "A_1606",
-   "to": "C_1121",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017205"
-   ]
-  },
-  {
-   "from": "A_127",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012318"
-   ]
-  },
-  {
-   "from": "A_127",
-   "to": "C_1122",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017206"
-   ]
-  },
-  {
-   "from": "A_2041",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012319"
-   ]
-  },
-  {
-   "from": "A_2041",
-   "to": "C_1123",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017207"
-   ]
-  },
-  {
-   "from": "A_2088",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012320"
-   ]
-  },
-  {
-   "from": "A_2088",
-   "to": "C_1124",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017208"
-   ]
-  },
-  {
-   "from": "A_1315",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012321"
-   ]
-  },
-  {
-   "from": "A_1315",
-   "to": "C_1125",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017209"
-   ]
-  },
-  {
-   "from": "A_2089",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012322"
-   ]
-  },
-  {
-   "from": "A_2089",
-   "to": "C_1126",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017210"
-   ]
-  },
-  {
-   "from": "A_2090",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012323"
-   ]
-  },
-  {
-   "from": "A_2090",
-   "to": "C_1127",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017211"
-   ]
-  },
-  {
-   "from": "M_113",
-   "to": "T_496",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012324"
-   ]
-  },
-  {
-   "from": "M_263",
-   "to": "T_496",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012325"
-   ]
-  },
-  {
-   "from": "M_262",
-   "to": "T_496",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012326"
-   ]
-  },
-  {
-   "from": "A_2088",
-   "to": "A_2089",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019925"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "쉘과 BP는 영국 석유·가스 메이저 경쟁"
-  },
-  {
-   "from": "A_1315",
-   "to": "A_2090",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019926"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아스트라제네카와 디아지오는 영국 대표 수출주 경쟁"
-  },
-  {
-   "from": "A_2041",
-   "to": "A_2088",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019927"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HSBC홀딩스는 쉘 등 영국 대기업의 금융 파트너"
-  },
-  {
-   "from": "A_127",
-   "to": "T_496",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020845"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_063",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012316"
-   ]
-  },
-  {
-   "from": "A_063",
-   "to": "C_1120",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017204"
-   ]
-  },
-  {
-   "from": "A_1606",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012317"
-   ]
-  },
-  {
-   "from": "A_1606",
-   "to": "C_1121",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017205"
-   ]
-  },
-  {
-   "from": "A_127",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012318"
-   ]
-  },
-  {
-   "from": "A_127",
-   "to": "C_1122",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017206"
-   ]
-  },
-  {
-   "from": "A_2041",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012319"
-   ]
-  },
-  {
-   "from": "A_2041",
-   "to": "C_1123",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017207"
-   ]
-  },
-  {
-   "from": "A_2088",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012320"
-   ]
-  },
-  {
-   "from": "A_2088",
-   "to": "C_1124",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017208"
-   ]
-  },
-  {
-   "from": "A_1315",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012321"
-   ]
-  },
-  {
-   "from": "A_1315",
-   "to": "C_1125",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017209"
-   ]
-  },
-  {
-   "from": "A_2089",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012322"
-   ]
-  },
-  {
-   "from": "A_2089",
-   "to": "C_1126",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017210"
-   ]
-  },
-  {
-   "from": "A_2090",
-   "to": "T_496",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012323"
-   ]
-  },
-  {
-   "from": "A_2090",
-   "to": "C_1127",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017211"
-   ]
-  },
-  {
-   "from": "M_113",
-   "to": "T_496",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012324"
-   ]
-  },
-  {
-   "from": "M_263",
-   "to": "T_496",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012325"
-   ]
-  },
-  {
-   "from": "M_262",
-   "to": "T_496",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012326"
-   ]
-  },
-  {
-   "from": "A_2088",
-   "to": "A_2089",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019925"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "쉘과 BP는 영국 석유·가스 메이저 경쟁"
-  },
-  {
-   "from": "A_1315",
-   "to": "A_2090",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019926"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아스트라제네카와 디아지오는 영국 대표 수출주 경쟁"
-  },
-  {
-   "from": "A_2041",
-   "to": "A_2088",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019927"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HSBC홀딩스는 쉘 등 영국 대기업의 금융 파트너"
-  },
-  {
-   "from": "A_127",
-   "to": "T_496",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020845"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

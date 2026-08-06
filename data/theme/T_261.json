@@ -1,785 +1,803 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_261",
- "themeName": "삼성전자 모멘텀 수혜주",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_261",
+  "themeName": "삼성전자 모멘텀 수혜주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-05-27T00:00:00+09:00",
+    "description": "삼성전자 주가·배당 확대 모멘텀 수혜 — (1) 삼성전자 지분 보유 계열사 (삼성생명 8.51%·삼성화재 1.49%·삼성물산) 강제매각·밸류업 기대, (2) 삼성전자우 배당 레버리지, (3) 삼성전기·SDS 실적사이클 동조화. 지분 10% 룰·자사주소각·주주환원 핵심.",
+    "notes": "7 자산 + 4 macro + 4 character (A→C HAS_TRAIT)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_261",
+      "type": "THEME",
+      "name": "삼성전자 모멘텀 수혜주"
+    },
+    {
+      "id": "A_088",
+      "type": "ASSET",
+      "name": "삼성전자",
+      "exposure": {
+        "ticker": "005930",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성그룹 주력 - 메모리·파운드리·HBM·MX",
+        "theme_role": "테마 중심 모멘텀 자산",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 2.499999999999991,
+        "close": 246000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -6.285714285714283,
+        "return_7d": -3.149606299212604,
+        "return_15d": -6.4638783269961975,
+        "return_1m": -22.64150943396226,
+        "return_ytd": 92.04441355881055,
+        "return_1y": 275.125085345341,
+        "return_2y": 192.0399521433893,
+        "return_3y": 343.1818181818182,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1667",
+      "type": "ASSET",
+      "name": "삼성전자우",
+      "exposure": {
+        "ticker": "005935",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성전자 우선주 (배당수익률 구조적 우위)",
+        "theme_role": "배당 확대 직접 수혜·레버리지",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 4.251700680272119,
+        "close": 183900,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -3.717277486910997,
+        "return_7d": 2.280311457174644,
+        "return_15d": 0.933040614709113,
+        "return_1m": -13.458823529411767,
+        "return_ytd": 95.71100076146585,
+        "return_1y": 239.3896452791334,
+        "return_2y": 180.75478225581963,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1229",
+      "type": "ASSET",
+      "name": "삼성생명",
+      "exposure": {
+        "ticker": "032830",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성그룹 생명보험 - 삼성전자 지분 약 8.51%",
+        "theme_role": "삼성전자 지분 10% 룰 강제매각 기대",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 5.755395683453246,
+        "close": 294000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -5.61797752808989,
+        "return_7d": -5.61797752808989,
+        "return_15d": -7.2555205047318605,
+        "return_1m": -25.285895806861504,
+        "return_ytd": 88.09980806142035,
+        "return_1y": 135.40837633832004,
+        "return_2y": 257.4810097728146,
+        "return_3y": 470.4225352112676,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_1220",
+      "type": "ASSET",
+      "name": "삼성화재",
+      "exposure": {
+        "ticker": "000810",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성그룹 손해보험 - 삼성전자 지분 약 1.49%",
+        "theme_role": "지분 룰 동일 적용 (소규모)",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": 2.741935483870961,
+        "close": 637000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 0.7911392405063333,
+        "return_7d": -1.2403100775193798,
+        "return_15d": 1.4331210191082855,
+        "return_1m": -5.489614243323437,
+        "return_ytd": 33.48101359755245,
+        "return_1y": 43.28307507850173,
+        "return_2y": 89.47934875851456,
+        "return_3y": 175.54479418886197,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_384",
+      "type": "ASSET",
+      "name": "삼성물산",
+      "exposure": {
+        "ticker": "028260",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성그룹 지주역할 (이재용 지분 1대주주)",
+        "theme_role": "그룹 지배구조 최정점, 밸류업 수혜",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 7.751937984496116,
+        "close": 347500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -1.1379800853485111,
+        "return_7d": 2.356406480117812,
+        "return_15d": -1.836158192090398,
+        "return_1m": -22.69187986651835,
+        "return_ytd": 41.836734693877546,
+        "return_1y": 106.81964416427276,
+        "return_2y": 142.93409663902287,
+        "return_3y": 284.01826484018267,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_085",
+      "type": "ASSET",
+      "name": "삼성전기",
+      "exposure": {
+        "ticker": "009150",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "MLCC·기판·카메라모듈 (삼성전자 핵심 공급)",
+        "theme_role": "삼성전자 실적사이클 동조화",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 14.430379746835452,
+        "close": 1356000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 18.739054290718048,
+        "return_7d": 2.3396226415094423,
+        "return_15d": 7.619047619047614,
+        "return_1m": -25.82056892778993,
+        "return_ytd": 402.22222222222223,
+        "return_1y": 906.9287203364304,
+        "return_2y": 750.1311879064903,
+        "return_3y": 778.1127129750982,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_791",
+      "type": "ASSET",
+      "name": "삼성SDS",
+      "exposure": {
+        "ticker": "018260",
+        "exchange": "KOSPI",
+        "country": "KR",
+        "business_desc": "삼성그룹 IT 서비스·물류 (SDS·Cello)",
+        "theme_role": "삼성전자 캡티브 매출 수혜",
+        "theme_status": "Support"
+      },
+      "metrics": {
+        "return_1d": 5.011389521640086,
+        "close": 230500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 11.89320388349515,
+        "return_7d": 5.977011494252871,
+        "return_15d": 19.430051813471504,
+        "return_1m": 19.244697361614072,
+        "return_ytd": 31.639063392347232,
+        "return_1y": 35.07313445206817,
+        "return_2y": 51.980595260017196,
+        "return_3y": 65.70212765957446,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "M_174",
+      "type": "MACRO",
+      "name": "삼성전자지분/배당가치"
+    },
+    {
+      "id": "M_173",
+      "type": "MACRO",
+      "name": "주주환원정책"
+    },
+    {
+      "id": "M_126",
+      "type": "MACRO",
+      "name": "지주사밸류업/상법개정"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "C_208",
+      "type": "CHARACTER",
+      "name": "지배구조최정점"
+    },
+    {
+      "id": "C_209",
+      "type": "CHARACTER",
+      "name": "삼성전자지분10%"
+    },
+    {
+      "id": "C_210",
+      "type": "CHARACTER",
+      "name": "배당자사주소각기대"
+    },
+    {
+      "id": "C_211",
+      "type": "CHARACTER",
+      "name": "실적싸이클동조화"
+    },
+    {
+      "id": "C_4035",
+      "type": "CHARACTER",
+      "name": "삼성그룹핵심_반도체"
+    },
+    {
+      "id": "C_4036",
+      "type": "CHARACTER",
+      "name": "선주_배당"
+    },
+    {
+      "id": "C_4037",
+      "type": "CHARACTER",
+      "name": "삼성금융계열_손해보험1위"
+    },
+    {
+      "id": "C_4038",
+      "type": "CHARACTER",
+      "name": "삼성그룹SI·물류"
+    },
+    {
+      "id": "A_2906",
+      "type": "ASSET",
+      "name": "KODEX 삼성그룹",
+      "exposure": {
+        "ticker": "102780",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 5.588484335309052,
+        "return_3d": 1.9415491518495864,
+        "return_7d": -0.9924573243350499,
+        "return_15d": 0.30162879549566757,
+        "return_1m": -17.662594915813802,
+        "return_ytd": 75.45558936221907,
+        "return_1y": 152.4159873768526,
+        "return_2y": 162.15949945825804,
+        "return_3y": null,
+        "close": 24940,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-05-27T00:00:00+09:00",
-  "description": "삼성전자 주가·배당 확대 모멘텀 수혜 — (1) 삼성전자 지분 보유 계열사 (삼성생명 8.51%·삼성화재 1.49%·삼성물산) 강제매각·밸류업 기대, (2) 삼성전자우 배당 레버리지, (3) 삼성전기·SDS 실적사이클 동조화. 지분 10% 룰·자사주소각·주주환원 핵심.",
-  "notes": "7 자산 + 4 macro + 4 character (A→C HAS_TRAIT)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_088",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008607"
+      ]
+    },
+    {
+      "from": "A_1667",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008609"
+      ]
+    },
+    {
+      "from": "A_1229",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015610"
+      ]
+    },
+    {
+      "from": "A_1220",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008611"
+      ]
+    },
+    {
+      "from": "A_384",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015611"
+      ]
+    },
+    {
+      "from": "A_085",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015612"
+      ]
+    },
+    {
+      "from": "A_791",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008613"
+      ]
+    },
+    {
+      "from": "M_174",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008615"
+      ]
+    },
+    {
+      "from": "M_173",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008616"
+      ]
+    },
+    {
+      "from": "M_126",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008617"
+      ]
+    },
+    {
+      "from": "M_145",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008618"
+      ]
+    },
+    {
+      "from": "A_384",
+      "to": "C_208",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015613"
+      ]
+    },
+    {
+      "from": "A_1229",
+      "to": "C_209",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015614"
+      ]
+    },
+    {
+      "from": "A_1229",
+      "to": "C_210",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015615"
+      ]
+    },
+    {
+      "from": "A_085",
+      "to": "C_211",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015616"
+      ]
+    },
+    {
+      "from": "A_088",
+      "to": "C_4035",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008608"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1667",
+      "to": "C_4036",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008610"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1220",
+      "to": "C_4037",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008612"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_791",
+      "to": "C_4038",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008614"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1229",
+      "to": "A_088",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_019413"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성생명은 삼성전자 지분을 보유한 주요 주주"
+    },
+    {
+      "from": "A_384",
+      "to": "A_088",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_019414"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성물산은 삼성전자 지배구조 상 지분 보유"
+    },
+    {
+      "from": "A_085",
+      "to": "A_088",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019415"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전기는 삼성전자에 MLCC·카메라 모듈 등 전자부품 공급"
+    },
+    {
+      "from": "A_791",
+      "to": "A_088",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019416"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성SDS는 삼성전자에 IT 서비스·물류 ICT 공급"
+    },
+    {
+      "from": "A_1229",
+      "to": "A_1220",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019417"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성생명과 삼성화재는 삼성 금융 계열사로 지배구조 연결"
+    },
+    {
+      "from": "A_2906",
+      "to": "T_261",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020678"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_088",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008607"
+      ]
+    },
+    {
+      "from": "A_1667",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008609"
+      ]
+    },
+    {
+      "from": "A_1229",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015610"
+      ]
+    },
+    {
+      "from": "A_1220",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008611"
+      ]
+    },
+    {
+      "from": "A_384",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015611"
+      ]
+    },
+    {
+      "from": "A_085",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015612"
+      ]
+    },
+    {
+      "from": "A_791",
+      "to": "T_261",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_008613"
+      ]
+    },
+    {
+      "from": "M_174",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008615"
+      ]
+    },
+    {
+      "from": "M_173",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008616"
+      ]
+    },
+    {
+      "from": "M_126",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008617"
+      ]
+    },
+    {
+      "from": "M_145",
+      "to": "T_261",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_008618"
+      ]
+    },
+    {
+      "from": "A_384",
+      "to": "C_208",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015613"
+      ]
+    },
+    {
+      "from": "A_1229",
+      "to": "C_209",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015614"
+      ]
+    },
+    {
+      "from": "A_1229",
+      "to": "C_210",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015615"
+      ]
+    },
+    {
+      "from": "A_085",
+      "to": "C_211",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015616"
+      ]
+    },
+    {
+      "from": "A_088",
+      "to": "C_4035",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008608"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1667",
+      "to": "C_4036",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008610"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1220",
+      "to": "C_4037",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008612"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_791",
+      "to": "C_4038",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_008614"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1229",
+      "to": "A_088",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_019413"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성생명은 삼성전자 지분을 보유한 주요 주주"
+    },
+    {
+      "from": "A_384",
+      "to": "A_088",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_019414"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성물산은 삼성전자 지배구조 상 지분 보유"
+    },
+    {
+      "from": "A_085",
+      "to": "A_088",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019415"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성전기는 삼성전자에 MLCC·카메라 모듈 등 전자부품 공급"
+    },
+    {
+      "from": "A_791",
+      "to": "A_088",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019416"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성SDS는 삼성전자에 IT 서비스·물류 ICT 공급"
+    },
+    {
+      "from": "A_1229",
+      "to": "A_1220",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019417"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "삼성생명과 삼성화재는 삼성 금융 계열사로 지배구조 연결"
+    },
+    {
+      "from": "A_2906",
+      "to": "T_261",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020678"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_261",
-   "type": "THEME",
-   "name": "삼성전자 모멘텀 수혜주"
-  },
-  {
-   "id": "A_088",
-   "type": "ASSET",
-   "name": "삼성전자",
-   "exposure": {
-    "ticker": "005930",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "삼성그룹 주력 - 메모리·파운드리·HBM·MX",
-    "theme_role": "테마 중심 모멘텀 자산",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 2.499999999999991,
-    "close": 246000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -6.285714285714283,
-    "return_7d": -3.149606299212604,
-    "return_15d": -6.4638783269961975,
-    "return_1m": -22.64150943396226,
-    "return_ytd": 92.04441355881055,
-    "return_1y": 275.125085345341,
-    "return_2y": 192.0399521433893,
-    "return_3y": 343.1818181818182,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1667",
-   "type": "ASSET",
-   "name": "삼성전자우",
-   "exposure": {
-    "ticker": "005935",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "삼성전자 우선주 (배당수익률 구조적 우위)",
-    "theme_role": "배당 확대 직접 수혜·레버리지",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 4.251700680272119,
-    "close": 183900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -3.717277486910997,
-    "return_7d": 2.280311457174644,
-    "return_15d": 0.933040614709113,
-    "return_1m": -13.458823529411767,
-    "return_ytd": 95.71100076146585,
-    "return_1y": 239.3896452791334,
-    "return_2y": 180.75478225581963,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1229",
-   "type": "ASSET",
-   "name": "삼성생명",
-   "exposure": {
-    "ticker": "032830",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "삼성그룹 생명보험 - 삼성전자 지분 약 8.51%",
-    "theme_role": "삼성전자 지분 10% 룰 강제매각 기대",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 5.755395683453246,
-    "close": 294000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -5.61797752808989,
-    "return_7d": -5.61797752808989,
-    "return_15d": -7.2555205047318605,
-    "return_1m": -25.285895806861504,
-    "return_ytd": 88.09980806142035,
-    "return_1y": 135.40837633832004,
-    "return_2y": 257.4810097728146,
-    "return_3y": 470.4225352112676,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_1220",
-   "type": "ASSET",
-   "name": "삼성화재",
-   "exposure": {
-    "ticker": "000810",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "삼성그룹 손해보험 - 삼성전자 지분 약 1.49%",
-    "theme_role": "지분 룰 동일 적용 (소규모)",
-    "theme_status": "Support"
-   },
-   "metrics": {
-    "return_1d": 2.741935483870961,
-    "close": 637000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 0.7911392405063333,
-    "return_7d": -1.2403100775193798,
-    "return_15d": 1.4331210191082855,
-    "return_1m": -5.489614243323437,
-    "return_ytd": 33.48101359755245,
-    "return_1y": 43.28307507850173,
-    "return_2y": 89.47934875851456,
-    "return_3y": 175.54479418886197,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_384",
-   "type": "ASSET",
-   "name": "삼성물산",
-   "exposure": {
-    "ticker": "028260",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "삼성그룹 지주역할 (이재용 지분 1대주주)",
-    "theme_role": "그룹 지배구조 최정점, 밸류업 수혜",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 7.751937984496116,
-    "close": 347500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -1.1379800853485111,
-    "return_7d": 2.356406480117812,
-    "return_15d": -1.836158192090398,
-    "return_1m": -22.69187986651835,
-    "return_ytd": 41.836734693877546,
-    "return_1y": 106.81964416427276,
-    "return_2y": 142.93409663902287,
-    "return_3y": 284.01826484018267,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_085",
-   "type": "ASSET",
-   "name": "삼성전기",
-   "exposure": {
-    "ticker": "009150",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "MLCC·기판·카메라모듈 (삼성전자 핵심 공급)",
-    "theme_role": "삼성전자 실적사이클 동조화",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 14.430379746835452,
-    "close": 1356000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 18.739054290718048,
-    "return_7d": 2.3396226415094423,
-    "return_15d": 7.619047619047614,
-    "return_1m": -25.82056892778993,
-    "return_ytd": 402.22222222222223,
-    "return_1y": 906.9287203364304,
-    "return_2y": 750.1311879064903,
-    "return_3y": 778.1127129750982,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_791",
-   "type": "ASSET",
-   "name": "삼성SDS",
-   "exposure": {
-    "ticker": "018260",
-    "exchange": "KOSPI",
-    "country": "KR",
-    "business_desc": "삼성그룹 IT 서비스·물류 (SDS·Cello)",
-    "theme_role": "삼성전자 캡티브 매출 수혜",
-    "theme_status": "Support"
-   },
-   "metrics": {
-    "return_1d": 5.011389521640086,
-    "close": 230500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 11.89320388349515,
-    "return_7d": 5.977011494252871,
-    "return_15d": 19.430051813471504,
-    "return_1m": 19.244697361614072,
-    "return_ytd": 31.639063392347232,
-    "return_1y": 35.07313445206817,
-    "return_2y": 51.980595260017196,
-    "return_3y": 65.70212765957446,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "M_174",
-   "type": "MACRO",
-   "name": "삼성전자지분/배당가치"
-  },
-  {
-   "id": "M_173",
-   "type": "MACRO",
-   "name": "주주환원정책"
-  },
-  {
-   "id": "M_126",
-   "type": "MACRO",
-   "name": "지주사밸류업/상법개정"
-  },
-  {
-   "id": "M_145",
-   "type": "MACRO",
-   "name": "금리인하"
-  },
-  {
-   "id": "C_208",
-   "type": "CHARACTER",
-   "name": "지배구조최정점"
-  },
-  {
-   "id": "C_209",
-   "type": "CHARACTER",
-   "name": "삼성전자지분10%"
-  },
-  {
-   "id": "C_210",
-   "type": "CHARACTER",
-   "name": "배당자사주소각기대"
-  },
-  {
-   "id": "C_211",
-   "type": "CHARACTER",
-   "name": "실적싸이클동조화"
-  },
-  {
-   "id": "C_4035",
-   "type": "CHARACTER",
-   "name": "삼성그룹핵심_반도체"
-  },
-  {
-   "id": "C_4036",
-   "type": "CHARACTER",
-   "name": "선주_배당"
-  },
-  {
-   "id": "C_4037",
-   "type": "CHARACTER",
-   "name": "삼성금융계열_손해보험1위"
-  },
-  {
-   "id": "C_4038",
-   "type": "CHARACTER",
-   "name": "삼성그룹SI·물류"
-  },
-  {
-   "id": "A_2906",
-   "type": "ASSET",
-   "name": "KODEX 삼성그룹",
-   "exposure": {
-    "ticker": "102780",
-    "exchange": "KRX",
-    "country": "KR"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_088",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008607"
-   ]
-  },
-  {
-   "from": "A_1667",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008609"
-   ]
-  },
-  {
-   "from": "A_1229",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015610"
-   ]
-  },
-  {
-   "from": "A_1220",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008611"
-   ]
-  },
-  {
-   "from": "A_384",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015611"
-   ]
-  },
-  {
-   "from": "A_085",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015612"
-   ]
-  },
-  {
-   "from": "A_791",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008613"
-   ]
-  },
-  {
-   "from": "M_174",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008615"
-   ]
-  },
-  {
-   "from": "M_173",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008616"
-   ]
-  },
-  {
-   "from": "M_126",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008617"
-   ]
-  },
-  {
-   "from": "M_145",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008618"
-   ]
-  },
-  {
-   "from": "A_384",
-   "to": "C_208",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015613"
-   ]
-  },
-  {
-   "from": "A_1229",
-   "to": "C_209",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015614"
-   ]
-  },
-  {
-   "from": "A_1229",
-   "to": "C_210",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015615"
-   ]
-  },
-  {
-   "from": "A_085",
-   "to": "C_211",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015616"
-   ]
-  },
-  {
-   "from": "A_088",
-   "to": "C_4035",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008608"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1667",
-   "to": "C_4036",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008610"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1220",
-   "to": "C_4037",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008612"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_791",
-   "to": "C_4038",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008614"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1229",
-   "to": "A_088",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_019413"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성생명은 삼성전자 지분을 보유한 주요 주주"
-  },
-  {
-   "from": "A_384",
-   "to": "A_088",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_019414"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성물산은 삼성전자 지배구조 상 지분 보유"
-  },
-  {
-   "from": "A_085",
-   "to": "A_088",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019415"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전기는 삼성전자에 MLCC·카메라 모듈 등 전자부품 공급"
-  },
-  {
-   "from": "A_791",
-   "to": "A_088",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019416"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성SDS는 삼성전자에 IT 서비스·물류 ICT 공급"
-  },
-  {
-   "from": "A_1229",
-   "to": "A_1220",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019417"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성생명과 삼성화재는 삼성 금융 계열사로 지배구조 연결"
-  },
-  {
-   "from": "A_2906",
-   "to": "T_261",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020678"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_088",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008607"
-   ]
-  },
-  {
-   "from": "A_1667",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008609"
-   ]
-  },
-  {
-   "from": "A_1229",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015610"
-   ]
-  },
-  {
-   "from": "A_1220",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008611"
-   ]
-  },
-  {
-   "from": "A_384",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015611"
-   ]
-  },
-  {
-   "from": "A_085",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015612"
-   ]
-  },
-  {
-   "from": "A_791",
-   "to": "T_261",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_008613"
-   ]
-  },
-  {
-   "from": "M_174",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008615"
-   ]
-  },
-  {
-   "from": "M_173",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008616"
-   ]
-  },
-  {
-   "from": "M_126",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008617"
-   ]
-  },
-  {
-   "from": "M_145",
-   "to": "T_261",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_008618"
-   ]
-  },
-  {
-   "from": "A_384",
-   "to": "C_208",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015613"
-   ]
-  },
-  {
-   "from": "A_1229",
-   "to": "C_209",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015614"
-   ]
-  },
-  {
-   "from": "A_1229",
-   "to": "C_210",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015615"
-   ]
-  },
-  {
-   "from": "A_085",
-   "to": "C_211",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015616"
-   ]
-  },
-  {
-   "from": "A_088",
-   "to": "C_4035",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008608"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1667",
-   "to": "C_4036",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008610"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1220",
-   "to": "C_4037",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008612"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_791",
-   "to": "C_4038",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_008614"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1229",
-   "to": "A_088",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_019413"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성생명은 삼성전자 지분을 보유한 주요 주주"
-  },
-  {
-   "from": "A_384",
-   "to": "A_088",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_019414"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성물산은 삼성전자 지배구조 상 지분 보유"
-  },
-  {
-   "from": "A_085",
-   "to": "A_088",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019415"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성전기는 삼성전자에 MLCC·카메라 모듈 등 전자부품 공급"
-  },
-  {
-   "from": "A_791",
-   "to": "A_088",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019416"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성SDS는 삼성전자에 IT 서비스·물류 ICT 공급"
-  },
-  {
-   "from": "A_1229",
-   "to": "A_1220",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019417"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "삼성생명과 삼성화재는 삼성 금융 계열사로 지배구조 연결"
-  },
-  {
-   "from": "A_2906",
-   "to": "T_261",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020678"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

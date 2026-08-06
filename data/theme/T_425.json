@@ -1,733 +1,751 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_425",
- "themeName": "미국BDC_사모대출_PrivateCredit",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_425",
+  "themeName": "미국BDC_사모대출_PrivateCredit",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "미국 BDC (Business Development Company) 사모대출 메가 — Ares·Main Street·Hercules·MFIC·Sixth Street·Blue Owl OBDC·Golub. 변동금리 시니어 시큐어드 대출 + 8-12% 배당. Fed 금리 인하 + 사모대출 폭발 + LBO 활성화 trifecta.",
+    "notes": "T_425 신규 — Russell 2000 BDC 사모대출",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_425",
+      "type": "THEME",
+      "name": "미국BDC_사모대출_PrivateCredit"
+    },
+    {
+      "id": "A_2235",
+      "type": "ASSET",
+      "name": "에이리스캐피탈",
+      "exposure": {
+        "ticker": "ARCC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.6793893129770865,
+        "return_3d": 2.985074626865658,
+        "return_7d": 2.276336686077296,
+        "return_15d": 2.114164904862581,
+        "return_1m": 4.602057390362768,
+        "return_ytd": -5.47945205479452,
+        "return_1y": -13.749999999999996,
+        "return_2y": -7.73638968481376,
+        "return_3y": -1.4285714285714346,
+        "close": 19.32,
+        "marketCap": 13872201365,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_625",
+      "type": "CHARACTER",
+      "name": "BDC최대규모_25bnUSD"
+    },
+    {
+      "id": "A_2236",
+      "type": "ASSET",
+      "name": "메인스트리트캐피탈",
+      "exposure": {
+        "ticker": "MAIN",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.8197725284339494,
+        "return_3d": 3.1244256570483353,
+        "return_7d": 4.293680297397784,
+        "return_15d": 5.055233102415291,
+        "return_1m": 7.059721427208543,
+        "return_ytd": -9.133603238866394,
+        "return_1y": -12.587630472036137,
+        "return_2y": 9.63266901133255,
+        "return_3y": 32.74189732670925,
+        "close": 56.11,
+        "marketCap": 5217657678,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_626",
+      "type": "CHARACTER",
+      "name": "BDC2위_월별배당내부운용"
+    },
+    {
+      "id": "A_2237",
+      "type": "ASSET",
+      "name": "허큘리스캐피탈",
+      "exposure": {
+        "ticker": "HTGC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.1255924170615939,
+        "return_3d": 1.6443361753958552,
+        "return_7d": 5.699810006333128,
+        "return_15d": 3.6002482929857305,
+        "return_1m": 4.377736085053163,
+        "return_ytd": -11.505832449628839,
+        "return_1y": -13.79132231404958,
+        "return_2y": -22.588126159554722,
+        "return_3y": -0.4770423375074384,
+        "close": 16.69,
+        "marketCap": 3123767160,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_627",
+      "type": "CHARACTER",
+      "name": "벤처대출BDC1위_Venture"
+    },
+    {
+      "id": "A_2238",
+      "type": "ASSET",
+      "name": "MFIC",
+      "exposure": {
+        "ticker": "MFIC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.268041237113394,
+        "return_3d": -0.8368200836820106,
+        "return_7d": -1.147028154327423,
+        "return_15d": -4.53172205438066,
+        "return_1m": -5.010020040080166,
+        "return_ytd": -17.277486910994767,
+        "return_1y": -23.238866396761125,
+        "return_2y": -33.2394366197183,
+        "return_3y": -30.294117647058815,
+        "close": 9.48,
+        "marketCap": 780892513,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_628",
+      "type": "CHARACTER",
+      "name": "미드캡사모대출_Apollo자회사"
+    },
+    {
+      "id": "A_2239",
+      "type": "ASSET",
+      "name": "식스스트리트",
+      "exposure": {
+        "ticker": "TSLX",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.38867295946694025,
+        "return_3d": 5.361305361305346,
+        "return_7d": 5.545826036193802,
+        "return_15d": 3.7887485648679498,
+        "return_1m": 5.607476635513997,
+        "return_ytd": -16.52816251154202,
+        "return_1y": -24.001681378730567,
+        "return_2y": -13.368471490177303,
+        "return_3y": -9.100050276520877,
+        "close": 18.08,
+        "marketCap": 1717954368,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_629",
+      "type": "CHARACTER",
+      "name": "SixthStreet_상장BDC_Senior"
+    },
+    {
+      "id": "A_2240",
+      "type": "ASSET",
+      "name": "블루아울캐피탈콥(OBDC)",
+      "exposure": {
+        "ticker": "OBDC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.0535714285714213,
+        "return_3d": 2.0465116279069884,
+        "return_7d": 0.45787545787545625,
+        "return_15d": -1.1711711711711592,
+        "return_1m": 1.2927054478301114,
+        "return_ytd": -12.659235668789803,
+        "return_1y": -22.14336408800567,
+        "return_2y": -29.317010309278345,
+        "return_3y": -22.52824858757062,
+        "close": 10.97,
+        "marketCap": 5444470501,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_630",
+      "type": "CHARACTER",
+      "name": "BlueOwl자회사_OBDC_OBDE합병"
+    },
+    {
+      "id": "A_2241",
+      "type": "ASSET",
+      "name": "골럽캐피탈",
+      "exposure": {
+        "ticker": "GBDC",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.0642201834862317,
+        "return_3d": -0.1558846453624252,
+        "return_7d": -0.5434782608695676,
+        "return_15d": -3.247734138972802,
+        "return_1m": 0.47058823529411153,
+        "return_ytd": -5.600589535740608,
+        "return_1y": -12.91638341264446,
+        "return_2y": -16.164921465968586,
+        "return_3y": -8.040201005025116,
+        "close": 12.81,
+        "marketCap": 3336943269,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_631",
+      "type": "CHARACTER",
+      "name": "Golub_Sponsor전문_Middle"
+    },
+    {
+      "id": "M_145",
+      "type": "MACRO",
+      "name": "금리인하"
+    },
+    {
+      "id": "M_401",
+      "type": "MACRO",
+      "name": "사모대출_PrivateCredit_사이클"
+    },
+    {
+      "id": "M_402",
+      "type": "MACRO",
+      "name": "기업레버리지_LBO활성화"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "A_2935",
+      "type": "ASSET",
+      "name": "VanEck BDC Income ETF",
+      "exposure": {
+        "ticker": "BIZD",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.851851851851849,
+        "return_3d": 2.580645161290329,
+        "return_7d": 2.0866773675762396,
+        "return_15d": 0.39463299131807794,
+        "return_1m": 2.829426030719495,
+        "return_ytd": -10.79943899018232,
+        "return_1y": -20.200752823086564,
+        "return_2y": -23.649459783913564,
+        "return_3y": -19.39163498098858,
+        "close": 12.72,
+        "marketCap": 1673598918,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "미국 BDC (Business Development Company) 사모대출 메가 — Ares·Main Street·Hercules·MFIC·Sixth Street·Blue Owl OBDC·Golub. 변동금리 시니어 시큐어드 대출 + 8-12% 배당. Fed 금리 인하 + 사모대출 폭발 + LBO 활성화 trifecta.",
-  "notes": "T_425 신규 — Russell 2000 BDC 사모대출",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2235",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011574"
+      ]
+    },
+    {
+      "from": "A_2235",
+      "to": "C_625",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016599"
+      ]
+    },
+    {
+      "from": "A_2236",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011575"
+      ]
+    },
+    {
+      "from": "A_2236",
+      "to": "C_626",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016600"
+      ]
+    },
+    {
+      "from": "A_2237",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011576"
+      ]
+    },
+    {
+      "from": "A_2237",
+      "to": "C_627",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016601"
+      ]
+    },
+    {
+      "from": "A_2238",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011577"
+      ]
+    },
+    {
+      "from": "A_2238",
+      "to": "C_628",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016602"
+      ]
+    },
+    {
+      "from": "A_2239",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011578"
+      ]
+    },
+    {
+      "from": "A_2239",
+      "to": "C_629",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016603"
+      ]
+    },
+    {
+      "from": "A_2240",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011579"
+      ]
+    },
+    {
+      "from": "A_2240",
+      "to": "C_630",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016604"
+      ]
+    },
+    {
+      "from": "A_2241",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011580"
+      ]
+    },
+    {
+      "from": "A_2241",
+      "to": "C_631",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016605"
+      ]
+    },
+    {
+      "from": "M_145",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011581"
+      ]
+    },
+    {
+      "from": "M_401",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011582"
+      ]
+    },
+    {
+      "from": "M_402",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011583"
+      ]
+    },
+    {
+      "from": "M_212",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011584"
+      ]
+    },
+    {
+      "from": "A_2235",
+      "to": "A_2236",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019644"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에이리스캐피탈과 메인스트리트캐피탈은 미국 BDC 시장 경쟁"
+    },
+    {
+      "from": "A_2237",
+      "to": "A_2235",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019645"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "허큘리스캐피탈과 에이리스캐피탈은 벤처·성장 대출 시장 경쟁"
+    },
+    {
+      "from": "A_2240",
+      "to": "A_2235",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019646"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "블루아울캐피탈콥과 에이리스캐피탈은 사모대출 BDC 시장 경쟁"
+    },
+    {
+      "from": "A_2241",
+      "to": "A_2240",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019647"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "골럽캐피탈과 블루아울캐피탈콥은 중견기업 사모대출 시장 경쟁"
+    },
+    {
+      "from": "A_2239",
+      "to": "A_2238",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019648"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "식스스트리트와 MFIC는 중견기업 직접 대출 시장 경쟁"
+    },
+    {
+      "from": "A_2935",
+      "to": "T_425",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020782"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2235",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011574"
+      ]
+    },
+    {
+      "from": "A_2235",
+      "to": "C_625",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016599"
+      ]
+    },
+    {
+      "from": "A_2236",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011575"
+      ]
+    },
+    {
+      "from": "A_2236",
+      "to": "C_626",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016600"
+      ]
+    },
+    {
+      "from": "A_2237",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011576"
+      ]
+    },
+    {
+      "from": "A_2237",
+      "to": "C_627",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016601"
+      ]
+    },
+    {
+      "from": "A_2238",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011577"
+      ]
+    },
+    {
+      "from": "A_2238",
+      "to": "C_628",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016602"
+      ]
+    },
+    {
+      "from": "A_2239",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011578"
+      ]
+    },
+    {
+      "from": "A_2239",
+      "to": "C_629",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016603"
+      ]
+    },
+    {
+      "from": "A_2240",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011579"
+      ]
+    },
+    {
+      "from": "A_2240",
+      "to": "C_630",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016604"
+      ]
+    },
+    {
+      "from": "A_2241",
+      "to": "T_425",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011580"
+      ]
+    },
+    {
+      "from": "A_2241",
+      "to": "C_631",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016605"
+      ]
+    },
+    {
+      "from": "M_145",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011581"
+      ]
+    },
+    {
+      "from": "M_401",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011582"
+      ]
+    },
+    {
+      "from": "M_402",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011583"
+      ]
+    },
+    {
+      "from": "M_212",
+      "to": "T_425",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011584"
+      ]
+    },
+    {
+      "from": "A_2235",
+      "to": "A_2236",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019644"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에이리스캐피탈과 메인스트리트캐피탈은 미국 BDC 시장 경쟁"
+    },
+    {
+      "from": "A_2237",
+      "to": "A_2235",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019645"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "허큘리스캐피탈과 에이리스캐피탈은 벤처·성장 대출 시장 경쟁"
+    },
+    {
+      "from": "A_2240",
+      "to": "A_2235",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019646"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "블루아울캐피탈콥과 에이리스캐피탈은 사모대출 BDC 시장 경쟁"
+    },
+    {
+      "from": "A_2241",
+      "to": "A_2240",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019647"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "골럽캐피탈과 블루아울캐피탈콥은 중견기업 사모대출 시장 경쟁"
+    },
+    {
+      "from": "A_2239",
+      "to": "A_2238",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019648"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "식스스트리트와 MFIC는 중견기업 직접 대출 시장 경쟁"
+    },
+    {
+      "from": "A_2935",
+      "to": "T_425",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020782"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_425",
-   "type": "THEME",
-   "name": "미국BDC_사모대출_PrivateCredit"
-  },
-  {
-   "id": "A_2235",
-   "type": "ASSET",
-   "name": "에이리스캐피탈",
-   "exposure": {
-    "ticker": "ARCC",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.5039123630672844,
-    "return_3d": 4.3547530536378165,
-    "return_7d": 4.632587859424908,
-    "return_15d": 4.576902607770084,
-    "return_1m": 5.87284482758621,
-    "return_ytd": -3.864970645792576,
-    "return_1y": -12.23760607414025,
-    "return_2y": -7.659774436090238,
-    "return_3y": 0.5115089514066362,
-    "close": 19.65,
-    "marketCap": 14109148904,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_625",
-   "type": "CHARACTER",
-   "name": "BDC최대규모_25bnUSD"
-  },
-  {
-   "id": "A_2236",
-   "type": "ASSET",
-   "name": "메인스트리트캐피탈",
-   "exposure": {
-    "ticker": "MAIN",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.511210762331828,
-    "return_3d": 4.977957384276266,
-    "return_7d": 6.882363942397607,
-    "return_15d": 7.647391222452438,
-    "return_1m": 9.294320137693624,
-    "return_ytd": -7.4493927125506065,
-    "return_1y": -10.689170182841078,
-    "return_2y": 11.078717201166178,
-    "return_3y": 35.202271114265415,
-    "close": 57.15,
-    "marketCap": 5314367070,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_626",
-   "type": "CHARACTER",
-   "name": "BDC2위_월별배당내부운용"
-  },
-  {
-   "id": "A_2237",
-   "type": "ASSET",
-   "name": "허큘리스캐피탈",
-   "exposure": {
-    "ticker": "HTGC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.41641879833431705,
-    "return_3d": 5.897114178168117,
-    "return_7d": 7.310870947234571,
-    "return_15d": 5.2369077306733125,
-    "return_1m": 5.171339563862909,
-    "return_ytd": -10.498409331919412,
-    "return_1y": -11.853785900783286,
-    "return_2y": -22.104291647438867,
-    "return_3y": 1.7480409885473058,
-    "close": 16.88,
-    "marketCap": 3159328320,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_627",
-   "type": "CHARACTER",
-   "name": "벤처대출BDC1위_Venture"
-  },
-  {
-   "id": "A_2238",
-   "type": "ASSET",
-   "name": "MFIC",
-   "exposure": {
-    "ticker": "MFIC",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.2057613168724437,
-    "return_3d": 0.41407867494822614,
-    "return_7d": 1.8907563025210017,
-    "return_15d": -0.7164790174002067,
-    "return_1m": -2.902902902902915,
-    "return_ytd": -15.357766143106467,
-    "return_1y": -21.457489878542514,
-    "return_2y": -32.35704323570433,
-    "return_3y": -28.98975109809664,
-    "close": 9.7,
-    "marketCap": 799014492,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_628",
-   "type": "CHARACTER",
-   "name": "미드캡사모대출_Apollo자회사"
-  },
-  {
-   "id": "A_2239",
-   "type": "ASSET",
-   "name": "식스스트리트",
-   "exposure": {
-    "ticker": "TSLX",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.6365688487584906,
-    "return_3d": 4.466357308584712,
-    "return_7d": 7.715311004784708,
-    "return_15d": 5.014577259475228,
-    "return_1m": 4.709302325581399,
-    "return_ytd": -16.851338873499532,
-    "return_1y": -24.675867837724795,
-    "return_2y": -14.278914802475008,
-    "return_3y": -9.315206445115798,
-    "close": 18.01,
-    "marketCap": 1711302996,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_629",
-   "type": "CHARACTER",
-   "name": "SixthStreet_상장BDC_Senior"
-  },
-  {
-   "id": "A_2240",
-   "type": "ASSET",
-   "name": "블루아울캐피탈콥(OBDC)",
-   "exposure": {
-    "ticker": "OBDC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.8181818181818077,
-    "return_3d": 3.7998146431881485,
-    "return_7d": 3.9925719591457742,
-    "return_15d": 1.9108280254777066,
-    "return_1m": 2.564102564102555,
-    "return_ytd": -10.828025477707016,
-    "return_1y": -20.45454545454546,
-    "return_2y": -28.57142857142857,
-    "return_3y": -20.73602264685068,
-    "close": 11.2,
-    "marketCap": 5558620749,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_630",
-   "type": "CHARACTER",
-   "name": "BlueOwl자회사_OBDC_OBDE합병"
-  },
-  {
-   "id": "A_2241",
-   "type": "ASSET",
-   "name": "골럽캐피탈",
-   "exposure": {
-    "ticker": "GBDC",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.83396512509476,
-    "return_3d": 1.869158878504673,
-    "return_7d": 2.3474178403755985,
-    "return_15d": 0.4608294930875667,
-    "return_1m": 1.631701631701632,
-    "return_ytd": -3.6109064112011757,
-    "return_1y": -11.141304347826086,
-    "return_2y": -15.339805825242713,
-    "return_3y": -6.3707945597709426,
-    "close": 13.08,
-    "marketCap": 3407276967,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_631",
-   "type": "CHARACTER",
-   "name": "Golub_Sponsor전문_Middle"
-  },
-  {
-   "id": "M_145",
-   "type": "MACRO",
-   "name": "금리인하"
-  },
-  {
-   "id": "M_401",
-   "type": "MACRO",
-   "name": "사모대출_PrivateCredit_사이클"
-  },
-  {
-   "id": "M_402",
-   "type": "MACRO",
-   "name": "기업레버리지_LBO활성화"
-  },
-  {
-   "id": "M_212",
-   "type": "MACRO",
-   "name": "AI데이터센터확대"
-  },
-  {
-   "id": "A_2935",
-   "type": "ASSET",
-   "name": "VanEck BDC Income ETF",
-   "exposure": {
-    "ticker": "BIZD",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2235",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011574"
-   ]
-  },
-  {
-   "from": "A_2235",
-   "to": "C_625",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016599"
-   ]
-  },
-  {
-   "from": "A_2236",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011575"
-   ]
-  },
-  {
-   "from": "A_2236",
-   "to": "C_626",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016600"
-   ]
-  },
-  {
-   "from": "A_2237",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011576"
-   ]
-  },
-  {
-   "from": "A_2237",
-   "to": "C_627",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016601"
-   ]
-  },
-  {
-   "from": "A_2238",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011577"
-   ]
-  },
-  {
-   "from": "A_2238",
-   "to": "C_628",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016602"
-   ]
-  },
-  {
-   "from": "A_2239",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011578"
-   ]
-  },
-  {
-   "from": "A_2239",
-   "to": "C_629",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016603"
-   ]
-  },
-  {
-   "from": "A_2240",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011579"
-   ]
-  },
-  {
-   "from": "A_2240",
-   "to": "C_630",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016604"
-   ]
-  },
-  {
-   "from": "A_2241",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011580"
-   ]
-  },
-  {
-   "from": "A_2241",
-   "to": "C_631",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016605"
-   ]
-  },
-  {
-   "from": "M_145",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011581"
-   ]
-  },
-  {
-   "from": "M_401",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011582"
-   ]
-  },
-  {
-   "from": "M_402",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011583"
-   ]
-  },
-  {
-   "from": "M_212",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011584"
-   ]
-  },
-  {
-   "from": "A_2235",
-   "to": "A_2236",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019644"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에이리스캐피탈과 메인스트리트캐피탈은 미국 BDC 시장 경쟁"
-  },
-  {
-   "from": "A_2237",
-   "to": "A_2235",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019645"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "허큘리스캐피탈과 에이리스캐피탈은 벤처·성장 대출 시장 경쟁"
-  },
-  {
-   "from": "A_2240",
-   "to": "A_2235",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019646"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "블루아울캐피탈콥과 에이리스캐피탈은 사모대출 BDC 시장 경쟁"
-  },
-  {
-   "from": "A_2241",
-   "to": "A_2240",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019647"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "골럽캐피탈과 블루아울캐피탈콥은 중견기업 사모대출 시장 경쟁"
-  },
-  {
-   "from": "A_2239",
-   "to": "A_2238",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019648"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "식스스트리트와 MFIC는 중견기업 직접 대출 시장 경쟁"
-  },
-  {
-   "from": "A_2935",
-   "to": "T_425",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020782"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2235",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011574"
-   ]
-  },
-  {
-   "from": "A_2235",
-   "to": "C_625",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016599"
-   ]
-  },
-  {
-   "from": "A_2236",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011575"
-   ]
-  },
-  {
-   "from": "A_2236",
-   "to": "C_626",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016600"
-   ]
-  },
-  {
-   "from": "A_2237",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011576"
-   ]
-  },
-  {
-   "from": "A_2237",
-   "to": "C_627",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016601"
-   ]
-  },
-  {
-   "from": "A_2238",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011577"
-   ]
-  },
-  {
-   "from": "A_2238",
-   "to": "C_628",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016602"
-   ]
-  },
-  {
-   "from": "A_2239",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011578"
-   ]
-  },
-  {
-   "from": "A_2239",
-   "to": "C_629",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016603"
-   ]
-  },
-  {
-   "from": "A_2240",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011579"
-   ]
-  },
-  {
-   "from": "A_2240",
-   "to": "C_630",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016604"
-   ]
-  },
-  {
-   "from": "A_2241",
-   "to": "T_425",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011580"
-   ]
-  },
-  {
-   "from": "A_2241",
-   "to": "C_631",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016605"
-   ]
-  },
-  {
-   "from": "M_145",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011581"
-   ]
-  },
-  {
-   "from": "M_401",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011582"
-   ]
-  },
-  {
-   "from": "M_402",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011583"
-   ]
-  },
-  {
-   "from": "M_212",
-   "to": "T_425",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011584"
-   ]
-  },
-  {
-   "from": "A_2235",
-   "to": "A_2236",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019644"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에이리스캐피탈과 메인스트리트캐피탈은 미국 BDC 시장 경쟁"
-  },
-  {
-   "from": "A_2237",
-   "to": "A_2235",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019645"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "허큘리스캐피탈과 에이리스캐피탈은 벤처·성장 대출 시장 경쟁"
-  },
-  {
-   "from": "A_2240",
-   "to": "A_2235",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019646"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "블루아울캐피탈콥과 에이리스캐피탈은 사모대출 BDC 시장 경쟁"
-  },
-  {
-   "from": "A_2241",
-   "to": "A_2240",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019647"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "골럽캐피탈과 블루아울캐피탈콥은 중견기업 사모대출 시장 경쟁"
-  },
-  {
-   "from": "A_2239",
-   "to": "A_2238",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019648"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "식스스트리트와 MFIC는 중견기업 직접 대출 시장 경쟁"
-  },
-  {
-   "from": "A_2935",
-   "to": "T_425",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020782"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

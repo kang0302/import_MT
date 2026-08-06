@@ -1,631 +1,649 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_422",
- "themeName": "북미Class1철도빅5",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_422",
+  "themeName": "북미Class1철도빅5",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-27T00:00:00+09:00",
+    "description": "북미 Class I 철도 빅5 — Union Pacific (서부 1위)·CSX (동부 1위·PSR 선두)·Norfolk Southern (동부 2위, 2023 Ohio 회복)·CPKC (멕시코·캐나다·미국 3국 통합 first-of-kind)·CNI (캐나다 1위, 석유샌드+곡물). 북미 nearshoring 화물 + PSR 마진 사이클 + 디젤 cost.",
+    "notes": "T_422 신규 — 북미 철도 Class I 빅5",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-27",
+        "kind": "수정",
+        "title": "UP-NS 합병·실적發 철도 강세 이벤트 추가",
+        "detail": "UP-NS 850억달러 합병 추진·CN 반대철회·2Q 실적 서프라이즈·STB 심사 리스크를 이벤트 DB에 반영."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_422",
+      "type": "THEME",
+      "name": "북미Class1철도빅5"
+    },
+    {
+      "id": "A_1764",
+      "type": "ASSET",
+      "name": "유니언퍼시픽",
+      "exposure": {
+        "ticker": "UNP",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.27332545976042066,
+        "return_3d": 1.1672885359258034,
+        "return_7d": -1.2562646174406944,
+        "return_15d": 2.489943126647254,
+        "return_1m": 4.3868324385419655,
+        "return_ytd": 27.437367944461233,
+        "return_1y": 33.09015581374404,
+        "return_2y": 19.782758480930585,
+        "return_3y": 27.376950262908384,
+        "close": 295.54,
+        "marketCap": 175573072679,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_594",
+      "type": "CHARACTER",
+      "name": "서부미국1위_듀오폴리"
+    },
+    {
+      "id": "A_2218",
+      "type": "ASSET",
+      "name": "CSX",
+      "exposure": {
+        "ticker": "CSX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.17636684303350414,
+        "return_3d": 1.4285714285714235,
+        "return_7d": -1.3127413127413168,
+        "return_15d": 3.4189763301638587,
+        "return_1m": 5.380333951762517,
+        "return_ytd": 40.94292803970221,
+        "return_1y": 44.16243654822334,
+        "return_2y": 45.641025641025635,
+        "return_3y": 53.421368547418965,
+        "close": 51.12,
+        "marketCap": 94698777600,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_595",
+      "type": "CHARACTER",
+      "name": "동부미국1위_PSR선두"
+    },
+    {
+      "id": "A_2219",
+      "type": "ASSET",
+      "name": "노포크서던",
+      "exposure": {
+        "ticker": "NSC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.1377208661763385,
+        "return_3d": 1.865983069035404,
+        "return_7d": -0.46890927624873013,
+        "return_15d": 4.01777561331953,
+        "return_1m": 5.887091776662334,
+        "return_ytd": 18.73393092905289,
+        "return_1y": 22.875017977851297,
+        "return_2y": 36.93700913607951,
+        "return_3y": 46.29907102187594,
+        "close": 341.74,
+        "marketCap": 76757537920,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_596",
+      "type": "CHARACTER",
+      "name": "동부미국2위_Ohio사고회복"
+    },
+    {
+      "id": "A_2220",
+      "type": "ASSET",
+      "name": "CPKC",
+      "exposure": {
+        "ticker": "CP",
+        "exchange": "NYSE",
+        "country": "CA"
+      },
+      "metrics": {
+        "return_1d": 0.9047776674390384,
+        "return_3d": 2.879964000449986,
+        "return_7d": 0.0547045951859948,
+        "return_15d": 1.0832320106112459,
+        "return_1m": 3.077096483318309,
+        "return_ytd": 22.83411685695098,
+        "return_1y": 22.91666666666665,
+        "return_2y": 9.102839417800057,
+        "return_3y": 11.131364685867041,
+        "close": 91.45,
+        "marketCap": 80391795035,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_597",
+      "type": "CHARACTER",
+      "name": "멕시코캐나다미국3국통합"
+    },
+    {
+      "id": "A_2221",
+      "type": "ASSET",
+      "name": "캐나다내셔널철도",
+      "exposure": {
+        "ticker": "CNI",
+        "exchange": "NYSE",
+        "country": "CA"
+      },
+      "metrics": {
+        "return_1d": 0.1885310290651976,
+        "return_3d": 0.25941356811571836,
+        "return_7d": -1.0397268777156965,
+        "return_15d": 2.854838709677421,
+        "return_1m": 3.876852907639683,
+        "return_ytd": 27.158524426719843,
+        "return_1y": 36.086214255228356,
+        "return_2y": 10.185745140388768,
+        "return_3y": 5.204982265115898,
+        "close": 127.54,
+        "marketCap": 77148946000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_598",
+      "type": "CHARACTER",
+      "name": "캐나다1위_석유샌드_곡물"
+    },
+    {
+      "id": "M_037",
+      "type": "MACRO",
+      "name": "유가하락"
+    },
+    {
+      "id": "M_397",
+      "type": "MACRO",
+      "name": "북미nearshoring화물량"
+    },
+    {
+      "id": "M_398",
+      "type": "MACRO",
+      "name": "PSR_정밀스케줄링철도"
+    },
+    {
+      "id": "M_399",
+      "type": "MACRO",
+      "name": "미국인프라법IIJA화물"
+    },
+    {
+      "id": "A_2918",
+      "type": "ASSET",
+      "name": "iShares U.S. Transportation ETF",
+      "exposure": {
+        "ticker": "IYT",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.2293682413204277,
+        "return_3d": 2.2146306985510567,
+        "return_7d": -0.47029135122735877,
+        "return_15d": -0.8909194745859494,
+        "return_1m": -0.4588734656418514,
+        "return_ytd": 15.201805629314924,
+        "return_1y": 27.960477805633378,
+        "return_2y": 31.50954834798423,
+        "return_3y": 29.934112009583693,
+        "close": 86.77,
+        "marketCap": 776623865,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-27T00:00:00+09:00",
-  "description": "북미 Class I 철도 빅5 — Union Pacific (서부 1위)·CSX (동부 1위·PSR 선두)·Norfolk Southern (동부 2위, 2023 Ohio 회복)·CPKC (멕시코·캐나다·미국 3국 통합 first-of-kind)·CNI (캐나다 1위, 석유샌드+곡물). 북미 nearshoring 화물 + PSR 마진 사이클 + 디젤 cost.",
-  "notes": "T_422 신규 — 북미 철도 Class I 빅5",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-27",
-    "kind": "수정",
-    "title": "UP-NS 합병·실적發 철도 강세 이벤트 추가",
-    "detail": "UP-NS 850억달러 합병 추진·CN 반대철회·2Q 실적 서프라이즈·STB 심사 리스크를 이벤트 DB에 반영."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1764",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011543"
+      ]
+    },
+    {
+      "from": "A_1764",
+      "to": "C_594",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016579"
+      ]
+    },
+    {
+      "from": "A_2218",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011544"
+      ]
+    },
+    {
+      "from": "A_2218",
+      "to": "C_595",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016580"
+      ]
+    },
+    {
+      "from": "A_2219",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011545"
+      ]
+    },
+    {
+      "from": "A_2219",
+      "to": "C_596",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016581"
+      ]
+    },
+    {
+      "from": "A_2220",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011546"
+      ]
+    },
+    {
+      "from": "A_2220",
+      "to": "C_597",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016582"
+      ]
+    },
+    {
+      "from": "A_2221",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011547"
+      ]
+    },
+    {
+      "from": "A_2221",
+      "to": "C_598",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016583"
+      ]
+    },
+    {
+      "from": "M_037",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011548"
+      ]
+    },
+    {
+      "from": "M_397",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011549"
+      ]
+    },
+    {
+      "from": "M_398",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011550"
+      ]
+    },
+    {
+      "from": "M_399",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011551"
+      ]
+    },
+    {
+      "from": "A_1764",
+      "to": "A_2219",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_018212"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "유니언퍼시픽이 2025년 7월 노포크서던을 기업가치 약 850억달러(주당 1.0주+현금 88.82달러)에 인수하기로 합의, 대륙횡단철도 창설 위해 STB 심사 진행 중."
+    },
+    {
+      "from": "A_2218",
+      "to": "A_2219",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018213"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "CSX와 노포크서던은 미국 동부 화물철도 시장을 양분하는 복점 구조의 직접 경쟁자."
+    },
+    {
+      "from": "A_2221",
+      "to": "A_2220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018214"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "캐나다내셔널철도와 CPKC는 캐나다를 관통하는 대륙횡단 Class1 철도로 서로 최대 라이벌."
+    },
+    {
+      "from": "A_1764",
+      "to": "A_2220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018215"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "CPKC가 KCS 인수로 텍사스·멕시코 회랑에서 유니언퍼시픽과 직접 경쟁하며, UP-NS 합병에도 공개 반대 입장."
+    },
+    {
+      "from": "A_2220",
+      "to": "A_2219",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018216"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "CPKC(70%)와 노포크서던(30%)이 메리디언~슈리브포트 구간 Meridian Speedway LLC 합작회사를 공동 운영."
+    },
+    {
+      "from": "A_2221",
+      "to": "A_1764",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018217"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "캐나다내셔널철도가 UP-NS 합병 지지 대가로 유니언퍼시픽으로부터 캔자스시티 Neff Yard 사용권과 멕시코행 직통 접근권을 확보하는 협정 체결."
+    },
+    {
+      "from": "A_2918",
+      "to": "T_422",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020779"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1764",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011543"
+      ]
+    },
+    {
+      "from": "A_1764",
+      "to": "C_594",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016579"
+      ]
+    },
+    {
+      "from": "A_2218",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011544"
+      ]
+    },
+    {
+      "from": "A_2218",
+      "to": "C_595",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016580"
+      ]
+    },
+    {
+      "from": "A_2219",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011545"
+      ]
+    },
+    {
+      "from": "A_2219",
+      "to": "C_596",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016581"
+      ]
+    },
+    {
+      "from": "A_2220",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011546"
+      ]
+    },
+    {
+      "from": "A_2220",
+      "to": "C_597",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016582"
+      ]
+    },
+    {
+      "from": "A_2221",
+      "to": "T_422",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011547"
+      ]
+    },
+    {
+      "from": "A_2221",
+      "to": "C_598",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016583"
+      ]
+    },
+    {
+      "from": "M_037",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011548"
+      ]
+    },
+    {
+      "from": "M_397",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011549"
+      ]
+    },
+    {
+      "from": "M_398",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011550"
+      ]
+    },
+    {
+      "from": "M_399",
+      "to": "T_422",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011551"
+      ]
+    },
+    {
+      "from": "A_1764",
+      "to": "A_2219",
+      "type": "INVESTS",
+      "evidence": [
+        "EV_018212"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "유니언퍼시픽이 2025년 7월 노포크서던을 기업가치 약 850억달러(주당 1.0주+현금 88.82달러)에 인수하기로 합의, 대륙횡단철도 창설 위해 STB 심사 진행 중."
+    },
+    {
+      "from": "A_2218",
+      "to": "A_2219",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018213"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "CSX와 노포크서던은 미국 동부 화물철도 시장을 양분하는 복점 구조의 직접 경쟁자."
+    },
+    {
+      "from": "A_2221",
+      "to": "A_2220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018214"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "캐나다내셔널철도와 CPKC는 캐나다를 관통하는 대륙횡단 Class1 철도로 서로 최대 라이벌."
+    },
+    {
+      "from": "A_1764",
+      "to": "A_2220",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018215"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "CPKC가 KCS 인수로 텍사스·멕시코 회랑에서 유니언퍼시픽과 직접 경쟁하며, UP-NS 합병에도 공개 반대 입장."
+    },
+    {
+      "from": "A_2220",
+      "to": "A_2219",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018216"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "CPKC(70%)와 노포크서던(30%)이 메리디언~슈리브포트 구간 Meridian Speedway LLC 합작회사를 공동 운영."
+    },
+    {
+      "from": "A_2221",
+      "to": "A_1764",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018217"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "캐나다내셔널철도가 UP-NS 합병 지지 대가로 유니언퍼시픽으로부터 캔자스시티 Neff Yard 사용권과 멕시코행 직통 접근권을 확보하는 협정 체결."
+    },
+    {
+      "from": "A_2918",
+      "to": "T_422",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020779"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_422",
-   "type": "THEME",
-   "name": "북미Class1철도빅5"
-  },
-  {
-   "id": "A_1764",
-   "type": "ASSET",
-   "name": "유니언퍼시픽",
-   "exposure": {
-    "ticker": "UNP",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.7580606393572173,
-    "return_3d": 2.3802943411870503,
-    "return_7d": -3.5695691787062223,
-    "return_15d": 2.7922303156434403,
-    "return_1m": 4.869245196220695,
-    "return_ytd": 27.7866413694968,
-    "return_1y": 35.07292616226072,
-    "return_2y": 20.747259911176318,
-    "return_3y": 27.314516475490834,
-    "close": 296.35,
-    "marketCap": 176054273832,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_594",
-   "type": "CHARACTER",
-   "name": "서부미국1위_듀오폴리"
-  },
-  {
-   "id": "A_2218",
-   "type": "ASSET",
-   "name": "CSX",
-   "exposure": {
-    "ticker": "CSX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.408187838651421,
-    "return_3d": 1.673640167364021,
-    "return_7d": -4.133007702423441,
-    "return_15d": 2.223557692307687,
-    "return_1m": 4.5482483097725845,
-    "return_ytd": 40.694789081885844,
-    "return_1y": 45.75835475578407,
-    "return_2y": 45.71673329525985,
-    "return_3y": 50.97633136094677,
-    "close": 51.03,
-    "marketCap": 94532054400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_595",
-   "type": "CHARACTER",
-   "name": "동부미국1위_PSR선두"
-  },
-  {
-   "id": "A_2219",
-   "type": "ASSET",
-   "name": "노포크서던",
-   "exposure": {
-    "ticker": "NSC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.3723451656022512,
-    "return_3d": 2.1980654628215524,
-    "return_7d": -2.67780756288144,
-    "return_15d": 4.418199063733441,
-    "return_1m": 6.017396707051881,
-    "return_ytd": 18.570634424292965,
-    "return_1y": 24.165908677460422,
-    "return_2y": 36.66653317848703,
-    "return_3y": 44.202653595875944,
-    "close": 341.27,
-    "marketCap": 76651972160,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_596",
-   "type": "CHARACTER",
-   "name": "동부미국2위_Ohio사고회복"
-  },
-  {
-   "id": "A_2220",
-   "type": "ASSET",
-   "name": "CPKC",
-   "exposure": {
-    "ticker": "CP",
-    "exchange": "NYSE",
-    "country": "CA"
-   },
-   "metrics": {
-    "return_1d": -0.022062879205753116,
-    "return_3d": 2.8017241379310276,
-    "return_7d": -1.8731052403637927,
-    "return_15d": -0.7881773399014746,
-    "return_1m": 2.9886363636363544,
-    "return_ytd": 21.732706514439215,
-    "return_1y": 24.355104281009886,
-    "return_2y": 10.362883584997551,
-    "return_3y": 9.12703190848887,
-    "close": 90.63,
-    "marketCap": 79670950071,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_597",
-   "type": "CHARACTER",
-   "name": "멕시코캐나다미국3국통합"
-  },
-  {
-   "id": "A_2221",
-   "type": "ASSET",
-   "name": "캐나다내셔널철도",
-   "exposure": {
-    "ticker": "CNI",
-    "exchange": "NYSE",
-    "country": "CA"
-   },
-   "metrics": {
-    "return_1d": 1.1843255703044342,
-    "return_3d": 0.13372138755605167,
-    "return_7d": -1.6836577077540826,
-    "return_15d": 2.011379116916423,
-    "return_1m": 4.635870458655278,
-    "return_ytd": 26.919242273180455,
-    "return_1y": 37.08808959724317,
-    "return_2y": 10.522660184059717,
-    "return_3y": 5.3807947019867575,
-    "close": 127.3,
-    "marketCap": 77003770000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_598",
-   "type": "CHARACTER",
-   "name": "캐나다1위_석유샌드_곡물"
-  },
-  {
-   "id": "M_037",
-   "type": "MACRO",
-   "name": "유가하락"
-  },
-  {
-   "id": "M_397",
-   "type": "MACRO",
-   "name": "북미nearshoring화물량"
-  },
-  {
-   "id": "M_398",
-   "type": "MACRO",
-   "name": "PSR_정밀스케줄링철도"
-  },
-  {
-   "id": "M_399",
-   "type": "MACRO",
-   "name": "미국인프라법IIJA화물"
-  },
-  {
-   "id": "A_2918",
-   "type": "ASSET",
-   "name": "iShares U.S. Transportation ETF",
-   "exposure": {
-    "ticker": "IYT",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1764",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011543"
-   ]
-  },
-  {
-   "from": "A_1764",
-   "to": "C_594",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016579"
-   ]
-  },
-  {
-   "from": "A_2218",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011544"
-   ]
-  },
-  {
-   "from": "A_2218",
-   "to": "C_595",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016580"
-   ]
-  },
-  {
-   "from": "A_2219",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011545"
-   ]
-  },
-  {
-   "from": "A_2219",
-   "to": "C_596",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016581"
-   ]
-  },
-  {
-   "from": "A_2220",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011546"
-   ]
-  },
-  {
-   "from": "A_2220",
-   "to": "C_597",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016582"
-   ]
-  },
-  {
-   "from": "A_2221",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011547"
-   ]
-  },
-  {
-   "from": "A_2221",
-   "to": "C_598",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016583"
-   ]
-  },
-  {
-   "from": "M_037",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011548"
-   ]
-  },
-  {
-   "from": "M_397",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011549"
-   ]
-  },
-  {
-   "from": "M_398",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011550"
-   ]
-  },
-  {
-   "from": "M_399",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011551"
-   ]
-  },
-  {
-   "from": "A_1764",
-   "to": "A_2219",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_018212"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "유니언퍼시픽이 2025년 7월 노포크서던을 기업가치 약 850억달러(주당 1.0주+현금 88.82달러)에 인수하기로 합의, 대륙횡단철도 창설 위해 STB 심사 진행 중."
-  },
-  {
-   "from": "A_2218",
-   "to": "A_2219",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018213"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "CSX와 노포크서던은 미국 동부 화물철도 시장을 양분하는 복점 구조의 직접 경쟁자."
-  },
-  {
-   "from": "A_2221",
-   "to": "A_2220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018214"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "캐나다내셔널철도와 CPKC는 캐나다를 관통하는 대륙횡단 Class1 철도로 서로 최대 라이벌."
-  },
-  {
-   "from": "A_1764",
-   "to": "A_2220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018215"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "CPKC가 KCS 인수로 텍사스·멕시코 회랑에서 유니언퍼시픽과 직접 경쟁하며, UP-NS 합병에도 공개 반대 입장."
-  },
-  {
-   "from": "A_2220",
-   "to": "A_2219",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018216"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "CPKC(70%)와 노포크서던(30%)이 메리디언~슈리브포트 구간 Meridian Speedway LLC 합작회사를 공동 운영."
-  },
-  {
-   "from": "A_2221",
-   "to": "A_1764",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018217"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "캐나다내셔널철도가 UP-NS 합병 지지 대가로 유니언퍼시픽으로부터 캔자스시티 Neff Yard 사용권과 멕시코행 직통 접근권을 확보하는 협정 체결."
-  },
-  {
-   "from": "A_2918",
-   "to": "T_422",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020779"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1764",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011543"
-   ]
-  },
-  {
-   "from": "A_1764",
-   "to": "C_594",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016579"
-   ]
-  },
-  {
-   "from": "A_2218",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011544"
-   ]
-  },
-  {
-   "from": "A_2218",
-   "to": "C_595",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016580"
-   ]
-  },
-  {
-   "from": "A_2219",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011545"
-   ]
-  },
-  {
-   "from": "A_2219",
-   "to": "C_596",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016581"
-   ]
-  },
-  {
-   "from": "A_2220",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011546"
-   ]
-  },
-  {
-   "from": "A_2220",
-   "to": "C_597",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016582"
-   ]
-  },
-  {
-   "from": "A_2221",
-   "to": "T_422",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011547"
-   ]
-  },
-  {
-   "from": "A_2221",
-   "to": "C_598",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016583"
-   ]
-  },
-  {
-   "from": "M_037",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011548"
-   ]
-  },
-  {
-   "from": "M_397",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011549"
-   ]
-  },
-  {
-   "from": "M_398",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011550"
-   ]
-  },
-  {
-   "from": "M_399",
-   "to": "T_422",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011551"
-   ]
-  },
-  {
-   "from": "A_1764",
-   "to": "A_2219",
-   "type": "INVESTS",
-   "evidence": [
-    "EV_018212"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "유니언퍼시픽이 2025년 7월 노포크서던을 기업가치 약 850억달러(주당 1.0주+현금 88.82달러)에 인수하기로 합의, 대륙횡단철도 창설 위해 STB 심사 진행 중."
-  },
-  {
-   "from": "A_2218",
-   "to": "A_2219",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018213"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "CSX와 노포크서던은 미국 동부 화물철도 시장을 양분하는 복점 구조의 직접 경쟁자."
-  },
-  {
-   "from": "A_2221",
-   "to": "A_2220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018214"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "캐나다내셔널철도와 CPKC는 캐나다를 관통하는 대륙횡단 Class1 철도로 서로 최대 라이벌."
-  },
-  {
-   "from": "A_1764",
-   "to": "A_2220",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018215"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "CPKC가 KCS 인수로 텍사스·멕시코 회랑에서 유니언퍼시픽과 직접 경쟁하며, UP-NS 합병에도 공개 반대 입장."
-  },
-  {
-   "from": "A_2220",
-   "to": "A_2219",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018216"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "CPKC(70%)와 노포크서던(30%)이 메리디언~슈리브포트 구간 Meridian Speedway LLC 합작회사를 공동 운영."
-  },
-  {
-   "from": "A_2221",
-   "to": "A_1764",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018217"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "캐나다내셔널철도가 UP-NS 합병 지지 대가로 유니언퍼시픽으로부터 캔자스시티 Neff Yard 사용권과 멕시코행 직통 접근권을 확보하는 협정 체결."
-  },
-  {
-   "from": "A_2918",
-   "to": "T_422",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020779"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

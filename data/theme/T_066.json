@@ -1,1424 +1,1442 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_066",
- "themeName": "글로벌해상풍력주식",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_066",
+  "themeName": "글로벌해상풍력주식",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "notes": "g66 누적 import 기반 글로벌 해상풍력 주식 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "자산 CHR 백필",
+        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_066",
+      "type": "THEME",
+      "name": "글로벌해상풍력주식"
+    },
+    {
+      "id": "A_554",
+      "type": "ASSET",
+      "name": "SK오션플랜트",
+      "exposure": {
+        "ticker": "100090",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 4.776345716451869,
+        "close": 13820,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 10.383386581469644,
+        "return_7d": -6.810519217801758,
+        "return_15d": 6.965944272445812,
+        "return_1m": -8.597883597883593,
+        "return_ytd": -29.704984740590035,
+        "return_1y": -31.753086419753085,
+        "return_2y": -1.6370106761565806,
+        "return_3y": -4.215337734890811,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_545",
+      "type": "ASSET",
+      "name": "LS일렉트릭",
+      "exposure": {
+        "ticker": "010120",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 7.614213197969533,
+        "close": 241500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 14.71861471861471,
+        "return_7d": 6.000000000000005,
+        "return_15d": 12.94619072988812,
+        "return_1m": -2.9748283752860427,
+        "return_ytd": 116.08933684416805,
+        "return_1y": 271.4624726357439,
+        "return_2y": 432.65883314801243,
+        "return_3y": 2199.509001636661,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_555",
+      "type": "ASSET",
+      "name": "HD한국조선해양",
+      "exposure": {
+        "ticker": "009540",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 5.882352941176472,
+        "close": 383500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 2.990897269180759,
+        "return_7d": 4.623513870541607,
+        "return_15d": 21.100917431192666,
+        "return_1m": 8.493150684931505,
+        "return_ytd": 2.6331020463377097,
+        "return_1y": 20.735801659517872,
+        "return_2y": 160.63544607986623,
+        "return_3y": 433.5868187579214,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_556",
+      "type": "ASSET",
+      "name": "세진중공업",
+      "exposure": {
+        "ticker": "075580",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 6.965648854961826,
+        "close": 11210,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 10.770750988142286,
+        "return_7d": -4.757858963466443,
+        "return_15d": 4.2790697674418565,
+        "return_1m": -15.840840840840842,
+        "return_ytd": -34.186172124929534,
+        "return_1y": -1.1360604341063563,
+        "return_2y": 17.077511777647803,
+        "return_3y": 162.22222222222223,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_557",
+      "type": "ASSET",
+      "name": "씨에스윈드",
+      "exposure": {
+        "ticker": "112610",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.8858218318695172,
+        "close": 41000,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 9.919571045576415,
+        "return_7d": 2.372034956304625,
+        "return_15d": 3.9290240811153287,
+        "return_1m": -0.8464328899637219,
+        "return_ytd": 1.359703337453655,
+        "return_1y": -16.196453312491244,
+        "return_2y": -11.29139641888084,
+        "return_3y": -28.78378378378378,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_558",
+      "type": "ASSET",
+      "name": "동국S&C",
+      "exposure": {
+        "ticker": "100130",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.9795221843003308,
+        "close": 1494,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": 4.842105263157892,
+        "return_7d": -3.612903225806452,
+        "return_15d": -2.4167210973220166,
+        "return_1m": -5.263157894736848,
+        "return_ytd": -27.121951219512198,
+        "return_1y": -47.76223776223776,
+        "return_2y": -47.578947368421055,
+        "return_3y": -59.057377049180324,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_559",
+      "type": "ASSET",
+      "name": "씨에스베어링",
+      "exposure": {
+        "ticker": "297090",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -2.2222222222222254,
+        "close": 4180,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "return_3d": -1.2987012987012991,
+        "return_7d": 3.850931677018643,
+        "return_15d": -4.5662100456621,
+        "return_1m": -11.440677966101697,
+        "return_ytd": -29.629629629629626,
+        "return_1y": -43.360433604336045,
+        "return_2y": -47.48743718592965,
+        "return_3y": -47.90940766550522,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_311",
+      "type": "ASSET",
+      "name": "미쓰비시중공업",
+      "exposure": {
+        "ticker": "7011",
+        "exchange": "TSE",
+        "country": "JP"
+      },
+      "metrics": {
+        "return_1d": -2.224395013444147,
+        "close": 4000.0,
+        "marketCap": 13440837360000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 6.269925611052063,
+        "return_7d": 2.8013364173734345,
+        "return_15d": 6.780565936999472,
+        "return_1m": -2.676399026763987,
+        "return_ytd": -3.892359442575688,
+        "return_1y": 17.47430249632893,
+        "return_2y": 113.33333333333333,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_560",
+      "type": "ASSET",
+      "name": "베스타스",
+      "exposure": {
+        "ticker": "VWS",
+        "exchange": "CPH",
+        "country": "DK"
+      },
+      "metrics": {
+        "return_1d": -1.826484018264829,
+        "close": 172.0,
+        "marketCap": 168548066124,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.4608994557433475,
+        "return_7d": 0.4086398131932123,
+        "return_15d": -3.2892887264548754,
+        "return_1m": -4.444444444444439,
+        "return_ytd": -3.7223621606493174,
+        "return_1y": 42.561127227517616,
+        "return_2y": 6.93192415293753,
+        "return_3y": -9.129332206255281,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_561",
+      "type": "ASSET",
+      "name": "도미니언에너지",
+      "exposure": {
+        "ticker": "D",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.3724357122219089,
+        "close": 68.27,
+        "marketCap": 60045236538,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.3011421136330914,
+        "return_7d": -2.846164792941508,
+        "return_15d": -3.8044244046780418,
+        "return_1m": -2.2339968494916262,
+        "return_ytd": 15.243079000675209,
+        "return_1y": 11.68002617372812,
+        "return_2y": 27.702955480733248,
+        "return_3y": 27.488328664799244,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_562",
+      "type": "ASSET",
+      "name": "에퀴노르",
+      "exposure": {
+        "ticker": "EQNR",
+        "exchange": "NYSE",
+        "country": "NO"
+      },
+      "metrics": {
+        "return_1d": -2.655093183558843,
+        "close": 38.13,
+        "marketCap": 91159297500,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -7.226277372262768,
+        "return_7d": -0.9095634095633964,
+        "return_15d": 6.300529690549217,
+        "return_1m": 12.444706576231223,
+        "return_ytd": 55.315682281059075,
+        "return_1y": 51.189532117367186,
+        "return_2y": 43.561746987951835,
+        "return_3y": 24.28292046936116,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_563",
+      "type": "ASSET",
+      "name": "오스테드",
+      "exposure": {
+        "ticker": "ORSTED",
+        "exchange": "CPH",
+        "country": "DK"
+      },
+      "metrics": {
+        "return_1d": -3.6465638148667545,
+        "close": 137.4,
+        "marketCap": 58525718650,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -5.241379310344829,
+        "return_7d": -6.371379897785346,
+        "return_15d": -8.155080213903732,
+        "return_1m": -7.754279959718014,
+        "return_ytd": 7.343750000000004,
+        "return_1y": -21.020865666494217,
+        "return_2y": -37.72943575798776,
+        "return_3y": -59.867979086952715,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "BF_125",
+      "type": "BUSINESS_FIELD",
+      "name": "풍력개발"
+    },
+    {
+      "id": "BF_126",
+      "type": "BUSINESS_FIELD",
+      "name": "터빈제조"
+    },
+    {
+      "id": "BF_127",
+      "type": "BUSINESS_FIELD",
+      "name": "운송/EPC/기자재"
+    },
+    {
+      "id": "M_070",
+      "type": "MACRO",
+      "name": "트럼프정책리스크"
+    },
+    {
+      "id": "M_212",
+      "type": "MACRO",
+      "name": "AI데이터센터확대"
+    },
+    {
+      "id": "M_057",
+      "type": "MACRO",
+      "name": "저금리"
+    },
+    {
+      "id": "M_068",
+      "type": "MACRO",
+      "name": "고유가"
+    },
+    {
+      "id": "C_5508",
+      "type": "CHARACTER",
+      "name": "해상풍력하부구조"
+    },
+    {
+      "id": "C_5509",
+      "type": "CHARACTER",
+      "name": "해상풍력전력기기"
+    },
+    {
+      "id": "C_5510",
+      "type": "CHARACTER",
+      "name": "해상풍력설치선"
+    },
+    {
+      "id": "C_5511",
+      "type": "CHARACTER",
+      "name": "해상풍력구조물"
+    },
+    {
+      "id": "C_5512",
+      "type": "CHARACTER",
+      "name": "풍력타워1위"
+    },
+    {
+      "id": "C_5513",
+      "type": "CHARACTER",
+      "name": "풍력타워"
+    },
+    {
+      "id": "C_5514",
+      "type": "CHARACTER",
+      "name": "풍력베어링"
+    },
+    {
+      "id": "C_5515",
+      "type": "CHARACTER",
+      "name": "MHI풍력터빈JV"
+    },
+    {
+      "id": "C_5516",
+      "type": "CHARACTER",
+      "name": "풍력터빈1위"
+    },
+    {
+      "id": "C_5517",
+      "type": "CHARACTER",
+      "name": "미동부해상풍력발전"
+    },
+    {
+      "id": "C_5518",
+      "type": "CHARACTER",
+      "name": "노르웨이해상풍력개발"
+    },
+    {
+      "id": "C_5519",
+      "type": "CHARACTER",
+      "name": "세계1위해상풍력개발"
+    },
+    {
+      "id": "A_2879",
+      "type": "ASSET",
+      "name": "First Trust Global Wind Energy ETF",
+      "exposure": {
+        "ticker": "FAN",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.9648829431438197,
+        "return_3d": -1.179941002949858,
+        "return_7d": -1.9238812212463485,
+        "return_15d": -3.6169338265515827,
+        "return_1m": -3.059115336916085,
+        "return_ytd": 10.404896421845589,
+        "return_1y": 23.097112860892377,
+        "return_2y": 37.21474546518431,
+        "return_3y": 37.295081967213115,
+        "close": 23.45,
+        "marketCap": 300652778,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "notes": "g66 누적 import 기반 글로벌 해상풍력 주식 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "자산 CHR 백필",
-    "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_554",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002124"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002125"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002126"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_556",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002127"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_557",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002128"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_558",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002129"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_559",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002130"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_311",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002131"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002132"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002133"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_562",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002134"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_563",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002135"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_563",
+      "to": "BF_125",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002136"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "BF_125",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002137"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_562",
+      "to": "BF_125",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002138"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_311",
+      "to": "BF_126",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002139"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "BF_126",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002140"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_559",
+      "to": "BF_126",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002141"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_554",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002142"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002143"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002144"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_556",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002145"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_557",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002146"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_558",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002147"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_070",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002148"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002149"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_057",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002150"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_068",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002151"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_554",
+      "to": "C_5508",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014451"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "C_5509",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014452"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "C_5510",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014453"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_556",
+      "to": "C_5511",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014454"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_557",
+      "to": "C_5512",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014455"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_558",
+      "to": "C_5513",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014456"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_559",
+      "to": "C_5514",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014457"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_311",
+      "to": "C_5515",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014458"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "C_5516",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014459"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "C_5517",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014460"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_562",
+      "to": "C_5518",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014461"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_563",
+      "to": "C_5519",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014462"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "A_554",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019023"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HD한국조선해양은 해상풍력 설치선 건조하며 SK오션플랜트 등과 협력"
+    },
+    {
+      "from": "A_560",
+      "to": "A_563",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019024"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스와 오스테드는 해상풍력 터빈 및 개발 시장 경쟁"
+    },
+    {
+      "from": "A_557",
+      "to": "A_558",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019025"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "씨에스윈드와 동국S&C는 해상풍력 타워 제조 시장 경쟁"
+    },
+    {
+      "from": "A_311",
+      "to": "A_560",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019026"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "미쓰비시중공업과 베스타스는 해상풍력 터빈 시장 경쟁"
+    },
+    {
+      "from": "A_562",
+      "to": "A_563",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019027"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에퀴노르와 오스테드는 유럽 해상풍력 개발 시장 경쟁"
+    },
+    {
+      "from": "A_2879",
+      "to": "T_066",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020586"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_554",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002124"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002125"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002126"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_556",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002127"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_557",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002128"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_558",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002129"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_559",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002130"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_311",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002131"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002132"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002133"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_562",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002134"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_563",
+      "to": "T_066",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_002135"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_563",
+      "to": "BF_125",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002136"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "BF_125",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002137"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_562",
+      "to": "BF_125",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002138"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_311",
+      "to": "BF_126",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002139"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "BF_126",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002140"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_559",
+      "to": "BF_126",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002141"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_554",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002142"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002143"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002144"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_556",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002145"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_557",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002146"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_558",
+      "to": "BF_127",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_002147"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_070",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002148"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_212",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002149"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_057",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002150"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_068",
+      "to": "T_066",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_002151"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "A_554",
+      "to": "C_5508",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014451"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_545",
+      "to": "C_5509",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014452"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "C_5510",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014453"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_556",
+      "to": "C_5511",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014454"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_557",
+      "to": "C_5512",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014455"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_558",
+      "to": "C_5513",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014456"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_559",
+      "to": "C_5514",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014457"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_311",
+      "to": "C_5515",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014458"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_560",
+      "to": "C_5516",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014459"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_561",
+      "to": "C_5517",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014460"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_562",
+      "to": "C_5518",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014461"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_563",
+      "to": "C_5519",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_014462"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_555",
+      "to": "A_554",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019023"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "HD한국조선해양은 해상풍력 설치선 건조하며 SK오션플랜트 등과 협력"
+    },
+    {
+      "from": "A_560",
+      "to": "A_563",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019024"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베스타스와 오스테드는 해상풍력 터빈 및 개발 시장 경쟁"
+    },
+    {
+      "from": "A_557",
+      "to": "A_558",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019025"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "씨에스윈드와 동국S&C는 해상풍력 타워 제조 시장 경쟁"
+    },
+    {
+      "from": "A_311",
+      "to": "A_560",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019026"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "미쓰비시중공업과 베스타스는 해상풍력 터빈 시장 경쟁"
+    },
+    {
+      "from": "A_562",
+      "to": "A_563",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019027"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에퀴노르와 오스테드는 유럽 해상풍력 개발 시장 경쟁"
+    },
+    {
+      "from": "A_2879",
+      "to": "T_066",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020586"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_066",
-   "type": "THEME",
-   "name": "글로벌해상풍력주식"
-  },
-  {
-   "id": "A_554",
-   "type": "ASSET",
-   "name": "SK오션플랜트",
-   "exposure": {
-    "ticker": "100090",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 4.776345716451869,
-    "close": 13820,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 10.383386581469644,
-    "return_7d": -6.810519217801758,
-    "return_15d": 6.965944272445812,
-    "return_1m": -8.597883597883593,
-    "return_ytd": -29.704984740590035,
-    "return_1y": -31.753086419753085,
-    "return_2y": -1.6370106761565806,
-    "return_3y": -4.215337734890811,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_545",
-   "type": "ASSET",
-   "name": "LS일렉트릭",
-   "exposure": {
-    "ticker": "010120",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 7.614213197969533,
-    "close": 241500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 14.71861471861471,
-    "return_7d": 6.000000000000005,
-    "return_15d": 12.94619072988812,
-    "return_1m": -2.9748283752860427,
-    "return_ytd": 116.08933684416805,
-    "return_1y": 271.4624726357439,
-    "return_2y": 432.65883314801243,
-    "return_3y": 2199.509001636661,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_555",
-   "type": "ASSET",
-   "name": "HD한국조선해양",
-   "exposure": {
-    "ticker": "009540",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 5.882352941176472,
-    "close": 383500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 2.990897269180759,
-    "return_7d": 4.623513870541607,
-    "return_15d": 21.100917431192666,
-    "return_1m": 8.493150684931505,
-    "return_ytd": 2.6331020463377097,
-    "return_1y": 20.735801659517872,
-    "return_2y": 160.63544607986623,
-    "return_3y": 433.5868187579214,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_556",
-   "type": "ASSET",
-   "name": "세진중공업",
-   "exposure": {
-    "ticker": "075580",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 6.965648854961826,
-    "close": 11210,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 10.770750988142286,
-    "return_7d": -4.757858963466443,
-    "return_15d": 4.2790697674418565,
-    "return_1m": -15.840840840840842,
-    "return_ytd": -34.186172124929534,
-    "return_1y": -1.1360604341063563,
-    "return_2y": 17.077511777647803,
-    "return_3y": 162.22222222222223,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_557",
-   "type": "ASSET",
-   "name": "씨에스윈드",
-   "exposure": {
-    "ticker": "112610",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.8858218318695172,
-    "close": 41000,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 9.919571045576415,
-    "return_7d": 2.372034956304625,
-    "return_15d": 3.9290240811153287,
-    "return_1m": -0.8464328899637219,
-    "return_ytd": 1.359703337453655,
-    "return_1y": -16.196453312491244,
-    "return_2y": -11.29139641888084,
-    "return_3y": -28.78378378378378,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_558",
-   "type": "ASSET",
-   "name": "동국S&C",
-   "exposure": {
-    "ticker": "100130",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 1.9795221843003308,
-    "close": 1494,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": 4.842105263157892,
-    "return_7d": -3.612903225806452,
-    "return_15d": -2.4167210973220166,
-    "return_1m": -5.263157894736848,
-    "return_ytd": -27.121951219512198,
-    "return_1y": -47.76223776223776,
-    "return_2y": -47.578947368421055,
-    "return_3y": -59.057377049180324,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_559",
-   "type": "ASSET",
-   "name": "씨에스베어링",
-   "exposure": {
-    "ticker": "297090",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -2.2222222222222254,
-    "close": 4180,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "return_3d": -1.2987012987012991,
-    "return_7d": 3.850931677018643,
-    "return_15d": -4.5662100456621,
-    "return_1m": -11.440677966101697,
-    "return_ytd": -29.629629629629626,
-    "return_1y": -43.360433604336045,
-    "return_2y": -47.48743718592965,
-    "return_3y": -47.90940766550522,
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_311",
-   "type": "ASSET",
-   "name": "미쓰비시중공업",
-   "exposure": {
-    "ticker": "7011",
-    "exchange": "TSE",
-    "country": "JP"
-   },
-   "metrics": {
-    "return_1d": 7.686233219268224,
-    "close": 4091.0,
-    "marketCap": 13746616409939,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 9.502141327623125,
-    "return_7d": 3.700887198986069,
-    "return_15d": 8.861096327833963,
-    "return_1m": 7.885021097046407,
-    "return_ytd": -1.7059106198942797,
-    "return_1y": 19.970674486803517,
-    "return_2y": 104.55000000000001,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_560",
-   "type": "ASSET",
-   "name": "베스타스",
-   "exposure": {
-    "ticker": "VWS",
-    "exchange": "CPH",
-    "country": "DK"
-   },
-   "metrics": {
-    "return_1d": -0.08554319931566301,
-    "close": 175.2,
-    "marketCap": 171683850406,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.6521122767224274,
-    "return_7d": 0.9507346585998055,
-    "return_15d": -2.4498886414253906,
-    "return_1m": -4.782608695652179,
-    "return_ytd": -1.9311502938707092,
-    "return_1y": 42.55492270138321,
-    "return_2y": 10.327455919395456,
-    "return_3y": -6.4801964342905976,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_561",
-   "type": "ASSET",
-   "name": "도미니언에너지",
-   "exposure": {
-    "ticker": "D",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.6836363636363529,
-    "close": 69.23,
-    "marketCap": 60889581449,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.7313925139825095,
-    "return_7d": -2.6441631504922625,
-    "return_15d": -2.9172510518934103,
-    "return_1m": -0.05775339301185012,
-    "return_ytd": 16.84672518568535,
-    "return_1y": 14.583678198973683,
-    "return_2y": 30.088329261417023,
-    "return_3y": 29.383177570093455,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_562",
-   "type": "ASSET",
-   "name": "에퀴노르",
-   "exposure": {
-    "ticker": "EQNR",
-    "exchange": "NYSE",
-    "country": "NO"
-   },
-   "metrics": {
-    "return_1d": -1.8541718867451595,
-    "close": 39.17,
-    "marketCap": 93645677500,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -3.830100662902025,
-    "return_7d": -2.9244114002478283,
-    "return_15d": 8.234318872616765,
-    "return_1m": 22.17716781035557,
-    "return_ytd": 59.55193482688392,
-    "return_1y": 53.90962671905699,
-    "return_2y": 51.06054762822987,
-    "return_3y": 31.003344481605353,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_563",
-   "type": "ASSET",
-   "name": "오스테드",
-   "exposure": {
-    "ticker": "ORSTED",
-    "exchange": "CPH",
-    "country": "DK"
-   },
-   "metrics": {
-    "return_1d": -1.109570041608876,
-    "close": 142.6,
-    "marketCap": 60740665790,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.3831258644536604,
-    "return_7d": -4.838171504838174,
-    "return_15d": -5.154639175257736,
-    "return_1m": -7.010107597000326,
-    "return_ytd": 11.406249999999996,
-    "return_1y": -19.44413060671112,
-    "return_2y": -34.349247272225035,
-    "return_3y": -57.62006657156444,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "BF_125",
-   "type": "BUSINESS_FIELD",
-   "name": "풍력개발"
-  },
-  {
-   "id": "BF_126",
-   "type": "BUSINESS_FIELD",
-   "name": "터빈제조"
-  },
-  {
-   "id": "BF_127",
-   "type": "BUSINESS_FIELD",
-   "name": "운송/EPC/기자재"
-  },
-  {
-   "id": "M_070",
-   "type": "MACRO",
-   "name": "트럼프정책리스크"
-  },
-  {
-   "id": "M_212",
-   "type": "MACRO",
-   "name": "AI데이터센터확대"
-  },
-  {
-   "id": "M_057",
-   "type": "MACRO",
-   "name": "저금리"
-  },
-  {
-   "id": "M_068",
-   "type": "MACRO",
-   "name": "고유가"
-  },
-  {
-   "id": "C_5508",
-   "type": "CHARACTER",
-   "name": "해상풍력하부구조"
-  },
-  {
-   "id": "C_5509",
-   "type": "CHARACTER",
-   "name": "해상풍력전력기기"
-  },
-  {
-   "id": "C_5510",
-   "type": "CHARACTER",
-   "name": "해상풍력설치선"
-  },
-  {
-   "id": "C_5511",
-   "type": "CHARACTER",
-   "name": "해상풍력구조물"
-  },
-  {
-   "id": "C_5512",
-   "type": "CHARACTER",
-   "name": "풍력타워1위"
-  },
-  {
-   "id": "C_5513",
-   "type": "CHARACTER",
-   "name": "풍력타워"
-  },
-  {
-   "id": "C_5514",
-   "type": "CHARACTER",
-   "name": "풍력베어링"
-  },
-  {
-   "id": "C_5515",
-   "type": "CHARACTER",
-   "name": "MHI풍력터빈JV"
-  },
-  {
-   "id": "C_5516",
-   "type": "CHARACTER",
-   "name": "풍력터빈1위"
-  },
-  {
-   "id": "C_5517",
-   "type": "CHARACTER",
-   "name": "미동부해상풍력발전"
-  },
-  {
-   "id": "C_5518",
-   "type": "CHARACTER",
-   "name": "노르웨이해상풍력개발"
-  },
-  {
-   "id": "C_5519",
-   "type": "CHARACTER",
-   "name": "세계1위해상풍력개발"
-  },
-  {
-   "id": "A_2879",
-   "type": "ASSET",
-   "name": "First Trust Global Wind Energy ETF",
-   "exposure": {
-    "ticker": "FAN",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_554",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002124"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002125"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002126"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_556",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002127"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_557",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002128"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_558",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002129"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_559",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002130"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_311",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002131"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_560",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002132"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002133"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_562",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002134"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_563",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002135"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_563",
-   "to": "BF_125",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002136"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "BF_125",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002137"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_562",
-   "to": "BF_125",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002138"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_311",
-   "to": "BF_126",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002139"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_560",
-   "to": "BF_126",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002140"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_559",
-   "to": "BF_126",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002141"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_554",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002142"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002143"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002144"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_556",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002145"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_557",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002146"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_558",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002147"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_070",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002148"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_212",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002149"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_057",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002150"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_068",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002151"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_554",
-   "to": "C_5508",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014451"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "C_5509",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014452"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "C_5510",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014453"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_556",
-   "to": "C_5511",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014454"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_557",
-   "to": "C_5512",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014455"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_558",
-   "to": "C_5513",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014456"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_559",
-   "to": "C_5514",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014457"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_311",
-   "to": "C_5515",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014458"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_560",
-   "to": "C_5516",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014459"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "C_5517",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014460"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_562",
-   "to": "C_5518",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014461"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_563",
-   "to": "C_5519",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014462"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "A_554",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019023"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HD한국조선해양은 해상풍력 설치선 건조하며 SK오션플랜트 등과 협력"
-  },
-  {
-   "from": "A_560",
-   "to": "A_563",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019024"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스와 오스테드는 해상풍력 터빈 및 개발 시장 경쟁"
-  },
-  {
-   "from": "A_557",
-   "to": "A_558",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019025"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "씨에스윈드와 동국S&C는 해상풍력 타워 제조 시장 경쟁"
-  },
-  {
-   "from": "A_311",
-   "to": "A_560",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019026"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "미쓰비시중공업과 베스타스는 해상풍력 터빈 시장 경쟁"
-  },
-  {
-   "from": "A_562",
-   "to": "A_563",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019027"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에퀴노르와 오스테드는 유럽 해상풍력 개발 시장 경쟁"
-  },
-  {
-   "from": "A_2879",
-   "to": "T_066",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020586"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_554",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002124"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002125"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002126"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_556",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002127"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_557",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002128"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_558",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002129"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_559",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002130"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_311",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002131"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_560",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002132"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002133"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_562",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002134"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_563",
-   "to": "T_066",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_002135"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_563",
-   "to": "BF_125",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002136"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "BF_125",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002137"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_562",
-   "to": "BF_125",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002138"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_311",
-   "to": "BF_126",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002139"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_560",
-   "to": "BF_126",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002140"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_559",
-   "to": "BF_126",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002141"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_554",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002142"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002143"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002144"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_556",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002145"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_557",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002146"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_558",
-   "to": "BF_127",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_002147"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_070",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002148"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_212",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002149"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_057",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002150"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_068",
-   "to": "T_066",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_002151"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "A_554",
-   "to": "C_5508",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014451"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_545",
-   "to": "C_5509",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014452"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "C_5510",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014453"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_556",
-   "to": "C_5511",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014454"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_557",
-   "to": "C_5512",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014455"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_558",
-   "to": "C_5513",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014456"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_559",
-   "to": "C_5514",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014457"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_311",
-   "to": "C_5515",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014458"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_560",
-   "to": "C_5516",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014459"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_561",
-   "to": "C_5517",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014460"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_562",
-   "to": "C_5518",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014461"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_563",
-   "to": "C_5519",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_014462"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_555",
-   "to": "A_554",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019023"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "HD한국조선해양은 해상풍력 설치선 건조하며 SK오션플랜트 등과 협력"
-  },
-  {
-   "from": "A_560",
-   "to": "A_563",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019024"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베스타스와 오스테드는 해상풍력 터빈 및 개발 시장 경쟁"
-  },
-  {
-   "from": "A_557",
-   "to": "A_558",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019025"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "씨에스윈드와 동국S&C는 해상풍력 타워 제조 시장 경쟁"
-  },
-  {
-   "from": "A_311",
-   "to": "A_560",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019026"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "미쓰비시중공업과 베스타스는 해상풍력 터빈 시장 경쟁"
-  },
-  {
-   "from": "A_562",
-   "to": "A_563",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019027"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에퀴노르와 오스테드는 유럽 해상풍력 개발 시장 경쟁"
-  },
-  {
-   "from": "A_2879",
-   "to": "T_066",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020586"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

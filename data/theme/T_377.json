@@ -1,899 +1,899 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_377",
- "themeName": "DAX40독일메가캡",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_377",
+  "themeName": "DAX40독일메가캡",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "DAX 40 독일 메가캡 거장 — SAP·Siemens·Allianz·BASF·Mercedes·VW·Adidas·Deutsche Post·Bayer. 산업+금융+자동차+제약 통합. 중국 EV 침투 + 미국 자동차 관세 + ECB 금리 trifecta 영향. 유럽 최대 경제 직접 노출.",
+    "notes": "T_377 신규 — 유럽 batch",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_377",
+      "type": "THEME",
+      "name": "DAX40독일메가캡"
+    },
+    {
+      "id": "A_408",
+      "type": "ASSET",
+      "name": "SAP",
+      "exposure": {
+        "ticker": "SAP",
+        "exchange": "NYSE",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 0.9412246150698245,
+        "return_3d": 7.466506916457916,
+        "return_7d": 15.390912812116264,
+        "return_15d": 26.566608941055758,
+        "return_1m": 21.232413835473363,
+        "return_ytd": -16.710281951713647,
+        "return_1y": -30.466189788223687,
+        "return_2y": -6.743856332703202,
+        "return_3y": 44.72313898056475,
+        "close": 197.33,
+        "marketCap": 229935854912,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_256",
+      "type": "ASSET",
+      "name": "지멘스",
+      "exposure": {
+        "ticker": "SIEGY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.6662265170157888,
+        "return_3d": 1.4403922770456656,
+        "return_7d": 5.987832212616073,
+        "return_15d": 6.753531574533955,
+        "return_1m": 7.684299564057517,
+        "return_ytd": 17.459190915542933,
+        "return_1y": 31.453534551231122,
+        "return_2y": 81.0722100656455,
+        "return_3y": 93.97562119081108,
+        "close": 165.51,
+        "marketCap": 254598807353,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1903",
+      "type": "ASSET",
+      "name": "알리안츠",
+      "exposure": {
+        "ticker": "ALIZY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.5780346820809301,
+        "return_3d": 1.4067524115755736,
+        "return_7d": 2.95857988165682,
+        "return_15d": 5.830536912751683,
+        "return_1m": 4.928259513412336,
+        "return_ytd": 11.12089848051092,
+        "return_1y": 26.62484316185696,
+        "return_2y": 79.25399644760213,
+        "return_3y": 111.3950565563469,
+        "close": 50.4,
+        "marketCap": 191642119704,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2083",
+      "type": "ASSET",
+      "name": "BASF",
+      "exposure": {
+        "ticker": "BASFY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 0.4115226337448652,
+        "return_3d": 0.7570543702684285,
+        "return_7d": 6.783369803063466,
+        "return_15d": 7.0958302852962785,
+        "return_1m": 9.009679821295613,
+        "return_ytd": 11.585365853658548,
+        "return_1y": 21.19205298013245,
+        "return_2y": 25.773195876288657,
+        "return_3y": 9.335324869305461,
+        "close": 14.64,
+        "marketCap": 50493637516,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_1329",
+      "type": "ASSET",
+      "name": "메르세데스벤츠",
+      "exposure": {
+        "ticker": "MBG",
+        "exchange": "XETRA",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -1.9705455299730446,
+        "return_3d": 1.1341750481489443,
+        "return_7d": 4.2806707855251425,
+        "return_15d": 2.095484985958085,
+        "return_1m": 2.8061779421361788,
+        "return_ytd": -23.391149294861403,
+        "return_1y": -5.328525641025649,
+        "return_2y": -18.291839557399737,
+        "return_3y": -31.616263927072787,
+        "close": 47.26,
+        "marketCap": 45243439335,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2023",
+      "type": "ASSET",
+      "name": "폭스바겐",
+      "exposure": {
+        "ticker": "VWAGY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": -1.2359550561797938,
+        "return_3d": 0.45714285714284486,
+        "return_7d": 6.934306569343041,
+        "return_15d": 1.1507479861910141,
+        "return_1m": 0.1138952164009055,
+        "return_ytd": -29.904306220095698,
+        "return_1y": -15.96558317399619,
+        "return_2y": -25.57154953429298,
+        "return_3y": -45.028142589118204,
+        "close": 8.79,
+        "marketCap": 44063853011,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_835",
+      "type": "ASSET",
+      "name": "아디다스",
+      "exposure": {
+        "ticker": "ADDYY",
+        "exchange": "OTC",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.0412194074710168,
+        "return_3d": 1.762162162162162,
+        "return_7d": -8.01329033519007,
+        "return_15d": -10.052556139512669,
+        "return_1m": -12.011590951579743,
+        "return_ytd": -4.134840615133928,
+        "return_1y": -2.2939588955781742,
+        "return_2y": -24.66586634653862,
+        "return_3y": -7.004544556411785,
+        "close": 94.47,
+        "marketCap": 33076380358,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2084",
+      "type": "ASSET",
+      "name": "도이치포스트DHL",
+      "exposure": {
+        "ticker": "DPSGY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 1.7966559351957567,
+        "return_3d": 2.3173277661795444,
+        "return_7d": 4.165781083953246,
+        "return_15d": 6.896702146222289,
+        "return_1m": 8.645533141210372,
+        "return_ytd": 0.0,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "close": 49.33,
+        "marketCap": 59133845483,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2030",
+      "type": "ASSET",
+      "name": "바이엘",
+      "exposure": {
+        "ticker": "BAYRY",
+        "exchange": "OTC",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 1.859799713876975,
+        "return_3d": 2.5936599423631135,
+        "return_7d": 6.348020911127694,
+        "return_15d": 4.475421863536311,
+        "return_1m": -1.2482662968099856,
+        "return_ytd": 28.403967538322817,
+        "return_1y": 80.253164556962,
+        "return_2y": 90.88471849865951,
+        "return_3y": -2.465753424657535,
+        "close": 14.24,
+        "marketCap": 55958871040,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "M_348",
+      "type": "MACRO",
+      "name": "중국EV침투유럽OEM"
+    },
+    {
+      "id": "M_349",
+      "type": "MACRO",
+      "name": "미국관세자동차"
+    },
+    {
+      "id": "M_359",
+      "type": "MACRO",
+      "name": "ECB금리정책"
+    },
+    {
+      "id": "C_4942",
+      "type": "CHARACTER",
+      "name": "유럽최대엔터프라이즈SW"
+    },
+    {
+      "id": "C_4943",
+      "type": "CHARACTER",
+      "name": "산업자동화전력디지털"
+    },
+    {
+      "id": "C_4944",
+      "type": "CHARACTER",
+      "name": "유럽종합보험자산운용"
+    },
+    {
+      "id": "C_4945",
+      "type": "CHARACTER",
+      "name": "글로벌화학거장"
+    },
+    {
+      "id": "C_4946",
+      "type": "CHARACTER",
+      "name": "럭셔리세단OEM"
+    },
+    {
+      "id": "C_4947",
+      "type": "CHARACTER",
+      "name": "유럽자동차규모1위"
+    },
+    {
+      "id": "C_4948",
+      "type": "CHARACTER",
+      "name": "글로벌스포츠브랜드"
+    },
+    {
+      "id": "C_4949",
+      "type": "CHARACTER",
+      "name": "글로벌물류특송"
+    },
+    {
+      "id": "C_4950",
+      "type": "CHARACTER",
+      "name": "농업제약통합"
+    },
+    {
+      "id": "A_2621",
+      "type": "ASSET",
+      "name": "EWG",
+      "exposure": {
+        "ticker": "EWG",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "EWG는 독일 대표주(SAP·지멘스·알리안츠)를 담는 iShares ETF다.",
+        "theme_role": "지역지수ETF",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": -0.45620437956205295,
+        "return_3d": 1.8436406067677824,
+        "return_7d": 4.451890856869323,
+        "return_15d": 5.156626506024087,
+        "return_1m": 3.781212841854953,
+        "return_ytd": 2.537593984962405,
+        "return_1y": 5.665859564164655,
+        "return_2y": 40.276438444230145,
+        "return_3y": 48.84038199181446,
+        "close": 43.64,
+        "marketCap": 1589209296,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "DAX 40 독일 메가캡 거장 — SAP·Siemens·Allianz·BASF·Mercedes·VW·Adidas·Deutsche Post·Bayer. 산업+금융+자동차+제약 통합. 중국 EV 침투 + 미국 자동차 관세 + ECB 금리 trifecta 영향. 유럽 최대 경제 직접 노출.",
-  "notes": "T_377 신규 — 유럽 batch",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_408",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011106"
+      ]
+    },
+    {
+      "from": "A_256",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011107"
+      ]
+    },
+    {
+      "from": "A_1903",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011108"
+      ]
+    },
+    {
+      "from": "A_2083",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011109"
+      ]
+    },
+    {
+      "from": "A_1329",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011110"
+      ]
+    },
+    {
+      "from": "A_2023",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011111"
+      ]
+    },
+    {
+      "from": "A_835",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011112"
+      ]
+    },
+    {
+      "from": "A_2084",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011113"
+      ]
+    },
+    {
+      "from": "A_2030",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011114"
+      ]
+    },
+    {
+      "from": "M_348",
+      "to": "T_377",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011115"
+      ]
+    },
+    {
+      "from": "M_349",
+      "to": "T_377",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011116"
+      ]
+    },
+    {
+      "from": "M_359",
+      "to": "T_377",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011117"
+      ]
+    },
+    {
+      "from": "A_408",
+      "to": "C_4942",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011118"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_256",
+      "to": "C_4943",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011119"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1903",
+      "to": "C_4944",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011120"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2083",
+      "to": "C_4945",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011121"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1329",
+      "to": "C_4946",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011122"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2023",
+      "to": "C_4947",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011123"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_835",
+      "to": "C_4948",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011124"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2084",
+      "to": "C_4949",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011125"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2030",
+      "to": "C_4950",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011126"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2023",
+      "to": "A_1329",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019565"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "폭스바겐과 메르세데스벤츠는 독일 자동차 시장 경쟁"
+    },
+    {
+      "from": "A_1903",
+      "to": "A_2083",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019566"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "알리안츠와 BASF는 DAX 대표 종목이나 업종이 달라 직접 경쟁은 아님"
+    },
+    {
+      "from": "A_408",
+      "to": "A_256",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019567"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SAP와 지멘스는 산업 소프트웨어·디지털 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_2030",
+      "to": "A_2083",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019568"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "바이엘과 BASF는 독일 화학·작물보호 시장 경쟁"
+    },
+    {
+      "from": "A_2084",
+      "to": "A_256",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019569"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "도이치포스트DHL과 지멘스는 독일 산업재 대표주 경쟁"
+    },
+    {
+      "from": "A_2621",
+      "to": "T_377",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020744"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_408",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011106"
+      ]
+    },
+    {
+      "from": "A_256",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011107"
+      ]
+    },
+    {
+      "from": "A_1903",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011108"
+      ]
+    },
+    {
+      "from": "A_2083",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011109"
+      ]
+    },
+    {
+      "from": "A_1329",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011110"
+      ]
+    },
+    {
+      "from": "A_2023",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011111"
+      ]
+    },
+    {
+      "from": "A_835",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011112"
+      ]
+    },
+    {
+      "from": "A_2084",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011113"
+      ]
+    },
+    {
+      "from": "A_2030",
+      "to": "T_377",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011114"
+      ]
+    },
+    {
+      "from": "M_348",
+      "to": "T_377",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011115"
+      ]
+    },
+    {
+      "from": "M_349",
+      "to": "T_377",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011116"
+      ]
+    },
+    {
+      "from": "M_359",
+      "to": "T_377",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011117"
+      ]
+    },
+    {
+      "from": "A_408",
+      "to": "C_4942",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011118"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_256",
+      "to": "C_4943",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011119"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1903",
+      "to": "C_4944",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011120"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2083",
+      "to": "C_4945",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011121"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_1329",
+      "to": "C_4946",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011122"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2023",
+      "to": "C_4947",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011123"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_835",
+      "to": "C_4948",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011124"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2084",
+      "to": "C_4949",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011125"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2030",
+      "to": "C_4950",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011126"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2023",
+      "to": "A_1329",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019565"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "폭스바겐과 메르세데스벤츠는 독일 자동차 시장 경쟁"
+    },
+    {
+      "from": "A_1903",
+      "to": "A_2083",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019566"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "알리안츠와 BASF는 DAX 대표 종목이나 업종이 달라 직접 경쟁은 아님"
+    },
+    {
+      "from": "A_408",
+      "to": "A_256",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019567"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SAP와 지멘스는 산업 소프트웨어·디지털 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_2030",
+      "to": "A_2083",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019568"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "바이엘과 BASF는 독일 화학·작물보호 시장 경쟁"
+    },
+    {
+      "from": "A_2084",
+      "to": "A_256",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019569"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "도이치포스트DHL과 지멘스는 독일 산업재 대표주 경쟁"
+    },
+    {
+      "from": "A_2621",
+      "to": "T_377",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020744"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_377",
-   "type": "THEME",
-   "name": "DAX40독일메가캡"
-  },
-  {
-   "id": "A_408",
-   "type": "ASSET",
-   "name": "SAP",
-   "exposure": {
-    "ticker": "SAP",
-    "exchange": "NYSE",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 3.0793567097284535,
-    "return_3d": 8.077178239716943,
-    "return_7d": 22.18125,
-    "return_15d": 26.277372262773735,
-    "return_1m": 21.808212349679113,
-    "return_ytd": -17.486915414485892,
-    "return_1y": -30.922261484098932,
-    "return_2y": -5.450764171019529,
-    "return_3y": 42.89160149111908,
-    "close": 195.49,
-    "marketCap": 227791822210,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_256",
-   "type": "ASSET",
-   "name": "지멘스",
-   "exposure": {
-    "ticker": "SIEGY",
-    "exchange": "OTC",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.1101000909918168,
-    "return_3d": 2.1636530799877374,
-    "return_7d": 8.297056721460594,
-    "return_15d": 7.778855480116387,
-    "return_1m": 3.534381017454491,
-    "return_ytd": 18.29666430092265,
-    "return_1y": 34.85436893203884,
-    "return_2y": 82.14402797508468,
-    "return_3y": 96.27885068299578,
-    "close": 166.61,
-    "marketCap": 256290902622,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1903",
-   "type": "ASSET",
-   "name": "알리안츠",
-   "exposure": {
-    "ticker": "ALIZY",
-    "exchange": "OTC",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.8644953759549656,
-    "return_3d": 0.6419257773319975,
-    "return_7d": 3.5286834502682662,
-    "return_15d": 4.804679339878848,
-    "return_1m": 4.195223260643832,
-    "return_ytd": 10.482272627174648,
-    "return_1y": 29.67174980615148,
-    "return_2y": 77.40452616690241,
-    "return_3y": 108.17427385892118,
-    "close": 50.17,
-    "marketCap": 190767562412,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2083",
-   "type": "ASSET",
-   "name": "BASF",
-   "exposure": {
-    "ticker": "BASFY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": -0.9510869565217406,
-    "return_3d": -1.619433198380571,
-    "return_7d": 5.7287889775199385,
-    "return_15d": 3.9942938659058624,
-    "return_1m": 7.52212389380531,
-    "return_ytd": 11.12804878048781,
-    "return_1y": 20.59553349875931,
-    "return_2y": 25.798101811906825,
-    "return_3y": 7.760532150776056,
-    "close": 14.58,
-    "marketCap": 50286696378,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_1329",
-   "type": "ASSET",
-   "name": "메르세데스벤츠",
-   "exposure": {
-    "ticker": "MBG",
-    "exchange": "XETRA",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 0.5422314911365911,
-    "return_3d": 2.3566878980891603,
-    "return_7d": 7.659669495310406,
-    "return_15d": 6.872090445577483,
-    "return_1m": 6.1660427218674485,
-    "return_ytd": -21.851191441076345,
-    "return_1y": -2.4286581663630735,
-    "return_2y": -14.7932131495228,
-    "return_3y": -31.45172757002701,
-    "close": 48.21,
-    "marketCap": 46152903309,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2023",
-   "type": "ASSET",
-   "name": "폭스바겐",
-   "exposure": {
-    "ticker": "VWAGY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 0.9070294784580435,
-    "return_3d": 0.7927519818799578,
-    "return_7d": 7.748184019370474,
-    "return_15d": 6.842737094837936,
-    "return_1m": 1.2514220705347023,
-    "return_ytd": -29.027113237639547,
-    "return_1y": -15.238095238095239,
-    "return_2y": -24.894514767932485,
-    "return_3y": -44.44444444444444,
-    "close": 8.9,
-    "marketCap": 44615277793,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_835",
-   "type": "ASSET",
-   "name": "아디다스",
-   "exposure": {
-    "ticker": "ADDYY",
-    "exchange": "OTC",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -2.552301255230127,
-    "return_3d": 2.3961310178061135,
-    "return_7d": -5.382896607759491,
-    "return_15d": -9.067837969741344,
-    "return_1m": -12.146359864202195,
-    "return_ytd": -5.12272125471026,
-    "return_1y": -3.4511348326251357,
-    "return_2y": -27.053480541852636,
-    "return_3y": -8.514190317195325,
-    "close": 93.16,
-    "marketCap": 32617715615,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2084",
-   "type": "ASSET",
-   "name": "도이치포스트DHL",
-   "exposure": {
-    "ticker": "DPSGY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 1.7966559351957567,
-    "return_3d": 2.3173277661795444,
-    "return_7d": 4.165781083953246,
-    "return_15d": 6.896702146222289,
-    "return_1m": 8.645533141210372,
-    "return_ytd": 0.0,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "close": 49.33,
-    "marketCap": 59133845483,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2030",
-   "type": "ASSET",
-   "name": "바이엘",
-   "exposure": {
-    "ticker": "BAYRY",
-    "exchange": "OTC",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": 3.0213706705969123,
-    "return_3d": -0.14285714285714457,
-    "return_7d": 6.473724295506478,
-    "return_15d": 0.2869440459110528,
-    "return_1m": -3.9175257731958735,
-    "return_ytd": 26.0595130748422,
-    "return_1y": 72.80593325092708,
-    "return_2y": 86.89839572192513,
-    "return_3y": -3.051317614424409,
-    "close": 13.98,
-    "marketCap": 54937150080,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "M_348",
-   "type": "MACRO",
-   "name": "중국EV침투유럽OEM"
-  },
-  {
-   "id": "M_349",
-   "type": "MACRO",
-   "name": "미국관세자동차"
-  },
-  {
-   "id": "M_359",
-   "type": "MACRO",
-   "name": "ECB금리정책"
-  },
-  {
-   "id": "C_4942",
-   "type": "CHARACTER",
-   "name": "유럽최대엔터프라이즈SW"
-  },
-  {
-   "id": "C_4943",
-   "type": "CHARACTER",
-   "name": "산업자동화전력디지털"
-  },
-  {
-   "id": "C_4944",
-   "type": "CHARACTER",
-   "name": "유럽종합보험자산운용"
-  },
-  {
-   "id": "C_4945",
-   "type": "CHARACTER",
-   "name": "글로벌화학거장"
-  },
-  {
-   "id": "C_4946",
-   "type": "CHARACTER",
-   "name": "럭셔리세단OEM"
-  },
-  {
-   "id": "C_4947",
-   "type": "CHARACTER",
-   "name": "유럽자동차규모1위"
-  },
-  {
-   "id": "C_4948",
-   "type": "CHARACTER",
-   "name": "글로벌스포츠브랜드"
-  },
-  {
-   "id": "C_4949",
-   "type": "CHARACTER",
-   "name": "글로벌물류특송"
-  },
-  {
-   "id": "C_4950",
-   "type": "CHARACTER",
-   "name": "농업제약통합"
-  },
-  {
-   "id": "A_2621",
-   "type": "ASSET",
-   "name": "EWG",
-   "exposure": {
-    "ticker": "EWG",
-    "exchange": "NYSEARCA",
-    "country": "US",
-    "business_desc": "EWG는 독일 대표주(SAP·지멘스·알리안츠)를 담는 iShares ETF다.",
-    "theme_role": "지역지수ETF",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 1.0603964960811396,
-    "return_3d": 2.238805970149249,
-    "return_7d": 6.61478599221792,
-    "return_15d": 5.919304179753571,
-    "return_1m": 2.7660571964369662,
-    "return_ytd": 3.007518796992481,
-    "return_1y": 7.5828220858895845,
-    "return_2y": 41.19162640901772,
-    "return_3y": 49.014276002719235,
-    "close": 43.84,
-    "marketCap": 1612013372,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_408",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011106"
-   ]
-  },
-  {
-   "from": "A_256",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011107"
-   ]
-  },
-  {
-   "from": "A_1903",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011108"
-   ]
-  },
-  {
-   "from": "A_2083",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011109"
-   ]
-  },
-  {
-   "from": "A_1329",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011110"
-   ]
-  },
-  {
-   "from": "A_2023",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011111"
-   ]
-  },
-  {
-   "from": "A_835",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011112"
-   ]
-  },
-  {
-   "from": "A_2084",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011113"
-   ]
-  },
-  {
-   "from": "A_2030",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011114"
-   ]
-  },
-  {
-   "from": "M_348",
-   "to": "T_377",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011115"
-   ]
-  },
-  {
-   "from": "M_349",
-   "to": "T_377",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011116"
-   ]
-  },
-  {
-   "from": "M_359",
-   "to": "T_377",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011117"
-   ]
-  },
-  {
-   "from": "A_408",
-   "to": "C_4942",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011118"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_256",
-   "to": "C_4943",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011119"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1903",
-   "to": "C_4944",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011120"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2083",
-   "to": "C_4945",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011121"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1329",
-   "to": "C_4946",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011122"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2023",
-   "to": "C_4947",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011123"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_835",
-   "to": "C_4948",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011124"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2084",
-   "to": "C_4949",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011125"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2030",
-   "to": "C_4950",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011126"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2023",
-   "to": "A_1329",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019565"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "폭스바겐과 메르세데스벤츠는 독일 자동차 시장 경쟁"
-  },
-  {
-   "from": "A_1903",
-   "to": "A_2083",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019566"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "알리안츠와 BASF는 DAX 대표 종목이나 업종이 달라 직접 경쟁은 아님"
-  },
-  {
-   "from": "A_408",
-   "to": "A_256",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019567"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SAP와 지멘스는 산업 소프트웨어·디지털 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_2030",
-   "to": "A_2083",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019568"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "바이엘과 BASF는 독일 화학·작물보호 시장 경쟁"
-  },
-  {
-   "from": "A_2084",
-   "to": "A_256",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019569"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "도이치포스트DHL과 지멘스는 독일 산업재 대표주 경쟁"
-  },
-  {
-   "from": "A_2621",
-   "to": "T_377",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020744"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_408",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011106"
-   ]
-  },
-  {
-   "from": "A_256",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011107"
-   ]
-  },
-  {
-   "from": "A_1903",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011108"
-   ]
-  },
-  {
-   "from": "A_2083",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011109"
-   ]
-  },
-  {
-   "from": "A_1329",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011110"
-   ]
-  },
-  {
-   "from": "A_2023",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011111"
-   ]
-  },
-  {
-   "from": "A_835",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011112"
-   ]
-  },
-  {
-   "from": "A_2084",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011113"
-   ]
-  },
-  {
-   "from": "A_2030",
-   "to": "T_377",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011114"
-   ]
-  },
-  {
-   "from": "M_348",
-   "to": "T_377",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011115"
-   ]
-  },
-  {
-   "from": "M_349",
-   "to": "T_377",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011116"
-   ]
-  },
-  {
-   "from": "M_359",
-   "to": "T_377",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011117"
-   ]
-  },
-  {
-   "from": "A_408",
-   "to": "C_4942",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011118"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_256",
-   "to": "C_4943",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011119"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1903",
-   "to": "C_4944",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011120"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2083",
-   "to": "C_4945",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011121"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_1329",
-   "to": "C_4946",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011122"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2023",
-   "to": "C_4947",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011123"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_835",
-   "to": "C_4948",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011124"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2084",
-   "to": "C_4949",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011125"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2030",
-   "to": "C_4950",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011126"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2023",
-   "to": "A_1329",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019565"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "폭스바겐과 메르세데스벤츠는 독일 자동차 시장 경쟁"
-  },
-  {
-   "from": "A_1903",
-   "to": "A_2083",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019566"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "알리안츠와 BASF는 DAX 대표 종목이나 업종이 달라 직접 경쟁은 아님"
-  },
-  {
-   "from": "A_408",
-   "to": "A_256",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019567"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SAP와 지멘스는 산업 소프트웨어·디지털 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_2030",
-   "to": "A_2083",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019568"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "바이엘과 BASF는 독일 화학·작물보호 시장 경쟁"
-  },
-  {
-   "from": "A_2084",
-   "to": "A_256",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019569"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "도이치포스트DHL과 지멘스는 독일 산업재 대표주 경쟁"
-  },
-  {
-   "from": "A_2621",
-   "to": "T_377",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020744"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

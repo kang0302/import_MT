@@ -1,1254 +1,1272 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_450",
- "themeName": "글로벌물산업/수처리",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_450",
+  "themeName": "글로벌물산업/수처리",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "AI 데이터센터 냉각수·반도체 초순수(UPW)·가뭄·노후 수도 인프라 교체 수혜 글로벌 물산업 클러스터 — Xylem·Ecolab·Veolia·Pentair·American Water·Veralto + 한국 코웨이·뉴보텍·와이엔텍. 수처리 설비·화학·인프라·유틸리티·여과 밸류체인.",
+    "notes": "T_450 신규 — 글로벌 물산업/수처리 (BF는 자산 OPERATES 경유)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_450",
+      "type": "THEME",
+      "name": "글로벌물산업/수처리"
+    },
+    {
+      "id": "A_2357",
+      "type": "ASSET",
+      "name": "자일럼",
+      "exposure": {
+        "ticker": "XYL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.06548252435130131,
+        "return_3d": 4.5139779430623195,
+        "return_7d": 1.7393475366178413,
+        "return_15d": 0.6752861731038395,
+        "return_1m": 1.3261500207210952,
+        "return_ytd": -10.83801327401357,
+        "return_1y": -15.086476349239419,
+        "return_2y": -8.42696629213483,
+        "return_3y": 8.425720620842569,
+        "close": 122.25,
+        "marketCap": 28543785750,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2358",
+      "type": "ASSET",
+      "name": "에코랩",
+      "exposure": {
+        "ticker": "ECL",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.8229144592781124,
+        "return_3d": 2.823902316032134,
+        "return_7d": 5.19198172304518,
+        "return_15d": 5.6318223866790085,
+        "return_1m": 0.8442843012576029,
+        "return_ytd": 8.69250685348768,
+        "return_1y": 8.018011200242192,
+        "return_2y": 23.746152845810407,
+        "return_3y": 55.87528666593866,
+        "close": 285.47,
+        "marketCap": 80342105860,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2359",
+      "type": "ASSET",
+      "name": "베올리아",
+      "exposure": {
+        "ticker": "VIE",
+        "exchange": "EURONEXT",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": 0.886220697541451,
+        "return_3d": 2.378880185668697,
+        "return_7d": -2.108183079056858,
+        "return_15d": -5.943496801705772,
+        "return_1m": -4.6473925965955125,
+        "return_ytd": 17.08692767086928,
+        "return_1y": 17.829716193656097,
+        "return_2y": 26.216022889842616,
+        "return_3y": 28.467419002548233,
+        "close": 35.29,
+        "marketCap": 25829089396,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2360",
+      "type": "ASSET",
+      "name": "펜테어",
+      "exposure": {
+        "ticker": "PNR",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.7885514018691531,
+        "return_3d": 5.470660146699258,
+        "return_7d": 9.243431465653673,
+        "return_15d": 7.290533188248083,
+        "return_1m": -8.193668528864073,
+        "return_ytd": -34.55959040485447,
+        "return_1y": -32.472360825750904,
+        "return_2y": -21.452145214521458,
+        "return_3y": -0.6906474820143949,
+        "close": 69.02,
+        "marketCap": 11018214760,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2361",
+      "type": "ASSET",
+      "name": "뮬러워터",
+      "exposure": {
+        "ticker": "MWA",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.7142857142857229,
+        "return_3d": 4.6354992076069745,
+        "return_7d": 4.9682034976152645,
+        "return_15d": 6.192199437072765,
+        "return_1m": 5.2191235059760865,
+        "return_ytd": 10.317460317460302,
+        "return_1y": 10.317460317460302,
+        "return_2y": 27.70793036750483,
+        "return_3y": 64.13921690490989,
+        "close": 26.41,
+        "marketCap": 4132399110,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2362",
+      "type": "ASSET",
+      "name": "아메리칸워터웍스",
+      "exposure": {
+        "ticker": "AWK",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.1119319453772194,
+        "return_3d": -0.007453230975618119,
+        "return_7d": -0.29726516052318575,
+        "return_15d": 3.830972834919888,
+        "return_1m": -0.4895416110369366,
+        "return_ytd": 2.946593001841613,
+        "return_1y": -8.734693877551026,
+        "return_2y": -5.760044956448452,
+        "return_3y": -9.000881774401414,
+        "close": 134.16,
+        "marketCap": 26661481164,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2363",
+      "type": "ASSET",
+      "name": "베랄토",
+      "exposure": {
+        "ticker": "VLTO",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.7361327112493488,
+        "return_3d": 3.1751088457045773,
+        "return_7d": 3.0547305897327126,
+        "return_15d": 6.769230769230772,
+        "return_1m": 4.360902255639099,
+        "return_ytd": -1.3604060913705585,
+        "return_1y": -9.153810191678357,
+        "return_2y": -8.82132132132133,
+        "return_3y": null,
+        "close": 97.16,
+        "marketCap": 23686961886,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2364",
+      "type": "ASSET",
+      "name": "코웨이",
+      "exposure": {
+        "ticker": "021240",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -1.590668080593849,
+        "return_3d": 1.4207650273224015,
+        "return_7d": 0.5417118093174356,
+        "return_15d": -1.4861995753715496,
+        "return_1m": -2.3157894736842155,
+        "return_ytd": 12.421986062045743,
+        "return_1y": -11.815781655061953,
+        "return_2y": 66.94465470236213,
+        "return_3y": null,
+        "close": 92800,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_2365",
+      "type": "ASSET",
+      "name": "뉴보텍",
+      "exposure": {
+        "ticker": "065170",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 4.086021505376336,
+        "return_3d": 9.502262443438925,
+        "return_7d": -3.9682539682539653,
+        "return_15d": -18.518518518518523,
+        "return_1m": -47.33405875952121,
+        "return_ytd": 344.0366972477064,
+        "return_1y": 188.0952380952381,
+        "return_2y": 39.34755058388064,
+        "return_3y": null,
+        "close": 2420,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "A_2366",
+      "type": "ASSET",
+      "name": "와이엔텍",
+      "exposure": {
+        "ticker": "067900",
+        "exchange": "KOSDAQ",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.5084745762711895,
+        "return_3d": 2.772963604852685,
+        "return_7d": -0.3361344537815114,
+        "return_15d": -2.4671052631578982,
+        "return_1m": -8.062015503875974,
+        "return_ytd": -12.148148148148152,
+        "return_1y": -15.011645052799905,
+        "return_2y": -21.47448927299148,
+        "return_3y": null,
+        "close": 5930,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_770",
+      "type": "CHARACTER",
+      "name": "AI DC냉각수수혜"
+    },
+    {
+      "id": "C_771",
+      "type": "CHARACTER",
+      "name": "인프라노후교체수혜"
+    },
+    {
+      "id": "C_772",
+      "type": "CHARACTER",
+      "name": "가뭄·물안보플레이"
+    },
+    {
+      "id": "M_035",
+      "type": "MACRO",
+      "name": "AI데이터센터전력수요증가"
+    },
+    {
+      "id": "M_1058",
+      "type": "MACRO",
+      "name": "물부족·가뭄심화"
+    },
+    {
+      "id": "M_1059",
+      "type": "MACRO",
+      "name": "노후수도인프라교체"
+    },
+    {
+      "id": "M_1060",
+      "type": "MACRO",
+      "name": "반도체초순수(UPW)수요"
+    },
+    {
+      "id": "BF_586",
+      "type": "BUSINESS_FIELD",
+      "name": "수처리설비·시스템"
+    },
+    {
+      "id": "BF_587",
+      "type": "BUSINESS_FIELD",
+      "name": "수처리화학·약품"
+    },
+    {
+      "id": "BF_588",
+      "type": "BUSINESS_FIELD",
+      "name": "상하수도인프라·배관"
+    },
+    {
+      "id": "BF_589",
+      "type": "BUSINESS_FIELD",
+      "name": "물유틸리티·운영"
+    },
+    {
+      "id": "BF_590",
+      "type": "BUSINESS_FIELD",
+      "name": "정수·여과솔루션"
+    },
+    {
+      "id": "C_5070",
+      "type": "CHARACTER",
+      "name": "물펌프수처리1위"
+    },
+    {
+      "id": "C_5071",
+      "type": "CHARACTER",
+      "name": "수처리위생화학"
+    },
+    {
+      "id": "C_5072",
+      "type": "CHARACTER",
+      "name": "글로벌수자원운영"
+    },
+    {
+      "id": "C_5073",
+      "type": "CHARACTER",
+      "name": "물여과수처리"
+    },
+    {
+      "id": "C_5074",
+      "type": "CHARACTER",
+      "name": "수도인프라밸브"
+    },
+    {
+      "id": "C_5075",
+      "type": "CHARACTER",
+      "name": "미국상수도1위"
+    },
+    {
+      "id": "C_5076",
+      "type": "CHARACTER",
+      "name": "수질분석솔루션"
+    },
+    {
+      "id": "C_5077",
+      "type": "CHARACTER",
+      "name": "정수기렌탈1위"
+    },
+    {
+      "id": "C_5078",
+      "type": "CHARACTER",
+      "name": "상하수관"
+    },
+    {
+      "id": "C_5079",
+      "type": "CHARACTER",
+      "name": "수처리폐기물"
+    },
+    {
+      "id": "A_2938",
+      "type": "ASSET",
+      "name": "Invesco Water Resources ETF",
+      "exposure": {
+        "ticker": "PHO",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.05488474204171645,
+        "return_3d": 3.9190537266638126,
+        "return_7d": 5.345275931811622,
+        "return_15d": 6.748645879080661,
+        "return_1m": 5.102334966849242,
+        "return_ytd": 2.8926202906730536,
+        "return_1y": 3.1838120843356466,
+        "return_2y": 4.694903086862889,
+        "return_3y": 26.006566442025235,
+        "close": 72.92,
+        "marketCap": 2035731558,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "AI 데이터센터 냉각수·반도체 초순수(UPW)·가뭄·노후 수도 인프라 교체 수혜 글로벌 물산업 클러스터 — Xylem·Ecolab·Veolia·Pentair·American Water·Veralto + 한국 코웨이·뉴보텍·와이엔텍. 수처리 설비·화학·인프라·유틸리티·여과 밸류체인.",
-  "notes": "T_450 신규 — 글로벌 물산업/수처리 (BF는 자산 OPERATES 경유)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 자산 CHR + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산별 특징 CHR 연결, 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_2357",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016783"
+      ]
+    },
+    {
+      "from": "A_2358",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016784"
+      ]
+    },
+    {
+      "from": "A_2359",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016785"
+      ]
+    },
+    {
+      "from": "A_2360",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016786"
+      ]
+    },
+    {
+      "from": "A_2361",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016787"
+      ]
+    },
+    {
+      "from": "A_2362",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016788"
+      ]
+    },
+    {
+      "from": "A_2363",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016789"
+      ]
+    },
+    {
+      "from": "A_2364",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016790"
+      ]
+    },
+    {
+      "from": "A_2365",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016791"
+      ]
+    },
+    {
+      "from": "A_2366",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016792"
+      ]
+    },
+    {
+      "from": "T_450",
+      "to": "C_770",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016793"
+      ]
+    },
+    {
+      "from": "T_450",
+      "to": "C_771",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016794"
+      ]
+    },
+    {
+      "from": "T_450",
+      "to": "C_772",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016795"
+      ]
+    },
+    {
+      "from": "M_035",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011804"
+      ]
+    },
+    {
+      "from": "M_1058",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011805"
+      ]
+    },
+    {
+      "from": "M_1059",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011806"
+      ]
+    },
+    {
+      "from": "M_1060",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011807"
+      ]
+    },
+    {
+      "from": "A_2357",
+      "to": "BF_586",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016796"
+      ]
+    },
+    {
+      "from": "A_2357",
+      "to": "BF_590",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016797"
+      ]
+    },
+    {
+      "from": "A_2358",
+      "to": "BF_587",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016798"
+      ]
+    },
+    {
+      "from": "A_2359",
+      "to": "BF_589",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016799"
+      ]
+    },
+    {
+      "from": "A_2360",
+      "to": "BF_590",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016800"
+      ]
+    },
+    {
+      "from": "A_2361",
+      "to": "BF_588",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016801"
+      ]
+    },
+    {
+      "from": "A_2362",
+      "to": "BF_589",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016802"
+      ]
+    },
+    {
+      "from": "A_2363",
+      "to": "BF_587",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016803"
+      ]
+    },
+    {
+      "from": "A_2364",
+      "to": "BF_590",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016804"
+      ]
+    },
+    {
+      "from": "A_2365",
+      "to": "BF_588",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016805"
+      ]
+    },
+    {
+      "from": "A_2366",
+      "to": "BF_589",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016806"
+      ]
+    },
+    {
+      "from": "A_2357",
+      "to": "C_5070",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011808"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2358",
+      "to": "C_5071",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011809"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2359",
+      "to": "C_5072",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011810"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2360",
+      "to": "C_5073",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011811"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2361",
+      "to": "C_5074",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011812"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2362",
+      "to": "C_5075",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011813"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2363",
+      "to": "C_5076",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011814"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2364",
+      "to": "C_5077",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011815"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2365",
+      "to": "C_5078",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011816"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2366",
+      "to": "C_5079",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011817"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2357",
+      "to": "A_2360",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019685"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "자일럼과 펜테어는 수처리·펌프 시스템 시장 직접 경쟁"
+    },
+    {
+      "from": "A_2358",
+      "to": "A_2357",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019686"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에코랩과 자일럼은 산업용 수처리 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_2362",
+      "to": "A_2361",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019687"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아메리칸워터웍스와 뮬러워터는 미국 수도 인프라 시장 경쟁"
+    },
+    {
+      "from": "A_2359",
+      "to": "A_2362",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019688"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베올리아와 아메리칸워터웍스는 상하수도 운영 시장 경쟁"
+    },
+    {
+      "from": "A_2364",
+      "to": "A_2365",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019689"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "코웨이와 뉴보텍은 국내 수처리 관련 시장 경쟁"
+    },
+    {
+      "from": "A_2363",
+      "to": "A_2358",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019690"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베랄토와 에코랩은 수질 분석·처리 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_2938",
+      "to": "T_450",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020795"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_2357",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016783"
+      ]
+    },
+    {
+      "from": "A_2358",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016784"
+      ]
+    },
+    {
+      "from": "A_2359",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016785"
+      ]
+    },
+    {
+      "from": "A_2360",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016786"
+      ]
+    },
+    {
+      "from": "A_2361",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016787"
+      ]
+    },
+    {
+      "from": "A_2362",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016788"
+      ]
+    },
+    {
+      "from": "A_2363",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016789"
+      ]
+    },
+    {
+      "from": "A_2364",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016790"
+      ]
+    },
+    {
+      "from": "A_2365",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016791"
+      ]
+    },
+    {
+      "from": "A_2366",
+      "to": "T_450",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_016792"
+      ]
+    },
+    {
+      "from": "T_450",
+      "to": "C_770",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016793"
+      ]
+    },
+    {
+      "from": "T_450",
+      "to": "C_771",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016794"
+      ]
+    },
+    {
+      "from": "T_450",
+      "to": "C_772",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016795"
+      ]
+    },
+    {
+      "from": "M_035",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011804"
+      ]
+    },
+    {
+      "from": "M_1058",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011805"
+      ]
+    },
+    {
+      "from": "M_1059",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011806"
+      ]
+    },
+    {
+      "from": "M_1060",
+      "to": "T_450",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011807"
+      ]
+    },
+    {
+      "from": "A_2357",
+      "to": "BF_586",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016796"
+      ]
+    },
+    {
+      "from": "A_2357",
+      "to": "BF_590",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016797"
+      ]
+    },
+    {
+      "from": "A_2358",
+      "to": "BF_587",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016798"
+      ]
+    },
+    {
+      "from": "A_2359",
+      "to": "BF_589",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016799"
+      ]
+    },
+    {
+      "from": "A_2360",
+      "to": "BF_590",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016800"
+      ]
+    },
+    {
+      "from": "A_2361",
+      "to": "BF_588",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016801"
+      ]
+    },
+    {
+      "from": "A_2362",
+      "to": "BF_589",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016802"
+      ]
+    },
+    {
+      "from": "A_2363",
+      "to": "BF_587",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016803"
+      ]
+    },
+    {
+      "from": "A_2364",
+      "to": "BF_590",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016804"
+      ]
+    },
+    {
+      "from": "A_2365",
+      "to": "BF_588",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016805"
+      ]
+    },
+    {
+      "from": "A_2366",
+      "to": "BF_589",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_016806"
+      ]
+    },
+    {
+      "from": "A_2357",
+      "to": "C_5070",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011808"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2358",
+      "to": "C_5071",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011809"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2359",
+      "to": "C_5072",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011810"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2360",
+      "to": "C_5073",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011811"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2361",
+      "to": "C_5074",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011812"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2362",
+      "to": "C_5075",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011813"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2363",
+      "to": "C_5076",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011814"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2364",
+      "to": "C_5077",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011815"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2365",
+      "to": "C_5078",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011816"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2366",
+      "to": "C_5079",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_011817"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2357",
+      "to": "A_2360",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019685"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "자일럼과 펜테어는 수처리·펌프 시스템 시장 직접 경쟁"
+    },
+    {
+      "from": "A_2358",
+      "to": "A_2357",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019686"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에코랩과 자일럼은 산업용 수처리 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_2362",
+      "to": "A_2361",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019687"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "아메리칸워터웍스와 뮬러워터는 미국 수도 인프라 시장 경쟁"
+    },
+    {
+      "from": "A_2359",
+      "to": "A_2362",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019688"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베올리아와 아메리칸워터웍스는 상하수도 운영 시장 경쟁"
+    },
+    {
+      "from": "A_2364",
+      "to": "A_2365",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019689"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "코웨이와 뉴보텍은 국내 수처리 관련 시장 경쟁"
+    },
+    {
+      "from": "A_2363",
+      "to": "A_2358",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019690"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "베랄토와 에코랩은 수질 분석·처리 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_2938",
+      "to": "T_450",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020795"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_450",
-   "type": "THEME",
-   "name": "글로벌물산업/수처리"
-  },
-  {
-   "id": "A_2357",
-   "type": "ASSET",
-   "name": "자일럼",
-   "exposure": {
-    "ticker": "XYL",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.59489418878065,
-    "return_3d": 4.579695257661376,
-    "return_7d": 2.02087682672234,
-    "return_15d": 0.510078157136995,
-    "return_1m": 2.302796851448674,
-    "return_ytd": -10.896360586390497,
-    "return_1y": -14.07370938247292,
-    "return_2y": -8.47317950254719,
-    "return_3y": 8.479843722251811,
-    "close": 122.17,
-    "marketCap": 28525106790,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2358",
-   "type": "ASSET",
-   "name": "에코랩",
-   "exposure": {
-    "ticker": "ECL",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.3277028236051924,
-    "return_3d": 1.3603493950025136,
-    "return_7d": 5.354418604651157,
-    "return_15d": 4.963855421686736,
-    "return_1m": -0.204426899760346,
-    "return_ytd": 7.805360950350293,
-    "return_1y": 8.4786023524003,
-    "return_2y": 23.71755658481167,
-    "return_3y": 54.23248719904128,
-    "close": 283.14,
-    "marketCap": 79686355320,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2359",
-   "type": "ASSET",
-   "name": "베올리아",
-   "exposure": {
-    "ticker": "VIE",
-    "exchange": "EURONEXT",
-    "country": "FR"
-   },
-   "metrics": {
-    "return_1d": 1.9825072886297423,
-    "return_3d": -2.2905027932960897,
-    "return_7d": -4.400109319486212,
-    "return_15d": -6.620395088093978,
-    "return_1m": -5.663430420711979,
-    "return_ytd": 16.058394160583923,
-    "return_1y": 16.367265469061863,
-    "return_2y": 26.008645533141195,
-    "return_3y": 25.331422429236827,
-    "close": 34.98,
-    "marketCap": 25602197423,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2360",
-   "type": "ASSET",
-   "name": "펜테어",
-   "exposure": {
-    "ticker": "PNR",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.102281198747602,
-    "return_3d": 3.4910080096720586,
-    "return_7d": 8.905852417302796,
-    "return_15d": -9.513742071881614,
-    "return_1m": -9.334039454521381,
-    "return_ytd": -35.07158433677823,
-    "return_1y": -31.941959848936598,
-    "return_2y": -22.323049001814876,
-    "return_3y": -1.7362605825799848,
-    "close": 68.48,
-    "marketCap": 10932010240,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2361",
-   "type": "ASSET",
-   "name": "뮬러워터",
-   "exposure": {
-    "ticker": "MWA",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.140752229546351,
-    "return_3d": 6.613226452905829,
-    "return_7d": 6.272473032361159,
-    "return_15d": 7.692307692307709,
-    "return_1m": 4.930966469428011,
-    "return_ytd": 11.111111111111116,
-    "return_1y": 9.73597359735976,
-    "return_2y": 29.62962962962965,
-    "return_3y": 66.45807259073844,
-    "close": 26.6,
-    "marketCap": 4162128600,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2362",
-   "type": "ASSET",
-   "name": "아메리칸워터웍스",
-   "exposure": {
-    "ticker": "AWK",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 2.0639756283320487,
-    "return_3d": -2.0466340179811526,
-    "return_7d": -0.48269716322590916,
-    "return_15d": 1.8545261077753228,
-    "return_1m": 0.691261552332989,
-    "return_ytd": 2.8314917127071793,
-    "return_1y": -8.035959374142198,
-    "return_2y": -6.723741908540404,
-    "return_3y": -8.799510004083299,
-    "close": 134.01,
-    "marketCap": 26631671816,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2363",
-   "type": "ASSET",
-   "name": "베랄토",
-   "exposure": {
-    "ticker": "VLTO",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.7190466146382644,
-    "return_3d": 1.8371872030408687,
-    "return_7d": 4.814170832427744,
-    "return_15d": 4.951033732317733,
-    "return_1m": 4.292820069204151,
-    "return_ytd": -2.0812182741116736,
-    "return_1y": -7.923627684964196,
-    "return_2y": -9.910330655707078,
-    "return_3y": null,
-    "close": 96.45,
-    "marketCap": 23513868608,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2364",
-   "type": "ASSET",
-   "name": "코웨이",
-   "exposure": {
-    "ticker": "021240",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -1.590668080593849,
-    "return_3d": 1.4207650273224015,
-    "return_7d": 0.5417118093174356,
-    "return_15d": -1.4861995753715496,
-    "return_1m": -2.3157894736842155,
-    "return_ytd": 12.421986062045743,
-    "return_1y": -11.815781655061953,
-    "return_2y": 66.94465470236213,
-    "return_3y": null,
-    "close": 92800,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_2365",
-   "type": "ASSET",
-   "name": "뉴보텍",
-   "exposure": {
-    "ticker": "065170",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 4.086021505376336,
-    "return_3d": 9.502262443438925,
-    "return_7d": -3.9682539682539653,
-    "return_15d": -18.518518518518523,
-    "return_1m": -47.33405875952121,
-    "return_ytd": 344.0366972477064,
-    "return_1y": 188.0952380952381,
-    "return_2y": 39.34755058388064,
-    "return_3y": null,
-    "close": 2420,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "A_2366",
-   "type": "ASSET",
-   "name": "와이엔텍",
-   "exposure": {
-    "ticker": "067900",
-    "exchange": "KOSDAQ",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.5084745762711895,
-    "return_3d": 2.772963604852685,
-    "return_7d": -0.3361344537815114,
-    "return_15d": -2.4671052631578982,
-    "return_1m": -8.062015503875974,
-    "return_ytd": -12.148148148148152,
-    "return_1y": -15.011645052799905,
-    "return_2y": -21.47448927299148,
-    "return_3y": null,
-    "close": 5930,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_770",
-   "type": "CHARACTER",
-   "name": "AI DC냉각수수혜"
-  },
-  {
-   "id": "C_771",
-   "type": "CHARACTER",
-   "name": "인프라노후교체수혜"
-  },
-  {
-   "id": "C_772",
-   "type": "CHARACTER",
-   "name": "가뭄·물안보플레이"
-  },
-  {
-   "id": "M_035",
-   "type": "MACRO",
-   "name": "AI데이터센터전력수요증가"
-  },
-  {
-   "id": "M_1058",
-   "type": "MACRO",
-   "name": "물부족·가뭄심화"
-  },
-  {
-   "id": "M_1059",
-   "type": "MACRO",
-   "name": "노후수도인프라교체"
-  },
-  {
-   "id": "M_1060",
-   "type": "MACRO",
-   "name": "반도체초순수(UPW)수요"
-  },
-  {
-   "id": "BF_586",
-   "type": "BUSINESS_FIELD",
-   "name": "수처리설비·시스템"
-  },
-  {
-   "id": "BF_587",
-   "type": "BUSINESS_FIELD",
-   "name": "수처리화학·약품"
-  },
-  {
-   "id": "BF_588",
-   "type": "BUSINESS_FIELD",
-   "name": "상하수도인프라·배관"
-  },
-  {
-   "id": "BF_589",
-   "type": "BUSINESS_FIELD",
-   "name": "물유틸리티·운영"
-  },
-  {
-   "id": "BF_590",
-   "type": "BUSINESS_FIELD",
-   "name": "정수·여과솔루션"
-  },
-  {
-   "id": "C_5070",
-   "type": "CHARACTER",
-   "name": "물펌프수처리1위"
-  },
-  {
-   "id": "C_5071",
-   "type": "CHARACTER",
-   "name": "수처리위생화학"
-  },
-  {
-   "id": "C_5072",
-   "type": "CHARACTER",
-   "name": "글로벌수자원운영"
-  },
-  {
-   "id": "C_5073",
-   "type": "CHARACTER",
-   "name": "물여과수처리"
-  },
-  {
-   "id": "C_5074",
-   "type": "CHARACTER",
-   "name": "수도인프라밸브"
-  },
-  {
-   "id": "C_5075",
-   "type": "CHARACTER",
-   "name": "미국상수도1위"
-  },
-  {
-   "id": "C_5076",
-   "type": "CHARACTER",
-   "name": "수질분석솔루션"
-  },
-  {
-   "id": "C_5077",
-   "type": "CHARACTER",
-   "name": "정수기렌탈1위"
-  },
-  {
-   "id": "C_5078",
-   "type": "CHARACTER",
-   "name": "상하수관"
-  },
-  {
-   "id": "C_5079",
-   "type": "CHARACTER",
-   "name": "수처리폐기물"
-  },
-  {
-   "id": "A_2938",
-   "type": "ASSET",
-   "name": "Invesco Water Resources ETF",
-   "exposure": {
-    "ticker": "PHO",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_2357",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016783"
-   ]
-  },
-  {
-   "from": "A_2358",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016784"
-   ]
-  },
-  {
-   "from": "A_2359",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016785"
-   ]
-  },
-  {
-   "from": "A_2360",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016786"
-   ]
-  },
-  {
-   "from": "A_2361",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016787"
-   ]
-  },
-  {
-   "from": "A_2362",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016788"
-   ]
-  },
-  {
-   "from": "A_2363",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016789"
-   ]
-  },
-  {
-   "from": "A_2364",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016790"
-   ]
-  },
-  {
-   "from": "A_2365",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016791"
-   ]
-  },
-  {
-   "from": "A_2366",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016792"
-   ]
-  },
-  {
-   "from": "T_450",
-   "to": "C_770",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016793"
-   ]
-  },
-  {
-   "from": "T_450",
-   "to": "C_771",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016794"
-   ]
-  },
-  {
-   "from": "T_450",
-   "to": "C_772",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016795"
-   ]
-  },
-  {
-   "from": "M_035",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011804"
-   ]
-  },
-  {
-   "from": "M_1058",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011805"
-   ]
-  },
-  {
-   "from": "M_1059",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011806"
-   ]
-  },
-  {
-   "from": "M_1060",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011807"
-   ]
-  },
-  {
-   "from": "A_2357",
-   "to": "BF_586",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016796"
-   ]
-  },
-  {
-   "from": "A_2357",
-   "to": "BF_590",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016797"
-   ]
-  },
-  {
-   "from": "A_2358",
-   "to": "BF_587",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016798"
-   ]
-  },
-  {
-   "from": "A_2359",
-   "to": "BF_589",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016799"
-   ]
-  },
-  {
-   "from": "A_2360",
-   "to": "BF_590",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016800"
-   ]
-  },
-  {
-   "from": "A_2361",
-   "to": "BF_588",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016801"
-   ]
-  },
-  {
-   "from": "A_2362",
-   "to": "BF_589",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016802"
-   ]
-  },
-  {
-   "from": "A_2363",
-   "to": "BF_587",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016803"
-   ]
-  },
-  {
-   "from": "A_2364",
-   "to": "BF_590",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016804"
-   ]
-  },
-  {
-   "from": "A_2365",
-   "to": "BF_588",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016805"
-   ]
-  },
-  {
-   "from": "A_2366",
-   "to": "BF_589",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016806"
-   ]
-  },
-  {
-   "from": "A_2357",
-   "to": "C_5070",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011808"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2358",
-   "to": "C_5071",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011809"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2359",
-   "to": "C_5072",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011810"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2360",
-   "to": "C_5073",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011811"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2361",
-   "to": "C_5074",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011812"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2362",
-   "to": "C_5075",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011813"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2363",
-   "to": "C_5076",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011814"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2364",
-   "to": "C_5077",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011815"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2365",
-   "to": "C_5078",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011816"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2366",
-   "to": "C_5079",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011817"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2357",
-   "to": "A_2360",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019685"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "자일럼과 펜테어는 수처리·펌프 시스템 시장 직접 경쟁"
-  },
-  {
-   "from": "A_2358",
-   "to": "A_2357",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019686"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에코랩과 자일럼은 산업용 수처리 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_2362",
-   "to": "A_2361",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019687"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아메리칸워터웍스와 뮬러워터는 미국 수도 인프라 시장 경쟁"
-  },
-  {
-   "from": "A_2359",
-   "to": "A_2362",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019688"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베올리아와 아메리칸워터웍스는 상하수도 운영 시장 경쟁"
-  },
-  {
-   "from": "A_2364",
-   "to": "A_2365",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019689"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "코웨이와 뉴보텍은 국내 수처리 관련 시장 경쟁"
-  },
-  {
-   "from": "A_2363",
-   "to": "A_2358",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019690"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베랄토와 에코랩은 수질 분석·처리 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_2938",
-   "to": "T_450",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020795"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_2357",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016783"
-   ]
-  },
-  {
-   "from": "A_2358",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016784"
-   ]
-  },
-  {
-   "from": "A_2359",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016785"
-   ]
-  },
-  {
-   "from": "A_2360",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016786"
-   ]
-  },
-  {
-   "from": "A_2361",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016787"
-   ]
-  },
-  {
-   "from": "A_2362",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016788"
-   ]
-  },
-  {
-   "from": "A_2363",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016789"
-   ]
-  },
-  {
-   "from": "A_2364",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016790"
-   ]
-  },
-  {
-   "from": "A_2365",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016791"
-   ]
-  },
-  {
-   "from": "A_2366",
-   "to": "T_450",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_016792"
-   ]
-  },
-  {
-   "from": "T_450",
-   "to": "C_770",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016793"
-   ]
-  },
-  {
-   "from": "T_450",
-   "to": "C_771",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016794"
-   ]
-  },
-  {
-   "from": "T_450",
-   "to": "C_772",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016795"
-   ]
-  },
-  {
-   "from": "M_035",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011804"
-   ]
-  },
-  {
-   "from": "M_1058",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011805"
-   ]
-  },
-  {
-   "from": "M_1059",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011806"
-   ]
-  },
-  {
-   "from": "M_1060",
-   "to": "T_450",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011807"
-   ]
-  },
-  {
-   "from": "A_2357",
-   "to": "BF_586",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016796"
-   ]
-  },
-  {
-   "from": "A_2357",
-   "to": "BF_590",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016797"
-   ]
-  },
-  {
-   "from": "A_2358",
-   "to": "BF_587",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016798"
-   ]
-  },
-  {
-   "from": "A_2359",
-   "to": "BF_589",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016799"
-   ]
-  },
-  {
-   "from": "A_2360",
-   "to": "BF_590",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016800"
-   ]
-  },
-  {
-   "from": "A_2361",
-   "to": "BF_588",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016801"
-   ]
-  },
-  {
-   "from": "A_2362",
-   "to": "BF_589",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016802"
-   ]
-  },
-  {
-   "from": "A_2363",
-   "to": "BF_587",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016803"
-   ]
-  },
-  {
-   "from": "A_2364",
-   "to": "BF_590",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016804"
-   ]
-  },
-  {
-   "from": "A_2365",
-   "to": "BF_588",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016805"
-   ]
-  },
-  {
-   "from": "A_2366",
-   "to": "BF_589",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_016806"
-   ]
-  },
-  {
-   "from": "A_2357",
-   "to": "C_5070",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011808"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2358",
-   "to": "C_5071",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011809"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2359",
-   "to": "C_5072",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011810"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2360",
-   "to": "C_5073",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011811"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2361",
-   "to": "C_5074",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011812"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2362",
-   "to": "C_5075",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011813"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2363",
-   "to": "C_5076",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011814"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2364",
-   "to": "C_5077",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011815"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2365",
-   "to": "C_5078",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011816"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2366",
-   "to": "C_5079",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_011817"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2357",
-   "to": "A_2360",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019685"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "자일럼과 펜테어는 수처리·펌프 시스템 시장 직접 경쟁"
-  },
-  {
-   "from": "A_2358",
-   "to": "A_2357",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019686"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에코랩과 자일럼은 산업용 수처리 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_2362",
-   "to": "A_2361",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019687"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "아메리칸워터웍스와 뮬러워터는 미국 수도 인프라 시장 경쟁"
-  },
-  {
-   "from": "A_2359",
-   "to": "A_2362",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019688"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베올리아와 아메리칸워터웍스는 상하수도 운영 시장 경쟁"
-  },
-  {
-   "from": "A_2364",
-   "to": "A_2365",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019689"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "코웨이와 뉴보텍은 국내 수처리 관련 시장 경쟁"
-  },
-  {
-   "from": "A_2363",
-   "to": "A_2358",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019690"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "베랄토와 에코랩은 수질 분석·처리 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_2938",
-   "to": "T_450",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020795"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

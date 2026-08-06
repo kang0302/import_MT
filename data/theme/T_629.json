@@ -1,958 +1,976 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_629",
- "themeName": "글로벌 알루미늄 관련주",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_629",
+  "themeName": "글로벌 알루미늄 관련주",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "notes": "g90 누적 import 기반 글로벌알루미늄관련주 테마",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 11건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
+      },
+      {
+        "date": "2026-07-19",
+        "kind": "신규",
+        "title": "알루미늄 테마 한국/글로벌 분리",
+        "detail": "알루미늄 테마 분리·확장 신규. 해외 4종(Alcoa·Century·Rio Tinto·ALUM)에 Norsk Hydro(NHY, 오슬로)·Chalco(2600, 홍콩) 추가. 매크로는 T_090과 공동 사용."
+      },
+      {
+        "date": "2026-07-10",
+        "kind": "보강",
+        "title": "자산별 테마관점 CHR 정의",
+        "detail": "알루미늄 12개 종목에 밸류체인 포지션(제련·판재·압출·양극박·보크사이트광산·캔포장·전력금구류) 기반 CHR을 정의했다."
+      },
+      {
+        "date": "2026-07-10",
+        "kind": "보강",
+        "title": "엣지 근거 구체 백필",
+        "detail": "알루미늄 12종목의 포지션(제련·판재·포일·2차전지박·포장)과 유럽 전력난·CBAM·전기차·전력망 매크로 인과를 구체화."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ],
+    "description": "Alcoa·Rio Tinto·노르스크하이드로·Chalco 등 글로벌 알루미늄·알루미나 메이저와 Century(미 제련)·ALUM(선물 ETF). LME 가격, 러시아 제재·중국 production cap·유럽 전력난·저탄소(그린) 프리미엄이 핵심 동인."
+  },
+  "nodes": [
+    {
+      "id": "T_629",
+      "type": "THEME",
+      "name": "글로벌 알루미늄 관련주"
+    },
+    {
+      "id": "A_700",
+      "type": "ASSET",
+      "name": "Alcoa",
+      "exposure": {
+        "ticker": "AA",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.8364296391202295,
+        "close": 47.69,
+        "marketCap": 12585820210,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 5.36897923110915,
+        "return_7d": 8.18965517241379,
+        "return_15d": -1.8320296418279147,
+        "return_1m": -2.6933278922668835,
+        "return_ytd": -15.652635302440753,
+        "return_1y": 63.77060439560438,
+        "return_2y": 44.34019370460047,
+        "return_3y": 31.776733904393485,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_701",
+      "type": "ASSET",
+      "name": "Century Aluminum",
+      "exposure": {
+        "ticker": "CENX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.4668930390492321,
+        "close": 46.9,
+        "marketCap": 4641880600,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 4.757650212195652,
+        "return_7d": 4.5241809672387,
+        "return_15d": 6.736458807464718,
+        "return_1m": 3.5777385159010633,
+        "return_ytd": 14.557889594528572,
+        "return_1y": 129.78931896129347,
+        "return_2y": 210.39046988749175,
+        "return_3y": 404.3010752688171,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_702",
+      "type": "ASSET",
+      "name": "Rio Tinto",
+      "exposure": {
+        "ticker": "RIO",
+        "exchange": "NYSE",
+        "country": "GB"
+      },
+      "metrics": {
+        "return_1d": 2.5249974750025217,
+        "close": 101.51,
+        "marketCap": 164955756041,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 4.811564274651525,
+        "return_7d": 10.396954866775431,
+        "return_15d": 8.42768639179663,
+        "return_1m": 11.243835616438357,
+        "return_ytd": 24.659216504973603,
+        "return_1y": 69.18333333333335,
+        "return_2y": 55.785758133824444,
+        "return_3y": 52.531930879038335,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_068",
+      "type": "ASSET",
+      "name": "ALUM",
+      "exposure": {
+        "ticker": "ALUM",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.05988582571719858,
+        "close": 33.205,
+        "marketCap": 829594,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.7279344858962755,
+        "return_7d": -2.6670574443141803,
+        "return_15d": 6.000638365783595,
+        "return_1m": 9.028233749179249,
+        "return_ytd": 8.849557522123884,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2727",
+      "type": "ASSET",
+      "name": "노르스크하이드로",
+      "exposure": {
+        "ticker": "NHY",
+        "exchange": "OSL",
+        "country": "NO"
+      },
+      "metrics": {
+        "return_1d": null,
+        "close": null,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": null,
+        "valuationSource": null,
+        "return_3d": null,
+        "return_7d": null,
+        "return_15d": null,
+        "return_1m": null,
+        "return_ytd": null,
+        "return_1y": null,
+        "return_2y": null,
+        "return_3y": null,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3660",
+      "type": "CHARACTER",
+      "name": "유럽최대통합알루미늄_수력저탄소제련"
+    },
+    {
+      "id": "A_2728",
+      "type": "ASSET",
+      "name": "중국알루미늄(Chalco)",
+      "exposure": {
+        "ticker": "2600",
+        "exchange": "HKEX",
+        "country": "HK"
+      },
+      "metrics": {
+        "return_1d": 3.0989272943980906,
+        "close": 8.645,
+        "marketCap": 148304733571,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 2.245862884160754,
+        "return_7d": 3.8415366146458574,
+        "return_15d": 6.922126081582203,
+        "return_1m": 14.116094986807393,
+        "return_ytd": -31.56645569620253,
+        "return_1y": 36.650868878357024,
+        "return_2y": 81.34171907756816,
+        "return_3y": 146.43874643874648,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3661",
+      "type": "CHARACTER",
+      "name": "세계최대알루미나·알루미늄_중국국영"
+    },
+    {
+      "id": "C_1999",
+      "type": "CHARACTER",
+      "name": "알루미나1차금속글로벌메이저"
+    },
+    {
+      "id": "C_2000",
+      "type": "CHARACTER",
+      "name": "미국1차알루미늄제련"
+    },
+    {
+      "id": "C_2001",
+      "type": "CHARACTER",
+      "name": "보크사이트알루미나광산"
+    },
+    {
+      "id": "C_2002",
+      "type": "CHARACTER",
+      "name": "알루미늄가격노출ETF"
+    },
+    {
+      "id": "M_095",
+      "type": "MACRO",
+      "name": "유럽환경규제"
+    },
+    {
+      "id": "M_096",
+      "type": "MACRO",
+      "name": "유럽전력난"
+    },
+    {
+      "id": "M_097",
+      "type": "MACRO",
+      "name": "지역분쟁"
+    },
+    {
+      "id": "M_238",
+      "type": "MACRO",
+      "name": "전기차보급확대"
+    },
+    {
+      "id": "M_098",
+      "type": "MACRO",
+      "name": "전력망투자"
+    },
+    {
+      "id": "A_2870",
+      "type": "ASSET",
+      "name": "SPDR S&P Metals & Mining ETF",
+      "exposure": {
+        "ticker": "XME",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 3.7641386983126246,
+        "return_3d": 11.197218082463989,
+        "return_7d": 8.54427310639123,
+        "return_15d": 8.449612403100781,
+        "return_1m": 9.22221137894017,
+        "return_ytd": 4.082581605133462,
+        "return_1y": 51.63257011245088,
+        "return_2y": 76.33527650858673,
+        "return_3y": 107.6823158285396,
+        "close": 111.92,
+        "marketCap": 4258427068,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_2633",
+      "type": "ASSET",
+      "name": "PICK",
+      "exposure": {
+        "ticker": "PICK",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "PICK은 글로벌 금속·광업 생산기업 ETF로 호주 BHP·리오틴토·포트스큐가 최대 비중을 차지하는 호주 원자재 프록시다.",
+        "theme_role": "호주원자재프록시",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 2.313167259786475,
+        "return_3d": 6.9315300084530795,
+        "return_7d": 8.63964273445552,
+        "return_15d": 8.58369098712446,
+        "return_1m": 11.532357608887311,
+        "return_ytd": 20.798319327731086,
+        "return_1y": 64.32839698623019,
+        "return_2y": 57.33830845771144,
+        "return_3y": 45.30209051229037,
+        "close": 63.25,
+        "marketCap": 2343356587,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "notes": "g90 누적 import 기반 글로벌알루미늄관련주 테마",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 11건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
-   },
-   {
-    "date": "2026-07-19",
-    "kind": "신규",
-    "title": "알루미늄 테마 한국/글로벌 분리",
-    "detail": "알루미늄 테마 분리·확장 신규. 해외 4종(Alcoa·Century·Rio Tinto·ALUM)에 Norsk Hydro(NHY, 오슬로)·Chalco(2600, 홍콩) 추가. 매크로는 T_090과 공동 사용."
-   },
-   {
-    "date": "2026-07-10",
-    "kind": "보강",
-    "title": "자산별 테마관점 CHR 정의",
-    "detail": "알루미늄 12개 종목에 밸류체인 포지션(제련·판재·압출·양극박·보크사이트광산·캔포장·전력금구류) 기반 CHR을 정의했다."
-   },
-   {
-    "date": "2026-07-10",
-    "kind": "보강",
-    "title": "엣지 근거 구체 백필",
-    "detail": "알루미늄 12종목의 포지션(제련·판재·포일·2차전지박·포장)과 유럽 전력난·CBAM·전기차·전력망 매크로 인과를 구체화."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_700",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013635"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_701",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013636"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_702",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013637"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_068",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013638"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_700",
+      "to": "C_1999",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002766"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_701",
+      "to": "C_2000",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002767"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_702",
+      "to": "C_2001",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002768"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_068",
+      "to": "C_2002",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002769"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2727",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013639"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2727",
+      "to": "C_3660",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007621"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2728",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013640"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2728",
+      "to": "C_3661",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007623"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_095",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013641"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_096",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013642"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_097",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013643"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_238",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013644"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_098",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013645"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_700",
+      "to": "A_702",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018751"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Rio Tinto는 2018년 무탄소 알루미늄 제련(inert anode) 기술을 공동 개발·상용화하는 합작사 ELYSIS를 설립해 운영 중이다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_701",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018752"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Century Aluminum은 모두 미국 내 1차 알루미늄 제련 사업을 영위하는 직접 경쟁 생산업체다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_702",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018753"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Rio Tinto(구 Alcan)는 세계 최대급 1차 알루미늄 생산기업으로 글로벌 알루미늄 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_2727",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018754"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Norsk Hydro는 글로벌 1차 알루미늄·알루미나 시장에서 경쟁하는 대형 생산업체다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018755"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 중국알루미늄(Chalco)은 세계 알루미늄 생산 상위권 기업으로 원자재 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_702",
+      "to": "A_2727",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018756"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Rio Tinto와 Norsk Hydro는 세계 주요 1차 알루미늄 생산업체로 글로벌 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_702",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018757"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Rio Tinto와 중국알루미늄(Chalco)은 세계 최상위 알루미늄 생산기업으로 직접 경쟁한다."
+    },
+    {
+      "from": "A_2727",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018758"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Norsk Hydro와 중국알루미늄(Chalco)은 글로벌 1차 알루미늄 생산 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_701",
+      "to": "A_2727",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018759"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Century Aluminum과 Norsk Hydro는 모두 1차 알루미늄 제련 생산업체로 글로벌 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_701",
+      "to": "A_702",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018760"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Century Aluminum과 Rio Tinto는 1차 알루미늄 생산 시장에서 경쟁하는 생산업체다."
+    },
+    {
+      "from": "A_701",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018761"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Century Aluminum과 중국알루미늄(Chalco)은 1차 알루미늄 생산 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2870",
+      "to": "T_629",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020939"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2633",
+      "to": "T_629",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020940"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ],
-  "description": "Alcoa·Rio Tinto·노르스크하이드로·Chalco 등 글로벌 알루미늄·알루미나 메이저와 Century(미 제련)·ALUM(선물 ETF). LME 가격, 러시아 제재·중국 production cap·유럽 전력난·저탄소(그린) 프리미엄이 핵심 동인."
- },
- "nodes": [
-  {
-   "id": "T_629",
-   "type": "THEME",
-   "name": "글로벌 알루미늄 관련주"
-  },
-  {
-   "id": "A_700",
-   "type": "ASSET",
-   "name": "Alcoa",
-   "exposure": {
-    "ticker": "AA",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.438001784121304,
-    "close": 46.83,
-    "marketCap": 12358858470,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.136090727151442,
-    "return_7d": 5.854430379746822,
-    "return_15d": -4.545454545454552,
-    "return_1m": -6.09584920794064,
-    "return_ytd": -17.17368234877963,
-    "return_1y": 64.89436619718309,
-    "return_2y": 47.40321057601511,
-    "return_3y": 34.72382048331415,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_701",
-   "type": "ASSET",
-   "name": "Century Aluminum",
-   "exposure": {
-    "ticker": "CENX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 4.247787610619458,
-    "close": 47.12,
-    "marketCap": 4663654880,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 4.991087344028511,
-    "return_7d": 1.9692707206232285,
-    "return_15d": 2.256944444444442,
-    "return_1m": 0.9425878320479919,
-    "return_ytd": 15.095261358085011,
-    "return_1y": 130.19052271617002,
-    "return_2y": 231.13141250878422,
-    "return_3y": 418.942731277533,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_702",
-   "type": "ASSET",
-   "name": "Rio Tinto",
-   "exposure": {
-    "ticker": "RIO",
-    "exchange": "NYSE",
-    "country": "GB"
-   },
-   "metrics": {
-    "return_1d": 3.242961418143908,
-    "close": 99.01,
-    "marketCap": 160893206636,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 1.8831035192426349,
-    "return_7d": 8.539793904845428,
-    "return_15d": 6.1314181584307015,
-    "return_1m": 5.802521906390257,
-    "return_ytd": 21.58909492815915,
-    "return_1y": 65.98491198658844,
-    "return_2y": 55.84763104045334,
-    "return_3y": 49.78819969742816,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_068",
-   "type": "ASSET",
-   "name": "ALUM",
-   "exposure": {
-    "ticker": "ALUM",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.05988582571719858,
-    "close": 33.205,
-    "marketCap": 829594,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.7279344858962755,
-    "return_7d": -2.6670574443141803,
-    "return_15d": 6.000638365783595,
-    "return_1m": 9.028233749179249,
-    "return_ytd": 8.849557522123884,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_2727",
-   "type": "ASSET",
-   "name": "노르스크하이드로",
-   "exposure": {
-    "ticker": "NHY",
-    "exchange": "OSL",
-    "country": "NO"
-   },
-   "metrics": {
-    "return_1d": null,
-    "close": null,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": null,
-    "valuationSource": null,
-    "return_3d": null,
-    "return_7d": null,
-    "return_15d": null,
-    "return_1m": null,
-    "return_ytd": null,
-    "return_1y": null,
-    "return_2y": null,
-    "return_3y": null,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3660",
-   "type": "CHARACTER",
-   "name": "유럽최대통합알루미늄_수력저탄소제련"
-  },
-  {
-   "id": "A_2728",
-   "type": "ASSET",
-   "name": "중국알루미늄(Chalco)",
-   "exposure": {
-    "ticker": "2600",
-    "exchange": "HKEX",
-    "country": "HK"
-   },
-   "metrics": {
-    "return_1d": 1.57384987893463,
-    "close": 8.39,
-    "marketCap": 143930215692,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.599520383693064,
-    "return_7d": 1.0843373493975905,
-    "return_15d": 1.9441069258809174,
-    "return_1m": 7.702182284980741,
-    "return_ytd": -33.62341772151899,
-    "return_1y": 29.67542503863989,
-    "return_2y": 74.79166666666669,
-    "return_3y": 145.3216374269006,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3661",
-   "type": "CHARACTER",
-   "name": "세계최대알루미나·알루미늄_중국국영"
-  },
-  {
-   "id": "C_1999",
-   "type": "CHARACTER",
-   "name": "알루미나1차금속글로벌메이저"
-  },
-  {
-   "id": "C_2000",
-   "type": "CHARACTER",
-   "name": "미국1차알루미늄제련"
-  },
-  {
-   "id": "C_2001",
-   "type": "CHARACTER",
-   "name": "보크사이트알루미나광산"
-  },
-  {
-   "id": "C_2002",
-   "type": "CHARACTER",
-   "name": "알루미늄가격노출ETF"
-  },
-  {
-   "id": "M_095",
-   "type": "MACRO",
-   "name": "유럽환경규제"
-  },
-  {
-   "id": "M_096",
-   "type": "MACRO",
-   "name": "유럽전력난"
-  },
-  {
-   "id": "M_097",
-   "type": "MACRO",
-   "name": "지역분쟁"
-  },
-  {
-   "id": "M_238",
-   "type": "MACRO",
-   "name": "전기차보급확대"
-  },
-  {
-   "id": "M_098",
-   "type": "MACRO",
-   "name": "전력망투자"
-  },
-  {
-   "id": "A_2870",
-   "type": "ASSET",
-   "name": "SPDR S&P Metals & Mining ETF",
-   "exposure": {
-    "ticker": "XME",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   }
-  },
-  {
-   "id": "A_2633",
-   "type": "ASSET",
-   "name": "PICK",
-   "exposure": {
-    "ticker": "PICK",
-    "exchange": "NYSEARCA",
-    "country": "US",
-    "business_desc": "PICK은 글로벌 금속·광업 생산기업 ETF로 호주 BHP·리오틴토·포트스큐가 최대 비중을 차지하는 호주 원자재 프록시다.",
-    "theme_role": "호주원자재프록시",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 4.091597912106404,
-    "return_3d": 3.7944929482874423,
-    "return_7d": 6.531104601068405,
-    "return_15d": 5.910570498543777,
-    "return_1m": 5.512886158047436,
-    "return_ytd": 18.067226890756306,
-    "return_1y": 62.00209643605872,
-    "return_2y": 58.269329237071155,
-    "return_3y": 44.06898158937311,
-    "close": 61.82,
-    "marketCap": 2290376351,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_700",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013635"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_701",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013636"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_702",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013637"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_068",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013638"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_700",
-   "to": "C_1999",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002766"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_701",
-   "to": "C_2000",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002767"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_702",
-   "to": "C_2001",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002768"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_068",
-   "to": "C_2002",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002769"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2727",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013639"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2727",
-   "to": "C_3660",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007621"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2728",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013640"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_2728",
-   "to": "C_3661",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007623"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_095",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013641"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_096",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013642"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_097",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013643"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_238",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013644"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_098",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013645"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_700",
-   "to": "A_702",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018751"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Rio Tinto는 2018년 무탄소 알루미늄 제련(inert anode) 기술을 공동 개발·상용화하는 합작사 ELYSIS를 설립해 운영 중이다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_701",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018752"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Century Aluminum은 모두 미국 내 1차 알루미늄 제련 사업을 영위하는 직접 경쟁 생산업체다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_702",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018753"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Rio Tinto(구 Alcan)는 세계 최대급 1차 알루미늄 생산기업으로 글로벌 알루미늄 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_2727",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018754"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Norsk Hydro는 글로벌 1차 알루미늄·알루미나 시장에서 경쟁하는 대형 생산업체다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018755"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 중국알루미늄(Chalco)은 세계 알루미늄 생산 상위권 기업으로 원자재 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_702",
-   "to": "A_2727",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018756"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Rio Tinto와 Norsk Hydro는 세계 주요 1차 알루미늄 생산업체로 글로벌 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_702",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018757"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Rio Tinto와 중국알루미늄(Chalco)은 세계 최상위 알루미늄 생산기업으로 직접 경쟁한다."
-  },
-  {
-   "from": "A_2727",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018758"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Norsk Hydro와 중국알루미늄(Chalco)은 글로벌 1차 알루미늄 생산 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_701",
-   "to": "A_2727",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018759"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Century Aluminum과 Norsk Hydro는 모두 1차 알루미늄 제련 생산업체로 글로벌 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_701",
-   "to": "A_702",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018760"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Century Aluminum과 Rio Tinto는 1차 알루미늄 생산 시장에서 경쟁하는 생산업체다."
-  },
-  {
-   "from": "A_701",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018761"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Century Aluminum과 중국알루미늄(Chalco)은 1차 알루미늄 생산 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2870",
-   "to": "T_629",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020939"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2633",
-   "to": "T_629",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020940"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_700",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013635"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_701",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013636"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_702",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013637"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_068",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013638"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_700",
-   "to": "C_1999",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002766"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_701",
-   "to": "C_2000",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002767"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_702",
-   "to": "C_2001",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002768"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_068",
-   "to": "C_2002",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_002769"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2727",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013639"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2727",
-   "to": "C_3660",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007621"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2728",
-   "to": "T_629",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013640"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_2728",
-   "to": "C_3661",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007623"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_095",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013641"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_096",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013642"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_097",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013643"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_238",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013644"
-   ],
-   "confidence": 0.75,
-   "status": "verified"
-  },
-  {
-   "from": "M_098",
-   "to": "T_629",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013645"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_700",
-   "to": "A_702",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_018751"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Rio Tinto는 2018년 무탄소 알루미늄 제련(inert anode) 기술을 공동 개발·상용화하는 합작사 ELYSIS를 설립해 운영 중이다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_701",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018752"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Century Aluminum은 모두 미국 내 1차 알루미늄 제련 사업을 영위하는 직접 경쟁 생산업체다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_702",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018753"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Rio Tinto(구 Alcan)는 세계 최대급 1차 알루미늄 생산기업으로 글로벌 알루미늄 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_2727",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018754"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 Norsk Hydro는 글로벌 1차 알루미늄·알루미나 시장에서 경쟁하는 대형 생산업체다."
-  },
-  {
-   "from": "A_700",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018755"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Alcoa와 중국알루미늄(Chalco)은 세계 알루미늄 생산 상위권 기업으로 원자재 시장에서 직접 경쟁한다."
-  },
-  {
-   "from": "A_702",
-   "to": "A_2727",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018756"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Rio Tinto와 Norsk Hydro는 세계 주요 1차 알루미늄 생산업체로 글로벌 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_702",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018757"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Rio Tinto와 중국알루미늄(Chalco)은 세계 최상위 알루미늄 생산기업으로 직접 경쟁한다."
-  },
-  {
-   "from": "A_2727",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018758"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Norsk Hydro와 중국알루미늄(Chalco)은 글로벌 1차 알루미늄 생산 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_701",
-   "to": "A_2727",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018759"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Century Aluminum과 Norsk Hydro는 모두 1차 알루미늄 제련 생산업체로 글로벌 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_701",
-   "to": "A_702",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018760"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Century Aluminum과 Rio Tinto는 1차 알루미늄 생산 시장에서 경쟁하는 생산업체다."
-  },
-  {
-   "from": "A_701",
-   "to": "A_2728",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_018761"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "Century Aluminum과 중국알루미늄(Chalco)은 1차 알루미늄 생산 시장에서 경쟁한다."
-  },
-  {
-   "from": "A_2870",
-   "to": "T_629",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020939"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_2633",
-   "to": "T_629",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020940"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
+  "links": [
+    {
+      "from": "A_700",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013635"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_701",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013636"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_702",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013637"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_068",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013638"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_700",
+      "to": "C_1999",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002766"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_701",
+      "to": "C_2000",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002767"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_702",
+      "to": "C_2001",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002768"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_068",
+      "to": "C_2002",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_002769"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2727",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013639"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2727",
+      "to": "C_3660",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007621"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2728",
+      "to": "T_629",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013640"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_2728",
+      "to": "C_3661",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007623"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_095",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013641"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_096",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013642"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_097",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013643"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_238",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013644"
+      ],
+      "confidence": 0.75,
+      "status": "verified"
+    },
+    {
+      "from": "M_098",
+      "to": "T_629",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013645"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_700",
+      "to": "A_702",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_018751"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Rio Tinto는 2018년 무탄소 알루미늄 제련(inert anode) 기술을 공동 개발·상용화하는 합작사 ELYSIS를 설립해 운영 중이다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_701",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018752"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Century Aluminum은 모두 미국 내 1차 알루미늄 제련 사업을 영위하는 직접 경쟁 생산업체다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_702",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018753"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Rio Tinto(구 Alcan)는 세계 최대급 1차 알루미늄 생산기업으로 글로벌 알루미늄 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_2727",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018754"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 Norsk Hydro는 글로벌 1차 알루미늄·알루미나 시장에서 경쟁하는 대형 생산업체다."
+    },
+    {
+      "from": "A_700",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018755"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Alcoa와 중국알루미늄(Chalco)은 세계 알루미늄 생산 상위권 기업으로 원자재 시장에서 직접 경쟁한다."
+    },
+    {
+      "from": "A_702",
+      "to": "A_2727",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018756"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Rio Tinto와 Norsk Hydro는 세계 주요 1차 알루미늄 생산업체로 글로벌 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_702",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018757"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Rio Tinto와 중국알루미늄(Chalco)은 세계 최상위 알루미늄 생산기업으로 직접 경쟁한다."
+    },
+    {
+      "from": "A_2727",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018758"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Norsk Hydro와 중국알루미늄(Chalco)은 글로벌 1차 알루미늄 생산 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_701",
+      "to": "A_2727",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018759"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Century Aluminum과 Norsk Hydro는 모두 1차 알루미늄 제련 생산업체로 글로벌 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_701",
+      "to": "A_702",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018760"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Century Aluminum과 Rio Tinto는 1차 알루미늄 생산 시장에서 경쟁하는 생산업체다."
+    },
+    {
+      "from": "A_701",
+      "to": "A_2728",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_018761"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "Century Aluminum과 중국알루미늄(Chalco)은 1차 알루미늄 생산 시장에서 경쟁한다."
+    },
+    {
+      "from": "A_2870",
+      "to": "T_629",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020939"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_2633",
+      "to": "T_629",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020940"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ]
 }

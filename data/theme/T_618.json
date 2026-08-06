@@ -1,900 +1,918 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_618",
- "themeName": "글로벌아날로그반도체_RF·커넥티비티·광",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_618",
+  "themeName": "글로벌아날로그반도체_RF·커넥티비티·광",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-26T00:00:00+09:00",
+    "notes": "RF·마이크로파·광통신·데이터인프라 커넥티비티 반도체 그룹.",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-26",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
+      },
+      {
+        "date": "2026-07-19",
+        "kind": "보강",
+        "title": "바로미터 표본 보강(자산 5종 이상 확보)",
+        "detail": "3종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
+      },
+      {
+        "date": "2026-07-17",
+        "kind": "신규",
+        "title": "T_021 아날로그반도체 3분할",
+        "detail": "기존 '글로벌아날로그반도체설계&제조'(T_021, 16종)를 사업특성별 3그룹으로 분리하면서 신규 생성했다. SOXX·XSD ETF와 셈텍(Semtech)은 제외. 자산별 포지션 CHR을 정의했다."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_618",
+      "type": "THEME",
+      "name": "글로벌아날로그반도체_RF·커넥티비티·광"
+    },
+    {
+      "id": "A_192",
+      "type": "ASSET",
+      "name": "마벨테크놀로지",
+      "exposure": {
+        "ticker": "MRVL",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.463104442106224,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 11.550457260665015,
+        "return_15d": 2.3077668961505093,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 12.50799744081894,
+        "return_1m": -8.530559167750319,
+        "return_ytd": 136.06667412462247,
+        "return_1y": 175.73500588004705,
+        "return_2y": 215.04926843833977,
+        "return_3y": 223.9981575310917,
+        "close": 211.02,
+        "marketCap": 184804141320,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_194",
+      "type": "ASSET",
+      "name": "메이컴테크놀로지솔루션즈",
+      "exposure": {
+        "ticker": "MTSI",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -3.60396619223593,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 0.14444275505549609,
+        "return_15d": -10.088048597365374,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 4.7804645243398,
+        "return_1m": -13.568663473525366,
+        "return_ytd": 50.58299039780518,
+        "return_1y": 88.18571428571427,
+        "return_2y": 161.0582639714625,
+        "return_3y": 276.8020594965675,
+        "close": 263.46,
+        "marketCap": 20100884618,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_199",
+      "type": "ASSET",
+      "name": "시에나",
+      "exposure": {
+        "ticker": "CIEN",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.5594337557463636,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 8.36536167731332,
+        "return_15d": -2.3012952253500973,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 8.428590372629618,
+        "return_1m": -2.406244778114641,
+        "return_ytd": 66.15053239047386,
+        "return_1y": 341.16758389985966,
+        "return_2y": 675.180128934395,
+        "return_3y": 868.7914691943126,
+        "close": 408.83,
+        "marketCap": 57871081101,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_057",
+      "type": "ASSET",
+      "name": "암바렐라",
+      "exposure": {
+        "ticker": "AMBA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.4621184482549112,
+        "asof": "2026-01-31T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 19.961893595192713,
+        "return_15d": 18.829849012775846,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": -4.825581395348843,
+        "return_1m": 13.965469228627136,
+        "return_ytd": 8.901011176157535,
+        "return_1y": 27.870645211685652,
+        "return_2y": 55.49012158054709,
+        "return_3y": -1.882042675617368,
+        "close": 81.85,
+        "marketCap": 3590610942,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "A_1759",
+      "type": "ASSET",
+      "name": "스카이웍스",
+      "exposure": {
+        "ticker": "SWKS",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "Skyworks Solutions — 스마트폰·IoT RF 솔루션 (Apple 핵심 공급)",
+        "theme_role": "엣지 단말 고주파 RF — Apple·IoT",
+        "theme_status": "Core"
+      },
+      "metrics": {
+        "return_1d": 0.29944602485401095,
+        "close": 66.99,
+        "marketCap": 10080171666,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 7.562620423892086,
+        "return_7d": 5.595838587641855,
+        "return_15d": 16.48408972352633,
+        "return_1m": 12.098393574297184,
+        "return_ytd": 4.021739130434776,
+        "return_1y": -1.3982926111274718,
+        "return_2y": -41.04030980461187,
+        "return_3y": -41.426947626125745,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3761",
+      "type": "CHARACTER",
+      "name": "RF프론트엔드_모바일"
+    },
+    {
+      "id": "A_208",
+      "type": "ASSET",
+      "name": "코보",
+      "exposure": {
+        "ticker": "QRVO",
+        "exchange": "NASDAQ",
+        "country": "US",
+        "business_desc": "",
+        "theme_role": "",
+        "theme_status": ""
+      },
+      "metrics": {
+        "return_1d": 0.22095959595958004,
+        "asof": "2026-02-11T09:00:00+09:00",
+        "currency": "USD",
+        "last_price": null,
+        "return_7d": 6.116310160427796,
+        "return_15d": 14.153883029721959,
+        "return_30d": null,
+        "return_90d": null,
+        "per": null,
+        "market_cap": null,
+        "return_3d": 5.167273931765504,
+        "return_1m": 11.8877011629273,
+        "return_ytd": 10.409180479888725,
+        "return_1y": 11.835153222965822,
+        "return_2y": -20.49248747913188,
+        "return_3y": -13.42483184875477,
+        "close": 95.25,
+        "marketCap": 8403107400,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP",
+        "pe_ttm": null
+      }
+    },
+    {
+      "id": "C_3762",
+      "type": "CHARACTER",
+      "name": "RF솔루션_5G"
+    },
+    {
+      "id": "A_400",
+      "type": "ASSET",
+      "name": "Lumentum Holdings",
+      "display": {
+        "name_ko": "루멘텀홀딩스"
+      },
+      "exposure": {
+        "ticker": "LITE",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.7322918996550816,
+        "return_3d": 15.732414488612466,
+        "return_7d": 16.0542727119501,
+        "return_15d": 9.87499999999999,
+        "return_1m": 18.221230201313475,
+        "return_ytd": 113.99601149931367,
+        "return_1y": 643.5076037073698,
+        "return_2y": 1495.712630359212,
+        "return_3y": 1478.03666921314,
+        "close": 826.26,
+        "marketCap": 64283028000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_3763",
+      "type": "CHARACTER",
+      "name": "광통신·레이저부품"
+    },
+    {
+      "id": "BF_048",
+      "type": "BUSINESS_FIELD",
+      "name": "DC/네트워킹/인프라"
+    },
+    {
+      "id": "BF_049",
+      "type": "BUSINESS_FIELD",
+      "name": "특정용응용솔루션"
+    },
+    {
+      "id": "M_018",
+      "type": "MACRO",
+      "name": "피지컬AI확산"
+    },
+    {
+      "id": "M_019",
+      "type": "MACRO",
+      "name": "AI추론확산"
+    },
+    {
+      "id": "C_3576",
+      "type": "CHARACTER",
+      "name": "데이터인프라·커스텀실리콘"
+    },
+    {
+      "id": "C_3577",
+      "type": "CHARACTER",
+      "name": "RF·마이크로파·광반도체"
+    },
+    {
+      "id": "C_3578",
+      "type": "CHARACTER",
+      "name": "광전송장비·코히어런트"
+    },
+    {
+      "id": "C_227",
+      "type": "CHARACTER",
+      "name": "머신비전특화"
+    },
+    {
+      "id": "A_200",
+      "type": "ASSET",
+      "name": "iShares Semiconductor ETF",
+      "exposure": {
+        "ticker": "SOXX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.1227937514984974,
+        "return_3d": 5.1120045950603155,
+        "return_7d": 2.8030141603548886,
+        "return_15d": -4.424874385434096,
+        "return_1m": -3.8046729141365643,
+        "return_ytd": 69.17976346074151,
+        "return_1y": 120.75707154742096,
+        "return_2y": 125.465205200102,
+        "return_3y": 197.42756262960265,
+        "close": 530.7,
+        "marketCap": 47046285935,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-26T00:00:00+09:00",
-  "notes": "RF·마이크로파·광통신·데이터인프라 커넥티비티 반도체 그룹.",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-26",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 자산 CHR(필요시), 2026 이벤트 추가."
-   },
-   {
-    "date": "2026-07-19",
-    "kind": "보강",
-    "title": "바로미터 표본 보강(자산 5종 이상 확보)",
-    "detail": "3종 추가 편입(1궤도) 및 자산별 CHR 정의. 표본 부족(ASSET<5) 해소."
-   },
-   {
-    "date": "2026-07-17",
-    "kind": "신규",
-    "title": "T_021 아날로그반도체 3분할",
-    "detail": "기존 '글로벌아날로그반도체설계&제조'(T_021, 16종)를 사업특성별 3그룹으로 분리하면서 신규 생성했다. SOXX·XSD ETF와 셈텍(Semtech)은 제외. 자산별 포지션 CHR을 정의했다."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_192",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013535"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "BF_048",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000769"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_3576",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007460"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_194",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013536"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_194",
+      "to": "BF_048",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000771"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_194",
+      "to": "C_3577",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007461"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_199",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013537"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_199",
+      "to": "BF_048",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000772"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_199",
+      "to": "C_3578",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007462"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_057",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013538"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_057",
+      "to": "BF_049",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000764"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_057",
+      "to": "C_227",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007463"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_018",
+      "to": "T_618",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013539"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_019",
+      "to": "T_618",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013540"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013541"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "C_3761",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007881"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013542"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "C_3762",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007883"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013543"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "C_3763",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007885"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "A_208",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020253"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스카이웍스와 코보는 RF 프론트엔드 반도체 시장 양대 경쟁"
+    },
+    {
+      "from": "A_192",
+      "to": "A_194",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020254"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "마벨테크놀로지와 메이컴은 광·RF 아날로그 반도체 시장 경쟁"
+    },
+    {
+      "from": "A_199",
+      "to": "A_192",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020255"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "시에나와 마벨은 광전송·DSP 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_400",
+      "to": "A_194",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020256"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "루멘텀과 메이컴은 광통신 부품·칩 시장 경쟁"
+    },
+    {
+      "from": "A_057",
+      "to": "A_192",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020257"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암바렐라와 마벨은 엣지·데이터센터 SoC 시장 경쟁"
+    },
+    {
+      "from": "A_200",
+      "to": "T_618",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020931"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_192",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013535"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "BF_048",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000769"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_192",
+      "to": "C_3576",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007460"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_194",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013536"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_194",
+      "to": "BF_048",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000771"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_194",
+      "to": "C_3577",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007461"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_199",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013537"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_199",
+      "to": "BF_048",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000772"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_199",
+      "to": "C_3578",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007462"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_057",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013538"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_057",
+      "to": "BF_049",
+      "type": "OPERATES",
+      "evidence": [
+        "EV_000764"
+      ],
+      "confidence": 0.83,
+      "status": "verified"
+    },
+    {
+      "from": "A_057",
+      "to": "C_227",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007463"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "M_018",
+      "to": "T_618",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013539"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "M_019",
+      "to": "T_618",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_013540"
+      ],
+      "confidence": 0.78,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013541"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "C_3761",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007881"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013542"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_208",
+      "to": "C_3762",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007883"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "T_618",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_013543"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_400",
+      "to": "C_3763",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_007885"
+      ],
+      "confidence": 0.8,
+      "status": "verified"
+    },
+    {
+      "from": "A_1759",
+      "to": "A_208",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020253"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "스카이웍스와 코보는 RF 프론트엔드 반도체 시장 양대 경쟁"
+    },
+    {
+      "from": "A_192",
+      "to": "A_194",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020254"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "마벨테크놀로지와 메이컴은 광·RF 아날로그 반도체 시장 경쟁"
+    },
+    {
+      "from": "A_199",
+      "to": "A_192",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020255"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "시에나와 마벨은 광전송·DSP 솔루션 시장 경쟁"
+    },
+    {
+      "from": "A_400",
+      "to": "A_194",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020256"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "루멘텀과 메이컴은 광통신 부품·칩 시장 경쟁"
+    },
+    {
+      "from": "A_057",
+      "to": "A_192",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020257"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "암바렐라와 마벨은 엣지·데이터센터 SoC 시장 경쟁"
+    },
+    {
+      "from": "A_200",
+      "to": "T_618",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020931"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_618",
-   "type": "THEME",
-   "name": "글로벌아날로그반도체_RF·커넥티비티·광"
-  },
-  {
-   "id": "A_192",
-   "type": "ASSET",
-   "name": "마벨테크놀로지",
-   "exposure": {
-    "ticker": "MRVL",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 12.803178862627718,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 12.541831848839013,
-    "return_15d": -1.7308038122639813,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 19.252591380250948,
-    "return_1m": -12.307939182412643,
-    "return_ytd": 144.53518290636538,
-    "return_1y": 193.60644728005374,
-    "return_2y": 248.07324840764332,
-    "return_3y": 236.75858881528274,
-    "close": 218.59,
-    "marketCap": 191433689940,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_194",
-   "type": "ASSET",
-   "name": "메이컴테크놀로지솔루션즈",
-   "exposure": {
-    "ticker": "MTSI",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 6.720031237797719,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 2.3671298550507425,
-    "return_15d": -9.42802226935312,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 9.891037754814835,
-    "return_1m": -16.582224392626046,
-    "return_ytd": 56.21284865112024,
-    "return_1y": 100.50619910498129,
-    "return_2y": 184.75724109189414,
-    "return_3y": 296.61877811638374,
-    "close": 273.31,
-    "marketCap": 20852397992,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_199",
-   "type": "ASSET",
-   "name": "시에나",
-   "exposure": {
-    "ticker": "CIEN",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 5.21291841539564,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 5.1590955596480415,
-    "return_15d": -8.01020294005773,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 10.498024565269981,
-    "return_1m": -5.232464329345598,
-    "return_ytd": 67.08526375680728,
-    "return_1y": 363.8722780097033,
-    "return_2y": 698.6208236208237,
-    "return_3y": 888.7686387686389,
-    "close": 411.13,
-    "marketCap": 58196652822,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_057",
-   "type": "ASSET",
-   "name": "암바렐라",
-   "exposure": {
-    "ticker": "AMBA",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.5442670537010197,
-    "asof": "2026-01-31T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 20.819864825154276,
-    "return_15d": 12.798353909465021,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 10.98663787285734,
-    "return_1m": 3.135582591245445,
-    "return_ytd": 9.406599254922842,
-    "return_1y": 29.00847191716347,
-    "return_2y": 61.33019423190114,
-    "return_3y": 1.6063264549610823,
-    "close": 82.23,
-    "marketCap": 3607280853,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "A_1759",
-   "type": "ASSET",
-   "name": "스카이웍스",
-   "exposure": {
-    "ticker": "SWKS",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "Skyworks Solutions — 스마트폰·IoT RF 솔루션 (Apple 핵심 공급)",
-    "theme_role": "엣지 단말 고주파 RF — Apple·IoT",
-    "theme_status": "Core"
-   },
-   "metrics": {
-    "return_1d": 8.9737314406918,
-    "close": 66.79,
-    "marketCap": 10050077110,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 6.898207426376457,
-    "return_7d": 10.92841720644413,
-    "return_15d": 18.045245669848022,
-    "return_1m": 7.882409949927327,
-    "return_ytd": 3.711180124223601,
-    "return_1y": -1.3295907815038976,
-    "return_2y": -43.24921403687654,
-    "return_3y": -41.494393833216535,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3761",
-   "type": "CHARACTER",
-   "name": "RF프론트엔드_모바일"
-  },
-  {
-   "id": "A_208",
-   "type": "ASSET",
-   "name": "코보",
-   "exposure": {
-    "ticker": "QRVO",
-    "exchange": "NASDAQ",
-    "country": "US",
-    "business_desc": "",
-    "theme_role": "",
-    "theme_status": ""
-   },
-   "metrics": {
-    "return_1d": 6.201810258129403,
-    "asof": "2026-02-11T09:00:00+09:00",
-    "currency": "USD",
-    "last_price": null,
-    "return_7d": 9.86013177667322,
-    "return_15d": 15.186038055993212,
-    "return_30d": null,
-    "return_90d": null,
-    "per": null,
-    "market_cap": null,
-    "return_3d": 4.738814194401608,
-    "return_1m": 9.078388614713662,
-    "return_ytd": 10.165758664657476,
-    "return_1y": 12.994887647128772,
-    "return_2y": -20.441988950276237,
-    "return_3y": -13.197552287880166,
-    "close": 95.04,
-    "marketCap": 8384580864,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP",
-    "pe_ttm": null
-   }
-  },
-  {
-   "id": "C_3762",
-   "type": "CHARACTER",
-   "name": "RF솔루션_5G"
-  },
-  {
-   "id": "A_400",
-   "type": "ASSET",
-   "name": "Lumentum Holdings",
-   "display": {
-    "name_ko": "루멘텀홀딩스"
-   },
-   "exposure": {
-    "ticker": "LITE",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 8.921771018989855,
-    "return_3d": 22.536206797068846,
-    "return_7d": 11.334355627203507,
-    "return_15d": 4.255031909671092,
-    "return_1m": 16.166837606837614,
-    "return_ytd": 120.00725181942968,
-    "return_1y": 696.2785901762279,
-    "return_2y": 1631.8450560652398,
-    "return_3y": 1522.3644003055767,
-    "close": 849.47,
-    "marketCap": 66088766000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_3763",
-   "type": "CHARACTER",
-   "name": "광통신·레이저부품"
-  },
-  {
-   "id": "BF_048",
-   "type": "BUSINESS_FIELD",
-   "name": "DC/네트워킹/인프라"
-  },
-  {
-   "id": "BF_049",
-   "type": "BUSINESS_FIELD",
-   "name": "특정용응용솔루션"
-  },
-  {
-   "id": "M_018",
-   "type": "MACRO",
-   "name": "피지컬AI확산"
-  },
-  {
-   "id": "M_019",
-   "type": "MACRO",
-   "name": "AI추론확산"
-  },
-  {
-   "id": "C_3576",
-   "type": "CHARACTER",
-   "name": "데이터인프라·커스텀실리콘"
-  },
-  {
-   "id": "C_3577",
-   "type": "CHARACTER",
-   "name": "RF·마이크로파·광반도체"
-  },
-  {
-   "id": "C_3578",
-   "type": "CHARACTER",
-   "name": "광전송장비·코히어런트"
-  },
-  {
-   "id": "C_227",
-   "type": "CHARACTER",
-   "name": "머신비전특화"
-  },
-  {
-   "id": "A_200",
-   "type": "ASSET",
-   "name": "iShares Semiconductor ETF",
-   "exposure": {
-    "ticker": "SOXX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_192",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013535"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "BF_048",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000769"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "C_3576",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007460"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_194",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013536"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_194",
-   "to": "BF_048",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000771"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_194",
-   "to": "C_3577",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007461"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_199",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013537"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_199",
-   "to": "BF_048",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000772"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_199",
-   "to": "C_3578",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007462"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_057",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013538"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_057",
-   "to": "BF_049",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000764"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_057",
-   "to": "C_227",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007463"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_018",
-   "to": "T_618",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013539"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "M_019",
-   "to": "T_618",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013540"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1759",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013541"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1759",
-   "to": "C_3761",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007881"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_208",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013542"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_208",
-   "to": "C_3762",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007883"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_400",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013543"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_400",
-   "to": "C_3763",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007885"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1759",
-   "to": "A_208",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020253"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "스카이웍스와 코보는 RF 프론트엔드 반도체 시장 양대 경쟁"
-  },
-  {
-   "from": "A_192",
-   "to": "A_194",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020254"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "마벨테크놀로지와 메이컴은 광·RF 아날로그 반도체 시장 경쟁"
-  },
-  {
-   "from": "A_199",
-   "to": "A_192",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020255"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "시에나와 마벨은 광전송·DSP 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_400",
-   "to": "A_194",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020256"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "루멘텀과 메이컴은 광통신 부품·칩 시장 경쟁"
-  },
-  {
-   "from": "A_057",
-   "to": "A_192",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020257"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암바렐라와 마벨은 엣지·데이터센터 SoC 시장 경쟁"
-  },
-  {
-   "from": "A_200",
-   "to": "T_618",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020931"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_192",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013535"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "BF_048",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000769"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_192",
-   "to": "C_3576",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007460"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_194",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013536"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_194",
-   "to": "BF_048",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000771"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_194",
-   "to": "C_3577",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007461"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_199",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013537"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_199",
-   "to": "BF_048",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000772"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_199",
-   "to": "C_3578",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007462"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_057",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013538"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_057",
-   "to": "BF_049",
-   "type": "OPERATES",
-   "evidence": [
-    "EV_000764"
-   ],
-   "confidence": 0.83,
-   "status": "verified"
-  },
-  {
-   "from": "A_057",
-   "to": "C_227",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007463"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "M_018",
-   "to": "T_618",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013539"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "M_019",
-   "to": "T_618",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_013540"
-   ],
-   "confidence": 0.78,
-   "status": "verified"
-  },
-  {
-   "from": "A_1759",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013541"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1759",
-   "to": "C_3761",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007881"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_208",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013542"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_208",
-   "to": "C_3762",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007883"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_400",
-   "to": "T_618",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_013543"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_400",
-   "to": "C_3763",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_007885"
-   ],
-   "confidence": 0.8,
-   "status": "verified"
-  },
-  {
-   "from": "A_1759",
-   "to": "A_208",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020253"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "스카이웍스와 코보는 RF 프론트엔드 반도체 시장 양대 경쟁"
-  },
-  {
-   "from": "A_192",
-   "to": "A_194",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020254"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "마벨테크놀로지와 메이컴은 광·RF 아날로그 반도체 시장 경쟁"
-  },
-  {
-   "from": "A_199",
-   "to": "A_192",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020255"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "시에나와 마벨은 광전송·DSP 솔루션 시장 경쟁"
-  },
-  {
-   "from": "A_400",
-   "to": "A_194",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020256"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "루멘텀과 메이컴은 광통신 부품·칩 시장 경쟁"
-  },
-  {
-   "from": "A_057",
-   "to": "A_192",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020257"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "암바렐라와 마벨은 엣지·데이터센터 SoC 시장 경쟁"
-  },
-  {
-   "from": "A_200",
-   "to": "T_618",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020931"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

@@ -1,799 +1,817 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_462",
- "themeName": "글로벌 백신",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_462",
+  "themeName": "글로벌 백신",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "코로나 후 일반 백신(RSV·대상포진·폐렴구균·HPV)·차세대 백신 사이클. 빅파마(Pfizer·Merck·GSK·Sanofi) + mRNA(Moderna·BioNTech)·Novavax·SK바이오사이언스. 미 백신 정책(RFK)·접종률이 변수.",
+    "notes": "T_462 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3 (기존 재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 2026 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_462",
+      "type": "THEME",
+      "name": "글로벌 백신"
+    },
+    {
+      "id": "A_1214",
+      "type": "ASSET",
+      "name": "화이자",
+      "exposure": {
+        "ticker": "PFE",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.5741833923652138,
+        "return_3d": 3.198720511795261,
+        "return_7d": 4.6209971625455815,
+        "return_15d": 3.988718775181299,
+        "return_1m": 7.2289156626506035,
+        "return_ytd": 2.501985702938847,
+        "return_1y": 9.689757756056094,
+        "return_2y": -15.487884741322855,
+        "return_3y": -28.424847476428184,
+        "close": 25.81,
+        "marketCap": 147102546400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_850",
+      "type": "CHARACTER",
+      "name": "코로나·RSV·항암 빅파마"
+    },
+    {
+      "id": "A_1316",
+      "type": "ASSET",
+      "name": "MSD",
+      "exposure": {
+        "ticker": "MRK",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.24999999999999467,
+        "return_3d": -1.4439324116743424,
+        "return_7d": -1.8660140715815232,
+        "return_15d": 3.810371329180473,
+        "return_1m": -0.4190594443582385,
+        "return_ytd": 20.544856740253636,
+        "return_1y": 60.681192086150745,
+        "return_2y": 13.427030849465215,
+        "return_3y": 20.31879981247069,
+        "close": 128.32,
+        "marketCap": 316927302400,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_851",
+      "type": "CHARACTER",
+      "name": "HPV(가다실)·폐렴구균 1위"
+    },
+    {
+      "id": "A_2029",
+      "type": "ASSET",
+      "name": "GSK",
+      "exposure": {
+        "ticker": "GSK",
+        "exchange": "NYSE",
+        "country": "UK"
+      },
+      "metrics": {
+        "return_1d": -0.13584319813700896,
+        "return_3d": -0.4449603404913849,
+        "return_7d": -1.000384763370521,
+        "return_15d": 0.019436345966949986,
+        "return_1m": -3.488372093023251,
+        "return_ytd": 3.687285915776739,
+        "return_1y": 36.57112526539279,
+        "return_2y": 32.731493422749544,
+        "return_3y": 44.672476806297446,
+        "close": 51.46,
+        "marketCap": 103100110000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_852",
+      "type": "CHARACTER",
+      "name": "대상포진(싱그릭스)·RSV 1위"
+    },
+    {
+      "id": "A_1318",
+      "type": "ASSET",
+      "name": "Sanofi",
+      "exposure": {
+        "ticker": "SNY",
+        "exchange": "NASDAQ",
+        "country": "FR"
+      },
+      "metrics": {
+        "return_1d": 0.23430178069354657,
+        "return_3d": -0.696378830083555,
+        "return_7d": -2.772727272727271,
+        "return_15d": -2.060439560439553,
+        "return_1m": -0.46533271288971,
+        "return_ytd": -11.300020733982985,
+        "return_1y": -10.967741935483865,
+        "return_2y": -17.429067747539083,
+        "return_3y": -19.842608206857783,
+        "close": 42.78,
+        "marketCap": 102723336000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_853",
+      "type": "CHARACTER",
+      "name": "독감·소아 백신·면역"
+    },
+    {
+      "id": "A_1632",
+      "type": "ASSET",
+      "name": "모더나",
+      "exposure": {
+        "ticker": "MRNA",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.280926478329536,
+        "return_3d": 2.626778547975195,
+        "return_7d": 1.1324824734855188,
+        "return_15d": -17.60398359695372,
+        "return_1m": -29.472232668923148,
+        "return_ytd": 82.30719377835385,
+        "return_1y": 103.54558610709117,
+        "return_2y": -52.809931219594034,
+        "return_3y": -52.18425973142955,
+        "close": 56.255,
+        "marketCap": 22321196430,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_854",
+      "type": "CHARACTER",
+      "name": "mRNA 백신 플랫폼"
+    },
+    {
+      "id": "A_1633",
+      "type": "ASSET",
+      "name": "바이오엔텍",
+      "exposure": {
+        "ticker": "BNTX",
+        "exchange": "NASDAQ",
+        "country": "DE"
+      },
+      "metrics": {
+        "return_1d": 0.9085933223864417,
+        "return_3d": 1.7663943475380917,
+        "return_7d": 1.1966187287298258,
+        "return_15d": 0.20654418958583332,
+        "return_1m": -2.237777070739211,
+        "return_ytd": -4.664391353811137,
+        "return_1y": -16.22284831409615,
+        "return_2y": 6.937354988399069,
+        "return_3y": -15.330210342610451,
+        "close": 92.18,
+        "marketCap": 23156018458,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_855",
+      "type": "CHARACTER",
+      "name": "mRNA·항암 백신"
+    },
+    {
+      "id": "A_2405",
+      "type": "ASSET",
+      "name": "노바백스",
+      "exposure": {
+        "ticker": "NVAX",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 0.5221932114882533,
+        "return_3d": 5.191256830601088,
+        "return_7d": 2.8037383177569986,
+        "return_15d": -8.659549228944242,
+        "return_1m": -18.60465116279071,
+        "return_ytd": 7.9943899018232845,
+        "return_1y": 14.074074074074083,
+        "return_2y": -39.89071038251366,
+        "return_3y": -17.025862068965512,
+        "close": 7.7,
+        "marketCap": 1266173516,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_856",
+      "type": "CHARACTER",
+      "name": "단백질 기반 백신"
+    },
+    {
+      "id": "A_1725",
+      "type": "ASSET",
+      "name": "SK바이오사이언스",
+      "exposure": {
+        "ticker": "302440",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -0.14430014430014682,
+        "return_3d": 2.215657311669128,
+        "return_7d": -0.717360114777621,
+        "return_15d": -1.1428571428571455,
+        "return_1m": -7.978723404255317,
+        "return_ytd": -27.916666666666668,
+        "return_1y": -27.3109243697479,
+        "return_2y": -35.447761194029844,
+        "return_3y": null,
+        "close": 34600,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_857",
+      "type": "CHARACTER",
+      "name": "K-백신 CMO·자체백신"
+    },
+    {
+      "id": "M_157",
+      "type": "MACRO",
+      "name": "글로벌빅파마투자"
+    },
+    {
+      "id": "M_345",
+      "type": "MACRO",
+      "name": "바이오혁신"
+    },
+    {
+      "id": "M_352",
+      "type": "MACRO",
+      "name": "글로벌약가정책"
+    },
+    {
+      "id": "A_2923",
+      "type": "ASSET",
+      "name": "VanEck Pharmaceutical ETF",
+      "exposure": {
+        "ticker": "PPH",
+        "exchange": "NASDAQ",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": 1.590383726306066,
+        "return_3d": -0.48007246376812196,
+        "return_7d": -1.2936843050938784,
+        "return_15d": 2.1856398809523947,
+        "return_1m": -1.5501792114695268,
+        "return_ytd": 5.929425376012354,
+        "return_1y": 28.27787507297139,
+        "return_2y": 18.0382466695316,
+        "return_3y": 36.62024372046755,
+        "close": 109.87,
+        "marketCap": 648791689,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "코로나 후 일반 백신(RSV·대상포진·폐렴구균·HPV)·차세대 백신 사이클. 빅파마(Pfizer·Merck·GSK·Sanofi) + mRNA(Moderna·BioNTech)·Novavax·SK바이오사이언스. 미 백신 정책(RFK)·접종률이 변수.",
-  "notes": "T_462 신규 — 자산별 CHARACTER(사업특성/포지션), MACRO 3 (기존 재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 2026 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화(회사·사업 특정), 2026 이벤트 2건 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1214",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011950"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "C_850",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016941"
+      ]
+    },
+    {
+      "from": "A_1316",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011951"
+      ]
+    },
+    {
+      "from": "A_1316",
+      "to": "C_851",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016942"
+      ]
+    },
+    {
+      "from": "A_2029",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011952"
+      ]
+    },
+    {
+      "from": "A_2029",
+      "to": "C_852",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016943"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011953"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "C_853",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016944"
+      ]
+    },
+    {
+      "from": "A_1632",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011954"
+      ]
+    },
+    {
+      "from": "A_1632",
+      "to": "C_854",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016945"
+      ]
+    },
+    {
+      "from": "A_1633",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011955"
+      ]
+    },
+    {
+      "from": "A_1633",
+      "to": "C_855",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016946"
+      ]
+    },
+    {
+      "from": "A_2405",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011956"
+      ]
+    },
+    {
+      "from": "A_2405",
+      "to": "C_856",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016947"
+      ]
+    },
+    {
+      "from": "A_1725",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011957"
+      ]
+    },
+    {
+      "from": "A_1725",
+      "to": "C_857",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016948"
+      ]
+    },
+    {
+      "from": "M_157",
+      "to": "T_462",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011958"
+      ]
+    },
+    {
+      "from": "M_345",
+      "to": "T_462",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011959"
+      ]
+    },
+    {
+      "from": "M_352",
+      "to": "T_462",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011960"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "A_1316",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019759"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 MSD는 글로벌 백신 시장 경쟁"
+    },
+    {
+      "from": "A_1632",
+      "to": "A_1633",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019760"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모더나와 바이오엔텍은 mRNA 백신 기술 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1214",
+      "to": "A_1633",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019761"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 바이오엔텍은 코로나 mRNA 백신 공동 개발·판매 파트너"
+    },
+    {
+      "from": "A_1318",
+      "to": "A_2029",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019762"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사노피와 GSK는 독감·RSV 백신 시장 경쟁"
+    },
+    {
+      "from": "A_2405",
+      "to": "A_1632",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019763"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "노바백스와 모더나는 호흡기 백신 시장 경쟁"
+    },
+    {
+      "from": "A_1725",
+      "to": "A_1214",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019764"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK바이오사이언스와 화이자는 백신 CMO·자체 백신 시장 경쟁"
+    },
+    {
+      "from": "A_2923",
+      "to": "T_462",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020806"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1214",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011950"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "C_850",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016941"
+      ]
+    },
+    {
+      "from": "A_1316",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011951"
+      ]
+    },
+    {
+      "from": "A_1316",
+      "to": "C_851",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016942"
+      ]
+    },
+    {
+      "from": "A_2029",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011952"
+      ]
+    },
+    {
+      "from": "A_2029",
+      "to": "C_852",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016943"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011953"
+      ]
+    },
+    {
+      "from": "A_1318",
+      "to": "C_853",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016944"
+      ]
+    },
+    {
+      "from": "A_1632",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011954"
+      ]
+    },
+    {
+      "from": "A_1632",
+      "to": "C_854",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016945"
+      ]
+    },
+    {
+      "from": "A_1633",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011955"
+      ]
+    },
+    {
+      "from": "A_1633",
+      "to": "C_855",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016946"
+      ]
+    },
+    {
+      "from": "A_2405",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011956"
+      ]
+    },
+    {
+      "from": "A_2405",
+      "to": "C_856",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016947"
+      ]
+    },
+    {
+      "from": "A_1725",
+      "to": "T_462",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_011957"
+      ]
+    },
+    {
+      "from": "A_1725",
+      "to": "C_857",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_016948"
+      ]
+    },
+    {
+      "from": "M_157",
+      "to": "T_462",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011958"
+      ]
+    },
+    {
+      "from": "M_345",
+      "to": "T_462",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011959"
+      ]
+    },
+    {
+      "from": "M_352",
+      "to": "T_462",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_011960"
+      ]
+    },
+    {
+      "from": "A_1214",
+      "to": "A_1316",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019759"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 MSD는 글로벌 백신 시장 경쟁"
+    },
+    {
+      "from": "A_1632",
+      "to": "A_1633",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019760"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "모더나와 바이오엔텍은 mRNA 백신 기술 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1214",
+      "to": "A_1633",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_019761"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "화이자와 바이오엔텍은 코로나 mRNA 백신 공동 개발·판매 파트너"
+    },
+    {
+      "from": "A_1318",
+      "to": "A_2029",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019762"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사노피와 GSK는 독감·RSV 백신 시장 경쟁"
+    },
+    {
+      "from": "A_2405",
+      "to": "A_1632",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019763"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "노바백스와 모더나는 호흡기 백신 시장 경쟁"
+    },
+    {
+      "from": "A_1725",
+      "to": "A_1214",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019764"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "SK바이오사이언스와 화이자는 백신 CMO·자체 백신 시장 경쟁"
+    },
+    {
+      "from": "A_2923",
+      "to": "T_462",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020806"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_462",
-   "type": "THEME",
-   "name": "글로벌 백신"
-  },
-  {
-   "id": "A_1214",
-   "type": "ASSET",
-   "name": "화이자",
-   "exposure": {
-    "ticker": "PFE",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.5181781861765886,
-    "return_3d": 2.0072260136491327,
-    "return_7d": 3.5452322738386277,
-    "return_15d": 4.783505154639167,
-    "return_1m": 7.1247892074199015,
-    "return_ytd": 0.9134233518665713,
-    "return_1y": 8.17369093231164,
-    "return_2y": -19.050653074227462,
-    "return_3y": -29.55364568893818,
-    "close": 25.41,
-    "marketCap": 144822770400,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_850",
-   "type": "CHARACTER",
-   "name": "코로나·RSV·항암 빅파마"
-  },
-  {
-   "id": "A_1316",
-   "type": "ASSET",
-   "name": "MSD",
-   "exposure": {
-    "ticker": "MRK",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.21131721061282693,
-    "return_3d": -1.3483319207951316,
-    "return_7d": -2.311741817349511,
-    "return_15d": 6.010928961748618,
-    "return_1m": 0.9938476100331162,
-    "return_ytd": 20.281822451855327,
-    "return_1y": 61.483163072266336,
-    "return_2y": 11.097613882863344,
-    "return_3y": 20.406244122625527,
-    "close": 128.04,
-    "marketCap": 316235752800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_851",
-   "type": "CHARACTER",
-   "name": "HPV(가다실)·폐렴구균 1위"
-  },
-  {
-   "id": "A_2029",
-   "type": "ASSET",
-   "name": "GSK",
-   "exposure": {
-    "ticker": "GSK",
-    "exchange": "NYSE",
-    "country": "UK"
-   },
-   "metrics": {
-    "return_1d": 0.03882741215297525,
-    "return_3d": -1.037065488765121,
-    "return_7d": 0.3505355404089583,
-    "return_15d": 0.5463414634146346,
-    "return_1m": -2.938406479563005,
-    "return_ytd": 3.8283296393310406,
-    "return_1y": 37.193823216187425,
-    "return_2y": 29.570027659039468,
-    "return_3y": 45.40067720090295,
-    "close": 51.53,
-    "marketCap": 103240355000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_852",
-   "type": "CHARACTER",
-   "name": "대상포진(싱그릭스)·RSV 1위"
-  },
-  {
-   "id": "A_1318",
-   "type": "ASSET",
-   "name": "Sanofi",
-   "exposure": {
-    "ticker": "SNY",
-    "exchange": "NASDAQ",
-    "country": "FR"
-   },
-   "metrics": {
-    "return_1d": -0.6286379511059481,
-    "return_3d": -0.48962462112380756,
-    "return_7d": -1.5455594002306894,
-    "return_15d": -1.1579434923575715,
-    "return_1m": 0.16428068528513418,
-    "return_ytd": -11.50736056396433,
-    "return_1y": -8.705882352941174,
-    "return_2y": -17.430837686206225,
-    "return_3y": -18.67378048780487,
-    "close": 42.68,
-    "marketCap": 102483216000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_853",
-   "type": "CHARACTER",
-   "name": "독감·소아 백신·면역"
-  },
-  {
-   "id": "A_1632",
-   "type": "ASSET",
-   "name": "모더나",
-   "exposure": {
-    "ticker": "MRNA",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.3550961189698914,
-    "return_3d": -1.6056629834254155,
-    "return_7d": 5.40040687997041,
-    "return_15d": -15.495255041518385,
-    "return_1m": -30.330073349633246,
-    "return_ytd": 84.67271548930655,
-    "return_1y": 106.41072075335023,
-    "return_2y": -52.04476607202962,
-    "return_3y": -51.972020900050566,
-    "close": 56.99,
-    "marketCap": 22612834140,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_854",
-   "type": "CHARACTER",
-   "name": "mRNA 백신 플랫폼"
-  },
-  {
-   "id": "A_1633",
-   "type": "ASSET",
-   "name": "바이오엔텍",
-   "exposure": {
-    "ticker": "BNTX",
-    "exchange": "NASDAQ",
-    "country": "DE"
-   },
-   "metrics": {
-    "return_1d": -0.9756097560975618,
-    "return_3d": -1.6155088852988664,
-    "return_7d": 2.2612784059106605,
-    "return_15d": 1.050884955752207,
-    "return_1m": -2.7467262855317975,
-    "return_ytd": -5.522804840210982,
-    "return_1y": -14.896590273896038,
-    "return_2y": 5.314733686880335,
-    "return_3y": -14.959970210389129,
-    "close": 91.35,
-    "marketCap": 23100977242,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_855",
-   "type": "CHARACTER",
-   "name": "mRNA·항암 백신"
-  },
-  {
-   "id": "A_2405",
-   "type": "ASSET",
-   "name": "노바백스",
-   "exposure": {
-    "ticker": "NVAX",
-    "exchange": "NASDAQ",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 3.373819163292846,
-    "return_3d": 2.9569892473118253,
-    "return_7d": 2.680965147453085,
-    "return_15d": -9.02612826603325,
-    "return_1m": -18.07486631016042,
-    "return_ytd": 7.433380084151486,
-    "return_1y": 16.768292682926834,
-    "return_2y": -37.213114754098356,
-    "return_3y": -6.585365853658532,
-    "close": 7.66,
-    "marketCap": 1259595992,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_856",
-   "type": "CHARACTER",
-   "name": "단백질 기반 백신"
-  },
-  {
-   "id": "A_1725",
-   "type": "ASSET",
-   "name": "SK바이오사이언스",
-   "exposure": {
-    "ticker": "302440",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -0.14430014430014682,
-    "return_3d": 2.215657311669128,
-    "return_7d": -0.717360114777621,
-    "return_15d": -1.1428571428571455,
-    "return_1m": -7.978723404255317,
-    "return_ytd": -27.916666666666668,
-    "return_1y": -27.3109243697479,
-    "return_2y": -35.447761194029844,
-    "return_3y": null,
-    "close": 34600,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_857",
-   "type": "CHARACTER",
-   "name": "K-백신 CMO·자체백신"
-  },
-  {
-   "id": "M_157",
-   "type": "MACRO",
-   "name": "글로벌빅파마투자"
-  },
-  {
-   "id": "M_345",
-   "type": "MACRO",
-   "name": "바이오혁신"
-  },
-  {
-   "id": "M_352",
-   "type": "MACRO",
-   "name": "글로벌약가정책"
-  },
-  {
-   "id": "A_2923",
-   "type": "ASSET",
-   "name": "VanEck Pharmaceutical ETF",
-   "exposure": {
-    "ticker": "PPH",
-    "exchange": "NASDAQ",
-    "country": "US"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1214",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011950"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "C_850",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016941"
-   ]
-  },
-  {
-   "from": "A_1316",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011951"
-   ]
-  },
-  {
-   "from": "A_1316",
-   "to": "C_851",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016942"
-   ]
-  },
-  {
-   "from": "A_2029",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011952"
-   ]
-  },
-  {
-   "from": "A_2029",
-   "to": "C_852",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016943"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011953"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "C_853",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016944"
-   ]
-  },
-  {
-   "from": "A_1632",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011954"
-   ]
-  },
-  {
-   "from": "A_1632",
-   "to": "C_854",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016945"
-   ]
-  },
-  {
-   "from": "A_1633",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011955"
-   ]
-  },
-  {
-   "from": "A_1633",
-   "to": "C_855",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016946"
-   ]
-  },
-  {
-   "from": "A_2405",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011956"
-   ]
-  },
-  {
-   "from": "A_2405",
-   "to": "C_856",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016947"
-   ]
-  },
-  {
-   "from": "A_1725",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011957"
-   ]
-  },
-  {
-   "from": "A_1725",
-   "to": "C_857",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016948"
-   ]
-  },
-  {
-   "from": "M_157",
-   "to": "T_462",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011958"
-   ]
-  },
-  {
-   "from": "M_345",
-   "to": "T_462",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011959"
-   ]
-  },
-  {
-   "from": "M_352",
-   "to": "T_462",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011960"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "A_1316",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019759"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 MSD는 글로벌 백신 시장 경쟁"
-  },
-  {
-   "from": "A_1632",
-   "to": "A_1633",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019760"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모더나와 바이오엔텍은 mRNA 백신 기술 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1214",
-   "to": "A_1633",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019761"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 바이오엔텍은 코로나 mRNA 백신 공동 개발·판매 파트너"
-  },
-  {
-   "from": "A_1318",
-   "to": "A_2029",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019762"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사노피와 GSK는 독감·RSV 백신 시장 경쟁"
-  },
-  {
-   "from": "A_2405",
-   "to": "A_1632",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019763"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "노바백스와 모더나는 호흡기 백신 시장 경쟁"
-  },
-  {
-   "from": "A_1725",
-   "to": "A_1214",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019764"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK바이오사이언스와 화이자는 백신 CMO·자체 백신 시장 경쟁"
-  },
-  {
-   "from": "A_2923",
-   "to": "T_462",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020806"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1214",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011950"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "C_850",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016941"
-   ]
-  },
-  {
-   "from": "A_1316",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011951"
-   ]
-  },
-  {
-   "from": "A_1316",
-   "to": "C_851",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016942"
-   ]
-  },
-  {
-   "from": "A_2029",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011952"
-   ]
-  },
-  {
-   "from": "A_2029",
-   "to": "C_852",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016943"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011953"
-   ]
-  },
-  {
-   "from": "A_1318",
-   "to": "C_853",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016944"
-   ]
-  },
-  {
-   "from": "A_1632",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011954"
-   ]
-  },
-  {
-   "from": "A_1632",
-   "to": "C_854",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016945"
-   ]
-  },
-  {
-   "from": "A_1633",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011955"
-   ]
-  },
-  {
-   "from": "A_1633",
-   "to": "C_855",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016946"
-   ]
-  },
-  {
-   "from": "A_2405",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011956"
-   ]
-  },
-  {
-   "from": "A_2405",
-   "to": "C_856",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016947"
-   ]
-  },
-  {
-   "from": "A_1725",
-   "to": "T_462",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_011957"
-   ]
-  },
-  {
-   "from": "A_1725",
-   "to": "C_857",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_016948"
-   ]
-  },
-  {
-   "from": "M_157",
-   "to": "T_462",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011958"
-   ]
-  },
-  {
-   "from": "M_345",
-   "to": "T_462",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011959"
-   ]
-  },
-  {
-   "from": "M_352",
-   "to": "T_462",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_011960"
-   ]
-  },
-  {
-   "from": "A_1214",
-   "to": "A_1316",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019759"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 MSD는 글로벌 백신 시장 경쟁"
-  },
-  {
-   "from": "A_1632",
-   "to": "A_1633",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019760"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "모더나와 바이오엔텍은 mRNA 백신 기술 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1214",
-   "to": "A_1633",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_019761"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "화이자와 바이오엔텍은 코로나 mRNA 백신 공동 개발·판매 파트너"
-  },
-  {
-   "from": "A_1318",
-   "to": "A_2029",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019762"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사노피와 GSK는 독감·RSV 백신 시장 경쟁"
-  },
-  {
-   "from": "A_2405",
-   "to": "A_1632",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019763"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "노바백스와 모더나는 호흡기 백신 시장 경쟁"
-  },
-  {
-   "from": "A_1725",
-   "to": "A_1214",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019764"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "SK바이오사이언스와 화이자는 백신 CMO·자체 백신 시장 경쟁"
-  },
-  {
-   "from": "A_2923",
-   "to": "T_462",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020806"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }

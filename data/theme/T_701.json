@@ -1,945 +1,945 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_701",
- "themeName": "미국백화점·몰생태계",
- "meta": {
-  "periodDefault": "7d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_701",
+  "themeName": "미국백화점·몰생태계",
+  "meta": {
+    "periodDefault": "7d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-31T00:00:00+09:00",
+    "description": "미국 백화점(몰 앵커 테넌트)과 그 백화점이 입점한 몰·쇼핑센터를 소유한 리테일 REIT 생태계. 메이시스·콜스·딜라즈(백화점) + 사이먼·메이서리치·탱거·킴코·페더럴리얼티(몰/리테일 REIT). 오프라인 소비심리·금리(리츠)·이커머스 침투가 공통 동인.",
+    "notes": "미국 백화점(몰 앵커 테넌트)과 그 백화점이 입점한 몰·쇼핑센터를 소유한 리테일 REIT 생태계. 메이시스·콜스·딜라즈(백화점) + 사이먼·메이서리치·탱거·킴코·페더럴리얼티(몰/리테일 REIT). 오프라인 소비심리·금리(리츠)·이커머스 침투가 공통 동인.",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-31",
+        "kind": "신규",
+        "title": "테마 생성",
+        "detail": "미국 백화점(몰 앵커 테넌트)과 그 백화점이 입점한 몰·쇼핑센터를 소유한 리테일 REIT 생태계. 메이시스·콜스·딜라즈(백화점) + 사이먼·메이서리치·탱거·킴코·페더럴리얼티(몰/리테일 REIT). 오프라인 소비심리·금리(리츠)·이커머스 침투가 공통 동인."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_701",
+      "type": "THEME",
+      "name": "미국백화점·몰생태계"
+    },
+    {
+      "id": "M_285",
+      "type": "MACRO",
+      "name": "미국소비심리"
+    },
+    {
+      "id": "M_1145",
+      "type": "MACRO",
+      "name": "미국금리인하사이클"
+    },
+    {
+      "id": "M_146",
+      "type": "MACRO",
+      "name": "이커머스확대"
+    },
+    {
+      "id": "A_2802",
+      "type": "ASSET",
+      "name": "메이시스",
+      "exposure": {
+        "ticker": "M",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.670736360167869,
+        "return_3d": 2.7800161160354664,
+        "return_7d": 2.2035256410256387,
+        "return_15d": 7.365319865319875,
+        "return_1m": 10.289667099005628,
+        "return_ytd": 12.131868131868128,
+        "return_1y": 114.36974789915966,
+        "return_2y": 47.62731481481482,
+        "return_3y": 53.76732971669682,
+        "close": 25.51,
+        "marketCap": 6710098207,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5865",
+      "type": "CHARACTER",
+      "name": "백화점앵커_구조조정"
+    },
+    {
+      "id": "A_2809",
+      "type": "ASSET",
+      "name": "콜스",
+      "exposure": {
+        "ticker": "KSS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -2.189054726368167,
+        "return_3d": 2.7168234064785857,
+        "return_7d": 6.327744726879403,
+        "return_15d": 14.970760233918124,
+        "return_1m": 17.30310262529833,
+        "return_ytd": -7.872539831302716,
+        "return_1y": 72.6075504828797,
+        "return_2y": -9.233610341643583,
+        "return_3y": -30.89630931458699,
+        "close": 19.66,
+        "marketCap": 2229444000,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5866",
+      "type": "CHARACTER",
+      "name": "중저가백화점"
+    },
+    {
+      "id": "A_2799",
+      "type": "ASSET",
+      "name": "딜라즈",
+      "exposure": {
+        "ticker": "DDS",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.2572232827514842,
+        "return_3d": 4.794846517319895,
+        "return_7d": 7.422249324854069,
+        "return_15d": 14.907932011331448,
+        "return_1m": 18.237606673698316,
+        "return_ytd": -3.2012434452224903,
+        "return_1y": 31.628949615713054,
+        "return_2y": 54.68275671742893,
+        "return_3y": 79.73122667910447,
+        "close": 616.55,
+        "marketCap": 9628038018,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5867",
+      "type": "CHARACTER",
+      "name": "지역백화점_고마진"
+    },
+    {
+      "id": "A_444",
+      "type": "ASSET",
+      "name": "사이먼프로퍼티그룹",
+      "exposure": {
+        "ticker": "SPG",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.48251438689685955,
+        "close": 224.81,
+        "marketCap": 72901836420,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.988054235514669,
+        "return_7d": -2.961108473259366,
+        "return_15d": 1.2612044502499975,
+        "return_1m": -1.0475813196003325,
+        "return_ytd": 22.199271620372897,
+        "return_1y": 37.12943759912164,
+        "return_2y": 46.51329509906152,
+        "return_3y": 80.42536115569825,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5868",
+      "type": "CHARACTER",
+      "name": "최대몰리츠_A급몰"
+    },
+    {
+      "id": "A_2853",
+      "type": "ASSET",
+      "name": "메이서리치",
+      "exposure": {
+        "ticker": "MAC",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.897736143637784,
+        "close": 25.39,
+        "marketCap": 7555032531,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.741486068111453,
+        "return_7d": -2.8319938767699893,
+        "return_15d": 0.8740564163686848,
+        "return_1m": -0.3923107100823775,
+        "return_ytd": 37.09503239740821,
+        "return_1y": 53.69249394673123,
+        "return_2y": 58.5883822610868,
+        "return_3y": 99.13725490196079,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "미국 고급 몰 리츠 — A급 쇼핑몰 소유·운영, 백화점 앵커 테넌트 임대."
+    },
+    {
+      "id": "C_5869",
+      "type": "CHARACTER",
+      "name": "고급몰리츠"
+    },
+    {
+      "id": "A_2854",
+      "type": "ASSET",
+      "name": "탱거",
+      "exposure": {
+        "ticker": "SKT",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.41748526522593643,
+        "close": 40.53,
+        "marketCap": 4655918241,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -0.2705361534677819,
+        "return_7d": -2.9904306220095656,
+        "return_15d": 0.7203179334326792,
+        "return_1m": 1.6036081182660977,
+        "return_ytd": 22.470552703110847,
+        "return_1y": 33.081719724318994,
+        "return_2y": 40.31141868512111,
+        "return_3y": 73.21657411362663,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "미국 아울렛 몰 리츠 — 아울렛 센터 소유, 오프프라이스·브랜드 임대."
+    },
+    {
+      "id": "C_5870",
+      "type": "CHARACTER",
+      "name": "아울렛몰리츠"
+    },
+    {
+      "id": "A_443",
+      "type": "ASSET",
+      "name": "킴코리얼티",
+      "exposure": {
+        "ticker": "KIM",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.559776089564179,
+        "close": 24.87,
+        "marketCap": 16772079300,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -2.394034536891676,
+        "return_7d": -5.724033358604997,
+        "return_15d": -0.8768433638899897,
+        "return_1m": -1.6607354685646447,
+        "return_ytd": 23.97806580259223,
+        "return_1y": 18.147268408551078,
+        "return_2y": 14.450069028992175,
+        "return_3y": 22.754195459032566,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "C_5871",
+      "type": "CHARACTER",
+      "name": "쇼핑센터리츠"
+    },
+    {
+      "id": "A_2855",
+      "type": "ASSET",
+      "name": "페더럴리얼티",
+      "exposure": {
+        "ticker": "FRT",
+        "exchange": "NYSE",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -0.8060576453346346,
+        "close": 121.83,
+        "marketCap": 10524795871,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": -1.8212587638004707,
+        "return_7d": -4.168960906159047,
+        "return_15d": -0.3354057591622994,
+        "return_1m": -0.22930144951273101,
+        "return_ytd": 23.02332626476824,
+        "return_1y": 33.0893598426917,
+        "return_2y": 9.11777877295119,
+        "return_3y": 20.00591016548463,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      },
+      "coreBiz": "미국 프리미엄 리테일 리츠 — 고소득 상권 쇼핑센터, 배당귀족."
+    },
+    {
+      "id": "C_5872",
+      "type": "CHARACTER",
+      "name": "프리미엄리테일리츠"
+    },
+    {
+      "id": "A_799",
+      "type": "ASSET",
+      "name": "XRT",
+      "exposure": {
+        "ticker": "XRT",
+        "exchange": "NYSEARCA",
+        "country": "US"
+      },
+      "metrics": {
+        "return_1d": -1.0070384407146693,
+        "close": 91.42,
+        "marketCap": 388398053,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 1.8266874582312242,
+        "return_7d": 2.0996202814384635,
+        "return_15d": 2.6038159371492897,
+        "return_1m": 4.875530572444653,
+        "return_ytd": 6.426076833527361,
+        "return_1y": 15.008177129198641,
+        "return_2y": 16.44376512546173,
+        "return_3y": 34.87754499852465,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    },
+    {
+      "id": "A_638",
+      "type": "ASSET",
+      "name": "XLRE",
+      "exposure": {
+        "ticker": "XLRE",
+        "exchange": "NYSEARCA",
+        "country": "US",
+        "business_desc": "Real Estate Select Sector SPDR. 프로로지스(물류)·아메리칸타워(통신)·에퀴닉스(데이터센터) 등 REIT, 금리인하 수혜+데이터센터 구조 성장."
+      },
+      "metrics": {
+        "return_1d": 0.06641576267434335,
+        "close": 45.2,
+        "marketCap": 8132155514,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-05",
+        "valuationSource": "FMP",
+        "return_3d": 0.2884402041269274,
+        "return_7d": -1.2237762237762184,
+        "return_15d": 1.4362657091562037,
+        "return_1m": 0.6905769659167005,
+        "return_ytd": 11.936602278355624,
+        "return_1y": 8.549471661863596,
+        "return_2y": 9.735372663267805,
+        "return_3y": 18.355590468709092,
+        "returnsAsOf": "2026-08-05",
+        "returnsSource": "FMP"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-31T00:00:00+09:00",
-  "description": "미국 백화점(몰 앵커 테넌트)과 그 백화점이 입점한 몰·쇼핑센터를 소유한 리테일 REIT 생태계. 메이시스·콜스·딜라즈(백화점) + 사이먼·메이서리치·탱거·킴코·페더럴리얼티(몰/리테일 REIT). 오프라인 소비심리·금리(리츠)·이커머스 침투가 공통 동인.",
-  "notes": "미국 백화점(몰 앵커 테넌트)과 그 백화점이 입점한 몰·쇼핑센터를 소유한 리테일 REIT 생태계. 메이시스·콜스·딜라즈(백화점) + 사이먼·메이서리치·탱거·킴코·페더럴리얼티(몰/리테일 REIT). 오프라인 소비심리·금리(리츠)·이커머스 침투가 공통 동인.",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 6건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-31",
-    "kind": "신규",
-    "title": "테마 생성",
-    "detail": "미국 백화점(몰 앵커 테넌트)과 그 백화점이 입점한 몰·쇼핑센터를 소유한 리테일 REIT 생태계. 메이시스·콜스·딜라즈(백화점) + 사이먼·메이서리치·탱거·킴코·페더럴리얼티(몰/리테일 REIT). 오프라인 소비심리·금리(리츠)·이커머스 침투가 공통 동인."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "M_285",
+      "to": "T_701",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015132"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1145",
+      "to": "T_701",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015133"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_146",
+      "to": "T_701",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015134"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2802",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015135"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2802",
+      "to": "C_5865",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015136"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2809",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015137"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2809",
+      "to": "C_5866",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015138"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2799",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015139"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2799",
+      "to": "C_5867",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015140"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015141"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "C_5868",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015142"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2853",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015143"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2853",
+      "to": "C_5869",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015144"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2854",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015145"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2854",
+      "to": "C_5870",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015146"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015147"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "C_5871",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015148"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2855",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015149"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2855",
+      "to": "C_5872",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015150"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2802",
+      "to": "A_2809",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020517"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메이시스와 콜스는 미국 백화점 시장 직접 경쟁"
+    },
+    {
+      "from": "A_2799",
+      "to": "A_2802",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020518"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "딜라즈와 메이시스는 미국 백화점 시장 경쟁"
+    },
+    {
+      "from": "A_444",
+      "to": "A_2853",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020519"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사이먼프로퍼티그룹과 메이서리치는 미국 프리미엄 몰 REIT 경쟁"
+    },
+    {
+      "from": "A_443",
+      "to": "A_2855",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020520"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "킴코리얼티와 페더럴리얼티는 오픈에어 리테일 REIT 경쟁"
+    },
+    {
+      "from": "A_2853",
+      "to": "A_2854",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020521"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메이서리치와 탱거는 몰·아울렛 REIT 시장 경쟁"
+    },
+    {
+      "from": "A_444",
+      "to": "A_2802",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_020522"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사이먼프로퍼티그룹은 메이시스 등 백화점을 앵커 테넌트로 임대"
+    },
+    {
+      "from": "A_799",
+      "to": "T_701",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020987"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_638",
+      "to": "T_701",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020988"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "M_285",
+      "to": "T_701",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015132"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_1145",
+      "to": "T_701",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015133"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "M_146",
+      "to": "T_701",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_015134"
+      ],
+      "confidence": 0.72,
+      "status": "verified"
+    },
+    {
+      "from": "A_2802",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015135"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2802",
+      "to": "C_5865",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015136"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2809",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015137"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2809",
+      "to": "C_5866",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015138"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2799",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015139"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2799",
+      "to": "C_5867",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015140"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015141"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_444",
+      "to": "C_5868",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015142"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2853",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015143"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2853",
+      "to": "C_5869",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015144"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2854",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015145"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2854",
+      "to": "C_5870",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015146"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015147"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_443",
+      "to": "C_5871",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015148"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2855",
+      "to": "T_701",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_015149"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2855",
+      "to": "C_5872",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_015150"
+      ],
+      "confidence": 0.82,
+      "status": "verified"
+    },
+    {
+      "from": "A_2802",
+      "to": "A_2809",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020517"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메이시스와 콜스는 미국 백화점 시장 직접 경쟁"
+    },
+    {
+      "from": "A_2799",
+      "to": "A_2802",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020518"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "딜라즈와 메이시스는 미국 백화점 시장 경쟁"
+    },
+    {
+      "from": "A_444",
+      "to": "A_2853",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020519"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사이먼프로퍼티그룹과 메이서리치는 미국 프리미엄 몰 REIT 경쟁"
+    },
+    {
+      "from": "A_443",
+      "to": "A_2855",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020520"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "킴코리얼티와 페더럴리얼티는 오픈에어 리테일 REIT 경쟁"
+    },
+    {
+      "from": "A_2853",
+      "to": "A_2854",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_020521"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "메이서리치와 탱거는 몰·아울렛 REIT 시장 경쟁"
+    },
+    {
+      "from": "A_444",
+      "to": "A_2802",
+      "type": "PARTNERS",
+      "evidence": [
+        "EV_020522"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "사이먼프로퍼티그룹은 메이시스 등 백화점을 앵커 테넌트로 임대"
+    },
+    {
+      "from": "A_799",
+      "to": "T_701",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020987"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    },
+    {
+      "from": "A_638",
+      "to": "T_701",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020988"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_701",
-   "type": "THEME",
-   "name": "미국백화점·몰생태계"
-  },
-  {
-   "id": "M_285",
-   "type": "MACRO",
-   "name": "미국소비심리"
-  },
-  {
-   "id": "M_1145",
-   "type": "MACRO",
-   "name": "미국금리인하사이클"
-  },
-  {
-   "id": "M_146",
-   "type": "MACRO",
-   "name": "이커머스확대"
-  },
-  {
-   "id": "A_2802",
-   "type": "ASSET",
-   "name": "메이시스",
-   "exposure": {
-    "ticker": "M",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 1.0019267822735989,
-    "return_3d": 5.134376253509831,
-    "return_7d": 12.104362703165105,
-    "return_15d": 12.925463162429995,
-    "return_1m": 10.684121621621623,
-    "return_ytd": 15.208791208791217,
-    "return_1y": 112.05501618122979,
-    "return_2y": 51.50289017341041,
-    "return_3y": 61.09403810694531,
-    "close": 26.21,
-    "marketCap": 6894224774,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5865",
-   "type": "CHARACTER",
-   "name": "백화점앵커_구조조정"
-  },
-  {
-   "id": "A_2809",
-   "type": "ASSET",
-   "name": "콜스",
-   "exposure": {
-    "ticker": "KSS",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "return_3d": 3.076923076923088,
-    "return_7d": 12.040133779264206,
-    "return_15d": 22.337188070602565,
-    "return_1m": 18.934911242603558,
-    "return_ytd": -5.810684161199619,
-    "return_1y": 87.32525629077355,
-    "return_2y": -4.51306413301662,
-    "return_3y": -28.799149840595106,
-    "close": 20.1,
-    "marketCap": 2279340000,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5866",
-   "type": "CHARACTER",
-   "name": "중저가백화점"
-  },
-  {
-   "id": "A_2799",
-   "type": "ASSET",
-   "name": "딜라즈",
-   "exposure": {
-    "ticker": "DDS",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.861534445060852,
-    "return_3d": 2.628214706712506,
-    "return_7d": 8.817885749493893,
-    "return_15d": 17.20737973795483,
-    "return_1m": 19.660072012079443,
-    "return_ytd": -2.951612396772074,
-    "return_1y": 31.92615515953472,
-    "return_2y": 56.431734784259156,
-    "return_3y": 86.70411985018727,
-    "close": 618.14,
-    "marketCap": 9652867440,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5867",
-   "type": "CHARACTER",
-   "name": "지역백화점_고마진"
-  },
-  {
-   "id": "A_444",
-   "type": "ASSET",
-   "name": "사이먼프로퍼티그룹",
-   "exposure": {
-    "ticker": "SPG",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.42258683888985,
-    "close": 225.9,
-    "marketCap": 73255303800,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.9701440722096786,
-    "return_7d": -1.6885716772565007,
-    "return_15d": 2.087852494577014,
-    "return_1m": 0.40000000000000036,
-    "return_ytd": 22.79175952600967,
-    "return_1y": 40.589992531740094,
-    "return_2y": 45.920806149473556,
-    "return_3y": 81.47493573264781,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5868",
-   "type": "CHARACTER",
-   "name": "최대몰리츠_A급몰"
-  },
-  {
-   "id": "A_2853",
-   "type": "ASSET",
-   "name": "메이서리치",
-   "exposure": {
-    "ticker": "MAC",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.9663703131039814,
-    "close": 25.62,
-    "marketCap": 7623471188,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 0.5889281507656108,
-    "return_7d": -0.8130081300812941,
-    "return_15d": 2.9329047810365605,
-    "return_1m": 1.3449367088607556,
-    "return_ytd": 38.33693304535637,
-    "return_1y": 58.736059479553916,
-    "return_2y": 53.13807531380754,
-    "return_3y": 102.85035629453682,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "미국 고급 몰 리츠 — A급 쇼핑몰 소유·운영, 백화점 앵커 테넌트 임대."
-  },
-  {
-   "id": "C_5869",
-   "type": "CHARACTER",
-   "name": "고급몰리츠"
-  },
-  {
-   "id": "A_2854",
-   "type": "ASSET",
-   "name": "탱거",
-   "exposure": {
-    "ticker": "SKT",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.0736196319018445,
-    "close": 40.72,
-    "marketCap": 4677744653,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.6829268292682933,
-    "return_7d": -2.885761984259483,
-    "return_15d": 2.106318956870612,
-    "return_1m": 3.4552845528455167,
-    "return_ytd": 22.983992751434613,
-    "return_1y": 37.94037940379405,
-    "return_2y": 39.835164835164825,
-    "return_3y": 74.61406518010291,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "미국 아울렛 몰 리츠 — 아울렛 센터 소유, 오프프라이스·브랜드 임대."
-  },
-  {
-   "id": "C_5870",
-   "type": "CHARACTER",
-   "name": "아울렛몰리츠"
-  },
-  {
-   "id": "A_443",
-   "type": "ASSET",
-   "name": "킴코리얼티",
-   "exposure": {
-    "ticker": "KIM",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -1.5741833923652027,
-    "close": 25.01,
-    "marketCap": 16866493900,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.9600156801254376,
-    "return_7d": -4.176245210727969,
-    "return_15d": -0.9504950495049402,
-    "return_1m": -0.159680638722548,
-    "return_ytd": 24.675972083748764,
-    "return_1y": 20.588235294117663,
-    "return_2y": 13.52700862460281,
-    "return_3y": 23.934588701684856,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "C_5871",
-   "type": "CHARACTER",
-   "name": "쇼핑센터리츠"
-  },
-  {
-   "id": "A_2855",
-   "type": "ASSET",
-   "name": "페더럴리얼티",
-   "exposure": {
-    "ticker": "FRT",
-    "exchange": "NYSE",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": -0.6712494945410485,
-    "close": 122.82,
-    "marketCap": 10610321176,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -1.0234507212507182,
-    "return_7d": -2.585659898477166,
-    "return_15d": 0.5814429612644334,
-    "return_1m": 1.874585268745843,
-    "return_ytd": 24.02302332626476,
-    "return_1y": 35.5479527645955,
-    "return_2y": 7.821964708980778,
-    "return_3y": 21.688298820965013,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   },
-   "coreBiz": "미국 프리미엄 리테일 리츠 — 고소득 상권 쇼핑센터, 배당귀족."
-  },
-  {
-   "id": "C_5872",
-   "type": "CHARACTER",
-   "name": "프리미엄리테일리츠"
-  },
-  {
-   "id": "A_799",
-   "type": "ASSET",
-   "name": "XRT",
-   "exposure": {
-    "ticker": "XRT",
-    "exchange": "NYSEARCA",
-    "country": "US"
-   },
-   "metrics": {
-    "return_1d": 0.9731029958451876,
-    "close": 92.35,
-    "marketCap": 392349160,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": 1.9540737469640135,
-    "return_7d": 6.137225606252139,
-    "return_15d": 5.206197311460459,
-    "return_1m": 5.3983108879251285,
-    "return_ytd": 7.508731082654241,
-    "return_1y": 18.62556197816314,
-    "return_2y": 18.9311010946555,
-    "return_3y": 37.425595238095234,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  },
-  {
-   "id": "A_638",
-   "type": "ASSET",
-   "name": "XLRE",
-   "exposure": {
-    "ticker": "XLRE",
-    "exchange": "NYSEARCA",
-    "country": "US",
-    "business_desc": "Real Estate Select Sector SPDR. 프로로지스(물류)·아메리칸타워(통신)·에퀴닉스(데이터센터) 등 REIT, 금리인하 수혜+데이터센터 구조 성장."
-   },
-   "metrics": {
-    "return_1d": -0.02213368747232547,
-    "close": 45.17,
-    "marketCap": 8126758066,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-04",
-    "valuationSource": "FMP",
-    "return_3d": -0.2869757174392862,
-    "return_7d": -1.697497279651794,
-    "return_15d": 1.5512589928057707,
-    "return_1m": 1.9869044931135837,
-    "return_ytd": 11.862308073303618,
-    "return_1y": 9.396948413659478,
-    "return_2y": 9.396948413659478,
-    "return_3y": 19.21351280021113,
-    "returnsAsOf": "2026-08-04",
-    "returnsSource": "FMP"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "M_285",
-   "to": "T_701",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015132"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_1145",
-   "to": "T_701",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015133"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_146",
-   "to": "T_701",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015134"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2802",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015135"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2802",
-   "to": "C_5865",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015136"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2809",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015137"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2809",
-   "to": "C_5866",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015138"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2799",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015139"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2799",
-   "to": "C_5867",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015140"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015141"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "C_5868",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015142"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2853",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015143"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2853",
-   "to": "C_5869",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015144"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2854",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015145"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2854",
-   "to": "C_5870",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015146"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015147"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "C_5871",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015148"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2855",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015149"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2855",
-   "to": "C_5872",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015150"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2802",
-   "to": "A_2809",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020517"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메이시스와 콜스는 미국 백화점 시장 직접 경쟁"
-  },
-  {
-   "from": "A_2799",
-   "to": "A_2802",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020518"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "딜라즈와 메이시스는 미국 백화점 시장 경쟁"
-  },
-  {
-   "from": "A_444",
-   "to": "A_2853",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020519"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사이먼프로퍼티그룹과 메이서리치는 미국 프리미엄 몰 REIT 경쟁"
-  },
-  {
-   "from": "A_443",
-   "to": "A_2855",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020520"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "킴코리얼티와 페더럴리얼티는 오픈에어 리테일 REIT 경쟁"
-  },
-  {
-   "from": "A_2853",
-   "to": "A_2854",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020521"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메이서리치와 탱거는 몰·아울렛 REIT 시장 경쟁"
-  },
-  {
-   "from": "A_444",
-   "to": "A_2802",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_020522"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사이먼프로퍼티그룹은 메이시스 등 백화점을 앵커 테넌트로 임대"
-  },
-  {
-   "from": "A_799",
-   "to": "T_701",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020987"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_638",
-   "to": "T_701",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020988"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "M_285",
-   "to": "T_701",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015132"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_1145",
-   "to": "T_701",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015133"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "M_146",
-   "to": "T_701",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_015134"
-   ],
-   "confidence": 0.72,
-   "status": "verified"
-  },
-  {
-   "from": "A_2802",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015135"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2802",
-   "to": "C_5865",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015136"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2809",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015137"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2809",
-   "to": "C_5866",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015138"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2799",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015139"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2799",
-   "to": "C_5867",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015140"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015141"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_444",
-   "to": "C_5868",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015142"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2853",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015143"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2853",
-   "to": "C_5869",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015144"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2854",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015145"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2854",
-   "to": "C_5870",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015146"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015147"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_443",
-   "to": "C_5871",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015148"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2855",
-   "to": "T_701",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_015149"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2855",
-   "to": "C_5872",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_015150"
-   ],
-   "confidence": 0.82,
-   "status": "verified"
-  },
-  {
-   "from": "A_2802",
-   "to": "A_2809",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020517"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메이시스와 콜스는 미국 백화점 시장 직접 경쟁"
-  },
-  {
-   "from": "A_2799",
-   "to": "A_2802",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020518"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "딜라즈와 메이시스는 미국 백화점 시장 경쟁"
-  },
-  {
-   "from": "A_444",
-   "to": "A_2853",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020519"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사이먼프로퍼티그룹과 메이서리치는 미국 프리미엄 몰 REIT 경쟁"
-  },
-  {
-   "from": "A_443",
-   "to": "A_2855",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020520"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "킴코리얼티와 페더럴리얼티는 오픈에어 리테일 REIT 경쟁"
-  },
-  {
-   "from": "A_2853",
-   "to": "A_2854",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_020521"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "메이서리치와 탱거는 몰·아울렛 REIT 시장 경쟁"
-  },
-  {
-   "from": "A_444",
-   "to": "A_2802",
-   "type": "PARTNERS",
-   "evidence": [
-    "EV_020522"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "사이먼프로퍼티그룹은 메이시스 등 백화점을 앵커 테넌트로 임대"
-  },
-  {
-   "from": "A_799",
-   "to": "T_701",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020987"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  },
-  {
-   "from": "A_638",
-   "to": "T_701",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020988"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }
