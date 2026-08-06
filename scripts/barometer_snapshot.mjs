@@ -51,7 +51,19 @@ for (const f of files) {
   }
   const hp = (periodDefault || "7d").toUpperCase();
   const headlinePeriod = PERIODS.includes(hp) ? hp : "7D";
-  const assetCount = (d.nodes || []).filter((n) => (n.type ?? "").toUpperCase() === "ASSET").length;
+  const assetNodes = (d.nodes || []).filter((n) => (n.type ?? "").toUpperCase() === "ASSET");
+  const assetCount = assetNodes.length;
+  // 주요 종목(시총순 상위 5) + 최근(3D) 수익률 — 카드 표시용
+  const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : null);
+  const movers = assetNodes
+    .map((n) => {
+      const m = n.metrics || {};
+      return { n: n.name || "", t: (n.exposure?.ticker || "").trim(), mc: num(m.marketCap), r: num(m.return_3d) };
+    })
+    .filter((x) => x.n)
+    .sort((a, b) => (b.mc ?? -1) - (a.mc ?? -1))
+    .slice(0, 5)
+    .map((x) => ({ n: x.n, t: x.t, r: x.r == null ? null : Number(x.r.toFixed(1)) }));
   if (ok) okCount++;
   rows.push({
     themeId,
@@ -62,6 +74,7 @@ for (const f of files) {
     headlineScore: scores[headlinePeriod] ?? null,
     scores, // overallScore per period
     avgRet, // 가중 EW 수익률(%) per period — forward 매칭·검증용
+    movers, // 주요 종목 top5 {n:이름, t:티커, r:return_3d%}
   });
 }
 
