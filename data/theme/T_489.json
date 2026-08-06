@@ -1,795 +1,795 @@
 {
- "schemaVersion": "v5",
- "themeId": "T_489",
- "themeName": "(Y15) 저유가 사이클",
- "meta": {
-  "periodDefault": "3d",
-  "periodOptions": [
-   "1d",
-   "3d",
-   "7d",
-   "15d",
-   "1m",
-   "ytd",
-   "1y",
-   "2y",
-   "3y"
+  "schemaVersion": "v5",
+  "themeId": "T_489",
+  "themeName": "(Y15) 저유가 사이클",
+  "meta": {
+    "periodDefault": "3d",
+    "periodOptions": [
+      "1d",
+      "3d",
+      "7d",
+      "15d",
+      "1m",
+      "ytd",
+      "1y",
+      "2y",
+      "3y"
+    ],
+    "dataAsOf": "2026-07-25T00:00:00+09:00",
+    "description": "2014~2016 유가 대폭락(WTI $107→$26)의 수혜·타격 사이클 회고. 저유가 수혜 항공·LCC(대한항공·제주·진에어)·화학(롯데케미칼·금호석유·대한유화·효성화학)·정유(S-Oil). 수혜는 한시적이고 유가는 회귀한다는 교훈.",
+    "notes": "T_489 신규 — 2015 회고 테마(Y15). 자산별 CHARACTER, MACRO 3(기존 재사용)",
+    "sources": [],
+    "changelog": [
+      {
+        "date": "2026-08-04",
+        "kind": "보강",
+        "title": "2궤도 관계 엣지 추가",
+        "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
+      },
+      {
+        "date": "2026-07-25",
+        "kind": "수정",
+        "title": "구체적 엣지 백필 + 이벤트",
+        "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
+      },
+      {
+        "date": "2026-08-05",
+        "kind": "관계",
+        "title": "EXPOSED_TO ETF 연결",
+        "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "T_489",
+      "type": "THEME",
+      "name": "(Y15) 저유가 사이클"
+    },
+    {
+      "id": "A_1593",
+      "type": "ASSET",
+      "name": "대한항공",
+      "exposure": {
+        "ticker": "003490",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.230483271375472,
+        "return_3d": 4.961832061068705,
+        "return_7d": 8.910891089108919,
+        "return_15d": 3.1894934333958735,
+        "return_1m": -5.660377358490565,
+        "return_ytd": 27.658208303027276,
+        "return_1y": 15.20374872160495,
+        "return_2y": 29.766084128626403,
+        "return_3y": null,
+        "close": 27500,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1068",
+      "type": "CHARACTER",
+      "name": "대형 항공 — 연료비 수혜"
+    },
+    {
+      "id": "A_1596",
+      "type": "ASSET",
+      "name": "제주항공",
+      "exposure": {
+        "ticker": "089590",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.9142857142857119,
+        "return_3d": 4.250295159386064,
+        "return_7d": 6.5138721351025275,
+        "return_15d": 3.88235294117647,
+        "return_1m": -3.391684901531733,
+        "return_ytd": -18.240740740740748,
+        "return_1y": -36.47482014388489,
+        "return_2y": -56.06965174129353,
+        "return_3y": null,
+        "close": 4415,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1069",
+      "type": "CHARACTER",
+      "name": "LCC — 저유가 최대 수혜"
+    },
+    {
+      "id": "A_1594",
+      "type": "ASSET",
+      "name": "진에어",
+      "exposure": {
+        "ticker": "272450",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 0.1828153564899404,
+        "return_3d": 3.984819734345346,
+        "return_7d": 9.600000000000009,
+        "return_15d": 7.03125,
+        "return_1m": -3.0088495575221197,
+        "return_ytd": -20.69464544138929,
+        "return_1y": -40.10928961748634,
+        "return_2y": -51.50442477876106,
+        "return_3y": null,
+        "close": 5480,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1070",
+      "type": "CHARACTER",
+      "name": "LCC — 저유가 수혜"
+    },
+    {
+      "id": "A_1361",
+      "type": "ASSET",
+      "name": "롯데케미칼",
+      "exposure": {
+        "ticker": "011170",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.7331022530329365,
+        "return_3d": 6.340579710144922,
+        "return_7d": 2.622377622377625,
+        "return_15d": -3.29489291598023,
+        "return_1m": -6.677265500794915,
+        "return_ytd": -12.508065206275344,
+        "return_1y": -12.353400573236229,
+        "return_2y": -43.869850741786124,
+        "return_3y": null,
+        "close": 58700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1071",
+      "type": "CHARACTER",
+      "name": "화학 — 원가 개선"
+    },
+    {
+      "id": "A_1363",
+      "type": "ASSET",
+      "name": "금호석유화학",
+      "exposure": {
+        "ticker": "011780",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.5859766277128484,
+        "return_3d": 7.699115044247784,
+        "return_7d": 5.4592720970537245,
+        "return_15d": 3.662691652470196,
+        "return_1m": 4.017094017094025,
+        "return_ytd": 3.839590443686003,
+        "return_1y": -5.068270036596112,
+        "return_2y": -19.13322463753413,
+        "return_3y": null,
+        "close": 121700,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1072",
+      "type": "CHARACTER",
+      "name": "합성고무·페놀"
+    },
+    {
+      "id": "A_1362",
+      "type": "ASSET",
+      "name": "대한유화",
+      "exposure": {
+        "ticker": "006650",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.3348164627363657,
+        "return_3d": 5.196304849884537,
+        "return_7d": -0.3282275711159688,
+        "return_15d": -12.822966507177036,
+        "return_1m": -16.26838235294118,
+        "return_ytd": -34.46043165467626,
+        "return_1y": -12.388415984821021,
+        "return_2y": -27.039093066614306,
+        "return_3y": null,
+        "close": 91100,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1073",
+      "type": "CHARACTER",
+      "name": "석유화학 중형"
+    },
+    {
+      "id": "A_1239",
+      "type": "ASSET",
+      "name": "효성화학",
+      "exposure": {
+        "ticker": "298000",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 2.7439024390243816,
+        "return_3d": 2.900763358778624,
+        "return_7d": 12.333333333333329,
+        "return_15d": 14.043993231810493,
+        "return_1m": 0.5970149253731405,
+        "return_ytd": 73.26478149100257,
+        "return_1y": 73.26478149100257,
+        "return_2y": 10.855263157894735,
+        "return_3y": null,
+        "close": 38900,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1074",
+      "type": "CHARACTER",
+      "name": "화학·PP/TPA"
+    },
+    {
+      "id": "A_2512",
+      "type": "ASSET",
+      "name": "에쓰오일",
+      "exposure": {
+        "ticker": "010950",
+        "exchange": "KOSPI",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": 1.959183673469389,
+        "return_3d": 2.629416598192269,
+        "return_7d": -3.552123552123554,
+        "return_15d": -11.039886039886039,
+        "return_1m": -1.9623233908948157,
+        "return_ytd": 56.02517684713646,
+        "return_1y": 102.73174287440531,
+        "return_2y": 87.63060964484009,
+        "return_3y": null,
+        "close": 124900,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    },
+    {
+      "id": "C_1075",
+      "type": "CHARACTER",
+      "name": "정유 — 정제마진"
+    },
+    {
+      "id": "M_037",
+      "type": "MACRO",
+      "name": "유가하락"
+    },
+    {
+      "id": "M_143",
+      "type": "MACRO",
+      "name": "저유가"
+    },
+    {
+      "id": "M_082",
+      "type": "MACRO",
+      "name": "항공수요증가"
+    },
+    {
+      "id": "A_1367",
+      "type": "ASSET",
+      "name": "TIGER200에너지화학",
+      "exposure": {
+        "ticker": "139250",
+        "exchange": "KRX",
+        "country": "KR"
+      },
+      "metrics": {
+        "return_1d": -1.9572417946401632,
+        "return_3d": 6.127770534550203,
+        "return_7d": 5.018085386914151,
+        "return_15d": -3.71020832491612,
+        "return_1m": -4.526223494246739,
+        "return_ytd": 22.66920689377132,
+        "return_1y": 29.79400081604391,
+        "return_2y": 34.833159535488825,
+        "return_3y": 27.065987324468743,
+        "close": 16280,
+        "marketCap": null,
+        "pe_ttm": null,
+        "valuationAsOf": "2026-08-06",
+        "valuationSource": "EODHD",
+        "returnsAsOf": "2026-08-06",
+        "returnsSource": "EODHD"
+      }
+    }
   ],
-  "dataAsOf": "2026-07-25T00:00:00+09:00",
-  "description": "2014~2016 유가 대폭락(WTI $107→$26)의 수혜·타격 사이클 회고. 저유가 수혜 항공·LCC(대한항공·제주·진에어)·화학(롯데케미칼·금호석유·대한유화·효성화학)·정유(S-Oil). 수혜는 한시적이고 유가는 회귀한다는 교훈.",
-  "notes": "T_489 신규 — 2015 회고 테마(Y15). 자산별 CHARACTER, MACRO 3(기존 재사용)",
-  "sources": [],
-  "changelog": [
-   {
-    "date": "2026-08-04",
-    "kind": "보강",
-    "title": "2궤도 관계 엣지 추가",
-    "detail": "테마 내 자산 간 공급/경쟁/파트너/투자 관계 5건 백필(리서치 기반)."
-   },
-   {
-    "date": "2026-07-25",
-    "kind": "수정",
-    "title": "구체적 엣지 백필 + 이벤트",
-    "detail": "THEMED_AS/IMPACTS 근거 구체화, 이벤트(회고+2026 에코) 추가."
-   },
-   {
-    "date": "2026-08-05",
-    "kind": "관계",
-    "title": "EXPOSED_TO ETF 연결",
-    "detail": "테마 구성종목과 겹침이 높은 상장 ETF를 EXPOSED_TO로 연결하고 브리핑카드·근거를 부착했다."
-   }
+  "edges": [
+    {
+      "from": "A_1593",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012243"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "C_1068",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017152"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012244"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "C_1069",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017153"
+      ]
+    },
+    {
+      "from": "A_1594",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012245"
+      ]
+    },
+    {
+      "from": "A_1594",
+      "to": "C_1070",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017154"
+      ]
+    },
+    {
+      "from": "A_1361",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012246"
+      ]
+    },
+    {
+      "from": "A_1361",
+      "to": "C_1071",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017155"
+      ]
+    },
+    {
+      "from": "A_1363",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012247"
+      ]
+    },
+    {
+      "from": "A_1363",
+      "to": "C_1072",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017156"
+      ]
+    },
+    {
+      "from": "A_1362",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012248"
+      ]
+    },
+    {
+      "from": "A_1362",
+      "to": "C_1073",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017157"
+      ]
+    },
+    {
+      "from": "A_1239",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012249"
+      ]
+    },
+    {
+      "from": "A_1239",
+      "to": "C_1074",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017158"
+      ]
+    },
+    {
+      "from": "A_2512",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012250"
+      ]
+    },
+    {
+      "from": "A_2512",
+      "to": "C_1075",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017159"
+      ]
+    },
+    {
+      "from": "M_037",
+      "to": "T_489",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012251"
+      ]
+    },
+    {
+      "from": "M_143",
+      "to": "T_489",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012252"
+      ]
+    },
+    {
+      "from": "M_082",
+      "to": "T_489",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012253"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "A_1596",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019896"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "대한항공과 제주항공은 국내 항공 여객 시장 경쟁"
+    },
+    {
+      "from": "A_1596",
+      "to": "A_1594",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019897"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "제주항공과 진에어는 국내 저비용항공 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1361",
+      "to": "A_1363",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019898"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "롯데케미칼과 금호석유화학은 석유화학 제품 시장 경쟁"
+    },
+    {
+      "from": "A_1362",
+      "to": "A_1363",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019899"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "대한유화와 금호석유화학은 합성수지·합성고무 시장 경쟁"
+    },
+    {
+      "from": "A_2512",
+      "to": "A_1361",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019900"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에쓰오일은 롯데케미칼 등 석화사에 나프타 원료를 공급"
+    },
+    {
+      "from": "A_1367",
+      "to": "T_489",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020837"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
+  ],
+  "links": [
+    {
+      "from": "A_1593",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012243"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "C_1068",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017152"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012244"
+      ]
+    },
+    {
+      "from": "A_1596",
+      "to": "C_1069",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017153"
+      ]
+    },
+    {
+      "from": "A_1594",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012245"
+      ]
+    },
+    {
+      "from": "A_1594",
+      "to": "C_1070",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017154"
+      ]
+    },
+    {
+      "from": "A_1361",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012246"
+      ]
+    },
+    {
+      "from": "A_1361",
+      "to": "C_1071",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017155"
+      ]
+    },
+    {
+      "from": "A_1363",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012247"
+      ]
+    },
+    {
+      "from": "A_1363",
+      "to": "C_1072",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017156"
+      ]
+    },
+    {
+      "from": "A_1362",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012248"
+      ]
+    },
+    {
+      "from": "A_1362",
+      "to": "C_1073",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017157"
+      ]
+    },
+    {
+      "from": "A_1239",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012249"
+      ]
+    },
+    {
+      "from": "A_1239",
+      "to": "C_1074",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017158"
+      ]
+    },
+    {
+      "from": "A_2512",
+      "to": "T_489",
+      "type": "THEMED_AS",
+      "evidence": [
+        "EV_012250"
+      ]
+    },
+    {
+      "from": "A_2512",
+      "to": "C_1075",
+      "type": "HAS_TRAIT",
+      "evidence": [
+        "EV_017159"
+      ]
+    },
+    {
+      "from": "M_037",
+      "to": "T_489",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012251"
+      ]
+    },
+    {
+      "from": "M_143",
+      "to": "T_489",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012252"
+      ]
+    },
+    {
+      "from": "M_082",
+      "to": "T_489",
+      "type": "IMPACTS",
+      "evidence": [
+        "EV_012253"
+      ]
+    },
+    {
+      "from": "A_1593",
+      "to": "A_1596",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019896"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "대한항공과 제주항공은 국내 항공 여객 시장 경쟁"
+    },
+    {
+      "from": "A_1596",
+      "to": "A_1594",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019897"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "제주항공과 진에어는 국내 저비용항공 시장 직접 경쟁"
+    },
+    {
+      "from": "A_1361",
+      "to": "A_1363",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019898"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "롯데케미칼과 금호석유화학은 석유화학 제품 시장 경쟁"
+    },
+    {
+      "from": "A_1362",
+      "to": "A_1363",
+      "type": "COMPETES",
+      "evidence": [
+        "EV_019899"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "대한유화와 금호석유화학은 합성수지·합성고무 시장 경쟁"
+    },
+    {
+      "from": "A_2512",
+      "to": "A_1361",
+      "type": "SUPPLIES",
+      "evidence": [
+        "EV_019900"
+      ],
+      "confidence": 0.8,
+      "status": "verified",
+      "rationale": "에쓰오일은 롯데케미칼 등 석화사에 나프타 원료를 공급"
+    },
+    {
+      "from": "A_1367",
+      "to": "T_489",
+      "type": "EXPOSED_TO",
+      "evidence": [
+        "EV_020837"
+      ],
+      "confidence": 0.7,
+      "status": "verified"
+    }
   ]
- },
- "nodes": [
-  {
-   "id": "T_489",
-   "type": "THEME",
-   "name": "(Y15) 저유가 사이클"
-  },
-  {
-   "id": "A_1593",
-   "type": "ASSET",
-   "name": "대한항공",
-   "exposure": {
-    "ticker": "003490",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 3.065134099616862,
-    "return_3d": 3.8610038610038533,
-    "return_7d": 1.7013232514177634,
-    "return_15d": 1.5094339622641506,
-    "return_1m": -6.434782608695655,
-    "return_ytd": 24.872938303688507,
-    "return_1y": 9.789276340188113,
-    "return_2y": 26.096047706419313,
-    "return_3y": null,
-    "close": 26900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1068",
-   "type": "CHARACTER",
-   "name": "대형 항공 — 연료비 수혜"
-  },
-  {
-   "id": "A_1596",
-   "type": "ASSET",
-   "name": "제주항공",
-   "exposure": {
-    "ticker": "089590",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.699530516431925,
-    "return_3d": 4.290822407628125,
-    "return_7d": 3.062426383981154,
-    "return_15d": 4.166666666666674,
-    "return_1m": -4.580152671755721,
-    "return_ytd": -18.981481481481477,
-    "return_1y": -37.230989956958396,
-    "return_2y": -56.25,
-    "return_3y": null,
-    "close": 4375,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1069",
-   "type": "CHARACTER",
-   "name": "LCC — 저유가 최대 수혜"
-  },
-  {
-   "id": "A_1594",
-   "type": "ASSET",
-   "name": "진에어",
-   "exposure": {
-    "ticker": "272450",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 3.207547169811331,
-    "return_3d": 5.192307692307696,
-    "return_7d": 4.389312977099236,
-    "return_15d": 7.677165354330717,
-    "return_1m": -3.69718309859155,
-    "return_ytd": -20.839363241678722,
-    "return_1y": -40.41394335511983,
-    "return_2y": -51.67844522968198,
-    "return_3y": null,
-    "close": 5470,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1070",
-   "type": "CHARACTER",
-   "name": "LCC — 저유가 수혜"
-  },
-  {
-   "id": "A_1361",
-   "type": "ASSET",
-   "name": "롯데케미칼",
-   "exposure": {
-    "ticker": "011170",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.0,
-    "return_3d": 2.123893805309729,
-    "return_7d": -4.94233937397035,
-    "return_15d": -3.5117056856187268,
-    "return_1m": -9.702660406885755,
-    "return_ytd": -13.998558132914606,
-    "return_1y": -12.558733556101554,
-    "return_2y": -44.209602862835986,
-    "return_3y": null,
-    "close": 57700,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1071",
-   "type": "CHARACTER",
-   "name": "화학 — 원가 개선"
-  },
-  {
-   "id": "A_1363",
-   "type": "ASSET",
-   "name": "금호석유화학",
-   "exposure": {
-    "ticker": "011780",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.3931623931623847,
-    "return_3d": 4.72027972027973,
-    "return_7d": -1.3991769547325061,
-    "return_15d": 3.1869078380706295,
-    "return_1m": 2.568493150684925,
-    "return_ytd": 2.2184300341296925,
-    "return_1y": -4.342887674837071,
-    "return_2y": -21.051947607594602,
-    "return_3y": null,
-    "close": 119800,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1072",
-   "type": "CHARACTER",
-   "name": "합성고무·페놀"
-  },
-  {
-   "id": "A_1362",
-   "type": "ASSET",
-   "name": "대한유화",
-   "exposure": {
-    "ticker": "006650",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 0.22296544035673715,
-    "return_3d": 5.146198830409365,
-    "return_7d": -7.319587628865976,
-    "return_15d": -14.217557251908397,
-    "return_1m": -19.37219730941704,
-    "return_ytd": -35.32374100719424,
-    "return_1y": -12.878046323894054,
-    "return_2y": -27.94368836596458,
-    "return_3y": null,
-    "close": 89900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1073",
-   "type": "CHARACTER",
-   "name": "석유화학 중형"
-  },
-  {
-   "id": "A_1239",
-   "type": "ASSET",
-   "name": "효성화학",
-   "exposure": {
-    "ticker": "298000",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 2.982731554160134,
-    "return_3d": -1.3533834586466176,
-    "return_7d": 0.45941807044409533,
-    "return_15d": 9.515859766277135,
-    "return_1m": 27.13178294573644,
-    "return_ytd": 68.63753213367609,
-    "return_1y": 68.63753213367609,
-    "return_2y": 8.789386401326693,
-    "return_3y": null,
-    "close": 38900,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1074",
-   "type": "CHARACTER",
-   "name": "화학·PP/TPA"
-  },
-  {
-   "id": "A_2512",
-   "type": "ASSET",
-   "name": "에쓰오일",
-   "exposure": {
-    "ticker": "010950",
-    "exchange": "KOSPI",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": -2.6232114467408585,
-    "return_3d": -3.7706205813040072,
-    "return_7d": -10.190615835777129,
-    "return_15d": -6.773211567732118,
-    "return_1m": 4.79041916167664,
-    "return_ytd": 53.027094986182675,
-    "return_1y": 95.98206905175266,
-    "return_2y": 82.66004522561326,
-    "return_3y": null,
-    "close": 122500,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  },
-  {
-   "id": "C_1075",
-   "type": "CHARACTER",
-   "name": "정유 — 정제마진"
-  },
-  {
-   "id": "M_037",
-   "type": "MACRO",
-   "name": "유가하락"
-  },
-  {
-   "id": "M_143",
-   "type": "MACRO",
-   "name": "저유가"
-  },
-  {
-   "id": "M_082",
-   "type": "MACRO",
-   "name": "항공수요증가"
-  },
-  {
-   "id": "A_1367",
-   "type": "ASSET",
-   "name": "TIGER200에너지화학",
-   "exposure": {
-    "ticker": "139250",
-    "exchange": "KRX",
-    "country": "KR"
-   },
-   "metrics": {
-    "return_1d": 3.5547240411599734,
-    "return_3d": 4.6313799621928275,
-    "return_7d": -2.7339599172975015,
-    "return_15d": 3.746403528299913,
-    "return_1m": -3.5503771249956073,
-    "return_ytd": 25.118070053505704,
-    "return_1y": 33.76135139870673,
-    "return_2y": 38.24779129484004,
-    "return_3y": 27.065987324468743,
-    "close": 16605,
-    "marketCap": null,
-    "pe_ttm": null,
-    "valuationAsOf": "2026-08-05",
-    "valuationSource": "EODHD",
-    "returnsAsOf": "2026-08-05",
-    "returnsSource": "EODHD"
-   }
-  }
- ],
- "edges": [
-  {
-   "from": "A_1593",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012243"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "C_1068",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017152"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012244"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "C_1069",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017153"
-   ]
-  },
-  {
-   "from": "A_1594",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012245"
-   ]
-  },
-  {
-   "from": "A_1594",
-   "to": "C_1070",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017154"
-   ]
-  },
-  {
-   "from": "A_1361",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012246"
-   ]
-  },
-  {
-   "from": "A_1361",
-   "to": "C_1071",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017155"
-   ]
-  },
-  {
-   "from": "A_1363",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012247"
-   ]
-  },
-  {
-   "from": "A_1363",
-   "to": "C_1072",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017156"
-   ]
-  },
-  {
-   "from": "A_1362",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012248"
-   ]
-  },
-  {
-   "from": "A_1362",
-   "to": "C_1073",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017157"
-   ]
-  },
-  {
-   "from": "A_1239",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012249"
-   ]
-  },
-  {
-   "from": "A_1239",
-   "to": "C_1074",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017158"
-   ]
-  },
-  {
-   "from": "A_2512",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012250"
-   ]
-  },
-  {
-   "from": "A_2512",
-   "to": "C_1075",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017159"
-   ]
-  },
-  {
-   "from": "M_037",
-   "to": "T_489",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012251"
-   ]
-  },
-  {
-   "from": "M_143",
-   "to": "T_489",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012252"
-   ]
-  },
-  {
-   "from": "M_082",
-   "to": "T_489",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012253"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "A_1596",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019896"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "대한항공과 제주항공은 국내 항공 여객 시장 경쟁"
-  },
-  {
-   "from": "A_1596",
-   "to": "A_1594",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019897"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "제주항공과 진에어는 국내 저비용항공 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1361",
-   "to": "A_1363",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019898"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "롯데케미칼과 금호석유화학은 석유화학 제품 시장 경쟁"
-  },
-  {
-   "from": "A_1362",
-   "to": "A_1363",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019899"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "대한유화와 금호석유화학은 합성수지·합성고무 시장 경쟁"
-  },
-  {
-   "from": "A_2512",
-   "to": "A_1361",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019900"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에쓰오일은 롯데케미칼 등 석화사에 나프타 원료를 공급"
-  },
-  {
-   "from": "A_1367",
-   "to": "T_489",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020837"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ],
- "links": [
-  {
-   "from": "A_1593",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012243"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "C_1068",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017152"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012244"
-   ]
-  },
-  {
-   "from": "A_1596",
-   "to": "C_1069",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017153"
-   ]
-  },
-  {
-   "from": "A_1594",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012245"
-   ]
-  },
-  {
-   "from": "A_1594",
-   "to": "C_1070",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017154"
-   ]
-  },
-  {
-   "from": "A_1361",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012246"
-   ]
-  },
-  {
-   "from": "A_1361",
-   "to": "C_1071",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017155"
-   ]
-  },
-  {
-   "from": "A_1363",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012247"
-   ]
-  },
-  {
-   "from": "A_1363",
-   "to": "C_1072",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017156"
-   ]
-  },
-  {
-   "from": "A_1362",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012248"
-   ]
-  },
-  {
-   "from": "A_1362",
-   "to": "C_1073",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017157"
-   ]
-  },
-  {
-   "from": "A_1239",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012249"
-   ]
-  },
-  {
-   "from": "A_1239",
-   "to": "C_1074",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017158"
-   ]
-  },
-  {
-   "from": "A_2512",
-   "to": "T_489",
-   "type": "THEMED_AS",
-   "evidence": [
-    "EV_012250"
-   ]
-  },
-  {
-   "from": "A_2512",
-   "to": "C_1075",
-   "type": "HAS_TRAIT",
-   "evidence": [
-    "EV_017159"
-   ]
-  },
-  {
-   "from": "M_037",
-   "to": "T_489",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012251"
-   ]
-  },
-  {
-   "from": "M_143",
-   "to": "T_489",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012252"
-   ]
-  },
-  {
-   "from": "M_082",
-   "to": "T_489",
-   "type": "IMPACTS",
-   "evidence": [
-    "EV_012253"
-   ]
-  },
-  {
-   "from": "A_1593",
-   "to": "A_1596",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019896"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "대한항공과 제주항공은 국내 항공 여객 시장 경쟁"
-  },
-  {
-   "from": "A_1596",
-   "to": "A_1594",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019897"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "제주항공과 진에어는 국내 저비용항공 시장 직접 경쟁"
-  },
-  {
-   "from": "A_1361",
-   "to": "A_1363",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019898"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "롯데케미칼과 금호석유화학은 석유화학 제품 시장 경쟁"
-  },
-  {
-   "from": "A_1362",
-   "to": "A_1363",
-   "type": "COMPETES",
-   "evidence": [
-    "EV_019899"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "대한유화와 금호석유화학은 합성수지·합성고무 시장 경쟁"
-  },
-  {
-   "from": "A_2512",
-   "to": "A_1361",
-   "type": "SUPPLIES",
-   "evidence": [
-    "EV_019900"
-   ],
-   "confidence": 0.8,
-   "status": "verified",
-   "rationale": "에쓰오일은 롯데케미칼 등 석화사에 나프타 원료를 공급"
-  },
-  {
-   "from": "A_1367",
-   "to": "T_489",
-   "type": "EXPOSED_TO",
-   "evidence": [
-    "EV_020837"
-   ],
-   "confidence": 0.7,
-   "status": "verified"
-  }
- ]
 }
