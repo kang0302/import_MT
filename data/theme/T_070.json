@@ -1,1459 +1,745 @@
 {
-  "schemaVersion": "v5",
-  "themeId": "T_070",
-  "themeName": "K-AI광네트워크",
-  "meta": {
-    "periodDefault": "3d",
-    "periodOptions": [
-      "1d",
-      "3d",
-      "7d",
-      "15d",
-      "1m",
-      "ytd",
-      "1y",
-      "2y",
-      "3y"
-    ],
-    "dataAsOf": "2026-07-26T00:00:00+09:00",
-    "notes": "g70 누적 import 기반 K-AI 광 네트워크 인프라 테마",
-    "sources": [],
-    "description": "AI 데이터센터 광 네트워크·5G/6G·Open RAN 인프라 핵심군. 오이솔루션·라이트론·HD현대비앤에스·코위버 등 광 부품/광케이블 + KMW·쏠리드·RFHIC RF 부품 + Lumentum NVIDIA $2B 협력. NVDA hyperscaler DC 광 부품 채택과 단가 상승이 동인.",
-    "changelog": [
-      {
-        "date": "2026-07-26",
-        "kind": "수정",
-        "title": "자산 CHR 백필",
-        "detail": "CHR 미정의 자산에 CHARACTER·HAS_TRAIT 추가."
-      },
-      {
-        "date": "2026-07-21",
-        "kind": "수정",
-        "title": "RFHIC 2궤도 강등",
-        "detail": "RFHIC(GaN RF)를 THEMED_AS 제거로 1궤도에서 제외 → RF머트리얼즈 INVESTS 관계 기반 2궤도로 유지."
-      },
-      {
-        "date": "2026-07-21",
-        "kind": "수정",
-        "title": "루멘텀 2궤도 강등·국내 공급망 엣지",
-        "detail": "루멘텀홀딩스(미국)를 THEMED_AS 제거로 2궤도화하고, 성호전자·RF머트리얼즈의 SUPPLIES(루멘텀 공급) 엣지를 출처와 함께 추가."
-      }
-    ]
-  },
-  "nodes": [
-    {
-      "id": "T_070",
-      "type": "THEME",
-      "name": "K-AI광네트워크"
-    },
-    {
-      "id": "A_579",
-      "type": "ASSET",
-      "name": "RFHIC",
-      "exposure": {
-        "ticker": "218410",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -1.9230769230769273,
-        "close": 48450,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": -0.6153846153846176,
-        "return_7d": 30.76923076923077,
-        "return_15d": 4.756756756756753,
-        "return_1m": -1.9230769230769273,
-        "return_ytd": 38.23109843081311,
-        "return_1y": 75.75130991586607,
-        "return_2y": 260.0622838636961,
-        "return_3y": 295.43726235741445,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_590",
-      "type": "ASSET",
-      "name": "RF머트리얼즈",
-      "exposure": {
-        "ticker": "327260",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -4.444444444444439,
-        "close": 47300,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": -17.881944444444443,
-        "return_7d": -13.369963369963367,
-        "return_15d": -29.821958456973295,
-        "return_1m": -38.25065274151436,
-        "return_ytd": 85.12720156555773,
-        "return_1y": 688.3333333333334,
-        "return_2y": 357.4468085106383,
-        "return_3y": 556.1270185913963,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_400",
-      "type": "ASSET",
-      "name": "루멘텀홀딩스",
-      "exposure": {
-        "ticker": "LITE",
-        "exchange": "NASDAQ",
-        "country": "US"
-      },
-      "metrics": {
-        "return_1d": 6.217931890318118,
-        "close": 890.17,
-        "marketCap": 69255226000,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "FMP",
-        "return_3d": 4.791222762428338,
-        "return_7d": 47.7828505021997,
-        "return_15d": 21.471848475751187,
-        "return_1m": 13.286330605647967,
-        "return_ytd": 130.54828934759524,
-        "return_1y": 709.1718934642305,
-        "return_2y": 1908.053237085495,
-        "return_3y": 1662.3638883389428,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "FMP"
-      }
-    },
-    {
-      "id": "A_592",
-      "type": "ASSET",
-      "name": "KMW",
-      "exposure": {
-        "ticker": "032500",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -0.3010234798314304,
-        "close": 16560,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": 1.9076923076922991,
-        "return_7d": 24.511278195488728,
-        "return_15d": 9.814323607427067,
-        "return_1m": 9.596293845135673,
-        "return_ytd": 4.743833017077792,
-        "return_1y": 18.539727988546883,
-        "return_2y": 31.53296266878476,
-        "return_3y": 67.74193548387098,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_591",
-      "type": "ASSET",
-      "name": "쏠리드",
-      "exposure": {
-        "ticker": "050890",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -1.106639839034207,
-        "close": 9830,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": 2.0768431983385183,
-        "return_7d": 27.166882276843474,
-        "return_15d": 4.1313559322033955,
-        "return_1m": 3.5827186512118026,
-        "return_ytd": 26.151624447923027,
-        "return_1y": 51.53697416612155,
-        "return_2y": 96.37232200242396,
-        "return_3y": 232.6605504587156,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_593",
-      "type": "ASSET",
-      "name": "우리넷",
-      "exposure": {
-        "ticker": "115440",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 0.13605442176871652,
-        "close": 7360,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": 3.2258064516129004,
-        "return_7d": 28.000000000000004,
-        "return_15d": 3.2258064516129004,
-        "return_1m": 8.23529411764705,
-        "return_ytd": -1.2080536912751683,
-        "return_1y": 18.82745842952143,
-        "return_2y": 13.442089154446135,
-        "return_3y": 58.11870100783874,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_594",
-      "type": "ASSET",
-      "name": "오이솔루션",
-      "exposure": {
-        "ticker": "138080",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 18.526785714285722,
-        "close": 26550,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": 37.06763035622096,
-        "return_7d": 87.36767819336626,
-        "return_15d": 36.50385604113111,
-        "return_1m": 32.089552238805965,
-        "return_ytd": 73.3028720626632,
-        "return_1y": 171.75025588536337,
-        "return_2y": 126.12752742545771,
-        "return_3y": 122.73972602739724,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_595",
-      "type": "ASSET",
-      "name": "대한광통신",
-      "exposure": {
-        "ticker": "010170",
-        "exchange": "KOSPI",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 3.5230352303523116,
-        "close": 11460,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": 12.573673870333991,
-        "return_7d": 53.825503355704704,
-        "return_15d": 11.262135922330096,
-        "return_1m": 10.831721470019339,
-        "return_ytd": 327.13705314792554,
-        "return_1y": 1177.7603470156268,
-        "return_2y": 1038.9220549970155,
-        "return_3y": 1163.650546021841,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_596",
-      "type": "ASSET",
-      "name": "유비쿼스",
-      "exposure": {
-        "ticker": "078070",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 0.32537960954446277,
-        "close": 9250,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "return_3d": 4.638009049773761,
-        "return_7d": 21.87088274044795,
-        "return_15d": 12.257281553398048,
-        "return_1m": 18.1353767560664,
-        "return_ytd": -14.98161764705882,
-        "return_1y": -4.616589056020914,
-        "return_2y": -10.455965869337868,
-        "return_3y": 4.678362573099415,
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "BF_131",
-      "type": "BUSINESS_FIELD",
-      "name": "소버린AI인프라"
-    },
-    {
-      "id": "M_019",
-      "type": "MACRO",
-      "name": "AI추론확산"
-    },
-    {
-      "id": "M_054",
-      "type": "MACRO",
-      "name": "5G/6G"
-    },
-    {
-      "id": "A_1879",
-      "type": "ASSET",
-      "name": "파이버프로",
-      "exposure": {
-        "ticker": "075310",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": null,
-        "return_3d": null,
-        "return_7d": null,
-        "return_15d": null,
-        "return_1m": null,
-        "return_ytd": null,
-        "return_1y": null,
-        "return_2y": null,
-        "return_3y": null,
-        "close": null,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": null,
-        "valuationSource": null,
-        "returnsAsOf": null,
-        "returnsSource": null
-      }
-    },
-    {
-      "id": "A_466",
-      "type": "ASSET",
-      "name": "성호전자",
-      "exposure": {
-        "ticker": "043260",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -1.091954022988506,
-        "return_3d": 2.3795359904818625,
-        "return_7d": 31.37404580152672,
-        "return_15d": -3.477285473920355,
-        "return_1m": -7.918673087212413,
-        "return_ytd": 59.351851851851855,
-        "return_1y": 1436.607142857143,
-        "return_2y": 907.6112412177986,
-        "return_3y": 3566.6666666666665,
-        "close": 17210,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_1880",
-      "type": "ASSET",
-      "name": "머큐리",
-      "exposure": {
-        "ticker": "100660",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 0.6861063464836947,
-        "return_3d": 2.9824561403508865,
-        "return_7d": 14.42495126705654,
-        "return_15d": -2.491694352159468,
-        "return_1m": -1.675041876046901,
-        "return_ytd": -36.88172043010752,
-        "return_1y": -16.317998789561948,
-        "return_2y": -34.37802034384219,
-        "return_3y": null,
-        "close": 2935,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_850",
-      "type": "ASSET",
-      "name": "한국첨단소재",
-      "exposure": {
-        "ticker": "062970",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -3.497615262321141,
-        "return_3d": -10.669610007358354,
-        "return_7d": -12.536023054755042,
-        "return_15d": -39.9009900990099,
-        "return_1m": -52.3921568627451,
-        "return_ytd": -15.202761791565877,
-        "return_1y": -46.50307005837202,
-        "return_2y": 0.579366979644691,
-        "return_3y": 134.07407407407405,
-        "close": 1214,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_1881",
-      "type": "ASSET",
-      "name": "빛과전자",
-      "exposure": {
-        "ticker": "134060",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": 4.183266932270913,
-        "return_3d": 5.870445344129549,
-        "return_7d": 14.192139737991273,
-        "return_15d": 9.643605870020956,
-        "return_1m": 9.758656873032523,
-        "return_ytd": 27.5609756097561,
-        "return_1y": 23.55948364987912,
-        "return_2y": 21.98604097172914,
-        "return_3y": null,
-        "close": 5230,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "A_1882",
-      "type": "ASSET",
-      "name": "라이콤",
-      "exposure": {
-        "ticker": "388790",
-        "exchange": "KOSDAQ",
-        "country": "KR"
-      },
-      "metrics": {
-        "return_1d": -3.587962962962965,
-        "return_3d": -12.95715778474399,
-        "return_7d": -22.149532710280372,
-        "return_15d": -42.945205479452056,
-        "return_1m": -29.52622673434856,
-        "return_ytd": 52.28519195612431,
-        "return_1y": 50.09009009009009,
-        "return_2y": 54.25925925925925,
-        "return_3y": null,
-        "close": 4165,
-        "marketCap": null,
-        "pe_ttm": null,
-        "valuationAsOf": "2026-08-07",
-        "valuationSource": "EODHD",
-        "returnsAsOf": "2026-08-07",
-        "returnsSource": "EODHD"
-      }
-    },
-    {
-      "id": "M_276",
-      "type": "MACRO",
-      "name": "Agentic AI 확산"
-    },
-    {
-      "id": "M_017",
-      "type": "MACRO",
-      "name": "엔비디아루빈개발"
-    },
-    {
-      "id": "M_338",
-      "type": "MACRO",
-      "name": "GPU효율성개선니즈"
-    },
-    {
-      "id": "C_5545",
-      "type": "CHARACTER",
-      "name": "GaN_RF증폭기"
-    },
-    {
-      "id": "C_5546",
-      "type": "CHARACTER",
-      "name": "RF부품"
-    },
-    {
-      "id": "C_5547",
-      "type": "CHARACTER",
-      "name": "광트랜시버"
-    },
-    {
-      "id": "C_5548",
-      "type": "CHARACTER",
-      "name": "기지국RF"
-    },
-    {
-      "id": "C_5549",
-      "type": "CHARACTER",
-      "name": "광전송중계기"
-    },
-    {
-      "id": "C_5550",
-      "type": "CHARACTER",
-      "name": "광전송장비"
-    },
-    {
-      "id": "C_5551",
-      "type": "CHARACTER",
-      "name": "광트랜시버"
-    },
-    {
-      "id": "C_5552",
-      "type": "CHARACTER",
-      "name": "광섬유케이블"
-    },
-    {
-      "id": "C_5553",
-      "type": "CHARACTER",
-      "name": "광스위치"
-    },
-    {
-      "id": "C_5554",
-      "type": "CHARACTER",
-      "name": "광부품"
-    },
-    {
-      "id": "C_5555",
-      "type": "CHARACTER",
-      "name": "콘덴서부품"
-    },
-    {
-      "id": "C_5556",
-      "type": "CHARACTER",
-      "name": "통신장비"
-    },
-    {
-      "id": "C_5557",
-      "type": "CHARACTER",
-      "name": "광소재"
-    },
-    {
-      "id": "C_5558",
-      "type": "CHARACTER",
-      "name": "광반도체"
-    },
-    {
-      "id": "C_5559",
-      "type": "CHARACTER",
-      "name": "광증폭기"
-    }
-  ],
-  "edges": [
-    {
-      "from": "A_590",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002203"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_592",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002205"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_591",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002206"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_593",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002207"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_594",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002208"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_595",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002209"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_596",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002210"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_019",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002211"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_054",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002212"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_579",
-      "to": "A_590",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_002213"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_590",
-      "to": "A_400",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_002214"
-      ],
-      "confidence": 0.6,
-      "status": "verified"
-    },
-    {
-      "from": "A_594",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002215"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_595",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002216"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1879",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002217"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002218"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1880",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002219"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_850",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002220"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1881",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002221"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1882",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002222"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_276",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002223"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_017",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002224"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_338",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002225"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_1879",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002226"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002227"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1880",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002228"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_850",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002229"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1881",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002230"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1882",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002231"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "A_400",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_008173"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_579",
-      "to": "C_5545",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014488"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_590",
-      "to": "C_5546",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014489"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_400",
-      "to": "C_5547",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014490"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_592",
-      "to": "C_5548",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014491"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_591",
-      "to": "C_5549",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014492"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_593",
-      "to": "C_5550",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014493"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_594",
-      "to": "C_5551",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014494"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_595",
-      "to": "C_5552",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014495"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_596",
-      "to": "C_5553",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014496"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1879",
-      "to": "C_5554",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014497"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "C_5555",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014498"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1880",
-      "to": "C_5556",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014499"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_850",
-      "to": "C_5557",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014500"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1881",
-      "to": "C_5558",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014501"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1882",
-      "to": "C_5559",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014502"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    }
-  ],
-  "links": [
-    {
-      "from": "A_590",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002203"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_592",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002205"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_591",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002206"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_593",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002207"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_594",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002208"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_595",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002209"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_596",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002210"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_019",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002211"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_054",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002212"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_579",
-      "to": "A_590",
-      "type": "INVESTS",
-      "evidence": [
-        "EV_002213"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_590",
-      "to": "A_400",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_002214"
-      ],
-      "confidence": 0.6,
-      "status": "verified"
-    },
-    {
-      "from": "A_594",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002215"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_595",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002216"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1879",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002217"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002218"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1880",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002219"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_850",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002220"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1881",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002221"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1882",
-      "to": "T_070",
-      "type": "THEMED_AS",
-      "evidence": [
-        "EV_002222"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "M_276",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002223"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_017",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002224"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "M_338",
-      "to": "T_070",
-      "type": "IMPACTS",
-      "evidence": [
-        "EV_002225"
-      ],
-      "confidence": 0.75,
-      "status": "verified"
-    },
-    {
-      "from": "A_1879",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002226"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002227"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1880",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002228"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_850",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002229"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1881",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002230"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_1882",
-      "to": "BF_131",
-      "type": "OPERATES",
-      "evidence": [
-        "EV_002231"
-      ],
-      "confidence": 0.8,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "A_400",
-      "type": "SUPPLIES",
-      "evidence": [
-        "EV_008173"
-      ],
-      "confidence": 0.7,
-      "status": "verified"
-    },
-    {
-      "from": "A_579",
-      "to": "C_5545",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014488"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_590",
-      "to": "C_5546",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014489"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_400",
-      "to": "C_5547",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014490"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_592",
-      "to": "C_5548",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014491"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_591",
-      "to": "C_5549",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014492"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_593",
-      "to": "C_5550",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014493"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_594",
-      "to": "C_5551",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014494"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_595",
-      "to": "C_5552",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014495"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_596",
-      "to": "C_5553",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014496"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1879",
-      "to": "C_5554",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014497"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_466",
-      "to": "C_5555",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014498"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1880",
-      "to": "C_5556",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014499"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_850",
-      "to": "C_5557",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014500"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1881",
-      "to": "C_5558",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014501"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    },
-    {
-      "from": "A_1882",
-      "to": "C_5559",
-      "type": "HAS_TRAIT",
-      "evidence": [
-        "EV_014502"
-      ],
-      "confidence": 0.72,
-      "status": "verified"
-    }
+ "schemaVersion": "v5",
+ "themeId": "T_070",
+ "themeName": "K-AI데이터센터 광연결",
+ "meta": {
+  "periodDefault": "3d",
+  "description": "AI 데이터센터 광연결(트랜시버·광반도체·광부품). 루멘텀 NVIDIA $2B 협력 중심으로 하이퍼스케일러 DC 광부품 채택·단가 상승이 동인. AI 추론·GPU 효율화가 광연결 수요를 견인.",
+  "notes": "T_070 K-AI광네트워크 분할 파생 (T_070)",
+  "changelog": [
+   {
+    "date": "2026-08-08",
+    "kind": "구성",
+    "title": "K-AI광네트워크 → 2분할(드라이버 기준)",
+    "detail": "AI 데이터센터 광연결(T_070) / 5G·6G 통신네트워크(T_706)로 분리. 본 테마=K-AI데이터센터 광연결. 크로스그룹 공급관계 제거, 루멘텀 THEMED_AS 보강."
+   }
   ]
+ },
+ "nodes": [
+  {
+   "id": "T_070",
+   "type": "THEME",
+   "name": "K-AI데이터센터 광연결"
+  },
+  {
+   "id": "A_400",
+   "type": "ASSET",
+   "name": "루멘텀홀딩스",
+   "exposure": {
+    "ticker": "LITE",
+    "exchange": "NASDAQ",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 6.217931890318118,
+    "close": 890.17,
+    "marketCap": 69255226000,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "FMP",
+    "return_3d": 4.791222762428338,
+    "return_7d": 47.7828505021997,
+    "return_15d": 21.471848475751187,
+    "return_1m": 13.286330605647967,
+    "return_ytd": 130.54828934759524,
+    "return_1y": 709.1718934642305,
+    "return_2y": 1908.053237085495,
+    "return_3y": 1662.3638883389428,
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "id": "A_594",
+   "type": "ASSET",
+   "name": "오이솔루션",
+   "exposure": {
+    "ticker": "138080",
+    "exchange": "KOSDAQ",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 18.526785714285722,
+    "close": 26550,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "EODHD",
+    "return_3d": 37.06763035622096,
+    "return_7d": 87.36767819336626,
+    "return_15d": 36.50385604113111,
+    "return_1m": 32.089552238805965,
+    "return_ytd": 73.3028720626632,
+    "return_1y": 171.75025588536337,
+    "return_2y": 126.12752742545771,
+    "return_3y": 122.73972602739724,
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_1879",
+   "type": "ASSET",
+   "name": "파이버프로",
+   "exposure": {
+    "ticker": "075310",
+    "exchange": "KOSDAQ",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": null,
+    "return_3d": null,
+    "return_7d": null,
+    "return_15d": null,
+    "return_1m": null,
+    "return_ytd": null,
+    "return_1y": null,
+    "return_2y": null,
+    "return_3y": null,
+    "close": null,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": null,
+    "valuationSource": null,
+    "returnsAsOf": null,
+    "returnsSource": null
+   }
+  },
+  {
+   "id": "A_1881",
+   "type": "ASSET",
+   "name": "빛과전자",
+   "exposure": {
+    "ticker": "134060",
+    "exchange": "KOSDAQ",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 4.183266932270913,
+    "return_3d": 5.870445344129549,
+    "return_7d": 14.192139737991273,
+    "return_15d": 9.643605870020956,
+    "return_1m": 9.758656873032523,
+    "return_ytd": 27.5609756097561,
+    "return_1y": 23.55948364987912,
+    "return_2y": 21.98604097172914,
+    "return_3y": null,
+    "close": 5230,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_1882",
+   "type": "ASSET",
+   "name": "라이콤",
+   "exposure": {
+    "ticker": "388790",
+    "exchange": "KOSDAQ",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": -3.587962962962965,
+    "return_3d": -12.95715778474399,
+    "return_7d": -22.149532710280372,
+    "return_15d": -42.945205479452056,
+    "return_1m": -29.52622673434856,
+    "return_ytd": 52.28519195612431,
+    "return_1y": 50.09009009009009,
+    "return_2y": 54.25925925925925,
+    "return_3y": null,
+    "close": 4165,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_850",
+   "type": "ASSET",
+   "name": "한국첨단소재",
+   "exposure": {
+    "ticker": "062970",
+    "exchange": "KOSDAQ",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": -3.497615262321141,
+    "return_3d": -10.669610007358354,
+    "return_7d": -12.536023054755042,
+    "return_15d": -39.9009900990099,
+    "return_1m": -52.3921568627451,
+    "return_ytd": -15.202761791565877,
+    "return_1y": -46.50307005837202,
+    "return_2y": 0.579366979644691,
+    "return_3y": 134.07407407407405,
+    "close": 1214,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_596",
+   "type": "ASSET",
+   "name": "유비쿼스",
+   "exposure": {
+    "ticker": "078070",
+    "exchange": "KOSDAQ",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": 0.32537960954446277,
+    "close": 9250,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "EODHD",
+    "return_3d": 4.638009049773761,
+    "return_7d": 21.87088274044795,
+    "return_15d": 12.257281553398048,
+    "return_1m": 18.1353767560664,
+    "return_ytd": -14.98161764705882,
+    "return_1y": -4.616589056020914,
+    "return_2y": -10.455965869337868,
+    "return_3y": 4.678362573099415,
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "M_019",
+   "type": "MACRO",
+   "name": "AI추론확산"
+  },
+  {
+   "id": "BF_131",
+   "type": "BUSINESS_FIELD",
+   "name": "소버린AI인프라"
+  },
+  {
+   "id": "M_276",
+   "type": "MACRO",
+   "name": "Agentic AI 확산"
+  },
+  {
+   "id": "M_017",
+   "type": "MACRO",
+   "name": "엔비디아루빈개발"
+  },
+  {
+   "id": "M_338",
+   "type": "MACRO",
+   "name": "GPU효율성개선니즈"
+  },
+  {
+   "id": "C_5547",
+   "type": "CHARACTER",
+   "name": "광트랜시버"
+  },
+  {
+   "id": "C_5551",
+   "type": "CHARACTER",
+   "name": "광트랜시버"
+  },
+  {
+   "id": "C_5553",
+   "type": "CHARACTER",
+   "name": "광스위치"
+  },
+  {
+   "id": "C_5554",
+   "type": "CHARACTER",
+   "name": "광부품"
+  },
+  {
+   "id": "C_5557",
+   "type": "CHARACTER",
+   "name": "광소재"
+  },
+  {
+   "id": "C_5558",
+   "type": "CHARACTER",
+   "name": "광반도체"
+  },
+  {
+   "id": "C_5559",
+   "type": "CHARACTER",
+   "name": "광증폭기"
+  }
+ ],
+ "edges": [
+  {
+   "from": "A_594",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002208"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_596",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002210"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_019",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002211"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_594",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002215"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1879",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002217"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_850",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002220"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1881",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002221"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1882",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002222"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_276",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002223"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_017",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002224"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_338",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002225"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_1879",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002226"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_850",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002229"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1881",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002230"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1882",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002231"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_400",
+   "to": "C_5547",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014490"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_594",
+   "to": "C_5551",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014494"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_596",
+   "to": "C_5553",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014496"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1879",
+   "to": "C_5554",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014497"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_850",
+   "to": "C_5557",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014500"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1881",
+   "to": "C_5558",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014501"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1882",
+   "to": "C_5559",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014502"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_400",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "테마 핵심 구성종목"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  }
+ ],
+ "links": [
+  {
+   "from": "A_594",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002208"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_596",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002210"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_019",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002211"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_594",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002215"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1879",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002217"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_850",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002220"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1881",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002221"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1882",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "EV_002222"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_276",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002223"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_017",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002224"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "M_338",
+   "to": "T_070",
+   "type": "IMPACTS",
+   "evidence": [
+    "EV_002225"
+   ],
+   "confidence": 0.75,
+   "status": "verified"
+  },
+  {
+   "from": "A_1879",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002226"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_850",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002229"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1881",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002230"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_1882",
+   "to": "BF_131",
+   "type": "OPERATES",
+   "evidence": [
+    "EV_002231"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_400",
+   "to": "C_5547",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014490"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_594",
+   "to": "C_5551",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014494"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_596",
+   "to": "C_5553",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014496"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1879",
+   "to": "C_5554",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014497"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_850",
+   "to": "C_5557",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014500"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1881",
+   "to": "C_5558",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014501"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_1882",
+   "to": "C_5559",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014502"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_400",
+   "to": "T_070",
+   "type": "THEMED_AS",
+   "evidence": [
+    "테마 핵심 구성종목"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  }
+ ]
 }
