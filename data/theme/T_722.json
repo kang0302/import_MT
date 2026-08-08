@@ -1,0 +1,752 @@
+{
+ "schemaVersion": "v5",
+ "themeId": "T_722",
+ "themeName": "차세대원자로 MMR·마이크로(4세대)",
+ "meta": {
+  "periodDefault": "3d",
+  "description": "4세대 차세대원자로 — 오클로·NANO 마이크로원자로, 테라파워 나트륨냉각, X-에너지 고온가스로 + 센트러스 HALEU 농축연료. HALEU 공급망·DOE 실증·데이터센터 PPA가 동인.",
+  "notes": "T_017 글로벌소형원전 분할 파생 (T_722)",
+  "changelog": [
+   {
+    "date": "2026-08-08",
+    "kind": "구성",
+    "title": "글로벌소형원전 → SMR/MMR 2분할(노형 기준)",
+    "detail": "경수·모듈형 SMR(T_017) / 차세대 MMR·마이크로(T_722)로 분리. 본 테마=차세대원자로 MMR·마이크로(4세대). ETF 3종 양쪽 EXPOSED_TO, 크로스그룹 관계 제거."
+   }
+  ]
+ },
+ "nodes": [
+  {
+   "id": "T_722",
+   "type": "THEME",
+   "name": "차세대원자로 MMR·마이크로(4세대)"
+  },
+  {
+   "name": "오클로",
+   "id": "A_170",
+   "metrics": {
+    "return_1d": 14.766532353638318,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": 31.433224755700316,
+    "return_15d": 17.78156166382876,
+    "return_3d": 11.747057465958921,
+    "return_1m": -1.7251877410188743,
+    "return_ytd": -37.76349614395886,
+    "return_1y": -41.73285198555956,
+    "return_2y": 491.20879120879124,
+    "return_3y": null,
+    "close": 48.42,
+    "marketCap": 8424643591,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "FMP",
+    "pe_ttm": null
+   },
+   "exposure": {
+    "country": "US",
+    "ticker": "OKLO",
+    "exchange": "NYSE"
+   },
+   "type": "ASSET"
+  },
+  {
+   "name": "NANO Nuclear Energy",
+   "id": "A_171",
+   "metrics": {
+    "return_1d": 7.041453719477575,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": 26.680107526881724,
+    "return_15d": 17.59201497192764,
+    "return_3d": 3.742432581177768,
+    "return_1m": -2.2809745982374174,
+    "return_ytd": -31.727634914885904,
+    "return_1y": -50.77043614520762,
+    "return_2y": 95.945945945946,
+    "return_3y": null,
+    "close": 18.85,
+    "marketCap": 1012209977,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "FMP",
+    "pe_ttm": null
+   },
+   "exposure": {
+    "country": "US",
+    "ticker": "NNE",
+    "exchange": "NASDAQ"
+   },
+   "type": "ASSET"
+  },
+  {
+   "name": "테라파워",
+   "id": "A_163",
+   "metrics": {
+    "return_1d": null,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": null,
+    "return_15d": null,
+    "return_3d": null,
+    "return_1m": null,
+    "return_ytd": null,
+    "return_1y": null,
+    "return_2y": null,
+    "return_3y": null,
+    "close": null,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": null,
+    "valuationSource": null,
+    "returnsAsOf": null,
+    "returnsSource": null
+   },
+   "exposure": {
+    "country": "US",
+    "ticker": null,
+    "exchange": null
+   },
+   "type": "ASSET",
+   "coreBiz": "나트륨냉각 SMR"
+  },
+  {
+   "name": "X-에너지",
+   "id": "A_164",
+   "metrics": {
+    "return_1d": 8.789625360230534,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": 48.330058939096254,
+    "return_15d": 61.5549215406562,
+    "return_3d": 21.9709208400646,
+    "return_1m": 36.44578313253011,
+    "return_ytd": -22.431506849315074,
+    "return_1y": null,
+    "return_2y": null,
+    "return_3y": null,
+    "close": 22.65,
+    "marketCap": 497140728,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "FMP"
+   },
+   "exposure": {
+    "country": "US",
+    "ticker": null,
+    "exchange": null
+   },
+   "type": "ASSET",
+   "coreBiz": "고온가스로 MMR"
+  },
+  {
+   "name": "센트러스에너지",
+   "id": "A_166",
+   "metrics": {
+    "return_1d": 7.493119137224058,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": 19.838436971632547,
+    "return_15d": 22.63377122717076,
+    "return_3d": 1.1255548509828683,
+    "return_1m": 10.261581009449184,
+    "return_ytd": -29.772477064220183,
+    "return_1y": -17.651361934678768,
+    "return_2y": 408.9627659574468,
+    "return_3y": 447.5536480686695,
+    "close": 191.37,
+    "marketCap": 3627149284,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "FMP",
+    "pe_ttm": null
+   },
+   "exposure": {
+    "country": "US",
+    "ticker": "LEU",
+    "exchange": "NYSE"
+   },
+   "type": "ASSET"
+  },
+  {
+   "name": "SOL미국원자력SMR",
+   "id": "A_160",
+   "metrics": {
+    "return_1d": null,
+    "return_30d": null,
+    "market_cap": null,
+    "asof": null,
+    "return_90d": null,
+    "currency": null,
+    "per": null,
+    "last_price": null,
+    "return_7d": null,
+    "return_15d": null,
+    "marketCap": null,
+    "pe_ttm": null,
+    "close": null,
+    "valuationAsOf": "2026-02-21",
+    "valuationSource": "PYKRX",
+    "return_3d": null,
+    "return_1m": null,
+    "return_ytd": null,
+    "return_1y": null,
+    "return_2y": null,
+    "return_3y": null,
+    "returnsAsOf": null,
+    "returnsSource": null
+   },
+   "exposure": {
+    "country": "KR",
+    "ticker": "0051G0",
+    "exchange": "KRX"
+   },
+   "type": "ASSET",
+   "coreBiz": "SOL미국원자력SMR"
+  },
+  {
+   "id": "A_2866",
+   "type": "ASSET",
+   "name": "RISE 글로벌원자력",
+   "exposure": {
+    "ticker": "442320",
+    "exchange": "KRX",
+    "country": "KR"
+   },
+   "metrics": {
+    "return_1d": -1.8434447654422925,
+    "return_3d": -0.76495132127955,
+    "return_7d": 8.735407967326037,
+    "return_15d": -0.7532951477822847,
+    "return_1m": -1.5726130562004337,
+    "return_ytd": -3.692750638165454,
+    "return_1y": 12.69748916091029,
+    "return_2y": 97.86605823939915,
+    "return_3y": null,
+    "close": 35675,
+    "marketCap": null,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "EODHD",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "EODHD"
+   }
+  },
+  {
+   "id": "A_2867",
+   "type": "ASSET",
+   "name": "Range Nuclear Renaissance Index ETF",
+   "exposure": {
+    "ticker": "NUKZ",
+    "exchange": "NYSEARCA",
+    "country": "US"
+   },
+   "metrics": {
+    "return_1d": 2.2623747342848333,
+    "return_3d": 0.8082622361921699,
+    "return_7d": 10.845951283739286,
+    "return_15d": 7.880826525708784,
+    "return_1m": 2.793040293040283,
+    "return_ytd": 1.952770208900989,
+    "return_1y": 9.672691744015637,
+    "return_2y": 118.03172547750079,
+    "return_3y": null,
+    "close": 67.35,
+    "marketCap": 517278914,
+    "pe_ttm": null,
+    "valuationAsOf": "2026-08-07",
+    "valuationSource": "FMP",
+    "returnsAsOf": "2026-08-07",
+    "returnsSource": "FMP"
+   }
+  },
+  {
+   "name": "핵연료",
+   "type": "BUSINESS_FIELD",
+   "id": "BF_037"
+  },
+  {
+   "name": "4세대SMR",
+   "type": "BUSINESS_FIELD",
+   "id": "BF_040"
+  },
+  {
+   "name": "MMR",
+   "type": "BUSINESS_FIELD",
+   "id": "BF_041"
+  },
+  {
+   "id": "C_5220",
+   "type": "CHARACTER",
+   "name": "나트륨냉각SMR"
+  },
+  {
+   "id": "C_5221",
+   "type": "CHARACTER",
+   "name": "고온가스로MMR"
+  },
+  {
+   "id": "C_5223",
+   "type": "CHARACTER",
+   "name": "HALEU농축"
+  },
+  {
+   "id": "C_5227",
+   "type": "CHARACTER",
+   "name": "마이크로원자로"
+  },
+  {
+   "id": "C_5228",
+   "type": "CHARACTER",
+   "name": "마이크로원전"
+  },
+  {
+   "id": "M_316",
+   "type": "MACRO",
+   "name": "26엘니뇨폭염전력수요"
+  },
+  {
+   "id": "M_212",
+   "type": "MACRO",
+   "name": "AI데이터센터확대"
+  }
+ ],
+ "edges": [
+  {
+   "type": "THEMED_AS",
+   "from": "A_163",
+   "to": "T_722",
+   "evidence": [
+    "EV_000648"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_164",
+   "to": "T_722",
+   "evidence": [
+    "EV_000649"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_166",
+   "to": "T_722",
+   "evidence": [
+    "EV_000651"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_170",
+   "to": "T_722",
+   "evidence": [
+    "EV_000655"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_171",
+   "to": "T_722",
+   "evidence": [
+    "EV_000656"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_166",
+   "to": "BF_037",
+   "evidence": [
+    "EV_000660"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_163",
+   "to": "BF_040",
+   "evidence": [
+    "EV_000668"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_164",
+   "to": "BF_040",
+   "evidence": [
+    "EV_000669"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_170",
+   "to": "BF_041",
+   "evidence": [
+    "EV_000670"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_171",
+   "to": "BF_041",
+   "evidence": [
+    "EV_000671"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "from": "A_163",
+   "to": "C_5220",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014163"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_164",
+   "to": "C_5221",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014164"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_166",
+   "to": "C_5223",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014166"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_170",
+   "to": "C_5227",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014170"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_171",
+   "to": "C_5228",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014171"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_160",
+   "to": "T_722",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "원자력/SMR 대표 ETF — 테마 노출"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_2866",
+   "to": "T_722",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "원자력/SMR 대표 ETF — 테마 노출"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_2867",
+   "to": "T_722",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "원자력/SMR 대표 ETF — 테마 노출"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_316",
+   "to": "T_722",
+   "type": "IMPACTS",
+   "evidence": [
+    "원전 전력수요 동인"
+   ],
+   "confidence": 0.75,
+   "status": "verified",
+   "effect": "positive"
+  },
+  {
+   "from": "M_212",
+   "to": "T_722",
+   "type": "IMPACTS",
+   "evidence": [
+    "원전 전력수요 동인"
+   ],
+   "confidence": 0.75,
+   "status": "verified",
+   "effect": "positive"
+  }
+ ],
+ "links": [
+  {
+   "type": "THEMED_AS",
+   "from": "A_163",
+   "to": "T_722",
+   "evidence": [
+    "EV_000648"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_164",
+   "to": "T_722",
+   "evidence": [
+    "EV_000649"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_166",
+   "to": "T_722",
+   "evidence": [
+    "EV_000651"
+   ],
+   "confidence": 0.85,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_170",
+   "to": "T_722",
+   "evidence": [
+    "EV_000655"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "type": "THEMED_AS",
+   "from": "A_171",
+   "to": "T_722",
+   "evidence": [
+    "EV_000656"
+   ],
+   "confidence": 0.7,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_166",
+   "to": "BF_037",
+   "evidence": [
+    "EV_000660"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_163",
+   "to": "BF_040",
+   "evidence": [
+    "EV_000668"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_164",
+   "to": "BF_040",
+   "evidence": [
+    "EV_000669"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_170",
+   "to": "BF_041",
+   "evidence": [
+    "EV_000670"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "type": "OPERATES",
+   "from": "A_171",
+   "to": "BF_041",
+   "evidence": [
+    "EV_000671"
+   ],
+   "confidence": 0.83,
+   "status": "verified"
+  },
+  {
+   "from": "A_163",
+   "to": "C_5220",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014163"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_164",
+   "to": "C_5221",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014164"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_166",
+   "to": "C_5223",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014166"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_170",
+   "to": "C_5227",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014170"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_171",
+   "to": "C_5228",
+   "type": "HAS_TRAIT",
+   "evidence": [
+    "EV_014171"
+   ],
+   "confidence": 0.72,
+   "status": "verified"
+  },
+  {
+   "from": "A_160",
+   "to": "T_722",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "원자력/SMR 대표 ETF — 테마 노출"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_2866",
+   "to": "T_722",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "원자력/SMR 대표 ETF — 테마 노출"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "A_2867",
+   "to": "T_722",
+   "type": "EXPOSED_TO",
+   "evidence": [
+    "원자력/SMR 대표 ETF — 테마 노출"
+   ],
+   "confidence": 0.8,
+   "status": "verified"
+  },
+  {
+   "from": "M_316",
+   "to": "T_722",
+   "type": "IMPACTS",
+   "evidence": [
+    "원전 전력수요 동인"
+   ],
+   "confidence": 0.75,
+   "status": "verified",
+   "effect": "positive"
+  },
+  {
+   "from": "M_212",
+   "to": "T_722",
+   "type": "IMPACTS",
+   "evidence": [
+    "원전 전력수요 동인"
+   ],
+   "confidence": 0.75,
+   "status": "verified",
+   "effect": "positive"
+  }
+ ]
+}
